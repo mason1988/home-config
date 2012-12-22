@@ -1,0 +1,25 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("hauptdatei"
+ (filename . "~/Dropbox/Shell-Skripte/org-test-umgebung.org")
+ (front-context-string . "[[~/Dropbox/th/t")
+ (rear-context-string . "]]\n** Zettel-10\n")
+ (position . 4540))
+("schleife"
+ (filename . "~/Dropbox/Shell-Skripte/org-test-umgebung.org")
+ (front-context-string . "- schleife in ba")
+ (rear-context-string . " Befehlshistory\n")
+ (position . 19923))
+("Todo Liste"
+ (filename . "~/Dropbox/Shell-Skripte/org-test-umgebung.org")
+ (front-context-string . "Todo List\n** DON")
+ (rear-context-string . "on\n*** pekwm\n\n* ")
+ (position . 63469))
+("org-capture-last-stored"
+ (filename . "~/org/notes.org")
+ (front-context-string . "** TODO \n   [201")
+ (rear-context-string . "in krasses ToDo\n")
+ (position . 436))
+)

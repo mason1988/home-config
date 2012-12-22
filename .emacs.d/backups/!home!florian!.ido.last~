@@ -1,0 +1,47 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/florian/Dropbox/" . "Latex/")
+ ("/home/florian/.config/awesome/" . "debian/")
+ ("/home/florian/.config/" . "awesome/")
+ ("/home/florian/" . "Dropbox/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/florian/Dropbox/Zettelkasten/.git/"
+ "/home/florian/.emacs.d/"
+ "/home/florian/.config/awesome/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "config"
+ "revive.el"
+ "rc.lua"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/florian/" (20693 6936) ".macromedia/" ".vim/" ".pekwm/" ".gnome2_private/" ".gimp-2.8/" "test2" "diary" "Öffentlich/" ".emacs" ".#.ido.last" ".gtk-bookmarks" ".emacs~" ".face" ".aptitude/" ".mozilla/" "icicles/" ".vimperator/" "Dropbox/" ".ICEauthority" ".pentadactyl/" ".pki/" "awmtt/" ".ssh/" ".gnome2/" ".bash_history" ".irssi/" ".viminfo" "Bilder/" ".i3/" "amd-driver-installer-catalyst-12.11-beta11-x86.x86_64.run" ".synaptic/" "Videos/" "Dokumente/" ".Xauthority" "./" ".links2/" ".cmus/" ".dropbox-dist/" "test1" ".adobe/" ".local/" ".opera/" ".thunderbird/" ".pulse/" ".hardinfo/" ".dmenu_cache" ".cache/" "org/" "Vorlagen/" ".recentf" ".recentf~" ".revive.el" ".purple/" ".gksu.lock" "Arbeitsfläche/" ".gstreamer-0.10/" ".stumpwmrc.lisp" ".ido.last" ".stumpwmrc" ".qtile.log" "new_keyboard.sh" ".viper~" "et" ".notes" ".profile" ".xinitrc" "Downloads/" ".emacs.d/" ".dmrc" ".dropbox/" ".w3m/" ".wmii/" ".emacs.desktop" ".config/" "change_keyboard.sh" "Musik/" ".viper" ".dbus/" ".linuxmint/" ".eshell/" ".fehbg" ".selected_editor" ".dreampie" ".gitconfig" ".deft/" ".pulse-cookie" ".gconf/" ".xsession-errors" ".quicksynergy/" ".bash_logout" "../")
+
+ ("/home/florian/Dropbox/Zettelkasten/" (20693 6184) "zettelkasten.org_20121208_213446_16910mxe.png" "el-loesung-06.tex~" "zettelkasten.org_20121212_095257_67179ci.png" "el-zettel-06.pdf" "zettelkasten.org_20121212_065955_6717Vos.png" "_region_.prv/" "zettelkasten.org_20121212_095320_6717Kno.png" "zettelkasten.org_20121208_210748_16910ZnY.png" "el-res/" "_region_.log" "zettelkasten.org" "zettelkasten.pdf" "ltxpng/" "zettelkasten.org_20121212_082939_6717Jmh.png" "el-loesung-06.tex" "README.md" "./" "zettelkasten.org_20121212_070111_6717U8B.png" "zettelkasten.org_archive" "zettelkasten.org_20121213_230622_11330eFl.png" "20120202020202.png" "zettelkasten.tex" "prv_el-loesung-06.log" "_region_.tex" "zettelkasten.org_20121211_185955_2937bS3.png" "data/" "zettelkasten.org_20121212_084750_6717jBi.png" "Auswahl_007.png" "zettelkasten.org_20121212_084713_6717W3b.png" "zettelkasten.org_20121211_002209_18523-pw.png" "zettelkasten.org_20121212_071546_6717hGI.png" "zettelkasten.org_20121211_190049_2937DzM.png" "Auswahl_006.png" "zettelkasten.org~" ".git/" "zettelkasten.org_20121212_062535_6717h_T.png" "zettelkasten.org_20121212_070048_6717iyy.png" "../")
+
+ ("/home/florian/Dropbox/Zettelkasten/.git/" (20693 5931) "refs/" "description" "HEAD" "branches/" "./" "ORIG_HEAD" "index" "objects/" "logs/" "FETCH_HEAD" "hooks/" "info/" "COMMIT_EDITMSG" "config" "../")
+
+ ("/home/florian/.emacs.d/" (20693 300) "completion-ui.el" "evil/" "tramp" "helm/" "pos-tip.el" "avl-tree.el" "tNFA.el" "deft.el" "cmd_abr.el" "predictive-convert-dump-format.el" "zencoding/" "ede-projects.el" "icicles/" "COPYING" "dict-english.el" "trie.el" "ido-bookmark.el" "dict-english.word-list" "INSTALL" "icicles-install.el" "fdl.texi" "pylookup/" "package.el" "my-keymaps.el" "bookmarks" "Makefile" "my-org-screenshot.el" ".org-id-locations" "recentf-ido.el" "./" ".gitignore" "completion-ui-menu.el" "revive.el" "predictive-user-manual.texinfo" "evil-key-bindings.el" "backups/" "predictive-latex-graphicx.el" "predictive.el" "predictive-auto-overlay-auto-dict.el" "elpa/" "workgroups.el" "custm-emac-keys.el" "auto-overlays.el" "timerfunctions.el" "completion-ui-tooltip.el" "history" "org-nav.el" "snippets/" "icicles-master2/" "image-dired/" "session.106f00ea411acf0a29135509146449659200000017340055" "emms/" "auto-save-list/" "predictive-latex.el" "ac-comphist.dat" "tmp_keys/" "org-protocol.el" "heap.el" "expy/" "html/" "abbrev_defs" "escreen.el" "predictive-compat.el" "print.c.diff" "texinfo/" "auto-overlay-nested.el" "pack-install.el" "completion-ui-dynamic.el" "completion-ui-popup-frame.el" "cstm_regex.el" "auto-overlay-common.el" "auto-overlay-word.el" "predictive-html.el" "queue.el" "completion-ui-echo.el" "empty_jump.el" "eimp.el" "auto-overlays-compat.el" "completion-ui-hotkeys.el" "url/" "auto-overlay-line.el" "predictive-texinfo.el" "completion-ui-sources.el" "dict-tree.el" "auto-complete/" "auto-overlay-self.el" "predictive/" "dict-english.elc" "latex/" "../" "auto-overlay-flat.el" "goto-last-change.el")
+
+ ("/home/florian/Dropbox/Latex/" (20689 35488) "CheatSheet.tex" "generelles  Tex Setup.txt" "_region_.prv/" "_region_.log" "CheatSheet.tex~" "Vorlage.out" "UsbTex.txt" "prv_CheatSheet.log" "makros.txt" "Struktur.txt" "Vorlage.aux" "prv_Vorlage.log" "./" "CheatSheet.prv/" "CheatSheet.out" "Vorlage.tex~" "CheatSheet.pdf" "texstudio_optimiert.txsprofile" "_region_.tex" "Vorlage.ps" "CheatSheet.aux" "Vorlage.tex" "USBTeX-1.7/" "#test#" "CheatSheet.log" "Vorlage.log" ".predictive/" "Vorlage.dvi" "#abc_test#" "../")
+
+ ("/home/florian/Dropbox/" (20691 30290) "so/" "emacs/" ".emacs" "note-stack/" "Shell-Skripte/" "th/" "Latex/" "./" "Zettelkasten/" "vimperator_help_files/" "lo/" "Wochenplan2.jpg" "organizer.org~" "tut/" "bilder_finanzamt/" "Lösungen/" "st/" ".dropbox" "python_test/" "vimperator_help.xml" ".dropbox.cache/" "../")
+
+ ("/home/florian/.config/awesome/" (20691 18698) "shifty/" "rc.lua" "./" "debian/" "rodentbane.lua" "../")
+
+ ("/home/florian/.config/awesome/debian/" (20686 10069) "./" "menu.lua" "../")
+
+ ("/home/florian/.config/" (20689 35896) "ipython/" "nemo/" "goa-1.0/" "user-dirs.dirs" "gtk-3.0/" "chromium/" "dconf/" "gnome-session/" "Trolltech.conf" "./" "openbox/" "libreoffice/" "user-dirs.locale" "google-chrome/" "herbstluftwm/" "awesome/" "autostart/" "kupfer/" "eog/" "gtk-2.0/" "vlc/" "../" "evolution/")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

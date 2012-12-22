@@ -1,0 +1,166 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[11pt]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath}
+\usepackage{verbatim}
+\usepackage{color}
+\usepackage{geometry}
+\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
+%\usepackage{amsthm}
+%\usepackage{stmaryrd}
+\usepackage{graphicx}
+
+%\includegraphics{?} setzt bild ein
+%\ref{labelname} erstellt link zu labelname
+%\label{labelname} kann einfach irgendwo drangesetz werden
+
+\newtheorem{defi}{Definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{nota}{Notation}
+\newtheorem{prop}{Proposition}
+\newtheorem{satz}{Satz}
+\newtheorem{umf}{Umformung}
+
+\newenvironment{beweis}{\par\begingroup%
+\settowidth{\leftskip}{\textsc{Beweis:~}}%
+\noindent\llap{\textsc{Beweis:~}}}{\hfill$\Box$\par\endgroup}
+
+\renewcommand{\baselinestretch}{1}
+\newcommand{\words}{\Sigma^* \backslash \{\epsilon\}}
+\newcommand{\etrans}[1]{\bar{\delta}(#1)}
+
+\title{Zettel 5}
+\author{Florian Lerch/Waldemar Hamm}
+%\date{} % Activate to display a given date or no date (if empty),
+% otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+\section*{Aufgabe 3}
+\subsection*{a)}
+%Zeigen Sie, dass die Faltung eine assoziative und kommutative 
+%Halbgruppe auf der Menge der absoulut summierbaren Z-indizierten Folgen definiert
+Seien $a_i , b_j , h_k$ beliebige Folgen wobei $i,j,k \in \mathbb{Z}$\\
+Sei $C_n$ eine Faltung auf $a \mbox{ und }b$, so dass gilt: $C_n = \sum_{z\in \mathbb{Z}}a_zb_{n-z}$\\
+
+\subsubsection*{$Kommutativitaet: z.Z.: \sum_{z \in \mathbb{Z}}a_zb_{n-z} = \sum_{z\in \mathbb{Z}}a_{n-z}b_z $}\\
+
+
+$\sum^{\infty}_{z=- \infty}a_zb_{n-z} = \sum^n_{z=- \infty}a_zb_{n-z} + \sum^{\infty}_{z= n+1}a_zb_{n-z}$\\
+
+$= ... + (a_{-3}b_{n+3})+(a_{-2}b_{n+2})+(a_{-1}b_{n+1}) +(a_0b_n)+(a_1b_{n-1})+...+(a_nb_0)$\\
+$+ (a_{n+1}b_{-1})+(a_{n+2}b_{-2})+(a_{n+3}b_{-3})+...$\\[0.5cm]
+
+$= ... + (b_{-3}a_{n+3})+(b_{-2}a_{n+2})+(b_{-1}a_{n+1}) +(b_0a_n)+(b_1a_{n-1})+...+(b_na_0)$\\
+$+ (b_{n+1}a_{-1})+(b_{n+2}a_{-2})+(b_{n+3}a_{-3})+...$\\[0.5cm]
+
+$= \sum_{z=-\infty}^{n}b_za_{n-z} + \sum_{z=n+1}^{\infty}b_za_{n-z}$\\
+$= \sum_{z=-\infty}^{\infty}b_za_{n-z}$\\
+$= \sum_{z=-\infty}^{\infty}a_{n-z}b_z = \sum_{z \in \mathbb{Z}}a_{n-z}b_z$\\
+
+$\Rightarrow$ Die Faltung ist Kommutativ\\[0.8cm]
+
+
+\subsubsection*{$Assoziativitaet: z.Z.: (a*b)*h = a*(b*h) $}\\
+
+$(a*b)*h = (\sum_{z \in \mathbb{Z}}a_{z}b_{n-z})$ $* h $\\
+$= h*(\sum_{z \in \mathbb{Z}}a_{z}b_{n-z})$\\ % h nach vorne geschoben
+$= \sum_{m \in \mathbb{Z}} h_m(\sum_{z \in \mathbb{Z}}a_{z}b_{m-n-z})$\\
+$= \sum_{z,m \in \mathbb{Z}}a_{z}b_{m-n-z}h_m$\\[0.7cm]
+
+$a*(b*h) = a*(h*b) = a * (\sum_{z\in \mathbb{Z}}h_zb_{n-z})$\\
+$= \sum_{m\in \mathbb{Z}a_m(\sum_{z \in \mathbb{Z}} h_zb_{m-n-z})$\\
+$= \sum_{z,m \in \mathbb{Z}}h_zb_{m-n-z}a_m$\\[0.4cm]
+
+$\Rightarrow (a*b)*h = a*(b*h)$\\
+$\Rightarrow$ die Faltung ist Assoziativ\\[0.8cm]
+
+\newpage
+\subsection*{b)}(Anmerkung: Eigentlich ist das Cauchyprodukt ja eine unendliche Reihe. Da die Faltung aber eine Funktion/Abbildung ergibt, haben wir hier auch den einzelnen Summand des Cauchprodukts zum Vergleich genommen)\\
+Cauchyprodukt: $c_n = \sum^n_{k=0}a_kb_{n-k}$\\
+Faltung: $c'_n = \sum_{k \in \mathbb{Z}}a_kb_{n-k}$\\
+Ein Cauchy Produkt zweier Folgen entspricht der Summe aus einer Teilmenge der Summanden aus der Faltung der Folgen.\\
+
+$\includegraphics{graph}$.\\
+In der Grafik haben wir jeweils die Indizes von a und b der jeweils einzelnen Summanden der Reihen eingetragen und verbunden. Hier erkennt man auch nochmal, dass die Summanden des Cauchyproduktes alle auch in der Faltung vorhanden sind.
+\subsection*{c)}
+%Berechnen Sie mit Hilfe der erzeugenden Funktion den Mittelwert und die Varianz der Binomial- und Poissonverteilung
+\subsubsection*{Binomialverteilung}
+Mittelwert $\mu = n*p$\\
+Varianz $\sigma = n*p*q = n*p(1-p)$ (Anzahl Versuche*ws_erfolg*ws_keinerfolg)\\
+Erzeugende Funktion = formale Potenzreihe $f(z) = \sum_{n=0}^{\infty}a_nz^n$ = 
+besondere Darstellungsform\\
+Verteilung = unterschiedliche ergebnisse stehen in verhältniss zueinander\\
+Binomialverteilung: Genau 2 Ergebnisse, beschreibt erfolgswahrscheinlichkeit für k positive Ergebnisse und n versuchen => Erolgswahrscheinlichkeiten sind so verteilt, das sich auch nach mehrere Versuchen keine Änderung eintritt (unabhängig von vorherigen Versuchen und Ergebnissen)\\
+Ableitung = Funktion zur Bestimmung der Steigung an einer bestimmten Stelle des Graphen\\
+Für Erwartungswert immer $\varphi'(1)$\\
+Für Varianz immer $\varphi''(1)+\varphi'(1) - \varphi'(1)^2$\\
+
+
+Erzeugende Funkion der Binomialverteilung: $\varphi(s) = \sum^n_{k=0}\binom{n}{k}p^kq^{n-k}s^k = (q + sp)^n$\\
+$\Rightarrow \varphi'(s) = n(q + sp)^{n-1}p$ = $np(q+sp)^{n-1}$\\
+$\Rightarrow \varphi'(1) = n(q + p)^{n-1}p = n * 1^{n-1}p = np$\\
+$\Rightarrow$ Mittelwert der Binomialverteilung = np\\[0.5]
+
+$\Rightarrow \varphi''(s) = (n-1)n(q+sp)^{n-2}p^2$\\
+$\Rightarrow \varphi''(1)+\varphi'(1) - \varphi(1)^2$ = $(n-1)n(q+p)^{n-2}p^2+ np - np^2$\\ 
+$= (n-1) n p^2 + np - (np)^2 = (n^2-n)p^2+np-n^2p^2 = n^2p^2-np^2+np-n^2p^2$\\
+$= -np^2+np = np - npp = np(1-p)$\\
+$\Rightarrow$ Varianz der Binomialverteilung = np(1-p)\\[0.5]
+
+Erwartungswert: $E[P]:= \sum^{\infty}_{k=0}kP(\{k\})$\\
+Varianz: $Var(P) := \sum^{\infty}_{k=0}(k-E[P])^²P(\{k\})$\\
+
+
+\subsubsection*{Poissonverteilung}
+Erzeugende Funktion: $\varphi(s) = \sum^{\infty}_{k=0}e^{-\alpha}\frac{\alpha^k}{k!}s^k = e^{-\alpha}e^{\alpha s} = \epsilon^{- \alpha (1-s)}$\\
+
+$\varphi'(s) = (-\alpha(1-s))' \epsilon^{-\alpha(1-s)} = \alpha \epsilon^{-\alpha(1-s)}$\\
+$\Rightarrow \varphi''(s) = \alpha^2\epsilon^{-\alpha(1-s)}$\\
+$\varphi'(1) = \alpha \epsilon^{-\alpha(0)}= \alpha \epsilon^0 = \alpha$\\
+$\Rightarrow$ Der Mittelwert der Poissonverteilung ist $\alpha$\\[0.5cm]
+$\varphi''(2)+\varphi'(1)-\varphi'(1)^2 = \alpha^2 + \alpha - \alpha^2$\\
+$= \alpha$\\
+$\Rightarrow$ Varianz der Poissonverteilung = $\alpha$\\[0.5cm]
+
+
+\section*{Aufgabe 4}
+\subsection*{a)}
+$E(X) = \sum_{x \in R}xP(X=x)$\\
+$= \sum_{x \in R \wedge x \geq 0}xP(X=x) + \sum_{x \in R \wedge x < 0}xP(X=x)$\\
+$= \sum_{x \in R \wedge x \geq 0}xP(X=x)+\sum_{x \in R \wedge x > 0}(-x)P(X=-x)$\\
+$= \sum_{x \in R \wedge x > 0}xP(X=x) + \sum_{x \in R \in x > 0}(-x)P(X=-x)$\hspace*{1cm}|da 0*P(X=0) = 0\\
+$= \sum_{x \in R \wedge x > 0}xP(X=x) + \sum_{x \in R \in x > 0}(-x)P(X=x)$\hspace*{1cm}|da P(X=x) = P(X=-x)\\
+$= \sum_{x \in R \wedge x > 0}xP(X=x) - \sum_{x \in R \in x > 0}xP(X=x) = 0$\\[0.5cm]
+
+\begin{comment}
+$E(X^2) = \sum_{x \in R}x^2P(X=x)$\\
+$= \sum_{x\in R \wedge x \geq 0}x^2P(X=x) + \sum_{x \in R \wedge x < 0}x^2P(X=x)$\\
+$= \sum_{x > 0}x^2P(X=x) + \sum_{x > 0}(-x)^2P(X=-x)$\\
+$ = \sum_{x > 0}x^2P(X=x) + \sum_{x>0}x^2P(X=x)$\\
+$= 2*\sum_{x>0}x^2P(X=x)$\\[0.5cm]
+\end{comment}
+
+$E(X^3) = 0$ \hspace*{1cm}|Ergibt sich vollkommen analog zu E(X), da $x^3$ das Vorzeichen von x behaelt\\[0.5cm]
+$Cov(X,X^2) = E(X*X^2) - E(X)E(X^2) = E(X^3) - E(X)E(X^2) = 0 - 0*E(X^2) = 0$\\
+$\Rightarrow$ X und $X^2$ sind für a=0 unkorelliert.\\
+Konkrete Verteilung: $P(X=x) = \begin{cases} 1, & \text{wenn }|x| = 1 \\
+    0, & \text{wenn }|x| \not = 1 \end{cases}$
+\subsection*{b)}
+%E[X] = a, falls E[|X|] < infty
+z.Z.: $E(X) = a$ falls $E(|X|) < \infty$\\
+$E(|X|) < \infty \Rightarrow E(X) = \sum_{x \in R}xP(X=x)$\\
+$= \sum_{x<a}xP(X=x) + \sum_{x \geq a}xP(X=x)$\\
+$= \sum_{x<0}(x+a)P(X=x+a) + \sum_{x \geq 0}(x+a)P(X=x+a)$\\
+$= \sum_{x<0}(x+a)P(X=x+a) + \sum_{x > 0} (x+a)P(X=x+a)$\\
+$= \sum_{x>0}(a-x)P(X=a-x) + \sum_{x > 0} (a+x)P(X=a+x)$\\
+$= \sum_{x>0}(a-x)P(X=a+x) + \sum_{x > 0} (a+x)P(X=a+x)$\\
+$= a$ 
+\subsection*{c)}
+Da P(X - a) = P(-(X-a)) $\Rightarrow P[X < a] = P[X>a]$\\
+$\wedge P[X] \geq 0$\\
+$\wedge P[X < a] + P[X = a] + P[X > a] = 1$\\
+$\Rightarrow P[X < a] + P[X = a] \geq \frac{1}{2}$\\[0.3cm]
+$\Rightarrow P[X \leq a] \geq \frac{1}{2}$\\
+da $P[X < a] \leq P[X \leq a] \Rightarrow P[X < a] \leq \frac{1}{2}$
+\end{document}

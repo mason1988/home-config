@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: leftrightarrow
+# key: Lra
+# binding: "keybinding"
+# --
+\Leftrightarrow
