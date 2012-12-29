@@ -75,7 +75,7 @@ layouts =
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag({ 'emacs', 'web', 'doc', 'term', 'stuff', 'conf', 7, 8, 'dump'  }, s, layouts[8])
+    tags[s] = awful.tag({ 'emacs', 'web', 'doc', 'term', 'stuff', 'conf', 7, 8, 'dump'  }, s, layouts[2])
 end
 -- }}}
 
@@ -435,6 +435,7 @@ awful.rules.rules = {
                      border_color = beautiful.border_normal,
                      focus = true,
                      keys = clientkeys,
+		     size_hints_honor = false,
                      buttons = clientbuttons } },
     { rule = { class = "MPlayer" },
       properties = { floating = true } },
@@ -445,7 +446,7 @@ awful.rules.rules = {
     -- Set Firefox to always map on tags number 2 of screen 1.
    { rule = { class = "Firefox" },
      properties = { tag = tags[1][2] } },
-   {rule = { class = "emacs" },
+   {rule = { class = "emacs24" },
      properties = { tag = tags[1][1] } },
    {rule = { class = "pidgin" }, 
      properties = { tag = tags[1][5] } },
@@ -501,10 +502,9 @@ end
 run_once("emacs24",nil,1)
 run_once("firefox",nil,1)
 run_once("kupfer",nil,1)
-
+run_once("xfce4-power-manager", nil, 1)
 
 awful.util.spawn_with_shell("sh ~/new_keyboard.sh")
-
 
 ----------------------------- ende modifikation
 

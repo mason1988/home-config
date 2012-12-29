@@ -1,0 +1,46 @@
+#+LINK: zk /home/florian/Dropbox/Zettelkasten/
+#+LINK: zkp /home/florian/Dropbox/Zettelkasten/res-pic_%s.png
+* Elementare Stochastik						     :ATTACH:
+  :PROPERTIES:
+  :ATTACH_DIR: ~/Dropbox/Zettelkasten/el-res/
+  :Attachments: new_file andere_datei.tex
+  :END:
+** Zettel-06							     :ATTACH:
+   :PROPERTIES:
+   :Attachments: el-zettel-06.pdf
+   :ID:       58dff94f-e04a-49a8-80bc-49bc8037c046
+   :END:
+*** Dateien
+    [[/home/florian/Dropbox/Zettelkasten/el-zettel-06.pdf::NNN][el-zettel-06.pdf]]
+    [[/home/florian/Dropbox/Zettelkasten/el-loesung-06.tex][el-loesung-06.tex]]
+*** Informationen
+**** ElementareStochastik Text					  :zettel:06:
+     Das ist das haus vom Nikolaus
+[[/home/florian/Dropbox/Zettelkasten/Auswahl_006.png]]
+Das ist das Haus vom Nikolaus, und nebenan wohnt Weihnachtsmann
+**** Gerhard Müller
+[[/home/florian/Dropbox/Zettelkasten/Auswahl_007.png]]
+
+**** Crystal F - Kopfschmerzen
+     [[/home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121208_213446_16910mxe.png]]
+Allein mit meinen Kopfschmerzen bla
+*** Gedanken Zettel 6
+Keine Ahnung und bla
+* Theoretische Informatik
+
+* Webdesign
+
+* Softwaretechnik
+
+* Logik
+* Organisation
+** Emacs
+   C-c C-q         Tags zu Unterpunkt verwalten
+** Todo 
+*** überprüfen was sich an evil verbessern lässt 		       :done:
+nix so ohne weiteres, bis auf ein paar nette Shortcuts
+*** cdlatex / latex in vorschau (org-mode)
+*** helm in automode schalten
+*** ein bisschen elisp zusammenfassen
+*** google: ido
+*** toolbar ausschalten

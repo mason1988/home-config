@@ -1,0 +1,10 @@
+\documentclass[11pt]{amsart}
+
+\usepackage[utf8]{fontenc}
+\usepackage{color}
+
+\begin{document}
+	blablabla
+	etwas Mathe $\sum_{n=0}^{\infty}xn = z$
+\end{document}
+

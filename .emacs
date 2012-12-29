@@ -4,20 +4,31 @@
 (add-to-list 'load-path "~/.emacs.d/predictive/texinfo/")
 (add-to-list 'load-path "~/.emacs.d/predictive/html/")
 (add-to-list 'load-path "~/.emacs.d/magit/")
+(add-to-list 'load-path "~/.emacs.d/bookmark+/")
+(add-to-list 'load-path "~/.emacs.d/expand-region/")
 (require 'package)
 (require 'predictive)
+(require 'bookmark+)
+
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/") t)
-;(add-to-list 'load-path "~/.emacs.d/helm/")
+(add-to-list 'load-path "~/.emacs.d/helm/")
 (add-to-list 'load-path "~/.emacs.d/evil/")
 (add-to-list 'load-path "~/.emacs.d/auto-complete/")
 (add-to-list 'load-path "~/.emacs.d/zencoding/")
 (add-to-list 'load-path "~/.emacs.d/evil/")
-(add-to-list 'load-path "~/.emacs.d/icicles")
+(add-to-list 'load-path "~/.emacs.d/icicles/")
 
-;(require 'helm-config)
+;(require 'icicles)
+
+(require 'helm-config)
 (require 'evil)
 (evil-mode 1)
+
+(add-to-list 'load-path "~/.emacs.d/emms/")
+(require 'emms-setup)
+(emms-standard)
+(emms-default-players)
 
 (package-initialize)
 (require 'org-install)
@@ -45,11 +56,10 @@
 (setq auto-save-file-name-transforms
       `((".*" ,user-temporary-file-directory t)))
 (tool-bar-mode 0)
+(menu-bar-mode 0)
 (global-font-lock-mode t)
 
 (require 'custm-emac-keys)
-
-
 
 (defun toggle-window-split ()
   (interactive)
@@ -78,9 +88,6 @@
 
 
 (define-key ctl-x-4-map "t" 'toggle-window-split)
-
-
-
 
 ;; -- Display images in org mode
 ;; enable image mode first
@@ -137,13 +144,16 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-agenda-files (quote ("~/Dropbox/Zettelkasten/zettelkasten.org")))
+ '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
+ '(helm-c-pdfgrep-default-read-command "emacsclient '%f'")
+ '(org-agenda-files (quote ("~/Zettelkasten/zettelkasten.org")))
  '(org-format-latex-options (quote (:foreground default :background default :scale 1.4 :html-foreground "Black" :html-background "Transparent" :html-scale 1.4 :matchers ("begin" "$1" "$" "$$" "\\(" "\\["))))
+ '(org-modules (quote (org-bbdb org-bibtex org-docview org-gnus org-info org-jsinfo org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m org-annotate-file org-bookmark org-checklist org-collector org-eshell org-eval)))
  '(preview-scale-function 1.4))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
-;; Your init file should contain only one such instance.
+ ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
 
@@ -155,13 +165,15 @@
 (ido-mode 1)
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
-
+(setq ido-case-fold t)
+(setq confirm-nonexistent-file-or-buffer nil)
 (scroll-bar-mode 0)
 
 (global-set-key (kbd "C-c f") 'evil-emacs-state)
 (global-set-key (kbd "C-c q") 'evil-force-normal-state)
 (define-key evil-normal-state-map (kbd "C-c f") 'evil-emacs-state)
 (define-key evil-normal-state-map (kbd "C-c q") 'evil-force-normal-state)
+
 (global-set-key (kbd "C-u") 'evil-scroll-up)
 (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
 (global-set-key (kbd "M-k") 'evil-window-prev)
@@ -172,31 +184,40 @@
 
 (global-set-key (kbd "C-x f") 'ido-find-file)
 (global-set-key (kbd "C-x C-f") 'ido-find-file-other-window)
-;ido switch buffer normal steht schon
 (global-set-key (kbd "C-x C-b") 'ido-switch-buffer-other-window)
 
 (global-set-key (kbd "C-ö b") 'ido-display-buffer)
 (global-set-key (kbd "C-ö f") 'ido-display-file)
 
+(require 'naviplus)
 (require 'recentf-ido)
-(global-set-key (kbd "C-x g") 'recentf-interactive-complete) 
+(global-set-key (kbd "C-x g") 'recentf-interactive-complete)
 (require 'empty_jump)
-(global-set-key (kbd "C-ö r") 'jumpToNextEmpty) 
-(global-set-key (kbd "C-ö i") 'jumpToPrevEmpty) 
-(global-set-key (kbd "C-ö C-r") 'jumpToNextEmpty) 
-(global-set-key (kbd "C-ö C-i") 'jumpToPrevEmpty) 
-(global-set-key (kbd "C-)") 'jumpToNextEmpty) 
-(global-set-key (kbd "C-(") 'jumpToPrevEmpty) 
+(global-set-key (kbd "C-ö r") 'jumpToNextEmpty)
+(global-set-key (kbd "C-ö n") 'jumpToPrevEmpty)
+(global-set-key (kbd "C-ö C-r") 'jumpToNextEmpty)
+(global-set-key (kbd "C-ö C-n") 'jumpToPrevEmpty)
+(global-set-key (kbd "C-)") 'jumpToNextEmpty)
+(global-set-key (kbd "C-(") 'jumpToPrevEmpty)
 (require 'cstm_regex)
-(global-set-key (kbd "C-}") 'cstmRegexNext) 
-(global-set-key (kbd "C-{") 'cstmRegexPrev) 
 
+(global-set-key (kbd "C-}") 'cstmRegexNext)
+(global-set-key (kbd "C-{") 'cstmRegexPrev)
 (global-set-key (kbd "C-ö t") 'org-tree-to-indirect-buffer)
 (global-set-key (kbd "C-ö h") 'pop-global-mark)
+(global-set-key (kbd "C-ä n") 'yas-new-snippet)
+(global-set-key (kbd "C-ä t") 'yas-load-snippet-buffer)
+(global-set-key (kbd "C-ö g") 'jump-vert-up)
+(global-set-key (kbd "C-ö G") 'jump-vert-down)
+(global-set-key (kbd "C-ö l") 'list-matching-lines)
 
-(global-set-key (kbd "C-ö g") 'bookmark-jump)
-(global-set-key (kbd "C-ö C-g") 'bookmark-jump)
-(global-set-key (kbd "C-ö s") 'bookmark-set)
+(add-hook 'evil-insert-state-entry-hook
+ (lambda ()
+ (define-key evil-insert-state-local-map "\M-j" 'evil-window-next)
+ (define-key evil-insert-state-local-map "\M-k" 'evil-window-prev)
+ (define-key evil-insert-state-local-map "\M-x" 'execute-extended-command) 
+ )
+)
 
 (undo-tree-mode t)
 
@@ -210,18 +231,74 @@
       eshell-prompt-regexp (concat "^" (regexp-quote "$")))
 
 (require 'magit)
+(add-to-list 'load-path "~/.emacs.d/w3m/")
+(require 'w3m-load)
 
+(require 'yasnippet)
+(yas--initialize)
+(yas/load-directory "~/.emacs.d/snippets")
 
-;;; (require 'pymacs)
+(require 'yasnippet-config)
+(global-set-key (kbd "C-ä h") 'yas/make-placeholder)
+(global-set-key (kbd "C-ä f") 'yas/new-snippet-with-content)
+(global-set-key (kbd "C-ä g") 'yas/oneshot-snippet)
+
+(global-set-key (kbd "C-e") 'keyboard-quit)
+(define-key evil-normal-state-map "\C-e" 'keyboard-quit)
+(define-key evil-motion-state-map "\C-e" 'keyboard-quit)
+(define-key evil-insert-state-map "\C-e" 'evil-normal-state)
+
+(global-set-key (kbd "C-ä k") 'epa-encrypt-region)
+(global-set-key (kbd "C-ä K") 'epa-decrypt-region)
+
+(global-set-key (kbd "C-ä e") 'eval-region)
+(global-set-key (kbd "C-ä E") 'eval-buffer)
+(global-set-key (kbd "C-ä s") 'my-org-screenshot)
+
+(require 'smart-forward)
+(global-set-key (kbd "M-<up>") 'smart-up)
+(global-set-key (kbd "M-<down>") 'smart-down)
+(global-set-key (kbd "M-<left>") 'smart-backward)
+(global-set-key (kbd "M-<right>") 'smart-forward)
+
+(require 'dired+)
+(require 'tidy-org-jump)
+(require 'lua-mode)
+
+(setq evil-default-cursor t)
+(set-foreground-color "green")
+(set-background-color "black")
+(set-cursor-color "blue")
+
+(require 'search-all-buffers)
+(global-set-key (kbd "C-ö o") 'search-all-buffers)
+(global-set-key (kbd "C-ö O") 'helm-occur)
+(global-set-key (kbd "C-ö C-o") 'helm-multi-occur)
+
+(global-set-key (kbd "C-ö d") 'doc-view-mode)
+(define-key evil-normal-state-map "u" 'undo-tree-undo)
+(define-key evil-normal-state-map "U" 'undo-tree-redo)
+
+(require 'my-make-latex)
+(global-set-key (kbd "C-ä l") 'my-make-latex)
+(require 'multi-term)
+
+(global-set-key (kbd "C-ä w") 'save-current-configuration)
+(global-set-key (kbd "C-ä c") 'resume)
+
+(defun shortcut-grep()
+  (interactive)
+  (lgrep "-key" "~/.emacs"))
+
+(global-set-key (kbd "C-ä x") 'shortcut-grep)
+
 ;;; (autoload 'pymacs-apply "pymacs")
 ;;; (autoload 'pymacs-call "pymacs")
 ;;; (autoload 'pymacs-eval "pymacs" nil t)
 ;;; (autoload 'pymacs-exec "pymacs" nil t)
 ;;; (autoload 'pymacs-load "pymacs" nil t)
 ;;; (autoload 'pymacs-autoload "pymacs")
-;;; 
-;;; (pymacs-load "ropemacs" "rope-")
-;;; 
+;;; (pymacs-load "ropemacs" "rope")
 ;;; (autoload 'pymacs-load "pymacs" 't)
-;;; ropemacs-enable-autoimport 't)
-;;;
+;;; ropemacs-enable-autoimport 'ls
+

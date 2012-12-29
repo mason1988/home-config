@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: testedich
+# key: testedich
+# --
+test bla ${1:bla} xyz

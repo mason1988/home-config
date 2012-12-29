@@ -1,0 +1,8 @@
+* Notes
+
+** Irgend ein Ausschnitt
+
+   Source: [2012-12-25 Di], [[http://orgmode.org/worg/org-contrib/org-protocol.html#sec-6-1-1][org-protocol.el – Intercept calls from emacsclient to trigger custom actions]]
+
+    The problem with this solution would be, that only one template can be used with the fuction. Luckily, org-protocol-capture understands a slightly extended syntax to choose between several templates: If the first field of the data submitted is exactly one character in length, this character will be used to select the template.
+
