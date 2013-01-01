@@ -306,9 +306,10 @@
 
 (require 'popwin)
 (setq display-buffer-function 'popwin:display-buffer)
-(global-unset-key (kbd "C-f"))
-(global-set-key (kbd "C-f") popwin:keymap)
+(global-unset-key (kbd "C-t"))
+(global-set-key (kbd "C-t") popwin:keymap)
 (define-key evil-normal-state-map (kbd "C-t") popwin:keymap)
+(define-key evil-insert-state-map (kbd "C-t") popwin:keymap)
 
 
 (require 'grep)
