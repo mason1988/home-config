@@ -1,4 +1,0 @@
-echo 'test'
-echo 'das ist ein eshell script'
-cat ~/.emacs
-echo 'bla'

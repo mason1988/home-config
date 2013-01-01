@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: evilkey
+# key: evilkey
+# binding: direct-keybinding
+# expand-env: ((some-var some-value))
+# type: command
+# --
+(define-key evil-normal-state-map "${1}" '${2})
+(define-key evil-motion-state-map "${1}" '${2})

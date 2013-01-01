@@ -1,8 +1,0 @@
-[core]
-	repositoryformatversion = 0
-	filemode = true
-	bare = false
-	logallrefupdates = true
-[remote "zettel"]
-	url = https://github.com/floppycode/zettelkasten.git
-	fetch = +refs/heads/*:refs/remotes/zettel/*

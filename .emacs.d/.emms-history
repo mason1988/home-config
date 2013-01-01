@@ -1,0 +1,8 @@
+(
+;; active playlist
+" *EMMS Playlist*"
+;; playlists: ((BUFFER_NAME SELECT_POSITION TRACKS) ...)
+((" *EMMS Playlist*" 1 ((*track* (type . file) (name . "/home/florian/Downloads/Crystal F - X/01 Kopfschmerzen.mp3") (metadata) (last-played 20706 34406 629555) (play-count . 7)))))
+;; play method
+((emms-repeat-track) (emms-repeat-playlist))
+)
