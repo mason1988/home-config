@@ -250,9 +250,9 @@ globalkeys = awful.util.table.join(
 ---- muss für jeden Rechner separat behandelt werden
 ---- = kartennummer, mit alsamixer durchtesten
 ---- statt Master bei Headset z.B. PCM
-    awful.key({ }, "XF86AudioMute", function () awful.util.spawn("amixer -c 2 set PCM toggle") end),
-    awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer -c 2 set PCM 2+ unmute") end),
-    awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("amixer -c 2 set PCM 2-") end),
+    awful.key({ }, "XF86AudioMute", function () awful.util.spawn("amixer -c 1 set PCM toggle") end),
+    awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer -c 1 set PCM 2+ unmute") end),
+    awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("amixer -c 1 set PCM 2-") end),
 
 --- custom keys ende
 

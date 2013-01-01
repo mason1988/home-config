@@ -3,6 +3,7 @@
 #+LINK: drop /home/florian/Dropbox/%s
 
 #+TODO: TODO | DONE
+#+TODO: CANCELED | Restarted
 #+TODO: Zettel1 Zettel2 Zettel3 Zettel4 Zettel5 Zettel6 Zettel7 Zettel8 Zettel9 Zettel10 Zettel11 Zettel12 Zettel13 Zettel14
 
 * Zettelverwaltung
@@ -11,18 +12,20 @@
 ** *Softwaretechnik*
 ** Zettel10 *Theoretische Informatik*
 * Webdesign
-* Elementare Stochastik						     : 
+* Elementare Stochastik 
 ** Englisch
-| Deutsch                   | Englisch                 |
-|---------------------------+--------------------------|
-| Erwartungswert            | expected value           |
-| exponentialverteilung     | exponential distribution |
-| Varianz                   | variance                 |
-| gleichverteilung          | uniform distribution     |
-| Irrfahrt                  | random walk              |
-| Wahrscheinlichkeitsdichte | random density           |
-| Zufallsvariable           | random variable          |
-|                           |                          |
+| Deutsch                   | Englisch                       |
+|---------------------------+--------------------------------|
+| Erwartungswert            | expected value                 |
+| exponentialverteilung     | exponential distribution       |
+| Varianz                   | variance                       |
+| gleichverteilung          | uniform distribution           |
+| Irrfahrt                  | random walk                    |
+| Wahrscheinlichkeitsdichte | random density                 |
+|                           | probapility density (function) |
+| Zufallsvariable           | random variable                |
+|                           |                                |
+|                           |                                |
 ** Verteilungen
 ***** Laplaceverteilung
 zur Mitte hin, steigt die Wahrscheinlichkeit (exponentiell)
@@ -37,27 +40,35 @@ A,B Ereignisse; Y Zufallvariable
 $P(A|B) = \frac{P(A \cap B)}{P(B)}$ Ws A wenn B bekannt
 $P(Y|B) = \frac{E(1_{B} * Y)}{P(B)}$
 
-  :PROPERTIES:
-  :ATTACH_DIR: ~/Dropbox/Zettelkasten/el-res/
-  :Attachments: new_file andere_datei.tex
-  :END:
 [[docview:~/Dropbox/st/s0.pdf::1][Skript]]
+** Zusammenhänge
+- Var(X) = Cov(X,X)
+- Cov(X,Y) = E(X*Y) - E(X)E(Y)
+
 ** Wörterbuch
 - Zufallsvariable :: Abbildung [[file:201212ad-1900221184eoW.png]] wobei [[file:201212ad-1901251184ryc.png]] messbare Räume
 - messbarer Raum :: existiert Abbildung Raum auf Maßraum
 - Maßraum :: der Raum in den eine Maßfunktion zuordnet (z.B. 0..1 für Ws)
 - Wahrscheinlichkeitsfunktion ::  [[file:201212ad-190439118448i.png]]
-
-** Zettel-06							     :ATTACH:
-[[file::~/test1.png]]
-   :PROPERTIES:
-   :Attachments: el-zettel-06.pdf
-   :ID:       58dff94f-e04a-*** Dateien
+- Wahrscheinlichkeitsdichtefunktion :: gibt zu ZVar und möglichen 
+Output die Wahrscheinlichkeit an
+- gleichverteilt :: alle outputs sind gleich wahrscheinlich
+- Varianz :: [[file:zettelkasten.org_20121229_215420_14976asg.png]] = [[file:201212ad-21574114976n2m.png]] 
+           = irgend ein Maß für die mittleren Abweichungen vom Erwartungswert
+- Kovarianz :: [[file:zettelkasten.org_20121229_220016_149760At.png]] 
+	   = misst die zusammenhänge der Wert
+  entwicklung von X und Y, also hohe Werte von X
+  => hohe Werte Y ...
+- Tschebyscheff-Ungleichung :: Mit Erwartungswert und Varianz werden Wahrscheinlichkeiten
+für Werte < Erwartungswert bestimmt (minimale Wahrscheinlichkeit)
+     = [[file:201212ad-07253120660_2o.png]]
+     P[|X - \mu| < k] \geq 1 - \frac{\sigma^2}{k^2}
+- Wahrscheinlichkteisraum :: [[file:201212ad-15510922908saY.png]] = Raum mit Ereignissen und Wahrscheinlichkeitsfunktion da drauf
+(\Omega, P) 
+** Zettel-06
+*** Dateien
     [[/home/florian/Dropbox/st/st-zettel-06/st-zettel-06.pdf::NNN][st-zettel-06.pdf]]
     [[/home/florian/Dropbox/st/st-zettel-06/st-loesung-06.tex::NNN][st-loesung-06.tex]]
-
-
-
 *** Informationen
 **** Aufgabe 1
 a)
@@ -101,12 +112,131 @@ die müssen allen innerhalb des Pfades gezogen werden
 ** Zettel-08
 [[docview:~/Dropbox/st/st-zettel-08/st-zettel-08.pdf::1][st-zettel-08.pdf]]
 [[~/Dropbox/st/st-zettel-08/st-loesung-08.tex][st-loesung-08.tex]]
+*** Aufgabe 1
+**** a) 
+Es gibt 32 Karten, 4 davon sind Buben
+Jeder der 3 Spieler erhält 10 Karten
+Die Wahrscheinlichkeit für einen Buben liegt bei 4/32 = 1/8 für jeden Kartenzug
+[[file:201212ad-1238161774nwx.png]] enthält die mögliche Anzahl Buben in einer Hand = {0,1,2,3,4}
+Man kann das ganze als Binomialverteilung interpretieren, wenn die Karten mit einem mal
+verteilt werden und jeder Spieler nur seine eigenen Karten kennt
+[[file:201212ad-1302231774zON.png]] die Karten somit also unabhängig voneinander sind
+Als posititvis Ergebnis wird dabei das ziehen eines Buben und als negatvives Ergebnis wird das ziehen
+einer anderen Karte betrachtet.
+Es ergibt sich also für die Wahrscheinlichkeitsfunktion:
+[[file:201212ad-1307441774NjZ.png]]
+, also alle Möglichkeiten ([[file:201212ad-1308341774atf.png]]) omega mal einen Buben zu ziehen ([[file:201212ad-1310561774BMy.png]]) und bei allen anderen Zügen keinen ([[file:201212ad-1312321774AgH.png]])
+***** codes
+P(\omega) = (\frac{1}{8})^{\omega} * (\frac{7}{8})^{10 - \omega} * \binom{10}{\omega}
+(\frac{7}{8})^{10 - \omega}
+\binom{10}{\omega}
+(\frac{1}{8})^{\omega}
+\binom{10}{\omega}
+*****  
+#+name: testxyz.tex
+#+BEGIN_SRC tex :tangle schrott
+das ist ein anderer code
+#+END_SRC
+
+***** Lösung
+#+name: test123.tex
+#+BEGIN_SRC tex :tangle st-zettel-08.tex
+\documentclass[11pt]{amsart}
+\begin{document}
+#+END_SRC 
+
+blablabla
+
+#+BEGIN_SRC tex :tangle st-zettel-08.tex
+$\frac{A+B}{C+D} = X*Y = \binom{12}{34}$
+#+END_SRC
+
+#+BEGIN_SRC tex :tangle st-zettel-08.tex
+\end{document}
+#+END_SRC
+**** b)
+Aus Sicht des jeweiligen Spielers befinden sich nun noch 4 - X Karten im Spiel. Für die Katen im Skat gilt
+daher das selbe Prinzip wie schon in a), d.h. Binomialverteilung.
+Für beide Karten liegt die Wahrscheinlichkeit dafür, dass es sich um einen Buben handelt, bei
+[[file:201212ad-1423041774NqN.png]] \frac{4-X}{32} und somit kann dann der Ereignisraum [[file:201212ad-1424261774a0T.png]] mit {0,1,2} definiert werden, und 
+[[file:201212ad-1428171774n-Z.png]]
+
+***** codes
+P(\omega | X = k) = (\frac{4-X}{32})^{\omega} * (1 - \frac{4-X}{32})^{2 - \omega}
+***** 
+
+*** Aufgabe 2
+**** email
+Y nimmt werte zwischen 2..12 an e (y)
+X' = 2. wurf
+P(Y=y) = 
+P(Y=12) = 1/36.  = 1/6 * 1/6
+6 12 -> 1/6
+5 12 -> 0
+6 11 -> 1/6
+5 11 -> 1/6
+  immer 1/6 außer 12-X>6.   bla...
+
+P(Y=y) = 1/6 *     12 - (y + X )  <= char. funktion, dh wenn <0 dann 0 sonst 1, und y > 0
+
+b)
+E(Y | X = k)
+\sum_{y e Y(w)} y * (kram von oben)
+= X * usw.      fehlt noch abhängigkeit zu festem k
+
+c) E(Y)
+würfe sind unabhängig => ei zelne erwartungswerte addieren
+=> P jeweils 1/6 
+1/6 * 6+5+4... = 1/6 * 21 => 6/21 
+=> = 12/21.     
+
+E(g[X]) = 
+
 *** Aufgabe 3
-- X, Y Zufallsvariablen ->
-- gleichverteilt => 
+- X, Y Zufallsvariablen -> aus ereignisraum in anderen raum
 - [[file:201212ad-1854041184ReQ.png]] => existiert also
-- X^2 <=> 
-  
+- X^2 <=> Quadrat der jeweiligen Outputs
+- [[file:201212ad-21415714976zNO.png]]
+ [[file:201212ad-21480714976AYU.png]]
+E(X^2) = \sum_{\omega \in \Omega}X(\omega)^2P(X=X(\omega))
+
+ [[file:201212ad-05550220660LHc.png]]
+E[X+Y] = \sum_{\omega \in \Omega}(X(\omega)+Y(\omega))*P(\omega)
+
+Bekannt:
+ [[file:201212ad-05585120660YRi.png]]
+E[X*X] = \sum_{\omega \in \Omega}(X(\omega)*X(\omega))*P(\omega) < \infty
+
+
+=> Cov(X+Y, X-Y) = E[ (X+Y) * (X-Y) ] - E(X+Y)E(X-Y)
+                    = E[ X^2 - Y^2 ] - E(X+Y)E(X-Y)
+
+                 = E[ ([X+Y]-E[X+Y]) * ([X-Y] - E[X-Y])  ]
+		    = E[  [X+Y][X-Y] - [X+Y]E[X-Y] - E[X+Y][X-Y] + E[X+Y]E[X-Y]   ]
+       = E[  X^2 - Y^2 - (E[X-Y]X + E[X-Y]Y) - (E[X+Y]X - E[X+Y]Y) + E[X+Y]E[X-Y]  ]
+       = E[  X^2 - Y^2 - E[X-Y]X - E[X-Y]Y - E[X+Y]X + E[X+Y]Y + E[X+Y]E[X-Y]  ]
+**** Lösung Wikipedia:
+[[/home/florian/Zettelkasten/zettelkasten.org_20121230_061645_20660lbo.png]]
+
+*** Aufgabe 4
+n = Anzahl Würfe
+S_n = Anzahl Erfolge (1 gewürfelt)
+Ws für Erfolg = 1/5
+Würfel haben kein Gedächtnis -> binomialverteilung
+  mit 1/5 erfolg und 4/5 misserfolg
+
+[[file:201212ad-07284220660MBv.png]]
+P[|\frac{S_n}{n} - \frac{1}{5}| < \epsilon] \geq 1 - \frac{\sigma^2}{\epsilon^2} 
+
+[[file:201212ad-07460520660LVE.png]]
+\Omega = \{1, 2, 3, 4, 5, 6\}
+[[file:201212ad-07463620660lpQ.png]]
+E[X^2] = \sum_{\omega_1, \omega_2, \omega_3}
+
+**** Analoge Lösung mit Münze(a)
+Münze positiv oder negativ, analog zu den möglichen Ergebnissen 
+des Würfels (1 oder nicht 1)
+[[/home/florian/Zettelkasten/zettelkasten.org_20121230_074751_20660yzW.png]]
 
 ** Zettel-09
 [[~/Dropbox/st/st-zettel-09/st-zettel-09.pdf][st-zettel-09.pdf]]
@@ -325,10 +455,62 @@ pass
 *** Theorethische Informatik
 [[~/Dropbox/Shell-Skripte/489562/Blatt%2010::NNN][Blatt 10]]
 *** Elementare Stochastik
-
+**** TODO Ferienzettel Nr 8
+     CLOCK: [2012-12-31 Mo 17:11]--[2012-12-31 Mo 17:15] =>  0:04
 *** Logik
 [[~/Dropbox/Shell-Skript/510273/Blatt 10][Blatt 10]]
+** Org-Mode
+*** TODO Region usw. für Integration externer Modi(enviroment)
+*** TODO info-finder -> suche nach convenience!!
+*** TODO Shortcuts / Jumpmarks über Markuplanguage hinzufügen(ref?)
+*** TODO Orte mit (letzten) veränderungen oder sowas durchgehen(cyclen)
+** Usability Emacs allgemein
+*** TODO Plugin für das sichern aller länger besuchten Plätze
+    CLOCK: [2012-12-31 Mo 23:10]--[2012-12-31 Mo 23:11] =>  0:01
+    (bookmark+)
+* Tmp Diary
+** DONE bookmarken aller Länger besuchten Orte einrichten
+   CLOCK: [2013-01-01 Di 00:59]--[2013-01-01 Di 01:11] =>  0:12
+   bmkp-auto-idle-bookmark-mode zum starten
+   -> nur zum idlen
+     -> beser wäre, längeres arbeiten in einem 'Bereich'
+   ansonster gibts nicht viel zu tun, ist halt nur Scheiße
+    so
+   der Rücksprung muss daher soweit reichen.
+** DONE Convenience Funktionen sammeln
+   CLOCK: [2013-01-01 Di 01:12]--[2013-01-01 Di 01:47] =>  0:35
+   - vcursor ungeil -> ungünstige Shortcuts und irgendwie
+     auch sinnlos in dieser Form
+   - filecache funktioniert nicht richtig mit ido
+   - aber auf jeden Fall Ctrl+n für dynamische 
+     Vervollständigung / Ctrl+p für letzte Vervollständigung (sucht
+     im Text auch in genau diesen Richtungen !! )
+   - Ctrl+x Ctrl+n und Ctrl+x Ctrl+p um ganze 
+     Zeile so zu vervollständigen <= auch sehr gut
+
+** CANCELED Weg finden, Clock auf Verwaltungstask zu switchen, wenn Todo state sich geändert hat
+   CLOCK: [2013-01-01 Di 01:50]--[2013-01-01 Di 02:11] =>  0:21
+   :PROPERTIES:
+   :ORDERED:  t
+   :Effort: 0:05
+   :END:
+   = default clock task
+   => hängt mit vielen anderen Themen zusammen und der Sinn ist
+   auch durchaus fraglich
+** DONE Fehler beim starten beheben
+   CLOCK: [2013-01-01 Di 02:15]--[2013-01-01 Di 02:18] =>  0:03
+** TODO Stochastik Zettel Grundgerüst mittels Src Blöcken
+   CLOCK: [2013-01-01 Di 02:19]
 * Software
+** copy and paste
+- "+ vorgeschaltet, präzisiert das clipboard (register)
+- y => kopiert in kill ring
+- p => pastet aus kill ring
+- "a y / p => kopiert/pasted in/aus register a
+- M-v paste aus Clipboard durch emacs
+- C-@ setzt mark (ab da wird markiert)
+- C-Shift-v paste im Terminal
+- "+ ;y kopiert Link in pentadactyl
 ** generelle Software
  + aumix oder alsamixer für soundsteuerung
  + alternativ einfach sound bei kupfer
@@ -338,10 +520,33 @@ pass
    2. server ip (ifconfig) bei client eintragen + name
    3. diesen Namen bei server in richtung eintragen und executen
    4. client executen
- + xrandr:  $ xrandr --output VGA --mode 1280x1024 --right-of LVDS
+ + xrandr:  $ xrandr --output VGA --mode 1280x1024 --right-of LVDS 
+** synergy
+*** keyboardlayout
+- nacktes setxkbmap beim client hilft
+*** ServerConf
+#~/.synergy.conf
+section: screens
+	florian-ThinkPad-X121e:
+	flo_laptop:
+end
+section: links
+	florian-ThinkPad-X121e:
+		left = flo_laptop
+	flo_laptop:
+		right = florian-ThinkPad-X121e
+end
+section: options
+	 keystroke(control+1) = switchInDirection(left)
+	 keystroke(control+2) = switchInDirection(right)
+end 
+*** ClientConf
+conf wird gar nicht geladen o.O
+Aufruf:
+synergyc -n flo_laptop 192.168.2.30
 ** Orgmode
 *** shortcuts-orgmode 						  :shortcuts:
-   C-c C-c         Tags zu Unterpunkt verwalten / Latex lösen
+    C-c C-c         Tags zu Unterpunkt verwalten / Latex lösen
    C-c C-x C-l     Latex Code an aktueller Stelle übersetzen
    my-org-screenshot Screenshot-Ausschnitt erstellen und einfügen
    Latex Org Mode oder sowas aktiviert lustige makros
@@ -350,6 +555,54 @@ pass
    C-c C-n /p für nächsten /vorherigen Header
    C-c C-u um wieder zum Header zu kommen
    C-k / C-j nächster / vorheriger Header auf selber Stufe
+   
+   C-n    dynamic extension !!!
+*** inline bilder
+**** link_linie entfernen
+(set-face-underline-p 'org-link niPl)
+mit org-display... gibts keine
+Linien, und es reagiert sofort
+**** bilder anzeigen
+iimage-mode / iimage-recenter
+[ [file:datei123.png] ]
+
+alternativ:
+org-display-inline-images
+<= zeigt direkt keine linie
+*** Regionen/Enviroments
+= org-special
+- tangling wert ungleich yes und no wird als Dateiname interpretiert
+- mit org-babel-tangle werden dann die Dateien erstellt
+**** Syntax
+#+BEGIN_X
+#+END_X
+
+#+BEGIN_LaTeX
+\documentclass ...
+#+END_LaTeX
+**** Allgemeines
+- wird auf jeden Fall anders formatiert(alles grau)
+- durch Variable org-src-fontify-natively wird auch
+  im Org-Fenster das richtige Syntaxhighlighting 
+  im Codeblock benutzt
+- C-c ' :: öffnet den Inhalt der Region tempoär in nativem Buffer. Dieser
+	   muss mit der selben Tastenkombination beendet werden
+**** Beispiel Syntax mit möglichem Tangling
+
+#+BEGIN_SRC latex :tangling st-temp.tex
+  \documentclass[11pt]{amsart}
+  
+  \begin{document}
+  $\frac{A+B}{C+D} = X*Y = \binom{123}{456}$
+  \end{document}
+#+END_SRC
+
+**** streaming
+- leider noch keine Möglichkeit gefunden das ganze mit externen Dateien zu verknüpfen,
+was ist mit Annotationen?
+- das würde normalerweise auch erst beim exportieren gemacht werden (Stichwort: tangling)
+- für Code Tangling bieten sich dann die 
+
 ** org-protocol
 *** Browser
 javascript:location.href='org-protocol://capture://x/'+
@@ -389,10 +642,17 @@ man auch weglassen)
 v -> visual, V -> visual zeile, ctrl v -> block
 dann mit i,a,I,A usw. editieren (nach enter bei allen zeilen)
 *** kleinkram
-c löscht geht aber direkt auf insert
+s(jetzt k) löscht geht aber direkt auf insert
 :w !sudo tee > /dev/null %  wenn die Berechtigung bei Vim fehtl
     alternativen: :%!sudo tee %
 sudo chmod -v -R ouag+rw *     alles per chmod freigeben
+
+*** Vervollständigung
+   - Ctrl+n für dynamische 
+     Vervollständigung / Ctrl+p für letzte Vervollständigung (sucht
+     im Text auch in genau diesen Richtungen !! )
+   - Ctrl+x Ctrl+n und Ctrl+x Ctrl+p um ganze 
+     Zeile so zu vervollständigen
 ** Emacs
 *** shortcuts-emacs 						  :shortcuts:
     sudo chmod -v -R ouagrw . matched auch verstecktes
@@ -609,6 +869,14 @@ selbst an die Hook ketten:
  (define-key evil-insert-state-local-map "\M-k" 'evil-window-prev)
  )
 )
+*** helm :shortcuts:
+[Space] scrollt in Hilfstext
+M-a markiert alle Einträge !!!
+
+** install/make kram
+1. ./configure
+2. make
+3. sudo make install
 ** Firefox
 *** Standardsuche
 about:config und da nach keyword.URL suchen und
@@ -726,7 +994,7 @@ der key wird dabei expanded
 ${1} für Eingaben, ${1:bla} oder sows für Vorschläge
 dann Lra in Latex eingeben und tab -> ersetzung
 Bei kopien wird dann bloß noch $1 geschrieben
-
+(muss auch!! Die klammern sind nichtmehr erlaubt)
 Für mehrere Auswhal möglichkeiten:
 <div align="${2:$$(yas/choose-value '("right" "center" "left"))}">
 ** git
@@ -824,6 +1092,10 @@ git init     für neues lokales rep
 git add      mit allem was man dabei haben möchte, ggbflls. vorher gitignore
 git remote add rem_name online_path -t master
 (git push rem_name --force) falls repository neu bespielt werden soll
+*** Fehler beheben
+- mit git log die einzelnen commits inkl nummer anzeigen
+- mit git show nr:pfad z.B. 1234:.emacs.d/test.txt dokumente etc anzeigen
+
 ** ----------------------------
 ** eshell
 - cd = für stack, cd -nr  um aus stack aufzurufen
@@ -1614,6 +1886,81 @@ aber wieder alles änderungen in dem header => ficken sie sich
 * Revive Sessions
 - 1 :: Elementare Stochastik Zettel 8
 * Projekte wenn Zeit
+** Emacs/Linux
+*** Wiederholung buchstabensuche
+  -> zeile umbrechen lassen (vlt. eigene Taste)
+*** lösung für den austausch von bildern
+  und code finden
+*** ein ersatz für readItLater
+  fehlt noch
+*** generell schnellerer Window/Buffer wechsel
+**** Kandidaten
+***** iflipb
+entspricht dem Windowskonzept
+vom Windowswitching
++ preview von jedem fenster
+***** tabbarmode
+fügt tabbar hinzu und
+gruppiert die buffer
+***** pinbar
+ebenfalls tabbar, aber hier lassen
+sich buffer dauerhaft anpinnen
+***** win-switch.el
+fenstersprung / resize
+mit hjklm
+***** onewindow
+- mit same-window-buffer-names
+bestimmte fenster automatisch im
+aktuellen Fenster öffnen lassen
+- ggbflls mit eigener decorator
+funktion noch in einen extra 
+buffer wechseln 
+- with-selected-window könnte praktisch
+werden
+***** popwin.el
+kann auf jeden fall für bestimmte
+buffer ein separates schnell schließbares
+Fenster erstellen usw.
+Kann aber glaube ich noch einige andere
+interessante Sachen
+***** kiwanami/emacs-window-manager
+Organisiert verschiedene konkrete 
+Fensterstrukturen und unterstützt dabei
+diverse andere Funktionen auch für popup
+Fenster usw.
+***** switch-window.el
+Zeigt Nummern in den Fenstern an,
+um dann zu springen
+***** display-buffer überschreiben
+http://superuser.com/questions/244036/emacs-window-management
+***** elscreen
+session management, tabs,
+fensterumbenennung und ein haufen
+anderer Kram
+Im großen und ganzen bietet es einfach workspaces, 
+in denen layouts erhalten bleiben und die durch tabs
+kenntlich gemacht werden
+***** dedicated windows
+Fenster fest mit Buffer verknüpfen, so
+dass viele Funktionen dieses Fenster nicht
+in Betracht ziehen:
+(set-window-dedicated-p (frame-selected-window) t)
+org...indir...buffer ignoriert diese z.B.
+komplett
+ein dedicated Window wird aber auch in sich selbst
+nichts neues mehr öffnen sondern andere Fenster
+benutzen
+**** weiterführende Links
+[[http://www.gnu.org/software/emacs/manual/html_node/elisp/Selecting-Windows.html#Selecting-Windows][selecting windows]]
+[[http://www.gnu.org/software/emacs/manual/html_node/elisp/Cyclic-Window-Ordering.html#Cyclic-Window-Ordering][cyclic window ordering]]
+[[http://www.gnu.org/software/emacs/manual/html_node/elisp/Buffers-and-Windows.html][buffers and windows]]
+[[http://www.gnu.org/software/emacs/manual/html_node/elisp/Choosing-Window.html#Choosing-Window][choosing window]]
+[[http://www.gnu.org/software/emacs/manual/html_node/elisp/Dedicated-Windows.html][dedicated windows]]
+*** tags einführen
+*** kalender und clock
+*** emms stetig weiterlaufen lassen
+    und dieses verfluchte Flimmern
+dauernd beseitigen
 ** Windowmanager
 siehe hierzu auch: [[*Windowmanager][Windowmanager]]
 Z.B. könnte man das flexible *XMonad* anpassen bzw. dessen tabbing
@@ -1633,11 +1980,7 @@ Anwendungen, z.B. für Fluxbox
 *** Xmonad einrichten
 http://www.linuxandlife.com/2011/11/xmonad-in-linuxmint-12-lisa.html
 https://wiki.archlinux.de/title/Xmonad#Installation
-** org-mode
-siehe hierzu auch [[http://doc.norang.ca/org-mode.html][Your Life in Plaintext]]
-Bisher steht eine wirkliche Einführung in Knowledge/Task management
-mit dem OrgMode noch aus
-http://orgmode.org/worg/org-contrib/org-annotation-helper.html
+
 ** kleinkram
 *** TODO welche desktop umgebung (artikel bei ubuntuusers über desktops auswerten*** - Session Management - Window Manager? (autoöffnen und so geht auch bei Awesome, aber vlt Bonus)
 *** TODO Org: Footnote und Emphasise?
@@ -1674,4 +2017,6 @@ $\Rightarrow C = B * A$
 - auch sonst wäre eine zuverlässige Umwandlung wichtig
   (previewing versteht sich)
 * Notes
-
+*Shell Command Output*
+(lgrep "-key" "/home/florian/.emacs")
+(setq debug-on-error t)

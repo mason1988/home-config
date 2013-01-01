@@ -23,16 +23,36 @@
     (insert (string-as-multibyte "$"))
     (insert (string-as-multibyte "\\end{document}"))
 
-    (write-region (point-min)(point-max) (concat filename ".tex")))
+    (write-region (point-min)(point-max) (concat filename ".tex"))
     
-  (shell-command
-   (concat "latex " filename ".tex"))
+;  (call-process
+;   "latex" nil "*scratch*" nil
+;	 (concat filename ".tex"))
+    (shell-command
+     (concat "latex " filename ".tex"))
 
-  (shell-command
-   (concat "dvipng " filename ".dvi -o " filename ".png"))
+;  (call-process
+;   "dvipng" nil "*scratch*" nil
+;   (concat filename ".dvi -o " filename ".png"))
+    (shell-command
+     (concat "dvipng " filename ".dvi -bg 'Transparent' -o " filename ".png"))
 
-  (insert (concat "\n [[file:" filename ".png]]\n"))
-  (iimage-recenter)
+    (shell-command
+     (concat "rm " filename ".tex"))
+    (shell-command
+     (concat "rm " filename ".dvi"))
+    (shell-command
+     (concat "rm " filename ".log"))
+    (shell-command
+     (concat "rm " filename ".aux"))
+  )
+  
+  
+  (kill-buffer "*Shell Command Output*")
+  (goto-char (region-beginning))
+  
+  (insert (concat "[[file:" filename ".png]]\n"))
+  (org-display-inline-images)
 )
 (provide 'my-make-latex)
 

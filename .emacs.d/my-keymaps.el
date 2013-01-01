@@ -1,7 +1,7 @@
 
 ;;; global
 (define-key evil-insert-state-map "\M-e" 'evil-normal-state)
-(define-key evil-normal-state-map (kbd "C-t") 'evil-scroll-up)
+;(define-key evil-normal-state-map (kbd "C-t") 'evil-scroll-up)
 
 
  (define-key evil-normal-state-map "  " 'ace-jump-mode)
@@ -94,7 +94,7 @@
 (define-key minibuffer-local-isearch-map [escape] 'keyboard-quit)
 
 
-(define-key evil-normal-state-map (kbd "C-t") 'evil-scroll-up)
+;(define-key evil-normal-state-map (kbd "C-t") 'evil-scroll-up)
 (define-key evil-normal-state-map "\M-e" 'keyboard-quit)
 (define-key evil-visual-state-map "\M-e" 'keyboard-quit)
 (define-key minibuffer-local-map "\M-e" 'keyboard-quit)

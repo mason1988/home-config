@@ -1,4 +1,3 @@
-(add-to-list 'load-path "~/.emacs.d/predictive/")
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/predictive/latex/")
 (add-to-list 'load-path "~/.emacs.d/predictive/texinfo/")
@@ -6,6 +5,15 @@
 (add-to-list 'load-path "~/.emacs.d/magit/")
 (add-to-list 'load-path "~/.emacs.d/bookmark+/")
 (add-to-list 'load-path "~/.emacs.d/expand-region/")
+
+(add-to-list 'load-path "~/.emacs.d/auctex/")
+(add-to-list 'load-path "~/.emacs.d/auctex/preview/")
+
+(require 'latex)
+
+(load "auctex.el" nil t t)
+(load "preview-latex.el" nil t t)
+
 (require 'package)
 (require 'predictive)
 (require 'bookmark+)
@@ -27,8 +35,10 @@
 
 (add-to-list 'load-path "~/.emacs.d/emms/")
 (require 'emms-setup)
-(emms-standard)
+(emms-all)
 (emms-default-players)
+(require 'emms-player-vlc)
+(setq emms-player-list '(emms-player-vlc))
 
 (package-initialize)
 (require 'org-install)
@@ -39,6 +49,8 @@
 (require 'deft)
 (require 'zencoding-mode)
 ;(helm-mode 1)
+
+;(setq helm-samewindow nil)
 
 (setq font-latex-do-multi-line t)
 (setq line-number-mode t)
@@ -144,11 +156,15 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
+ '(bmkp-auto-light-when-set (quote all-in-buffer))
+ '(bmkp-last-as-first-bookmark-file "/home/florian/.emacs.d/bookmarks")
+ '(dynamic-completion-mode t)
  '(helm-c-pdfgrep-default-read-command "emacsclient '%f'")
  '(org-agenda-files (quote ("~/Zettelkasten/zettelkasten.org")))
  '(org-format-latex-options (quote (:foreground default :background default :scale 1.4 :html-foreground "Black" :html-background "Transparent" :html-scale 1.4 :matchers ("begin" "$1" "$" "$$" "\\(" "\\["))))
+ '(org-indirect-buffer-display (quote new-frame))
  '(org-modules (quote (org-bbdb org-bibtex org-docview org-gnus org-info org-jsinfo org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m org-annotate-file org-bookmark org-checklist org-collector org-eshell org-eval)))
+ '(org-src-fontify-natively t)
  '(preview-scale-function 1.4))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -174,13 +190,12 @@
 (define-key evil-normal-state-map (kbd "C-c f") 'evil-emacs-state)
 (define-key evil-normal-state-map (kbd "C-c q") 'evil-force-normal-state)
 
-(global-set-key (kbd "C-u") 'evil-scroll-up)
-(define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
+;(global-set-key (kbd "C-u") 'evil-scroll-up)
+;(define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
 (global-set-key (kbd "M-k") 'evil-window-prev)
 (define-key evil-normal-state-map (kbd "M-k") 'evil-window-prev)
 (global-set-key (kbd "C-c b") 'view-buffer-other-window)
-(global-set-key (kbd "C-ü") (lookup-key global-map (kbd "C-x")))
-(global-set-key (kbd "C-d") 'evil-scroll-down)
+;(global-set-key (kbd "C-d") 'evil-scroll-down)
 
 (global-set-key (kbd "C-x f") 'ido-find-file)
 (global-set-key (kbd "C-x C-f") 'ido-find-file-other-window)
@@ -215,7 +230,7 @@
  (lambda ()
  (define-key evil-insert-state-local-map "\M-j" 'evil-window-next)
  (define-key evil-insert-state-local-map "\M-k" 'evil-window-prev)
- (define-key evil-insert-state-local-map "\M-x" 'execute-extended-command) 
+ (define-key evil-insert-state-local-map "\M-x" 'execute-extended-command)
  )
 )
 
@@ -272,7 +287,7 @@
 
 (require 'search-all-buffers)
 (global-set-key (kbd "C-ö o") 'search-all-buffers)
-(global-set-key (kbd "C-ö O") 'helm-occur)
+(global-set-key (kbd "C-ö o") 'helm-occur)
 (global-set-key (kbd "C-ö C-o") 'helm-multi-occur)
 
 (global-set-key (kbd "C-ö d") 'doc-view-mode)
@@ -280,17 +295,106 @@
 (define-key evil-normal-state-map "U" 'undo-tree-redo)
 
 (require 'my-make-latex)
-(global-set-key (kbd "C-ä l") 'my-make-latex)
+(require 'my-make-latex-inverse)
+(require 'my-make-latex-green)
+(global-set-key (kbd "C-ä l") 'my-make-latex-green)
+
 (require 'multi-term)
 
-(global-set-key (kbd "C-ä w") 'save-current-configuration)
-(global-set-key (kbd "C-ä c") 'resume)
+(global-set-key (kbd "C-ä w s") 'save-current-configuration)
+(global-set-key (kbd "C-ä w r") 'resume)
 
+(require 'popwin)
+(setq display-buffer-function 'popwin:display-buffer)
+(global-unset-key (kbd "C-f"))
+(global-set-key (kbd "C-f") popwin:keymap)
+(define-key evil-normal-state-map (kbd "C-t") popwin:keymap)
+
+
+(require 'grep)
 (defun shortcut-grep()
   (interactive)
-  (lgrep "-key" "~/.emacs"))
+  (grep "test")
+  (lgrep "-key" "/home/florian/.emacs"))
 
 (global-set-key (kbd "C-ä x") 'shortcut-grep)
+
+(global-set-key (kbd "C-ö e n") 'emms-next)
+(global-set-key (kbd "C-ö e p") 'emms-previous)
+(global-set-key (kbd "C-ö e P") 'emms-pause)
+(global-set-key (kbd "C-ö e s") 'emms-shuffle)
+(global-set-key (kbd "C-ö e r") 'emms-repeat)
+;(define-key evil-normal-state-map (kbd "C-t") 'evil-scroll-up)
+(global-set-key (kbd "C-ö e f") 'emms-add-find)
+(global-set-key (kbd "C-ö e d") 'emms-add-directory-tree)
+(global-set-key (kbd "C-ö e l") 'emms-playlist-mode-go)
+
+(defun dedi_func ()
+  "makes currently selected window strongly dedicated to its buffer"
+  (interactive)
+  (set-window-dedicated-p (frame-selected-window) t)
+  (message "window dedicated!"))
+(defun undedi_func ()
+  "removes dedication from currently selected window"
+  (interactive)
+  (set-window-dedicated-p (frame-selected-window) nil)
+  (message "window undedicated!"))
+(global-set-key (kbd "C-ä w d") 'dedi_func)
+(global-set-key (kbd "C-ä w D") 'undedi_func)
+
+(global-set-key (kbd "C-ä w u") 'winner-undo)
+
+(define-key evil-normal-state-map "s" 'evil-backward-char)
+(define-key evil-normal-state-map "n" 'evil-next-line)
+(define-key evil-normal-state-map "r" 'evil-previous-line)
+(define-key evil-normal-state-map "t" 'evil-forward-char)
+
+(define-key evil-motion-state-map "s" 'evil-backward-char)
+(define-key evil-motion-state-map "n" 'evil-next-line)
+(define-key evil-motion-state-map "r" 'evil-previous-line)
+(define-key evil-motion-state-map "t" 'evil-forward-char)
+
+
+
+(define-key evil-normal-state-map "k" 'evil-substitute)
+(define-key evil-normal-state-map "j" 'evil-replace)
+(define-key evil-normal-state-map "h" 'evil-search-next)
+(define-key evil-normal-state-map "H" 'evil-search-previous)
+(define-key evil-normal-state-map "l" 'evil-find-char-to)
+(define-key evil-normal-state-map "L" 'evil-find-char-to-backward)
+
+(define-key evil-motion-state-map "k" 'evil-substitute)
+(define-key evil-motion-state-map "j" 'evil-replace)
+(define-key evil-motion-state-map "h" 'evil-search-next)
+(define-key evil-motion-state-map "H" 'evil-search-previous)
+(define-key evil-motion-state-map "l" 'evil-find-char-to)
+(define-key evil-motion-state-map "L" 'evil-find-char-to-backward)
+
+(define-key evil-motion-state-map "\M-r" 'windmove-up)
+(define-key evil-normal-state-map "\M-r" 'windmove-up)
+(define-key evil-insert-state-map "\M-r" 'windmove-up)
+(define-key evil-motion-state-map "\M-n" 'windmove-down)
+(define-key evil-normal-state-map "\M-n" 'windmove-down)
+(define-key evil-insert-state-map "\M-n" 'windmove-down)
+
+(define-key minibuffer-local-map "\C-e" 'keyboard-escape-quit)
+
+(define-key evil-motion-state-map "\C-n" 'evil-scroll-down)
+(define-key evil-normal-state-map "\C-n" 'evil-scroll-down)
+(global-set-key "\C-n" 'evil-scroll-down)
+
+(define-key evil-motion-state-map "\C-r" 'evil-scroll-up)
+(define-key evil-normal-state-map "\C-r" 'evil-scroll-up)
+(global-set-key "\C-r" 'evil-scroll-up)
+
+(global-set-key (kbd "M-ä") 'move-to-window-line-top-bottom)
+
+(global-set-key (kbd "M-/") 'hippie-expand)
+(global-set-key (kbd "C-ä c") 'dabbrev-completion)
+
+(global-set-key (kbd "C-ü") (lookup-key global-map (kbd "C-x")))
+
+(global-set-key (kbd "C-ö k") 'helm-show-kill-ring)
 
 ;;; (autoload 'pymacs-apply "pymacs")
 ;;; (autoload 'pymacs-call "pymacs")
@@ -302,3 +406,12 @@
 ;;; (autoload 'pymacs-load "pymacs" 't)
 ;;; ropemacs-enable-autoimport 'ls
 
+(global-set-key "\M-s" 'windmove-left)
+(global-set-key "\M-t" 'windmove-right)
+(global-set-key "\M-r" 'windmove-up)
+(global-set-key "\M-n" 'windmove-down)
+(global-unset-key "\M-h")
+(global-set-key (kbd "M-h M-x") 'helm-M-x)
+(define-key global-map (kbd "M-h M-x") 'helm-M-x)
+(define-key evil-normal-state-map (kbd "M-h M-x") 'helm-M-x)
+(global-set-key (kbd "C-ö s") 'helm-do-grep)
