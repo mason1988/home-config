@@ -297,7 +297,7 @@
 (require 'my-make-latex)
 (require 'my-make-latex-inverse)
 (require 'my-make-latex-green)
-(global-set-key (kbd "C-ä l") 'my-make-latex-green)
+(global-set-key (kbd "C-ä l") 'my-make-latex)
 
 (require 'multi-term)
 
