@@ -1551,5 +1551,6 @@ pass
 - C-ö e d     :: emms-add-directory-tree
 - C-ö e l     :: emms-playlist-mode-go
 
-- C-x z z...  :: repeat 
+- C-x z z...  :: repeat last emacs action
 - C-!         :: evil-normale-state (force)
+. @@          :: repeat last macro

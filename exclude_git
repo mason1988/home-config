@@ -3,7 +3,12 @@
 # For a project mostly in C, the following would be a good set of
 # exclude patterns (uncomment them if you want to use them):
 # *.[oa]
-# *~
+*~
+*.dvi
+*.aux
+*.log
+*backup*
+*history*
 *.local*
 *.mozilla*
 *backup*
@@ -44,6 +49,45 @@
 .dmrc
 .dreampie
 .dropbox-dist/
+.#bla.tex
+.adobe/
+.centerim/
+.config/banshee-1/
+.config/herbstluftwm/
+.config/indicators/
+.config/libimobiledevice/
+.config/openbox/
+.elinks/
+.emacs-bmk-bmenu-state.el
+.emms-cache
+.face
+.gnus.el
+.i3/
+.mplayer/
+.nnmail-cache
+.pekwm/
+.pentadactylrc
+.quicksynergy/
+.selected_editor
+.stumpwmrc
+.stumpwmrc.lisp
+.wmii/
+.xinitrc
+Mail/
+News/
+Vorlesungsskript_WS2012.pdf
+Zettelkasten/.#todo.org
+_region_.tex
+amd-driver-installer-catalyst-12.11-beta11-x86.x86_64.run
+awmtt/
+current_music.pl
+el-zettel-09.pdf
+et
+playlist_netbook
+test.tex
+test.tmp
+test1.png
+
 dropbox/
 .emacs.bmk
 hell/
@@ -106,4 +150,3 @@ Ubuntu One/
 .eshell/
 Zettelkasten/ltxpng/
 .dropbox/
-

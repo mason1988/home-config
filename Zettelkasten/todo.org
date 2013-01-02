@@ -33,7 +33,6 @@ Clock summary at [2013-01-02 Mi 14:42]
 ** Verwaltung
    CLOCK: [2013-01-02 Mi 14:52]--[2013-01-02 Mi 14:55] =>  0:03
 ** wichtig
-*** TODO Orte mit (letzten) veränderungen oder sowas durchgehen(cyclen)
 *** TODO Jumpmode für Org testen
 *** TODO Buffer/Window Lösungen weiter prüfen 
 *** DONE unclutter modline
@@ -44,7 +43,17 @@ Clock summary at [2013-01-02 Mi 14:42]
     CLOCK: [2013-01-02 Mi 14:59]--[2013-01-02 Mi 15:13] =>  0:14
     CLOCK: [2013-01-02 Mi 14:55]--[2013-01-02 Mi 14:59] =>  0:04
 *** TODO schnelleres arbeiten mit git
+*** TODO git account daten hinzufügen
+*** TODO überall ignorelisten installieren
+*** TODO git merge bei editierung an unterschiedlichen stellen
+*** TODO magit konfigurieren und benutzen
+*** TODO schnellen git workflow zusammenstellen
+*** TODO einfachere Screenshots
+*** TODO bilder pasten, emacs => drag and drop
+*** TODO calculator benutzbar machen (emacs)
+*** TODO git informationen in emacs eintragen
 ** unwichtig
+*** TODO Orte mit (letzten) veränderungen oder sowas durchgehen(cyclen)
 *** TODO Shortcuts / Jumpmarks über Markuplanguage hinzufügen(ref?)
 *** TODO lösung für den austausch von bildern und code finden
 *** TODO ersatz für readItLater finden
