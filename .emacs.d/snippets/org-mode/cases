@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: cases
+# key: cases
+# --
+\\begin{cases} ${1:1} &\\mbox{falls } ${2:z=0} \\\\ ${3:0} &\\mbox{sonst} \\end{cases}

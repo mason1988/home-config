@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: keine Ahnung
+# key: keine
+# --
+test Nr \${1:1} und so weiter

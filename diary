@@ -1,0 +1,20 @@
+Dec 16, 2012
+
+Sed Befehl zum einsetzen und entfernen einzelner Zeilen in der Konsole kennen gelernt. Außerdem Softwaretechnik komplett in emacs erledigt, arbeitsfluss beim Fensteraufbau und Bufferwechsel setzt langsam ein.
+Das Netbook bleibt zunächst bei Awesome und Cinnamon. Geprüft das AWesome Starter keine Gnome Session startet. Da auch Energiesparfunktionen nihct laufen, laufen wohl auch sonst keine Daemons. Generell ist Awesome wieder installiert. Darüber hinaus auch den Laptop komplett mit Cinnamon und Awesome eingerichtet.
+
+Als Versionierung kommt nun git über sourceforge zum Einsatz. Erste Synchronisationen wurden schon vorgenommen.
+
+Zur Textsubstitution sollten in Zukunft Yasnippets zum einsatz kommen. Per Shortcut lässt sich Snippet erstellen und laden. Durchnummerierte Variablen sorgen für schnelles einsetzen. Erweiterung durch Lisp und zahlreiche zusätzliche Schnittstellen auf jeden Fall gegeben. Angepasste Conf. Dateien aus dem Netz bieten zudem schnelleres erstellen im Arbeisfluss.
+
+Grundstrukturen und Dateien für zukünftige Zettel erstellt. Dabei erstes Shell Skript entwickelt. Shell Skripte sind ziemlich hässlich und unhandlich, besser vermeiden oder durch Python ersetzen.
+Zum resizen in Zukunft die Shortcuts C-x { / } benutzen. Nimmt genauso Zahlen wie evil.
+Für kleine Anpassungen in Textmengen ab jetzt M-% (= query-regexp) da vim zu langsam und unhandlich. Mit diesem aufruf lassen sich schnell Elemente überspringen(n) bzw. ersetzen(y) Während des query's können auch noch anpassungen an der Abfrage vorgenommen werden.
+WinnerMode läuft ab jetzt dauerhaft, um damit zerstörte Fensterstrukturen schnell wiederherzustellen.
+IdoMode läuft ab jetzt dauerhaft. Vollständige Completion Features für Emacs-kram, bleibt dabei aber im Minibuffer welcher lediglich skaliert wird. Vielleicht muss dass skalieren noch angepasst werden, um Ablenkung zu vermeiden.
+
+Sprung zu Buffern ab jetzt vorzugsweise über display-buffer (optional auch über ido), damit wird bereits offener Buffer angesprungen, falls vorhanden.
+
+Nach Möglichkeit Clocking Funktion für Todos benutzen, um konzentrierte Arbeitsphasen zu erreichen. Diary Einträge über Kalender jeweils auf das Datum, an welchem die Wachphase begonnen hat.
+
+Youtube bietet noch viele Interessante weitere Inspirationen für Anpassungen -> weiter beobachten.

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: mathbb2
+# key: $m
+# --
+\$\\mathbb{${1:P}}

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: newevil
+# key: newevil
+# binding: direct-keybinding
+# --
+(define-key evil-motion-state-map "${1:T}" '${2:F})
+(define-key evil-normal-state-map "$1" '$2)

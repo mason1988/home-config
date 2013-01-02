@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: zettelblock
+# key: zettelblock
+# --
+#+BEGIN_SRC latex tangle: ${1:st}-loesung-${2:08}.tex
+$3
+#+END_SRC
