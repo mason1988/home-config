@@ -1,87 +1,51 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=prv_zettelkasten 2013.1.1)  1 JAN 2013 02:54
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=latex 2012.12.6)  1 JAN 2013 18:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**&prv_zettelkasten _region_.tex
-(./_region_.tex
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, lo
-aded.
-CUSTOMISED FORMAT. Preloaded files:
-        .
-  amsart.cls    2009/07/02 v2.20.1
- amsmath.sty    2000/07/18 v2.13 AMS math features
- amstext.sty    2000/06/29 v2.01
-  amsgen.sty    1999/11/30 v2.0
-  amsbsy.sty    1999/11/29 v1.2d
-  amsopn.sty    1999/12/14 v2.01 operator names
-    umsa.fd    2009/06/22 v3.00 AMS symbols A
-amsfonts.sty    2009/06/22 v3.00 Basic AMSFonts support
-    umsa.fd    2009/06/22 v3.00 AMS symbols A
-    umsb.fd    2009/06/22 v3.00 AMS symbols B
-        .
-No file _region_.aux.
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-(/usr/share/texmf/tex/latex/preview/preview.sty
-Package: preview 2010/02/14 11.86 (AUCTeX/preview-latex)
+**\nonstopmode\nofiles\PassOptionsToPackage{active,tightpage,auctex}{preview}\A
+tBeginDocument{\ifx\ifPreview\undefined\RequirePackage[displaymath,floats,graph
+ics,textmath,sections,footnotes]{preview}[2004/11/05]\fi} \input _region_.tex
+(./_region_.tex  !name([*Org Src zettelkasten.org-1[ latex ]*].tex)
+ !name([*Org Src zettelkasten.org-1[ latex ]*]) !offset(-2) 
 
-(/usr/share/texmf/tex/latex/preview/prtightpage.def
-\PreviewBorder=\dimen114
-)
-(/usr/share/texmf/tex/latex/preview/prauctex.def
-No auxiliary output files.
+! LaTeX Error: Missing \begin{document}.
 
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 D
+     er Raum $\Omega$ sei
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-\hbadness=\count99
-\hfuzz=\dimen115
-(/usr/share/texmf/tex/latex/preview/prauctex.cfg))
-(/usr/share/texmf/tex/latex/preview/prfootnotes.def)
-\pr@snippet=\count100
-\pr@box=\box29
-\pr@output=\toks25
+Missing character: There is no D in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 3.
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+ !name([*Org Src zettelkasten.org-1[ latex ]*].tex) !offset(-4) )
+! Emergency stop.
+<*> ...review}[2004/11/05]\fi} \input _region_.tex
+                                                  
+*** (job aborted, no legal \end found)
 
-Preview: Fontsize 10.95pt
-)  !name(zettelkasten.tex) !offset(-3) 
-! Preview: Snippet 1 started.
-<-><->
-      
-l.8 $
-     \frac{A+B}{C+D} = X*Y = \binom{12}{34}$
-Not a real error.
-
-Preview: Tightpage -32891 -32891 32891 32891
-! Preview: Snippet 1 ended.(656305+302080x6530313).
-<-><->
-      
-l.8 $\frac{A+B}{C+D} = X*Y = \binom{12}{34}$
-                                            
-Not a real error.
-
-[1]
-\newlabel{tocindent-1}{0pt}
-\newlabel{tocindent0}{0pt}
-\newlabel{tocindent1}{0pt}
-\newlabel{tocindent2}{0pt}
-\newlabel{tocindent3}{0pt}
- ) 
+ 
 Here is how much of TeX's memory you used:
- 190 strings out of 493678
- 2511 string characters out of 3166434
- 67005 words of memory out of 3000000
- 4603 multiletter control sequences out of 15000+200000
- 12262 words of font info for 47 fonts, out of 3000000 for 9000
- 175 hyphenation exceptions out of 8191
- 22i,4n,22p,169b,111s stack positions out of 5000i,500n,10000p,200000b,50000s
-
-Output written on _region_.dvi (1 page, 1936 bytes).
+ 10 strings out of 495060
+ 198 string characters out of 3182053
+ 45057 words of memory out of 3000000
+ 3293 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 18i,1n,12p,310b,56s stack positions out of 5000i,500n,10000p,200000b,50000s
+No pages of output.

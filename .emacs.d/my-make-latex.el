@@ -1,6 +1,4 @@
-(defun my-make-latex ()
-  "Convert Region to a Latex image"
-  (interactive)
+(defun my-make-latex-core (conv_par kill_f)
   (setq filename
 	(concat
 	 (make-temp-name
@@ -25,17 +23,11 @@
 
     (write-region (point-min)(point-max) (concat filename ".tex"))
     
-;  (call-process
-;   "latex" nil "*scratch*" nil
-;	 (concat filename ".tex"))
     (shell-command
      (concat "latex " filename ".tex"))
 
-;  (call-process
-;   "dvipng" nil "*scratch*" nil
-;   (concat filename ".dvi -o " filename ".png"))
     (shell-command
-     (concat "dvipng " filename ".dvi -bg 'Transparent' -o " filename ".png"))
+     (concat "dvipng " filename ".dvi " conv_par " -o " filename ".png"))
 
     (shell-command
      (concat "rm " filename ".tex"))
@@ -47,12 +39,31 @@
      (concat "rm " filename ".aux"))
   )
   
-  
   (kill-buffer "*Shell Command Output*")
-  (goto-char (region-beginning))
-  
-  (insert (concat "[[file:" filename ".png]]\n"))
+
+  (if kill_f
+    (let ()
+	 (delete-region (region-beginning) (region-end))
+	 (insert (concat "[[file:" filename ".png]]")))
+    (let ()
+         (goto-char (region-beginning))
+         (insert (concat "[[file:" filename ".png]]\n"))))
+
   (org-display-inline-images)
 )
-(provide 'my-make-latex)
 
+(defun my-make-latex
+  (interactive)
+  (my-make-latex-core "-bg 'Transparent'" nil))
+(defun my-make-latex-inverse ()
+  "Convert Region to a Latex image (white font)"
+  (interactive)
+   (my-make-latex-core "-bg 'Transparent' -fg 'rgb 1.0 1.0 1.0'" nil))
+(defun my-make-latex-green ()
+  "Convert Region to a Latex image (white font)"
+  (interactive)
+   (my-make-latex-core "-bg 'Transparent' -fg 'rgb 0.0 1.0 0.0'" nil))
+(defun my-make-latex-replace ()
+  (interactive)
+   (my-make-latex-core "-bg 'Transparent'" 't))
+(provide 'my-make-latex)
