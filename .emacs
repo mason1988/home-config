@@ -227,7 +227,7 @@
 (global-set-key (kbd "C-ö t") 'org-tree-to-indirect-buffer)
 (global-set-key (kbd "C-ö h") 'pop-global-mark)
 (global-set-key (kbd "C-ä n") 'yas-new-snippet)
-(global-set-key (kbd "C-ä t") 'yas-load-snippet-buffer)
+(global-set-key (kbd "C-ä q") 'yas-load-snippet-buffer)
 (global-set-key (kbd "C-ö g") 'jump-vert-up)
 (global-set-key (kbd "C-ö G") 'jump-vert-down)
 (global-set-key (kbd "C-ö l") 'list-matching-lines)
@@ -239,6 +239,8 @@
  (define-key evil-insert-state-local-map "\M-x" 'execute-extended-command)
  )
 )
+
+(global-set-key (kbd "C-!") 'evil-normal-state)
 
 (undo-tree-mode t)
 
@@ -260,9 +262,9 @@
 (yas/load-directory "~/.emacs.d/snippets")
 
 (require 'yasnippet-config)
-(global-set-key (kbd "C-ä h") 'yas/make-placeholder)
+(global-set-key (kbd "C-ä g") 'yas/make-placeholder)
 (global-set-key (kbd "C-ä f") 'yas/new-snippet-with-content)
-(global-set-key (kbd "C-ä g") 'yas/oneshot-snippet)
+(global-set-key (kbd "C-ä h") 'yas/oneshot-snippet)
 
 (global-set-key (kbd "C-e") 'keyboard-quit)
 (define-key evil-normal-state-map "\C-e" 'keyboard-quit)
@@ -287,9 +289,11 @@
 (require 'lua-mode)
 
 (setq evil-default-cursor t)
-(set-foreground-color "green")
-(set-background-color "black")
-(set-cursor-color "blue")
+;(set-foreground-color "green")
+;(set-background-color "black")
+;(set-cursor-color "blue")
+
+(load-theme 'tsdh-light)
 
 (require 'search-all-buffers)
 (global-set-key (kbd "C-ö o") 'search-all-buffers)
@@ -301,9 +305,8 @@
 (define-key evil-normal-state-map "U" 'undo-tree-redo)
 
 (require 'my-make-latex)
-(require 'my-make-latex-inverse)
-(require 'my-make-latex-green)
 (global-set-key (kbd "C-ä l") 'my-make-latex)
+(global-set-key (kbd "C-ä L") 'my-make-latex-replace)
 
 (require 'multi-term)
 
@@ -416,6 +419,16 @@
 ;;; (autoload 'pymacs-load "pymacs" 't)
 ;;; ropemacs-enable-autoimport 'ls
 
+(global-set-key "\C-x \C-n" 'evil-complete-next-line)
+(global-set-key "\C-x \C-p" 'evil-complete-previous-line)
+(define-key evil-insert-state-map "\C-x \C-n" 'evil-complete-next-line)
+(define-key evil-insert-state-map "\C-x \C-p" 'evil-complete-previous-line)
+
+(global-set-key (kbd "C-ü C-n") 'evil-complete-next-line)
+(global-set-key (kbd "C-ü C-p") 'evil-complete-previous-line)
+(define-key evil-insert-state-map (kbd "C-ü C-n") 'evil-complete-next-line)
+(define-key evil-insert-state-map (kbd "C-ü C-p") 'evil-complete-previous-line)
+
 (global-set-key "\M-s" 'windmove-left)
 (global-set-key "\M-t" 'windmove-right)
 (global-set-key "\M-r" 'windmove-up)
@@ -425,3 +438,8 @@
 (define-key global-map (kbd "M-h M-x") 'helm-M-x)
 (define-key evil-normal-state-map (kbd "M-h M-x") 'helm-M-x)
 (global-set-key (kbd "C-ö s") 'helm-do-grep)
+
+(global-set-key (kbd "C-ö D") 'org-display-inline-images) 
+(global-set-key (kbd "M-m") 'helm-for-files)
+(global-set-key (kbd "C-ö h") 'helm-c-apropos)
+(global-set-key (kbd "C-ö i") 'helm-imenu)
