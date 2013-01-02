@@ -7,6 +7,7 @@
 - C-@ setzt mark (ab da wird markiert)
 - C-Shift-v paste im Terminal
 - "+ ;y kopiert Link in pentadactyl
+- C-einfügen kopieren durch Emacs
 * generelle Software
  + aumix oder alsamixer für soundsteuerung
  + alternativ einfach sound bei kupfer
@@ -16,7 +17,8 @@
    2. server ip (ifconfig) bei client eintragen + name
    3. diesen Namen bei server in richtung eintragen und executen
    4. client executen
- + xrandr:  $ xrandr --output VGA --mode 1280x1024 --right-of LVDS 
+ + xrandr:  $ xrandr --output VGA --mode 1280x1024 --right-of LVDS
+ + convert pic123.png resize 10% res_pic.png  :: resizing
 * synergy
 ** keyboardlayout
 - nacktes setxkbmap beim client hilft
@@ -369,6 +371,13 @@ selbst an die Hook ketten:
 [Space] scrollt in Hilfstext
 M-a markiert alle Einträge !!!
 
+** Zeilenumbruch
+   + linewrapping = darstellungsumbruch
+   + truncating = nicht umbrechen
+     => toggle-truncate-lines
+   + columnfilling => zeilenumbruch im Buffer
+     => auto-fill-mode bricht automatisch um
+     => set-fill-column setzt die max. Zeichenanzahl
 * install/make kram
 1. ./configure
 2. make
@@ -1469,57 +1478,78 @@ pass
 # There is also r+ (read and write) mode.
 
 
-* Shortcutliste
-- C-c C-x i :: Clock in
-- C-c C-x o :: Clock out
-- C-c C-x c :: cancel Clock
-- C-c C-t   :: toggle todo state
-- C-c C-u   :: Sprung zum Header
-- C-j/C-k   :: auf einer Ebene bewegen
-- C-n,p     :: Evil Extension, zurück
-- C-x C-n,p :: Evil complete line, zurück
-- M-/       :: Hippie expand
-- C-ä c     :: mögliche Completions anzeigen
-- C-ä w d/D :: dedicate/undedicate window
-- C-c b     :: view Buffer other window
-- C-x f     :: find file other window
-- C-ö b     :: display buffer
-- C-ö f     :: display file
-- C-ö n/r   :: next/prev Empty Line
-- C-{/}     :: next/prev regex
-- C-ö t     :: org tree to indirect buffer
-- C-ä n     :: Neues Snippet
-- C-ä t     :: Snippet Buffer laden
-- C-ä f     :: neues Snippet aus Content
-- C-ä h     :: Platzhalter erstellen (für Oneshot Snippet)
-- C-ä g     :: Oneshot Snippet (erstellen oder einsetzen)
-- C-ö g/G   :: Vertikalsprung hoch/runter
-- C-ä k/K   :: encrypt/decrypt region
-- C-ä s     :: Screenshot erstellen und einsetzen
-- C-ö d     :: doc-view-mode
-- C-ä l     :: konvertiere zu Latex
-- C-ä w s   :: Session speichern
-- C-ä w r   :: Session laden
-- C-ä w u   :: Winner undo
-- M-ä       :: Cursor in Fenster springen lassen
-- M-m       :: Helm: M-a = alle markieren
-- C-ö o     :: Helm Occur (akt. Buffer)
-- M-h M-x   :: Helm - M-x -> History usw.
-- C-ö s     :: Helm - do - grep
-- C-g       :: Popwin Fenster schließen
-- C-t       :: Popwin Keymap:
--  b        :: Popup Buffer
--  l        :: Popup Last Buffer
--  s        :: stick Popup Window
--  spc      :: select Popup Window
--  e        :: show messages
-- C-ö k     :: helm show killring
 
-- C-ö e n   :: emms-next
-- C-ö e p   :: emms-previous
-- C-ö e P   :: emms-pause
-- C-ö e s   :: emms-shuffle
-- C-ö e r   :: emms-repeat
-- C-ö e f   :: emms-add-find
-- C-ö e d   :: emms-add-directory-tree
-- C-ö e l   :: emms-playlist-mode-go
+* Shortcutliste
+- C-c C-x C-i :: Clock in
+- C-c C-x C-o :: Clock out
+- C-c C-x C-c :: cancel Clock
+- C-c C-t     :: toggle todo state
+- C-c C-x C-r :: Zusammenfassung der Clocks von Substree
+- C-u C-c C-x C-i     :: switch Task (nahtloser Wechsel)
+- C-u C-u C-c C-x C-i :: Clock in, mark as default (überall reclock in usw.)
+- C-c C-x C-d :: An jedem Tree jeweils die Zeit anzeigen
+- C-c C-c     :: Update für Ding unter Cursor
+- C-c C-x ;   :: Set (und start) Timer
+- C-c C-x e   :: set estimated effort time
+
+- C-c C-u     :: Sprung zum Header
+- C-j/C-k     :: auf einer Ebene bewegen
+- C-ö t       :: org tree to indirect buffer
+- C-c C-x C-l :: preview latex fragment (C-c C-c für undo)
+- C-ö D       :: display inline images
+
+- C-n,p       :: Evil Extension, zurück
+- C-x C-n,p   :: Evil complete line, zurück
+- M-/         :: Hippie expand
+- C-ä c       :: mögliche Completions anzeigen
+- C-ä w d/D   :: dedicate/undedicate window
+
+- C-c b       :: view Buffer other window
+- C-x f       :: find file other window
+- C-ö b       :: display buffer
+- C-ö f       :: display file
+- C-ö n/r     :: next/prev Empty Line
+- C-{/}       :: next/prev regex
+- C-ö g/G     :: Vertikalsprung hoch/runter
+
+- C-ä n       :: Neues Snippet
+- C-ä q       :: Snippet Buffer laden
+- C-ä f       :: neues Snippet aus Content
+- C-ä g       :: Platzhalter erstellen (für Oneshot Snippet)
+- C-ä h       :: Oneshot Snippet (erstellen oder einsetzen)
+
+- C-ä k/K     :: encrypt/decrypt region
+- C-ä s       :: Screenshot erstellen und einsetzen
+- C-ö d       :: doc-view-mode
+- C-ä l       :: konvertiere zu Latex
+- C-ä w s     :: Session speichern
+- C-ä w r     :: Session laden
+- C-ä w u     :: Winner undo
+- M-ä         :: Cursor in Fenster springen lassen
+
+- M-m         :: Helm: M-a = alle markieren
+- C-ö o       :: Helm Occur (akt. Buffer)
+- M-h M-x     :: Helm - M-x -> History usw.
+- C-ö s       :: Helm - do - grep
+- C-g         :: Popwin Fenster schließen
+- C-t         :: Popwin Keymap:
+- b           :: Popup Buffer
+- l           :: Popup Last Buffer
+- s           :: stick Popup Window
+- spc         :: select Popup Window
+- e           :: show messages
+- C-ö k       :: helm show killring
+- C-ö h       :: helm apropos
+- C-ö i       :: Imenu (Header Übersicht und Sprung)
+
+- C-ö e n     :: emms-next
+- C-ö e p     :: emms-previous
+- C-ö e P     :: emms-pause
+- C-ö e s     :: emms-shuffle
+- C-ö e r     :: emms-repeat
+- C-ö e f     :: emms-add-find
+- C-ö e d     :: emms-add-directory-tree
+- C-ö e l     :: emms-playlist-mode-go
+
+- C-x z z...  :: repeat 
+- C-!         :: evil-normale-state (force)

@@ -157,21 +157,27 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(bmkp-auto-light-when-set (quote all-in-buffer))
- '(bmkp-last-as-first-bookmark-file "/home/florian/.emacs.d/bookmarks")
+ '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
  '(dynamic-completion-mode t)
+ '(emms-lyrics-display-on-modeline nil)
+ '(emms-mode-line-mode-line-function (lambda nil))
  '(helm-c-pdfgrep-default-read-command "emacsclient '%f'")
+ '(mode-line-in-non-selected-windows nil)
  '(org-agenda-files (quote ("~/Zettelkasten/zettelkasten.org")))
+ '(org-extend-today-until 400)
  '(org-format-latex-options (quote (:foreground default :background default :scale 1.4 :html-foreground "Black" :html-background "Transparent" :html-scale 1.4 :matchers ("begin" "$1" "$" "$$" "\\(" "\\["))))
  '(org-indirect-buffer-display (quote new-frame))
  '(org-modules (quote (org-bbdb org-bibtex org-docview org-gnus org-info org-jsinfo org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m org-annotate-file org-bookmark org-checklist org-collector org-eshell org-eval)))
  '(org-src-fontify-natively t)
+ '(org-timer-default-timer 40)
+ '(org-use-effective-time t)
  '(preview-scale-function 1.4))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(mode-line ((t (:background "grey75" :foreground "black" :box (:line-width -1 :color "red" :style released-button) :family "DejaVu Sans")))))
 
 (server-start)
 (require 'org-protocol)
@@ -300,6 +306,9 @@
 (global-set-key (kbd "C-ä l") 'my-make-latex)
 
 (require 'multi-term)
+
+(require 'zone)
+(zone-when-idle 120)
 
 (global-set-key (kbd "C-ä w s") 'save-current-configuration)
 (global-set-key (kbd "C-ä w r") 'resume)
