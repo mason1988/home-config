@@ -1,12 +1,49 @@
 * Studium
+#+BEGIN: clocktable :maxlevel 3 :scope subtree
+Clock summary at [2013-01-02 Mi 14:42]
+
+| Headline                            | Time   |      |      |
+|-------------------------------------+--------+------+------|
+| *Total time*                        | *2:49* |      |      |
+|-------------------------------------+--------+------+------|
+| Studium                             | 2:49   |      |      |
+| TODO Elementare Stochastik Zettel 8 |        | 2:49 |      |
+| Tag 1                               |        |      | 2:49 |
+#+END:
+
 ** TODO Elementare Stochastik Zettel 8
+*** Tag 2
+    CLOCK: [2013-01-02 Mi 17:58]--[2013-01-02 Mi 18:51] =>  0:53
+    CLOCK: [2013-01-02 Mi 15:42]--[2013-01-02 Mi 17:38] =>  1:56
+    :PROPERTIES:
+    :Effort:   4:00
+    :END:
+    
+*** Tag 1
+    CLOCK: [2013-01-02 Mi 00:33]--[2013-01-02 Mi 01:19] =>  0:46
+    CLOCK: [2013-01-01 Di 21:24]--[2013-01-01 Di 21:54] =>  0:30
+    CLOCK: [2013-01-01 Di 20:12]--[2013-01-01 Di 21:05] =>  0:53
+    CLOCK: [2013-01-01 Di 18:05]--[2013-01-01 Di 18:45] =>  0:40
+
 ** TODO Theorethische Informatik Zettel 10
 ** TODO Logik Zettel 10
 ** TODO Website
 
 * System-Config
+** Verwaltung
+   CLOCK: [2013-01-02 Mi 14:52]--[2013-01-02 Mi 14:55] =>  0:03
 ** wichtig
 *** TODO Orte mit (letzten) veränderungen oder sowas durchgehen(cyclen)
+*** TODO Jumpmode für Org testen
+*** TODO Buffer/Window Lösungen weiter prüfen 
+*** DONE unclutter modline
+    CLOCK: [2013-01-02 Mi 15:13]--[2013-01-02 Mi 15:38] => 0:25
+    - prefixes -> dateipfade werden abgekürzt
+    - bei Customize die emms funktion mit lambda ersetzen
+*** TODO kalender und clock einrichten
+    CLOCK: [2013-01-02 Mi 14:59]--[2013-01-02 Mi 15:13] =>  0:14
+    CLOCK: [2013-01-02 Mi 14:55]--[2013-01-02 Mi 14:59] =>  0:04
+*** TODO schnelleres arbeiten mit git
 ** unwichtig
 *** TODO Shortcuts / Jumpmarks über Markuplanguage hinzufügen(ref?)
 *** TODO lösung für den austausch von bildern und code finden
@@ -74,9 +111,13 @@ benutzen
 [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Choosing-Window.html#Choosing-Window][choosing window]]
 [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Dedicated-Windows.html][dedicated windows]]
 *** TODO tag-system einrichten
-*** TODO kalender und clock einrichten
 *** TODO Org: Footnote und Emphasise?
 *** TODO evil modes? welcher an, welcher besser (evil modes ergooglen)
 *** TODO Die ganzen Emacs Konfigurationen sortieren
 *** TODO ubuntu vs mint akku (genau das bei google)
 *** TODO regex (icicle und rx makro) testen
+*** TODO Den Header fürs Previewing irgendwo Zentral laden (für \P z.B.)
+*** TODO Gnus Shortcuts fixen und die restlichen Account einbinden
+*** TODO Cdlatex mode überprüfen
+*** TODO ERC mit Standardwerten einrichten
+*** TODO lorem ipsum dolor generator für emacs
