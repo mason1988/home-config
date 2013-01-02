@@ -397,7 +397,6 @@ Sei l = 1:
 Mit einer Wahrscheinlichkeit von 2/4 konnte der Moderator frei entscheiden, welche Tür er wählt => tür richtig
 Mit einer Wahrscheinlichkeit von 2/4 musste er eine bestimmte Tür nehmen => tür falsch
 
-
 Fall 1: auto getroffen => es existieren 2 andere Möglichkeiten für den Moderator, eine Tür zu wählen
 Fall 2: auto nicht getroffen => es existiert nur eine andere Möglichkeit für den Moderötor, eine Tür zu wählen
 => Ws 2/3 das man das Auto vor der Wahl des Moderators nicht getroffen hatte
