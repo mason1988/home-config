@@ -394,6 +394,36 @@ Sei k = 1:
 Sei l = 1: 
     (2,2,1) , (2,3,1), (3,2,1) , (3,3,1) => |M_l| = 4, bei 2 Erfolg
 
+Mit einer Wahrscheinlichkeit von 2/4 konnte der Moderator frei entscheiden, welche Tür er wählt => tür richtig
+Mit einer Wahrscheinlichkeit von 2/4 musste er eine bestimmte Tür nehmen => tür falsch
+
+
+Fall 1: auto getroffen => es existieren 2 andere Möglichkeiten für den Moderator, eine Tür zu wählen
+Fall 2: auto nicht getroffen => es existiert nur eine andere Möglichkeit für den Moderötor, eine Tür zu wählen
+=> Ws 2/3 das man das Auto vor der Wahl des Moderators nicht getroffen hatte
+
+
+[[file:201301ad-19123649498Bz.png]]
+
+P(A_i|B) = \frac{P(A_i) * P(B | A_i)}{P(A_1) * P(B | A_1) + P(A_2) * P(B | A_2) + P(A_3) * P(B | A_3)}
+
+
+Gesucht: [[file:201301ad-1914034949uLC.png]]  => Ws dass hinter j das Auto steckt, wenn wir k gewählt haben, und der Moderator Tür l geöffnet hat
+
+
+Anwendung Bayes
+= \frac{\frac{1}{3} * P( W_k \cap M_l | G_j)}{...}
+
+
+
+Für festes j bleiben noch 9 (= 3*3) mögliche Elemente aus Omega,
+
+Der Moderator darf nur Türen wählen, die nicht ungleich j sind bleiben noch 6 (= 3*2) Zustände
+(1,1,2),(1,1,3),(1,2,2),(1,2,3),(1,3,2),(1,3,3)
+Da darüber hinaus der Moderator aber auch nur Türen wählen kann, die ungleich k sind, bleiben noch 4 (= 2*2) Zustände
+(1,1,2),(1,1,3),(1,2,3),(1,3,2)
+
+Folglich ist P( W_k \cap M_l | G_j) = \frac{4}{9}
 #+BEGIN_SRC latex tangle: st-loesung-08.tex
 
 $G_j = \{ (j,\omega_2,\omega_3) | \omega_2 \in \{ 1,2,3 \}, \omega_3 \in \{ 1,2,3 \} \backslash  \{ j , \omega_2 \} \}$ \\
@@ -403,7 +433,16 @@ $W_k = \{ ( \omega_1 , k , \omega_3 ) | \omega_1 \in \{ 1,2,3 \} , \omega_3 \in 
 $M_l = \{ ( \omega_1 , \omega_2 , l ) | \omega_1 \in \{ 1,2,3 \} \backslash \{ l \} , \omega_2 \in \{ 1, 2, 3 \}  \backslash \{ l \} , l \}$ \\
      $= \{ \omega \in \Omega | \omega_1 \not = l \wedge \omega_2 \not = l \wedge \omega_3 = l \}$ \\
 
-$P(G_j | W_k \cap M_l , 1 \leq j,k,l \leq 3 ) = 
+$W_k \cap M_l = \{ (\omega \in \Omega | \omega_1 \not = l , \omega_2 = k \not = l, \omega_3 = l \}$ \\
+
+$P(G_j | W_k \cap M_l , 1 \leq j,k,l \leq 3 ) = \frac{P(W_k \cap M_l) * P(G_j)}{P(W_k \cap M_l)}$ \\
+
+p(W_k \cap M_l | G_j ) = \begin{cases} \frac{ &\mbox{falls } k=j \\ 0 &\mbox{sonst} \end{cases}
+
+= $\frac{P(W_k \cap M_l | G_j ) * \frac{1}{3}} {P(W_k \cap M_l)}$    
+
+P(G_j) = 1/3
+P(
 
 bla 
 #+END_SRC

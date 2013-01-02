@@ -52,7 +52,7 @@
   (org-display-inline-images)
 )
 
-(defun my-make-latex
+(defun my-make-latex ()
   (interactive)
   (my-make-latex-core "-bg 'Transparent'" nil))
 (defun my-make-latex-inverse ()
