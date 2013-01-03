@@ -309,9 +309,6 @@
 
 (require 'multi-term)
 
-(require 'zone)
-(zone-when-idle 120)
-
 (global-set-key (kbd "C-ä w s") 'save-current-configuration)
 (global-set-key (kbd "C-ä w r") 'resume)
 

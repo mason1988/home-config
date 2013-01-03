@@ -179,7 +179,7 @@ die müssen allen innerhalb des Pfades gezogen werden
 #+BEGIN_SRC latex tangle: st-loesung-08.tex
 \subsubsection{a)}
 #+END_SRC
-
+Test Test Test
 Es gibt 32 Karten, 4 davon sind Buben
 Jeder der 3 Spieler erhält 10 Karten
 Die Wahrscheinlichkeit für einen Buben liegt bei 4/32 = 1/8 für jeden Kartenzug
