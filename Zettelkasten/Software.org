@@ -1554,3 +1554,11 @@ pass
 - C-x z z...  :: repeat last emacs action
 - C-!         :: evil-normale-state (force)
 . @@          :: repeat last macro
+
+- C-ö m l     :: magit pull
+- C-ö m h     :: magit push
+- C-ö m s     :: magit status
+    s         :: stage
+    u         :: unstage
+    c C-c C-c :: commit, - absenden
+    ll        :: log
