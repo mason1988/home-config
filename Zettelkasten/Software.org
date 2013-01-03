@@ -19,6 +19,10 @@
    4. client executen
  + xrandr:  $ xrandr --output VGA --mode 1280x1024 --right-of LVDS
  + convert pic123.png resize 10% res_pic.png  :: resizing
+** Tasten remappen
+xvkbd -xsendevent -no-sync -delay 20 -text "-"
+xbindkeys --default > /home/florian/.xbindkeysrc
+xbindkeys-config    <= und da den xvbkd kram einstellen
 * synergy
 ** keyboardlayout
 - nacktes setxkbmap beim client hilft
@@ -502,7 +506,7 @@ Bei kopien wird dann bloß noch $1 geschrieben
 (muss auch!! Die klammern sind nichtmehr erlaubt)
 Für mehrere Auswhal möglichkeiten:
 <div align="${2:$$(yas/choose-value '("right" "center" "left"))}">
-** git
+* git
    *HEAD -> Branch -> Commit*
 ** Keywords
 (teilweise direkt mit git <keyword> als befehl)
