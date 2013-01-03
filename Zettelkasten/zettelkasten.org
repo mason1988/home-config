@@ -13,8 +13,6 @@
 ** Zettel10 *Theoretische Informatik*
 * Webdesign
 * Elementare Stochastik 
-
-
 ** Englisch
 | Deutsch                   | Englisch                       |
 |---------------------------+--------------------------------|
@@ -179,7 +177,6 @@ die müssen allen innerhalb des Pfades gezogen werden
 #+BEGIN_SRC latex tangle: st-loesung-08.tex
 \subsubsection{a)}
 #+END_SRC
-Test Test Test
 Es gibt 32 Karten, 4 davon sind Buben
 Jeder der 3 Spieler erhält 10 Karten
 Die Wahrscheinlichkeit für einen Buben liegt bei 4/32 = 1/8 für jeden Kartenzug
@@ -381,6 +378,8 @@ $\Leftrightarrow n > 3 200 000$
 \subsubsection{a)}
 #+END_SRC
 
+Berechnen Sie: [[file:201301ad-12403211367WJq.png]]
+
 - 1 :: Wo steht das Auto
 - 2 :: Welche Tür wählt der Kandidat
 - 3 :: Welche Tür öffnet der Showmaster daraufhin
@@ -413,8 +412,6 @@ Gesucht: [[file:201301ad-1914034949uLC.png]]  => Ws dass hinter j das Auto steck
 Anwendung Bayes
 = \frac{\frac{1}{3} * P( W_k \cap M_l | G_j)}{...}
 
-
-
 Für festes j bleiben noch 9 (= 3*3) mögliche Elemente aus Omega,
 
 Der Moderator darf nur Türen wählen, die nicht ungleich j sind bleiben noch 6 (= 3*2) Zustände
@@ -423,8 +420,8 @@ Da darüber hinaus der Moderator aber auch nur Türen wählen kann, die ungleich
 (1,1,2),(1,1,3),(1,2,3),(1,3,2)
 
 Folglich ist P( W_k \cap M_l | G_j) = \frac{4}{9}
-#+BEGIN_SRC latex tangle: st-loesung-08.tex
 
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
 $G_j = \{ (j,\omega_2,\omega_3) | \omega_2 \in \{ 1,2,3 \}, \omega_3 \in \{ 1,2,3 \} \backslash  \{ j , \omega_2 \} \}$ \\
         $= \{ \omega \in \Omega | \omega_1 = j \wedge \omega_3 \not = j \wedge \omega_3 \not = \omega_2\ \wedge \omega_3 \not = j \}$ \\
 $W_k = \{ ( \omega_1 , k , \omega_3 ) | \omega_1 \in \{ 1,2,3 \} , \omega_3 \in \{ 1, 2, 3 \} \backslash \{\omega_1 , k \} \}$ \\
