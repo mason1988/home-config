@@ -13,8 +13,6 @@
 ** Zettel10 *Theoretische Informatik*
 * Webdesign
 * Elementare Stochastik 
-
-
 ** Englisch
 | Deutsch                   | Englisch                       |
 |---------------------------+--------------------------------|
@@ -77,7 +75,7 @@ $P(Y|B) = \frac{E(1_{B} * Y)}{P(B)}$
      = [[file:201212ad-07253120660_2o.png]]    \sigma^2 ist varianz, \mu ist Erwartungswert
 - Wahrscheinlichkteisraum :: [[file:201212ad-15510922908saY.png]] = Raum mit Ereignissen und Wahrscheinlichkeitsfunktion da drauf
 - Indikator- / charakteristische Funktion :: 1_T oder \mathcal{x}_T wenn x in T 1 sonst 0
-
+- Bayes - Theorem ::[[/home/florian/Zettelkasten/zettelkasten.org_20130103_124645_22923q8L.png]]  und \frac{P(A_i|B) = P(B|A_i) * P(A_i)}{\sum_{j=1}^{N} P(B|A_j)*P(Aj)
 
 
 
@@ -593,4 +591,4 @@ jedes ideal von dem I ne echte Teilmenge, ist
 (lgrep "-key" "/home/florian/.emacs")
 (setq debug-on-error t)
 
-cooles bild oder so
+cooles bild oder so 
