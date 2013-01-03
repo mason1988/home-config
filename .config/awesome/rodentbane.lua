@@ -334,16 +334,16 @@ end
 --- Convenience function to bind to default keys.
 function binddefault()
     -- Cut with hjkl
-    bind({}, "n", {cut, "left"})
-    bind({}, "r", {cut, "down"})
-    bind({}, "t", {cut, "up"})
-    bind({}, "d", {cut, "right"})
+    bind({}, "s", {cut, "left"})
+    bind({}, "n", {cut, "down"})
+    bind({}, "r", {cut, "up"})
+    bind({}, "t", {cut, "right"})
 
     -- Move with Shift+hjkl
-    bind({"Shift"}, "n", {move, "left"})
-    bind({"Shift"}, "r", {move, "down"})
-    bind({"Shift"}, "t", {move, "up"})
-    bind({"Shift"}, "d", {move, "right"})
+    bind({"Shift"}, "s", {move, "left"})
+    bind({"Shift"}, "n", {move, "down"})
+    bind({"Shift"}, "r", {move, "up"})
+    bind({"Shift"}, "t", {move, "right"})
 
     -- Undo with u
     bind({}, "u", undo)

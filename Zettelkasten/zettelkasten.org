@@ -13,8 +13,6 @@
 ** Zettel10 *Theoretische Informatik*
 * Webdesign
 * Elementare Stochastik 
-
-
 ** Englisch
 | Deutsch                   | Englisch                       |
 |---------------------------+--------------------------------|
@@ -77,12 +75,7 @@ $P(Y|B) = \frac{E(1_{B} * Y)}{P(B)}$
      = [[file:201212ad-07253120660_2o.png]]    \sigma^2 ist varianz, \mu ist Erwartungswert
 - Wahrscheinlichkteisraum :: [[file:201212ad-15510922908saY.png]] = Raum mit Ereignissen und Wahrscheinlichkeitsfunktion da drauf
 - Indikator- / charakteristische Funktion :: 1_T oder \mathcal{x}_T wenn x in T 1 sonst 0
-
-
-
-
-
-
+- Bayes - Theorem :: : [[/home/florian/Zettelkasten/zettelkasten.org_20130103_124645_22923q8L.png]]  und [[file:201301ad-12575411367wd2.png]]
 ** Zettel-06
 *** Dateien
     [[/home/florian/Dropbox/st/st-zettel-06/st-zettel-06.pdf::NNN][st-zettel-06.pdf]]
@@ -179,7 +172,6 @@ die müssen allen innerhalb des Pfades gezogen werden
 #+BEGIN_SRC latex tangle: st-loesung-08.tex
 \subsubsection{a)}
 #+END_SRC
-Test Test Test
 Es gibt 32 Karten, 4 davon sind Buben
 Jeder der 3 Spieler erhält 10 Karten
 Die Wahrscheinlichkeit für einen Buben liegt bei 4/32 = 1/8 für jeden Kartenzug
@@ -381,6 +373,8 @@ $\Leftrightarrow n > 3 200 000$
 \subsubsection{a)}
 #+END_SRC
 
+Berechnen Sie: [[file:201301ad-12403211367WJq.png]]
+
 - 1 :: Wo steht das Auto
 - 2 :: Welche Tür wählt der Kandidat
 - 3 :: Welche Tür öffnet der Showmaster daraufhin
@@ -413,8 +407,6 @@ Gesucht: [[file:201301ad-1914034949uLC.png]]  => Ws dass hinter j das Auto steck
 Anwendung Bayes
 = \frac{\frac{1}{3} * P( W_k \cap M_l | G_j)}{...}
 
-
-
 Für festes j bleiben noch 9 (= 3*3) mögliche Elemente aus Omega,
 
 Der Moderator darf nur Türen wählen, die nicht ungleich j sind bleiben noch 6 (= 3*2) Zustände
@@ -423,8 +415,8 @@ Da darüber hinaus der Moderator aber auch nur Türen wählen kann, die ungleich
 (1,1,2),(1,1,3),(1,2,3),(1,3,2)
 
 Folglich ist P( W_k \cap M_l | G_j) = \frac{4}{9}
-#+BEGIN_SRC latex tangle: st-loesung-08.tex
 
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
 $G_j = \{ (j,\omega_2,\omega_3) | \omega_2 \in \{ 1,2,3 \}, \omega_3 \in \{ 1,2,3 \} \backslash  \{ j , \omega_2 \} \}$ \\
         $= \{ \omega \in \Omega | \omega_1 = j \wedge \omega_3 \not = j \wedge \omega_3 \not = \omega_2\ \wedge \omega_3 \not = j \}$ \\
 $W_k = \{ ( \omega_1 , k , \omega_3 ) | \omega_1 \in \{ 1,2,3 \} , \omega_3 \in \{ 1, 2, 3 \} \backslash \{\omega_1 , k \} \}$ \\
@@ -588,9 +580,31 @@ jedes ideal von dem I ne echte Teilmenge, ist
 [[~/Dropbox/lo/lo-zettel-13/lo-loesung-13.pdf][lo-loesung-13.pdf]]
 * Revive Sessions
 - 1 :: Elementare Stochastik Zettel 8
+* Unterhaltung
+** The Watch - Nachbarn der 3. Art
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_141417_1136787R.png]]
+
+Als einer seiner Mitarbeiter grausam ermordet wird, beschließt der gewissenhafte Warenhaus-Manager Evan eine Bürgerwehr zu organisieren. Lediglich drei Männer melden sich. Die sind jedoch hauptsächlich daran interessiert, Bier zu trinken und sich zu amüsieren. Doch seine Mitstreiter haben ein jähes Erwachen, als sie einem leibhaftigen Alien begegnen. Nun liegt es an der allseits verlachten Selbstschutz-Gruppe die Welt vor einer Invasion blutrünstiger Körperfresser zu bewahren.
+
+[[file:~/etm-thewatch-xvid.mp4][ansehen]]
+
+** Der Hobbit - Eine unerwartete Reise
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_142246_11367JGY.png]]
+Bilbo Beutlin ist ein ganz einfacher Hobbit, der in Hobbingen im Auenland seinem Tagesgeschäft nachgeht. Bis er von dem Zauberer Gandalf auf den Plan gerufen wird. Zusammen mit einer Gruppe von 13 Zwergen unter Führung des legendären Kriegers Thorin zieht der Halbling los, um dem Drachen Smaug das verlorene Zwergenreich Erebor zu entreißen. Unterwegs treffen sie auf Goblins und Orks, Wargs, riesige Spinnen und Zauberer. Und eine bemitleidenswerte Kreatur, die auf den klingenden Namen Gollum hört.
+
+[[file:~/.jdownloader/downloads/Der.Hobbit.Eine.unerwartete.Reise.2012.DVDSCR.German.AC3MD.XViD-PWNDcd1.avi][Part 1 ansehen]]
+[[file:~/.jdownloader/downloads/Der.Hobbit.Eine.unerwartete.Reise.2012.DVDSCR.German.AC3MD.XViD-PWND-2.avi][Part 2 ansehen]]
+
+** Otto's eleven
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_143437_11367WQe.png]]
+
+Nicht nur im Titel angelehnt an Steven Soderberghs Ocean’s Eleven, versucht sich Otto Waalkes in seinem neuesten Film Otto’s Eleven am Heist-Genre. Die Geschichte spielt auf der Insel Spiegeleiland, einem kleinen Stückchen Erde welches von nur fünf Insulanern bewohnt wird. Die ausschließlich aus Männern bestehende Gruppe setzt sich aus Maler Otto, Kabeljaukoch Pit, Fitnessfreak Mike, Modeliebhaber Oskar und IT-Experten Artur zusammen. Die Gruppe entschließt sich zu dem folgenschweren Schritt, mit Hilfe eines Online-Werbe-Videos, die Tourismusbranche auf Spiegeleiland ins Rollen zu bringen. Anstelle eines Urlauberansturms wird die winzige Insel jedoch vom fiesen Casinobesitzer und Kunstsammler Jean du Merzac heimgesucht. Dieser schafft es mit Hilfe eines arglistigen Tricks ein äußerst wertvolles Gemälde aus Ottos Familienbesitz zu ergaunern. Die fünf Freunde entschließen sich zu einer Vergeltungsaktion mit der sie das Kunstwerk wieder zurück erobern wollen. Zusammen mit der Verstärkung von sechs neuen Verbündeten sind Otto’s Eleven somit geboren. Otto Waalkes, der mit seiner 7 Zwerge – Männer allein im Wald – Reihe wieder an alte Kassenerfolge anknüpfen konnte, setzt in seinem neuesten Abenteuer auf bewährte Kräfte. Mit Regisseur Sven Unterwaldt Jr. und Produzent Mark Popp arbeitete Waalkes schon bei seinen letzten beiden Filmen zusammen. Wie in fast jedem Otto-Film, gibt es auch in Otto’s Eleven einige prominente Gastrollen: So gibt Germany’s Next Topmodel-Siegerin Sara Nuru ihr Filmdebüt neben Filmgrößen wie Olli Dittrich, Sky Dumont und Jasmin Schwiers. In seinem ersten großen Kinofilm ist Switch Reloaded – Star Max Giermann zu sehen, der sich in den letzten Jahren in der deutschen Comedy-Szene eine Namen machen konnte. Neben Giermann und Waalkes sind mit Mirco Nontschew und Rick Kavanian zwei Comedy-Urgesteine in weiteren Hauptrollen zu sehen. (BL)
+
+[[file:~/.jdownloader/downloads/Ottos.Eleven.German.2010.DVDRip.XviD-GMA.avi][ansehen]]
+
 * Notes
   *Shell Command Output*
 (lgrep "-key" "/home/florian/.emacs")
 (setq debug-on-error t)
 
-cooles bild oder so
+cooles bild oder so 

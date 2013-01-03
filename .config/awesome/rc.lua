@@ -334,7 +334,7 @@ end
 --- Customization start (shortcuts for special tags, only multiple tag views)
 ---- emacs
     globalkeys = awful.util.table.join(globalkeys,
-        awful.key({ modkey, "Control" }, "n",
+        awful.key({ modkey, "Control" }, "s",
                   function ()
                       local screen = mouse.screen
                       if tags[screen][1] then
@@ -342,7 +342,7 @@ end
                       end
                   end))    
     globalkeys = awful.util.table.join(globalkeys,
-        awful.key({ modkey, "Control" }, "r",
+        awful.key({ modkey, "Control" }, "n",
                   function ()
                       local screen = mouse.screen
                       if tags[screen][2] then
@@ -350,7 +350,7 @@ end
                       end
                   end))
     globalkeys = awful.util.table.join(globalkeys,
-        awful.key({ modkey, "Control" }, "t",
+        awful.key({ modkey, "Control" }, "r",
                   function ()
                       local screen = mouse.screen
                       if tags[screen][3] then
@@ -358,7 +358,7 @@ end
                       end
                   end))
     globalkeys = awful.util.table.join(globalkeys,
-        awful.key({ modkey, "Control" }, "d",
+        awful.key({ modkey, "Control" }, "t",
                   function ()
                       local screen = mouse.screen
                       if tags[screen][4] then
@@ -366,16 +366,24 @@ end
                       end
                   end))
     globalkeys = awful.util.table.join(globalkeys,
-        awful.key({ modkey, "Control" }, "y",
+        awful.key({ modkey, "Control" }, "d",
                   function ()
                       local screen = mouse.screen
                       if tags[screen][5] then
                           awful.tag.viewtoggle(tags[screen][5])
                       end
                   end))
+    globalkeys = awful.util.table.join(globalkeys,
+        awful.key({ modkey, "Control" }, "y",
+                  function ()
+                      local screen = mouse.screen
+                      if tags[screen][6] then
+                          awful.tag.viewtoggle(tags[screen][6])
+                      end
+                  end))
 ---
     globalkeys = awful.util.table.join(globalkeys,
-        awful.key({ modkey  }, "n",
+        awful.key({ modkey  }, "s",
                   function ()
                       local screen = mouse.screen
                       if tags[screen][1] then
@@ -383,7 +391,7 @@ end
                       end
                   end))    
     globalkeys = awful.util.table.join(globalkeys,
-        awful.key({ modkey  }, "r",
+        awful.key({ modkey  }, "n",
                   function ()
                       local screen = mouse.screen
                       if tags[screen][2] then
@@ -391,7 +399,7 @@ end
                       end
                   end))
     globalkeys = awful.util.table.join(globalkeys,
-        awful.key({ modkey  }, "t",
+        awful.key({ modkey  }, "r",
                   function ()
                       local screen = mouse.screen
                       if tags[screen][3] then
@@ -399,7 +407,7 @@ end
                       end
                   end))
     globalkeys = awful.util.table.join(globalkeys,
-        awful.key({ modkey  }, "d",
+        awful.key({ modkey  }, "t",
                   function ()
                       local screen = mouse.screen
                       if tags[screen][4] then
@@ -407,7 +415,7 @@ end
                       end
                   end))
     globalkeys = awful.util.table.join(globalkeys,
-        awful.key({ modkey }, "y",
+        awful.key({ modkey }, "d",
                   function ()
                       local screen = mouse.screen
                       if tags[screen][5] then
@@ -415,6 +423,14 @@ end
                       end
                   end))
 
+    globalkeys = awful.util.table.join(globalkeys,
+        awful.key({ modkey }, "y",
+                  function ()
+                      local screen = mouse.screen
+                      if tags[screen][6] then
+                          awful.tag.viewonly(tags[screen][6])
+                      end
+                  end))
 
 --- customization end
 
