@@ -1,0 +1,37 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=latex 2012.12.6)  1 JAN 2013 18:19
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**&latex prv_[*Org_Src_zettelkasten.org-1[_latex_]*].ini \nonstopmode\nofiles\P
+assOptionsToPackage{active,tightpage,auctex}{preview}\AtBeginDocument{\ifx\ifPr
+eview\undefined\RequirePackage[displaymath,floats,graphics,textmath,sections,fo
+otnotes]{preview}[2004/11/05]\fi} \input "[*Org Src zettelkasten.org-1[ latex ]
+*].tex"
+(./prv_[*Org_Src_zettelkasten.org-1[_latex_]*].ini
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, lo
+aded.
+(/usr/share/texlive/texmf-dist/tex/latex/carlisle/mylatex.ltx)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/.tex File ignored))
+No auxiliary output files.
+
+! I can't find file `"[*Org Src zettelkasten.org-1[ latex ]*].tex"'.
+<*> ...*Org Src zettelkasten.org-1[ latex ]*].tex"
+                                                  
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name
+! Emergency stop.
+<*> ...*Org Src zettelkasten.org-1[ latex ]*].tex"
+                                                  
+*** (job aborted, file error in nonstop mode)
+
+ 
+Here is how much of TeX's memory you used:
+ 26 strings out of 495060
+ 788 string characters out of 3182053
+ 45057 words of memory out of 3000000
+ 3301 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 5i,0n,5p,556b,12s stack positions out of 5000i,500n,10000p,200000b,50000s
+No pages of output.

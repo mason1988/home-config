@@ -1,0 +1,594 @@
+#+LINK: zk /home/florian/Dropbox/Zettelkasten/
+#+LINK: zkp /home/florian/Dropbox/Zettelkasten/res-pic_%s.png
+#+LINK: drop /home/florian/Dropbox/%s
+
+#+TODO: TODO | DONE
+#+TODO: CANCELED | Restarted
+#+TODO: Zettel1 Zettel2 Zettel3 Zettel4 Zettel5 Zettel6 Zettel7 Zettel8 Zettel9 Zettel10 Zettel11 Zettel12 Zettel13 Zettel14
+
+* Zettelverwaltung
+** Zettel8 *Elementare Stochastik*
+** Zettel10 *Logik*
+** *Softwaretechnik*
+** Zettel10 *Theoretische Informatik*
+* Webdesign
+* Elementare Stochastik 
+
+
+** Englisch
+| Deutsch                   | Englisch                       |
+|---------------------------+--------------------------------|
+| Erwartungswert            | expected value                 |
+| exponentialverteilung     | exponential distribution       |
+| Varianz                   | variance                       |
+| gleichverteilung          | uniform distribution           |
+| Irrfahrt                  | random walk                    |
+| Wahrscheinlichkeitsdichte | random density                 |
+|                           | probapility density (function) |
+| Zufallsvariable           | random variable                |
+|                           |                                |
+|                           |                                |
+** Verteilungen
+***** Laplaceverteilung
+zur Mitte hin, steigt die Wahrscheinlichkeit (exponentiell)
+***** Exponentialverteilung
+In eine Richtung entgegen unendlich steigt die Wahrscheinlichkeit
+***** Binomialverteilung
+Gibt nur 2 Ergebnisse, auf die die Wahrscheinlichkeit verteilt wird
+***** Poissonverteilung
+      zur Mitte hin, steigt die Wahrscheinlichkeit. (nicht exponentiell => runder kopf
+** Bedingter Erwartungswert
+A,B Ereignisse; Y Zufallvariable
+$P(A|B) = \frac{P(A \cap B)}{P(B)}$ Ws A wenn B bekannt
+$P(Y|B) = \frac{E(1_{B} * Y)}{P(B)}$
+
+[[docview:~/Dropbox/st/s0.pdf::1][Skript]]
+** Zusammenhänge
+- Var(X) = Cov(X,X)
+- Cov(X,Y) = E(X*Y) - E(X)E(Y)
+
+** Wörterbuch
+- Erwartungswert :: [[file:201301ad-2329314949s0X.png]] = [[file:201301ad-23333749495-d.png]]
+		    für Abwandlung relativer Häufigkeit:  E(X[n])=z => E(X[n]/n)=z/n
+- Zufallsvariable :: Abbildung [[file:201212ad-1900221184eoW.png]] wobei [[file:201212ad-1901251184ryc.png]] messbare Räume
+- messbarer Raum :: existiert Abbildung Raum auf Maßraum
+- Maßraum :: der Raum in den eine Maßfunktion zuordnet (z.B. 0..1 für Ws)
+- Wahrscheinlichkeitsfunktion ::  [[file:201212ad-190439118448i.png]]
+- Wahrscheinlichkeitsdichtefunktion :: gibt zu ZVar und möglichen 
+      Output die Wahrscheinlichkeit an
+- gleichverteilt :: alle outputs sind gleich wahrscheinlich
+- Varianz :: [[file:zettelkasten.org_20121229_215420_14976asg.png]] = [[file:201212ad-21574114976n2m.png]] ([[file:201301ad-00394849495FS.png]] Standardabweichung)
+           = irgend ein Maß für die mittleren Abweichungen vom Erwartungswert
+	    = [[file:201301ad-0049294949gkk.png]] = [[file:201301ad-0054574949tuq.png]]
+	     Bei Binomial mit n Versuchen: 
+                = n*p*(1-p)
+	        für Abwandlung relativer Häufigkeit: V(X[n])=z 
+	           => V([[file:201301ad-1614254949GeA.png]]) = [[file:201301ad-1613574949UUx.png]]
+- Kovarianz :: [[file:zettelkasten.org_20121229_220016_149760At.png]] 
+	   = misst die zusammenhänge der Wert
+	       [[file:conv_res.png]]
+            Cov(X,Y) = E(X*Y) - E(X)E(Y)
+	    Cov(X,Y) = Cov(Y,X)
+	    Cov(X+Y, Z) = Cov(X, Z) + Cov(Y, Z)
+  entwicklung von X und Y, also hohe Werte von X
+  => hohe Werte Y ...
+- Tschebyscheff-Ungleichung :: Mit Erwartungswert und Varianz werden Wahrscheinlichkeiten
+   für Werte < Erwartungswert bestimmt/eingegrenzt (minimale Wahrscheinlichkeit)
+     = [[file:201212ad-07253120660_2o.png]]    \sigma^2 ist varianz, \mu ist Erwartungswert
+- Wahrscheinlichkteisraum :: [[file:201212ad-15510922908saY.png]] = Raum mit Ereignissen und Wahrscheinlichkeitsfunktion da drauf
+- Indikator- / charakteristische Funktion :: 1_T oder \mathcal{x}_T wenn x in T 1 sonst 0
+
+
+
+
+
+
+** Zettel-06
+*** Dateien
+    [[/home/florian/Dropbox/st/st-zettel-06/st-zettel-06.pdf::NNN][st-zettel-06.pdf]]
+    [[/home/florian/Dropbox/st/st-zettel-06/st-loesung-06.tex::NNN][st-loesung-06.tex]]
+*** Informationen
+**** Aufgabe 1
+a)
+$2^{-k}\binom{k}{(k+z)/2}\\$ = P(S_k = w) mit w aus Omega_n
+$2^{k}$ offensichtlich Anzahl der Blätter also auch Pfade
+Damit bestimmte Nummer erreicht wird, muss es entsprechend
+mehr '+1'er als '-1'er geben (k+z). (Um von k zu z zu kommen)
+
+b) Erwartungswert ist jedenfalls 0
+darauf beschränken das es gerade sein muss, zB mit 2m als index oder so
+
+c) Wahrscheinlichkeit für Rückker bei bei unendlich ist 1
+[[/home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121212_065955_6717Vos.png]] allgemein
+[[/home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121212_070048_6717iyy.png]] bei Symmetrie
+[[/home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121212_070111_6717U8B.png]]
+
+$\frac{n}{2}$ einser um Zustand zu halten (rest passt dann ja),
+und $\frac{k}{2}$ um da ja aufgestiegen werden soll
+die müssen allen innerhalb des Pfades gezogen werden
+
+**** Aufgabe 3
+[[/home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121212_071546_6717hGI.png]]
+==Wahrscheinlichkeit, für X >= x+t wenn X>= x schon bekannt==
+[[/home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121212_084713_6717W3b.png]]
+[[/home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121212_082939_6717Jmh.png]]
+
+-------------------------------------------------------------
+
+[[/home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121212_095257_67179ci.png]]
+
+** Zettel-07
+[[~/Dropbox/st/st-zettel-07/st-zettel-07.pdf][st-zettel-07.pdf]]
+[[~/Dropbox/st/st-zettel-07/st-loesung-07.tex][st-loesung-07.tex]]
+[[~/Dropbox/st/st-zettel-07/st-loesung-07.pdf][st-loesung-07.pdf
+
+
+
+
+
+]]
+** Zettel-08
+[[docview:~/Dropbox/st/st-zettel-08/st-zettel-08.pdf::1][st-zettel-08.pdf]]
+[[~/Dropbox/st/st-zettel-08/st-loesung-08.tex][st-loesung-08.tex]]
+*** header
+#+BEGIN_SRC tex :tangle st-zettel-08.tex
+\documentclass[11pt]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath}
+\usepackage{verbatim}
+\usepackage{color}
+\usepackage{geometry}
+\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
+\usepackage{amsthm}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+
+%\includegraphics{?} setzt bild ein
+%\ref{labelname} erstellt link zu labelname
+%\label{labelname} kann einfach irgendwo drangesetz werden
+
+\newtheorem{defi}{Definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{nota}{Notation}
+\newtheorem{prop}{Proposition}
+\newtheorem{satz}{Satz}
+\newtheorem{umf}{Umformung}
+
+\newenvironment{beweis}{\par\begingroup%
+\settowidth{\leftskip}{\textsc{Beweis:~}}%
+\noindent\llap{\textsc{Beweis:~}}}{\hfill$\Box$\par\endgroup}
+
+\renewcommand{\baselinestretch}{1}
+\newcommand{\words}{\Sigma^* \backslash \{\epsilon\}}
+\newcommand{\etrans}[1]{\bar{\delta}(#1)}
+\renewcommand{\P}{\mathbb{P}}
+
+\title{Zettel 8}
+\author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
+%\date{} % Activate to display a given date or no date (if empty),
+% otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+#+END_SRC 
+*** Aufgabe 1
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+\subsection{Aufgabe 1}
+#+END_SRC
+**** a) 
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+\subsubsection{a)}
+#+END_SRC
+
+Es gibt 32 Karten, 4 davon sind Buben
+Jeder der 3 Spieler erhält 10 Karten
+Die Wahrscheinlichkeit für einen Buben liegt bei 4/32 = 1/8 für jeden Kartenzug
+[[file:201212ad-1238161774nwx.png]] enthält die mögliche Anzahl Buben in einer Hand = {0,1,2,3,4}
+Man kann das ganze als Binomialverteilung interpretieren, wenn die Karten mit einem mal
+verteilt werden und jeder Spieler nur seine eigenen Karten kennt
+[[file:201212ad-1302231774zON.png]] die Karten somit also unabhängig voneinander sind
+Als posititvis Ergebnis wird dabei das ziehen eines Buben und als negatvives Ergebnis wird das ziehen
+einer anderen Karte betrachtet.
+Es ergibt sich also für die Wahrscheinlichkeitsfunktion:
+[[file:201301ad-17585933894AO.png]]
+, also alle Möglichkeiten ([[file:201301ad-1800443389FLU.png]]) omega mal einen Buben zu ziehen ([[file:201212ad-1310561774BMy.png]]) und bei allen anderen Zügen keinen ([[file:201212ad-1312321774AgH.png]])
+
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+Der Raum $\Omega$ soll die Anzahl der Buben enthalten die ein Spieler jeweils in der Hand hält. Da es nur 4
+Buben gibt, gilt also: $\Omega = \{0,1,2,3,4\}$. $\mathbb{P}: \Omega \rightarrow [0,1]$ soll nun also  die Wahrscheinlichkeit
+dafür darstellen, dass ein Spieler die jeweilige Anzahl Buben in seinen 10 Karten besitzt.
+Bei 32 Karten und 4 Buben liegt die Wahrscheinlichkeit bei jeder einzelnen zugeteilten Karte bei $\frac{4}{32} =
+\frac{1}{8}$ dafür, dass es sich um einen Buben handelt.\\
+Da die Karten alle direkt zugeteilt werden und wir nur die Wahrscheinlichkeit für alle 10 Karten zusammen betrachten,
+beeinflussen sich die einzelnen Karten in ihrer Wahrscheinlichkeit nicht wir können somit die Binomialverteilung
+für $\mathbb{P}$ verwenden.\\
+Es ergibt sich somit: $\mathbb{P}(\omega) = \binom{10}{\omega}*(\frac{1}{8})^{\omega}*(\frac{7}{8})^{10-\omega}$ für $\omega \in \Omega$ 
+#+END_SRC
+
+**** b)
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+\subsubsection{b)}
+#+END_SRC
+
+Aus Sicht des jeweiligen Spielers befinden sich nun noch 4 - X Karten im Spiel. Für die Karten im Skat gilt
+daher das selbe Prinzip wie schon in a), d.h. Binomialverteilung.
+Für beide Karten liegt die Wahrscheinlichkeit dafür, dass es sich um einen Buben handelt, bei
+[[file:201212ad-1423041774NqN.png]] \frac{4-X}{32} und somit kann dann der Ereignisraum [[file:201212ad-1424261774a0T.png]] mit {0,1,2} definiert werden, und 
+[[file:201301ad-1844013389GFn.png]]
+
+***** codes
+P(\omega | X = k) = (\frac{4-X}{32})^{\omega} * (1 - \frac{4-X}{32})^{2 - \omega}
+***** 
+
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+Aus Sicht des jeweiligen Spielers befinden sich nun noch 4 - X Karten im Spiel. Für die Karten im Skat gilt
+daher das selbe Prinzip wie schon in a), d.h. Binomialverteilung.
+Sei $\Omega' = \{0,1,2\}$ und somit also die möglichen Anzahlen an Buben im Skat.
+Analog zu a) ergibt sich für $\mathbb{P}(Y|X = k)$ nun mit für 2 Kartenziehungen und einer Wahrscheinlichkeit
+von $\frac{4-X}{32}$ für einen Buben pro Karte:\\
+Für $\omega \in \Omega:$ $\mathbb{P}(Y = \omega |X = k) = \binom{32}{\omega}(\frac{4-X}{32})^{\omega} * (1 - \frac{4-X}{32})^{2 - \omega}$
+#+END_SRC
+*** Aufgabe 3
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+\subsection{Aufgabe 3}
+#+END_SRC
+**** a)
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+\subsubsection{a)}
+#+END_SRC
+
+- X, Y Zufallsvariablen -> aus ereignisraum in anderen raum
+- [[file:201212ad-1854041184ReQ.png]] => existiert also
+- X^2 <=> Quadrat der jeweiligen Outputs
+- [[file:201212ad-21415714976zNO.png]]
+ [[file:201212ad-21480714976AYU.png]]
+E(X^2) = \sum_{\omega \in \Omega}X(\omega)^2P(X=X(\omega))
+
+ [[file:201212ad-05550220660LHc.png]]
+E[X+Y] = \sum_{\omega \in \Omega}(X(\omega)+Y(\omega))*P(\omega)
+
+Bekannt:
+ [[file:201212ad-05585120660YRi.png]]
+E[X*X] = \sum_{\omega \in \Omega}(X(\omega)*X(\omega))*P(\omega) < \infty
+
+
+=> Cov(X+Y, X-Y) = E[ (X+Y) * (X-Y) ] - E(X+Y)E(X-Y)
+                    = E[ X^2 - Y^2 ] - E(X+Y)E(X-Y)
+
+                 = E[ ([X+Y]-E[X+Y]) * ([X-Y] - E[X-Y])  ]
+		    = E[  [X+Y][X-Y] - [X+Y]E[X-Y] - E[X+Y][X-Y] + E[X+Y]E[X-Y]   ]
+       = E[  X^2 - Y^2 - (E[X-Y]X + E[X-Y]Y) - (E[X+Y]X - E[X+Y]Y) + E[X+Y]E[X-Y]  ]
+       = E[  X^2 - Y^2 - E[X-Y]X - E[X-Y]Y - E[X+Y]X + E[X+Y]Y + E[X+Y]E[X-Y]  ]
+
+=> Cov(X+Y, X-Y) = Cov(X,X-Y) + Cov(Y,X-Y) = Cov(X-Y,X) + Cov(X-Y, Y) = Cov(X,X) - Cov(Y,X) + Cov(X,Y) - Cov(Y,Y) = Cov(X,X) - Cov(Y,Y)
+= Var(X) - Var(Y) = 0 (da gleichverteilt)
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+Da X und Y gleichverteilt sind, gilt: $Var(X) = Var(Y) \rightarrow Var(X) - Var(Y) = 0$\\
+Durch die symmetrie der Kovarianz lässt sich umformen:\\
+$Cov(X+Y, X-Y) = Cov(X,X-Y) + Cov(Y,X-Y) = Cov(X-Y,X) + Cov(X-Y, Y) = Cov(X,X) - Cov(Y,X) + Cov(X,Y) - Cov(Y,Y)$\\
+$ = Cov(X,X) - Cov(Y,Y) = Var(X) - Var(Y) = 0$
+#+END_SRC
+
+**** b)
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+\subsubsection{b)}
+#+END_SRC
+
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+Für Unabhängigkeit müsste gelten: $\mathbb{P}([X+Y]*[X-Y]) = \mathbb{P}(X+Y)*\mathbb{P}(X-Y) \Leftrightarrow \mathbb{P}(X^2 - Y^2) = \mathbb{P}(X+Y)*\mathbb{P}(X-Y)$ \\
+Es gelte $\mathbb{P}(z) = \begin{cases} 1 &\mbox{falls } z=-1 \\ 0 &\mbox{sonst} \end{cases}$
+\begin{tabbing}
+Sei X = 0 und Y = 1 \=$\Rightarrow \mathbb{P}(X^2-Y^2) = \mathbb{P}(-1) = 1$ \\
+\> $\Rightarrow \mathbb{P}(X+Y)*\mathbb{P}(X-Y) = \mathbb{P}(1)*\mathbb{P}(-1) = 0*1 = 0 \not = 1$ 
+\end{tabbing}
+$\Rightarrow$ in diesem Beispiel sind die Zufallsvariablen X+Y und X-Y zwar unkorelliert (Kovarianz ist 0) aber nicht unabhängig. 
+#+END_SRC
+
+**** Lösung Wikipedia:
+[[/home/florian/Zettelkasten/zettelkasten.org_20121230_061645_20660lbo.png]]
+
+*** Aufgabe 4
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+\subsection{Aufgabe 4}
+#+END_SRC
+
+**** a)
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+\subsubsection{a)}
+#+END_SRC
+
+n = Anzahl Würfel
+S_n = Anzahl Erfolge (1 gewürfelt)
+Ws für Erfolg = 1/5
+Würfel haben kein Gedächtnis -> binomialverteilung
+mit 1/5 erfolg und 4/5 misserfolg
+
+[[file:201212ad-07284220660MBv.png]]
+P[|\frac{S_n}{n} - \frac{1}{5}| < \epsilon] \geq 1 - \frac{\sigma^2}{\epsilon^2} 
+
+[[file:201212ad-07460520660LVE.png]]
+\Omega = \{1, 2, 3, 4, 5, 6\}
+[[file:201212ad-07463620660lpQ.png]]
+E[X^2] = \sum_{\omega_1, \omega_2, \omega_3}
+
+S_n = Anzahl der einser bei den Würfen, und n = Anzahl der Würfel
+=> [[file:201301ad-2323424949SgL.png]] sollte [[file:201301ad-2323574949fqR.png]] ergeben, bzw. dorthin streben
+[[file:201301ad-2334504949GJk.png]]
+
+[[file:201301ad-005922494964w.png]] 
+
+V(X) = E([X - E(X)]^2) = E([X-\frac{1}{5}]^2) = E(X^2 - 2 \frac{X}{5} + \frac{1}{25})
+
+Var(X) = 1/5 * 4/5 * n = 4n/25
+
+
+
+[[file:201301ad-0047544949Tae.png]]
+
+P[|\frac{S_n}{n} - \frac{1}{5}| < \epsilon] \geq 1 - \frac{4n}{25 * \epsilon^2}
+
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+Die Wahrscheinlichkeit für einen erfolgreichen Wurf (eine 1) liegt bei $\frac{1}{5}$ und für einen 
+nicht erfolgreichen Wurf (ungleich 1) somit bei $1 - \frac{1}{5} = \frac{4}{5}$ \\
+Da die einzelnen Würfe keinen Einfluss aufeinander nehmen und jeder Wurf klar in Erfolg und Misserfolg 
+getrennt werden kann, lässt sich die Varianz der Normalverteilung verwenden, und es ergibt sich: \\
+$Var(S_n) = n * \frac{1}{5} * \frac{4}{5} =  \frac{4n}{25}$ \\
+$\Rightarrow Var(\frac{S_n}{n}) = \frac{4}{25n}$ \\
+Für den Erwartungswert gilt aufgrund der Binomialverteilung: $E(S_n) = \frac{n}{5}$ \\
+$\Rightarrow E(\frac{S_n}{n}) = \frac{1}{5}$ \\
+Eingesetzt in die Ungleichung ergibt sich somit: $P[|\frac{S_n}{n} - \frac{1}{5}| < \epsilon] \geq 1 - \frac{4}{25n * \epsilon^2}$
+#+END_SRC
+
+***** Analoge Lösung mit Münze(a)
+Münze positiv oder negativ, analog zu den möglichen Ergebnissen 
+des Würfels (1 oder nicht 1)
+[[/home/florian/Zettelkasten/zettelkasten.org_20121230_074751_20660yzW.png]]
+
+**** b)
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+\subsubsection{b)}
+#+END_SRC
+
+e = 0,001
+Wie viele Würfe n nötig, damit Ws > 0.95
+
+Eingesetzt:
+
+ges: 1 - \frac{4}{25n * 0.001^2} > 0.95
+<=> 1 - \frac{4}{0.000025n} > 0.95
+=> 1 - 0.95 > \frac{4}{0.000025n}
+=> 0.05 > \frac{4}{0.000025n} => 0.05 > \frac{4000000}{25n}
+=> 0.05 > \frac{1}{160000n}
+
+0.05 = \frac{1}{160000n}
+0.05 = \frac{1}{n} * \frac{1}{160000} 
+=> 80000 = \frac{1}{n}
+=> n = \frac{1}{80000}
+ 
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+Es soll gelten: $1 - \frac{4}{25n * 0.000001} > 0.95$ \\
+$\Leftrightarrow 1-0.95 > \frac{4}{25n * 0.000001}$ \\
+$\Leftrightarrow 0.05 > \frac{160000}{n}$ \\
+$\Leftrightarrow n > 3 200 000$
+#+END_SRC
+
+*** Aufgabe 5
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+\subsection{Aufgabe 5}
+#+END_SRC
+**** a)
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+\subsubsection{a)}
+#+END_SRC
+
+- 1 :: Wo steht das Auto
+- 2 :: Welche Tür wählt der Kandidat
+- 3 :: Welche Tür öffnet der Showmaster daraufhin
+
+Insgesamt existieren 3 * 3 * 3 = 27 Mögliche Kombinationien
+Sei j = 1 (für jede andere Zahl gleich):
+    (1,1,2) , (1,1,3) , (1,2,3), (1,3,2) => |G_j| = 4 Möglichkeiten, bei 2 Erfolg => 1/2 für erfolg gleich bleiben
+Sei k = 1: 
+    (1,1,2) , (1,1,3) , (2,1,3) , (3,1,2) => |W_k| = 4 , bei 2 Erfolg
+|W_k| = 4 
+Sei l = 1: 
+    (2,2,1) , (2,3,1), (3,2,1) , (3,3,1) => |M_l| = 4, bei 2 Erfolg
+
+Mit einer Wahrscheinlichkeit von 2/4 konnte der Moderator frei entscheiden, welche Tür er wählt => tür richtig
+Mit einer Wahrscheinlichkeit von 2/4 musste er eine bestimmte Tür nehmen => tür falsch
+
+Fall 1: auto getroffen => es existieren 2 andere Möglichkeiten für den Moderator, eine Tür zu wählen
+Fall 2: auto nicht getroffen => es existiert nur eine andere Möglichkeit für den Moderötor, eine Tür zu wählen
+=> Ws 2/3 das man das Auto vor der Wahl des Moderators nicht getroffen hatte
+
+
+[[file:201301ad-19123649498Bz.png]]
+
+P(A_i|B) = \frac{P(A_i) * P(B | A_i)}{P(A_1) * P(B | A_1) + P(A_2) * P(B | A_2) + P(A_3) * P(B | A_3)}
+
+
+Gesucht: [[file:201301ad-1914034949uLC.png]]  => Ws dass hinter j das Auto steckt, wenn wir k gewählt haben, und der Moderator Tür l geöffnet hat
+
+
+Anwendung Bayes
+= \frac{\frac{1}{3} * P( W_k \cap M_l | G_j)}{...}
+
+
+
+Für festes j bleiben noch 9 (= 3*3) mögliche Elemente aus Omega,
+
+Der Moderator darf nur Türen wählen, die nicht ungleich j sind bleiben noch 6 (= 3*2) Zustände
+(1,1,2),(1,1,3),(1,2,2),(1,2,3),(1,3,2),(1,3,3)
+Da darüber hinaus der Moderator aber auch nur Türen wählen kann, die ungleich k sind, bleiben noch 4 (= 2*2) Zustände
+(1,1,2),(1,1,3),(1,2,3),(1,3,2)
+
+Folglich ist P( W_k \cap M_l | G_j) = \frac{4}{9}
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+
+$G_j = \{ (j,\omega_2,\omega_3) | \omega_2 \in \{ 1,2,3 \}, \omega_3 \in \{ 1,2,3 \} \backslash  \{ j , \omega_2 \} \}$ \\
+        $= \{ \omega \in \Omega | \omega_1 = j \wedge \omega_3 \not = j \wedge \omega_3 \not = \omega_2\ \wedge \omega_3 \not = j \}$ \\
+$W_k = \{ ( \omega_1 , k , \omega_3 ) | \omega_1 \in \{ 1,2,3 \} , \omega_3 \in \{ 1, 2, 3 \} \backslash \{\omega_1 , k \} \}$ \\
+     $= \{ \omega \in \Omega | \omega_2 = k \wedge \omega_3 \not = k \wedge \omega_3 \not = \omega_1 \wedge \omega_3 \not = k \}$ \\
+$M_l = \{ ( \omega_1 , \omega_2 , l ) | \omega_1 \in \{ 1,2,3 \} \backslash \{ l \} , \omega_2 \in \{ 1, 2, 3 \}  \backslash \{ l \} , l \}$ \\
+     $= \{ \omega \in \Omega | \omega_1 \not = l \wedge \omega_2 \not = l \wedge \omega_3 = l \}$ \\
+
+$W_k \cap M_l = \{ (\omega \in \Omega | \omega_1 \not = l , \omega_2 = k \not = l, \omega_3 = l \}$ \\
+
+$P(G_j | W_k \cap M_l , 1 \leq j,k,l \leq 3 ) = \frac{P(W_k \cap M_l) * P(G_j)}{P(W_k \cap M_l)}$ \\
+
+p(W_k \cap M_l | G_j ) = \begin{cases} \frac{ &\mbox{falls } k=j \\ 0 &\mbox{sonst} \end{cases}
+
+= $\frac{P(W_k \cap M_l | G_j ) * \frac{1}{3}} {P(W_k \cap M_l)}$    
+
+P(G_j) = 1/3
+P(
+
+bla 
+#+END_SRC
+
+**** b)
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+\subsubsection{b)}
+#+END_SRC
+
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+
+#+END_SRC
+**** c)
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+\subsubsection{c)}
+#+END_SRC
+
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+
+#+END_SRC
+*** footer
+#+BEGIN_SRC tex :tangle st-zettel-08.tex
+\end{document}
+#+END_SRC
+** Zettel-09
+[[~/Dropbox/st/st-zettel-09/st-zettel-09.pdf][st-zettel-09.pdf]]
+[[~/Dropbox/st/st-zettel-09/st-loesung-09.tex][st-loesung-09.tex]]
+[[~/Dropbox/st/st-zettel-09/st-loesung-09.pdf][st-loesung-09.pdf]]
+** Zettel-10
+[[~/Dropbox/st/st-zettel-10/st-zettel-10.pdf][st-zettel-10.pdf]]
+[[~/Dropbox/st/st-zettel-10/st-loesung-10.tex][st-loesung-10.tex]]
+[[~/Dropbox/st/st-zettel-10/st-loesung-10.pdf][st-loesung-10.pdf]]
+** Zettel-11
+[[~/Dropbox/st/st-zettel-11/st-zettel-11.pdf][st-zettel-11.pdf]]
+[[~/Dropbox/st/st-zettel-11/st-loesung-11.tex][st-loesung-11.tex]]
+[[~/Dropbox/st/st-zettel-11/st-loesung-11.pdf][st-loesung-11.pdf]]
+* Theoretische Informatik
+** Zettel-09
+[[~/Dropbox/th/th-zettel-09/th-zettel-09.pdf][th-zettel-09.pdf]]
+[[~/Dropbox/th/th-zettel-09/th-loesung-09.tex][th-loesung-09.tex]]
+[[~/Dropbox/th/th-zettel-09/th-loesung-09.pdf][th-loesung-09.pdf]]
+** Zettel-10
+[[~/Dropbox/th/th-zettel-10/th-zettel-10.pdf][th-zettel-10.pdf]]
+[[~/Dropbox/th/th-zettel-10/th-loesung-10.tex][th-loesung-10.tex]]
+[[~/Dropbox/th/th-zettel-10/th-loesung-10.pdf][th-zettel-11.pdf]]
+** Zettel-11
+[[~/Dropbox/th/th-zettel-11/th-zettel-11.pdf][th-zettel-11.pdf]]
+[[~/Dropbox/th/th-zettel-11/th-loesung-11.tex][th-loesung-11.tex]]
+[[~/Dropbox/th/th-zettel-11/th-loesung-11.pdf][th-loesung-11.pdf]]
+** Zettel-12
+[[~/Dropbox/th/th-zettel-12/th-zettel-12.pdf][th-zettel-12.pdf]]
+[[~/Dropbox/th/th-zettel-12/th-loesung-12.tex][th-loesung-12.tex]]
+[[~/Dropbox/th/th-zettel-12/th-loesung-12.pdf][th-loesung-12.pdf]]
+** Zettel-13
+[[~/Dropbox/th/th-zettel-13/th-zettel-13.pdf][th-zettel-13.pdf]]
+[[~/Dropbox/th/th-zettel-13/th-loesung-13.tex][th-loesung-13.tex]]
+[[~/Dropbox/th/th-zettel-13/th-loesung-13.pdf][th-loesung-13.pdf]]
+* Softwaretechnik
+** Hausaufgabe03
+[[~/Dropbox/so/so-hausaufgabe-03/so-hausaufgabe-03.pdf::NNN][so-hausaufgabe-03.pdf]]
+[[file:~/Dropbox/so/so-hausaufgabe-03/code/servlet/tests/Tester.java][Tester.java]]
+- Server erstellen
+- strings mit instanzen von Servlets beim Server "registrieren"
+- beispielaufrufe an Server weitergeben
+[[file:~/Dropbox/so/so-hausaufgabe-03/code/servlet/Server.java::}][Server.java]]
+- irgend ein interner quark
+- parameter aus url extrahieren
+- process von servlets aufrufen
+[[file:~/Dropbox/so/so-hausaufgabe-03/code/servlet/IServlet.java::package%20servlet%3B][IServlet.java]]
+- process befehl mit parametern ausführen
+
+*** Aufgabe B
+**** 1.
+Hier finden vor allem das Template Method und das Strategy Pattern
+Anwendung.
+Das Template Pattern erkennt man in der Regel ja schon schnell
+an den Interfaces. Hier ist es das Interface IServlet. Die einzelnen
+Servlets orientieren sich dabei nur an den durch das Template Pattern
+vorgegebenen Schnittstellen, also sowohl Funktions Out- als auch Input.
+Die eigentliche Funktionsweise des Servers ist dem Entwickler
+der Servlets egal. Auf der anderen Seite beschäftigt sich auch der
+Server kaum mit den konkreten Servlets, da er lediglich ihr Template
+implementiert und benutzt und sich dabei darauf verlässt, dass
+die jeweiligen Servlets diesen Schnittstellen gerecht werden.
+
+Das Strategy Pattern ergibt sich aus dem Umstand, das die eigentlichen
+Servlets an und für sich austauschbar sind. Da sie alle auf das
+selbe Interface reagieren und der Server im Grunde auch nur dieses
+Interface implementiert hat, sind die einzelnen Servlets problemlos
+austauschbar, oder - wie im F.
+Der Lösung dieser Aufgabe entspricht das Decoratorpattern. Das
+kombinierende Servlet würde an die einzelnen Servlets nicht
+all vom CombiningServlets - sogar
+miteinander kombinierbar, ohne dass sie dafür extra angepasst
+werden müssten.
+**** 2.
+Der Lösung dieser Aufgabe entspricht das Decoratorpattern. Das
+kombinierende Servlet würde an die einzelnen Servlets nicht
+direkt den Output vom Server weitergeben, sondern jeweils einen
+selbst definierten Stream, welcher dann am Ende der beiden
+einzelnen Servlets in den "richtigen" Outputstream vom Server
+fließen würde.
+Der Server selbst bekommt von dieser Umstellung nichts mit.
+Der Server übergibt nach wie vor sein Streamobjekt welches
+dann mit dem Output der beiden Servlets gefüllt wird. Aus diesem
+Grund handelt es sich dann beim CombiningServlet um einen Decorator.
+*** Aufgabe B :export:
+bla bla
+**** Subheading
+nochmehr bla
+* Logik
+** Zettel-08
+*** Dateien
+[[/home/florian/Dropbox/lo/lo-zettel-08.pdf::NNN][lo-zettel-08.pdf]]
+[[/home/florian/Dropbox/lo/lo-loesung-08.tex::NNN][lo-loesung-08.tex]]
+[[/home/florian/Dropbox/lo/lo-loesung-08.pdf::NNN][lo-loesung-08.pdf]]
+*** Informationen
+**** Ideal
+- Teilmenge I von Bool-Algebra
+- wenn x,y in I dann auch x v y in I
+Maximal: kein anderes echtes Ideal von dem I ne echte Teilmenge
+jedes ideal von dem I ne echte Teilmenge, ist
+
+
+
+** Zettel-09
+[[~/Dropbox/lo/lo-zettel-09/lo-zettel-09.pdf][lo-zettel-09.pdf]]
+[[~/Dropbox/lo/lo-zettel-09/lo-loesung-09.tex][lo-loesung-09.tex]]
+[[~/Dropbox/lo/lo-zettel-09/lo-loesung-09.pdf][lo-loesung-09.pdf]]
+** Zettel-10
+[[~/Dropbox/lo/lo-zettel-10/lo-loesung-10.tex][lo-loesung-10.tex]]
+[[~/Dropbox/lo/lo-zettel-10/lo-loesung-10.pdf][lo-loesung-10.pdf]]
+** Zettel-11
+[[~/Dropbox/lo/lo-zettel-11/lo-zettel-11.pdf][lo-zettel-11.pdf]]
+[[~/Dropbox/lo/lo-zettel-11/lo-loesung-11.tex][lo-loesung-11.tex]]
+[[~/Dropbox/lo/lo-zettel-11/lo-loesung-11.pdf][lo-loesung-11.pdf]]
+** Zettel-12
+[[~/Dropbox/lo/lo-zettel-12/lo-zettel-12.pdf][lo-zettel-12.pdf]]
+[[~/Dropbox/lo/lo-zettel-12/lo-loesung-12.tex][lo-loesung-12.tex]]
+[[~/Dropbox/lo/lo-zettel-12/lo-loesung-12.pdf][lo-loesung-12.pdf]]
+** Zettel-13
+[[~/Dropbox/lo/lo-zettel-13/lo-zettel-13.pdf][lo-zettel-13.pdf]]
+[[~/Dropbox/lo/lo-zettel-13/lo-loesung-13.tex][lo-loesung-13.tex]]
+[[~/Dropbox/lo/lo-zettel-13/lo-loesung-13.pdf][lo-loesung-13.pdf]]
+* Revive Sessions
+- 1 :: Elementare Stochastik Zettel 8
+* Notes
+  *Shell Command Output*
+(lgrep "-key" "/home/florian/.emacs")
+(setq debug-on-error t)
