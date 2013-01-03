@@ -3,15 +3,18 @@
 # For a project mostly in C, the following would be a good set of
 # exclude patterns (uncomment them if you want to use them):
 # *.[oa]
-<<<<<<< HEAD
 # *~
 # git ls-files --others --exclude-from=.git/info/exclude
 # Lines that start with '#' are comments.
 # For a project mostly in C, the following would be a good set of
 # exclude patterns (uncomment them if you want to use them):
 # *.[oa]
-=======
->>>>>>> 136ad117e9a3c648cdaa1b56c3a59fe3c01ccee5
+# *~
+# git ls-files --others --exclude-from=.git/info/exclude
+# Lines that start with '#' are comments.
+# For a project mostly in C, the following would be a good set of
+# exclude patterns (uncomment them if you want to use them):
+# *.[oa]
 *~
 *.dvi
 *.aux
@@ -27,6 +30,7 @@
 .aptitude/
 .bash_logout
 .byobu/
+*ltxpng*
 .cache/
 .cmus/
 .compiz/
@@ -159,7 +163,6 @@ Ubuntu One/
 .eshell/
 Zettelkasten/ltxpng/
 .dropbox/
-<<<<<<< HEAD
 .mozilla*
 .mozilla/
 Arbeitsfl/
@@ -167,5 +170,7 @@ Arbeitsfl
 Arbeitsfl
 Arbeitsfl*
 .cola
-=======
->>>>>>> 136ad117e9a3c648cdaa1b56c3a59fe3c01ccee5
+.irssi/
+exclude_git.org
+icicles/icicles-docl.el.org
+exclude_git.org
