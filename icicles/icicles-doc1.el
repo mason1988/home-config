@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+;; icicles-doc1.el --- Minibuffer input rights reserved.
+=======
 ;;; icicles-doc1.el --- Minibuffer input completion and cycling.
 ;;
 ;; Filename: icicles-doc1.el
@@ -5,6 +8,7 @@
 ;; Author: Drew Adams
 ;; Maintainer: Drew Adams
 ;; Copyright (C) 1996-2012, Drew Adams, all rights reserved.
+>>>>>>> 136ad117e9a3c648cdaa1b56c3a59fe3c01ccee5
 ;; Created: Tue Aug  1 14:21:16 1995
 ;; Version: 22.0
 ;; Last-Updated: Tue Nov 27 13:32:25 2012 (-0800)

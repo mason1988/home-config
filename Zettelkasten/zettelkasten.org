@@ -592,3 +592,5 @@ jedes ideal von dem I ne echte Teilmenge, ist
   *Shell Command Output*
 (lgrep "-key" "/home/florian/.emacs")
 (setq debug-on-error t)
+
+cooles bild oder so
