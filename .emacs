@@ -445,9 +445,7 @@
 (global-set-key (kbd "C-ö h") 'helm-c-apropos)
 (global-set-key (kbd "C-ö i") 'helm-imenu)
 
-<<<<<<< HEAD
 (defun messenger() (interactive) (erc :server "im.rootdir.de" :port 6668 :nick "floppycode"))
-=======
 (global-set-key (kbd "C-ö a") 'helm-org-headlines)
 (global-set-key (kbd "C-x j n") 'bmkp-cycle-this-buffer)
 
@@ -456,4 +454,3 @@
 
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (define-key global-map (kbd "C-ö ö") 'org-capture)
->>>>>>> 653d00d6dc6d51e53d04ec49fadf9cd014c7a8c5

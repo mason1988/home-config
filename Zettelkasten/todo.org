@@ -38,7 +38,7 @@ Clock summary at [2013-01-03 Do 20:49]
 ** TODO Theorethische Informatik Zettel 10
 ** TODO Logik Zettel 10
 ** TODO Website
-
+   
 * System-Config
 ** Feature Browse/Solve
    CLOCK: [2013-01-03 Do 21:21]--[2013-01-03 Do 23:03] =>  1:42
