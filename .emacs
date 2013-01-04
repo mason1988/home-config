@@ -166,7 +166,10 @@
  '(org-indirect-buffer-display (quote new-frame))
  '(org-modules (quote (org-bbdb org-bibtex org-docview org-gnus org-info org-jsinfo org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m org-annotate-file org-bookmark org-checklist org-collector org-eshell org-eval)))
  '(org-src-fontify-natively t)
- '(preview-scale-function 1.4))
+ '(preview-scale-function 1.4)
+ '(yas-global-mode t nil (yasnippet))
+ '(yas-prompt-functions (quote (yas-ido-prompt yas-dropdown-prompt yas-completing-prompt yas-x-prompt yas-no-prompt)))
+ '(yas-use-menu (quote full)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -439,3 +442,5 @@
 (global-set-key (kbd "M-m") 'helm-for-files)
 (global-set-key (kbd "C-ö h") 'helm-c-apropos)
 (global-set-key (kbd "C-ö i") 'helm-imenu)
+
+(defun messenger() (interactive) (erc :server "im.rootdir.de" :port 6668 :nick "floppycode"))
