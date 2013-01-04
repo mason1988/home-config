@@ -19,4 +19,6 @@ coole Sache
 ** TODO 
    [2012-12-21 Fr]
    [[file:~/Dropbox/Zettelkasten/zettelkasten.org::*Prev%20Line%20Code][Prev Line Code]]
-
+** TODO 
+   [2013-01-04 Fr]
+   [[file:~/.emacs::(define-key%20global-map%20(kbd%20"C-%C3%B6%20%C3%B6")%20'org-capture)][file:~/.emacs::(define-key global-map (kbd "C-ö ö") 'org-capture)]]
