@@ -402,7 +402,9 @@
 (global-set-key (kbd "M-ä") 'move-to-window-line-top-bottom)
 
 (global-set-key (kbd "M-/") 'hippie-expand)
+(global-set-key (kbd "M-ö") 'hippie-expand)
 (global-set-key (kbd "C-ä c") 'dabbrev-completion)
+
 
 (global-set-key (kbd "C-ü") (lookup-key global-map (kbd "C-x")))
 
@@ -443,4 +445,15 @@
 (global-set-key (kbd "C-ö h") 'helm-c-apropos)
 (global-set-key (kbd "C-ö i") 'helm-imenu)
 
+<<<<<<< HEAD
 (defun messenger() (interactive) (erc :server "im.rootdir.de" :port 6668 :nick "floppycode"))
+=======
+(global-set-key (kbd "C-ö a") 'helm-org-headlines)
+(global-set-key (kbd "C-x j n") 'bmkp-cycle-this-buffer)
+
+(global-set-key (kbd "C-M-n") 'jump-head-up-wrapper)
+(global-set-key (kbd "C-ä r") 'repeat)
+
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+(define-key global-map (kbd "C-ö ö") 'org-capture)
+>>>>>>> 653d00d6dc6d51e53d04ec49fadf9cd014c7a8c5
