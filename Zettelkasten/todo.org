@@ -38,7 +38,7 @@ Clock summary at [2013-01-03 Do 20:49]
 ** TODO Theorethische Informatik Zettel 10
 ** TODO Logik Zettel 10
 ** TODO Website
-
+   
 * System-Config
 ** Feature Browse/Solve
    CLOCK: [2013-01-03 Do 21:21]--[2013-01-03 Do 23:03] =>  1:42
@@ -49,11 +49,8 @@ Clock summary at [2013-01-03 Do 20:49]
 ** Projekte :testproject:
 *** Buffer/Window Control
 **** DONE helm und popwin verknüpfen
+**** TODO Brainstormen ob Tableisten sinnvoll
 **** TODO Buffer/Window Lösungen weiter prüfen     
-***** iflipb
-entspricht dem Windowskonzept
-vom Windowswitching
-+ preview von jedem fenster
 ***** tabbarmode
      fügt tabbar hinzu und
 gruppiert die buffer
@@ -78,14 +75,12 @@ http://superuser.com/questions/244036/emacs-window-management
 [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Choosing-Window.html#Choosing-Window][choosing window]]
 [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Dedicated-Windows.html][dedicated windows]]
 *** Organisation
-**** TODO kalender und clock einrichten
-     CLOCK: [2013-01-02 Mi 14:59]--[2013-01-02 Mi 15:13] =>  0:14
-     CLOCK: [2013-01-02 Mi 14:55]--[2013-01-02 Mi 14:59] =>  0:04
 **** TODO Die ganzen Emacs Konfigurationen sortieren
 *** Zettel - Workflow
 **** DONE schnellen git workflow zusammenstellen
 **** DONE git informationen in emacs eintragen
-**** TODO einfachere Screenshots
+**** TODO Brainstorming, wie Screenshots prinzipiell besser
+     erstellt und eingebunden werden könnten
 **** DONE calculator benutzbar machen (emacs)
     - dieser Buffer musste irgendwie schließbar sein
     - schnelles copy and paste, oder noch besser einfach direkt inline
@@ -94,9 +89,21 @@ http://superuser.com/questions/244036/emacs-window-management
 **** TODO sprünge beim scrollen mit großen bildern verhindern
 *** Capturing
 **** DONE kleine Zusammenstellung zum Thema hooks anfertigen
-**** TODO bilder pasten, emacs => drag and drop
-**** TODO Link per Org Protocol von Firefox verschicken (Session)
+
+**** TODO emacs drag and drop googlen
+**** TODO sinnvolle interpretation von Bildern/links überlegen
+**** TODO drag and drop implementieren
+
+**** TODO möglichkeiten der javascript ausführung sammeln
+     penta, contextmenü, bookmark usw
+**** TODO sinnvolle funktionen und schnittstellen sammeln (in javas)
+**** TODO sinnvolle Übertragungen überlegen
+**** TODO Templates und Javascodes einfügen
+**** TODO Linkmanagement von Firefox durch Emacs
+
 **** TODO kurzer Text über die Benutzung/ die Features des Diary's
+
+**** TODO Brainstorming zu Sinnvollen Captures
 **** TODO Capturing Templates implementieren
 *** Emacs Knowledge
 **** DONE Org: Footnote und Emphasise?
@@ -127,6 +134,7 @@ zufriedenstellend abgedeckt
 **** TODO eigene befehlsabkürzungen
 **** TODO lorem ipsum dolor generator für emacs
 **** TODO weitere alternative Completions Methoden prüfen  
+**** TODO einzelne Zeilen beim Folden ignorieren?
 ** nicht zugeordnet
 *** TODO Gnus Shortcuts fixen und die restlichen Account einbinden :shortcut:
     über die den Force Evil normal state ist das meiste eigentlich schon erledigt
