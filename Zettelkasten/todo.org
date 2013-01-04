@@ -1,17 +1,27 @@
 * Studium
 #+BEGIN: clocktable :maxlevel 3 :scope subtree
-Clock summary at [2013-01-02 Mi 14:42]
+Clock summary at [2013-01-03 Do 20:49]
 
 | Headline                            | Time   |      |      |
 |-------------------------------------+--------+------+------|
-| *Total time*                        | *2:49* |      |      |
+| *Total time*                        | *8:22* |      |      |
 |-------------------------------------+--------+------+------|
-| Studium                             | 2:49   |      |      |
-| TODO Elementare Stochastik Zettel 8 |        | 2:49 |      |
+| Studium                             | 8:22   |      |      |
+| TODO Elementare Stochastik Zettel 8 |        | 8:22 |      |
+| Tag 3                               |        |      | 2:44 |
+| Tag 2                               |        |      | 2:49 |
 | Tag 1                               |        |      | 2:49 |
 #+END:
 
 ** TODO Elementare Stochastik Zettel 8
+*** Tag 3
+    CLOCK: [2013-01-03 Do 19:34]--[2013-01-03 Do 20:49] =>  1:15
+    CLOCK: [2013-01-03 Do 17:54]--[2013-01-03 Do 18:02] =>  0:08
+    CLOCK: [2013-01-03 Do 14:00]--[2013-01-03 Do 15:00] =>  1:00
+    CLOCK: [2013-01-03 Do 12:38]--[2013-01-03 Do 12:59] =>  0:21
+    :PROPERTIES:
+    :Effort:   4:00
+    :END:
 *** Tag 2
     CLOCK: [2013-01-02 Mi 17:58]--[2013-01-02 Mi 18:51] =>  0:53
     CLOCK: [2013-01-02 Mi 15:42]--[2013-01-02 Mi 17:38] =>  1:56
@@ -30,48 +40,27 @@ Clock summary at [2013-01-02 Mi 14:42]
 ** TODO Website
 
 * System-Config
-** Verwaltung
+** Feature Browse/Solve
+   CLOCK: [2013-01-03 Do 21:21]--[2013-01-03 Do 23:03] =>  1:42
+** Clear Mind
+   CLOCK: [2013-01-03 Do 18:02]--[2013-01-03 Do 19:09] =>  1:07
    CLOCK: [2013-01-02 Mi 14:52]--[2013-01-02 Mi 14:55] =>  0:03
-** wichtig
-*** TODO Jumpmode für Org testen
-*** TODO Buffer/Window Lösungen weiter prüfen 
-*** DONE unclutter modline
-    CLOCK: [2013-01-02 Mi 15:13]--[2013-01-02 Mi 15:38] => 0:25
-    - prefixes -> dateipfade werden abgekürzt
-    - bei Customize die emms funktion mit lambda ersetzen
-*** TODO kalender und clock einrichten
-    CLOCK: [2013-01-02 Mi 14:59]--[2013-01-02 Mi 15:13] =>  0:14
-    CLOCK: [2013-01-02 Mi 14:55]--[2013-01-02 Mi 14:59] =>  0:04
-*** TODO schnelleres arbeiten mit git
-*** TODO git account daten hinzufügen
-*** TODO überall ignorelisten installieren
-*** TODO git merge bei editierung an unterschiedlichen stellen
-*** TODO magit konfigurieren und benutzen
-*** TODO schnellen git workflow zusammenstellen
-*** TODO einfachere Screenshots
-*** TODO bilder pasten, emacs => drag and drop
-*** TODO calculator benutzbar machen (emacs)
-*** TODO git informationen in emacs eintragen
-** unwichtig
-*** TODO Orte mit (letzten) veränderungen oder sowas durchgehen(cyclen)
-*** TODO Shortcuts / Jumpmarks über Markuplanguage hinzufügen(ref?)
-*** TODO lösung für den austausch von bildern und code finden
-*** TODO ersatz für readItLater finden
-*** TODO Plugins für Buffermanagement test
-**** iflipb
+   => Tasks sammeln
+** Projekte :testproject:
+*** Buffer/Window Control
+**** DONE helm und popwin verknüpfen
+**** TODO Buffer/Window Lösungen weiter prüfen     
+***** iflipb
 entspricht dem Windowskonzept
 vom Windowswitching
 + preview von jedem fenster
-**** tabbarmode
-fügt tabbar hinzu und
+***** tabbarmode
+     fügt tabbar hinzu und
 gruppiert die buffer
-**** pinbar
+***** pinbar
 ebenfalls tabbar, aber hier lassen
 sich buffer dauerhaft anpinnen
-**** win-switch.el
-fenstersprung / resize
-mit hjklm
-**** onewindow
+***** onewindow
 - mit same-window-buffer-names
 bestimmte fenster automatisch im
 aktuellen Fenster öffnen lassen
@@ -80,53 +69,126 @@ funktion noch in einen extra
 buffer wechseln 
 - with-selected-window könnte praktisch
 werden
-**** popwin.el
-kann auf jeden fall für bestimmte
-buffer ein separates schnell schließbares
-Fenster erstellen usw.
-Kann aber glaube ich noch einige andere
-interessante Sachen
-**** kiwanami/emacs-window-manager
-Organisiert verschiedene konkrete 
-Fensterstrukturen und unterstützt dabei
-diverse andere Funktionen auch für popup
-Fenster usw.
-**** switch-window.el
-Zeigt Nummern in den Fenstern an,
-um dann zu springen
-**** display-buffer überschreiben
+***** display-buffer überschreiben
 http://superuser.com/questions/244036/emacs-window-management
-**** elscreen
-session management, tabs,
-fensterumbenennung und ein haufen
-anderer Kram
-Im großen und ganzen bietet es einfach workspaces, 
-in denen layouts erhalten bleiben und die durch tabs
-kenntlich gemacht werden
-**** dedicated windows
-Fenster fest mit Buffer verknüpfen, so
-dass viele Funktionen dieses Fenster nicht
-in Betracht ziehen:
-(set-window-dedicated-p (frame-selected-window) t)
-org...indir...buffer ignoriert diese z.B.
-komplett
-ein dedicated Window wird aber auch in sich selbst
-nichts neues mehr öffnen sondern andere Fenster
-benutzen
-**** weiterführende Links
+***** weiterführende Links
 [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Selecting-Windows.html#Selecting-Windows][selecting windows]]
 [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Cyclic-Window-Ordering.html#Cyclic-Window-Ordering][cyclic window ordering]]
 [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Buffers-and-Windows.html][buffers and windows]]
 [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Choosing-Window.html#Choosing-Window][choosing window]]
 [[http://www.gnu.org/software/emacs/manual/html_node/elisp/Dedicated-Windows.html][dedicated windows]]
-*** TODO tag-system einrichten
-*** TODO Org: Footnote und Emphasise?
-*** TODO evil modes? welcher an, welcher besser (evil modes ergooglen)
-*** TODO Die ganzen Emacs Konfigurationen sortieren
-*** TODO ubuntu vs mint akku (genau das bei google)
-*** TODO regex (icicle und rx makro) testen
-*** TODO Den Header fürs Previewing irgendwo Zentral laden (für \P z.B.)
-*** TODO Gnus Shortcuts fixen und die restlichen Account einbinden
+*** Organisation
+**** TODO kalender und clock einrichten
+     CLOCK: [2013-01-02 Mi 14:59]--[2013-01-02 Mi 15:13] =>  0:14
+     CLOCK: [2013-01-02 Mi 14:55]--[2013-01-02 Mi 14:59] =>  0:04
+**** TODO Die ganzen Emacs Konfigurationen sortieren
+*** Zettel - Workflow
+**** DONE schnellen git workflow zusammenstellen
+**** DONE git informationen in emacs eintragen
+**** TODO einfachere Screenshots
+**** DONE calculator benutzbar machen (emacs)
+    - dieser Buffer musste irgendwie schließbar sein
+    - schnelles copy and paste, oder noch besser einfach direkt inline
+**** TODO lösung für den austausch von bildern und code finden
+     - prüfen ob bildlinks auch texte haben dürfen, wenn ja => da rein, sonst: egal
+**** TODO sprünge beim scrollen mit großen bildern verhindern
+*** Capturing
+**** DONE kleine Zusammenstellung zum Thema hooks anfertigen
+**** TODO bilder pasten, emacs => drag and drop
+**** TODO Link per Org Protocol von Firefox verschicken (Session)
+**** TODO kurzer Text über die Benutzung/ die Features des Diary's
+**** TODO Capturing Templates implementieren
+*** Emacs Knowledge
+**** DONE Org: Footnote und Emphasise?
+**** TODO tag-system einrichten
+**** TODO evil modes? welcher an, welcher besser (evil modes ergooglen)
+**** TODO regex (icicle und rx makro) testen
+*** Linux
+**** TODO gnome keyring bug beheben
+**** TODO ubuntu vs mint akku (genau das bei google)
+*** Shortcuts
+**** DONE completion shortcuts bequemer machen			  :shortcuts:
+**** DONE Orte mit (letzten) veränderungen oder sowas durchgehen(cyclen - plural)
+**** DONE shortcut für zuletzt benutztes bookmark		  :shortcuts:
+**** DONE Shortcut Header Sprung besser legen			   :shortcut:
+**** DONE Emacs wiederholung braucht ein besseres shortcut (z schwer zu finden) :shortcut:
+**** DONE zyklisches Pasten von Emacs aus Killring		  :shortcuts:
+**** DONE shortcuts für erstellen von tmp autonamed bookmark und cyclen (in buffer) :shortcuts:
+*** getabbter Reader
+nicht mehr Zeit als unbedingt notwendig darauf verwenden. Durch die Google Preview im
+Firefox, und ansonsten den recht brauchbaren Zathura ist eigentlich schon alles
+zufriedenstellend abgedeckt
+**** TODO Tabbar(oder so ähnlich) ausprobieren
+**** TODO tabs so wie bei Fluxbox für awesome wm?
+*** Navigation
+**** DONE Shortcuts / Jumpmarks über Markuplanguage hinzufügen(ref?)
+**** DONE Jumpmode für Org testen
+*** nützlicher kleinkram
+**** TODO eigene befehlsabkürzungen
+**** TODO lorem ipsum dolor generator für emacs
+**** TODO weitere alternative Completions Methoden prüfen  
+** nicht zugeordnet
+*** TODO Gnus Shortcuts fixen und die restlichen Account einbinden :shortcut:
+    über die den Force Evil normal state ist das meiste eigentlich schon erledigt
 *** TODO Cdlatex mode überprüfen
 *** TODO ERC mit Standardwerten einrichten
-*** TODO lorem ipsum dolor generator für emacs
+*** DONE nachträglich fill column einsetzen (befehl finden)
+*** TODO autogenes Training routine finden
+*** TODO autostarts neu zuteilen (source blöcke usw)    
+*** TODO Liste mit Features von Bookmark+ anfertigen
+*** TODO markierung und/oder anzeige für evil marks im Dokument anzeigen
+nicht mehr zeit verschwenden, als unbedingt nötig, da die evil marks in jedem fall auch
+durch autobookmarks ersetzt werden könnten
+google: emacs+evil+show+mark 
+** raw - stuff
+*** Steam <2013-01-02 Mi> 
+
+Die Shortcuts für den Sprung zum Header könnten besser liegen. 
+Tags für die Todoliste um grob nach einem Kontext gruppieren zu können => lohnt sich
+aber auch nur, wenn es auch genug gibt. Nach wie vor ist auch die Frage offen, wie man
+linkansammlungen im Browser sammeln und wiedergeben kann. Da ReadItLater ziemlich
+schlecht funktioniert. Vielleicht könnte man man dazu wirklich emacs benutzen. Links
+lassen sich von emacs aus Problemlos im Firefox öffnen. Entscheidend ist dann, ob das
+Org Protocol diesen Zweck auch vernünftig erfüllen kann. Wenn man dann noch eine
+Funktion an die Hook für einen geöffneten Link anhängen könnte, so könnte man diese
+links anschließend auch einfach verschwinden lassen, oder andere coole dinge damit
+anstellen. 
+Bookmarks und Marks allgemein sind leider immernoch ein Problemfaktor. Vielleicht könnte
+sich das mit bequemeren Shortcuts bessern? Auf jeden fall fehlt einfach immer die
+Übersicht, was was war, zumindest solange wir uns noch an die Routine gewöhnen
+müssen. Hier wäre es hilfreich, wenn zumindest tempoär in einem kleinen Unterfenster die
+aktuellen marks angezeigt werden könnten. Eine Markierung ähnlichd der von Bookmark plus
+wäre vermutlich auch sehr nützlich, schon allein um sich immer wieder daran zu erinnern,
+was möglich ist. Alternativ könnte aber auch bookmark+ genutzt werden. Nach wie vor
+haben wir dieses plugin so gut wie überhaupt nicht in Benutzung. Das Problem ist, dass
+wir nicht genau wissen, was wir wollen, bzw. wie diese Dinge gelöst werden könnten.
+Was wir brauch ist klar: ein schnelles hin- und herspringen in einem Buffer muss
+gewährleistet sein. Zumindest im Org-Mode geht da viel über das Imenu aber perfekt ist
+das auch noch nicht. Die Marks von Evil sind dazu aber auch zu anonym. Statt dessen
+würden sich tempoäre automatisch benannte Bookmarks anbieten, die mit einem schnellen
+Tastendruck ohne weitere einstellungen erstellt werden können. Diese bookmarks sollte
+man dann mit einer weiteren simplen Tastenkombination durchcyclen können. 
+Eine andere Problemstellung ist das bearbeiten an mehrerer Orten in einer Datei. Jedes
+mal ein Bookmark einzugeben würde hier einfach zu lange dauern, andererseits dauert
+cyclen auch zu lange. Hier wäre es wünschenswert, so ähnlich wie bei
+Windows-Taskswitcher zum letztn Bookmark springen zu können. Man könnte dann per
+Listensprung 2 Stellen "verknüfen" und dann mit dem recent_bookmark sprung hin und her
+gehen. Genaugenommen könnte dieser Sprung auch über das Buffer hinausgehen, und wäre
+immernoch sehr Sinnvoll. Es bliebe dann noch der 2 Cursor. Wäre dessen Steuerung
+optimiert könnte er fast sinnvoll sein. Andererseits wären clever gelegte Bookmarks
+einfach handlicher. Im Zweifelsfalls könnte man das Fenster ja auch noch splitten.
+
+Was könnte man noch in der Todo Liste vergessen haben? Diary. Capturing. Cyclic Paste.
+
+Irgendwie brauchen wir noch eine sinnvolle Projekt übersicht. Wenn die Todo's so viele
+werden, ist es schwer dabei noch einen entspannten Überblick zu behalten. Andererseits
+wüsste ich nicht, nach welchem Schema ich gruppieren sollte. => Projekte, also Schritte
+die zum selben Endergebniss führen sollen. Aber wir haben vor allem viele
+Mikrotasks. Beispiel: Shortcuts. Shortcuts würden aber auch ein gutes Projekt abgeben,
+da sie ja sowies zusammen bearbeitet werden.
+
+
+ 
+	
+
+
