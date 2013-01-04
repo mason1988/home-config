@@ -516,6 +516,10 @@ M-a markiert alle Einträge !!!
 2. make
 3. sudo make install
 * Firefox
+*** pentadactyl einrichten
+- :map d V   <= damit der nicht mit d seite löscht
+- :set hintkeys=uiaenrdxvlchgqüöäpb,.j
+- :mkpentadactylrc
 ** Standardsuche
 about:config und da nach keyword.URL suchen und
 https://www.google.com/search?hl=en&q=  einsetzen
