@@ -220,6 +220,73 @@ Analog zu a) ergibt sich für $\mathbb{P}(Y|X = k)$ nun mit für 2 Kartenziehung
 von $\frac{4-X}{32}$ für einen Buben pro Karte:\\
 Für $\omega \in \Omega:$ $\mathbb{P}(Y = \omega |X = k) = \binom{32}{\omega}(\frac{4-X}{32})^{\omega} * (1 - \frac{4-X}{32})^{2 - \omega}$
 #+END_SRC
+**** Notizen
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_203347_22923fmr.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_203414_22923swx.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_204351_229234ON.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_204403_22923FZT.png]]
+
+*** Aufgabe 2
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+
+#+END_SRC
+
+Fairer Würfel 2 mal geworfen
+X = Augen erster Wurf
+Y = Maximum beider Augenzahlen bzw. Summe
+**** a)
+Bedingte Wahrscheinlichkeit für Y mit X = k
+P(Y|X=k)
+d.h. die Wahrscheinlichkeit für die Unterschiedlichen
+möglichen Augen von Y, wenn k schon bekannt ist.
+
+Durch das gegebene X verschiebt sich lediglich der Raum
+der möglichen Ergebnisse für Y. Dabei wird aber keines
+dieser Ergebnisse wahrscheinlicher oder Unwahrscheinlicher.
+
+Der Bildraum ist daher: [k,12-k] \in N
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+\subsubsection{a)}
+Die Wahrscheinlichkeit für die unterschiedlichen Augenzahlen im 2. Wurf ändern sich nicht durch den ersten, 
+und liegt daher bei $\frac{1}{6}$ für jede mögliche Augenzahl. Die 6 möglichen Ergebnisse mit P(Y=y)>0 nach dem 2 Wurf
+sind daher lediglich um k verschoben.\\
+$\Rightarrow P(Y=y) = \begin{cases} \frac{1}{6} &\mbox{falls } k < y \leq 6+k \\ 0 &\mbox{sonst} \end{cases}$ \\
+#+END_SRC
+**** b)
+g(k) = E(Y | X = k) Der Erwartungswert für ein bestimmtes Y, bei gegebenem X.
+Abermals handelt es im im Grunde nur um eine simple Gleichverteilung der Wahrscheinlichkeiten in Y.
+Der Erwartungswert für z.B. X wäre: E[X] = 1/6 * 1 + 1/6 * 2 ... = 1/6(1+2+3+4+5+6) = 21/6 = 3,5
+Es ist anzunehmen, dass auch hier nur eine Verschiebung um k statt findet
+Test X=1 Ws für Y: 1/6(2+3+4+5+6+7) = 27/6 = 9/2 = 4,5  *passt*
+Test X=2 Ws für Y: 1/6(3+4+5+6+7+8) = 33/6 = 11/2 = 5,5 *passt*
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+\subsubsection{b)}
+Sei Z die Augenzahl des 2. Wurfes, so gilt $P[Z] = \frac{1}{6}$ und $E[Z] = \frac{1}{6}(1+2+3+4+5+6) = 3,5$
+wobei ein bekanntes X keinerlei Einfluss haben kann.
+Es gilt daher: $g(k) := E[Y|X=k] = E[Z] + k = 3,5 + k$
+#+END_SRC
+
+**** c)
+E[Y] und E[g(X)]
+
+Für E[Y] ist die Summe des ersten Wurfes unbekannt. Aus diesem Grund, sind die einzelnen Ergebnisse nichmehr
+nur um eine Konstante verschoben und sind auch nicht mehr alle gleich wahrscheinlich.
+Die Ws Verteilung wird zur Mitte hin spitzer und sollte Symmetrisch sein, so dass 5,5 der Erwartungswert sein sollte.
+Stimmt nicht, die Symmetrie ist so gar nicht gegeben, da die 0 fehlt. Daher ist auch E[X] = 3,5 und nicht 3.
+Neuer Tipp: 7  Kann man Erwartungswerte vielleicht addieren? Eigentlich spricht nichts dagegen. E[X] = E[Z] = 3,5
+Y als die Summe aus beidem ist daher 7.
+
+E[g(X)] = Erwartungswert des Erwartungswertes? o.O
+E[ 3,5 + k] <= würde nicht gehen bzw. wäre konstant da k konstant aber:
+E[3,5 + X] = 3,5 + E[X]  <= wäre nicht unbedingt so machbar. 
+#+BEGIN_SRC latex tangle: st-loesung-08.tex
+\subsubsection{c)}
+Sei Z wieder die Augenzahl des zweiten wurfes. Da X für E[Y] unbekannt ist, gilt E[X] = E[Z] = 3,5. Da sich beide Werte nicht
+beeinflussen, hat Y also die Summe der beiden Augenzahlen den Erwartungswert E[Y] = E[X] + E[Z] = 3,5 + 3,5 = 7 \\
+
+E[g(X)] = E[ 
+#+END_SRC
+   
 *** Aufgabe 3
 #+BEGIN_SRC latex tangle: st-loesung-08.tex
 \subsection{Aufgabe 3}
@@ -398,6 +465,23 @@ Fall 2: auto nicht getroffen => es existiert nur eine andere Möglichkeit für d
 
 [[file:201301ad-19123649498Bz.png]]
 
+
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_153119_2292345w.png]]
+
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_153351_22923qDA.png]]
+
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_153423_229233NG.png]]
+
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_153540_22923EYM.png]]
+
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_153611_22923RiS.png]]
+
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_162431_22923r9S.png]]
+
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_162552_229234HZ.png]]
+
+
+
 P(A_i|B) = \frac{P(A_i) * P(B | A_i)}{P(A_1) * P(B | A_1) + P(A_2) * P(B | A_2) + P(A_3) * P(B | A_3)}
 
 
@@ -446,6 +530,13 @@ bla
 #+BEGIN_SRC latex tangle: st-loesung-08.tex
 
 #+END_SRC
+***** Bäume
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_152052_22923ERY.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_152307_22923elk.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_162727_22923FSf.png]]
+
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_203554_22923e6A.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_203606_22923rEH.png]]
 **** c)
 #+BEGIN_SRC latex tangle: st-loesung-08.tex
 \subsubsection{c)}
@@ -454,6 +545,18 @@ bla
 #+BEGIN_SRC latex tangle: st-loesung-08.tex
 
 #+END_SRC
+*** Aufgabe 6
+**** Cancer Rate
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_161650_22923esY.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_161706_22923r2e.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_161729_229234Al.png]]
+
+**** nochmal mit Aids
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_162118_22923SVx.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_162138_22923EfA.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_162207_22923RpG.png]]
+**** Sterbetafeln
+[[/home/florian/Zettelkasten/zettelkasten.org_20130103_163636_22923Scl.png]]
 *** footer
 #+BEGIN_SRC tex :tangle st-zettel-08.tex
 \end{document}
