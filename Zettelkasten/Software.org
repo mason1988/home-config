@@ -20,6 +20,7 @@
  + xrandr:  $ xrandr --output VGA --mode 1280x1024 --right-of LVDS
  + convert pic123.png resize 10% res_pic.png  :: resizing
  + standby :: sudo /etc/acpi/sleep.sh
+ + script von überall asuführbar machen :: sh entfernen, bang anfügen, und in /usr/bin verschieben
 ** Tasten remappen
 xvkbd -xsendevent -no-sync -delay 20 -text "-"
 xbindkeys --default > /home/florian/.xbindkeysrc
@@ -1726,4 +1727,6 @@ pass
 - C-x p ret   :: setze/entferne autonamed bookmark
 - C-x j n     :: cycle bookmarks current file
 - C-M-n       :: jump up
-- C-x r       :: repeat
+- C-ä r       :: repeat
+
+- C-x s       :: save-some-buffers 
