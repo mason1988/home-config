@@ -19,6 +19,7 @@
    4. client executen
  + xrandr:  $ xrandr --output VGA --mode 1280x1024 --right-of LVDS
  + convert pic123.png resize 10% res_pic.png  :: resizing
+ + standby :: sudo /etc/acpi/sleep.sh
 ** Tasten remappen
 xvkbd -xsendevent -no-sync -delay 20 -text "-"
 xbindkeys --default > /home/florian/.xbindkeysrc
@@ -105,7 +106,43 @@ was ist mit Annotationen?
 - das würde normalerweise auch erst beim exportieren gemacht werden (Stichwort: tangling)
 - für Code Tangling bieten sich dann die 
 
+** Capturing
+Man setzt irgendeine Datei als default note file und 
+da wird dann immer reinkopiert
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+
+Die Funktion org-cature wird dann mit einer Taste verbunden
+(define-key global-map "\C-cc" 'org-capture)
+Es wird dann jedes mal ein Tempoärer Buffer geöffnet und angezeigt, 
+in welchem man ein Template auswählen kann, welches dann dieses Fenster
+schonmal vorbefüllt. Da kann dann z.B. automatisch der zuletzt gestörete 
+Link oder der Zwischenspeicher oder eine Link zum aktuellen Punkt landen
+
+Unterschieden wird dann noch in Finish, also fertig kopieren und 
+Refiling, wobei die Daten an einen anderen header geschickt werden
+** Templates
+Templates sind im Grund nur etwas Text der Standardmäßig reingespastet wird,
+wobei sie aber auch ein paar gegebene Parameter verwenden können.
+*** capture-template hinzufügen
+Zeug wird unter Heading "Tasks in gtd.org eingefügt
+     (setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
+             "* TODO %?\n  %i\n  %a")
+        ("j" "Journal" entry (file+datetree "~/org/journal.org")
+             "* %?\nEntered on %U\n  %i\n  %a")))
+Aufbau: Key;Beschreibung; typ: entry=node..., item, checkitem, plain,...;
+target: file+regexp/file+id usw, file+datetree für currentdate und noch mehr;
+template: text; properties: clockingkram, appenden, unnarrow(nicht hinspringen...)
+*** nutzbare parameter
+http://orgmode.org/manual/Template-expansion.html#Template-expansion
+
+** refiling
+- Das capture oder node wird an anderen header angehangen
+(standardmäßig wird nur die oberste ebene benutzt
 * org-protocol
+über emacsclient können auch direkt per konsole
+solche Aufrufe gemacht werden
+[[http://orgmode.org/worg/org-contrib/org-protocol.html][hauptseite]]
 ** Browser
 javascript:location.href='org-protocol://capture://x/'+
       encodeURIComponent(location.href)+'/'+
@@ -115,6 +152,8 @@ javascript:location.href='org-protocol://capture://x/'+
 Sendet diese Daten an Emacs Template, (hier konkret x aber kann 
 man auch weglassen)
 ** Emacs
+vorallem musste erstmal der server gestartet werden
+
 (setq org-capture-templates
       (quote
        (("w"
@@ -155,73 +194,7 @@ sudo chmod -v -R ouag+rw *     alles per chmod freigeben
      im Text auch in genau diesen Richtungen !! )
    - Ctrl+x Ctrl+n und Ctrl+x Ctrl+p um ganze 
      Zeile so zu vervollständigen
-* Emacs
-** shortcuts-emacs 						  :shortcuts:
-    sudo chmod -v -R ouagrw . matched auch verstecktes
-   - igrep und dann regex um dateien zu (durch-)suchen
-   - recentf-open-files ::   zeigt die letzten dateien an
-   - deft-new-file ::        erstellt eine kurznotiv die mit deft
-     zusammengefasst werden können
-   - C-x C-e :: führt aktuelle lisp zeile aus und gibt ergebniss aus
-   - M-esc : :: eval-expr
-   - C-x b  ::  buffer wechseln
-   - winner-undo :: Layout wiederherstellen (tempoärer speicher)
-   - repeat :: .
-   - vergrößern/verkleinern :: C-x } /
-   - finde Buffer :: C-x 4 C-o
-   - InsertPoint :: Ctrl + w (mehrfach für größere Fläche
-
-   - save-current-configuration :: C-ä w
-   - resume :: C-ä c
-	       
-   - show shortcuts :: C-ä x
-** Hilfefunktionen
--    M-x apropos :: findet alles was irgendwie mit dem Ausdruck danach zu tun hat
--    F1 / M-x Helper-... :: findet Keybinds <=> Funktion usw
--    apropos-documentation :: durchsucht alles nach einem String
-
-** Tmp Keymaps
-    blablabla
-    testtest
-    testetst
-
-    einfach zeile yanken, eval-expr.. und paste mit ctrl-y
-    oder auf zeile und C-x C-e, oder markieren und eval-region
-      (global-set-key (kbd "C-ß") 'clipboard-yank) *nichtmehr notwendig*
-      (global-set-key (kbd "C-c f") 'evil-emacs-state)
-      (global-set-key (kbd "C-c q") 'evil-force-normal-state)
-      (define-key evil-normal-state-map (kbd "C-c f") 'evil-emacs-state)
-      (define-key evil-normal-state-map (kbd "C-c q") 'evil-force-normal-state)
-      (global-set-key (kbd "C-u") 'evil-scroll-up)
-      (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
-      (global-set-key (kbd "M-k") 'evil-window-prev)
-      (define-key evil-normal-state-map (kbd "M-k") 'evil-window-prev)
-      (global-set-key (kbd "C-c b") 'view-buffer-other-window)
-      (global-set-key (kbd "C-ü") (lookup-key global-map (kbd "C-x")))
-
-      (global-unset-key (kbd "C-d"))
-      (local-unset-key (kbd "C-d"))
-      (global-unset-key "\C-d")
-      (local-unset-key "\C-d")
-
-      (global-set-key (kbd "C-d") 'evil-scroll-down)
-      (define-key evil-normal-state-map (kbd "C-d") 'evil-scroll-down)
-      (define-key evil-motion-state-map (kbd "C-d") 'evil-scroll-down)
-      (local-set-key (kbd "C-d") 'evil-scroll-down)
-       (define-key evil-normal-state-map "\C-d" 'evil-scroll-down)
-      (define-key evil-motion-state-map "\C-d" 'evil-scroll-down)
-      (local-set-key "\C-d" 'evil-scroll-down)
-
-      (define-key global-map "\C-d" 'evil-scroll-down)
-
-      (define-key local-map "\C-d" 'evil-scroll-down)
-
-; freie Präfixe sind C-ü , C-ö , C-ä
-
-
-
-      [[file:~/.emacs::(global-set-key%20(kbd%20"C-c%20b")%20'][.emacs]]
-
+* elisp
 ** Funktionen für Elisp
     - (global-set-key [key] 'func)
         - statt [key] kommen auch strings wie "\C-r" "\M-r" usw. in Frage
@@ -354,11 +327,6 @@ sudo chmod -v -R ouag+rw *     alles per chmod freigeben
 (setq stuff (buffer-substring (region-beginning)(region-end)))
 ** Funktionsaufruf(shortcut) durch neuen ersetzen(key)
 (define-key (current-global-map) [remap kill-line] 'my-homemade-kill-line)
-** bedingung
-(when (string-match "^ *$" test-str)
-   (message "cool")) 
-** eine Zeile vorwärts
-(forward-line 1)   ; oder auch -1
 ** hartnäckige Bindings überschreiben
 die Minormodes habflorianen eine der höchster Prioritäten beim nachschlagen der Keys
 -> der jeweilige evil minor mode bietet sich an
@@ -371,6 +339,166 @@ selbst an die Hook ketten:
  (define-key evil-insert-state-local-map "\M-k" 'evil-window-prev)
  )
 )
+** bedingung
+(when (string-match "^ *$" test-str)
+   (message "cool")) 
+** eine Zeile vorwärts
+(forward-line 1)   ; oder auch -1
+** hooks
+*** Syntax
+(add-hook 'latex-mode-hook (lambda () (auto-fill-mode -1)))
+*** Standard Hooks
+activate-mark-hook
+deactivate-mark-hook
+after-change-functions
+before-change-functions
+first-change-hook
+after-change-major-mode-hook
+change-major-mode-after-body-hook
+after-init-hook
+before-init-hook
+emacs-startup-hook
+after-insert-file-functions
+write-region-annotate-functions
+write-region-post-annotation-function
+after-make-frame-functions
+before-make-frame-hook
+after-save-hook
+before-save-hook
+write-contents-functions
+write-file-functions
+after-setting-font-hook
+    Hook run after a frame's font changes.
+auto-save-hook
+before-hack-local-variables-hook
+hack-local-variables-hook
+buffer-access-fontify-functions
+buffer-list-update-hook
+    Hook run when the buffer list changes.
+buffer-quit-function
+    Function to call to “quit” the current buffer.
+change-major-mode-hook
+command-line-functions
+delayed-warnings-hook
+    The command loop runs this soon after post-command-hook (q.v.).
+delete-frame-functions
+delete-terminal-functions
+display-buffer-function
+pop-up-frame-function
+special-display-function
+split-window-preferred-function
+echo-area-clear-hook
+find-file-hook
+find-file-not-found-functions
+font-lock-extend-after-change-region-function
+font-lock-extend-region-functions
+font-lock-fontify-buffer-function
+font-lock-fontify-region-function
+font-lock-mark-block-function
+font-lock-unfontify-buffer-function
+font-lock-unfontify-region-function
+fontification-functions
+frame-auto-hide-function
+kill-buffer-hook
+kill-buffer-query-functions
+kill-emacs-hook
+kill-emacs-query-functions
+menu-bar-update-hook
+minibuffer-setup-hook
+minibuffer-exit-hook
+mouse-leave-buffer-hook
+    Hook run when about to switch windows with a mouse command.
+mouse-position-function
+post-command-hook
+pre-command-hook
+post-gc-hook
+post-self-insert-hook
+suspend-hook
+suspend-resume-hook
+suspend-tty-functions
+resume-tty-functions
+syntax-begin-function
+syntax-propertize-extend-region-functions
+syntax-propertize-function
+font-lock-syntactic-face-function
+temp-buffer-setup-hook
+temp-buffer-show-function
+temp-buffer-show-hook
+term-setup-hook
+window-configuration-change-hook
+window-scroll-functions
+window-size-change-functions
+window-setup-hook
+window-text-change-functions
+*** Org Mode Hooks
+[[http://orgmode.org/worg/org-configs/org-hooks.html]]
+* Emacs  
+** shortcuts-emacs 						  :shortcuts:
+    sudo chmod -v -R ouagrw . matched auch verstecktes
+   - igrep und dann regex um dateien zu (durch-)suchen
+   - recentf-open-files ::   zeigt die letzten dateien an
+   - deft-new-file ::        erstellt eine kurznotiv die mit deft
+     zusammengefasst werden können
+   - C-x C-e :: führt aktuelle lisp zeile aus und gibt ergebniss aus
+   - M-esc : :: eval-expr
+   - C-x b  ::  buffer wechseln
+   - winner-undo :: Layout wiederherstellen (tempoärer speicher)
+   - repeat :: .
+   - vergrößern/verkleinern :: C-x } /
+   - finde Buffer :: C-x 4 C-o
+   - InsertPoint :: Ctrl + w (mehrfach für größere Fläche
+
+   - save-current-configuration :: C-ä w
+   - resume :: C-ä c
+	       
+   - show shortcuts :: C-ä x
+** Hilfefunktionen
+-    M-x apropos :: findet alles was irgendwie mit dem Ausdruck danach zu tun hat
+-    F1 / M-x Helper-... :: findet Keybinds <=> Funktion usw
+-    apropos-documentation :: durchsucht alles nach einem String
+     
+** Tmp Keymaps
+    blablabla
+    testtest
+    testetst
+
+    einfach zeile yanken, eval-expr.. und paste mit ctrl-y
+    oder auf zeile und C-x C-e, oder markieren und eval-region
+      (global-set-key (kbd "C-ß") 'clipboard-yank) *nichtmehr notwendig*
+      (global-set-key (kbd "C-c f") 'evil-emacs-state)
+      (global-set-key (kbd "C-c q") 'evil-force-normal-state)
+      (define-key evil-normal-state-map (kbd "C-c f") 'evil-emacs-state)
+      (define-key evil-normal-state-map (kbd "C-c q") 'evil-force-normal-state)
+      (global-set-key (kbd "C-u") 'evil-scroll-up)
+      (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
+      (global-set-key (kbd "M-k") 'evil-window-prev)
+      (define-key evil-normal-state-map (kbd "M-k") 'evil-window-prev)
+      (global-set-key (kbd "C-c b") 'view-buffer-other-window)
+      (global-set-key (kbd "C-ü") (lookup-key global-map (kbd "C-x")))
+
+      (global-unset-key (kbd "C-d"))
+      (local-unset-key (kbd "C-d"))
+      (global-unset-key "\C-d")
+      (local-unset-key "\C-d")
+
+      (global-set-key (kbd "C-d") 'evil-scroll-down)
+      (define-key evil-normal-state-map (kbd "C-d") 'evil-scroll-down)
+      (define-key evil-motion-state-map (kbd "C-d") 'evil-scroll-down)
+      (local-set-key (kbd "C-d") 'evil-scroll-down)
+       (define-key evil-normal-state-map "\C-d" 'evil-scroll-down)
+      (define-key evil-motion-state-map "\C-d" 'evil-scroll-down)
+      (local-set-key "\C-d" 'evil-scroll-down)
+
+      (define-key global-map "\C-d" 'evil-scroll-down)
+
+      (define-key local-map "\C-d" 'evil-scroll-down)
+
+; freie Präfixe sind C-ü , C-ö , C-ä
+
+
+
+      [[file:~/.emacs::(global-set-key%20(kbd%20"C-c%20b")%20'][.emacs]]
+
 ** helm :shortcuts:
 [Space] scrollt in Hilfstext
 M-a markiert alle Einträge !!!
@@ -583,6 +711,19 @@ git pull
 
 git checkout
 git
+** config
+remotebranch mit namen origin ist default für push/pull
+=> ist in .git/config
+die exclude ignorelist kann direkt dateinamen aus 
+dem wurzelverzeichnis entgegennehmen
+git config --global credential.helper cache
+git config --global credential.helper 'cache --timeout=50000' <= cached login
+** praktische befehle
+git add . addet alles außerhalb der ignorelist (vorher git status ...)
+git mergetool  um den kram zu mergen
+** mit gui
+gitk => git-gui öffnen => neu laden
+=> alles bereitstellen => nein => eintragen => versenden
 ** Ganz neues Projekt
 1. Mit git initialize oder so, erstmal lokal rep erstellen
 2. Online irgendwo was erstellen
@@ -609,6 +750,16 @@ git remote add rem_name online_path -t master
 - mit git log die einzelnen commits inkl nummer anzeigen
 - mit git show nr:pfad z.B. 1234:.emacs.d/test.txt dokumente etc anzeigen
 
+** allgemeiner Synchronisationsworkflow
++ C-ö m s  für Status (und speichern)
++ jeweils i oder s zum anpassen
++ c  "bla" C-c C-c
++ C-ö m l
+   + C-ö m s  wieder stagen
+   + c C-c C-c
++ C-ö m h
+
+und beim nächsten Rechner dann das gleiche
 * eshell
 - cd = für stack, cd -nr  um aus stack aufzurufen
 
@@ -1549,6 +1700,7 @@ pass
 - C-ö k       :: helm show killring
 - C-ö h       :: helm apropos
 - C-ö i       :: Imenu (Header Übersicht und Sprung)
+- C-ö a       :: org-headlines (komplette übersicht)
 
 - C-ö e n     :: emms-next
 - C-ö e p     :: emms-previous
@@ -1570,3 +1722,12 @@ pass
     u         :: unstage
     c C-c C-c :: commit, - absenden
     ll        :: log
+- C-p         :: evil-paste-pop
+        geht bei vorherigem paste alle
+        elemente des kill-rings durch 
+	(kill-ring speichert neue pos)
+
+- C-x p ret   :: setze/entferne autonamed bookmark
+- C-x j n     :: cycle bookmarks current file
+- C-M-n       :: jump up
+- C-x r       :: repeat
