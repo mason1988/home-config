@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
-# name: zettelblock
-# key: zettelblock
+# name: zaufgabe
+# key: zaufgabe
 # --
 #+BEGIN_SRC latex :tangle ${1:st}-loesung-${2:08}.tex
-$3
+\\subsection{Aufgabe ${3:6}}
 #+END_SRC

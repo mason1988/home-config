@@ -1,8 +1,31 @@
 * Notes
 
-** Irgend ein Ausschnitt
+** Testtitle
 
-   Source: [2012-12-25 Di], [[http://orgmode.org/worg/org-contrib/org-protocol.html#sec-6-1-1][org-protocol.el – Intercept calls from emacsclient to trigger custom actions]]
+   Source: [2013-01-05 Sa], [[#sect-plugins][null]]
 
-    The problem with this solution would be, that only one template can be used with the fuction. Luckily, org-protocol-capture understands a slightly extended syntax to choose between several templates: If the first field of the data submitted is exactly one character in length, this character will be used to select the template.
+** Testtitle
 
+   Source: [2013-01-05 Sa], [[#sect-plugins][null]]
+
+** Testtitle
+
+   Source: [2013-01-05 Sa], [[#sect-plugins][null]]
+
+** Testtitle
+
+   Source: #sect-plugins, null
+
+** Testtitle
+
+   Source: http://stackoverflow.com/questions/9756159/using-javascript-how-to-create-a-go-back-link-that-takes-the-user-to-a-link-i?rq=1, null
+
+** Testtitle
+
+   Source: http://stackoverflow.com/questions/1140456/can-prototype-or-jquery-return-an-http-status-code-on-an-ajax-request?lq=1, Can Prototype or JQuery return an HTTP status code on an AJAX request
+
+** [[/questions/ask][Ask Question]]
+
+** [[http://stackoverflow.com/questions][Questions]]
+
+js hints.addMode('x', "Send Link to emacs", function(elem) {     var url = elem.href; var title = elem.innerHTML;     location.href='org-protocol://capture://w/'+ 	encodeURIComponent(url)+'/'+ 	encodeURIComponent(title)+'/'+ 	encodeURIComponent(" ") })
