@@ -610,14 +610,95 @@ tatsächlich mit dem DNA Profil der Probe vom Tatort übereinstimmt, liegt also 
 [[~/Dropbox/st/st-zettel-11/st-loesung-11.tex][st-loesung-11.tex]]
 [[~/Dropbox/st/st-zettel-11/st-loesung-11.pdf][st-loesung-11.pdf]]
 * Theoretische Informatik
+** Wörterbuch
+- Turingmaschine ::
+- Loopprogramm ::
+- denotationelle Semantik :: 
+- primitik rekursive Grundfunktion ::
+- primitive rekursion ::
+
 ** Zettel-09
 [[~/Dropbox/th/th-zettel-09/th-zettel-09.pdf][th-zettel-09.pdf]]
 [[~/Dropbox/th/th-zettel-09/th-loesung-09.tex][th-loesung-09.tex]]
 [[~/Dropbox/th/th-zettel-09/th-loesung-09.pdf][th-loesung-09.pdf]]
 ** Zettel-10
-[[~/Dropbox/th/th-zettel-10/th-zettel-10.pdf][th-zettel-10.pdf]]
-[[~/Dropbox/th/th-zettel-10/th-loesung-10.tex][th-loesung-10.tex]]
-[[~/Dropbox/th/th-zettel-10/th-loesung-10.pdf][th-zettel-11.pdf]]
+*** header
+#+BEGIN_SRC latex :tangle th-loesung-10.tex
+\documentclass[11pt]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath}
+\usepackage{verbatim}
+\usepackage{color}
+\usepackage{geometry}
+\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
+\usepackage{amsthm}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+
+%\includegraphics{?} setzt bild ein
+%\ref{labelname} erstellt link zu labelname
+%\label{labelname} kann einfach irgendwo drangesetz werden
+
+\newtheorem{defi}{Definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{nota}{Notation}
+\newtheorem{prop}{Proposition}
+\newtheorem{satz}{Satz}
+\newtheorem{umf}{Umformung}
+
+\newenvironment{beweis}{\par\begingroup%
+\settowidth{\leftskip}{\textsc{Beweis:~}}%
+\noindent\llap{\textsc{Beweis:~}}}{\hfill$\Box$\par\endgroup}
+
+\renewcommand{\baselinestretch}{1}
+\newcommand{\words}{\Sigma^* \backslash \{\epsilon\}}
+\newcommand{\etrans}[1]{\bar{\delta}(#1)}
+\renewcommand{\P}{\mathbb{P}}
+
+\title{Zettel 10}
+\author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
+%\date{} % Activate to display a given date or no date (if empty),
+% otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+#+END_SRC 
+
+*** Aufgabe 30
+#+BEGIN_SRC latex :tangle th-loesung-10.tex
+\subsection{Aufgabe 30}
+#+END_SRC
+
+Ausführlich kommentierte Turingmaschine angeben
+Vorzeichenzahl => Zweierkomplement
+(Vorzeichen = 1 => jedes andere Bit umdrehen, dann 1 addieren)
+(sonst: gar nichts machen)
+
+tesat
+
+
+*** Aufgabe 31
+#+BEGIN_SRC latex :tangle th-loesung-10-.tex
+\subsection{Aufgabe 31}
+#+END_SRC
+
+Loop Programm zur Berechnung von Signumfunktion:
+sg: 0 bleibt 0, 1 wenn größer 0  (nur natürliche Zahlen)
+
+Zugelassene Anweisungen: X_i = 0 ; X_i = X_j + 1
+Beweis Korrektheit Programm mit denotationeller Semantik
+
+*** Aufgabe 32
+#+BEGIN_SRC latex :tangle th-loesung-10.tex
+\subsection{Aufgabe 32}
+#+END_SRC
+
+Zeige, das Funktionen durch primitiv rekursive Grundfunktionen durch Komposition und primitive Rekursion erzeugt werden können
+(a) potenz, (a,b) = a^b
+(b) anz,  n = |w \in \{a,b,c,d\}^n  \big| |w|_a ist gerade |
+anz(0) = 1, anz(1) = 3, anz(2) = 10;  
+Primitiv Rekursiv: Nullkonstanten, Add, Mul, Vorgänger, Sub
+
 ** Zettel-11
 [[~/Dropbox/th/th-zettel-11/th-zettel-11.pdf][th-zettel-11.pdf]]
 [[~/Dropbox/th/th-zettel-11/th-loesung-11.tex][th-loesung-11.tex]]
