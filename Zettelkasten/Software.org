@@ -1501,12 +1501,16 @@ pass
 - C-ö t       :: org tree to indirect buffer
 - C-c C-x C-l :: preview latex fragment (C-c C-c für undo)
 - C-ö D       :: display inline images
+- g ;         :: springe zu letzter veränderung
 
 - C-n,p       :: Evil Extension, zurück
 - C-x C-n,p   :: Evil complete line, zurück
 - M-/         :: Hippie expand
 - C-ä c       :: mögliche Completions anzeigen
 - C-ä w d/D   :: dedicate/undedicate window
+
+- C-x * c     :: öffnet calculator
+		 => eingabe in postfix/ergebnis paste mit y/close mit q
 
 - C-c b       :: view Buffer other window
 - C-x f       :: find file other window
@@ -1535,13 +1539,14 @@ pass
 - C-ö o       :: Helm Occur (akt. Buffer)
 - M-h M-x     :: Helm - M-x -> History usw.
 - C-ö s       :: Helm - do - grep
-- C-g         :: Popwin Fenster schließen
+- C-g / C-t 0 :: Popwin Fenster schließen
 - C-t         :: Popwin Keymap:
 - b           :: Popup Buffer
 - l           :: Popup Last Buffer
 - s           :: stick Popup Window
 - spc         :: select Popup Window
 - e           :: show messages
+- C-t C-u ... :: zwingt das Fenster zum öffnen in popwin
 - C-ö k       :: helm show killring
 - C-ö h       :: helm apropos
 - C-ö i       :: Imenu (Header Übersicht und Sprung)
