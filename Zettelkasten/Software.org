@@ -1731,3 +1731,6 @@ pass
 - C-x j n     :: cycle bookmarks current file
 - C-M-n       :: jump up
 - C-x r       :: repeat
+
+- S-c         :: minimize client
+- S-Shift-i   :: restore client

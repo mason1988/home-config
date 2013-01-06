@@ -85,12 +85,13 @@
     (position . 19923))
 #1=(#("Todo Liste" 0 10
       (bmkp-full-record #1#))
-    (time 20695 2274 445702)
-    (visits . 22)
+    (end-position . 63813)
+    (time 20710 59520 561862)
+    (visits . 23)
     (filename . "~/Dropbox/Shell-Skripte/org-test-umgebung.org")
     (front-context-string . "Todo List\n** DON")
     (rear-context-string . "on\n*** pekwm\n\n* ")
-    (position . 63469))
+    (position . 63813))
 #1=(#("org-capture-last-stored" 0 23
       (bmkp-full-record #1#))
     (filename . "~/Zettelkasten/zettelkasten.org")
