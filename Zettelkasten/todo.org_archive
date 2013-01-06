@@ -1,0 +1,125 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/florian/Zettelkasten/todo.org
+* DONE synergy shortcut bequemer legen
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2013-01-03 Do 18:57
+  :ARCHIVE_FILE: ~/Zettelkasten/todo.org
+  :ARCHIVE_OLPATH: System-Config/wichtig
+  :ARCHIVE_CATEGORY: todo
+  :ARCHIVE_TODO: DONE
+  :END:
+* DONE git account daten hinzufügen
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2013-01-03 Do 18:58
+  :ARCHIVE_FILE: ~/Zettelkasten/todo.org
+  :ARCHIVE_OLPATH: System-Config/wichtig
+  :ARCHIVE_CATEGORY: todo
+  :ARCHIVE_TODO: DONE
+  :END:
+* DONE git merge bei editierung an unterschiedlichen stellen
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2013-01-03 Do 18:58
+  :ARCHIVE_FILE: ~/Zettelkasten/todo.org
+  :ARCHIVE_OLPATH: System-Config/wichtig
+  :ARCHIVE_CATEGORY: todo
+  :ARCHIVE_TODO: DONE
+  :END:
+* unwichtig
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2013-01-03 Do 18:58
+  :ARCHIVE_FILE: ~/Zettelkasten/todo.org
+  :ARCHIVE_OLPATH: System-Config
+  :ARCHIVE_CATEGORY: todo
+  :END:
+** TODO calculator benutzbar machen (emacs)
+   - dieser Buffer musste irgendwie schließbar sein
+   - schnelles copy and paste, oder noch besser einfach direkt inline
+** TODO completion shortcuts bequemer machen			  :shortcuts:
+** TODO weitere alternative Completions Methoden prüfen  
+** TODO Tabbar(oder so ähnlich) ausprobieren
+** TODO tabs so wie bei Fluxbox für awesome wm?
+** TODO Jumpmode für Org testen
+** TODO Orte mit (letzten) veränderungen oder sowas durchgehen(cyclen - plural)
+** TODO Shortcuts / Jumpmarks über Markuplanguage hinzufügen(ref?)
+** TODO lösung für den austausch von bildern und code finden
+** TODO ersatz für readItLater finden
+** TODO tag-system einrichten
+** TODO Org: Footnote und Emphasise?
+** TODO evil modes? welcher an, welcher besser (evil modes ergooglen)
+** TODO Die ganzen Emacs Konfigurationen sortieren
+** TODO ubuntu vs mint akku (genau das bei google)
+** TODO regex (icicle und rx makro) testen
+** TODO Den Header fürs Previewing irgendwo Zentral laden (für \P z.B.)
+** TODO Gnus Shortcuts fixen und die restlichen Account einbinden  :shortcut:
+** TODO Cdlatex mode überprüfen
+** TODO ERC mit Standardwerten einrichten
+** TODO lorem ipsum dolor generator für emacs
+** TODO Shortcut Header Sprung besser legen			   :shortcut:
+** TODO Emacs wiederholung braucht ein besseres shortcut (z schwer zu finden) :shortcut:
+** TODO C-x und C-u irgendwo anders hin mappen			   :shortcut:
+** TODO nachträglich fill column einsetzen (befehl finden)
+** TODO eigene befehlsabkürzungen
+** TODO autogenes Training routine finden
+** TODO kleine Zusammenstellung zum Thema hooks anfertigen
+** TODO Link per Org Protocol von Firefox verschicken (Session)
+** TODO markierung und/oder anzeige für evil marks im Dokument anzeigen
+** TODO shortcuts für erstellen von tmp autonamed bookmark und cyclen (in buffer) :shortcuts:
+** TODO shortcut für zuletzt benutztes bookmark			  :shortcuts:
+** TODO kurzer Text über die Benutzung/ die Features des Diary's
+google: emacs+evil+show+mark 
+** TODO zyklisches Pasten von Emacs aus Killring		  :shortcuts:
+* DONE überall ignorelisten installieren
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2013-01-03 Do 18:58
+  :ARCHIVE_FILE: ~/Zettelkasten/todo.org
+  :ARCHIVE_OLPATH: System-Config/wichtig
+  :ARCHIVE_CATEGORY: todo
+  :ARCHIVE_TODO: DONE
+  :END:
+* DONE magit konfigurieren und benutzen
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2013-01-03 Do 18:58
+  :ARCHIVE_FILE: ~/Zettelkasten/todo.org
+  :ARCHIVE_OLPATH: System-Config/wichtig
+  :ARCHIVE_CATEGORY: todo
+  :ARCHIVE_TODO: DONE
+  :END:
+* DONE lösung für minus zeichen shortcut finden
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2013-01-03 Do 18:58
+  :ARCHIVE_FILE: ~/Zettelkasten/todo.org
+  :ARCHIVE_OLPATH: System-Config/wichtig
+  :ARCHIVE_CATEGORY: todo
+  :ARCHIVE_TODO: DONE
+  :END:
+* DONE unclutter modeline
+  CLOCK: [2013-01-02 Mi 15:13]--[2013-01-02 Mi 15:38] => 0:25
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2013-01-03 Do 18:58
+  :ARCHIVE_FILE: ~/Zettelkasten/todo.org
+  :ARCHIVE_OLPATH: System-Config/wichtig
+  :ARCHIVE_CATEGORY: todo
+  :ARCHIVE_TODO: DONE
+  :END:
+  - prefixes -> dateipfade werden abgekürzt
+  - bei Customize die emms funktion mit lambda ersetzen
+* DONE default remote branch einstellen
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2013-01-03 Do 18:58
+  :ARCHIVE_FILE: ~/Zettelkasten/todo.org
+  :ARCHIVE_OLPATH: System-Config/wichtig
+  :ARCHIVE_CATEGORY: todo
+  :ARCHIVE_TODO: DONE
+  :END:
+
+
+
+
+
+
+
+
+
+
