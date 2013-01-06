@@ -167,7 +167,10 @@
  '(org-indirect-buffer-display (quote new-frame))
  '(org-modules (quote (org-bbdb org-bibtex org-docview org-gnus org-info org-jsinfo org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m org-annotate-file org-bookmark org-checklist org-collector org-eshell org-eval)))
  '(org-src-fontify-natively t)
- '(preview-scale-function 1.4))
+ '(preview-scale-function 1.4)
+ '(yas-global-mode t nil (yasnippet))
+ '(yas-prompt-functions (quote (yas-ido-prompt yas-dropdown-prompt yas-completing-prompt yas-x-prompt yas-no-prompt)))
+ '(yas-use-menu (quote full)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -402,7 +405,9 @@
 (global-set-key (kbd "M-ä") 'move-to-window-line-top-bottom)
 
 (global-set-key (kbd "M-/") 'hippie-expand)
+(global-set-key (kbd "M-ö") 'hippie-expand)
 (global-set-key (kbd "C-ä c") 'dabbrev-completion)
+
 
 (global-set-key (kbd "C-ü") (lookup-key global-map (kbd "C-x")))
 
@@ -443,6 +448,7 @@
 (global-set-key (kbd "C-ö h") 'helm-c-apropos)
 (global-set-key (kbd "C-ö i") 'helm-imenu)
 
+<<<<<<< HEAD
 (require 'hippie-flex)
 (require 'magpie)
 (require 'lorem-ipsum)
@@ -456,3 +462,14 @@
     (file+headline "~/Zettelkasten/notes.org" "Links")
      "* [[%:link][%:description]]"
      :empty-lines 1 :immediate-finish :unnarrowed :kill-buffer)))
+=======
+(defun messenger() (interactive) (erc :server "im.rootdir.de" :port 6668 :nick "floppycode"))
+(global-set-key (kbd "C-ö a") 'helm-org-headlines)
+(global-set-key (kbd "C-x j n") 'bmkp-cycle-this-buffer)
+
+(global-set-key (kbd "C-M-n") 'jump-head-up-wrapper)
+(global-set-key (kbd "C-ä r") 'repeat)
+
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+(define-key global-map (kbd "C-ö ö") 'org-capture)
+>>>>>>> 907601b367c730897e5729b6484f853b81832a3f
