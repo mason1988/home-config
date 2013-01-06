@@ -471,3 +471,5 @@
 
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (define-key global-map (kbd "C-ö ö") 'org-capture)
+
+(define-key global-map (kbd "C-ö ä") 'magpie-expand)
