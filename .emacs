@@ -448,7 +448,6 @@
 (global-set-key (kbd "C-ö h") 'helm-c-apropos)
 (global-set-key (kbd "C-ö i") 'helm-imenu)
 
-<<<<<<< HEAD
 (require 'hippie-flex)
 (require 'magpie)
 (require 'lorem-ipsum)
@@ -462,7 +461,7 @@
     (file+headline "~/Zettelkasten/notes.org" "Links")
      "* [[%:link][%:description]]"
      :empty-lines 1 :immediate-finish :unnarrowed :kill-buffer)))
-=======
+
 (defun messenger() (interactive) (erc :server "im.rootdir.de" :port 6668 :nick "floppycode"))
 (global-set-key (kbd "C-ö a") 'helm-org-headlines)
 (global-set-key (kbd "C-x j n") 'bmkp-cycle-this-buffer)
@@ -472,4 +471,3 @@
 
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (define-key global-map (kbd "C-ö ö") 'org-capture)
->>>>>>> 907601b367c730897e5729b6484f853b81832a3f
