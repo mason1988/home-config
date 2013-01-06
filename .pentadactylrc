@@ -2,6 +2,11 @@
 
 loadplugins '\.(js|penta)$'
 group user
+<<<<<<< HEAD
+=======
+map -count -modes=n,v d <count>V
+set hintkeys=uiaeosnrtdyxvlchgfqüöäpbm,.j
+>>>>>>> 63900d6022c9c26b8341b5a8e46377776a2759d5
 set guioptions=ns
 set hintkeys=uiaeosnrtdxvlchgfq
 set showtabline=never

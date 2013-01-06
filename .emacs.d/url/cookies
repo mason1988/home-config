@@ -3,9 +3,9 @@
 
 (setq url-cookie-storage
  '((".google.com"
-  [url-cookie "PREF" "ID=d1ed028160600a16:FF=0:TM=1356558063:LM=1356558063:S=sZ-xVSJ0b4EPeAiO" "26-Dec-2014 21:41:03.00 GMT" "/" ".google.com" nil]
+  [url-cookie "HttpOnly" nil "27-Jun-2013 21:41:03.00 GMT" "/" ".google.com" nil]
   [url-cookie "NID" "67=QPgQZXJLkN7A_8yw_Fu0d5W17fVLgsj6uK5XQCi3GTDU5TZAFKq2CFbgGEiwI6iq8SJEweI-5wDlo4Gd1EAoe4z-fuqFTs9TFC76evLn2akKSSQ8CCRwUbBTfRfdTb0l" "27-Jun-2013 21:41:03.00 GMT" "/" ".google.com" nil]
-  [url-cookie "HttpOnly" nil "27-Jun-2013 21:41:03.00 GMT" "/" ".google.com" nil]))
+  [url-cookie "PREF" "ID=d1ed028160600a16:FF=0:TM=1356558063:LM=1356558063:S=sZ-xVSJ0b4EPeAiO" "26-Dec-2014 21:41:03.00 GMT" "/" ".google.com" nil]))
 )
 (setq url-cookie-secure-storage
  'nil)

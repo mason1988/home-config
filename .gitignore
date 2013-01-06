@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .emacs.d/history
 .emacs.d/history/
 .emacs.d/history*
@@ -17,3 +18,12 @@ history
 /.jdownloader/jd/captcha/methods/flbs/script.jas
 /.jdownloader/version.txt
 /.jdownloader/.junique/115654c07.lock
+=======
+/.apvlvinfo
+/.config/epdfview/main.conf
+/.config/qpdfview/qpdfview.conf
+/.tuxcards
+.gnus.el
+>>>>>>> 63900d6022c9c26b8341b5a8e46377776a2759d5
+/.#.gitignore
+/.#.pentadactylrc

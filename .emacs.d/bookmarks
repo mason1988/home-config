@@ -43,14 +43,14 @@
     (end-position . 1941))
 #1=(#("Todo Liste" 0 10
       (bmkp-full-record #1#))
-    (time 20695 2274 445702)
-    (visits . 22)
+    (end-position . 63813)
+    (time 20710 59520 561862)
+    (visits . 23)
     (filename . "~/Dropbox/Shell-Skripte/org-test-umgebung.org")
     (front-context-string . "Todo List\n** DON")
     (rear-context-string . "on\n*** pekwm\n\n* ")
+    (position . 63813))
     (position . 63469))
-<<<<<<< HEAD
-=======
 #1=(#("org-capture-last-stored" 0 23
       (bmkp-full-record #1#))
     (filename . "~/org/notes.org")
@@ -64,5 +64,4 @@
     (created . #2#)
     (position . 666)
     (end-position . 666))
->>>>>>> 907601b367c730897e5729b6484f853b81832a3f
 )

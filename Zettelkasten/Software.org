@@ -1736,6 +1736,11 @@ pass
 - C-x p ret   :: setze/entferne autonamed bookmark
 - C-x j n     :: cycle bookmarks current file
 - C-M-n       :: jump up
+- C-x r       :: repeat
+
+- S-c         :: minimize client
+- S-Shift-i   :: restore client
 - C-ä r       :: repeat
 
 - C-x s       :: save-some-buffers 
+- M-w         :: buffer back

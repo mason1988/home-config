@@ -341,7 +341,8 @@ Für Unabhängigkeit müsste gelten: $\mathbb{P}([X+Y]*[X-Y]) = \mathbb{P}(X+Y)*
 Es gelte $\mathbb{P}(z) = \begin{cases} 1 &\mbox{falls } z=-1 \\ 0 &\mbox{sonst} \end{cases}$
 \begin{tabbing}
 Sei X = 0 und Y = 1 \=$\Rightarrow \mathbb{P}(X^2-Y^2) = \mathbb{P}(-1) = 1$ \\
-\> $\Rightarrow \mathbb{P}(X+Y)*\mathbb{P}(X-Y) = \mathbb{P}(1)*\mathbb{P}(-1) = 0*1 = 0 \not = 1$ 
+\> $\Rightarrow \mathbb{P}(X+Y)*\mathbb{P}(X-Y) = \mathbb{P}(1)*\mathbb{P}(-1) = 0*1 = 0 \not = 1$
+
 \end{tabbing}
 $\Rightarrow$ in diesem Beispiel sind die Zufallsvariablen X+Y und X-Y zwar unkorelliert (Kovarianz ist 0) aber nicht unabhängig. 
 #+END_SRC
@@ -867,8 +868,3 @@ Comedy-Urgesteine in weiteren Hauptrollen zu sehen. (BL)
   *Shell Command Output*
 (lgrep "-key" "/home/florian/.emacs")
 (setq debug-on-error t)
-
-
-
-
-
