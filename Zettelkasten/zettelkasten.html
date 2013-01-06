@@ -1,0 +1,1608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>zettelkasten</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="zettelkasten"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2013-01-04 21:22:33 CET"/>
+<meta name="author" content="florian"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">zettelkasten</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Zettelverwaltung</a>
+<ul>
+<li><a href="#sec-1-1">1.1 <b>Elementare Stochastik</b></a></li>
+<li><a href="#sec-1-2">1.2 <b>Logik</b></a></li>
+<li><a href="#sec-1-3">1.3 <b>Softwaretechnik</b></a></li>
+<li><a href="#sec-1-4">1.4 <b>Theoretische Informatik</b></a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2 Webdesign</a></li>
+<li><a href="#sec-3">3 Elementare Stochastik</a>
+<ul>
+<li><a href="#sec-3-1">3.1 Englisch</a></li>
+<li><a href="#sec-3-2">3.2 Verteilungen</a></li>
+<li><a href="#sec-3-3">3.3 Bedingter Erwartungswert</a></li>
+<li><a href="#sec-3-4">3.4 Zusammenhänge</a></li>
+<li><a href="#sec-3-5">3.5 Wörterbuch</a></li>
+<li><a href="#sec-3-6">3.6 Zettel-06</a>
+<ul>
+<li><a href="#sec-3-6-1">3.6.1 Dateien</a></li>
+<li><a href="#sec-3-6-2">3.6.2 Informationen</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-7">3.7 Zettel-07</a></li>
+<li><a href="#sec-3-8">3.8 Zettel-08</a>
+<ul>
+<li><a href="#sec-3-8-1">3.8.1 header</a></li>
+<li><a href="#sec-3-8-2">3.8.2 Aufgabe 1</a></li>
+<li><a href="#sec-3-8-3">3.8.3 Aufgabe 2</a></li>
+<li><a href="#sec-3-8-4">3.8.4 Aufgabe 3</a></li>
+<li><a href="#sec-3-8-5">3.8.5 Aufgabe 4</a></li>
+<li><a href="#sec-3-8-6">3.8.6 Aufgabe 5</a></li>
+<li><a href="#sec-3-8-7">3.8.7 Aufgabe 6</a></li>
+<li><a href="#sec-3-8-8">3.8.8 footer</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-9">3.9 Zettel-09</a></li>
+<li><a href="#sec-3-10">3.10 Zettel-10</a></li>
+<li><a href="#sec-3-11">3.11 Zettel-11</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4 Theoretische Informatik</a>
+<ul>
+<li><a href="#sec-4-1">4.1 Zettel-09</a></li>
+<li><a href="#sec-4-2">4.2 Zettel-10</a></li>
+<li><a href="#sec-4-3">4.3 Zettel-11</a></li>
+<li><a href="#sec-4-4">4.4 Zettel-12</a></li>
+<li><a href="#sec-4-5">4.5 Zettel-13</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5 Softwaretechnik</a>
+<ul>
+<li><a href="#sec-5-1">5.1 Hausaufgabe03</a>
+<ul>
+<li><a href="#sec-5-1-1">5.1.1 Aufgabe B</a></li>
+<li><a href="#sec-5-1-2">5.1.2 Aufgabe B</a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="#sec-6">6 Logik</a>
+<ul>
+<li><a href="#sec-6-1">6.1 Zettel-08</a>
+<ul>
+<li><a href="#sec-6-1-1">6.1.1 Dateien</a></li>
+<li><a href="#sec-6-1-2">6.1.2 Informationen</a></li>
+</ul>
+</li>
+<li><a href="#sec-6-2">6.2 Zettel-09</a></li>
+<li><a href="#sec-6-3">6.3 Zettel-10</a></li>
+<li><a href="#sec-6-4">6.4 Zettel-11</a></li>
+<li><a href="#sec-6-5">6.5 Zettel-12</a></li>
+<li><a href="#sec-6-6">6.6 Zettel-13</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7 Revive Sessions</a></li>
+<li><a href="#sec-8">8 Unterhaltung</a>
+<ul>
+<li><a href="#sec-8-1">8.1 The Watch - Nachbarn der 3. Art</a></li>
+<li><a href="#sec-8-2">8.2 Der Hobbit - Eine unerwartete Reise</a></li>
+<li><a href="#sec-8-3">8.3 Otto's eleven</a></li>
+</ul>
+</li>
+<li><a href="#sec-9">9 Notes</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Zettelverwaltung</h2>
+<div class="outline-text-2" id="text-1">
+
+
+</div>
+
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> <span class="todo Zettel8">Zettel8</span> <b>Elementare Stochastik</b></h3>
+<div class="outline-text-3" id="text-1-1">
+
+</div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> <span class="todo Zettel10">Zettel10</span> <b>Logik</b></h3>
+<div class="outline-text-3" id="text-1-2">
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> <b>Softwaretechnik</b></h3>
+<div class="outline-text-3" id="text-1-3">
+
+</div>
+
+</div>
+
+<div id="outline-container-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> <span class="todo Zettel10">Zettel10</span> <b>Theoretische Informatik</b></h3>
+<div class="outline-text-3" id="text-1-4">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Webdesign</h2>
+<div class="outline-text-2" id="text-2">
+
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Elementare Stochastik</h2>
+<div class="outline-text-2" id="text-3">
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Englisch</h3>
+<div class="outline-text-3" id="text-3-1">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Deutsch</th><th scope="col" class="left">Englisch</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">Erwartungswert</td><td class="left">expected value</td></tr>
+<tr><td class="left">exponentialverteilung</td><td class="left">exponential distribution</td></tr>
+<tr><td class="left">Varianz</td><td class="left">variance</td></tr>
+<tr><td class="left">gleichverteilung</td><td class="left">uniform distribution</td></tr>
+<tr><td class="left">Irrfahrt</td><td class="left">random walk</td></tr>
+<tr><td class="left">Wahrscheinlichkeitsdichte</td><td class="left">random density</td></tr>
+<tr><td class="left"></td><td class="left">probapility density (function)</td></tr>
+<tr><td class="left">Zufallsvariable</td><td class="left">random variable</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Verteilungen</h3>
+<div class="outline-text-3" id="text-3-2">
+
+<ul>
+<li id="sec-3-2-1">Laplaceverteilung<br/>
+zur Mitte hin, steigt die Wahrscheinlichkeit (exponentiell)
+</li>
+</ul>
+<ul>
+<li id="sec-3-2-2">Exponentialverteilung<br/>
+In eine Richtung entgegen unendlich steigt die Wahrscheinlichkeit
+</li>
+</ul>
+<ul>
+<li id="sec-3-2-3">Binomialverteilung<br/>
+Gibt nur 2 Ergebnisse, auf die die Wahrscheinlichkeit verteilt wird
+</li>
+</ul>
+<ul>
+<li id="sec-3-2-4">Poissonverteilung<br/>
+      zur Mitte hin, steigt die Wahrscheinlichkeit. (nicht exponentiell =&gt; runder kopf
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Bedingter Erwartungswert</h3>
+<div class="outline-text-3" id="text-3-3">
+
+<p>A,B Ereignisse; Y Zufallvariable
+\(P(A|B) = \frac{P(A \cap B)}{P(B)}\) Ws A wenn B bekannt
+\(P(Y|B) = \frac{E(1_{B} * Y)}{P(B)}\)
+
+<i>&lt;docview:~/Dropbox/st/s0.pdf::1&gt;</i>
+</p></div>
+
+</div>
+
+<div id="outline-container-3-4" class="outline-3">
+<h3 id="sec-3-4"><span class="section-number-3">3.4</span> Zusammenhänge</h3>
+<div class="outline-text-3" id="text-3-4">
+
+<ul>
+<li>Var(X) = Cov(X,X)
+</li>
+<li>Cov(X,Y) = E(X*Y) - E(X)E(Y)
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3-5" class="outline-3">
+<h3 id="sec-3-5"><span class="section-number-3">3.5</span> Wörterbuch</h3>
+<div class="outline-text-3" id="text-3-5">
+
+<dl>
+<dt>Erwartungswert</dt><dd><img src="201301ad-2329314949s0X.png"  alt="201301ad-2329314949s0X.png" /> = <img src="201301ad-23333749495-d.png"  alt="201301ad-23333749495-d.png" />
+                    für Abwandlung relativer Häufigkeit:  E(X[n])=z =&gt; E(X[n]/n)=z/n
+</dd>
+<dt>Zufallsvariable</dt><dd>Abbildung <img src="201212ad-1900221184eoW.png"  alt="201212ad-1900221184eoW.png" /> wobei <img src="201212ad-1901251184ryc.png"  alt="201212ad-1901251184ryc.png" /> messbare Räume
+</dd>
+<dt>messbarer Raum</dt><dd>existiert Abbildung Raum auf Maßraum
+</dd>
+<dt>Maßraum</dt><dd>der Raum in den eine Maßfunktion zuordnet (z.B. 0..1 für Ws)
+</dd>
+<dt>Wahrscheinlichkeitsfunktion</dt><dd><img src="201212ad-190439118448i.png"  alt="201212ad-190439118448i.png" />
+</dd>
+<dt>Wahrscheinlichkeitsdichtefunktion</dt><dd>gibt zu ZVar und möglichen 
+      Output die Wahrscheinlichkeit an
+</dd>
+<dt>gleichverteilt</dt><dd>alle outputs sind gleich wahrscheinlich
+</dd>
+<dt>Varianz</dt><dd><img src="zettelkasten.org_20121229_215420_14976asg.png"  alt="zettelkasten.org_20121229_215420_14976asg.png" /> = <img src="201212ad-21574114976n2m.png"  alt="201212ad-21574114976n2m.png" /> (<img src="201301ad-00394849495FS.png"  alt="201301ad-00394849495FS.png" /> Standardabweichung)
+           = irgend ein Maß für die mittleren Abweichungen vom Erwartungswert
+            = <img src="201301ad-0049294949gkk.png"  alt="201301ad-0049294949gkk.png" /> = <img src="201301ad-0054574949tuq.png"  alt="201301ad-0054574949tuq.png" />
+             Bei Binomial mit n Versuchen: 
+                = n*p*(1-p)
+                für Abwandlung relativer Häufigkeit: V(X[n])=z 
+                   =&gt; V(<img src="201301ad-1614254949GeA.png"  alt="201301ad-1614254949GeA.png" />) = <img src="201301ad-1613574949UUx.png"  alt="201301ad-1613574949UUx.png" />
+</dd>
+<dt>Kovarianz</dt><dd><img src="zettelkasten.org_20121229_220016_149760At.png"  alt="zettelkasten.org_20121229_220016_149760At.png" /> 
+           = misst die zusammenhänge der Wert
+               <img src="conv_res.png"  alt="conv_res.png" />
+            Cov(X,Y) = E(X*Y) - E(X)E(Y)
+            Cov(X,Y) = Cov(Y,X)
+            Cov(X+Y, Z) = Cov(X, Z) + Cov(Y, Z)
+  entwicklung von X und Y, also hohe Werte von X
+  =&gt; hohe Werte Y &hellip;
+</dd>
+<dt>Tschebyscheff-Ungleichung</dt><dd>Mit Erwartungswert und Varianz werden Wahrscheinlichkeiten
+   für Werte &lt; Erwartungswert bestimmt/eingegrenzt (minimale Wahrscheinlichkeit)
+     = <img src="201212ad-07253120660_2o.png"  alt="201212ad-07253120660_2o.png" />    &sigma;<sup>2</sup> ist varianz, &mu; ist Erwartungswert
+</dd>
+<dt>Wahrscheinlichkteisraum</dt><dd><img src="201212ad-15510922908saY.png"  alt="201212ad-15510922908saY.png" /> = Raum mit Ereignissen und Wahrscheinlichkeitsfunktion da drauf
+</dd>
+<dt>Indikator- / charakteristische Funktion</dt><dd>1<sub>T</sub> oder \mathcal{x}<sub>T</sub> wenn x in T 1 sonst 0
+</dd>
+<dt>Bayes - Theorem</dt><dd>: <img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_124645_22923q8L.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_124645_22923q8L.png" />  und <img src="201301ad-12575411367wd2.png"  alt="201301ad-12575411367wd2.png" />
+</dd>
+</dl>
+
+</div>
+
+</div>
+
+<div id="outline-container-3-6" class="outline-3">
+<h3 id="sec-3-6"><span class="section-number-3">3.6</span> Zettel-06</h3>
+<div class="outline-text-3" id="text-3-6">
+
+
+</div>
+
+<div id="outline-container-3-6-1" class="outline-4">
+<h4 id="sec-3-6-1"><span class="section-number-4">3.6.1</span> Dateien</h4>
+<div class="outline-text-4" id="text-3-6-1">
+
+<p>    <a href="file:///home/florian/Dropbox/st/st-zettel-06/st-zettel-06.pdf#NNN">st-zettel-06.pdf</a>
+    <a href="file:///home/florian/Dropbox/st/st-zettel-06/st-loesung-06.tex#NNN">st-loesung-06.tex</a>
+</p></div>
+
+</div>
+
+<div id="outline-container-3-6-2" class="outline-4">
+<h4 id="sec-3-6-2"><span class="section-number-4">3.6.2</span> Informationen</h4>
+<div class="outline-text-4" id="text-3-6-2">
+
+<ul>
+<li id="sec-3-6-2-1">Aufgabe 1<br/>
+a)
+\(2^{-k}\binom{k}{(k+z)/2}\\\) = P(S<sub>k</sub> = w) mit w aus Omega<sub>n</sub>
+\(2^{k}\) offensichtlich Anzahl der Blätter also auch Pfade
+Damit bestimmte Nummer erreicht wird, muss es entsprechend
+mehr '+1'er als '-1'er geben (k+z). (Um von k zu z zu kommen)
+
+<p>
+b) Erwartungswert ist jedenfalls 0
+darauf beschränken das es gerade sein muss, zB mit 2m als index oder so
+</p>
+<p>
+c) Wahrscheinlichkeit für Rückker bei bei unendlich ist 1
+<img src="file:///home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121212_065955_6717Vos.png"  alt="file:///home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121212_065955_6717Vos.png" /> allgemein
+<img src="file:///home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121212_070048_6717iyy.png"  alt="file:///home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121212_070048_6717iyy.png" /> bei Symmetrie
+<img src="file:///home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121212_070111_6717U8B.png"  alt="file:///home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121212_070111_6717U8B.png" />
+</p>
+<p>
+\(\frac{n}{2}\) einser um Zustand zu halten (rest passt dann ja),
+und \(\frac{k}{2}\) um da ja aufgestiegen werden soll
+die müssen allen innerhalb des Pfades gezogen werden
+</p>
+</li>
+</ul>
+<ul>
+<li id="sec-3-6-2-2">Aufgabe 3<br/>
+<img src="file:///home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121212_071546_6717hGI.png"  alt="file:///home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121212_071546_6717hGI.png" />
+==Wahrscheinlichkeit, für X &gt;= x+t wenn X&gt;= x schon bekannt==
+<img src="file:///home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121212_084713_6717W3b.png"  alt="file:///home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121212_084713_6717W3b.png" />
+<img src="file:///home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121212_082939_6717Jmh.png"  alt="file:///home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121212_082939_6717Jmh.png" />
+
+
+<hr/>
+
+<p>
+<img src="file:///home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121212_095257_67179ci.png"  alt="file:///home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121212_095257_67179ci.png" />
+</p>
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3-7" class="outline-3">
+<h3 id="sec-3-7"><span class="section-number-3">3.7</span> Zettel-07</h3>
+<div class="outline-text-3" id="text-3-7">
+
+<p><a href="file:///home/florian/Dropbox/st/st-zettel-07/st-zettel-07.pdf">st-zettel-07.pdf</a>
+<a href="file:///home/florian/Dropbox/st/st-zettel-07/st-loesung-07.tex">st-loesung-07.tex</a>
+<a href="file:///home/florian/Dropbox/st/st-zettel-07/st-loesung-07.pdf">st-loesung-07.pdf </a>
+</p></div>
+
+</div>
+
+<div id="outline-container-3-8" class="outline-3">
+<h3 id="sec-3-8"><span class="section-number-3">3.8</span> Zettel-08</h3>
+<div class="outline-text-3" id="text-3-8">
+
+<p><i>&lt;docview:~/Dropbox/st/st-zettel-08/st-zettel-08.pdf::1&gt;</i>
+<a href="file:///home/florian/Dropbox/st/st-zettel-08/st-loesung-08.tex">st-loesung-08.tex</a>
+</p>
+</div>
+
+<div id="outline-container-3-8-1" class="outline-4">
+<h4 id="sec-3-8-1"><span class="section-number-4">3.8.1</span> header</h4>
+<div class="outline-text-4" id="text-3-8-1">
+
+
+
+
+<pre class="example">\documentclass[11pt]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath}
+\usepackage{verbatim}
+\usepackage{color}
+\usepackage{geometry}
+\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
+\usepackage{amsthm}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+
+%\includegraphics{?} setzt bild ein
+%\ref{labelname} erstellt link zu labelname
+%\label{labelname} kann einfach irgendwo drangesetz werden
+
+\newtheorem{defi}{Definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{nota}{Notation}
+\newtheorem{prop}{Proposition}
+\newtheorem{satz}{Satz}
+\newtheorem{umf}{Umformung}
+
+\newenvironment{beweis}{\par\begingroup%
+\settowidth{\leftskip}{\textsc{Beweis:~}}%
+\noindent\llap{\textsc{Beweis:~}}}{\hfill$\Box$\par\endgroup}
+
+\renewcommand{\baselinestretch}{1}
+\newcommand{\words}{\Sigma^* \backslash \{\epsilon\}}
+\newcommand{\etrans}[1]{\bar{\delta}(#1)}
+\renewcommand{\P}{\mathbb{P}}
+
+\title{Zettel 8}
+\author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
+%\date{} % Activate to display a given date or no date (if empty),
+% otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+</pre>
+
+</div>
+
+</div>
+
+<div id="outline-container-3-8-2" class="outline-4">
+<h4 id="sec-3-8-2"><span class="section-number-4">3.8.2</span> Aufgabe 1</h4>
+<div class="outline-text-4" id="text-3-8-2">
+
+
+
+
+<pre class="example">\subsection{Aufgabe 1}
+</pre>
+
+<ul>
+<li id="sec-3-8-2-1">a)<br/>
+
+
+
+<pre class="example">\subsubsection{a)}
+</pre>
+
+<p>
+Es gibt 32 Karten, 4 davon sind Buben
+Jeder der 3 Spieler erhält 10 Karten
+Die Wahrscheinlichkeit für einen Buben liegt bei 4/32 = 1/8 für jeden Kartenzug
+<img src="201212ad-1238161774nwx.png"  alt="201212ad-1238161774nwx.png" /> enthält die mögliche Anzahl Buben in einer Hand = {0,1,2,3,4}
+Man kann das ganze als Binomialverteilung interpretieren, wenn die Karten mit einem mal
+verteilt werden und jeder Spieler nur seine eigenen Karten kennt
+<img src="201212ad-1302231774zON.png"  alt="201212ad-1302231774zON.png" /> die Karten somit also unabhängig voneinander sind
+Als posititvis Ergebnis wird dabei das ziehen eines Buben und als negatvives Ergebnis wird das ziehen
+einer anderen Karte betrachtet.
+Es ergibt sich also für die Wahrscheinlichkeitsfunktion:
+<img src="201301ad-17585933894AO.png"  alt="201301ad-17585933894AO.png" />
+, also alle Möglichkeiten (<img src="201301ad-1800443389FLU.png"  alt="201301ad-1800443389FLU.png" />) omega mal einen Buben zu ziehen (<img src="201212ad-1310561774BMy.png"  alt="201212ad-1310561774BMy.png" />) und bei allen anderen Zügen keinen (<img src="201212ad-1312321774AgH.png"  alt="201212ad-1312321774AgH.png" />)
+</p>
+
+
+
+<pre class="example">Der Raum $\Omega$ soll die Anzahl der Buben enthalten die ein Spieler jeweils in der Hand hält. Da es nur 4
+Buben gibt, gilt also: $\Omega = \{0,1,2,3,4\}$. $\mathbb{P}: \Omega \rightarrow [0,1]$ soll nun also  die Wahrscheinlichkeit
+dafür darstellen, dass ein Spieler die jeweilige Anzahl Buben in seinen 10 Karten besitzt.
+Bei 32 Karten und 4 Buben liegt die Wahrscheinlichkeit bei jeder einzelnen zugeteilten Karte bei $\frac{4}{32} =
+\frac{1}{8}$ dafür, dass es sich um einen Buben handelt.\\
+Da die Karten alle direkt zugeteilt werden und wir nur die Wahrscheinlichkeit für alle 10 Karten zusammen betrachten,
+beeinflussen sich die einzelnen Karten in ihrer Wahrscheinlichkeit nicht wir können somit die Binomialverteilung
+für $\mathbb{P}$ verwenden.\\
+Es ergibt sich somit: $\mathbb{P}(\omega) = \binom{10}{\omega}*(\frac{1}{8})^{\omega}*(\frac{7}{8})^{10-\omega}$ für $\omega \in \Omega$ 
+</pre>
+
+
+</li>
+</ul>
+<ul>
+<li id="sec-3-8-2-2">b)<br/>
+
+
+
+<pre class="example">\subsubsection{b)}
+</pre>
+
+
+<p>
+Aus Sicht des jeweiligen Spielers befinden sich nun noch 4 - X Karten im Spiel. Für die Karten im Skat gilt
+daher das selbe Prinzip wie schon in a), d.h. Binomialverteilung.
+Für beide Karten liegt die Wahrscheinlichkeit dafür, dass es sich um einen Buben handelt, bei
+<img src="201212ad-1423041774NqN.png"  alt="201212ad-1423041774NqN.png" /> \frac{4-X}{32} und somit kann dann der Ereignisraum <img src="201212ad-1424261774a0T.png"  alt="201212ad-1424261774a0T.png" /> mit {0,1,2} definiert werden, und 
+<img src="201301ad-1844013389GFn.png"  alt="201301ad-1844013389GFn.png" />
+P(&omega; | X = k) = (\frac{4-X}{32})<sup>&omega;</sup> * (1 - \frac{4-X}{32})<sup>2 - &omega;</sup>
+</p>
+
+
+
+<pre class="example">Aus Sicht des jeweiligen Spielers befinden sich nun noch 4 - X Karten im Spiel. Für die Karten im Skat gilt
+daher das selbe Prinzip wie schon in a), d.h. Binomialverteilung. \\
+Sei $\Omega' = \{0,1,2\}$ und somit also die möglichen Anzahlen an Buben im Skat. \\
+Analog zu a) ergibt sich für $\mathbb{P}(Y|X = k)$ nun mit für 2 Kartenziehungen und einer Wahrscheinlichkeit
+von $\frac{4-X}{32}$ für einen Buben pro Karte:\\
+Für $\omega \in \Omega:$ $\mathbb{P}(Y = \omega |X = k) = \binom{32}{\omega}(\frac{4-X}{32})^{\omega} * (1 - \frac{4-X}{32})^{2 - \omega}$
+</pre>
+
+</li>
+</ul>
+<ul>
+<li id="sec-3-8-2-3">Notizen<br/>
+<img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_203347_22923fmr.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_203347_22923fmr.png" />
+<img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_203414_22923swx.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_203414_22923swx.png" />
+<img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_204351_229234ON.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_204351_229234ON.png" />
+<img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_204403_22923FZT.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_204403_22923FZT.png" />
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-3-8-3" class="outline-4">
+<h4 id="sec-3-8-3"><span class="section-number-4">3.8.3</span> Aufgabe 2</h4>
+<div class="outline-text-4" id="text-3-8-3">
+
+
+
+
+<pre class="example">\subsection{Aufgabe 2}
+</pre>
+
+
+<p>
+Fairer Würfel 2 mal geworfen
+X = Augen erster Wurf
+Y = Maximum beider Augenzahlen bzw. Summe
+</p><ul>
+<li id="sec-3-8-3-1">a)<br/>
+Bedingte Wahrscheinlichkeit für Y mit X = k
+P(Y|X=k)
+d.h. die Wahrscheinlichkeit für die Unterschiedlichen
+möglichen Augen von Y, wenn k schon bekannt ist.
+
+<p>
+Durch das gegebene X verschiebt sich lediglich der Raum
+der möglichen Ergebnisse für Y. Dabei wird aber keines
+dieser Ergebnisse wahrscheinlicher oder Unwahrscheinlicher.
+</p>
+<p>
+Der Bildraum ist daher: [k,12-k] &isin; N
+</p>
+
+
+<pre class="example">\subsubsection{a)}
+Ohne Betrachtung von X gilt zunächst: $Y$ bildet auf $[2,12] \subset N$ \\
+Ferner biledet X auf $[1,6] \subset N$ ab, mit gleichen Wahrscheinlichkeiten der Werte, es gilt also: $P(X=x) = \frac{1}{6}$ für $x \in [1,6]$ \\
+$\Rightarrow P(Y = y | X = k) = \frac{P(X=k , Y = y)}{P(X = k)} = \frac{P(X=k , Y = y)}{6}$ \\
+$ = \begin{cases} \frac{1}{6} &amp;\mbox{falls } k &lt; y \leq 6+k \\ 0 &amp;\mbox{sonst} \end{cases}$ \\
+</pre>
+
+</li>
+</ul>
+<ul>
+<li id="sec-3-8-3-2">b)<br/>
+g(k) = E(Y | X = k) Der Erwartungswert für ein bestimmtes Y, bei gegebenem X.
+Abermals handelt es im im Grunde nur um eine simple Gleichverteilung der Wahrscheinlichkeiten in Y.
+Der Erwartungswert für z.B. X wäre: E[X] = 1/6 * 1 + 1/6 * 2 &hellip; = 1/6(1+2+3+4+5+6) = 21/6 = 3,5
+Es ist anzunehmen, dass auch hier nur eine Verschiebung um k statt findet
+Test X=1 Ws für Y: 1/6(2+3+4+5+6+7) = 27/6 = 9/2 = 4,5  <b>passt</b>
+Test X=2 Ws für Y: 1/6(3+4+5+6+7+8) = 33/6 = 11/2 = 5,5 <b>passt</b>
+
+
+
+<pre class="example">\subsubsection{b)}
+$g(k) := E[Y|X=k] = \sum_yy*P(Y=y | X = k) = \sum_{k &lt; y \leq k+6}y*\frac{1}{6} = \frac{1}{6} * (k+1 + ... + k+6) = \frac{21}{6}*k = 3,5k$
+</pre>
+
+
+</li>
+</ul>
+<ul>
+<li id="sec-3-8-3-3">c)<br/>
+E[Y] und E[g(X)]
+
+<p>
+Für E[Y] ist die Summe des ersten Wurfes unbekannt. Aus diesem Grund, sind die einzelnen Ergebnisse nichmehr
+nur um eine Konstante verschoben und sind auch nicht mehr alle gleich wahrscheinlich.
+Die Ws Verteilung wird zur Mitte hin spitzer und sollte Symmetrisch sein, so dass 5,5 der Erwartungswert sein sollte.
+Stimmt nicht, die Symmetrie ist so gar nicht gegeben, da die 0 fehlt. Daher ist auch E[X] = 3,5 und nicht 3.
+Neuer Tipp: 7  Kann man Erwartungswerte vielleicht addieren? Eigentlich spricht nichts dagegen. E[X] = E[Z] = 3,5
+Y als die Summe aus beidem ist daher 7.
+</p>
+<p>
+E[g(X)] = Erwartungswert des Erwartungswertes? o.O
+</p>
+<p>
+Was ist g(X)? g(k) := E(Y | X = k)
+g(X) = E(Y | X = X) oO
+= E(Y) ? das ist ja schon das andere
+</p>
+<p>
+E[ 3,5 + k] &lt;= würde nicht gehen bzw. wäre konstant da k konstant aber:
+E[3,5 + X] = 3,5 + E[X]  &lt;= wäre nicht unbedingt so machbar. 
+</p>
+<p>
+<b>E[g(X)] = E[E(Y|X)]</b>   &lt;=== wichtig, fest definiert
+</p>
+
+
+
+<pre class="example">\subsubsection{c)}
+Sei Z die Augenzahl des 2. Wurfes, so das gilt Y = X+Z \\
+$\Rightarrow E[Y] = E[X+Z] = E[X]+E[Z] = 3,5 + 3,5 = 7$ \\
+$E[g(X)] = E[E(Y|X)] = E[\sum_yy*P(Y=y | X )] = \sum_x[\sum_yy*P(Y=y|X=x)]*P(X=x)$ \\
+$= \sum_x\sum_yy*P(Y=y|X=x)*P(X=x) = \sum_yy*\sum_xP(Y=y, X=x) = \sum_yy*P(Y=y) = E(Y) = 7$ \\
+</pre>
+
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-3-8-4" class="outline-4">
+<h4 id="sec-3-8-4"><span class="section-number-4">3.8.4</span> Aufgabe 3</h4>
+<div class="outline-text-4" id="text-3-8-4">
+
+
+
+
+<pre class="example">\subsection{Aufgabe 3}
+</pre>
+
+<ul>
+<li id="sec-3-8-4-1">a)<br/>
+
+
+
+<pre class="example">\subsubsection{a)}
+</pre>
+
+
+<ul>
+<li>X, Y Zufallsvariablen -&gt; aus ereignisraum in anderen raum
+</li>
+<li><img src="201212ad-1854041184ReQ.png"  alt="201212ad-1854041184ReQ.png" /> =&gt; existiert also
+</li>
+<li>X<sup>2</sup> &lt;=&gt; Quadrat der jeweiligen Outputs
+</li>
+<li><img src="201212ad-21415714976zNO.png"  alt="201212ad-21415714976zNO.png" />
+ <img src="201212ad-21480714976AYU.png"  alt="201212ad-21480714976AYU.png" />
+</li>
+</ul>
+
+<p>E(X<sup>2</sup>) = &sum;<sub>&omega; &isin; &Omega;</sub>X(&omega;)<sup>2P</sup>(X=X(&omega;))
+</p>
+<p>
+ <img src="201212ad-05550220660LHc.png"  alt="201212ad-05550220660LHc.png" />
+E[X+Y] = &sum;<sub>&omega; &isin; &Omega;</sub>(X(&omega;)+Y(&omega;))*P(&omega;)
+</p>
+<p>
+Bekannt:
+ <img src="201212ad-05585120660YRi.png"  alt="201212ad-05585120660YRi.png" />
+E[X*X] = &sum;<sub>&omega; &isin; &Omega;</sub>(X(&omega;)*X(&omega;))*P(&omega;) &lt; &infin;
+</p>
+
+<p>
+=&gt; Cov(X+Y, X-Y) = E[ (X+Y) * (X-Y) ] - E(X+Y)E(X-Y)
+                    = E[ X<sup>2</sup> - Y<sup>2</sup> ] - E(X+Y)E(X-Y)
+</p>
+<p>
+                 = E[ ([X+Y]-E[X+Y]) * ([X-Y] - E[X-Y])  ]
+                    = E[  [X+Y][X-Y] - [X+Y]E[X-Y] - E[X+Y][X-Y] + E[X+Y]E[X-Y]   ]
+       = E[  X<sup>2</sup> - Y<sup>2</sup> - (E[X-Y]X + E[X-Y]Y) - (E[X+Y]X - E[X+Y]Y) + E[X+Y]E[X-Y]  ]
+       = E[  X<sup>2</sup> - Y<sup>2</sup> - E[X-Y]X - E[X-Y]Y - E[X+Y]X + E[X+Y]Y + E[X+Y]E[X-Y]  ]
+</p>
+<p>
+=&gt; Cov(X+Y, X-Y) = Cov(X,X-Y) + Cov(Y,X-Y) = Cov(X-Y,X) + Cov(X-Y, Y) = Cov(X,X) - Cov(Y,X) + Cov(X,Y) - Cov(Y,Y) = Cov(X,X) - Cov(Y,Y)
+= Var(X) - Var(Y) = 0 (da gleichverteilt)
+</p>
+
+
+<pre class="example">Da X und Y gleichverteilt sind, gilt: $Var(X) = Var(Y) \rightarrow Var(X) - Var(Y) = 0$\\
+Durch die symmetrie der Kovarianz lässt sich umformen:\\
+$Cov(X+Y, X-Y) = Cov(X,X-Y) + Cov(Y,X-Y) = Cov(X-Y,X) + Cov(X-Y, Y) = Cov(X,X) - Cov(Y,X) + Cov(X,Y) - Cov(Y,Y)$\\
+$ = Cov(X,X) - Cov(Y,Y) = Var(X) - Var(Y) = 0$
+</pre>
+
+
+</li>
+</ul>
+<ul>
+<li id="sec-3-8-4-2">b)<br/>
+
+
+
+<pre class="example">\subsubsection{b)}
+</pre>
+
+
+
+<pre class="example">Für Unabhängigkeit müsste gelten: $\mathbb{P}([X+Y]*[X-Y]) = \mathbb{P}(X+Y)*\mathbb{P}(X-Y) \Leftrightarrow \mathbb{P}(X^2 - Y^2) = \mathbb{P}(X+Y)*\mathbb{P}(X-Y)$ \\
+Es gelte $\mathbb{P}(z) = \begin{cases} 1 &amp;\mbox{falls } z=-1 \\ 0 &amp;\mbox{sonst} \end{cases}$
+\begin{tabbing}
+Sei X = 0 und Y = 1 \=$\Rightarrow \mathbb{P}(X^2-Y^2) = \mathbb{P}(-1) = 1$ \\
+\&gt; $\Rightarrow \mathbb{P}(X+Y)*\mathbb{P}(X-Y) = \mathbb{P}(1)*\mathbb{P}(-1) = 0*1 = 0 \not = 1$ 
+\end{tabbing}
+$\Rightarrow$ in diesem Beispiel sind die Zufallsvariablen X+Y und X-Y zwar unkorelliert (Kovarianz ist 0) aber nicht unabhängig. 
+</pre>
+
+
+</li>
+</ul>
+<ul>
+<li id="sec-3-8-4-3">Lösung Wikipedia:<br/>
+<img src="file:///home/florian/Zettelkasten/zettelkasten.org_20121230_061645_20660lbo.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20121230_061645_20660lbo.png" />
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-3-8-5" class="outline-4">
+<h4 id="sec-3-8-5"><span class="section-number-4">3.8.5</span> Aufgabe 4</h4>
+<div class="outline-text-4" id="text-3-8-5">
+
+
+
+
+<pre class="example">\subsection{Aufgabe 4}
+</pre>
+
+
+<ul>
+<li id="sec-3-8-5-1">a)<br/>
+
+
+
+<pre class="example">\subsubsection{a)}
+</pre>
+
+
+<p>
+n = Anzahl Würfel
+S<sub>n</sub> = Anzahl Erfolge (1 gewürfelt)
+Ws für Erfolg = 1/5
+Würfel haben kein Gedächtnis -&gt; binomialverteilung
+mit 1/5 erfolg und 4/5 misserfolg
+</p>
+<p>
+<img src="201212ad-07284220660MBv.png"  alt="201212ad-07284220660MBv.png" />
+P[|\frac{S<sub>n</sub>}{n} - \frac{1}{5}| &lt; &epsilon;] \geq 1 - \frac{&sigma;<sup>2</sup>}{&epsilon;<sup>2</sup>} 
+</p>
+<p>
+<img src="201212ad-07460520660LVE.png"  alt="201212ad-07460520660LVE.png" />
+&Omega; = \{1, 2, 3, 4, 5, 6\}
+<img src="201212ad-07463620660lpQ.png"  alt="201212ad-07463620660lpQ.png" />
+E[X<sup>2]</sup> = &sum;<sub>&omega;<sub>1</sub>, &omega;<sub>2</sub>, &omega;<sub>3</sub></sub>
+</p>
+<p>
+S<sub>n</sub> = Anzahl der einser bei den Würfen, und n = Anzahl der Würfel
+=&gt; <img src="201301ad-2323424949SgL.png"  alt="201301ad-2323424949SgL.png" /> sollte <img src="201301ad-2323574949fqR.png"  alt="201301ad-2323574949fqR.png" /> ergeben, bzw. dorthin streben
+<img src="201301ad-2334504949GJk.png"  alt="201301ad-2334504949GJk.png" />
+</p>
+<p>
+<img src="201301ad-005922494964w.png"  alt="201301ad-005922494964w.png" /> 
+</p>
+<p>
+V(X) = E([X - E(X)]<sup>2</sup>) = E([X-\frac{1}{5}]<sup>2</sup>) = E(X<sup>2</sup> - 2 \frac{X}{5} + \frac{1}{25})
+</p>
+<p>
+Var(X) = 1/5 * 4/5 * n = 4n/25
+</p>
+
+
+<p>
+<img src="201301ad-0047544949Tae.png"  alt="201301ad-0047544949Tae.png" />
+</p>
+<p>
+P[|\frac{S<sub>n</sub>}{n} - \frac{1}{5}| &lt; &epsilon;] \geq 1 - \frac{4n}{25 * &epsilon;<sup>2</sup>}
+</p>
+
+
+
+<pre class="example">Die Wahrscheinlichkeit für einen erfolgreichen Wurf (eine 1) liegt bei $\frac{1}{5}$ und für einen 
+nicht erfolgreichen Wurf (ungleich 1) somit bei $1 - \frac{1}{5} = \frac{4}{5}$ \\
+Da die einzelnen Würfe keinen Einfluss aufeinander nehmen und jeder Wurf klar in Erfolg und Misserfolg 
+getrennt werden kann, lässt sich die Varianz der Normalverteilung verwenden, und es ergibt sich: \\
+$Var(S_n) = n * \frac{1}{5} * \frac{4}{5} =  \frac{4n}{25}$ \\
+$\Rightarrow Var(\frac{S_n}{n}) = \frac{4}{25n}$ \\
+Für den Erwartungswert gilt aufgrund der Binomialverteilung: $E(S_n) = \frac{n}{5}$ \\
+$\Rightarrow E(\frac{S_n}{n}) = \frac{1}{5}$ \\
+Eingesetzt in die Ungleichung ergibt sich somit: $P[|\frac{S_n}{n} - \frac{1}{5}| &lt; \epsilon] \geq 1 - \frac{4}{25n * \epsilon^2}$
+</pre>
+
+
+<ul>
+<li id="sec-3-8-5-1-1">Analoge Lösung mit Münze(a)<br/>
+Münze positiv oder negativ, analog zu den möglichen Ergebnissen 
+des Würfels (1 oder nicht 1)
+<img src="file:///home/florian/Zettelkasten/zettelkasten.org_20121230_074751_20660yzW.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20121230_074751_20660yzW.png" />
+
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-3-8-5-2">b)<br/>
+
+
+
+<pre class="example">\subsubsection{b)}
+</pre>
+
+
+<p>
+e = 0,001
+Wie viele Würfe n nötig, damit Ws &gt; 0.95
+</p>
+<p>
+Eingesetzt:
+</p>
+<p>
+ges: 1 - \frac{4}{25n * 0.001<sup>2</sup>} &gt; 0.95
+&lt;=&gt; 1 - \frac{4}{0.000025n} &gt; 0.95
+=&gt; 1 - 0.95 &gt; \frac{4}{0.000025n}
+=&gt; 0.05 &gt; \frac{4}{0.000025n} =&gt; 0.05 &gt; \frac{4000000}{25n}
+=&gt; 0.05 &gt; \frac{1}{160000n}
+</p>
+<p>
+0.05 = \frac{1}{160000n}
+0.05 = \frac{1}{n} * \frac{1}{160000} 
+=&gt; 80000 = \frac{1}{n}
+=&gt; n = \frac{1}{80000}
+</p>
+
+
+
+<pre class="example">Es soll gelten: $1 - \frac{4}{25n * 0.000001} &gt; 0.95$ \\
+$\Leftrightarrow 1-0.95 &gt; \frac{4}{25n * 0.000001}$ \\
+$\Leftrightarrow 0.05 &gt; \frac{160000}{n}$ \\
+$\Leftrightarrow n &gt; 3 200 000$
+</pre>
+
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-3-8-6" class="outline-4">
+<h4 id="sec-3-8-6"><span class="section-number-4">3.8.6</span> Aufgabe 5</h4>
+<div class="outline-text-4" id="text-3-8-6">
+
+
+
+
+<pre class="example">\subsection{Aufgabe 5}
+</pre>
+
+<ul>
+<li id="sec-3-8-6-1">a)<br/>
+
+
+
+<pre class="example">\subsubsection{a)}
+</pre>
+
+
+<p>
+Berechnen Sie: <img src="201301ad-12403211367WJq.png"  alt="201301ad-12403211367WJq.png" />
+</p>
+<dl>
+<dt>1</dt><dd>Wo steht das Auto
+</dd>
+<dt>2</dt><dd>Welche Tür wählt der Kandidat
+</dd>
+<dt>3</dt><dd>Welche Tür öffnet der Showmaster daraufhin
+</dd>
+</dl>
+
+
+<p>
+Insgesamt existieren 3 * 3 * 3 = 27 Mögliche Kombinationien
+Sei j = 1 (für jede andere Zahl gleich):
+    (1,1,2) , (1,1,3) , (1,2,3), (1,3,2) =&gt; |G<sub>j|</sub> = 4 Möglichkeiten, bei 2 Erfolg =&gt; 1/2 für erfolg gleich bleiben
+Sei k = 1: 
+    (1,1,2) , (1,1,3) , (2,1,3) , (3,1,2) =&gt; |W<sub>k|</sub> = 4 , bei 2 Erfolg
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">W<sub>k</td><td class="left"></sub> = 4 </td></tr>
+</tbody>
+</table>
+
+Sei l = 1: 
+    (2,2,1) , (2,3,1), (3,2,1) , (3,3,1) =&gt; |M<sub>l|</sub> = 4, bei 2 Erfolg
+
+<p>
+Mit einer Wahrscheinlichkeit von 2/4 konnte der Moderator frei entscheiden, welche Tür er wählt =&gt; tür richtig
+Mit einer Wahrscheinlichkeit von 2/4 musste er eine bestimmte Tür nehmen =&gt; tür falsch
+</p>
+<p>
+Fall 1: auto getroffen =&gt; es existieren 2 andere Möglichkeiten für den Moderator, eine Tür zu wählen
+Fall 2: auto nicht getroffen =&gt; es existiert nur eine andere Möglichkeit für den Moderötor, eine Tür zu wählen
+=&gt; Ws 2/3 das man das Auto vor der Wahl des Moderators nicht getroffen hatte
+</p>
+
+<p>
+<img src="201301ad-19123649498Bz.png"  alt="201301ad-19123649498Bz.png" />
+</p>
+
+<p>
+<img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_153119_2292345w.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_153119_2292345w.png" />
+</p>
+<p>
+<img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_153351_22923qDA.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_153351_22923qDA.png" />
+</p>
+<p>
+<img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_153423_229233NG.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_153423_229233NG.png" />
+</p>
+<p>
+<img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_153540_22923EYM.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_153540_22923EYM.png" />
+</p>
+<p>
+<img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_153611_22923RiS.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_153611_22923RiS.png" />
+</p>
+<p>
+<img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_162431_22923r9S.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_162431_22923r9S.png" />
+</p>
+<p>
+<img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_162552_229234HZ.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_162552_229234HZ.png" />
+</p>
+<p>
+P(A<sub>i|B</sub>) = \frac{P(A<sub>i</sub>) * P(B | A<sub>i</sub>)}{P(A<sub>1</sub>) * P(B | A<sub>1</sub>) + P(A<sub>2</sub>) * P(B | A<sub>2</sub>) + P(A<sub>3</sub>) * P(B | A<sub>3</sub>)}
+</p>
+
+<p>
+Gesucht: <img src="201301ad-1914034949uLC.png"  alt="201301ad-1914034949uLC.png" />  =&gt; Ws dass hinter j das Auto steckt, wenn wir k gewählt haben, und der Moderator Tür l geöffnet hat
+</p>
+
+
+<p>
+Anwendung Bayes
+= \frac{\frac{1}{3} * P( W<sub>k</sub> &cap; M<sub>l</sub> | G<sub>j</sub>)}{&hellip;}
+</p>
+<p>
+Für festes j bleiben noch 9 (= 3*3) mögliche Elemente aus Omega,
+</p>
+<p>
+Der Moderator darf nur Türen wählen, die nicht ungleich j sind bleiben noch 6 (= 3*2) Zustände
+(1,1,2),(1,1,3),(1,2,2),(1,2,3),(1,3,2),(1,3,3)
+Da darüber hinaus der Moderator aber auch nur Türen wählen kann, die ungleich k sind, bleiben noch 4 (= 2*2) Zustände
+(1,1,2),(1,1,3),(1,2,3),(1,3,2)
+</p>
+<p>
+Folglich ist P( W<sub>k</sub> &cap; M<sub>l</sub> | G<sub>j</sub>) = \frac{4}{9}
+</p>
+
+
+
+<pre class="example">$G_j = \{ (j,\omega_2,\omega_3) | \omega_2 \in \{ 1,2,3 \}, \omega_3 \in \{ 1,2,3 \} \backslash  \{ j , \omega_2 \} \}$ \\
+        $= \{ \omega \in \Omega | \omega_1 = j \wedge \omega_3 \not = j \wedge \omega_3 \not = \omega_2\ \wedge \omega_3 \not = j \}$ \\
+$W_k = \{ ( \omega_1 , k , \omega_3 ) | \omega_1 \in \{ 1,2,3 \} , \omega_3 \in \{ 1, 2, 3 \} \backslash \{\omega_1 , k \} \}$ \\
+     $= \{ \omega \in \Omega | \omega_2 = k \wedge \omega_3 \not = k \wedge \omega_3 \not = \omega_1 \wedge \omega_3 \not = k \}$ \\
+$M_l = \{ ( \omega_1 , \omega_2 , l ) | \omega_1 \in \{ 1,2,3 \} \backslash \{ l \} , \omega_2 \in \{ 1, 2, 3 \}  \backslash \{ l \} , l \}$ \\
+     $= \{ \omega \in \Omega | \omega_1 \not = l \wedge \omega_2 \not = l \wedge \omega_3 = l \}$ \\
+
+$W_k \cap M_l = \{ (\omega \in \Omega | \omega_1 \not = l , \omega_2 = k \not = l, \omega_3 = l \}$ \\
+
+$P(G_j | W_k \cap M_l , 1 \leq j,k,l \leq 3 ) = \frac{P(W_k \cap M_l) * P(G_j)}{P(W_k \cap M_l)}$ \\
+
+p(W_k \cap M_l | G_j ) = \begin{cases} \frac{ &amp;\mbox{falls } k=j \\ 0 &amp;\mbox{sonst} \end{cases}
+
+= $\frac{P(W_k \cap M_l | G_j ) * \frac{1}{3}} {P(W_k \cap M_l)}$    
+
+P(G_j) = 1/3
+P(
+
+bla 
+</pre>
+
+
+
+</li>
+</ul>
+<ul>
+<li id="sec-3-8-6-2">b)<br/>
+
+
+
+<pre class="example">\subsubsection{b)}
+</pre>
+
+
+
+<pre class="example">
+
+</pre>
+
+<ul>
+<li id="sec-3-8-6-2-1">Bäume<br/>
+<img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_152052_22923ERY.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_152052_22923ERY.png" />
+<img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_152307_22923elk.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_152307_22923elk.png" />
+<img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_162727_22923FSf.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_162727_22923FSf.png" />
+
+<p>
+<img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_203554_22923e6A.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_203554_22923e6A.png" />
+<img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_203606_22923rEH.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_203606_22923rEH.png" />
+</p></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-3-8-6-3">c)<br/>
+
+
+
+<pre class="example">\subsubsection{c)}
+</pre>
+
+
+
+<pre class="example">
+
+</pre>
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-3-8-7" class="outline-4">
+<h4 id="sec-3-8-7"><span class="section-number-4">3.8.7</span> Aufgabe 6</h4>
+<div class="outline-text-4" id="text-3-8-7">
+
+<ul>
+<li id="sec-3-8-7-1">Cancer Rate<br/>
+<img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_161650_22923esY.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_161650_22923esY.png" />
+<img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_161706_22923r2e.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_161706_22923r2e.png" />
+<img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_161729_229234Al.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_161729_229234Al.png" />
+
+</li>
+</ul>
+<ul>
+<li id="sec-3-8-7-2">nochmal mit Aids<br/>
+<img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_162118_22923SVx.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_162118_22923SVx.png" />
+<img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_162138_22923EfA.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_162138_22923EfA.png" />
+<img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_162207_22923RpG.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_162207_22923RpG.png" />
+</li>
+</ul>
+<ul>
+<li id="sec-3-8-7-3">Sterbetafeln<br/>
+<img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_163636_22923Scl.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_163636_22923Scl.png" />
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-3-8-8" class="outline-4">
+<h4 id="sec-3-8-8"><span class="section-number-4">3.8.8</span> footer</h4>
+<div class="outline-text-4" id="text-3-8-8">
+
+
+
+
+<pre class="example">\end{document}
+</pre>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3-9" class="outline-3">
+<h3 id="sec-3-9"><span class="section-number-3">3.9</span> Zettel-09</h3>
+<div class="outline-text-3" id="text-3-9">
+
+<p><a href="file:///home/florian/Dropbox/st/st-zettel-09/st-zettel-09.pdf">st-zettel-09.pdf</a>
+<a href="file:///home/florian/Dropbox/st/st-zettel-09/st-loesung-09.tex">st-loesung-09.tex</a>
+<a href="file:///home/florian/Dropbox/st/st-zettel-09/st-loesung-09.pdf">st-loesung-09.pdf</a>
+</p></div>
+
+</div>
+
+<div id="outline-container-3-10" class="outline-3">
+<h3 id="sec-3-10"><span class="section-number-3">3.10</span> Zettel-10</h3>
+<div class="outline-text-3" id="text-3-10">
+
+<p><a href="file:///home/florian/Dropbox/st/st-zettel-10/st-zettel-10.pdf">st-zettel-10.pdf</a>
+<a href="file:///home/florian/Dropbox/st/st-zettel-10/st-loesung-10.tex">st-loesung-10.tex</a>
+<a href="file:///home/florian/Dropbox/st/st-zettel-10/st-loesung-10.pdf">st-loesung-10.pdf</a>
+</p></div>
+
+</div>
+
+<div id="outline-container-3-11" class="outline-3">
+<h3 id="sec-3-11"><span class="section-number-3">3.11</span> Zettel-11</h3>
+<div class="outline-text-3" id="text-3-11">
+
+<p><a href="file:///home/florian/Dropbox/st/st-zettel-11/st-zettel-11.pdf">st-zettel-11.pdf</a>
+<a href="file:///home/florian/Dropbox/st/st-zettel-11/st-loesung-11.tex">st-loesung-11.tex</a>
+<a href="file:///home/florian/Dropbox/st/st-zettel-11/st-loesung-11.pdf">st-loesung-11.pdf</a>
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Theoretische Informatik</h2>
+<div class="outline-text-2" id="text-4">
+
+
+</div>
+
+<div id="outline-container-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Zettel-09</h3>
+<div class="outline-text-3" id="text-4-1">
+
+<p><a href="file:///home/florian/Dropbox/th/th-zettel-09/th-zettel-09.pdf">th-zettel-09.pdf</a>
+<a href="file:///home/florian/Dropbox/th/th-zettel-09/th-loesung-09.tex">th-loesung-09.tex</a>
+<a href="file:///home/florian/Dropbox/th/th-zettel-09/th-loesung-09.pdf">th-loesung-09.pdf</a>
+</p></div>
+
+</div>
+
+<div id="outline-container-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> Zettel-10</h3>
+<div class="outline-text-3" id="text-4-2">
+
+<p><a href="file:///home/florian/Dropbox/th/th-zettel-10/th-zettel-10.pdf">th-zettel-10.pdf</a>
+<a href="file:///home/florian/Dropbox/th/th-zettel-10/th-loesung-10.tex">th-loesung-10.tex</a>
+<a href="file:///home/florian/Dropbox/th/th-zettel-10/th-loesung-10.pdf">th-zettel-11.pdf</a>
+</p></div>
+
+</div>
+
+<div id="outline-container-4-3" class="outline-3">
+<h3 id="sec-4-3"><span class="section-number-3">4.3</span> Zettel-11</h3>
+<div class="outline-text-3" id="text-4-3">
+
+<p><a href="file:///home/florian/Dropbox/th/th-zettel-11/th-zettel-11.pdf">th-zettel-11.pdf</a>
+<a href="file:///home/florian/Dropbox/th/th-zettel-11/th-loesung-11.tex">th-loesung-11.tex</a>
+<a href="file:///home/florian/Dropbox/th/th-zettel-11/th-loesung-11.pdf">th-loesung-11.pdf</a>
+</p></div>
+
+</div>
+
+<div id="outline-container-4-4" class="outline-3">
+<h3 id="sec-4-4"><span class="section-number-3">4.4</span> Zettel-12</h3>
+<div class="outline-text-3" id="text-4-4">
+
+<p><a href="file:///home/florian/Dropbox/th/th-zettel-12/th-zettel-12.pdf">th-zettel-12.pdf</a>
+<a href="file:///home/florian/Dropbox/th/th-zettel-12/th-loesung-12.tex">th-loesung-12.tex</a>
+<a href="file:///home/florian/Dropbox/th/th-zettel-12/th-loesung-12.pdf">th-loesung-12.pdf</a>
+</p></div>
+
+</div>
+
+<div id="outline-container-4-5" class="outline-3">
+<h3 id="sec-4-5"><span class="section-number-3">4.5</span> Zettel-13</h3>
+<div class="outline-text-3" id="text-4-5">
+
+<p><a href="file:///home/florian/Dropbox/th/th-zettel-13/th-zettel-13.pdf">th-zettel-13.pdf</a>
+<a href="file:///home/florian/Dropbox/th/th-zettel-13/th-loesung-13.tex">th-loesung-13.tex</a>
+<a href="file:///home/florian/Dropbox/th/th-zettel-13/th-loesung-13.pdf">th-loesung-13.pdf</a>
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Softwaretechnik</h2>
+<div class="outline-text-2" id="text-5">
+
+
+</div>
+
+<div id="outline-container-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Hausaufgabe03</h3>
+<div class="outline-text-3" id="text-5-1">
+
+<p><a href="file:///home/florian/Dropbox/so/so-hausaufgabe-03/so-hausaufgabe-03.pdf#NNN">so-hausaufgabe-03.pdf</a>
+<a href="file:///home/florian/Dropbox/so/so-hausaufgabe-03/code/servlet/tests/Tester.java">Tester.java</a>
+</p><ul>
+<li>Server erstellen
+</li>
+<li>strings mit instanzen von Servlets beim Server "registrieren"
+</li>
+<li>beispielaufrufe an Server weitergeben
+</li>
+</ul>
+
+<p><a href="file:///home/florian/Dropbox/so/so-hausaufgabe-03/code/servlet/Server.java#">Server.java</a>
+</p><ul>
+<li>irgend ein interner quark
+</li>
+<li>parameter aus url extrahieren
+</li>
+<li>process von servlets aufrufen
+</li>
+</ul>
+
+<p><a href="file:///home/florian/Dropbox/so/so-hausaufgabe-03/code/servlet/IServlet.java#package-servlet">IServlet.java</a>
+</p><ul>
+<li>process befehl mit parametern ausführen
+</li>
+</ul>
+
+
+
+</div>
+
+<div id="outline-container-5-1-1" class="outline-4">
+<h4 id="sec-5-1-1"><span class="section-number-4">5.1.1</span> Aufgabe B</h4>
+<div class="outline-text-4" id="text-5-1-1">
+
+<ul>
+<li id="sec-5-1-1-1">1.<br/>
+Hier finden vor allem das Template Method und das Strategy Pattern
+Anwendung.
+Das Template Pattern erkennt man in der Regel ja schon schnell
+an den Interfaces. Hier ist es das Interface IServlet. Die einzelnen
+Servlets orientieren sich dabei nur an den durch das Template Pattern
+vorgegebenen Schnittstellen, also sowohl Funktions Out- als auch Input.
+Die eigentliche Funktionsweise des Servers ist dem Entwickler
+der Servlets egal. Auf der anderen Seite beschäftigt sich auch der
+Server kaum mit den konkreten Servlets, da er lediglich ihr Template
+implementiert und benutzt und sich dabei darauf verlässt, dass
+die jeweiligen Servlets diesen Schnittstellen gerecht werden.
+
+<p>
+Das Strategy Pattern ergibt sich aus dem Umstand, das die eigentlichen
+Servlets an und für sich austauschbar sind. Da sie alle auf das
+selbe Interface reagieren und der Server im Grunde auch nur dieses
+Interface implementiert hat, sind die einzelnen Servlets problemlos
+austauschbar, oder - wie im F.
+Der Lösung dieser Aufgabe entspricht das Decoratorpattern. Das
+kombinierende Servlet würde an die einzelnen Servlets nicht
+all vom CombiningServlets - sogar
+miteinander kombinierbar, ohne dass sie dafür extra angepasst
+werden müssten.
+</p></li>
+</ul>
+<ul>
+<li id="sec-5-1-1-2">2.<br/>
+Der Lösung dieser Aufgabe entspricht das Decoratorpattern. Das
+kombinierende Servlet würde an die einzelnen Servlets nicht
+direkt den Output vom Server weitergeben, sondern jeweils einen
+selbst definierten Stream, welcher dann am Ende der beiden
+einzelnen Servlets in den "richtigen" Outputstream vom Server
+fließen würde.
+Der Server selbst bekommt von dieser Umstellung nichts mit.
+Der Server übergibt nach wie vor sein Streamobjekt welches
+dann mit dem Output der beiden Servlets gefüllt wird. Aus diesem
+Grund handelt es sich dann beim CombiningServlet um einen Decorator.
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-5-1-2" class="outline-4">
+<h4 id="sec-5-1-2"><span class="section-number-4">5.1.2</span> Aufgabe B</h4>
+<div class="outline-text-4" id="text-5-1-2">
+
+<p>bla bla
+</p><ul>
+<li id="sec-5-1-2-1">Subheading<br/>
+nochmehr bla
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Logik</h2>
+<div class="outline-text-2" id="text-6">
+
+
+</div>
+
+<div id="outline-container-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Zettel-08</h3>
+<div class="outline-text-3" id="text-6-1">
+
+
+</div>
+
+<div id="outline-container-6-1-1" class="outline-4">
+<h4 id="sec-6-1-1"><span class="section-number-4">6.1.1</span> Dateien</h4>
+<div class="outline-text-4" id="text-6-1-1">
+
+<p><a href="file:///home/florian/Dropbox/lo/lo-zettel-08.pdf#NNN">lo-zettel-08.pdf</a>
+<a href="file:///home/florian/Dropbox/lo/lo-loesung-08.tex#NNN">lo-loesung-08.tex</a>
+<a href="file:///home/florian/Dropbox/lo/lo-loesung-08.pdf#NNN">lo-loesung-08.pdf</a>
+</p></div>
+
+</div>
+
+<div id="outline-container-6-1-2" class="outline-4">
+<h4 id="sec-6-1-2"><span class="section-number-4">6.1.2</span> Informationen</h4>
+<div class="outline-text-4" id="text-6-1-2">
+
+<ul>
+<li id="sec-6-1-2-1">Ideal<br/>
+<ul>
+<li>Teilmenge I von Bool-Algebra
+</li>
+<li>wenn x,y in I dann auch x v y in I
+</li>
+</ul>
+
+<p>Maximal: kein anderes echtes Ideal von dem I ne echte Teilmenge
+jedes ideal von dem I ne echte Teilmenge, ist
+</p>
+
+
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-6-2" class="outline-3">
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> Zettel-09</h3>
+<div class="outline-text-3" id="text-6-2">
+
+<p><a href="file:///home/florian/Dropbox/lo/lo-zettel-09/lo-zettel-09.pdf">lo-zettel-09.pdf</a>
+<a href="file:///home/florian/Dropbox/lo/lo-zettel-09/lo-loesung-09.tex">lo-loesung-09.tex</a>
+<a href="file:///home/florian/Dropbox/lo/lo-zettel-09/lo-loesung-09.pdf">lo-loesung-09.pdf</a>
+</p></div>
+
+</div>
+
+<div id="outline-container-6-3" class="outline-3">
+<h3 id="sec-6-3"><span class="section-number-3">6.3</span> Zettel-10</h3>
+<div class="outline-text-3" id="text-6-3">
+
+<p><a href="file:///home/florian/Dropbox/lo/lo-zettel-10/lo-loesung-10.tex">lo-loesung-10.tex</a>
+<a href="file:///home/florian/Dropbox/lo/lo-zettel-10/lo-loesung-10.pdf">lo-loesung-10.pdf</a>
+</p></div>
+
+</div>
+
+<div id="outline-container-6-4" class="outline-3">
+<h3 id="sec-6-4"><span class="section-number-3">6.4</span> Zettel-11</h3>
+<div class="outline-text-3" id="text-6-4">
+
+<p><a href="file:///home/florian/Dropbox/lo/lo-zettel-11/lo-zettel-11.pdf">lo-zettel-11.pdf</a>
+<a href="file:///home/florian/Dropbox/lo/lo-zettel-11/lo-loesung-11.tex">lo-loesung-11.tex</a>
+<a href="file:///home/florian/Dropbox/lo/lo-zettel-11/lo-loesung-11.pdf">lo-loesung-11.pdf</a>
+</p></div>
+
+</div>
+
+<div id="outline-container-6-5" class="outline-3">
+<h3 id="sec-6-5"><span class="section-number-3">6.5</span> Zettel-12</h3>
+<div class="outline-text-3" id="text-6-5">
+
+<p><a href="file:///home/florian/Dropbox/lo/lo-zettel-12/lo-zettel-12.pdf">lo-zettel-12.pdf</a>
+<a href="file:///home/florian/Dropbox/lo/lo-zettel-12/lo-loesung-12.tex">lo-loesung-12.tex</a>
+<a href="file:///home/florian/Dropbox/lo/lo-zettel-12/lo-loesung-12.pdf">lo-loesung-12.pdf</a>
+</p></div>
+
+</div>
+
+<div id="outline-container-6-6" class="outline-3">
+<h3 id="sec-6-6"><span class="section-number-3">6.6</span> Zettel-13</h3>
+<div class="outline-text-3" id="text-6-6">
+
+<p><a href="file:///home/florian/Dropbox/lo/lo-zettel-13/lo-zettel-13.pdf">lo-zettel-13.pdf</a>
+<a href="file:///home/florian/Dropbox/lo/lo-zettel-13/lo-loesung-13.tex">lo-loesung-13.tex</a>
+<a href="file:///home/florian/Dropbox/lo/lo-zettel-13/lo-loesung-13.pdf">lo-loesung-13.pdf</a>
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Revive Sessions</h2>
+<div class="outline-text-2" id="text-7">
+
+<dl>
+<dt>1</dt><dd>Elementare Stochastik Zettel 8
+</dd>
+</dl>
+
+</div>
+
+</div>
+
+<div id="outline-container-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> Unterhaltung</h2>
+<div class="outline-text-2" id="text-8">
+
+
+</div>
+
+<div id="outline-container-8-1" class="outline-3">
+<h3 id="sec-8-1"><span class="section-number-3">8.1</span> The Watch - Nachbarn der 3. Art</h3>
+<div class="outline-text-3" id="text-8-1">
+
+<p><img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_141417_1136787R.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_141417_1136787R.png" />
+</p>
+<p>
+Als einer seiner Mitarbeiter grausam ermordet wird, beschließt der gewissenhafte Warenhaus-Manager Evan eine Bürgerwehr zu organisieren. Lediglich drei Männer melden sich. Die sind jedoch hauptsächlich daran interessiert, Bier zu trinken und sich zu amüsieren. Doch seine Mitstreiter haben ein jähes Erwachen, als sie einem leibhaftigen Alien begegnen. Nun liegt es an der allseits verlachten Selbstschutz-Gruppe die Welt vor einer Invasion blutrünstiger Körperfresser zu bewahren.
+</p>
+<p>
+<a href="file:///home/florian/etm-thewatch-xvid.mp4">ansehen</a>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-8-2" class="outline-3">
+<h3 id="sec-8-2"><span class="section-number-3">8.2</span> Der Hobbit - Eine unerwartete Reise</h3>
+<div class="outline-text-3" id="text-8-2">
+
+<p><img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_142246_11367JGY.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_142246_11367JGY.png" />
+Bilbo Beutlin ist ein ganz einfacher Hobbit, der in Hobbingen im Auenland seinem Tagesgeschäft nachgeht. Bis er von dem Zauberer Gandalf auf den Plan gerufen wird. Zusammen mit einer Gruppe von 13 Zwergen unter Führung des legendären Kriegers Thorin zieht der Halbling los, um dem Drachen Smaug das verlorene Zwergenreich Erebor zu entreißen. Unterwegs treffen sie auf Goblins und Orks, Wargs, riesige Spinnen und Zauberer. Und eine bemitleidenswerte Kreatur, die auf den klingenden Namen Gollum hört.
+</p>
+<p>
+<a href="file:///home/florian/.jdownloader/downloads/Der.Hobbit.Eine.unerwartete.Reise.2012.DVDSCR.German.AC3MD.XViD-PWNDcd1.avi">Part 1 ansehen</a>
+<a href="file:///home/florian/.jdownloader/downloads/Der.Hobbit.Eine.unerwartete.Reise.2012.DVDSCR.German.AC3MD.XViD-PWND-2.avi">Part 2 ansehen</a>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-8-3" class="outline-3">
+<h3 id="sec-8-3"><span class="section-number-3">8.3</span> Otto's eleven</h3>
+<div class="outline-text-3" id="text-8-3">
+
+<p><img src="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_143437_11367WQe.png"  alt="file:///home/florian/Zettelkasten/zettelkasten.org_20130103_143437_11367WQe.png" />
+</p>
+<p>
+Nicht nur im Titel angelehnt an Steven Soderberghs Ocean’s Eleven, versucht sich Otto Waalkes in seinem neuesten Film Otto’s Eleven am Heist-Genre. Die Geschichte spielt auf der Insel Spiegeleiland, einem kleinen Stückchen Erde welches von nur fünf Insulanern bewohnt wird. Die ausschließlich aus Männern bestehende Gruppe setzt sich aus Maler Otto, Kabeljaukoch Pit, Fitnessfreak Mike, Modeliebhaber Oskar und IT-Experten Artur zusammen. Die Gruppe entschließt sich zu dem folgenschweren Schritt, mit Hilfe eines Online-Werbe-Videos, die Tourismusbranche auf Spiegeleiland ins Rollen zu bringen. Anstelle eines Urlauberansturms wird die winzige Insel jedoch vom fiesen Casinobesitzer und Kunstsammler Jean du Merzac heimgesucht. Dieser schafft es mit Hilfe eines arglistigen Tricks ein äußerst wertvolles Gemälde aus Ottos Familienbesitz zu ergaunern. Die fünf Freunde entschließen sich zu einer Vergeltungsaktion mit der sie das Kunstwerk wieder zurück erobern wollen. Zusammen mit der Verstärkung von sechs neuen Verbündeten sind Otto’s Eleven somit geboren. Otto Waalkes, der mit seiner 7 Zwerge – Männer allein im Wald – Reihe wieder an alte Kassenerfolge anknüpfen konnte, setzt in seinem neuesten Abenteuer auf bewährte Kräfte. Mit Regisseur Sven Unterwaldt Jr. und Produzent Mark Popp arbeitete Waalkes schon bei seinen letzten beiden Filmen zusammen. Wie in fast jedem Otto-Film, gibt es auch in Otto’s Eleven einige prominente Gastrollen: So gibt Germany’s Next Topmodel-Siegerin Sara Nuru ihr Filmdebüt neben Filmgrößen wie Olli Dittrich, Sky Dumont und Jasmin Schwiers. In seinem ersten großen Kinofilm ist Switch Reloaded – Star Max Giermann zu sehen, der sich in den letzten Jahren in der deutschen Comedy-Szene eine Namen machen konnte. Neben Giermann und Waalkes sind mit Mirco Nontschew und Rick Kavanian zwei Comedy-Urgesteine in weiteren Hauptrollen zu sehen. (BL)
+</p>
+<p>
+<a href="file:///home/florian/.jdownloader/downloads/Ottos.Eleven.German.2010.DVDRip.XviD-GMA.avi">ansehen</a>
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> Notes</h2>
+<div class="outline-text-2" id="text-9">
+
+<p>  <b>Shell Command Output</b>
+(lgrep "-key" "<i>home/florian</i>.emacs")
+(setq debug-on-error t)
+</p>
+<p>
+cooles bild oder so 
+</p></div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2013-01-04 21:22:33 CET</p>
+<p class="author">Author: florian</p>
+<p class="creator">Org version 7.8.11 with Emacs version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>

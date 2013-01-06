@@ -157,8 +157,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(bmkp-auto-light-when-set (quote all-in-buffer))
- '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
+ '(bmkp-last-as-first-bookmark-file "/home/florian/.emacs.d/bookmarks")
  '(dynamic-completion-mode t)
+ '(emms-mode-line-mode-line-function (lambda nil))
  '(helm-c-pdfgrep-default-read-command "emacsclient '%f'")
  '(helm-dired-mode t)
  '(org-agenda-files (quote ("~/Zettelkasten/zettelkasten.org")))
@@ -252,6 +253,8 @@
 (global-set-key (kbd "C-ö m l") 'magit-pull)
 (global-set-key (kbd "C-ö m h") 'magit-push)
 (global-set-key (kbd "C-ö m s") 'magit-status)
+
+
 
 (add-to-list 'load-path "~/.emacs.d/w3m/")
 (require 'w3m-load)
@@ -439,3 +442,17 @@
 (global-set-key (kbd "M-m") 'helm-for-files)
 (global-set-key (kbd "C-ö h") 'helm-c-apropos)
 (global-set-key (kbd "C-ö i") 'helm-imenu)
+
+(require 'hippie-flex)
+(require 'magpie)
+(require 'lorem-ipsum)
+
+(setq org-capture-templates
+ '(("t" "Todo" entry (file+headline "~/Zettelkasten/todo.org" "Todo-Eingang")
+        "** TODO %?")
+   ("j" "Journal" entry (file+datetree "~/org/journal.org")
+        "* %?\nEntered on %U\n  %i\n  %a")
+   ("w" "link template" entry
+    (file+headline "~/Zettelkasten/notes.org" "Links")
+     "* [[%:link][%:description]]"
+     :empty-lines 1 :immediate-finish :unnarrowed :kill-buffer)))

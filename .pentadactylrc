@@ -1,0 +1,9 @@
+"hg6880
+
+loadplugins '\.(js|penta)$'
+group user
+set guioptions=ns
+set hintkeys=uiaeosnrtdxvlchgfq
+set showtabline=never
+
+" vim: set ft=pentadactyl:

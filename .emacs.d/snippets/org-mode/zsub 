@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
-# name: zettelblock
-# key: zettelblock
+# name: zsub 
+# key: zsub
 # --
 #+BEGIN_SRC latex :tangle ${1:st}-loesung-${2:08}.tex
-$3
+\\subsubsection{${3:a})}
 #+END_SRC
