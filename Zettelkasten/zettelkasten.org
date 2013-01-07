@@ -611,6 +611,29 @@ tatsächlich mit dem DNA Profil der Probe vom Tatort übereinstimmt, liegt also 
 [[~/Dropbox/st/st-zettel-11/st-loesung-11.tex][st-loesung-11.tex]]
 [[~/Dropbox/st/st-zettel-11/st-loesung-11.pdf][st-loesung-11.pdf]]
 * Theoretische Informatik
+** Turing Maschine
+[[/home/florian/Zettelkasten/zettelkasten.org_20130106_200549_12364hJ0.png]]
+
+Beispieleingabe:
+(q',b,x) \in \delta(q,a) 
+=> in Zustand q wird a gelesen 
+   => b an pos geschrieben, nach q' gewechselt und 
+   schreib/lesekopf um x bewegen
+x \in {L,R,N} => l = 1 nach link, ..., N = nichts
+
+Muster Automat:
+\script{A} := (Q, \{a,b,c\},\{a,b,c,A,B,C,\b\},\delta,q_0,\b,F)
+mit Q = \{q_0,q_b,q_c,q_?,q_l,q_t,q_f\} und F = \{q_f\}
+
+die deltas werden mit ner Tafel gesammelt:
+| Vorgang    | Erklärung |
+|------------+-----------|
+| q a b x q' | irgendwas |
+|            |           |
+
+Bedeutet: (q',b,x) \in \delta(q,a)
+also startzustand | "search" | replace | sprung | nächster zustand
+
 ** Zettel-09
 [[~/Dropbox/th/th-zettel-09/th-zettel-09.pdf][th-zettel-09.pdf]]
 [[~/Dropbox/th/th-zettel-09/th-loesung-09.tex][th-loesung-09.tex]]
