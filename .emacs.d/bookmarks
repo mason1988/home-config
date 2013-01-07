@@ -49,13 +49,8 @@
     (filename . "~/Dropbox/Shell-Skripte/org-test-umgebung.org")
     (front-context-string . "Todo List\n** DON")
     (rear-context-string . "on\n*** pekwm\n\n* ")
-<<<<<<< HEAD
     (position . 63813))
-=======
     (position . 63469))
-<<<<<<< HEAD
-=======
->>>>>>> 8148ab8e6bfda64a10ca2194cd75ed96f17bad06
 #1=(#("org-capture-last-stored" 0 23
       (bmkp-full-record #1#))
     (filename . "~/org/notes.org")
@@ -69,5 +64,4 @@
     (created . #2#)
     (position . 666)
     (end-position . 666))
->>>>>>> 907601b367c730897e5729b6484f853b81832a3f
 )

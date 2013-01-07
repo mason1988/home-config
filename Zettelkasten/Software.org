@@ -1743,3 +1743,4 @@ pass
 - C-ä r       :: repeat
 
 - C-x s       :: save-some-buffers 
+- M-w         :: buffer back
