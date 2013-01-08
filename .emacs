@@ -473,3 +473,4 @@
 (define-key global-map (kbd "C-ö ö") 'org-capture)
 
 (define-key global-map (kbd "C-ö ä") 'magpie-expand)
+(define-key global-map (kbd "C-ä ö") 'flosub)
