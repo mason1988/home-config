@@ -1,7 +1,7 @@
 (add-to-list 'load-path "~/.emacs.d/")
-(add-to-list 'load-path "~/.emacs.d/predictive/latex/")
-(add-to-list 'load-path "~/.emacs.d/predictive/texinfo/")
-(add-to-list 'load-path "~/.emacs.d/predictive/html/")
+;(add-to-list 'load-path "~/.emacs.d/predictive/latex/")
+;(add-to-list 'load-path "~/.emacs.d/predictive/texinfo/")
+;(add-to-list 'load-path "~/.emacs.d/predictive/html/")
 (add-to-list 'load-path "~/.emacs.d/magit/")
 (add-to-list 'load-path "~/.emacs.d/bookmark+/")
 (add-to-list 'load-path "~/.emacs.d/expand-region/")
@@ -14,20 +14,12 @@
 (load "auctex.el" nil t t)
 (load "preview-latex.el" nil t t)
 
-(require 'package)
-(require 'predictive)
 (require 'bookmark+)
 
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'load-path "~/.emacs.d/helm/")
 (add-to-list 'load-path "~/.emacs.d/evil/")
 (add-to-list 'load-path "~/.emacs.d/auto-complete/")
-(add-to-list 'load-path "~/.emacs.d/zencoding/")
-(add-to-list 'load-path "~/.emacs.d/evil/")
-(add-to-list 'load-path "~/.emacs.d/icicles/")
-
-;(require 'icicles)
+;(add-to-list 'load-path "~/.emacs.d/icicles/")
 
 (require 'helm-config)
 (require 'evil)
@@ -40,14 +32,10 @@
 (require 'emms-player-vlc)
 (setq emms-player-list '(emms-player-vlc))
 
-(package-initialize)
 (require 'org-install)
 (require 'my-org-screenshot)
 
 (require 'evil-key-bindings)
-(require 'my-keymaps)
-(require 'deft)
-(require 'zencoding-mode)
 ;(helm-mode 1)
 
 ;(setq helm-samewindow nil)
@@ -124,13 +112,13 @@
 (set-face-underline-p 'org-link t))
 (call-interactively 'iimage-mode))
 
-(setq pylookup-dir "~/.emacs.d/pylookup/")
-(add-to-list 'load-path pylookup-dir)
-(eval-when-compile (require 'pylookup))
-(setq pylookup-program (concat pylookup-dir "/pylookup.py"))
-(setq pylookup-db-file (concat pylookup-dir "/pylookup.db"))
-(autoload 'pylookup-lookup "pylookup" "Lookup SEARCH-TERM in the Python HTML indexes." t)
-(autoload 'pylookup-update "pylookup" "Run pylookup-update and create the database at 'pylookup-db.file'." t)
+;(setq pylookup-dir "~/.emacs.d/pylookup/")
+;(add-to-list 'load-path pylookup-dir)
+;(eval-when-compile (require 'pylookup))
+;(setq pylookup-program (concat pylookup-dir "/pylookup.py"))
+;(setq pylookup-db-file (concat pylookup-dir "/pylookup.db"))
+;(autoload 'pylookup-lookup "pylookup" "Lookup SEARCH-TERM in the Python HTML indexes." t)
+;(autoload 'pylookup-update "pylookup" "Run pylookup-update and create the database at 'pylookup-db.file'." t)
 
 (define-key minibuffer-local-map [escape] 'keyboard-escape-quit)
 (define-key minibuffer-local-ns-map [escape] 'keyboard-escape-quit)
@@ -144,7 +132,7 @@
 (define-key minibuffer-local-must-match-map (kbd "M-e") 'keyboard-escape-quit)
 (define-key minibuffer-local-isearch-map (kbd "M-e") 'keyboard-escape-quit)
 
-(setq ropemacs-autoimport-modules '("os" "shutil"))
+;(setq ropemacs-autoimport-modules '("os" "shutil"))
 (require 'cmd_abr)
 (require 'revive)
 
@@ -167,10 +155,7 @@
  '(org-indirect-buffer-display (quote new-frame))
  '(org-modules (quote (org-bbdb org-bibtex org-docview org-gnus org-info org-jsinfo org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m org-annotate-file org-bookmark org-checklist org-collector org-eshell org-eval)))
  '(org-src-fontify-natively t)
- '(preview-scale-function 1.4)
- '(yas-global-mode t nil (yasnippet))
- '(yas-prompt-functions (quote (yas-ido-prompt yas-dropdown-prompt yas-completing-prompt yas-x-prompt yas-no-prompt)))
- '(yas-use-menu (quote full)))
+ '(preview-scale-function 1.4))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -472,4 +457,10 @@
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (define-key global-map (kbd "C-ö ö") 'org-capture)
 
+(setq org-capture-templates
+ '(("t" "Todo" entry (file+headline "~/Zettelkasten/todo.org" "Todo-Eingang")
+        "** TODO %?")
+   ("j" "Journal" entry (file+datetree "~/org/journal.org")
+        "* %?\nEntered on %U\n  %i\n  %a")))
 (define-key global-map (kbd "C-ö ä") 'magpie-expand)
+(define-key global-map (kbd "C-ä ö") 'flosub)

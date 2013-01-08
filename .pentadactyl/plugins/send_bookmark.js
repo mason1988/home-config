@@ -1,0 +1,1 @@
+hints.addMode('x', "Send Link to emacs", function(elem) {     var url = elem.href; var title = elem.innerHTML;     location.href='org-protocol://capture://w/'+ 	encodeURIComponent(url)+'/'+ 	encodeURIComponent(title)+'/'+ 	encodeURIComponent(" ") })

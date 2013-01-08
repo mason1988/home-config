@@ -1,20 +1,23 @@
 * Studium
 #+BEGIN: clocktable :maxlevel 3 :scope subtree
-Clock summary at [2013-01-03 Do 20:49]
+Clock summary at [2013-01-04 Fr 19:33]
 
 | Headline                            | Time   |      |      |
 |-------------------------------------+--------+------+------|
-| *Total time*                        | *8:22* |      |      |
+| *Total time*                        | *9:22* |      |      |
 |-------------------------------------+--------+------+------|
-| Studium                             | 8:22   |      |      |
-| TODO Elementare Stochastik Zettel 8 |        | 8:22 |      |
-| Tag 3                               |        |      | 2:44 |
+| Studium                             | 9:22   |      |      |
+| TODO Elementare Stochastik Zettel 8 |        | 9:22 |      |
+| Tag 3                               |        |      | 3:44 |
 | Tag 2                               |        |      | 2:49 |
 | Tag 1                               |        |      | 2:49 |
 #+END:
 
+
 ** TODO Elementare Stochastik Zettel 8
+*** Tag 4
 *** Tag 3
+    CLOCK: [2013-01-03 Do 22:00]--[2013-01-03 Do 23:00] =>  1:00
     CLOCK: [2013-01-03 Do 19:34]--[2013-01-03 Do 20:49] =>  1:15
     CLOCK: [2013-01-03 Do 17:54]--[2013-01-03 Do 18:02] =>  0:08
     CLOCK: [2013-01-03 Do 14:00]--[2013-01-03 Do 15:00] =>  1:00
@@ -35,10 +38,29 @@ Clock summary at [2013-01-03 Do 20:49]
     CLOCK: [2013-01-01 Di 20:12]--[2013-01-01 Di 21:05] =>  0:53
     CLOCK: [2013-01-01 Di 18:05]--[2013-01-01 Di 18:45] =>  0:40
 
+*** next Steps
+
 ** TODO Theorethische Informatik Zettel 10
+*** DONE Grundfundament im Zettelkasten erstellen
+*** TODO Zettel einmal komplett sichten
+*** TODO sammeln von Hinweisen und Fragmenten zu Aufgaben:
+**** TODO 1
+**** TODO 2
+**** TODO 3
+*** TODO lösen von:
+**** TODO 1
+**** TODO 2
+**** TODO 3
+*** Tag 1
+    CLOCK: [2013-01-06 So 19:56]--[2013-01-06 So 21:01] =>  1:05
+    CLOCK: [2013-01-06 So 17:09]--[2013-01-06 So 17:47] =>  0:38
+
 ** TODO Logik Zettel 10
 ** TODO Website
-   
+*** TODO Struktur von Inhalt planen
+
+
+ 
 * System-Config
 ** Feature Browse/Solve
    CLOCK: [2013-01-03 Do 21:21]--[2013-01-03 Do 23:03] =>  1:42
@@ -46,74 +68,31 @@ Clock summary at [2013-01-03 Do 20:49]
    CLOCK: [2013-01-03 Do 18:02]--[2013-01-03 Do 19:09] =>  1:07
    CLOCK: [2013-01-02 Mi 14:52]--[2013-01-02 Mi 14:55] =>  0:03
    => Tasks sammeln
-** Projekte :testproject:
-*** Buffer/Window Control
-**** DONE helm und popwin verknüpfen
-**** TODO Brainstormen ob Tableisten sinnvoll
-**** TODO Buffer/Window Lösungen weiter prüfen     
-***** tabbarmode
-     fügt tabbar hinzu und
-gruppiert die buffer
-***** pinbar
-ebenfalls tabbar, aber hier lassen
-sich buffer dauerhaft anpinnen
-***** onewindow
-- mit same-window-buffer-names
-bestimmte fenster automatisch im
-aktuellen Fenster öffnen lassen
-- ggbflls mit eigener decorator
-funktion noch in einen extra 
-buffer wechseln 
-- with-selected-window könnte praktisch
-werden
-***** display-buffer überschreiben
-http://superuser.com/questions/244036/emacs-window-management
-***** weiterführende Links
-[[http://www.gnu.org/software/emacs/manual/html_node/elisp/Selecting-Windows.html#Selecting-Windows][selecting windows]]
-[[http://www.gnu.org/software/emacs/manual/html_node/elisp/Cyclic-Window-Ordering.html#Cyclic-Window-Ordering][cyclic window ordering]]
-[[http://www.gnu.org/software/emacs/manual/html_node/elisp/Buffers-and-Windows.html][buffers and windows]]
-[[http://www.gnu.org/software/emacs/manual/html_node/elisp/Choosing-Window.html#Choosing-Window][choosing window]]
-[[http://www.gnu.org/software/emacs/manual/html_node/elisp/Dedicated-Windows.html][dedicated windows]]
-*** Organisation
-**** TODO Die ganzen Emacs Konfigurationen sortieren
-*** Zettel - Workflow
-**** DONE schnellen git workflow zusammenstellen
-**** DONE git informationen in emacs eintragen
-**** TODO Brainstorming, wie Screenshots prinzipiell besser
-     erstellt und eingebunden werden könnten
-**** DONE calculator benutzbar machen (emacs)
-    - dieser Buffer musste irgendwie schließbar sein
-    - schnelles copy and paste, oder noch besser einfach direkt inline
-**** TODO lösung für den austausch von bildern und code finden
-     - prüfen ob bildlinks auch texte haben dürfen, wenn ja => da rein, sonst: egal
-**** TODO sprünge beim scrollen mit großen bildern verhindern
+** Projekte
+*** Emacs Config Aufräumen
+**** TODO nicht mehr benutzte dateien in .emacs.d löschen
+**** TODO alle shortcuts in .emacs zusammenfassen
+**** TODO funktionen in .emacs auslagern
+**** TODO unnötige keybindings entfernen
+**** TODO in bytecompiling einlesen
+**** TODO alles bytecompilen
+*** Org-Mode Bilder
+**** TODO Möglichkeiten nachträgliches resizen der Bilder im Org-Mode eruieren
+**** TODO extra Fenster bei Latexumwandlung unterdrücken (google save-excursion)
+**** TODO Code von konvertiertem Latex in linktext behalten (latex auch bilder mit linktext als Bilder anzeigen lassen)
+**** TODO iimage bibliothek o.ä. code raussuchen und auf anpassparkeit prüfen
+**** TODO anforderungen an eigenen Modus sammeln
+**** TODO entsprechenden modus entwickeln (image slicing)
+*** Tags
+**** TODO etags installieren
+**** TODO google: wie können tags zu den unterschiedlichen dokumentarten generiert werden
+**** TODO google: welche navigations und sammelmöglichkeiten gibt es?
+**** TODO Shortcuts für die Tags entsprechend legen
 *** Capturing
-**** DONE kleine Zusammenstellung zum Thema hooks anfertigen
-
-**** TODO emacs drag and drop googlen
-**** TODO sinnvolle interpretation von Bildern/links überlegen
-**** TODO drag and drop implementieren
-
-**** TODO möglichkeiten der javascript ausführung sammeln
-     penta, contextmenü, bookmark usw
-**** TODO sinnvolle funktionen und schnittstellen sammeln (in javas)
-**** TODO sinnvolle Übertragungen überlegen
-**** TODO Templates und Javascodes einfügen
-**** TODO Linkmanagement von Firefox durch Emacs
-
-**** TODO kurzer Text über die Benutzung/ die Features des Diary's
-
-**** TODO Brainstorming zu Sinnvollen Captures
-**** TODO Capturing Templates implementieren
-*** Emacs Knowledge
-**** DONE Org: Footnote und Emphasise?
-**** TODO tag-system einrichten
-**** TODO evil modes? welcher an, welcher besser (evil modes ergooglen)
-**** TODO regex (icicle und rx makro) testen
-*** Linux
-**** TODO gnome keyring bug beheben
-**** TODO ubuntu vs mint akku (genau das bei google)
+**** TODO welche Captures (-Templates) würden noch Sinn machen? Broweser/Client
+**** TODO Captures entsprechend implementieren
 *** Shortcuts
+**** TODO [#B] mehr Tasten auf den Modalen Vim Modus setzen
 **** DONE completion shortcuts bequemer machen			  :shortcuts:
 **** DONE Orte mit (letzten) veränderungen oder sowas durchgehen(cyclen - plural)
 **** DONE shortcut für zuletzt benutztes bookmark		  :shortcuts:
@@ -121,33 +100,29 @@ http://superuser.com/questions/244036/emacs-window-management
 **** DONE Emacs wiederholung braucht ein besseres shortcut (z schwer zu finden) :shortcut:
 **** DONE zyklisches Pasten von Emacs aus Killring		  :shortcuts:
 **** DONE shortcuts für erstellen von tmp autonamed bookmark und cyclen (in buffer) :shortcuts:
-*** getabbter Reader
-nicht mehr Zeit als unbedingt notwendig darauf verwenden. Durch die Google Preview im
-Firefox, und ansonsten den recht brauchbaren Zathura ist eigentlich schon alles
-zufriedenstellend abgedeckt
-**** TODO Tabbar(oder so ähnlich) ausprobieren
-**** TODO tabs so wie bei Fluxbox für awesome wm?
-*** Navigation
-**** DONE Shortcuts / Jumpmarks über Markuplanguage hinzufügen(ref?)
-**** DONE Jumpmode für Org testen
-*** nützlicher kleinkram
-**** TODO eigene befehlsabkürzungen
-**** TODO lorem ipsum dolor generator für emacs
-**** TODO weitere alternative Completions Methoden prüfen  
-**** TODO einzelne Zeilen beim Folden ignorieren?
-** nicht zugeordnet
-*** TODO Gnus Shortcuts fixen und die restlichen Account einbinden :shortcut:
-    über die den Force Evil normal state ist das meiste eigentlich schon erledigt
-*** TODO Cdlatex mode überprüfen
-*** TODO ERC mit Standardwerten einrichten
-*** DONE nachträglich fill column einsetzen (befehl finden)
-*** TODO autogenes Training routine finden
-*** TODO autostarts neu zuteilen (source blöcke usw)    
-*** TODO Liste mit Features von Bookmark+ anfertigen
-*** TODO markierung und/oder anzeige für evil marks im Dokument anzeigen
+*** magpie / textsubstitution
+**** Planung/Zielsetzung einer idealen lokalen Textsubstitution
+**** Stichwort fuzzymatching completion prüfen
+**** Quellcode von Magpie von dahingehende Anpassparkeit prüfen
+*** Sprungmarken
+**** TODO [#C] Liste mit Features von Bookmark+ anfertigen
+**** TODO [#C] markierung und/oder anzeige für evil marks im Dokument anzeige(goggle)
 nicht mehr zeit verschwenden, als unbedingt nötig, da die evil marks in jedem fall auch
 durch autobookmarks ersetzt werden könnten
 google: emacs+evil+show+mark 
+*** TodoListe optimieren
+**** TODO Brainstorming, was Standardmäßig geöffnet und was geschlossen sein soll
+**** TODO [#C] autostarts neu zuteilen (source blöcke usw)    
+*** Latex Mode
+**** TODO Cdlatex Paket suchen und installieren
+**** TODO testen in wie fern schnelles suchen und finden von Symbolen möglich ist
+**** TODO testen wie weit auto completion von viel genutzen symbolen (Rightarrow...) glatt läuft
+**** TODO gegebenenfalls weitere Completion Methoden einsetzen
+*** someday / maybe
+**** TODO [#C] ubuntu vs mint akku (genau das bei google)
+**** TODO [#B] regex (icicle und rx makro) testen
+**** TODO [#C] gnome keyring bug beheben
+**** TODO [#B] autogenes Training routine finden
 ** raw - stuff
 *** Steam <2013-01-02 Mi> 
 
@@ -200,3 +175,8 @@ da sie ja sowies zusammen bearbeitet werden.
 	
 
 
+* Todo-Eingang
+** TODO git: leere commits abschicken
+** TODO git: magit-commit-push kombinieren
+** TODO git: merge mit magit 
+** TODO Screenshots per Tastatur

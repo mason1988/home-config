@@ -634,7 +634,7 @@ die deltas werden mit ner Tafel gesammelt:
 Bedeutet: (q',b,x) \in \delta(q,a)
 also startzustand | "search" | replace | sprung | nächster zustand
 ** Wörterbuch
-- Turingmaschine ::
+- Turingmaschine :: 
 - Loopprogramm ::
 - denotationelle Semantik :: 
 - primitik rekursive Grundfunktion ::
@@ -698,7 +698,19 @@ Vorzeichenzahl => Zweierkomplement
 (Vorzeichen = 1 => jedes andere Bit umdrehen, dann 1 addieren)
 (sonst: gar nichts machen)
 
-tesat
+|     norm |    kompl | zahl |
+|----------+----------+------|
+| 00000001 | 00000001 |    1 |
+| 00000010 | 00000010 |    2 |
+| 10000001 | 11111111 |   -1 |
+| 10000010 | 11111110 |   -2 |
+| 10000011 | 11111101 |   -3 |
+| 00000000 | 00000000 |    0 |
+
+=> wenn erstes Zeichen 0 -> tue nichts
+=> wenn erstes Zeichen 1 -> behalte 1, drehe jedes zeichen um, und addiere 1
+
+
 
 
 *** Aufgabe 31
@@ -711,6 +723,24 @@ sg: 0 bleibt 0, 1 wenn größer 0  (nur natürliche Zahlen)
 
 Zugelassene Anweisungen: X_i = 0 ; X_i = X_j + 1
 Beweis Korrektheit Programm mit denotationeller Semantik
+
+#+BEGIN_SRC latex :tangle th-loesung-10.tex
+
+\a_1 := X_2 := 0
+\a_2 := X_3 := 0
+\a_3 := loop X_1(X_2 = X_3 + 1)
+[[\a_1]]{(3)}(\a_1,\a_2,\a_3) = [[\a_1 := X_2 := 0]]^{(3)}(\a_1,\a_2,\a_3)
+    = (0,\a_2,\a_3)
+
+[[\a_2]]{(3)}(\a_1,\a_2,\a_3) = [[\a_2 := X_3 := 0]]^{(3)}(\a_1,\a_2,\a_3)
+    = (\a_1,0,\a_3)
+
+[[\a_3]]{(3)}(\a_1,\a_2,\a_3) = [[loop X_1(X_2 := X_3 + 1)]]^{(3)}(\a_1,\a_2,\a_3)
+    = ([[X_2 := X_3 + 1]]^{(3)})^{\a_1}(\a_1,\a_2,\a_3)
+    = (\a_1, \a_2 , \a_2 + \a_1) 
+
+#+END_SRC
+
 
 *** Aufgabe 32
 #+BEGIN_SRC latex :tangle th-loesung-10.tex
