@@ -12,19 +12,10 @@
  + aumix oder alsamixer für soundsteuerung
  + alternativ einfach sound bei kupfer
  + evince ist der pdf viewer
- + Synergy zum Maus/Tasta sharen
-   1. auf beiden quicksynergy starten
-   2. server ip (ifconfig) bei client eintragen + name
-   3. diesen Namen bei server in richtung eintragen und executen
-   4. client executen
  + xrandr:  $ xrandr --output VGA --mode 1280x1024 --right-of LVDS
  + convert pic123.png resize 10% res_pic.png  :: resizing
  + standby :: sudo /etc/acpi/sleep.sh
  + script von überall asuführbar machen :: sh entfernen, bang anfügen, und in /usr/bin verschieben
-** Tasten remappen
-xvkbd -xsendevent -no-sync -delay 20 -text "-"
-xbindkeys --default > /home/florian/.xbindkeysrc
-xbindkeys-config    <= und da den xvbkd kram einstellen
 * synergy
 ** keyboardlayout
 - nacktes setxkbmap beim client hilft
@@ -48,6 +39,16 @@ end
 conf wird gar nicht geladen o.O
 Aufruf:
 synergyc -n flo_laptop 192.168.2.30
+** bla
+ + Synergy zum Maus/Tasta sharen
+   1. auf beiden quicksynergy starten
+   2. server ip (ifconfig) bei client eintragen + name
+   3. diesen Namen bei server in richtung eintragen und executen
+   4. client executen
+** Tasten remappen
+xvkbd -xsendevent -no-sync -delay 20 -text "-"
+xbindkeys --defaults > /home/florian/.xbindkeysrc
+xbindkeys-config    <= und da den xvbkd kram einstellen
 * Orgmode
 ** shortcuts-orgmode 						  :shortcuts:
     C-c C-c         Tags zu Unterpunkt verwalten / Latex lösen
@@ -73,6 +74,12 @@ iimage-mode / iimage-recenter
 alternativ:
 org-display-inline-images
 <= zeigt direkt keine linie
+** Folding unterdrücken
+- für freie Zeilen oben Punkt zusammenfolden, beim nächsten Punkt
+an den Anfang und Enter (einrücken schadet auch nicht
+- ansonsten # + BEGIN : irgendwas     # + END:
+- oder # + BEGIN_ irgendwas und # + END_ irgendwas
+- mann kann auch feste drawer am anfang definieren und benutzen
 ** Regionen/Enviroments
 = org-special
 - tangling wert ungleich yes und no wird als Dateiname interpretiert
@@ -458,6 +465,8 @@ window-text-change-functions
 -    F1 / M-x Helper-... :: findet Keybinds <=> Funktion usw
 -    apropos-documentation :: durchsucht alles nach einem String
      
+** Funktionsnamen abkürzen
+(defalias 'langer_name 'abkuerzung)
 ** Tmp Keymaps
     blablabla
     testtest
@@ -516,7 +525,73 @@ M-a markiert alle Einträge !!!
 2. make
 3. sudo make install
 * Firefox
-*** pentadactyl einrichten
+** pentadactyl plugins
+*** installieren
+js Datei in ~/.pentadactyl/plugins/ kopieren
+*** Grundstruktur
+eigentlich nichts festes, geht direkt mit js code los
+*** Kommando hinzufügen
+group.commands.add(['command_name'], "Beschreibung",
+ function(args){
+  var = bla;
+  mache_irgendwas;}
+);
+*** Hintmode hinzufügen
+hints.addMode('K', "descr", function(elem) {
+	     var url = elem.getAttribute("href");});
+*** nutzpare Parameter
+var url = buffer.url;
+var en_url = encodedURIComponent(buffer.url);
+var title = buffer.title;
+*** Aufruf Org Protocol(Capturing)
+capture_template mit kürzel w:
+#+Begin: Javas Code
+location.href='org-protocol://capture://w/'+
+  encodeURIComponent(location.href)+'/'+
+  encodeURIComponent(document.title)+'/'+
+  encodeURIComponent(buffer.win.getSelection())
+#+END:
+passendes Capture-Template: (titel muss noch manuel eingegeben werden)
+#+BEGIN: CaptureTemplate
+(setq org-capture-templates
+      (quote
+       (("w"
+         "Default template"
+         entry
+         (file+headline "~/org/capture.org" "Notes")
+         "* %^{Title}\n\n  Source: %u, %c\n\n  %i"
+         :empty-lines 1)
+        ;; ... more templates here ...
+        )))
+#+END:
+passendes Capture-Template: (titel muss nichtmehr eingegeben werden und
+es wird auch sonst nichts vom capture menü angezeigt
+#+BEGIN: CaptureTemplate2
+(setq org-capture-templates
+      (quote
+       (("w"
+         "Default template"
+         entry
+         (file+headline "~/org/capture.org" "Notes")
+         "* Testtitle\n\n  Source: %u, %c\n\n  %i"
+         :empty-lines 1 :immediate-finish :unnarrowed :kill-buffer)
+        ;; ... more templates here ...
+        )))
+#+END:
+
++ Paremeter werden getrennt mit / und encdode...
++ zuerst link , dann titel, dann content 
++ %c setzt link mit passendem Titel ein
++ %i setzt das capturing ein
++ %u setzt das aktuelle datum oredntlich formatiert ein
++ die 3 übertragenen Daten sind auch abrufbar mit:
+  + %:link        => der link
+  + %:description => der Titel
+  + %:initial     => der content
++ template wird mit "x" gewählt
+ 
+
+** pentadactyl einrichten
 - :map d V   <= damit der nicht mit d seite löscht
 - :set hintkeys=uiaenrdxvlchgqüöäpb,.j
 - :mkpentadactylrc

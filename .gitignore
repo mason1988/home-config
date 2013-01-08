@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+/.gkr
+.gnus.el
 .emacs.d/history
 .emacs.d/history/
 .emacs.d/history*
@@ -24,6 +25,6 @@ history
 /.config/qpdfview/qpdfview.conf
 /.tuxcards
 .gnus.el
->>>>>>> 63900d6022c9c26b8341b5a8e46377776a2759d5
 /.#.gitignore
 /.#.pentadactylrc
+/.emms-cache-b
