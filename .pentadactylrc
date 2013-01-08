@@ -1,0 +1,7 @@
+"hg6876
+
+loadplugins '\.(js|penta)$'
+group user
+map -count -modes=n,v d <count>x
+
+" vim: set ft=pentadactyl:
