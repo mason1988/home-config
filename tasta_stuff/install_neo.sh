@@ -1,0 +1,3 @@
+setxkbmap lv
+xmodmap neo_de.xmodmap
+xset -r 51

@@ -1,7 +1,41 @@
 
 \documentclass[11pt]{amsart}
-\begin{document}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath}
+\usepackage{verbatim}
+\usepackage{color}
+\usepackage{geometry}
+\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
+\usepackage{amsthm}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
 
-$\frac{A+B}{C+D} = X*Y = \binom{12}{34}$
+%\includegraphics{?} setzt bild ein
+%\ref{labelname} erstellt link zu labelname
+%\label{labelname} kann einfach irgendwo drangesetz werden
+
+\newtheorem{defi}{Definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{nota}{Notation}
+\newtheorem{prop}{Proposition}
+\newtheorem{satz}{Satz}
+\newtheorem{umf}{Umformung}
+
+\newenvironment{beweis}{\par\begingroup%
+\settowidth{\leftskip}{\textsc{Beweis:~}}%
+\noindent\llap{\textsc{Beweis:~}}}{\hfill$\Box$\par\endgroup}
+
+\renewcommand{\baselinestretch}{1}
+\newcommand{\words}{\Sigma^* \backslash \{\epsilon\}}
+\newcommand{\etrans}[1]{\bar{\delta}(#1)}
+\renewcommand{\P}{\mathbb{P}}
+
+\title{Zettel 8}
+\author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
+%\date{} % Activate to display a given date or no date (if empty),
+% otherwise the current date is printed 
+
+\begin{document}
+\maketitle
 
 \end{document}
