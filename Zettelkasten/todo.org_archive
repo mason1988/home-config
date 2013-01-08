@@ -113,6 +113,81 @@ google: emacs+evil+show+mark
   :ARCHIVE_CATEGORY: todo
   :ARCHIVE_TODO: DONE
   :END:
+* Buffer/Window Control
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2013-01-05 Sa 23:37
+  :ARCHIVE_FILE: ~/Zettelkasten/todo.org
+  :ARCHIVE_OLPATH: System-Config/Projekte
+  :ARCHIVE_CATEGORY: todo
+  :END:
+** DONE helm und popwin verknüpfen
+** DONE Brainstormen ob Tableisten sinnvoll
+** DONE Buffer/Window Lösungen weiter prüfen     
+* Navigation
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2013-01-05 Sa 23:37
+  :ARCHIVE_FILE: ~/Zettelkasten/todo.org
+  :ARCHIVE_OLPATH: System-Config/Projekte
+  :ARCHIVE_CATEGORY: todo
+  :END:
+** DONE Shortcuts / Jumpmarks über Markuplanguage hinzufügen(ref?)
+** DONE Jumpmode für Org testen
+* Capturing
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2013-01-06 So 16:53
+  :ARCHIVE_FILE: ~/Zettelkasten/todo.org
+  :ARCHIVE_OLPATH: System-Config/Projekte
+  :ARCHIVE_CATEGORY: todo
+  :END:
+** DONE [#B] emacs drag and drop googlen
+** DONE sinnvolle interpretation von Bildern/links überlegen
+** DONE drag and drop implementieren
+** DONE [#A] möglichkeiten der javascript ausführung sammeln
+	     penta, contextmenü, bookmark usw
+      Durch Pentadactyl würde sich in jedem Fall am meisten anbieten
+      die Frage ist dabei lediglich, wie Pentadactyl kurze
+
+      1. Kommandos für längere Javacscriptcommandos speichern kann
+
+      2. Kommandos auf Konkrete hints ausführen kann
+	 => 	   <= reagiert dann auf den ; hint modus
+	 
+      .pentadactylrc wird immer am anfang ausgeführt, und enthält
+      kommandos, wie sie auch in der kommandoleiste eingegeben werden
+      würden
+      - pentadactyl plugins haben auch das Format von js dateien
+** DONE [#A] einzelne Zeilen beim Folden ignorieren?
+** DONE weitere alternative Completions Methoden prüfen  
+   => tags sind grundsätzlich eine möglichkeit
+** DONE lorem ipsum dolor generator für emacs
+** DONE eigene befehlsabkürzungen
+* Zettel - Workflow
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2013-01-06 So 16:57
+  :ARCHIVE_FILE: ~/Zettelkasten/todo.org
+  :ARCHIVE_OLPATH: System-Config/Projekte
+  :ARCHIVE_CATEGORY: todo
+  :END:
+** DONE calculator benutzbar machen (emacs)
+  - dieser Buffer musste irgendwie schließbar sein
+  - schnelles copy and paste, oder noch besser einfach direkt inline
+** DONE git informationen in emacs eintragen
+** DONE schnellen git workflow zusammenstellen
+* Emacs Knowledge
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2013-01-06 So 16:57
+  :ARCHIVE_FILE: ~/Zettelkasten/todo.org
+  :ARCHIVE_OLPATH: System-Config/Projekte
+  :ARCHIVE_CATEGORY: todo
+  :END:
+** DONE evil modes? welcher an, welcher besser (evil modes ergooglen)
+   gibt bloß den einen, 1 = true 
+** DONE Org: Footnote und Emphasise?
+
+
+
+
+
 
 
 

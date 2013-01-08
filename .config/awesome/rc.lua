@@ -508,6 +508,7 @@ run_once("firefox",nil,1)
 run_once("kupfer",nil,1)
 run_once("xfce4-power-manager", nil, 1)
 
+awful.util.spawn_with_shell("xmodmap ~/tasta_stuff/neo_de.xmodmap")
 awful.util.spawn_with_shell("sh ~/new_keyboard.sh")
 
 ----------------------------- ende modifikation
