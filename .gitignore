@@ -19,7 +19,6 @@ history
 /.jdownloader/jd/captcha/methods/flbs/script.jas
 /.jdownloader/version.txt
 /.jdownloader/.junique/115654c07.lock
-=======
 /.apvlvinfo
 /.config/epdfview/main.conf
 /.config/qpdfview/qpdfview.conf
@@ -27,6 +26,8 @@ history
 .gnus.el
 /.#.gitignore
 /.#.pentadactylrc
+/Zettelkasten/.#Software.org
+/Zettelkasten/zettelkasten.org.orig
 /.emms-cache-b
 /.config/bluewho/settings.conf
 /.kde/cache-florian-ThinkPad-X121e
@@ -49,3 +50,5 @@ history
 /.kde/share/config/phonondevicesrc
 /.kde/socket-florian-ThinkPad-X121e
 /.kde/tmp-florian-ThinkPad-X121e
+.pentadactyl/info/default/comand-history
+.pentadactyl/info/default/register-ring

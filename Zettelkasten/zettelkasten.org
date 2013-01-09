@@ -693,6 +693,10 @@ also startzustand | "search" | replace | sprung | nächster zustand
 \subsection{Aufgabe 30}
 #+END_SRC
 
+#+BEGIN_SRC aufgabe30
+[[/home/florian/Zettelkasten/zettelkasten.org_20130108_162840_8888-SE.png]]
+#+END_SRC
+
 Ausführlich kommentierte Turingmaschine angeben
 Vorzeichenzahl => Zweierkomplement
 (Vorzeichen = 1 => jedes andere Bit umdrehen, dann 1 addieren)
@@ -717,6 +721,11 @@ Vorzeichenzahl => Zweierkomplement
 #+BEGIN_SRC latex :tangle th-loesung-10-.tex
 \subsection{Aufgabe 31}
 #+END_SRC
+
+#+BEGIN_SRC aufgabe31
+
+#+END_SRC
+
 
 Loop Programm zur Berechnung von Signumfunktion:
 sg: 0 bleibt 0, 1 wenn größer 0  (nur natürliche Zahlen)
