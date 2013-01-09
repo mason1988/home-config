@@ -57,3 +57,4 @@ history
 /.config/nautilus/desktop-metadata
 /.xinput.d/de_DE
 /tasta_stuff/pair_keyboard.sh
+/.#.emacs
