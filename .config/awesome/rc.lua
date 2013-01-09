@@ -200,7 +200,7 @@ root.buttons(awful.util.table.join(
 globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
-    awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
+    awful.key({ modkey,           }, ".", awful.tag.history.restore),
 
     awful.key({ modkey,           }, "j",
         function ()
@@ -244,7 +244,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "m", function () rodentbane.start()	        end),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(layouts, -1) end),
 
-   awful.key({ modkey, "Control" }, "i", awful.client.restore),
+   awful.key({ modkey, "Shift" }, ",", awful.client.restore),
 
 --- custom keys
 ---- muss für jeden Rechner separat behandelt werden
@@ -277,7 +277,7 @@ clientkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end),
     awful.key({ modkey,           }, "o",      awful.client.movetoscreen                        ),
     awful.key({ modkey, "Shift"   }, "r",      function (c) c:redraw()                       end),
-    awful.key({ modkey,           }, "c",      function (c) c.minimized = true               end))
+    awful.key({ modkey,           }, ",",      function (c) c.minimized = true               end))
 
 -- Compute the maximum number of digit we need, limited to 9
 keynumber = 0
