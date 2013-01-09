@@ -242,8 +242,6 @@
 (global-set-key (kbd "C-ö m h") 'magit-push)
 (global-set-key (kbd "C-ö m s") 'magit-status)
 
-
-
 (add-to-list 'load-path "~/.emacs.d/w3m/")
 (require 'w3m-load)
 
@@ -463,14 +461,19 @@
    ("j" "Journal" entry (file+datetree "~/org/journal.org")
         "* %?\nEntered on %U\n  %i\n  %a")))
 (define-key global-map (kbd "C-ö ä") 'magpie-expand)
+(require 'flosub)
 (define-key global-map (kbd "C-ä ö") 'flosub)
 
 ;; fixes für synergy
 (global-set-key (kbd "C-#") (lookup-key global-map (kbd "C-ü")))
+(add-hook 'org-mode-hook (lambda() (define-key (current-local-map) (kbd "C-#") (lookup-key global-map (kbd "C-ü")))))
 (global-set-key (kbd "C-6") (lookup-key global-map (kbd "C-ö")))
 (global-set-key (kbd "C-|") (lookup-key global-map (kbd "C-ä")))
 ;; ende fixes für synergy
 
+(global-set-key (kbd "M-w") 'bury-buffer)
+
+;; test der vim shortcuts
 (define-key evil-normal-state-map (kbd "ü") (lookup-key global-map (kbd "C-ü")))
 (define-key evil-normal-state-map (kbd "ö") (lookup-key global-map (kbd "C-ö")))
 (define-key evil-normal-state-map (kbd "ä") (lookup-key global-map (kbd "C-ä")))

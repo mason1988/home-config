@@ -74,3 +74,5 @@
       (setq flosub-exp-st (point))
       (insert flosub-tar-str)
       (setq flosub-exp-end (point)))))
+
+(provide 'flosub)

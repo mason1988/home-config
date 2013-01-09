@@ -192,6 +192,11 @@ http://orgmode.org/manual/Template-expansion.html#Template-expansion
 	    Zeilennummern möglich, geht aber auch +2 = relativ zu cur-pos
 	    oder anders:
 	    :g/^test/s/foo/bar/g  nur zeilen die mit test anfangen
+	    
+
+	    \( \) macht aus nem Bereich ne Backreferenz
+	    \1 matched die nummeriert, & matched das ganze Teil
+	    
 ** Mehrfachmanipulation
 v -> visual, V -> visual zeile, ctrl v -> block
 dann mit i,a,I,A usw. editieren (nach enter bei allen zeilen)
@@ -287,6 +292,13 @@ M-a markiert alle Einträge !!!
    + columnfilling => zeilenumbruch im Buffer
      => auto-fill-mode bricht automatisch um
      => set-fill-column setzt die max. Zeichenanzahl
+* Latex
+** arrays
+$\begin{array}{ccc}
+q_0 & q_1 & q_2 \\
+q_0 & q_1 & q_2 \\
+q_0 & q_1 & q_2 \\
+$\end{array}
 * install/make kram
 1. ./configure
 2. make
@@ -1742,6 +1754,8 @@ window-text-change-functions
         geht bei vorherigem paste alle
         elemente des kill-rings durch 
 	(kill-ring speichert neue pos)
+- C-ö ä       :: magpie expand (beginnt mit , und dann akronyme)
+- C-ä ö       :: flosub, entweder aktuelles wort (ab leer oder \n) oder markierung
 ** sprünge
 - g ;         :: springe zu letzter veränderung
 - C-ö n/r     :: next/prev Empty Line
@@ -1753,7 +1767,7 @@ window-text-change-functions
 - C-M-n       :: jump up
 ** Snippets
 - C-ä n       :: Neues Snippet
-- C-ä q       :: Snippet Buffer laden
+- C-c C-c     :: Snippet Buffer laden
 - C-ä f       :: neues Snippet aus Content
 - C-ä g       :: Platzhalter erstellen (für Oneshot Snippet)
 - C-ä h       :: Oneshot Snippet (erstellen oder einsetzen)
@@ -1778,6 +1792,7 @@ window-text-change-functions
 - spc         :: select Popup Window
 - e           :: show messages
 - C-t C-u ... :: zwingt das Fenster zum öffnen in popwin
+
 - C-c b       :: view Buffer other window
 - C-x f       :: find file other window
 - C-ö b       :: display buffer
@@ -1815,4 +1830,3 @@ window-text-change-functions
     u         :: unstage
     c C-c C-c :: commit, - absenden
     ll        :: log
-		 
