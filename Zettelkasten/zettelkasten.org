@@ -710,8 +710,9 @@ Vorzeichenzahl => Zweierkomplement
 => wenn erstes Zeichen 0 -> tue nichts
 => wenn erstes Zeichen 1 -> behalte 1, drehe jedes zeichen um, und addiere 1
 
+#+BEGIN_SRC latex :tangle th-loesung-10.tex
 
-
+#+END_SRC
 
 *** Aufgabe 31
 #+BEGIN_SRC latex :tangle th-loesung-10-.tex

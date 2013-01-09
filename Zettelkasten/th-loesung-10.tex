@@ -1,0 +1,58 @@
+
+\documentclass[11pt]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath}
+\usepackage{verbatim}
+\usepackage{color}
+\usepackage{geometry}
+\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
+\usepackage{amsthm}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+
+%\includegraphics{?} setzt bild ein
+%\ref{labelname} erstellt link zu labelname
+%\label{labelname} kann einfach irgendwo drangesetz werden
+
+\newtheorem{defi}{Definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{nota}{Notation}
+\newtheorem{prop}{Proposition}
+\newtheorem{satz}{Satz}
+\newtheorem{umf}{Umformung}
+
+\newenvironment{beweis}{\par\begingroup%
+\settowidth{\leftskip}{\textsc{Beweis:~}}%
+\noindent\llap{\textsc{Beweis:~}}}{\hfill$\Box$\par\endgroup}
+
+\renewcommand{\baselinestretch}{1}
+\newcommand{\words}{\Sigma^* \backslash \{\epsilon\}}
+\newcommand{\etrans}[1]{\bar{\delta}(#1)}
+\renewcommand{\P}{\mathbb{P}}
+
+\title{Zettel 10}
+\author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
+%\date{} % Activate to display a given date or no date (if empty),
+% otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+
+\subsection{Aufgabe 30}
+
+
+
+\a_1 := X_2 := 0
+\a_2 := X_3 := 0
+\a_3 := loop X_1(X_2 = X_3 + 1)
+[[\a_1]]{(3)}(\a_1,\a_2,\a_3) = [[\a_1 := X_2 := 0]]^{(3)}(\a_1,\a_2,\a_3)
+    = (0,\a_2,\a_3)
+
+[[\a_2]]{(3)}(\a_1,\a_2,\a_3) = [[\a_2 := X_3 := 0]]^{(3)}(\a_1,\a_2,\a_3)
+    = (\a_1,0,\a_3)
+
+[[\a_3]]{(3)}(\a_1,\a_2,\a_3) = [[loop X_1(X_2 := X_3 + 1)]]^{(3)}(\a_1,\a_2,\a_3)
+    = ([[X_2 := X_3 + 1]]^{(3)})^{\a_1}(\a_1,\a_2,\a_3)
+    = (\a_1, \a_2 , \a_2 + \a_1)
+
+\subsection{Aufgabe 32}

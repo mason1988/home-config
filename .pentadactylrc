@@ -8,3 +8,4 @@ set guioptions=ns
 set hintkeys=uiaeosnrtdxvlchgfq
 set showtabline=never
 " vim: set ft=pentadactyl:
+

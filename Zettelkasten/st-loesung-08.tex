@@ -93,7 +93,8 @@ Für Unabhängigkeit müsste gelten: $\mathbb{P}([X+Y]*[X-Y]) = \mathbb{P}(X+Y)*
 Es gelte $\mathbb{P}(z) = \begin{cases} 1 &\mbox{falls } z=-1 \\ 0 &\mbox{sonst} \end{cases}$
 \begin{tabbing}
 Sei X = 0 und Y = 1 \=$\Rightarrow \mathbb{P}(X^2-Y^2) = \mathbb{P}(-1) = 1$ \\
-\> $\Rightarrow \mathbb{P}(X+Y)*\mathbb{P}(X-Y) = \mathbb{P}(1)*\mathbb{P}(-1) = 0*1 = 0 \not = 1$ 
+\> $\Rightarrow \mathbb{P}(X+Y)*\mathbb{P}(X-Y) = \mathbb{P}(1)*\mathbb{P}(-1) = 0*1 = 0 \not = 1$
+
 \end{tabbing}
 $\Rightarrow$ in diesem Beispiel sind die Zufallsvariablen X+Y und X-Y zwar unkorelliert (Kovarianz ist 0) aber nicht unabhängig.
 
@@ -150,5 +151,17 @@ Für den Spieler gibt es beim ersten Schritt also 3 Möglichkeiten: Tor 1, 2 ode
 Falls der Spieler Tor 2 oder 3 wählt, so würde er beim wechsel auf der richtigen Tür landen und gewinnen. \\
 Nur bei der Wahl von Tor 1 würde er verlieren, so dass sich als Erfolgswahrscheinlichkeit $\frac{2}{3}$ ergibt. \\
 Analog dazu liegt die Erfolgswahrscheinlichkeit bei der "nie wechseln Strategie" nur bei $\frac{1}{3}$.
+
+\subsection{Aufgabe 6}
+
+Sei A das Ereigniss einer gleichen Dna und B eines positives Tests, sowie A' und B' jeweils das Gegenteil.\\
+Es gilt: $P(A) = \frac{1}{10^6} \Rightarrow \frac{A'} = \frac{999999}{10^6}$ \\
+$P(B | A) = 1$ und $P(B | A') = \frac{1}{10^5}$ \\
+$P(B) = P(B \cap A) + P(B \cap A') = P(B|A) * P(A) + P(B|A') * P(A')$ \\
+$= \frac{1}{10^6} + \frac{000000}{10^{11}} = \frac{100000 + 999999}{10^{11}}$ \\
+$\frac{1099999}{10^{11}} \approx \frac{11}{10^6}$ \\ 
+$\Rightarrow P(A | B) = \frac{P(B|A) * P(A)}{P(B)} = \frac{1 * \frac{1}{10^6}}{\frac{10}{10^6}} = \frac{1}{11}$ \\
+Die Wahrscheinlichkeit dafür, dass das DNA Profil eines zufällig getestetes Menschen, mit positivem Testergebniss, 
+tatsächlich mit dem DNA Profil der Probe vom Tatort übereinstimmt, liegt also bei grade mal $\frac{1}{11}$ \\
 
 \end{document}
