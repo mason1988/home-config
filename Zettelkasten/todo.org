@@ -175,8 +175,59 @@ da sie ja sowies zusammen bearbeitet werden.
 	
 
 
+* interessanter Kram
+** tiling windowmanager
+*** notion wm / stump wm
+*** euclid wm
+*** lunchbox wm 
+    hat z.B. alternativen ansatz für tabs
+*** plwm
+    toolkit um mit python nen windowmanager zu entwickeln
+
+*** clfswm (kein reiner tiling manager, dafür common lisp)
+*** xwem
+** tiling in non tiling window managern (software)
+   z.B. in fluxbox (+tabs)
+*** stiler
+*** pytyle
+*** wumwum 
+    - eher weniger verlocend im moment
+*** PyWO
+** die ganzen installierten sachen auf dem laptop
+** im alten my-keymaps sehen, was noch an plugins benutzt wurde
+** alternative rc.lua suchen
+** alternative .emacs suchen
+** ubiquity
+   einfach mal testen
+
+** weitere pentadactyl shortcuts/befehle
+** vimperator addons sammeln
+** kwin (kde window manager) unterstützt tabbing
+** slime installieren und einrichten
+
 * Todo-Eingang
 ** TODO git: leere commits abschicken
 ** TODO git: magit-commit-push kombinieren
 ** TODO git: merge mit magit 
 ** TODO Screenshots per Tastatur
+** TODO xorg wieder ordentlich booten auf laptop
+   davon abhängig, ob tastatur separat gefixt werden muss
+** TODO bluetooth pairing richtig einrichten
+** TODO zusätzliche foldingsyntax / elemente einführen?
+   vor allem kürzer als diese begin, end dinger
+
+** TODO mehrere instanzen von zathura / fenster / buffer etc?
+** TODO completion in zathura umkonfigurieren
+   - navigation mit pfeiltasten in resultaten
+   - anzeigen aller dokumente (auch nicht pdf's)
+   - fuzzy-matching / plugins?
+** TODO auto nachrichten in git commits
+** TODO Suchmaschine(n) für Quellcodes
+** TODO AwesomeWm Shortcuts
+*** TODO Ein/Ausblenden von Fenstern logischer legen
+*** TODO jeweils recent Sprung für Fenster und tag (awesomewm)
+    - im Moment win+escape und win+tab aber das geht auch besser
+
+*** TODO verschieben/retaggen von Fenstern in awesom wm
+*** TODO Firefox Zwang auf web lösen
+** TODO ansatz für tabs in awesome wm formulieren

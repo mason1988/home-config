@@ -1,4 +1,6 @@
 * copy and paste
+(yank in emacs = paste)
+
 - "+ vorgeschaltet, präzisiert das clipboard (register)
 - y => kopiert in kill ring
 - p => pastet aus kill ring
@@ -8,6 +10,7 @@
 - C-Shift-v paste im Terminal
 - "+ ;y kopiert Link in pentadactyl
 - C-einfügen kopieren durch Emacs
+
 * generelle Software
  + aumix oder alsamixer für soundsteuerung
  + alternativ einfach sound bei kupfer
@@ -50,18 +53,37 @@ xvkbd -xsendevent -no-sync -delay 20 -text "-"
 xbindkeys --defaults > /home/florian/.xbindkeysrc
 xbindkeys-config    <= und da den xvbkd kram einstellen
 * Orgmode
-** shortcuts-orgmode 						  :shortcuts:
-    C-c C-c         Tags zu Unterpunkt verwalten / Latex lösen
-   C-c C-x C-l     Latex Code an aktueller Stelle übersetzen
-   my-org-screenshot Screenshot-Ausschnitt erstellen und einfügen
-   Latex Org Mode oder sowas aktiviert lustige makros
-   pattern matching von vim funktioniert zum navigieren!!
+** org-protocol
+über emacsclient können auch direkt per konsole
+solche Aufrufe gemacht werden
+[[http://orgmode.org/worg/org-contrib/org-protocol.html][hauptseite]]
+*** Browser
+javascript:location.href='org-protocol://capture://x/'+
+      encodeURIComponent(location.href)+'/'+
+      encodeURIComponent(document.title)+'/'+
+      encodeURIComponent(window.getSelection())
 
-   C-c C-n /p für nächsten /vorherigen Header
-   C-c C-u um wieder zum Header zu kommen
-   C-k / C-j nächster / vorheriger Header auf selber Stufe
-   
-   C-n    dynamic extension !!!
+Sendet diese Daten an Emacs Template, (hier konkret x aber kann 
+man auch weglassen)
+*** Emacs
+vorallem musste erstmal der server gestartet werden
+
+(setq org-capture-templates
+      (quote
+       (("w"
+         "Default template"
+         entry
+         (file+headline "~/Zettelkasten/zettelkasten.org" "Notes")
+         "* %^{Title}\n\n  Source: %u, %c\n\n  %i"
+         :empty-lines 1)
+        ;; ... more templates here ...
+        )))
+
+- Ersetzt templates durch liste mit diesem Template
+- Name Default template mit key w
+- Subtree mit manuell eingegebenen Titel, unter Überpunkt
+  Notes mit aktuellem Datum und dem Titel der source
+- überall ne leere zeile dazwischen
 ** inline bilder
 *** link_linie entfernen
 (set-face-underline-p 'org-link niPl)
@@ -147,37 +169,6 @@ http://orgmode.org/manual/Template-expansion.html#Template-expansion
 ** refiling
 - Das capture oder node wird an anderen header angehangen
 (standardmäßig wird nur die oberste ebene benutzt
-* org-protocol
-über emacsclient können auch direkt per konsole
-solche Aufrufe gemacht werden
-[[http://orgmode.org/worg/org-contrib/org-protocol.html][hauptseite]]
-** Browser
-javascript:location.href='org-protocol://capture://x/'+
-      encodeURIComponent(location.href)+'/'+
-      encodeURIComponent(document.title)+'/'+
-      encodeURIComponent(window.getSelection())
-
-Sendet diese Daten an Emacs Template, (hier konkret x aber kann 
-man auch weglassen)
-** Emacs
-vorallem musste erstmal der server gestartet werden
-
-(setq org-capture-templates
-      (quote
-       (("w"
-         "Default template"
-         entry
-         (file+headline "~/Zettelkasten/zettelkasten.org" "Notes")
-         "* %^{Title}\n\n  Source: %u, %c\n\n  %i"
-         :empty-lines 1)
-        ;; ... more templates here ...
-        )))
-
-- Ersetzt templates durch liste mit diesem Template
-- Name Default template mit key w
-- Subtree mit manuell eingegebenen Titel, unter Überpunkt
-  Notes mit aktuellem Datum und dem Titel der source
-- überall ne leere zeile dazwischen
 * Vim
 ** Search/Replace                                                :shortcuts:
 	    =Änderungen werden komplett live gepreviewed=
@@ -202,244 +193,6 @@ sudo chmod -v -R ouag+rw *     alles per chmod freigeben
      im Text auch in genau diesen Richtungen !! )
    - Ctrl+x Ctrl+n und Ctrl+x Ctrl+p um ganze 
      Zeile so zu vervollständigen
-* elisp
-** Funktionen für Elisp
-    - (global-set-key [key] 'func)
-        - statt [key] kommen auch strings wie "\C-r" "\M-r" usw. in Frage
-        - andererseits geht auch (kbd "C-r")
-    - count-lines-page
-
-
-*** jump to empty line
-**** Next Line Code
-(defun jumpToNextEmpty ()
-  (interactive)
-  (let (var1 moreLines startpoint)
-    (setq moreLines (> 2 1))
-    (setq startpoint (point))
-    (while moreLines
-       ;(setq moreLines (= 0 (forward-line 1)))
-       ;(forward-line -1)
-
-       ;(message "%s" moreLines)
-
-       ;(setq moreLines (next-line 1))
-       ;(setq moreLines (= 0 (next-line 1)))
-       (if moreLines
-	  (let (p1 p2)
-	    (next-line 1)
-	    (setq p1 (line-beginning-position))
-	    (setq p2 (line-end-position))
-
-	    (when (>= p2 (buffer-size))
-	      (setq moreLines (< 2 1))
-	      (goto-char startpoint)
-	      )
-
-	    (setq var1 (buffer-substring-no-properties p1 p2))
-	    (when (string-match "^[ \t]*$" var1)
-	       (message var1)
-	       (setq moreLines (< 2 1))
-	       )
-	   )
-	 )
-
-       )
-    )
- )
-**** Prev Line Code
-(defun jumpToPrevEmpty ()
-  (interactive)
-  (let (var1 moreLines startpoint)
-    (setq moreLines (> 2 1))
-    (setq startpoint (point))
-    (while moreLines
-       (if moreLines
-	  (let (p1 p2)
-	    (next-line -1)
-	    (setq p1 (line-beginning-position))
-	    (setq p2 (line-end-position))
-
-	    (when (<= p1 1)
-	      (setq moreLines (< 2 1))
-	      (goto-char startpoint)
-	      (message "no empty lines found")
-	      )
-
-	    (setq var1 (buffer-substring-no-properties p1 p2))
-	    (when (string-match "^[ \t]*$" var1)
-	       (message var1)
-	       (setq moreLines (< 2 1))
-	       )
-	   )
-	 )
-       )
-    )
- )
-*** unique filename
-(setq filename
-	(concat
-	 (make-temp-name
-	  (concat 
-		  ""
-		  (format-time-string "%Y%mad-%H%M%S"))
-*** write file
-(with-temp-buffer
-  (insert (string-as-multibyte "\\test bla"))
-  (insert (string-as-multibyte (concat "a" "b" "c")))
-  (insert var1)
-  (write-region (point-min) (point-max) filename))
-*** shell-command
-(shell-command
-  (concat "latex " filename ".tex"))
-*** my-make-latex
-(defun my-make-latex ()
-  "Convert Region to a Latex image"
-  (interactive)
-  (setq filename
-	(concat
-	 (make-temp-name
-	  (concat 
-		  ""
-		  (format-time-string "%Y%mad-%H%M%S")))""))
-
-  (setq stuff (buffer-substring (region-beginning)(region-end)))
-  
-  (with-temp-buffer
-    
-    (insert (string-as-multibyte "\\documentclass[11pt]{standalone}"))
-    (insert (string-as-multibyte "\\usepackage[utf8]{inputenc}"))
-    (insert (string-as-multibyte "\\usepackage{amssymb, amsmath}"))
-    (insert (string-as-multibyte "\\begin {document}"))
-    (insert (string-as-multibyte "$"))
-
-    (insert stuff)
-
-    (insert (string-as-multibyte "$"))
-    (insert (string-as-multibyte "\\end{document}"))
-
-    (write-region (point-min)(point-max) (concat filename ".tex")))
-    
-  (shell-command
-   (concat "latex " filename ".tex"))
-
-  (shell-command
-   (concat "dvipng " filename ".dvi -o " filename ".png"))
-
-  (insert (concat "[[file:"filename ".png]]"))
-  (iimage-recenter)
-)
-(provide 'my-make-latex)
-
-*** get selection/region
-(setq stuff (buffer-substring (region-beginning)(region-end)))
-** Funktionsaufruf(shortcut) durch neuen ersetzen(key)
-(define-key (current-global-map) [remap kill-line] 'my-homemade-kill-line)
-** hartnäckige Bindings überschreiben
-die Minormodes habflorianen eine der höchster Prioritäten beim nachschlagen der Keys
--> der jeweilige evil minor mode bietet sich an
-Generell gilt: (current-local-map) <= ist ne funktion
-Wenn einige Modes ihre Bindings aber trotzdem noch drüberschreiben, muss man sich
-selbst an die Hook ketten:
-(add-hook 'evil-insert-state-entry-hook
- (lambda ()
- (define-key evil-insert-state-local-map "\M-j" 'evil-window-next)
- (define-key evil-insert-state-local-map "\M-k" 'evil-window-prev)
- )
-)
-** bedingung
-(when (string-match "^ *$" test-str)
-   (message "cool")) 
-** eine Zeile vorwärts
-(forward-line 1)   ; oder auch -1
-** hooks
-*** Syntax
-(add-hook 'latex-mode-hook (lambda () (auto-fill-mode -1)))
-*** Standard Hooks
-activate-mark-hook
-deactivate-mark-hook
-after-change-functions
-before-change-functions
-first-change-hook
-after-change-major-mode-hook
-change-major-mode-after-body-hook
-after-init-hook
-before-init-hook
-emacs-startup-hook
-after-insert-file-functions
-write-region-annotate-functions
-write-region-post-annotation-function
-after-make-frame-functions
-before-make-frame-hook
-after-save-hook
-before-save-hook
-write-contents-functions
-write-file-functions
-after-setting-font-hook
-    Hook run after a frame's font changes.
-auto-save-hook
-before-hack-local-variables-hook
-hack-local-variables-hook
-buffer-access-fontify-functions
-buffer-list-update-hook
-    Hook run when the buffer list changes.
-buffer-quit-function
-    Function to call to “quit” the current buffer.
-change-major-mode-hook
-command-line-functions
-delayed-warnings-hook
-    The command loop runs this soon after post-command-hook (q.v.).
-delete-frame-functions
-delete-terminal-functions
-display-buffer-function
-pop-up-frame-function
-special-display-function
-split-window-preferred-function
-echo-area-clear-hook
-find-file-hook
-find-file-not-found-functions
-font-lock-extend-after-change-region-function
-font-lock-extend-region-functions
-font-lock-fontify-buffer-function
-font-lock-fontify-region-function
-font-lock-mark-block-function
-font-lock-unfontify-buffer-function
-font-lock-unfontify-region-function
-fontification-functions
-frame-auto-hide-function
-kill-buffer-hook
-kill-buffer-query-functions
-kill-emacs-hook
-kill-emacs-query-functions
-menu-bar-update-hook
-minibuffer-setup-hook
-minibuffer-exit-hook
-mouse-leave-buffer-hook
-    Hook run when about to switch windows with a mouse command.
-mouse-position-function
-post-command-hook
-pre-command-hook
-post-gc-hook
-post-self-insert-hook
-suspend-hook
-suspend-resume-hook
-suspend-tty-functions
-resume-tty-functions
-syntax-begin-function
-syntax-propertize-extend-region-functions
-syntax-propertize-function
-font-lock-syntactic-face-function
-temp-buffer-setup-hook
-temp-buffer-show-function
-temp-buffer-show-hook
-term-setup-hook
-window-configuration-change-hook
-window-scroll-functions
-window-size-change-functions
-window-setup-hook
-window-text-change-functions
-*** Org Mode Hooks
-[[http://orgmode.org/worg/org-configs/org-hooks.html]]
 * Emacs  
 ** shortcuts-emacs 						  :shortcuts:
     sudo chmod -v -R ouagrw . matched auch verstecktes
@@ -1621,27 +1374,29 @@ aber wieder alles änderungen in dem header => ficken sie sich
 ** trition
 ** pekwm
 
-* Python
-** Python (in Emacs)
-*** Rope
+
+* Coding
+** Python
+*** Python (in Emacs)
+**** Rope
 Rope dient dem Refactoring (umbenenenen, grundlegend semantik in
 Projekt erkennen und son Zeug). Auch anderer höherer Kram wie das
 generieren neuer Funktionen usw. sind möglich. Meine fresse, teilweise
 echt geile scheiße dabei.
-*** Ropemacs
+**** Ropemacs
 Bietet interaktive Schnittstellen in Emacs um Rope-refactorings
 durchzuführen. Greift dabei auf Pymacs zurück, mit welchem dann
 Ropemode Schnittstellen verwendet werden, die dann Rope benutzen.
 Ist selbst ebenfalls nur Python => benötigt selbst auch schon
 Pymacs.
-*** Pymacs
+**** Pymacs
 Stellt die Verbindung zwischen Python und ELisp her, in dem die
 wichtigsten Funktionalitäten in Wrapper gepackt werden
-*** Ropemode
+**** Ropemode
 Eine Pythonbibliothek, die Schnittstellen zu Rope liefert (logischerweise
 über Python)
-** Python Generell
-*** Skriptansatz Automatisierung Ilias
+*** Python Generell
+**** Skriptansatz Automatisierung Ilias
 import re
 import mechanize
 br = mechanize.Browser()
@@ -1666,7 +1421,7 @@ for link in br.links(url_regex="file"):
         print "----"
 print "check2"
 
-*** Filemanagement
+**** Filemanagement
 # The built-in function `open` opens a file and returns a file object.
 
 # Read mode opens a file for reading only.
@@ -1712,8 +1467,238 @@ pass
 
 # There is also r+ (read and write) mode.
 
+** elisp
+*** jump to empty line
+**** Next Line Code
+(defun jumpToNextEmpty ()
+  (interactive)
+  (let (var1 moreLines startpoint)
+    (setq moreLines (> 2 1))
+    (setq startpoint (point))
+    (while moreLines
+       ;(setq moreLines (= 0 (forward-line 1)))
+       ;(forward-line -1)
 
+       ;(message "%s" moreLines)
 
+       ;(setq moreLines (next-line 1))
+       ;(setq moreLines (= 0 (next-line 1)))
+       (if moreLines
+	  (let (p1 p2)
+	    (next-line 1)
+	    (setq p1 (line-beginning-position))
+	    (setq p2 (line-end-position))
+
+	    (when (>= p2 (buffer-size))
+	      (setq moreLines (< 2 1))
+	      (goto-char startpoint)
+	      )
+
+	    (setq var1 (buffer-substring-no-properties p1 p2))
+	    (when (string-match "^[ \t]*$" var1)
+	       (message var1)
+	       (setq moreLines (< 2 1))
+	       )
+	   )
+	 )
+
+       )
+    )
+ )
+**** Prev Line Code
+(defun jumpToPrevEmpty ()
+  (interactive)
+  (let (var1 moreLines startpoint)
+    (setq moreLines (> 2 1))
+    (setq startpoint (point))
+    (while moreLines
+       (if moreLines
+	  (let (p1 p2)
+	    (next-line -1)
+	    (setq p1 (line-beginning-position))
+	    (setq p2 (line-end-position))
+
+	    (when (<= p1 1)
+	      (setq moreLines (< 2 1))
+	      (goto-char startpoint)
+	      (message "no empty lines found")
+	      )
+
+	    (setq var1 (buffer-substring-no-properties p1 p2))
+	    (when (string-match "^[ \t]*$" var1)
+	       (message var1)
+	       (setq moreLines (< 2 1))
+	       )
+	   )
+	 )
+       )
+    )
+ )
+*** unique filename
+(setq filename
+	(concat
+	 (make-temp-name
+	  (concat 
+		  ""
+		  (format-time-string "%Y%mad-%H%M%S"))
+*** write file
+(with-temp-buffer
+  (insert (string-as-multibyte "\\test bla"))
+  (insert (string-as-multibyte (concat "a" "b" "c")))
+  (insert var1)
+  (write-region (point-min) (point-max) filename))
+*** shell-command
+(shell-command
+  (concat "latex " filename ".tex"))
+*** my-make-latex
+(defun my-make-latex ()
+  "Convert Region to a Latex image"
+  (interactive)
+  (setq filename
+	(concat
+	 (make-temp-name
+	  (concat 
+		  ""
+		  (format-time-string "%Y%mad-%H%M%S")))""))
+
+  (setq stuff (buffer-substring (region-beginning)(region-end)))
+  
+  (with-temp-buffer
+    
+    (insert (string-as-multibyte "\\documentclass[11pt]{standalone}"))
+    (insert (string-as-multibyte "\\usepackage[utf8]{inputenc}"))
+    (insert (string-as-multibyte "\\usepackage{amssymb, amsmath}"))
+    (insert (string-as-multibyte "\\begin {document}"))
+    (insert (string-as-multibyte "$"))
+
+    (insert stuff)
+
+    (insert (string-as-multibyte "$"))
+    (insert (string-as-multibyte "\\end{document}"))
+
+    (write-region (point-min)(point-max) (concat filename ".tex")))
+    
+  (shell-command
+   (concat "latex " filename ".tex"))
+
+  (shell-command
+   (concat "dvipng " filename ".dvi -o " filename ".png"))
+
+  (insert (concat "[[file:"filename ".png]]"))
+  (iimage-recenter)
+)
+(provide 'my-make-latex)
+
+*** get selection/region
+(setq stuff (buffer-substring (region-beginning)(region-end)))
+*** Funktionsaufruf(shortcut) durch neuen ersetzen(key)
+(define-key (current-global-map) [remap kill-line] 'my-homemade-kill-line)
+*** hartnäckige Bindings überschreiben
+die Minormodes habflorianen eine der höchster Prioritäten beim nachschlagen der Keys
+-> der jeweilige evil minor mode bietet sich an
+Generell gilt: (current-local-map) <= ist ne funktion
+Wenn einige Modes ihre Bindings aber trotzdem noch drüberschreiben, muss man sich
+selbst an die Hook ketten:
+(add-hook 'evil-insert-state-entry-hook
+ (lambda ()
+ (define-key evil-insert-state-local-map "\M-j" 'evil-window-next)
+ (define-key evil-insert-state-local-map "\M-k" 'evil-window-prev)
+ )
+)
+*** bedingung
+(when (string-match "^ *$" test-str)
+   (message "cool")) 
+(if (= x y) (message "true") (message "false"))
+*** eine Zeile vorwärts
+(forward-line 1)   ; oder auch -1
+*** hooks
+**** Syntax
+(add-hook 'latex-mode-hook (lambda () (auto-fill-mode -1)))
+**** Standard Hooks
+activate-mark-hook
+deactivate-mark-hook
+after-change-functions
+before-change-functions
+first-change-hook
+after-change-major-mode-hook
+change-major-mode-after-body-hook
+after-init-hook
+before-init-hook
+emacs-startup-hook
+after-insert-file-functions
+write-region-annotate-functions
+write-region-post-annotation-function
+after-make-frame-functions
+before-make-frame-hook
+after-save-hook
+before-save-hook
+write-contents-functions
+write-file-functions
+after-setting-font-hook
+    Hook run after a frame's font changes.
+auto-save-hook
+before-hack-local-variables-hook
+hack-local-variables-hook
+buffer-access-fontify-functions
+buffer-list-update-hook
+    Hook run when the buffer list changes.
+buffer-quit-function
+    Function to call to “quit” the current buffer.
+change-major-mode-hook
+command-line-functions
+delayed-warnings-hook
+    The command loop runs this soon after post-command-hook (q.v.).
+delete-frame-functions
+delete-terminal-functions
+display-buffer-function
+pop-up-frame-function
+special-display-function
+split-window-preferred-function
+echo-area-clear-hook
+find-file-hook
+find-file-not-found-functions
+font-lock-extend-after-change-region-function
+font-lock-extend-region-functions
+font-lock-fontify-buffer-function
+font-lock-fontify-region-function
+font-lock-mark-block-function
+font-lock-unfontify-buffer-function
+font-lock-unfontify-region-function
+fontification-functions
+frame-auto-hide-function
+kill-buffer-hook
+kill-buffer-query-functions
+kill-emacs-hook
+kill-emacs-query-functions
+menu-bar-update-hook
+minibuffer-setup-hook
+minibuffer-exit-hook
+mouse-leave-buffer-hook
+    Hook run when about to switch windows with a mouse command.
+mouse-position-function
+post-command-hook
+pre-command-hook
+post-gc-hook
+post-self-insert-hook
+suspend-hook
+suspend-resume-hook
+suspend-tty-functions
+resume-tty-functions
+syntax-begin-function
+syntax-propertize-extend-region-functions
+syntax-propertize-function
+font-lock-syntactic-face-function
+temp-buffer-setup-hook
+temp-buffer-show-function
+temp-buffer-show-hook
+term-setup-hook
+window-configuration-change-hook
+window-scroll-functions
+window-size-change-functions
+window-setup-hook
+window-text-change-functions
+**** Org Mode Hooks
+[[http://orgmode.org/worg/org-configs/org-hooks.html]]
 * Shortcutliste
 - C-c C-x C-i :: Clock in
 - C-c C-x C-o :: Clock out
