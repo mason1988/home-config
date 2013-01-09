@@ -470,3 +470,7 @@
 (global-set-key (kbd "C-6") (lookup-key global-map (kbd "C-ö")))
 (global-set-key (kbd "C-|") (lookup-key global-map (kbd "C-ä")))
 ;; ende fixes für synergy
+
+(define-key evil-normal-state-map (kbd "ü") (lookup-key global-map (kbd "C-ü")))
+(define-key evil-normal-state-map (kbd "ö") (lookup-key global-map (kbd "C-ö")))
+(define-key evil-normal-state-map (kbd "ä") (lookup-key global-map (kbd "C-ä")))

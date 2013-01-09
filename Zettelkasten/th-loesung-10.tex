@@ -38,21 +38,49 @@
 \begin{document}
 \maketitle
 
-\subsection{Aufgabe 30}
+\subsection*{Aufgabe 30}
 
+$A = (Q, \Sigma, \Gamma, \delta, q_0, \bar{b}, F)$ \\
+$Q = \{q_0, q_1, q_f \}$ \\
+$\Sigma = \{0, 1\}$ \\
+$\Gamma = \{0, 1, \bar{b} \}$ \\
+$F = \{q_f\}$ \\
+$\delta:$ \\
+$\begin{array}{cccccc}
+q_0 & 0 & 0 & N & q_f & \mbox{ wenn erstes Zeichen 0: 2erkomplement und Binär identisch, also fertig } \\
+q_0 & 1 & 1 & R & q_1 & \mbox{ Phase 1: jedes Bit (bis auf das erste) umdrehen } \\
+q_1 & 1 & 0 & R & q_1 & \mbox{ Phase 1: jedes Bit (bis auf das erste) umdrehen } \\
+q_1 & 0 & 1 & R & q_1 & \mbox{ Phase 1: jedes Bit (bis auf das erste) umdrehen } \\
+q_1 & \bar{b} & \bar{b} & L & q_2 & \mbox{ Phase 2: 1 addieren, also von Rechts nach Links } \\
+q_2 & 1 & 0 & L & q_2 & \mbox{ jedes Bit umdrehen, bis eine 0 gelesen wird } \\
+q_2 & 0 & 1 & N & q_f & \\ 
+\end{array}$
 
+\subsection*{Aufgabe 31}
 
-\a_1 := X_2 := 0
-\a_2 := X_3 := 0
-\a_3 := loop X_1(X_2 = X_3 + 1)
-[[\a_1]]{(3)}(\a_1,\a_2,\a_3) = [[\a_1 := X_2 := 0]]^{(3)}(\a_1,\a_2,\a_3)
-    = (0,\a_2,\a_3)
-
-[[\a_2]]{(3)}(\a_1,\a_2,\a_3) = [[\a_2 := X_3 := 0]]^{(3)}(\a_1,\a_2,\a_3)
-    = (\a_1,0,\a_3)
-
-[[\a_3]]{(3)}(\a_1,\a_2,\a_3) = [[loop X_1(X_2 := X_3 + 1)]]^{(3)}(\a_1,\a_2,\a_3)
-    = ([[X_2 := X_3 + 1]]^{(3)})^{\a_1}(\a_1,\a_2,\a_3)
-    = (\a_1, \a_2 , \a_2 + \a_1)
+\begin{tabbing}
+  $s_n = $\=$ $\underline{in}$ (X_1); $\underline{var}$(X_,X_);$ \\
+  \>$ X_2 = 0;$ \\
+  \>$ X_3 = 0;$ \\
+  \>$ $\underline{loop}$ X_1(X_2 = X_3 + 1);$ \\
+  \>$ $\underline{out}$ (X_2);$
+\end{tabbing}
+  
+  \vspace{0.5cm}
+  
+  $\alpha_1 := X_2 := 0$ \\
+  $\alpha_2 := X_3 := 0$ \\
+  $\alpha_3 := loop X_1(X_2 = X_3 + 1)$ \\
+  $[[\alpha_1]]{(3)}(\alpha_1,\alpha_2,\alpha_3) = [[\alpha_1 := X_2 := 0]]^{(3)}(\alpha_1,\alpha_2,\alpha_3)$ \\
+  $    = (0,\alpha_2,\alpha_3)$ \\[0.3cm]
+  
+  $[[\alpha_2]]{(3)}(\alpha_1,\alpha_2,\alpha_3) = [[\alpha_2 := X_3 := 0]]^{(3)}(\alpha_1,\alpha_2,\alpha_3)$ \\
+  $    = (\alpha_1,0,\alpha_3)$ \\[0.3cm]
+  
+  $[[\alpha_3]]{(3)}(\alpha_1,\alpha_2,\alpha_3) = [[loop X_1(X_2 := X_3 + 1)]]^{(3)}(\alpha_1,\alpha_2,\alpha_3)$ \\
+  $    = ([[X_2 := X_3 + 1]]^{(3)})^{\alpha_1}(\alpha_1,\alpha_2,\alpha_3)$ \\
+  $    = (\alpha_1, \alpha_2 , \alpha_2 + \alpha_1) $ \\[0.5cm]
 
 \subsection{Aufgabe 32}
+
+\end{document}

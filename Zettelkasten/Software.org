@@ -22,6 +22,20 @@
 * synergy
 ** keyboardlayout
 - nacktes setxkbmap beim client hilft
+** momentan funktionierendes Setup
+- alles ordentlich resettet
+- auf pc läuft neo mit manueller ladung
+- auf laptop eigentlich egal (setxkbmap, aber vorher mit altgr standard resettet)
+- mit synergy --help tool geladen, und dort alle fixes installiert
+*** entsprechende config
+ halfDuplexCapsLock = true
+                halfDuplexCapsLock = true
+                halfDuplexNumLock = true
+                halfDuplexScrollLock = true
+                xtestIsXineramaUnaware = true
+                switchCorners = none 
+                switchCornerSize = 0
+
 ** ServerConf
 #~/.synergy.conf
 section: screens
@@ -1700,6 +1714,7 @@ window-text-change-functions
 **** Org Mode Hooks
 [[http://orgmode.org/worg/org-configs/org-hooks.html]]
 * Shortcutliste
+** Org - Mode
 - C-c C-x C-i :: Clock in
 - C-c C-x C-o :: Clock out
 - C-c C-x C-c :: cancel Clock
@@ -1711,50 +1726,50 @@ window-text-change-functions
 - C-c C-c     :: Update für Ding unter Cursor
 - C-c C-x ;   :: Set (und start) Timer
 - C-c C-x e   :: set estimated effort time
-
 - C-c C-u     :: Sprung zum Header
 - C-j/C-k     :: auf einer Ebene bewegen
 - C-ö t       :: org tree to indirect buffer
 - C-c C-x C-l :: preview latex fragment (C-c C-c für undo)
 - C-ö D       :: display inline images
-- g ;         :: springe zu letzter veränderung
-
+- C-ä s       :: Screenshot erstellen und einsetzen
+- C-ä l       :: konvertiere zu Latex
+** Expansion/Completion
 - C-n,p       :: Evil Extension, zurück
 - C-x C-n,p   :: Evil complete line, zurück
-- M-/         :: Hippie expand
+- M-ö         :: Hippie expand
 - C-ä c       :: mögliche Completions anzeigen
-- C-ä w d/D   :: dedicate/undedicate window
-
-- C-x * c     :: öffnet calculator
-		 => eingabe in postfix/ergebnis paste mit y/close mit q
-
-- C-c b       :: view Buffer other window
-- C-x f       :: find file other window
-- C-ö b       :: display buffer
-- C-ö f       :: display file
+- C-p         :: evil-paste-pop
+        geht bei vorherigem paste alle
+        elemente des kill-rings durch 
+	(kill-ring speichert neue pos)
+** sprünge
+- g ;         :: springe zu letzter veränderung
 - C-ö n/r     :: next/prev Empty Line
 - C-{/}       :: next/prev regex
 - C-ö g/G     :: Vertikalsprung hoch/runter
-
+- M-ä         :: Cursor in Fenster springen lassen
+- C-x p ret   :: setze/entferne autonamedbookmark
+- C-x j n     :: cycle bookmarks current file
+- C-M-n       :: jump up
+** Snippets
 - C-ä n       :: Neues Snippet
 - C-ä q       :: Snippet Buffer laden
 - C-ä f       :: neues Snippet aus Content
 - C-ä g       :: Platzhalter erstellen (für Oneshot Snippet)
 - C-ä h       :: Oneshot Snippet (erstellen oder einsetzen)
-
-- C-ä k/K     :: encrypt/decrypt region
-- C-ä s       :: Screenshot erstellen und einsetzen
+** sonstiges
+- C-x * c     :: öffnet calculator
+		 => eingabe in postfix/ergebnis paste mit y/close mit q
 - C-ö d       :: doc-view-mode
-- C-ä l       :: konvertiere zu Latex
+- C-ä k/K     :: encrypt/decrypt region
+- S-c         :: minimize client
+- S-Shift-i   :: restore client
+- C-x s       :: save-some-buffers 
+- M-w         :: buffer back
+** Fenstermanagement
 - C-ä w s     :: Session speichern
 - C-ä w r     :: Session laden
 - C-ä w u     :: Winner undo
-- M-ä         :: Cursor in Fenster springen lassen
-
-- M-m         :: Helm: M-a = alle markieren
-- C-ö o       :: Helm Occur (akt. Buffer)
-- M-h M-x     :: Helm - M-x -> History usw.
-- C-ö s       :: Helm - do - grep
 - C-g / C-t 0 :: Popwin Fenster schließen
 - C-t         :: Popwin Keymap:
 - b           :: Popup Buffer
@@ -1763,11 +1778,21 @@ window-text-change-functions
 - spc         :: select Popup Window
 - e           :: show messages
 - C-t C-u ... :: zwingt das Fenster zum öffnen in popwin
+- C-c b       :: view Buffer other window
+- C-x f       :: find file other window
+- C-ö b       :: display buffer
+- C-ö f       :: display file
+- C-ä w d/D   :: dedicate/undedicate window
+** helm
+- M-m         :: Helm: M-a = alle markieren
+- C-ö o       :: Helm Occur (akt. Buffer)
+- M-h M-x     :: Helm - M-x -> History usw.
+- C-ö s       :: Helm - do - grep
 - C-ö k       :: helm show killring
 - C-ö h       :: helm apropos
 - C-ö i       :: Imenu (Header Übersicht und Sprung)
 - C-ö a       :: org-headlines (komplette übersicht)
-
+** emms
 - C-ö e n     :: emms-next
 - C-ö e p     :: emms-previous
 - C-ö e P     :: emms-pause
@@ -1776,11 +1801,13 @@ window-text-change-functions
 - C-ö e f     :: emms-add-find
 - C-ö e d     :: emms-add-directory-tree
 - C-ö e l     :: emms-playlist-mode-go
-
+** repeat
 - C-x z z...  :: repeat last emacs action
 - C-!         :: evil-normale-state (force)
 . @@          :: repeat last macro
-
+- C-x r       :: repeat
+- C-ä r       :: repeat
+** magit
 - C-ö m l     :: magit pull
 - C-ö m h     :: magit push
 - C-ö m s     :: magit status
@@ -1788,19 +1815,4 @@ window-text-change-functions
     u         :: unstage
     c C-c C-c :: commit, - absenden
     ll        :: log
-- C-p         :: evil-paste-pop
-        geht bei vorherigem paste alle
-        elemente des kill-rings durch 
-	(kill-ring speichert neue pos)
-
-- C-x p ret   :: setze/entferne autonamed bookmark
-- C-x j n     :: cycle bookmarks current file
-- C-M-n       :: jump up
-- C-x r       :: repeat
-
-- S-c         :: minimize client
-- S-Shift-i   :: restore client
-- C-ä r       :: repeat
-
-- C-x s       :: save-some-buffers 
-- M-w         :: buffer back
+		 

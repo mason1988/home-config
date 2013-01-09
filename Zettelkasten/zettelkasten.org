@@ -4,6 +4,7 @@
 
 #+TODO: TODO | DONE
 #+TODO: CANCELED | Restarted
+
 #+TODO: Zettel1 Zettel2 Zettel3 Zettel4 Zettel5 Zettel6 Zettel7 Zettel8 Zettel9 Zettel10 Zettel11 Zettel12 Zettel13 Zettel14
 
 * Zettelverwaltung
@@ -32,14 +33,13 @@ zur Mitte hin, steigt die Wahrscheinlichkeit (exponentiell)
 ***** Exponentialverteilung
 In eine Richtung entgegen unendlich steigt die Wahrscheinlichkeit
 ***** Binomialverteilung
-Gibt nur 2 Ergebnisse, auf die die Wahrscheinlichkeit verteilt wird
+      Gibt nur 2 Ergebnisse, auf die die Wahrscheinlichkeit verteilt wird
 ***** Poissonverteilung
       zur Mitte hin, steigt die Wahrscheinlichkeit. (nicht exponentiell => runder kopf
 ** Bedingter Erwartungswert
 A,B Ereignisse; Y Zufallvariable
 $P(A|B) = \frac{P(A \cap B)}{P(B)}$ Ws A wenn B bekannt
 $P(Y|B) = \frac{E(1_{B} * Y)}{P(B)}$
-
 [[docview:~/Dropbox/st/s0.pdf::1][Skript]]
 ** Zusammenhänge
 - Var(X) = Cov(X,X)
@@ -622,7 +622,7 @@ Beispieleingabe:
 x \in {L,R,N} => l = 1 nach link, ..., N = nichts
 
 Muster Automat:
-\script{A} := (Q, \{a,b,c\},\{a,b,c,A,B,C,\b\},\delta,q_0,\b,F)
+A := (Q, \{a,b,c\},\{a,b,c,A,B,C,\b\},\delta,q_0,\b,F)
 mit Q = \{q_0,q_b,q_c,q_?,q_l,q_t,q_f\} und F = \{q_f\}
 
 die deltas werden mit ner Tafel gesammelt:
@@ -690,7 +690,7 @@ also startzustand | "search" | replace | sprung | nächster zustand
 
 *** Aufgabe 30
 #+BEGIN_SRC latex :tangle th-loesung-10.tex
-\subsection{Aufgabe 30}
+\subsection*{Aufgabe 30}
 #+END_SRC
 
 #+BEGIN_SRC aufgabe30
@@ -714,19 +714,33 @@ Vorzeichenzahl => Zweierkomplement
 => wenn erstes Zeichen 0 -> tue nichts
 => wenn erstes Zeichen 1 -> behalte 1, drehe jedes zeichen um, und addiere 1
 
-#+BEGIN_SRC latex :tangle th-loesung-10.tex
 
+#+BEGIN_SRC latex :tangle th-loesung-10.tex
+  $A = (Q, \Sigma, \Gamma, \delta, q_0, \bar{b}, F)$ \\
+  $Q = \{q_0, q_1, q_f \}$ \\
+  $\Sigma = \{0, 1\}$ \\
+  $\Gamma = \{0, 1, \bar{b} \}$ \\
+  $F = \{q_f\}$ \\
+  $\delta:$ \\
+  $\begin{array}{cccccc}
+  q_0 & 0 & 0 & N & q_f & \mbox{ wenn erstes Zeichen 0: 2erkomplement und Binär identisch, also fertig } \\
+  q_0 & 1 & 1 & R & q_1 & \mbox{ Phase 1: jedes Bit (bis auf das erste) umdrehen } \\
+  q_1 & 1 & 0 & R & q_1 & \mbox{ Phase 1: jedes Bit (bis auf das erste) umdrehen } \\
+  q_1 & 0 & 1 & R & q_1 & \mbox{ Phase 1: jedes Bit (bis auf das erste) umdrehen } \\
+  q_1 & \bar{b} & \bar{b} & L & q_2 & \mbox{ Phase 2: 1 addieren, also von Rechts nach Links } \\
+  q_2 & 1 & 0 & L & q_2 & \mbox{ jedes Bit umdrehen, bis eine 0 gelesen wird } \\
+  q_2 & 0 & 1 & N & q_f & \\ 
+  \end{array}$
 #+END_SRC
 
 *** Aufgabe 31
-#+BEGIN_SRC latex :tangle th-loesung-10-.tex
-\subsection{Aufgabe 31}
+#+BEGIN_SRC latex :tangle th-loesung-10.tex
+\subsection*{Aufgabe 31}
 #+END_SRC
 
 #+BEGIN_SRC aufgabe31
-
+[[/home/florian/Zettelkasten/zettelkasten.org_20130109_082705_6808JKK.png]]
 #+END_SRC
-
 
 Loop Programm zur Berechnung von Signumfunktion:
 sg: 0 bleibt 0, 1 wenn größer 0  (nur natürliche Zahlen)
@@ -735,33 +749,52 @@ Zugelassene Anweisungen: X_i = 0 ; X_i = X_j + 1
 Beweis Korrektheit Programm mit denotationeller Semantik
 
 #+BEGIN_SRC latex :tangle th-loesung-10.tex
-
-\a_1 := X_2 := 0
-\a_2 := X_3 := 0
-\a_3 := loop X_1(X_2 = X_3 + 1)
-[[\a_1]]{(3)}(\a_1,\a_2,\a_3) = [[\a_1 := X_2 := 0]]^{(3)}(\a_1,\a_2,\a_3)
-    = (0,\a_2,\a_3)
-
-[[\a_2]]{(3)}(\a_1,\a_2,\a_3) = [[\a_2 := X_3 := 0]]^{(3)}(\a_1,\a_2,\a_3)
-    = (\a_1,0,\a_3)
-
-[[\a_3]]{(3)}(\a_1,\a_2,\a_3) = [[loop X_1(X_2 := X_3 + 1)]]^{(3)}(\a_1,\a_2,\a_3)
-    = ([[X_2 := X_3 + 1]]^{(3)})^{\a_1}(\a_1,\a_2,\a_3)
-    = (\a_1, \a_2 , \a_2 + \a_1) 
-
+\begin{tabbing}
+  $s_n = $\=$ $\underline{in}$ (X_1); $\underline{var}$(X_,X_);$ \\
+  \>$ X_2 = 0;$ \\
+  \>$ X_3 = 0;$ \\
+  \>$ $\underline{loop}$ X_1(X_2 = X_3 + 1);$ \\
+  \>$ $\underline{out}$ (X_2);$
+\end{tabbing}
+  
+  \vspace{0.5cm}
+  
+  $\alpha_1 := X_2 := 0$ \\
+  $\alpha_2 := X_3 := 0$ \\
+  $\alpha_3 := loop X_1(X_2 = X_3 + 1)$ \\
+  $[[\alpha_1]]{(3)}(\alpha_1,\alpha_2,\alpha_3) = [[\alpha_1 := X_2 := 0]]^{(3)}(\alpha_1,\alpha_2,\alpha_3)$ \\
+  $    = (0,\alpha_2,\alpha_3)$ \\[0.3cm]
+  
+  $[[\alpha_2]]{(3)}(\alpha_1,\alpha_2,\alpha_3) = [[\alpha_2 := X_3 := 0]]^{(3)}(\alpha_1,\alpha_2,\alpha_3)$ \\
+  $    = (\alpha_1,0,\alpha_3)$ \\[0.3cm]
+  
+  $[[\alpha_3]]{(3)}(\alpha_1,\alpha_2,\alpha_3) = [[loop X_1(X_2 := X_3 + 1)]]^{(3)}(\alpha_1,\alpha_2,\alpha_3)$ \\
+  $    = ([[X_2 := X_3 + 1]]^{(3)})^{\alpha_1}(\alpha_1,\alpha_2,\alpha_3)$ \\
+  $    = (\alpha_1, \alpha_2 , \alpha_2 + \alpha_1) $ \\[0.5cm]
+  
+  
 #+END_SRC
 
 
 *** Aufgabe 32
 #+BEGIN_SRC latex :tangle th-loesung-10.tex
-\subsection{Aufgabe 32}
+\subsection*{Aufgabe 32}
 #+END_SRC
+
+#+BEGIN_SRC aufgabe32
+[[/home/florian/Zettelkasten/zettelkasten.org_20130109_082937_6808jeW.png]]
+#+END_SR	C
 
 Zeige, das Funktionen durch primitiv rekursive Grundfunktionen durch Komposition und primitive Rekursion erzeugt werden können
 (a) potenz, (a,b) = a^b
 (b) anz,  n = |w \in \{a,b,c,d\}^n  \big| |w|_a ist gerade |
 anz(0) = 1, anz(1) = 3, anz(2) = 10;  
 Primitiv Rekursiv: Nullkonstanten, Add, Mul, Vorgänger, Sub
+
+*** footer
+#+BEGIN_SRC latex :tangle th-loesung-10.tex
+\end{document}
+#+END_SRC
 
 ** Zettel-11
 [[~/Dropbox/th/th-zettel-11/th-zettel-11.pdf][th-zettel-11.pdf]]
