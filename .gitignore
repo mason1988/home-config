@@ -52,3 +52,8 @@ history
 /.kde/tmp-florian-ThinkPad-X121e
 .pentadactyl/info/default/comand-history
 .pentadactyl/info/default/register-ring
+/.config/lxkeymap.cfg
+/.config/monitors.xml
+/.config/nautilus/desktop-metadata
+/.xinput.d/de_DE
+/tasta_stuff/pair_keyboard.sh
