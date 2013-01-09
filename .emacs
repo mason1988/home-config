@@ -464,3 +464,9 @@
         "* %?\nEntered on %U\n  %i\n  %a")))
 (define-key global-map (kbd "C-ö ä") 'magpie-expand)
 (define-key global-map (kbd "C-ä ö") 'flosub)
+
+;; fixes für synergy
+(global-set-key (kbd "C-#") (lookup-key global-map (kbd "C-ü")))
+(global-set-key (kbd "C-6") (lookup-key global-map (kbd "C-ö")))
+(global-set-key (kbd "C-|") (lookup-key global-map (kbd "C-ä")))
+;; ende fixes für synergy
