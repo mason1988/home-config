@@ -58,3 +58,4 @@ history
 /.xinput.d/de_DE
 /tasta_stuff/pair_keyboard.sh
 /.#.emacs
+/.config/synapse/config.json
