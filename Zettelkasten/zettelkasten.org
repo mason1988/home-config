@@ -1,3 +1,4 @@
+
 #+LINK: zk /home/florian/Dropbox/Zettelkasten/
 #+LINK: zkp /home/florian/Dropbox/Zettelkasten/res-pic_%s.png
 #+LINK: drop /home/florian/Dropbox/%s
@@ -1305,6 +1306,15 @@ Comedy-Urgesteine in weiteren Hauptrollen zu sehen. (BL)
 [[file:~/.jdownloader/downloads/Ottos.Eleven.German.2010.DVDRip.XviD-GMA.avi][ansehen]]
 
 * Notes
+Anpassung X
+  blablabla
   *Shell Command Output*
 (lgrep "-key" "/home/florian/.emacs")
 (setq debug-on-error t)
+Und es geht weiter
+hier auch
+und noch mehr modifikationen
+
+hier die anpassung vom laptop
+
+das hier ist die anpassung vom netbook

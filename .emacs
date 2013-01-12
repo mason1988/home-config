@@ -491,14 +491,13 @@
 
 (global-set-key (kbd "C-ä b") 'flosub-readall)
 
-
-
-
-
 (global-set-key (kbd "C-ä .") 'org-capture)
 
+;; Test er vim shortcuts
 (define-key evil-normal-state-map (kbd "ü") (lookup-key global-map (kbd "C-ü")))
 (define-key evil-normal-state-map (kbd "ö") (lookup-key global-map (kbd "C-ö")))
 (define-key evil-normal-state-map (kbd "ä") (lookup-key global-map (kbd "C-ä")))
 
+(global-set-key (kbd "C-ä v") 'eval-expression)
 
+(require 'ediff-extension)
