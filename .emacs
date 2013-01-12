@@ -145,7 +145,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(bmkp-auto-light-when-set (quote all-in-buffer))
- '(bmkp-last-as-first-bookmark-file "/home/florian/.emacs.d/bookmarks")
+ '(bmkp-last-as-first-bookmark-file "~/.emacs.bmk")
  '(dynamic-completion-mode t)
  '(emms-mode-line-mode-line-function (lambda nil))
  '(helm-c-pdfgrep-default-read-command "emacsclient '%f'")
@@ -206,8 +206,8 @@
 (global-set-key (kbd "C-(") 'jumpToPrevEmpty)
 (require 'cstm_regex)
 
-(global-set-key (kbd "C-}") 'cstmRegexNext)
-(global-set-key (kbd "C-{") 'cstmRegexPrev)
+(global-set-key (kbd "C-ä i") 'cstmRegexNextManager)
+(global-set-key (kbd "C-ä u") 'cstmRegexPrevManager)
 (global-set-key (kbd "C-ö t") 'org-tree-to-indirect-buffer)
 (global-set-key (kbd "C-ö h") 'pop-global-mark)
 (global-set-key (kbd "C-ä n") 'yas-new-snippet)
@@ -264,7 +264,7 @@
 
 (global-set-key (kbd "C-ä e") 'eval-region)
 (global-set-key (kbd "C-ä E") 'eval-buffer)
-(global-set-key (kbd "C-ä s") 'my-org-screenshot)
+(global-set-key (kbd "C-ä s") 'my-org-screenshot2)
 
 (require 'smart-forward)
 (global-set-key (kbd "M-<up>") 'smart-up)
@@ -471,9 +471,34 @@
 (global-set-key (kbd "C-|") (lookup-key global-map (kbd "C-ä")))
 ;; ende fixes für synergy
 
-(global-set-key (kbd "M-w") 'bury-buffer)
+(define-key evil-normal-state-map (kbd "M-w") 'bury-buffer)
+(define-key evil-normal-state-map (kbd "C-ä o") 'org-babel-tangle)
+(define-key evil-normal-state-map (kbd "C-ä v") 'revert-buffer)
 
-;; test der vim shortcuts
+(add-hook 'doc-view-mode-hook (lambda() ( 
+ (define-key doc-view-mode-map (kbd "M-r") 'windmove-up)
+ (define-key doc-view-mode-map (kbd "M-n") 'windmove-down)
+ (define-key doc-view-mode-map (kbd "M-s") 'windmove-left)
+ (define-key doc-view-mode-map (kbd "M-t") 'windmove-right)
+ )))
+
+(global-set-key (kbd "C-ä j") 'evil-normal-state)
+
+(global-set-key (kbd "C-x ö b") 'view-buffer-other-window)
+(global-set-key (kbd "C-x ö f") 'find-file-other-window)
+
+(defalias 'kill-frame 'delete-frame)
+
+(global-set-key (kbd "C-ä b") 'flosub-readall)
+
+
+
+
+
+(global-set-key (kbd "C-ä .") 'org-capture)
+
 (define-key evil-normal-state-map (kbd "ü") (lookup-key global-map (kbd "C-ü")))
 (define-key evil-normal-state-map (kbd "ö") (lookup-key global-map (kbd "C-ö")))
 (define-key evil-normal-state-map (kbd "ä") (lookup-key global-map (kbd "C-ä")))
+
+

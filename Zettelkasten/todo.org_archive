@@ -183,6 +183,17 @@ google: emacs+evil+show+mark
 ** DONE evil modes? welcher an, welcher besser (evil modes ergooglen)
    gibt bloß den einen, 1 = true 
 ** DONE Org: Footnote und Emphasise?
+* magpie / textsubstitution
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2013-01-12 Sa 13:59
+  :ARCHIVE_FILE: ~/Zettelkasten/todo.org
+  :ARCHIVE_OLPATH: System-Config/Projekte
+  :ARCHIVE_CATEGORY: todo
+  :END:
+** DONE Planung/Zielsetzung einer idealen lokalen Textsubstitution
+** DONE Stichwort fuzzymatching completion prüfen
+** DONE Quellcode von Magpie von dahingehende Anpassparkeit prüfen
+
 
 
 

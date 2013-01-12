@@ -7,7 +7,7 @@
 		  (format-time-string "%Y%mad-%H%M%S")))""))
 
   (setq stuff (buffer-substring (region-beginning)(region-end)))
-  
+ (save-window-excursion 
   (with-temp-buffer
     
     (insert (string-as-multibyte "\\documentclass[11pt]{standalone}"))
@@ -47,7 +47,7 @@
 	 (insert (concat "[[file:" filename ".png]]")))
     (let ()
          (goto-char (region-beginning))
-         (insert (concat "[[file:" filename ".png]]\n"))))
+         (insert (concat "[[file:" filename ".png]]\n")))))
 
   (org-display-inline-images)
 )

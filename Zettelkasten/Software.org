@@ -1,6 +1,8 @@
 * copy and paste
 (yank in emacs = paste)
 
+- C-v in pentadactyl
+
 - "+ vorgeschaltet, präzisiert das clipboard (register)
 - y => kopiert in kill ring
 - p => pastet aus kill ring
@@ -10,19 +12,37 @@
 - C-Shift-v paste im Terminal
 - "+ ;y kopiert Link in pentadactyl
 - C-einfügen kopieren durch Emacs
-
-* generelle Software
+* linux allgemein
  + aumix oder alsamixer für soundsteuerung
  + alternativ einfach sound bei kupfer
  + evince ist der pdf viewer
  + xrandr:  $ xrandr --output VGA --mode 1280x1024 --right-of LVDS
- + convert pic123.png resize 10% res_pic.png  :: resizing
+ + convert pic123.png -resize 10% res_pic.png  :: resizing
  + standby :: sudo /etc/acpi/sleep.sh
+ + standby_alternativ :: sudo pm-hibernate / powersave / suspend ...
  + script von überall asuführbar machen :: sh entfernen, bang anfügen, und in /usr/bin verschieben
+** funktionierende Soundeinstellung:
+- als root starten
+- Sound:
+  - Output
+    - Built In Analog Stereo
+    - Connector: Headphones
+  - Input
+    - Connector: Front Microphone
+    - Built-an Audio Analog Stereo
+  - Hardware
+    - Built-in Audio
+      - Profile: Analog Stereo
+- Skype:
+  - Audiogeräte
+    - Mikrofon: HDA ATI SB, ALC887-VD Analog Direct hardware device without any conversions (hw:CARD=SB,DEV=0)
+    - Lautsprecher/Klingeln: Default
 * synergy
 ** keyboardlayout
 - nacktes setxkbmap beim client hilft
 ** momentan funktionierendes Setup
+ (pfeiltasten machen manchmal trotzdem probleme, der rest funktioniert aber, einschließlich esc)
+      nach hinten löschen, aber leider nicht
 - alles ordentlich resettet
 - auf pc läuft neo mit manueller ladung
 - auf laptop eigentlich egal (setxkbmap, aber vorher mit altgr standard resettet)
@@ -116,6 +136,8 @@ an den Anfang und Enter (einrücken schadet auch nicht
 - ansonsten # + BEGIN : irgendwas     # + END:
 - oder # + BEGIN_ irgendwas und # + END_ irgendwas
 - mann kann auch feste drawer am anfang definieren und benutzen
+- bei listen, also verwendung von + und - wird
+  nach der Einrückung gefoldet
 ** Regionen/Enviroments
 = org-special
 - tangling wert ungleich yes und no wird als Dateiname interpretiert
@@ -183,6 +205,12 @@ http://orgmode.org/manual/Template-expansion.html#Template-expansion
 ** refiling
 - Das capture oder node wird an anderen header angehangen
 (standardmäßig wird nur die oberste ebene benutzt
+** Export
+*** Export subtree
+1. auf subtree gehen
+2. org-export
+3. 1 um auf subtree export umzuschalten
+4. konkreten export aussuchen
 * Vim
 ** Search/Replace                                                :shortcuts:
 	    =Änderungen werden komplett live gepreviewed=
@@ -292,13 +320,67 @@ M-a markiert alle Einträge !!!
    + columnfilling => zeilenumbruch im Buffer
      => auto-fill-mode bricht automatisch um
      => set-fill-column setzt die max. Zeichenanzahl
-* Latex
-** arrays
-$\begin{array}{ccc}
-q_0 & q_1 & q_2 \\
-q_0 & q_1 & q_2 \\
-q_0 & q_1 & q_2 \\
-$\end{array}
+** FTP
+1. mit Befehl ftp, ftp programm aufrufen
+2. da dann adresse für server eingeben (www.howtoflo.de z.b.)
+3. dann benutzernamen eingeben (web95) z.B.
+4. dann Passwort eingeben
+
++ mit ls und cd bewegen
++ mit rename umbenennen
++ mit put lokale/adresse remote/adresse Dateien hochladen
+  für zielpfad reicht auch einfach der zieldateiname, so dass
+  der aktuelle Ordner benutzt wird
++ mit get? entsprechend runterladen
+** GNUS
+*** weiterleitung für mehrere Accounts auf dem selben server
+nslookup imap.mail.yahoo.com    zum schluss kommen die interessanten ip's
+echo "12.34.56.78 neue.mail.domain" >> /etc/hosts
+*** konfiguration
+;; GMANE is about the only free news server I've seen.
+;; I set it to my primary server so I can read a few Free software mailing lists.
+(setq gnus-select-method
+     '(nntp "news.gmane.org"))
+;; Mostly, though, I just want to read my mail.
+;; This setup uses a standard SSL-based connection to read the mail for the accounts I have through
+;; UC Berkeley:
+(setq gnus-secondary-select-methods
+      '((nnimap "floppycode" ; primary email
+		(nnimap-address "imap.mail.yahoo1.com")
+		(nnimap-server-port 993)
+		(nnimap-authinfo-file "/home/florian/.authinfo")
+		(nnimap-stream ssl))
+	(nnimap "lerch.florian" ; secondary account
+		(nnimap-address "imap.mail.yahoo2.com")
+		(nnimap-server-port 993)
+		(nnimap-authinfo-file "/home/florian/.authinfo")
+		(nnimap-stream ssl))
+		))
+
+
+
+(setq gnus-ignored-newsgroups "^to\\.\\|^[0-9. ]+\\( \\|$\\)\\|^[\"]\"[#'()]")
+
+(setq user-mail-address "floppycode@yahoo.de")
+(setq user-full-name "Florian Lerch")
+
+;(setq mail-sources '((nnimap :server "imap.mail.yahoo.com"
+;                          :user "floppycode@yahoo.de"
+;                          :password "3ihgvks14")
+;		     (nnimap :server "imap.mail.yahoo.com"
+;			  :user "lerch.florian@yahoo.de"
+;			  :password "3ihgvks14")))
+
+
+(setq send-mail-function 'smtpmail-send-it)
+(setq message-send-mail-function 'smtpmail-send-it)
+(setq smtpmail-default-smtp-server "smtp.mail.yahoo.com")
+
+(setq smtpmail-auth-credentials '(("smtp.mail.yahoo.com" "465" "floppycode@yahoo.de" "3ihgvks14")))
+(setq smtpmail-starttls-credentials '(("smtp.mail.yahoo.com" "465" nil nil)))
+*** .authinfo
+machine imap.mail.yahoo1.com login floppycode@yahoo.de password secret port 993
+machine imap.mail.yahoo2.com login lerch.florian@yahoo.de password secret port 993
 * install/make kram
 1. ./configure
 2. make
@@ -617,7 +699,10 @@ git remote add rem_name online_path -t master
 und beim nächsten Rechner dann das gleiche
 * eshell
 - cd = für stack, cd -nr  um aus stack aufzurufen
-
+- & ganz ans Ende (hinter paramater usw.) um
+  Prozess abzuspalten
+  - wahlweise noch mit nohup davor
+  um output abzuleiten
 * zipper
 - tar.gz :: tar xvfz filepath
 - zip :: unzip filepath
@@ -628,7 +713,12 @@ und beim nächsten Rechner dann das gleiche
   eine Seite mit minimaler größe (für formelextraktion)
 - iimage-mode <- zeichnet einfache links zu bildern
   iimage-recenter läd die bilder dann nach
- 
+** arrays
+$\begin{array}{ccc}
+q_0 & q_1 & q_2 \\
+q_0 & q_1 & q_2 \\
+q_0 & q_1 & q_2 \\
+$\end{array}
 ** beispiel image link
 [ [ file:~/test1.png ] ] 
 ; das file: am anfang ist wichtig!
@@ -1400,7 +1490,6 @@ aber wieder alles änderungen in dem header => ficken sie sich
 ** trition
 ** pekwm
 
-
 * Coding
 ** Python
 *** Python (in Emacs)
@@ -1631,6 +1720,11 @@ selbst an die Hook ketten:
  (define-key evil-insert-state-local-map "\M-k" 'evil-window-prev)
  )
 )
+
+mehr noch bieten sich natürlich die maps des jeweiligen modus
+  an, z.b. doc-view-mode-map
+  mit describe-mode kommt man zumindest an den mode namen
+  zu dem es in der regel eine passende map und hook gibt
 *** bedingung
 (when (string-match "^ *$" test-str)
    (message "cool")) 
@@ -1726,6 +1820,10 @@ window-text-change-functions
 **** Org Mode Hooks
 [[http://orgmode.org/worg/org-configs/org-hooks.html]]
 * Shortcutliste
+** einfache Tasten
+- AltGr - ü :: Escape
+- AltGr - ö :: Tab
+- AltGr - p :: enter
 ** Org - Mode
 - C-c C-x C-i :: Clock in
 - C-c C-x C-o :: Clock out
@@ -1745,6 +1843,8 @@ window-text-change-functions
 - C-ö D       :: display inline images
 - C-ä s       :: Screenshot erstellen und einsetzen
 - C-ä l       :: konvertiere zu Latex
+- C-ä o       :: org-babel-tangle
+- C-ä .       :: org-capture
 ** Expansion/Completion
 - C-n,p       :: Evil Extension, zurück
 - C-x C-n,p   :: Evil complete line, zurück
@@ -1756,10 +1856,11 @@ window-text-change-functions
 	(kill-ring speichert neue pos)
 - C-ö ä       :: magpie expand (beginnt mit , und dann akronyme)
 - C-ä ö       :: flosub, entweder aktuelles wort (ab leer oder \n) oder markierung
+- C-ä b       :: flosub mit start und end durch leerzeichen getrennt
 ** sprünge
 - g ;         :: springe zu letzter veränderung
 - C-ö n/r     :: next/prev Empty Line
-- C-{/}       :: next/prev regex
+- C-ä i/u     :: next/prev regex
 - C-ö g/G     :: Vertikalsprung hoch/runter
 - M-ä         :: Cursor in Fenster springen lassen
 - C-x p ret   :: setze/entferne autonamedbookmark
@@ -1776,10 +1877,20 @@ window-text-change-functions
 		 => eingabe in postfix/ergebnis paste mit y/close mit q
 - C-ö d       :: doc-view-mode
 - C-ä k/K     :: encrypt/decrypt region
-- S-c         :: minimize client
+- S-, S-"     :: minimize(/restore) client
+- S-.         :: letzter Tag
 - S-Shift-i   :: restore client
 - C-x s       :: save-some-buffers 
 - M-w         :: buffer back
+- C-ä j       :: evil normal state
+- C-ä v       :: revert buffer
+- C-ü C-q     :: toggle read only
+		 
+- S-m         :: startet Maus modus
+- q        :: start/end dragging
+  iae      :: taste 1,2,3
+  b        :: lasse maus springen
+  u        :: undo
 ** Fenstermanagement
 - C-ä w s     :: Session speichern
 - C-ä w r     :: Session laden
@@ -1793,11 +1904,14 @@ window-text-change-functions
 - e           :: show messages
 - C-t C-u ... :: zwingt das Fenster zum öffnen in popwin
 
-- C-c b       :: view Buffer other window
-- C-x f       :: find file other window
+- C-ü ö b     :: view Buffer other window
+- C-ü ö f     :: find file other window
 - C-ö b       :: display buffer
 - C-ö f       :: display file
+
 - C-ä w d/D   :: dedicate/undedicate window
+		 
+- C-ä v       :: revert buffer
 ** helm
 - M-m         :: Helm: M-a = alle markieren
 - C-ö o       :: Helm Occur (akt. Buffer)
@@ -1830,3 +1944,9 @@ window-text-change-functions
     u         :: unstage
     c C-c C-c :: commit, - absenden
     ll        :: log
+		 
+** Firefox
+- ;y          :: kopiere linkurl
+- "+;y        :: kopiere linkurl in clipboard
+- A           :: toggle cur bookmark
+- :bmarks!    :: bookmarks durchsuchen

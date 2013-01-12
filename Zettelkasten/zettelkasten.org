@@ -4,8 +4,9 @@
 
 #+TODO: TODO | DONE
 #+TODO: CANCELED | Restarted
-
 #+TODO: Zettel1 Zettel2 Zettel3 Zettel4 Zettel5 Zettel6 Zettel7 Zettel8 Zettel9 Zettel10 Zettel11 Zettel12 Zettel13 Zettel14
+
+#+DRAWERS: LINKS
 
 * Zettelverwaltung
 ** Zettel8 *Elementare Stochastik*
@@ -13,34 +14,115 @@
 ** *Softwaretechnik*
 ** Zettel10 *Theoretische Informatik*
 * Webdesign
+** hilfreiche Links
+http://www.mandapanda.net/lerntechnik/masterplan/
+http://www.brainboard.eu/phpbb/index.php?sid=ec53546b32cb9134ec7b5c4b77a41e54
+** Layout
+** Content
+*** Mnemotechniken
+**** Listen / Begriffe
+- Loci Methode (einfach wahllos mit Orten verknüpfen)
+     (http://www.mandapanda.net/lerntechnik/locitechnik/)
+     (http://homeworktips.about.com/od/homeworkhelp/a/loci.htm)
+- Gedächntispalast (Loci Methode mit fiktivem Palast)(http://www.wikihow.com/Build-a-Memory-Palace)
+- zusammenhängende geschichten, aufeinanderfolgende assoziative verknüpfungen (http://www.mandapanda.net/lerntechnik/story-technik/)
+**** Zahlen
+#+Begin: links
+http://litemind.com/major-system/
+#+End
+- Majorsystem  (Ziffern und Buchstaben verknüpfen)(siehe links)
+- erweitertes Majorsystem (feste Worte für feste Zahlen)(siehe links)
+*** Digitale Unterstützungen
+#+Begin: links
+http://www.howtogeek.com/114794/the-best-apps-and-cloud-services-for-taking-storing-and-sharing-notes/
+#+End:
+- Dropbox(http://www.howtogeek.com/howto/16310/user-guide-to-dropbox-shared-folders/)
+- OneNote (siehe links)
+- Synchronisation der OfficeSuite generell 
+- LaTeX(http://floppycode.blogspot.de/2011/09/latex.html)
+- Git/Svn -> Versionskontrollsysteme(lieber nur svn, git ist zu komplex)
+  (http://svnbook.red-bean.com/nightly/en/svn.intro.quickstart.html)
+- desktopwiki, z.B. zimwiki, tinywiki usw (siehe links)
+- evernote (siehe links)
+*** Notizen
+#+Begin: links
+http://arbeitsblaetter.stangl-taller.at/LERNTECHNIK/Mitschrift.shtml
+http://en.wikipedia.org/wiki/Note-taking
+#+End:
+- Cornell Methode (http://denkvieh.blogspot.de/2011/10/cornell-notes.html)
+- Mindmaps (http://www.novamind.com/mind-mapping/note-taking/)
+*** Schnelles Lesen
+- Photoreading(http://web.archive.org/web/20100327144104/http://www.howtoflo.de/2009/09/photoreading/)
+- klassisches Speed Reading(http://web.archive.org/web/20091111231617/http://www.howtoflo.de/2009/08/speed-reading-%E2%80%93-die-fahigkeit-schneller-zu-lesen-als-andere/)
+*** Kopfrechnen
+- kreuzmultiplikation (http://primzahlen.zeta24.com/de/kopfrechnen_multiplikation.php)
+- addieren (http://primzahlen.zeta24.com/de/kopfrechnen_addition.php)
+- fingerrechnen bis 100 (statt bis 10) (https://docs.google.com/viewer?a=v&q=cache:119DcXeJVNQJ:lesen-lernen.info/attachments/File/Microsoft_Word_-_Fingerrechnen.pdf+fingerrechnen+bis+100&hl=en&pid=bl&srcid=ADGEESh1ksUjUMti54zT0YNGwRy3QKDkEsw3G5n8hWVSnwn-on3xIDKyCw2bh9jr-ryDoWi7-uaqfCQEBqOcSpKX8ejD5eva6wakvyn_T5t7q3xR7U96uAwyQa4PggzxrLpsnv1SuE8C&sig=AHIEtbQ0_Is76unOTA-O22H8Uv49WJsoTA)
+*** mentale Fitniss allgemein
+- Training (mit falscher Hand zähne putzen und son scheiß)(http://uk.askmen.com/sports/health_200/215_mens_health.html)
+  - zählen im kopf (http://denkvieh.blogspot.de/2011/08/zahlen-im-kopf.html)
+- Ernährung (bananen, studentenfutter -> nüsse, rousinen etc)(http://www.dailymail.co.uk/health/article-1276881/The-brain-diet-Eating-right-foods-improve-memory-lift-mood-help-concentrate-longer.html)
+- allgemeine tipps (sportliche betätigung, ausreichend schlaf und bla) (http://www.lifehack.org/articles/productivity/10-tips-for-razor-sharp-concentration.html)
+*** Zeitmanagement
+- Pomodori Technik (20m minuten intervalle) (http://en.wikipedia.org/wiki/Pomodoro_Technique)
+- gtd (grundprinzipien -> next steps festlegen etc.)(http://schoepfertum.blogspot.de/2011/08/getting-things-done.html)
 * Elementare Stochastik 
 ** Englisch
-| Deutsch                   | Englisch                       |
-|---------------------------+--------------------------------|
-| Erwartungswert            | expected value                 |
-| exponentialverteilung     | exponential distribution       |
-| Varianz                   | variance                       |
-| gleichverteilung          | uniform distribution           |
-| Irrfahrt                  | random walk                    |
-| Wahrscheinlichkeitsdichte | random density                 |
-|                           | probapility density (function) |
-| Zufallsvariable           | random variable                |
-|                           |                                |
-|                           |                                |
+| Deutsch                       | Englisch                       |
+|-------------------------------+--------------------------------|
+| Erwartungswert                | expected value                 |
+| exponentialverteilung         | exponential distribution       |
+| Varianz                       | variance                       |
+| gleichverteilung              | uniform distribution           |
+| Irrfahrt                      | random walk                    |
+| Wahrscheinlichkeitsdichte     | random density                 |
+|                               | probapility density (function) |
+| Zufallsvariable               | random variable                |
+| Wahrscheinlichkeitsverteilung | Propability distribution       |
+| bedingte Wahrscheinlichkeit   | conditional probability        |
+|                               |                                |
+|                               |                                |
+|                               |                                |
+|                               |                                |
+
 ** Verteilungen
-***** Laplaceverteilung
+*** Laplaceverteilung
 zur Mitte hin, steigt die Wahrscheinlichkeit (exponentiell)
-***** Exponentialverteilung
+*** Exponentialverteilung
 In eine Richtung entgegen unendlich steigt die Wahrscheinlichkeit
-***** Binomialverteilung
-      Gibt nur 2 Ergebnisse, auf die die Wahrscheinlichkeit verteilt wird
-***** Poissonverteilung
+*** Binomialverteilung
+    Gibt nur 2 Ergebnisse, auf die die Wahrscheinlichkeit verteilt wird
+*** Poissonverteilung
       zur Mitte hin, steigt die Wahrscheinlichkeit. (nicht exponentiell => runder kopf
+*** Hypergeometrische Verteilung
+n elemente ohne zurücklegen ziehen. Ws für Anzahl Elemente gewünschter Eigenschaft.
+     (entspricht Urnenmodell)
+[[/home/florian/Zettelkasten/zettelkasten.org_20130112_073036_9890xDI.png]]
+Mit N Elementen insgesamt, und M Elementen, die interessant sind und n zügen.
+[[file:hyper_res.png]]
 ** Bedingter Erwartungswert
 A,B Ereignisse; Y Zufallvariable
 $P(A|B) = \frac{P(A \cap B)}{P(B)}$ Ws A wenn B bekannt
 $P(Y|B) = \frac{E(1_{B} * Y)}{P(B)}$
 [[docview:~/Dropbox/st/s0.pdf::1][Skript]]
+** Bedingte Wahrscheinlichkeiten
+- [[file:201301ad-0747279890-NO.png]] also die Wahrscheinlichkeit, dass 2 Ereignisse zusammen eintreten, ist so hoch wie
+    wie die Wahrscheinlichkeit das A eintritt, wenn B schon eingetreten ist, mal die Wahrscheinlichkeits
+    für B's eintreten
+- [[file:201301ad-0749509890LYU.png]] 
+- [[file:201301ad-0812329890_At.png]]
+- bei stochastischer Unabhängigkeit gilt wie gewohnt: [[file:201301ad-0812459890MLz.png]] 
+  => P(A|B) = P(A)
+
+- [[/home/florian/Zettelkasten/zettelkasten.org_20130112_075523_9890Yia.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130112_075648_9890lsg.png]]
+[[file:201301ad-0847319890y9a.png]]
+
+- bei stochastischer Unabhängigkeit: P(Y=y|X=x)=P(Y=y)
+- [[file:201301ad-0816259890-UC.png]]
+- [[file:201301ad-0822389890LfI.png]] 
+[[/home/florian/Zettelkasten/zettelkasten.org_20130112_082438_9890YpO.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130112_082651_9890lzU.png]]
 ** Zusammenhänge
 - Var(X) = Cov(X,X)
 - Cov(X,Y) = E(X*Y) - E(X)E(Y)
@@ -48,18 +130,20 @@ $P(Y|B) = \frac{E(1_{B} * Y)}{P(B)}$
 ** Wörterbuch
 - Erwartungswert :: [[file:201301ad-2329314949s0X.png]] = [[file:201301ad-23333749495-d.png]]
 		    für Abwandlung relativer Häufigkeit:  E(X[n])=z => E(X[n]/n)=z/n
+		    E(E[X|Y]) = E(X)
 - Zufallsvariable :: Abbildung [[file:201212ad-1900221184eoW.png]] wobei [[file:201212ad-1901251184ryc.png]] messbare Räume
 - messbarer Raum :: existiert Abbildung Raum auf Maßraum
 - Maßraum :: der Raum in den eine Maßfunktion zuordnet (z.B. 0..1 für Ws)
 - Wahrscheinlichkeitsfunktion ::  [[file:201212ad-190439118448i.png]]
-- Wahrscheinlichkeitsdichtefunktion :: gibt zu ZVar und möglichen 
-      Output die Wahrscheinlichkeit an
+- Wahrscheinlichkeitsdichte :: gibt zu Intervall die Wahrscheinlichkeit an, zB P(a < X < b)
+- Wahrscheinlichkeitsverteilung :: alle möglichen Zvar - outputs und ihre Wahrscheinlichkeiten
 - gleichverteilt :: alle outputs sind gleich wahrscheinlich
-- Varianz :: [[file:zettelkasten.org_20121229_215420_14976asg.png]] = [[file:201212ad-21574114976n2m.png]] ([[file:201301ad-00394849495FS.png]] Standardabweichung)
+- Varianz :: [[file:zettelkasten.org_20121229_215420_14976asg.png]] = [[file:201212ad-21574114976n2m.png]] (o = Standardabweichung)
+	    Var[X] = E(Var[X | Y]) + Var(E[X | Y])
+	     Var[X] = E[X^2] - E[X]^2
            = irgend ein Maß für die mittleren Abweichungen vom Erwartungswert
 	    = [[file:201301ad-0049294949gkk.png]] = [[file:201301ad-0054574949tuq.png]]
-	     Bei Binomial mit n Versuchen: 
-                = n*p*(1-p)
+	     Bei Binomial mit n Versuchen: = n*p*(1-p)
 	        für Abwandlung relativer Häufigkeit: V(X[n])=z 
 	           => V([[file:201301ad-1614254949GeA.png]]) = [[file:201301ad-1613574949UUx.png]]
 - Kovarianz :: [[file:zettelkasten.org_20121229_220016_149760At.png]] 
@@ -75,7 +159,17 @@ $P(Y|B) = \frac{E(1_{B} * Y)}{P(B)}$
      = [[file:201212ad-07253120660_2o.png]]    \sigma^2 ist varianz, \mu ist Erwartungswert
 - Wahrscheinlichkteisraum :: [[file:201212ad-15510922908saY.png]] = Raum mit Ereignissen und Wahrscheinlichkeitsfunktion da drauf
 - Indikator- / charakteristische Funktion :: 1_T oder \mathcal{x}_T wenn x in T 1 sonst 0
-- Bayes - Theorem :: : [[/home/florian/Zettelkasten/zettelkasten.org_20130103_124645_22923q8L.png]]  und [[file:201301ad-12575411367wd2.png]]
+- Bayes - Theorem :: [[/home/florian/Zettelkasten/zettelkasten.org_20130103_124645_22923q8L.png]]  und [[file:201301ad-12575411367wd2.png]]
+
+- diskrete Wahrscheinlichkeitsverteilung :: normalfall, bildet auf endliche / abzählbare Menge ab
+- hypergeometrische Verteilung :: n elemente ohne zurücklegen ziehen. Ws für Anzahl Elemente gewünschter Eigenschaft.
+     (entspricht Urnenmodell)
+- 
+
+
+
+
+
 ** Zettel-06
 *** Dateien
     [[/home/florian/Dropbox/st/st-zettel-06/st-zettel-06.pdf::NNN][st-zettel-06.pdf]]
@@ -633,13 +727,32 @@ die deltas werden mit ner Tafel gesammelt:
 
 Bedeutet: (q',b,x) \in \delta(q,a)
 also startzustand | "search" | replace | sprung | nächster zustand
+
 ** Wörterbuch
 - Turingmaschine :: 
-- Loopprogramm ::
-- denotationelle Semantik :: 
 - primitik rekursive Grundfunktion ::
 - primitive rekursion ::
->>>>>>> 7040555149d22b1aa0eb54c5cb5a3af7421ac982
+
++[[file:201301ad-01342216693Xde.png]]  :: m Regeln/Parameter auf die eine Ausgabe
++ [[file:201301ad-01365816693knk.png]] (insgesamt m elemente), die ersten
+      n Elemente sind Eingaben, die restlichen werden innerhalb der 
+      Funktion definiert
++ Anweisung :: die einzelnen [[file:201301ad-01401116693xxq.png]] 's
++ [[file:201301ad-02253616693-7w.png]] :: Menge aller Loop Programme mit 1..n Eingabevariablen
+          n+1...m weitere Variablen und output ist X_1
++ [[file:201301ad-02275316693wFA.png]] :: Die mathematische Funktion zum Programm [[file:201301ad-022830166939PG.png]]
++ [[file:201301ad-02291216693KaM.png]] :: alle arithmetischen Funktionen
++ [[file:201301ad-02305116693XkS.png]] :: übersetzt eine Anweisung, dient zur rekursiven überführung
+#+BEGIN_SRC Überführungen für die alphas
+[[/home/florian/Zettelkasten/zettelkasten.org_20130110_023805_16693kuY.png]]
+#+END_SRC
++ Semantikfunktion :: [[file:201301ad-06074316693-Cl.png]] = [[file:201301ad-06075916693LNr.png]] := [[file:201301ad-06091516693YXx.png]]
++ primitiv rekursive Funktion :: rekursive Grundfunktion, oder daraus bildbar (durch komposition)
+#+BEGIN: primitive rekursive Grundfunktionen
+[[_20130110_223821_16693KhA.png]]
+#+END:
++ Komposition ::[[_20130110_224134_16693XrG.png]] 
+  also k Argumente, die jeweils mit den Funktionen angewendet werden, und die alle zusammen dann wiederrum auf f (im Grunde das was man erwartet)
 
 ** Zettel-09
 [[~/Dropbox/th/th-zettel-09/th-zettel-09.pdf][th-zettel-09.pdf]]
@@ -692,7 +805,7 @@ also startzustand | "search" | replace | sprung | nächster zustand
 #+BEGIN_SRC latex :tangle th-loesung-10.tex
 \subsection*{Aufgabe 30}
 #+END_SRC
-
+    
 #+BEGIN_SRC aufgabe30
 [[/home/florian/Zettelkasten/zettelkasten.org_20130108_162840_8888-SE.png]]
 #+END_SRC
@@ -756,25 +869,42 @@ Beweis Korrektheit Programm mit denotationeller Semantik
   \>$ $\underline{loop}$ X_1(X_2 = X_3 + 1);$ \\
   \>$ $\underline{out}$ (X_2);$
 \end{tabbing}
-  
-  \vspace{0.5cm}
-  
-  $\alpha_1 := X_2 := 0$ \\
-  $\alpha_2 := X_3 := 0$ \\
-  $\alpha_3 := loop X_1(X_2 = X_3 + 1)$ \\
-  $[[\alpha_1]]{(3)}(\alpha_1,\alpha_2,\alpha_3) = [[\alpha_1 := X_2 := 0]]^{(3)}(\alpha_1,\alpha_2,\alpha_3)$ \\
-  $    = (0,\alpha_2,\alpha_3)$ \\[0.3cm]
-  
-  $[[\alpha_2]]{(3)}(\alpha_1,\alpha_2,\alpha_3) = [[\alpha_2 := X_3 := 0]]^{(3)}(\alpha_1,\alpha_2,\alpha_3)$ \\
-  $    = (\alpha_1,0,\alpha_3)$ \\[0.3cm]
-  
-  $[[\alpha_3]]{(3)}(\alpha_1,\alpha_2,\alpha_3) = [[loop X_1(X_2 := X_3 + 1)]]^{(3)}(\alpha_1,\alpha_2,\alpha_3)$ \\
-  $    = ([[X_2 := X_3 + 1]]^{(3)})^{\alpha_1}(\alpha_1,\alpha_2,\alpha_3)$ \\
-  $    = (\alpha_1, \alpha_2 , \alpha_2 + \alpha_1) $ \\[0.5cm]
-  
-  
-#+END_SRC
+\vspace{0.5cm}
+$\alpha_1 := X_2 := 0$ \\
+$\alpha_2 := X_3 := 0$ \\
+$\alpha_3 := \underline{loop} X_1(X_2 = X_3 + 1)$ \\
+\begin{tabbing}
+$[[\alpha_1]]^{(3)}(\alpha_1,\alpha_2,\alpha_3)$\=$ = [[\alpha_1 := X_2 := 0]]^{(3)}(\alpha_1,\alpha_2,\alpha_3)$ \\
+$ $\>$   = (\alpha_1,0,\alpha_3)$ \\[0.3cm]
+$[[\alpha_2]]^{(3)}(\alpha_1,\alpha_2,\alpha_3) = [[\alpha_2 := X_3 := 0]]^{(3)}(\alpha_1,\alpha_2,\alpha_3)$ \\
+$  $\>$  = (\alpha_1,\alpha_2,0)$ \\[0.3cm]
+$[[\alpha_3]]^{(3)}(\alpha_1,\alpha_2,\alpha_3) = [[\underline{loop} X_1(X_2 := X_3 + 1)]]^{(3)}(\alpha_1,\alpha_2,\alpha_3)$ \\
+$   $\>$ = ([[X_2 := X_3 + 1]]^{(3)})^{\alpha_1}(\alpha_1,\alpha_2,\alpha_3)$ \\
+% \> $ = ( \alpha_1 , \alpha_3^{\alpha_1} + 1^{\alpha_1}, \alpha_3)(\alpha_1,\alpha_2,\alpha_3)$ \\[0.5cm]
+Für $\alpha_1 > 0$: \\
+\> $ = ( \alpha_1 , \alpha_3 + 1, \alpha_3)(\alpha_1,\alpha_2,\alpha_3)$ \\
+Für $\alpha_1 = 0$: \\
+\> $ = ( \alpha_1 , \alpha_3, \alpha_3)(\alpha_1,\alpha_2,\alpha_3)$ \\
+% wie soll man denn schleifen einsetzen, die eins auf einen _anderen_ Wert addieren?
+\end{tabbing}
 
+\begin{tabbing}
+$[[S_n]](\alpha_1)$ \= $= (\underline{out}^{(3)}_2 \circ [[\alpha_3]]^{(3)}  
+\circ [[\alpha_2]]^{(3)} \circ [[\alpha_1]]^{(3)} \circ \underline{in}^{(1)}_3)(\alpha_1)$ \\
+\> $= (\underline{out}^{(3)}_2 \circ [[\alpha_3]] \circ [[\alpha_2]]^{(3)} \circ [[\alpha_1]]^{(3)})(\alpha_1,0,0)$ \\
+\> $= (\underline{out}^{(3)}_2 \circ [[\alpha_3]] \circ [[\alpha_2]]^{(3)})(\alpha_1,0,0)$ \\
+\> $= (\underline{out}^{(3)}_2 \circ [[\alpha_3]])(\alpha_1,0,0)$ \\
+%\> $= (\underline{out}^{(3)}_1)(\alpha_1,0^{\alpha_1} + 1,0)$ \\
+%\> $= (\alpha_1,1,0) = $ \\
+Für $\alpha_1 > 0$: \\
+\> $= (\underline{out}^{(3)}_2)(\alpha_1,1,0) = 1$ \\
+Für $\alpha_1 = 0$: \\
+\> $= (\underline{out}^{(3)}_2)(\alpha_1,0,0) = 0$ \\
+% hier  ist dann immernoch das Problem mit der Schleife
+$\Rightarrow [[S_n]]: \mathbb{N} \rightarrow \mathbb{N}, (\alpha_1) \rightarrow \begin{cases} 1 &\mbox{falls } \alpha_1>0 \\ 0 &\mbox{sonst} \end{cases}$
+\end{tabbing}
+
+#+END_SRC
 
 *** Aufgabe 32
 #+BEGIN_SRC latex :tangle th-loesung-10.tex
@@ -783,13 +913,31 @@ Beweis Korrektheit Programm mit denotationeller Semantik
 
 #+BEGIN_SRC aufgabe32
 [[/home/florian/Zettelkasten/zettelkasten.org_20130109_082937_6808jeW.png]]
-#+END_SR	C
+#+END_SRC
 
 Zeige, das Funktionen durch primitiv rekursive Grundfunktionen durch Komposition und primitive Rekursion erzeugt werden können
 (a) potenz, (a,b) = a^b
 (b) anz,  n = |w \in \{a,b,c,d\}^n  \big| |w|_a ist gerade |
 anz(0) = 1, anz(1) = 3, anz(2) = 10;  
 Primitiv Rekursiv: Nullkonstanten, Add, Mul, Vorgänger, Sub
+
+#+BEGIN_SRC latex :tangle th-loesung-10.tex
+\subsubsection*{a)} Es gilt: $power(a,0) = 1 = C_0^{(1)}(a) + 1 = add(C_0^{(1)},1)$ \\
+und $power(a,b+1) = power(a,b)*a = mult(power(a,b),a) = $ \\
+
+\subsubsection*{b)} Es gilt: $anz(0) = 1 = C_0^{(1)}(n) + 1 = add(C_0^{(1)},1)$ \\
+und $anz(n+1) = 4^n - anz(n) + anz(n) * 3  = 4^n + anz(n)*2$ \\
+$ = power(4,n) - mul(anz(n),2) = sub(power(4,n),mul(anz(n),2))$ \\
+
+#+END_SRC
+
+anz(0) = 1
+anz(1) = 3
+anz(2) = 10    1
+anz(3) = 36    6
+anz(4) = 136   30
+anz(5) = 528   120
+anz(6) = 2080  496
 
 *** footer
 #+BEGIN_SRC latex :tangle th-loesung-10.tex
@@ -862,6 +1010,68 @@ bla bla
 **** Subheading
 nochmehr bla
 * Logik
+** Herausragende Quellen
+[[http://homepage.univie.ac.at/guenther.eder/Grundkurs_Logik.htm][Grundkurs Logik Uni Wien]]
+[[http://homepage.univie.ac.at/guenther.eder/logikSS10.htm][Materialien Uni Wien]]
+http://homepage.univie.ac.at/guenther.eder/firstolog1.htm
+     und noch mehr auf dieses Seiten
+http://en.wikipedia.org/wiki/First-order_logic
+** Englisch
+| Deutsch                | Englisch                            |
+|------------------------+-------------------------------------|
+| Prädikatenlogik        | Predicate Logik                     |
+| Quantor(existenz, all) | quantifier (existential, universal) |
+| Aussagenlogik          | Propositional Calculus/Logic        |
+| Universum              | Domain of Discourses                |
+| Aussagenlogik          | sentential calculus / logic         |
+| Formel                 | formular (well-formed) = wff        |
+| Junktor                | logical connective                  |
+|                        |                                     |
+|                        |                                     |
+
+** Wörterbuch
++ Modell :: = Menge, mit bestimmten Strukturen. Es treffen die Axiome des Systems auf das diese Menge zu. Es besteht aus dem 
+	    Universum, und einer Interpretationsfunktion. Mit beidem zusammen, kann man einen Prädikatenlogischen Satz 
+	    interpretieren, mit der Belegung für die nichtlogischen Zeichen und dem Universum für die Quantoren.
++ Universum :: Menge aus Modell 
++ Signatur :: = Symbolmenge = die Symbole die nicht der unmittelbaren logischen Interpretation dienen, und z.B. die Terme bilden
++ Prädikatenlogik :: = Quantorenlogik
++ Aussagenlogik :: Untersuchung, aus welchen Aussagen eine Aussage zusammengesetzt ist
++ Atomare Aussage :: nicht weiter Spaltbar => einfacher Term oder so
++ Prädikat :: Aussage mit Platzhalter, Funktion: U^n -> Wahrheitswert, nimmt also entsprechend der Stelligkeit
+	      des Prädikats, viele Objekte aus dem Universum und gibt ihnen einen Wahrheitswert. Dem Prädikatensymbol
+	      P wird häufig einfach eine Menge zugeordnet. Es gilt dann [[file:201301ad-0550109890lls.png]]
++ Quantoren :: [[file:201301ad-0100132159B3G.png]] und [[file:201301ad-0100192159OBN.png]] [[file:201301ad-00593521590sA.png]]
+#+Begin: prädikatenlogische äquivalenzen
+[[~/Zettelkasten/_20130112_010522_2159P0r.png]]
+[[~/Zettelkasten/_20130112_010435_2159Cql.png]]
+[[~/Zettelkasten/_20130112_010211_2159bLT.png]]
+#+End:
++ Algebra :: Menge + (familie von) Verknüpfungen auf diese Menge 
++ Kalkül :: Menge von Regeln, die aus Aussagen neue Aussagen ableiten
++ Variablenbelegung :: über einem Modell, ist Funktion, s: {v0,v1,..} -> D (D ist Universum). Ordnet
+     also allen Variablen einen Wert aus dem Universum zu. (Brücke Quantoren und Universum)
+     "in der Prädikatenlogik (bei vorgegebener Struktur S) eine Abbildung, die jeder freien Variablen aus S ein Element des Universums A zuordnet."
++ Junktor :: logische Verknüpfung 2er Aussagen 
++ Term :: ableitung von Wortalgebra, nur Symbole ohne logische interpretation
++ Formel :: = Aussage = Ausdruck = Verknüpfung von anderen Formeln, atomare Formeln stammen direkt von Term ab
++ [[file:201301ad-0130032159c-x.png]] (Symbolmenge) :: [[file:201301ad-0131102159OIB.png]] (Funktionssymbole) + [[file:201301ad-0131172159bSH.png]] (Konstanten) + [[file:201301ad-0131252159ocN.png]] (Relationssymbole)
+  also alles für Zeichen, die für Terme verwendbar sind
++ Struktur [[file:201301ad-0333539890kyN.png]] :: Universum A, mit Funktionen drauf (oder Potenzen daven => mehrstellige Funktionen)
+     und Relationen (also Teilmengen, von Potenzen)
+     Beides muss jeweils für alls funks, und rels, aus irgend einer Menge gelten (der jeweiligen Signatur)
++ Erweiterung Funktion Aussagenlogik :: als Basis diente eine Funktion, die Termen(atomare Formeln) Wahrheitswerte zuordnen 
+     konnte(hätte können). Die Funktion mit dem Strich drüber, also die Rekursion, machte es dann möglich mehrere Aussagen
+     die mit den junktorern verknüfpft waren, zu definieren, und auseinanderzunehmen, ohne die Funktion wirklich auszuführen
+     Diese Version der Funktion mit dem Strich, wird als Erweiterung bezeichnet.
++ Interpretationsfunktion :: Funktion, die zu Modell gehört, und da jedem nichtlogischen Zeichen (aus S) eine "Bedeutung"
+     zuordnet. Es werden also die Bedeutungen der Funktionssymbole, Konstanten und Relationssymbole *belegt*, sodass die 
+     Quantorenaussage *interpretiert* werden kann. Die Relationen bekommen dabei z.B. Teilmengen des Universums.
++ freie Variable :: Variable die einfach in Aussage vorkommt, ohne durch Quantor gebunden zu sein. 
++ Fortsetzung Belegung [[file:201301ad-0418219890x8T.png]] :: Bleibt für gebundene Variablen. (in Quantoren) also [[file:201301ad-0419599890LRg.png]]
+     aber für Individuenkonstanten: [[file:201301ad-0420099890Ybm.png]] also die Interpretationsfunktion kümmert sich drum
++ Interpretation :: Modell (Universum + Interpretationsfunktion) + Belegung s
+
 ** Zettel-08
 *** Dateien
 [[/home/florian/Dropbox/lo/lo-zettel-08.pdf::NNN][lo-zettel-08.pdf]]
@@ -874,15 +1084,149 @@ nochmehr bla
 Maximal: kein anderes echtes Ideal von dem I ne echte Teilmenge
 jedes ideal von dem I ne echte Teilmenge, ist
 
-
-
 ** Zettel-09
 [[~/Dropbox/lo/lo-zettel-09/lo-zettel-09.pdf][lo-zettel-09.pdf]]
 [[~/Dropbox/lo/lo-zettel-09/lo-loesung-09.tex][lo-loesung-09.tex]]
 [[~/Dropbox/lo/lo-zettel-09/lo-loesung-09.pdf][lo-loesung-09.pdf]]
 ** Zettel-10
-[[~/Dropbox/lo/lo-zettel-10/lo-loesung-10.tex][lo-loesung-10.tex]]
-[[~/Dropbox/lo/lo-zettel-10/lo-loesung-10.pdf][lo-loesung-10.pdf]]
+*** header
+#+BEGIN_SRC latex :tangle lo-loesung-10.tex
+\documentclass[11pt]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath}
+\usepackage{verbatim}
+\usepackage{color}
+\usepackage{geometry}
+\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
+\usepackage{amsthm}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+
+%\includegraphics{?} setzt bild ein
+%\ref{labelname} erstellt link zu labelname
+%\label{labelname} kann einfach irgendwo drangesetz werden
+
+\newtheorem{defi}{Definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{nota}{Notation}
+\newtheorem{prop}{Proposition}
+\newtheorem{satz}{Satz}
+\newtheorem{umf}{Umformung}
+
+\newenvironment{beweis}{\par\begingroup%
+\settowidth{\leftskip}{\textsc{Beweis:~}}%
+\noindent\llap{\textsc{Beweis:~}}}{\hfill$\Box$\par\endgroup}
+
+\renewcommand{\baselinestretch}{1}
+\newcommand{\words}{\Sigma^* \backslash \{\epsilon\}}
+\newcommand{\etrans}[1]{\bar{\delta}(#1)}
+\renewcommand{\P}{\mathbb{P}}
+
+\title{Zettel 10}
+\author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
+%\date{} % Activate to display a given date or no date (if empty),
+% otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+#+END_SRC 
+
+*** Aufgabe 35
+#+BEGIN_SRC latex :tangle lo-loesung-10.tex
+\subsection{Aufgabe 35}
+#+END_SRC
+
+#+Begin: aufgabenstellung 35
+[[/home/florian/Zettelkasten/zettelkasten.org_20130111_190103_2159bEf.png]]
+#+End:
+
+**** Aufgabe a)
+#+BEGIN_SRC latex :tangle lo-loesung-10.tex
+\subsubsection{a)}
+#+END_SRC
+
+Fortsetzung sollte hier einfach ausrechnen mit "erweiterter" Funktion heißen.
+Und erweitert bedeutet im Grunde nur, das jede Funktion das macht was
+sie halt am besten kann ^^ . Also einfach einsetzen
+=> t = s2x7s2s0x5 mit a^v(t) = {0,1,2,3,4,5,6,7} es sei denn das Mengenkomplement
+soll hier etwas anderes als der Schnitt sein
+
+**** Aufgabe b)
+#+BEGIN_SRC latex :tangle lo-loesung-10.tex
+\subsubsection{b)}
+#+END_SRC
+Wenn Element der Menge dann wahr, sonst Falsch.
+{0,1,...,7} \in p_1t => a^(p_1t) = wahr , aber notation fragwürdig
+{0,1,...,7} => |av(t)| = 8 => a^(p-_1t) = wahr
+**** Aufgabe c)
+#+BEGIN_SRC latex :tangle lo-loesung-10.tex
+\subsubsection{c)}
+#+END_SRC
+Auf jeden Fall ändern bedeutungslose quantoren nichts an der AUssage
+Was könnte der Quantor hier heißen? Vielleicht jeder beliebige Wert
+aus dem Universum?
+Im Grunde sollte x_5 einfach fest sein, also so wie wenn man schreiben würde
+[[file:201301ad-0610259890yvy.png]] . Der Hut mit Spitze nach oben an dem alpha könnte auch signalisieren, 
+dass ein Wahrheitswert rauskommt. Sonst könnte man vielleicht auch nach
+Mengen suchen.
+Also: Ich tippe auf wahr, weil konstant.
+Aber die funktion übernimmt ja nur die freien Ungebundenen Variablen.
+Daher sollte hier alles aus dem Universum möglich sein.
+Aussage bleibt aber wahr, da ja beim Schnitt alles verschwindet.
+**** Aufgabe d)
+#+BEGIN_SRC latex :tangle lo-loesung-10.tex
+\subsubsection{d)}
+#+END_SRC
+Die linke Seite ist wahr wie in C. Auf der rechten Seite ändert sich schon
+deshalb nichts, weil x_4 gar nicht vorkommt, und solche Quantoren ignoriert
+werden können. Rechts bleibt also auch wahr. Beides zusammen also ebenfalls
+wahr.
+*** Aufgabe 36
+#+BEGIN_SRC latex :tangle lo-loesung-10.tex
+\subsection{Aufgabe 36}
+#+END_SRC
+
+#+Begin: aufgabenstellung 36
+[[/home/florian/Zettelkasten/zettelkasten.org_20130111_190207_2159oOl.png]]
+#+End:
+
+**** Aufgabe a)
+#+BEGIN_SRC latex :tangle lo-loesung-10.tex
+\subsubsection{a)}
+#+END_SRC
+5 16 9 * *
+= 720
+**** Aufgabe b)
+#+BEGIN_SRC latex :tangle lo-loesung-10.tex
+\subsubsection{b)}
+#+END_SRC
+Falsch da 2 stelliges Prädikat und nur ein term vorhanden
+Außerdem gibt es keine (m,n) in N , dass wäre N^2
+Unter Umständen soll das Ergebnis auch ne Menge sein.
+Da m und n kein Input für den Term sind, eher nicht.
+
+**** Aufgabe c)
+#+BEGIN_SRC latex :tangle lo-loesung-10.tex
+\subsubsection{c)}
+#+END_SRC
+Müsste dann ja auch immer falsch sein.
+Aber d dann auch, und das wäre zu simpel.
+x3 vielleicht als Eingabe für p2t ? Falls es ne Eigabe für m ist:
+Also interpretiert: Es gibt ein x4 so dass für jedes x3
+gilt: (2 * x3 < 5*x4*x3) 
+Sei x4 = 1 => (2*x3 < 5*x3) gilt für alles x3 also wahr
+**** Aufgabe d)
+#+BEGIN_SRC latex :tangle lo-loesung-10.tex
+\subsubsection{d)}
+#+END_SRC
+Für alle x3 gibt es ein x4 so dass gilt: (2*x4 < 5*x3*x4) 
+Sei x3=0 => (2*x4 < 0) => existiert kein x4 das *echt* kleiner ist
+=> falsch
+*** footer
+#+BEGIN_SRC latex :tangle lo-loesung-10.tex
+\end{document}
+#+END_SRC
+
 ** Zettel-11
 [[~/Dropbox/lo/lo-zettel-11/lo-zettel-11.pdf][lo-zettel-11.pdf]]
 [[~/Dropbox/lo/lo-zettel-11/lo-loesung-11.tex][lo-loesung-11.tex]]

@@ -1,3 +1,5 @@
+#+TODO: TODO NEXT | DONE
+
 * Studium
 #+BEGIN: clocktable :maxlevel 3 :scope subtree
 Clock summary at [2013-01-04 Fr 19:33]
@@ -61,135 +63,91 @@ Clock summary at [2013-01-04 Fr 19:33]
 *** TODO Struktur von Inhalt planen
 
 
- 
-* System-Config
-** Feature Browse/Solve
-   CLOCK: [2013-01-03 Do 21:21]--[2013-01-03 Do 23:03] =>  1:42
-** Clear Mind
-   CLOCK: [2013-01-03 Do 18:02]--[2013-01-03 Do 19:09] =>  1:07
-   CLOCK: [2013-01-02 Mi 14:52]--[2013-01-02 Mi 14:55] =>  0:03
-   => Tasks sammeln
-** Projekte
-*** Emacs Config Aufräumen
-**** TODO nicht mehr benutzte dateien in .emacs.d löschen
-**** TODO alle shortcuts in .emacs zusammenfassen
-**** TODO funktionen in .emacs auslagern
-**** TODO unnötige keybindings entfernen
-**** TODO in bytecompiling einlesen
-**** TODO alles bytecompilen
-*** Org-Mode Bilder
-**** TODO Möglichkeiten nachträgliches resizen der Bilder im Org-Mode eruieren
-**** TODO extra Fenster bei Latexumwandlung unterdrücken (google save-excursion)
-**** TODO Code von konvertiertem Latex in linktext behalten (latex auch bilder mit linktext als Bilder anzeigen lassen)
-**** TODO iimage bibliothek o.ä. code raussuchen und auf anpassparkeit prüfen
-**** TODO anforderungen an eigenen Modus sammeln
-**** TODO entsprechenden modus entwickeln (image slicing)
-*** Tags
-**** TODO etags installieren
-**** TODO google: wie können tags zu den unterschiedlichen dokumentarten generiert werden
-**** TODO google: welche navigations und sammelmöglichkeiten gibt es?
-**** TODO Shortcuts für die Tags entsprechend legen
-*** Capturing
-**** TODO welche Captures (-Templates) würden noch Sinn machen? Broweser/Client
-**** TODO Captures entsprechend implementieren
-*** Shortcuts
-**** TODO [#B] mehr Tasten auf den Modalen Vim Modus setzen
-**** TODO verschieben/retaggen von Fenstern in awesom wm
-**** TODO Firefox Zwang auf web lösen
-**** DONE completion shortcuts bequemer machen			  :shortcuts:
-**** DONE Orte mit (letzten) veränderungen oder sowas durchgehen(cyclen - plural)
-**** DONE shortcut für zuletzt benutztes bookmark		  :shortcuts:
-**** DONE Shortcut Header Sprung besser legen			   :shortcut:
-**** DONE Emacs wiederholung braucht ein besseres shortcut (z schwer zu finden) :shortcut:
-**** DONE zyklisches Pasten von Emacs aus Killring		  :shortcuts:
-**** DONE shortcuts für erstellen von tmp autonamed bookmark und cyclen (in buffer) :shortcuts:
-*** magpie / textsubstitution
-**** TODO Planung/Zielsetzung einer idealen lokalen Textsubstitution
-**** TODO Stichwort fuzzymatching completion prüfen
-**** TODO Quellcode von Magpie von dahingehende Anpassparkeit prüfen
-*** Sprungmarken
-**** TODO [#C] Liste mit Features von Bookmark+ anfertigen
-**** TODO [#C] markierung und/oder anzeige für evil marks im Dokument anzeige(goggle)
+* Projekte
+** Emacs Config Aufräumen
+*** TODO nicht mehr benutzte dateien in .emacs.d löschen
+*** TODO alle shortcuts in .emacs zusammenfassen
+*** NEXT funktionen in .emacs auslagern
+*** TODO unnötige keybindings entfernen
+*** DONE in bytecompiling einlesen
+*** DONE alles bytecompilen
+** Org-Mode Bilder
+*** NEXT Möglichkeiten nachträgliches resizen der Bilder im Org-Mode eruieren
+*** TODO Code von konvertiertem Latex in linktext behalten (latex auch bilder mit linktext als Bilder anzeigen lassen)
+*** DONE extra Fenster bei Latexumwandlung unterdrücken (google save-excursion)
+*** DONE iimage bibliothek o.ä. code raussuchen und auf anpassparkeit prüfen
+*** DONE anforderungen an eigenen Modus sammeln
+*** DONE entsprechenden modus entwickeln (image slicing)
+** Tags
+*** NEXT etags installieren
+*** TODO google: wie können tags zu den unterschiedlichen dokumentarten generiert werden
+*** TODO google: welche navigations und sammelmöglichkeiten gibt es?
+*** TODO Shortcuts für die Tags entsprechend legen
+** Capturing
+*** NEXT welche Captures (-Templates) würden noch Sinn machen? Broweser/Client
+*** TODO schnellere Shortcuts für Captures 
+*** TODO Captures entsprechend implementieren
+** Shortcuts
+*** NEXT shortcuts für scrolling in pentadactyl ummappen
+*** TODO verschieben/retaggen von Fenstern in awesom wm
+*** TODO [#B] mehr Tasten auf den Modalen Vim Modus setzen
+*** DONE Firefox Zwang auf web lösen
+*** DONE completion shortcuts bequemer machen			  :shortcuts:
+*** DONE Orte mit (letzten) veränderungen oder sowas durchgehen(cyclen - plural)
+*** DONE shortcut für zuletzt benutztes bookmark		  :shortcuts:
+*** DONE Shortcut Header Sprung besser legen			   :shortcut:
+*** DONE Emacs wiederholung braucht ein besseres shortcut (z schwer zu finden) :shortcut:
+*** DONE zyklisches Pasten von Emacs aus Killring		  :shortcuts:
+*** DONE shortcuts für erstellen von tmp autonamed bookmark und cyclen (in buffer) :shortcuts:
+** Sprungmarken
+*** TODO [#C] Liste mit Features von Bookmark+ anfertigen
+*** NEXT [#C] markierung und/oder anzeige für evil marks im Dokument anzeige(goggle)
 nicht mehr zeit verschwenden, als unbedingt nötig, da die evil marks in jedem fall auch
 durch autobookmarks ersetzt werden könnten
 google: emacs+evil+show+mark 
-*** TodoListe optimieren
-**** TODO Brainstorming, was Standardmäßig geöffnet und was geschlossen sein soll
-**** TODO [#C] autostarts neu zuteilen (source blöcke usw)    
-*** Latex Mode
-**** TODO Cdlatex Paket suchen und installieren
-**** TODO testen in wie fern schnelles suchen und finden von Symbolen möglich ist
-**** TODO testen wie weit auto completion von viel genutzen symbolen (Rightarrow...) glatt läuft
-**** TODO gegebenenfalls weitere Completion Methoden einsetzen
-*** Git
-**** TODO die 3 Grundmerges finden (a / b / beide)
-**** TODO magit: commit und push?
-*** someday / maybe
-**** TODO [#C] ubuntu vs mint akku (genau das bei google)
-**** TODO [#B] regex (icicle und rx makro) testen
-**** TODO [#C] gnome keyring bug beheben
-**** TODO [#B] autogenes Training routine finden
-*** effizienteres Suchen
-**** TODO Suchmaschine(n) für Quellcodes
-***** alternative rc.lua suchen
-***** alternative .emacs suchen
-**** TODO alternativen zu google prüfen / bessere Befehle sammeln
-*** Netbook neu einrichten
-**** TODO brainstorming, xorg (wieder) automatisch booten (google startx)
-
-*** zathura
-** raw - stuff
-*** Steam <2013-01-02 Mi> 
-
-Die Shortcuts für den Sprung zum Header könnten besser liegen. 
-Tags für die Todoliste um grob nach einem Kontext gruppieren zu können => lohnt sich
-aber auch nur, wenn es auch genug gibt. Nach wie vor ist auch die Frage offen, wie man
-linkansammlungen im Browser sammeln und wiedergeben kann. Da ReadItLater ziemlich
-schlecht funktioniert. Vielleicht könnte man man dazu wirklich emacs benutzen. Links
-lassen sich von emacs aus Problemlos im Firefox öffnen. Entscheidend ist dann, ob das
-Org Protocol diesen Zweck auch vernünftig erfüllen kann. Wenn man dann noch eine
-Funktion an die Hook für einen geöffneten Link anhängen könnte, so könnte man diese
-links anschließend auch einfach verschwinden lassen, oder andere coole dinge damit
-anstellen. 
-Bookmarks und Marks allgemein sind leider immernoch ein Problemfaktor. Vielleicht könnte
-sich das mit bequemeren Shortcuts bessern? Auf jeden fall fehlt einfach immer die
-Übersicht, was was war, zumindest solange wir uns noch an die Routine gewöhnen
-müssen. Hier wäre es hilfreich, wenn zumindest tempoär in einem kleinen Unterfenster die
-aktuellen marks angezeigt werden könnten. Eine Markierung ähnlichd der von Bookmark plus
-wäre vermutlich auch sehr nützlich, schon allein um sich immer wieder daran zu erinnern,
-was möglich ist. Alternativ könnte aber auch bookmark+ genutzt werden. Nach wie vor
-haben wir dieses plugin so gut wie überhaupt nicht in Benutzung. Das Problem ist, dass
-wir nicht genau wissen, was wir wollen, bzw. wie diese Dinge gelöst werden könnten.
-Was wir brauch ist klar: ein schnelles hin- und herspringen in einem Buffer muss
-gewährleistet sein. Zumindest im Org-Mode geht da viel über das Imenu aber perfekt ist
-das auch noch nicht. Die Marks von Evil sind dazu aber auch zu anonym. Statt dessen
-würden sich tempoäre automatisch benannte Bookmarks anbieten, die mit einem schnellen
-Tastendruck ohne weitere einstellungen erstellt werden können. Diese bookmarks sollte
-man dann mit einer weiteren simplen Tastenkombination durchcyclen können. 
-Eine andere Problemstellung ist das bearbeiten an mehrerer Orten in einer Datei. Jedes
-mal ein Bookmark einzugeben würde hier einfach zu lange dauern, andererseits dauert
-cyclen auch zu lange. Hier wäre es wünschenswert, so ähnlich wie bei
-Windows-Taskswitcher zum letztn Bookmark springen zu können. Man könnte dann per
-Listensprung 2 Stellen "verknüfen" und dann mit dem recent_bookmark sprung hin und her
-gehen. Genaugenommen könnte dieser Sprung auch über das Buffer hinausgehen, und wäre
-immernoch sehr Sinnvoll. Es bliebe dann noch der 2 Cursor. Wäre dessen Steuerung
-optimiert könnte er fast sinnvoll sein. Andererseits wären clever gelegte Bookmarks
-einfach handlicher. Im Zweifelsfalls könnte man das Fenster ja auch noch splitten.
-
-Was könnte man noch in der Todo Liste vergessen haben? Diary. Capturing. Cyclic Paste.
-
-Irgendwie brauchen wir noch eine sinnvolle Projekt übersicht. Wenn die Todo's so viele
-werden, ist es schwer dabei noch einen entspannten Überblick zu behalten. Andererseits
-wüsste ich nicht, nach welchem Schema ich gruppieren sollte. => Projekte, also Schritte
-die zum selben Endergebniss führen sollen. Aber wir haben vor allem viele
-Mikrotasks. Beispiel: Shortcuts. Shortcuts würden aber auch ein gutes Projekt abgeben,
-da sie ja sowies zusammen bearbeitet werden.
-
-
- 
-	
-
-
+** TodoListe optimieren
+*** TODO Brainstorming, was Standardmäßig geöffnet und was geschlossen sein soll
+*** TODO [#C] autostarts neu zuteilen (source blöcke usw)    
+*** NEXT todo states und faces aus "your life in plaintext"
+** Latex Mode
+*** NEXT Cdlatex Paket suchen und installieren
+*** TODO testen in wie fern schnelles suchen und finden von Symbolen möglich ist
+*** TODO testen wie weit auto completion von viel genutzen symbolen (Rightarrow...) glatt läuft
+*** TODO gegebenenfalls weitere Completion Methoden einsetzen
+** Git
+*** NEXT die 3 Grundmerges finden (a / b / beide)
+*** TODO magit: commit und push?
+** effizienteres Suchen
+*** TODO Suchmaschine(n) für Quellcodes
+**** alternative rc.lua suchen
+**** alternative .emacs suchen
+*** TODO alternativen zu google prüfen / bessere Befehle sammeln
+** zathura
+*** NEXT google: Zathura Completion / man page / doku / config wälzen. Ziel: Anzeige auch von Dateien ohne Endung in der Completion
+*** TODO mehrere instanzen von zathura / fenster / buffer etc?
+- per konsole auf jeden fall unmittelbar
+*** TODO completion in zathura umkonfigurieren
+    - navigation mit pfeiltasten in resultaten
+    - anzeigen aller dokumente (auch nicht pdf's)
+    - fuzzy-matching / plugins?
+    - geht eigentlich schon, aber merke: 
+      & ans Ende für separaten task
+      ctrl backsp um ganze wörter zu löschen
+** awesome wm
+*** NEXT Titlebar Awesome Wm googlen. Ziel: Titlebars in bestimmten Tags (mit Floating standard), aktivieren.
+*** TODO ansatz für tabs in awesome wm formulieren
+*** TODO testen was genau shifty macht, und das gegebenenfalls einrichten
+*** TODO nochmal die awesomewm konfiguration für tab's raussuchen und versuchen einen Plan zu entwickeln, um dieses sicher zu implementieren
+** eshell
+*** NEXT Autocompletion Eshell googlen (Ziel: Möglichkeit umzuschalten. Vielleicht andere Shortcuts?)
+*** TODO Autocompletion eshell fixen (im moment wird bei tab direkt eingesetzt und es lässt sich nicht weiter schalten)
+*** TODO mehrere eshell's, und diese sollten auch von überall aus in einem separaten Frame geöffnet werden können
+** someday / maybe
+*** TODO [#C] ubuntu vs mint akku (genau das bei google)
+*** TODO [#B] regex (icicle und rx makro) testen
+*** TODO [#C] gnome keyring bug beheben
+*** TODO Netbook neu einrichten
+- brainstorming, xorg (wieder) automatisch booten (google startx)
 * interessanter Kram
 ** tiling windowmanager
 *** notion wm / stump wm
@@ -208,32 +166,28 @@ da sie ja sowies zusammen bearbeitet werden.
 *** wumwum 
     - eher weniger verlocend im moment
 *** PyWO
-** die ganzen installierten sachen auf dem laptop
 ** im alten my-keymaps sehen, was noch an plugins benutzt wurde
 ** ubiquity
    einfach mal testen
 
 ** weitere pentadactyl shortcuts/befehle
 ** vimperator addons sammeln
-** kwin (kde window manager) unterstützt tabbing
 ** slime installieren und einrichten
 
 * Todo-Eingang
-** TODO gegensatz zu bufferback
-** DONE Screenshots per Tastatur
+** NEXT Übersicht in Software zu den verschiedenen Vim Substitutionen erstellen
+** TODO [#A] autogenes Training routine finden
 ** TODO zusätzliche foldingsyntax / elemente einführen?
    vor allem kürzer als diese begin, end dinger
 
-** TODO mehrere instanzen von zathura / fenster / buffer etc?
-- per konsole auf jeden fall unmittelbar
-** TODO completion in zathura umkonfigurieren
-   - navigation mit pfeiltasten in resultaten
-   - anzeigen aller dokumente (auch nicht pdf's)
-   - fuzzy-matching / plugins?
-** TODO ansatz für tabs in awesome wm formulieren
-** DONE tabbed untersuchen
-   - eher unschön das ganze
-** TODO Keynav überprüfen (als Lösung für Screenshots)
+* Todo Ausgang
+** DONE gnus wieder für die mails einrichten
+** DONE git: leere commits abschicken
+** DONE AwesomeWm Shortcuts
+*** DONE Ein/Ausblenden von Fenstern logischer legen
+*** DONE jeweils recent Sprung für Fenster und tag (awesomewm)
+    - im Moment win+escape und win+tab aber das geht auch besser
+** DONE Keynav überprüfen (als Lösung für Screenshots)
    - rodentbane ist keynav, allerdings wurde das teil 
      komplett portiert, abhängigkeit ist nur zu allgemeineren
      tools gegeben
@@ -241,11 +195,8 @@ da sie ja sowies zusammen bearbeitet werden.
    siehe dazu: http://www.semicomplete.com/projects/xdotool/xdotool.xhtml
    mouse->keyup/keydown
    und [[~/.config/awesome/rodentbane.lua::function click(button)]]
-** DONE AwesomeWm Shortcuts
-*** DONE Ein/Ausblenden von Fenstern logischer legen
-*** DONE jeweils recent Sprung für Fenster und tag (awesomewm)
-    - im Moment win+escape und win+tab aber das geht auch besser
-** DONE git: leere commits abschicken
-
-
-   
+** DONE tabbed untersuchen
+   - eher unschön das ganze
+** DONE Screenshots per Tastatur
+** DONE flosub mit leertaste arbeiten lassen
+** DONE Weiterspringen und besseres Shortcut für Regex Sprung

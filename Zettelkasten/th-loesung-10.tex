@@ -65,22 +65,48 @@ q_2 & 0 & 1 & N & q_f & \\
   \>$ $\underline{loop}$ X_1(X_2 = X_3 + 1);$ \\
   \>$ $\underline{out}$ (X_2);$
 \end{tabbing}
-  
-  \vspace{0.5cm}
-  
-  $\alpha_1 := X_2 := 0$ \\
-  $\alpha_2 := X_3 := 0$ \\
-  $\alpha_3 := loop X_1(X_2 = X_3 + 1)$ \\
-  $[[\alpha_1]]{(3)}(\alpha_1,\alpha_2,\alpha_3) = [[\alpha_1 := X_2 := 0]]^{(3)}(\alpha_1,\alpha_2,\alpha_3)$ \\
-  $    = (0,\alpha_2,\alpha_3)$ \\[0.3cm]
-  
-  $[[\alpha_2]]{(3)}(\alpha_1,\alpha_2,\alpha_3) = [[\alpha_2 := X_3 := 0]]^{(3)}(\alpha_1,\alpha_2,\alpha_3)$ \\
-  $    = (\alpha_1,0,\alpha_3)$ \\[0.3cm]
-  
-  $[[\alpha_3]]{(3)}(\alpha_1,\alpha_2,\alpha_3) = [[loop X_1(X_2 := X_3 + 1)]]^{(3)}(\alpha_1,\alpha_2,\alpha_3)$ \\
-  $    = ([[X_2 := X_3 + 1]]^{(3)})^{\alpha_1}(\alpha_1,\alpha_2,\alpha_3)$ \\
-  $    = (\alpha_1, \alpha_2 , \alpha_2 + \alpha_1) $ \\[0.5cm]
+\vspace{0.5cm}
+$\alpha_1 := X_2 := 0$ \\
+$\alpha_2 := X_3 := 0$ \\
+$\alpha_3 := \underline{loop} X_1(X_2 = X_3 + 1)$ \\
+\begin{tabbing}
+$[[\alpha_1]]^{(3)}(\alpha_1,\alpha_2,\alpha_3)$\=$ = [[\alpha_1 := X_2 := 0]]^{(3)}(\alpha_1,\alpha_2,\alpha_3)$ \\
+$ $\>$   = (\alpha_1,0,\alpha_3)$ \\[0.3cm]
+$[[\alpha_2]]^{(3)}(\alpha_1,\alpha_2,\alpha_3) = [[\alpha_2 := X_3 := 0]]^{(3)}(\alpha_1,\alpha_2,\alpha_3)$ \\
+$  $\>$  = (\alpha_1,\alpha_2,0)$ \\[0.3cm]
+$[[\alpha_3]]^{(3)}(\alpha_1,\alpha_2,\alpha_3) = [[\underline{loop} X_1(X_2 := X_3 + 1)]]^{(3)}(\alpha_1,\alpha_2,\alpha_3)$ \\
+$   $\>$ = ([[X_2 := X_3 + 1]]^{(3)})^{\alpha_1}(\alpha_1,\alpha_2,\alpha_3)$ \\
+% \> $ = ( \alpha_1 , \alpha_3^{\alpha_1} + 1^{\alpha_1}, \alpha_3)(\alpha_1,\alpha_2,\alpha_3)$ \\[0.5cm]
+Für $\alpha_1 > 0$: \\
+\> $ = ( \alpha_1 , \alpha_3 + 1, \alpha_3)(\alpha_1,\alpha_2,\alpha_3)$ \\
+Für $\alpha_1 = 0$: \\
+\> $ = ( \alpha_1 , \alpha_3, \alpha_3)(\alpha_1,\alpha_2,\alpha_3)$ \\
+% wie soll man denn schleifen einsetzen, die eins auf einen _anderen_ Wert addieren?
+\end{tabbing}
 
-\subsection{Aufgabe 32}
+\begin{tabbing}
+$[[S_n]](\alpha_1)$ \= $= (\underline{out}^{(3)}_2 \circ [[\alpha_3]]^{(3)}  
+\circ [[\alpha_2]]^{(3)} \circ [[\alpha_1]]^{(3)} \circ \underline{in}^{(1)}_3)(\alpha_1)$ \\
+\> $= (\underline{out}^{(3)}_2 \circ [[\alpha_3]] \circ [[\alpha_2]]^{(3)} \circ [[\alpha_1]]^{(3)})(\alpha_1,0,0)$ \\
+\> $= (\underline{out}^{(3)}_2 \circ [[\alpha_3]] \circ [[\alpha_2]]^{(3)})(\alpha_1,0,0)$ \\
+\> $= (\underline{out}^{(3)}_2 \circ [[\alpha_3]])(\alpha_1,0,0)$ \\
+%\> $= (\underline{out}^{(3)}_1)(\alpha_1,0^{\alpha_1} + 1,0)$ \\
+%\> $= (\alpha_1,1,0) = $ \\
+Für $\alpha_1 > 0$: \\
+\> $= (\underline{out}^{(3)}_2)(\alpha_1,1,0) = 1$ \\
+Für $\alpha_1 = 0$: \\
+\> $= (\underline{out}^{(3)}_2)(\alpha_1,0,0) = 0$ \\
+% hier  ist dann immernoch das Problem mit der Schleife
+$\Rightarrow [[S_n]]: \mathbb{N} \rightarrow \mathbb{N}, (\alpha_1) \rightarrow \begin{cases} 1 &\mbox{falls } \alpha_1>0 \\ 0 &\mbox{sonst} \end{cases}$
+\end{tabbing}
+
+\subsection*{Aufgabe 32}
+
+\subsubsection*{a)} Es gilt: $power(a,0) = 1 = C_0^{(1)}(a) + 1 = add(C_0^{(1)},1)$ \\
+und $power(a,b+1) = power(a,b)*a = mult(power(a,b),a) = $ \\
+
+\subsubsection*{b)} Es gilt: $anz(0) = 1 = C_0^{(1)}(n) + 1 = add(C_0^{(1)},1)$ \\
+und $anz(n+1) = 4^n - anz(n) + anz(n) * 3  = 4^n + anz(n)*2$ \\
+$ = power(4,n) - mul(anz(n),2) = sub(power(4,n),mul(anz(n),2))$ \\
 
 \end{document}

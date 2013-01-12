@@ -9,7 +9,6 @@ require("naughty")
 
 -- Load Debian menu entries
 require("debian.menu")
-require("rodentbane")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -241,7 +240,6 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "h",     function () awful.tag.incncol( 1)         end),
     awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1)         end),
     awful.key({ modkey,           }, "space", function () awful.layout.inc(layouts,  1) end),
-    awful.key({ modkey,           }, "m", function () rodentbane.start()	        end),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(layouts, -1) end),
 
    awful.key({ modkey, "Shift" }, ",", awful.client.restore),
@@ -448,10 +446,10 @@ awful.rules.rules = {
     { rule = { class = "gimp" },
       properties = { floating = true } },
     -- Set Firefox to always map on tags number 2 of screen 1.
-   { rule = { class = "Firefox" },
-     properties = { tag = tags[1][2] } },
-   {rule = { class = "emacs24" },
-     properties = { tag = tags[1][1] } },
+--   { rule = { class = "Firefox" },
+ --    properties = { tag = tags[1][2] } },
+ --  {rule = { class = "emacs24" },
+ --    properties = { tag = tags[1][1] } },
    {rule = { class = "pidgin" }, 
      properties = { tag = tags[1][5] } },
 
@@ -503,8 +501,8 @@ function run_once(prg,arg_string,screen)
     end
 end
 
-run_once("emacs24",nil,1)
-run_once("firefox",nil,1)
+--run_once("emacs24",nil,1)
+--run_once("firefox",nil,1)
 run_once("kupfer",nil,1)
 run_once("xfce4-power-manager", nil, 1)
 
