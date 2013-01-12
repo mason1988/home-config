@@ -933,6 +933,9 @@ Anpassung X
 (lgrep "-key" "/home/florian/.emacs")
 (setq debug-on-error t)
 Und es geht weiter
+hier auch
 und noch mehr modifikationen
 
 hier die anpassung vom laptop
+
+das hier ist die anpassung vom netbook
