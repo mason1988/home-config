@@ -934,3 +934,6 @@ Anpassung X
 (setq debug-on-error t)
 Und es geht weiter
 hier auch
+und noch mehr modifikationen
+
+das hier ist die anpassung vom netbook
