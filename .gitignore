@@ -59,3 +59,33 @@ history
 /tasta_stuff/pair_keyboard.sh
 /.#.emacs
 /.config/synapse/config.json
+.authinfo
+/.config/abiword/AbiCollab.Profile
+/.config/abiword/profile
+/.config/calibre/conversion/page_setup.py
+/.config/calibre/dynamic.pickle
+/.config/calibre/global.py
+/.config/calibre/gui.json
+/.config/calibre/gui.py
+/.config/calibre/metadata_sources/ISBNDB.json
+/.config/calibre/tweaks.py
+/.config/cherrytree/config.xml
+/.config/gnote/manifest.xml
+/.config/gobby/config.xml
+/.config/gobby/documents.xml
+/.config/gobby/recent_hosts
+/.evernote-mode/contents/189695a1-9ffa-474d-a955-9447b2d604fd
+/.evernote-mode/contents/427f4545-842f-4641-ade6-240f8951aa0e
+/.evernote-mode/contents/7307f4c6-174c-4343-8229-be2d06019ee7
+/.evernote-mode/lock
+/.evernote-mode/note
+/.evernote-mode/notebook
+/.evernote-mode/saved_search
+/.evernote-mode/sync
+/.evernote-mode/tag
+/.hnbrc
+/.todo
+/Calibre Bibliothek/John Schember/Calibre Quick Start Guide (1)/Calibre Quick Start Guide - John Schember.epub
+/Calibre Bibliothek/John Schember/Calibre Quick Start Guide (1)/cover.jpg
+/Calibre Bibliothek/John Schember/Calibre Quick Start Guide (1)/metadata.opf
+/Calibre Bibliothek/metadata.db
