@@ -927,7 +927,12 @@ Comedy-Urgesteine in weiteren Hauptrollen zu sehen. (BL)
 [[file:~/.jdownloader/downloads/Ottos.Eleven.German.2010.DVDRip.XviD-GMA.avi][ansehen]]
 
 * Notes
+  <<<<<<< variant A
 Anpassung X
+>>>>>>> variant B
+  blablabla
+####### Ancestor
+======= end
   *Shell Command Output*
 (lgrep "-key" "/home/florian/.emacs")
 (setq debug-on-error t)
