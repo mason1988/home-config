@@ -1,3 +1,4 @@
+
 #+LINK: zk /home/florian/Dropbox/Zettelkasten/
 #+LINK: zkp /home/florian/Dropbox/Zettelkasten/res-pic_%s.png
 #+LINK: drop /home/florian/Dropbox/%s
