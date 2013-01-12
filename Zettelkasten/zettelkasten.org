@@ -934,3 +934,5 @@ Anpassung X
 (setq debug-on-error t)
 Und es geht weiter
 und noch mehr modifikationen
+
+hier die anpassung vom laptop
