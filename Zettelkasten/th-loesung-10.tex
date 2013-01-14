@@ -102,11 +102,18 @@ $\Rightarrow [[S_n]]: \mathbb{N} \rightarrow \mathbb{N}, (\alpha_1) \rightarrow 
 
 \subsection*{Aufgabe 32}
 
-\subsubsection*{a)} Es gilt: $power(a,0) = 1 = C_0^{(1)}(a) + 1 = add(C_0^{(1)},1)$ \\
-und $power(a,b+1) = power(a,b)*a = mult(power(a,b),a) = $ \\
+\subsubsection*{a)} 
+Es gilt: $power(a,0) = 1 = C_0^{(1)}(a) + 1 = S(C_0^{(1)}(a)) = 
+S \circ [C_0^{(1)}](a)$ \\
+und $power(a,b+1) = power(a,b)*a = mult(power(a,b),a) =
+mult \circ [p_3^{(3)},p_1^{(3)}](a,b,power(a,b))$ \\
+Dies entspricht dem Schema mit $f = \circ [C_0^{(1)}]$ und $g = mult \circ [p_3^{(3)},p_1^{(3)}]$ \\
 
-\subsubsection*{b)} Es gilt: $anz(0) = 1 = C_0^{(1)}(n) + 1 = add(C_0^{(1)},1)$ \\
-und $anz(n+1) = 4^n - anz(n) + anz(n) * 3  = 4^n + anz(n)*2$ \\
-$ = power(4,n) - mul(anz(n),2) = sub(power(4,n),mul(anz(n),2))$ \\
+\subsubsection*{b)}
+Es gilt: $anz(0) = 1 = C_0^{(0)}() + 1 = S(C_0^{(0)}()) = 
+S \circ [C_0^{(0)}]()$ \\
+Dies entspricht im Schema $f = S \circ [C_0]^{(0)}]$ \\
+Ferner gilt: $anz(n+1) = 4^n - anz(n) + anz(n) * 3 = 4^n + anz(n) * 2$ \\
+$= power(C_4^{(1)}(n),n) - mul(anz(n),C_3^{(0)}()) = sub(power(C_4^{(0)}(),n),mul(anz(n),C_3^{(0)}()))$ \\
 
 \end{document}

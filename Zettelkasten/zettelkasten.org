@@ -749,11 +749,27 @@ also startzustand | "search" | replace | sprung | nächster zustand
 #+END_SRC
 + Semantikfunktion :: [[file:201301ad-06074316693-Cl.png]] = [[file:201301ad-06075916693LNr.png]] := [[file:201301ad-06091516693YXx.png]]
 + primitiv rekursive Funktion :: rekursive Grundfunktion, oder daraus bildbar (durch komposition)
-#+BEGIN: primitive rekursive Grundfunktionen
-[[_20130110_223821_16693KhA.png]]
-#+END:
-+ Komposition ::[[_20130110_224134_16693XrG.png]] 
-  also k Argumente, die jeweils mit den Funktionen angewendet werden, und die alle zusammen dann wiederrum auf f (im Grunde das was man erwartet)
++ Nachfolgerfunktion :: S nimmt Wert und addiert 1
++ Nullkonstante :: [[file:201301ad-1834543168n1j.png]] nimmt n argumente und ergibt immer 0 (C = Konstante)
++ Projektion :: [[file:201301ad-1834073168ard.png]] bildet [[file:201301ad-1833183168AXR.png]] auf [[file:201301ad-1833233168NhX.png]] ab, zieht also das i'te Element raus
++ Komposition :: Wie normale Komposition, aber möglichkeit, direkt ne ganze Funktionenfamilie
+		 reinzuschachteln
+		[[file:201301ad-1831393168mCF.png]]
++ Schema (primitiv Rekursiv) :: Man sucht 2 pr.Rek.Funk. zur akt. Funk. Es muss gelten:
+     [[file:201301ad-18403131680_p.png]]
+     [[file:201301ad-1840363168BKw.png]]
+     man folgert für die Lösung das ganze jeweils als Komposition, und lässt dann
+     die Argumente am Ende weg
+*** Englisch
+| Deutsch                     | Englisch                     |
+|-----------------------------+------------------------------|
+| LOOP Programm               | Loop programm                |
+| Signumfunktion              | sign(um) function            |
+| primitiv rekursive funktion | primitive recursive function |
+|                             |                              |
+|                             |                              |
+|                             |                              |
+|                             |                              |
 
 ** Zettel-09
 [[~/Dropbox/th/th-zettel-09/th-zettel-09.pdf][th-zettel-09.pdf]]
@@ -922,14 +938,22 @@ Zeige, das Funktionen durch primitiv rekursive Grundfunktionen durch Komposition
 anz(0) = 1, anz(1) = 3, anz(2) = 10;  
 Primitiv Rekursiv: Nullkonstanten, Add, Mul, Vorgänger, Sub
 
+[[/home/florian/Zettelkasten/zettelkasten.org_20130112_195729_2635bdb-0.png]]
+
 #+BEGIN_SRC latex :tangle th-loesung-10.tex
-\subsubsection*{a)} Es gilt: $power(a,0) = 1 = C_0^{(1)}(a) + 1 = add(C_0^{(1)},1)$ \\
-und $power(a,b+1) = power(a,b)*a = mult(power(a,b),a) = $ \\
+\subsubsection*{a)} 
+Es gilt: $power(a,0) = 1 = C_0^{(1)}(a) + 1 = S(C_0^{(1)}(a)) = 
+S \circ [C_0^{(1)}](a)$ \\
+und $power(a,b+1) = power(a,b)*a = mult(power(a,b),a) =
+mult \circ [p_3^{(3)},p_1^{(3)}](a,b,power(a,b))$ \\
+Dies entspricht dem Schema mit $f = \circ [C_0^{(1)}]$ und $g = mult \circ [p_3^{(3)},p_1^{(3)}]$ \\
 
-\subsubsection*{b)} Es gilt: $anz(0) = 1 = C_0^{(1)}(n) + 1 = add(C_0^{(1)},1)$ \\
-und $anz(n+1) = 4^n - anz(n) + anz(n) * 3  = 4^n + anz(n)*2$ \\
-$ = power(4,n) - mul(anz(n),2) = sub(power(4,n),mul(anz(n),2))$ \\
-
+\subsubsection*{b)}
+Es gilt: $anz(0) = 1 = C_0^{(0)}() + 1 = S(C_0^{(0)}()) = 
+S \circ [C_0^{(0)}]()$ \\
+Dies entspricht im Schema $f = S \circ [C_0]^{(0)}]$ \\
+Ferner gilt: $anz(n+1) = 4^n - anz(n) + anz(n) * 3 = 4^n + anz(n) * 2$ \\
+$= power(C_4^{(1)}(n),n) - mul(anz(n),C_3^{(0)}()) = sub(power(C_4^{(0)}(),n),mul(anz(n),C_3^{(0)}()))$ \\
 #+END_SRC
 
 anz(0) = 1
@@ -1073,6 +1097,7 @@ http://en.wikipedia.org/wiki/First-order_logic
      aber für Individuenkonstanten: [[file:201301ad-0420099890Ybm.png]] also die Interpretationsfunktion kümmert sich drum
 + Interpretation :: Modell (Universum + Interpretationsfunktion) + Belegung s
 
+** Mitschriften
 ** Zettel-08
 *** Dateien
 [[/home/florian/Dropbox/lo/lo-zettel-08.pdf::NNN][lo-zettel-08.pdf]]
@@ -1144,6 +1169,8 @@ jedes ideal von dem I ne echte Teilmenge, ist
 **** Aufgabe a)
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
 \subsubsection{a)}
+\( \alpha^{\vee}(t) = \{1,2,3,4,5,6,7\} \backslash ( \{1\} \backslash \{1,2,3,4,5\} \) \\
+\( = \{0,1,2,3,4,5,6,7\} \backslash \emptyset = \{1,2,3,4,5,6,7\} \) \)
 #+END_SRC
 
 Fortsetzung sollte hier einfach ausrechnen mit "erweiterter" Funktion heißen.
@@ -1155,6 +1182,8 @@ soll hier etwas anderes als der Schnitt sein
 **** Aufgabe b)
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
 \subsubsection{b)}
+\( \alpha^{\wedge}(P) \mbox{ für } p_1t \mbox{ ist } 1\) bzw. wahr da \( | \{0,1,2,3,4,5,6,7\} | \leq 100 \) \\
+\( \alpha^{\wedge}(P) \mbox{ für } \tilde{p}_1t \mbox{ ist } 1\) bzw. wahr da \( | \{0,1,2,3,4,5,6,7\} | = 8\) und 8 ist gerade \\
 #+END_SRC
 Wenn Element der Menge dann wahr, sonst Falsch.
 {0,1,...,7} \in p_1t => a^(p_1t) = wahr , aber notation fragwürdig
@@ -1162,6 +1191,7 @@ Wenn Element der Menge dann wahr, sonst Falsch.
 **** Aufgabe c)
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
 \subsubsection{c)}
+\( \alpha^{\wedge}(A) \mbox{ für } A = \bigwedge_{x_5}p_1t \mbox{ ist wahr} \)
 #+END_SRC
 Auf jeden Fall ändern bedeutungslose quantoren nichts an der AUssage
 Was könnte der Quantor hier heißen? Vielleicht jeder beliebige Wert
@@ -1177,6 +1207,7 @@ Aussage bleibt aber wahr, da ja beim Schnitt alles verschwindet.
 **** Aufgabe d)
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
 \subsubsection{d)}
+\( \alpha^{\wedge}(B) \mbox{ für } B = (\bigwedge_{x_5}p_1t)\wedge(\bigvee_{x_4}\tilde{p}_1t) \) ist 1 bzw. wahr.
 #+END_SRC
 Die linke Seite ist wahr wie in C. Auf der rechten Seite ändert sich schon
 deshalb nichts, weil x_4 gar nicht vorkommt, und solche Quantoren ignoriert
@@ -1194,12 +1225,14 @@ wahr.
 **** Aufgabe a)
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
 \subsubsection{a)}
+\( \alpha^{\wedge}(t) =  5*4^2*3^2 = 720 \)
 #+END_SRC
 5 16 9 * *
 = 720
 **** Aufgabe b)
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
 \subsubsection{b)}
+\( a^{\wedge}(P) \) = falsch bzw. 0, da nur ein Term vorhanden ist, $p_2$ aber 2 stellig ist
 #+END_SRC
 Falsch da 2 stelliges Prädikat und nur ein term vorhanden
 Außerdem gibt es keine (m,n) in N , dass wäre N^2
@@ -1209,6 +1242,8 @@ Da m und n kein Input für den Term sind, eher nicht.
 **** Aufgabe c)
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
 \subsubsection{c)}
+Sei \( x_4 = 1 \Rightarrow (2*x_3 < 5*x_3) \) gilt für alle \(x_3 \in \mathbb{N}\) 
+also \( \alpha^{\wedge} = 1\) bzw. wahr
 #+END_SRC
 Müsste dann ja auch immer falsch sein.
 Aber d dann auch, und das wäre zu simpel.
@@ -1219,6 +1254,8 @@ Sei x4 = 1 => (2*x3 < 5*x3) gilt für alles x3 also wahr
 **** Aufgabe d)
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
 \subsubsection{d)}
+Sei \( x_3 = 0 \Rightarrow (2*x_4 < 0) \Rightarrow \) Es existiert kein \( x_4 \in \mathbb{N} \) so das gilt: \( 2*x < 0 \) \\
+\( \Rightarrow \( \alpha^{\wedge} = 0\) bzw. falsh
 #+END_SRC
 Für alle x3 gibt es ein x4 so dass gilt: (2*x4 < 5*x3*x4) 
 Sei x3=0 => (2*x4 < 0) => existiert kein x4 das *echt* kleiner ist
@@ -1306,15 +1343,6 @@ Comedy-Urgesteine in weiteren Hauptrollen zu sehen. (BL)
 [[file:~/.jdownloader/downloads/Ottos.Eleven.German.2010.DVDRip.XviD-GMA.avi][ansehen]]
 
 * Notes
-Anpassung X
-  blablabla
   *Shell Command Output*
 (lgrep "-key" "/home/florian/.emacs")
 (setq debug-on-error t)
-Und es geht weiter
-hier auch
-und noch mehr modifikationen
-
-hier die anpassung vom laptop
-
-das hier ist die anpassung vom netbook

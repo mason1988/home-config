@@ -19,8 +19,8 @@ class floslice:
         
         slice_size = 200
         for i in range(0, h, slice_size):
-            buffer = Image.new("RGB", [w,slice_size],(255, 255, 255))
             my = min(i + slice_size, h)
+            buffer = Image.new("RGB", [w,my - i],(255, 255, 255))
             slice = im.crop((0,i,w,my))
             buffer.paste(slice, (0,0))
             buffer.save("%s-%d.png"%(filename,i/slice_size),"PNG")

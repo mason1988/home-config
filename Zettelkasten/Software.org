@@ -732,6 +732,10 @@ $\frac{A}{B} = c$
 
 \end{document}
  
+** preview im org mode
+zeichen hinter $ muss frei sein
+alternativ: \( und \) für kleine schrift oder
+\[ \] oder $$ $$ für größere Schrift
 * Windowmanager
 
    :PROPERTIES:

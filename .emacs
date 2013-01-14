@@ -151,7 +151,7 @@
  '(helm-c-pdfgrep-default-read-command "emacsclient '%f'")
  '(helm-dired-mode t)
  '(org-agenda-files (quote ("~/Zettelkasten/zettelkasten.org")))
- '(org-format-latex-options (quote (:foreground default :background default :scale 1.4 :html-foreground "Black" :html-background "Transparent" :html-scale 1.4 :matchers ("begin" "$1" "$" "$$" "\\(" "\\["))))
+ '(org-format-latex-options (quote (:foreground default :background default :scale 1.4 :html-foreground "Black" :html-background "Transparent" :html-scale 1.4 :matchers ("begin" "$1" "$" "$$" "\\(" "\\[" " $$" "$$ " " $$ " " $" "$ " " $ " "$\\" "$\\\\" "$"))))
  '(org-indirect-buffer-display (quote new-frame))
  '(org-modules (quote (org-bbdb org-bibtex org-docview org-gnus org-info org-jsinfo org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m org-annotate-file org-bookmark org-checklist org-collector org-eshell org-eval)))
  '(org-src-fontify-natively t)
@@ -475,12 +475,27 @@
 (define-key evil-normal-state-map (kbd "C-ä o") 'org-babel-tangle)
 (define-key evil-normal-state-map (kbd "C-ä v") 'revert-buffer)
 
-(add-hook 'doc-view-mode-hook (lambda() ( 
- (define-key doc-view-mode-map (kbd "M-r") 'windmove-up)
- (define-key doc-view-mode-map (kbd "M-n") 'windmove-down)
- (define-key doc-view-mode-map (kbd "M-s") 'windmove-left)
- (define-key doc-view-mode-map (kbd "M-t") 'windmove-right)
- )))
+;hardcore overwrite
+    (defvar my-keys-minor-mode-map (make-keymap) "my-keys-minor-mode keymap.")
+    
+    (define-key my-keys-minor-mode-map (kbd "M-r") 'windmove-up)
+    (define-key my-keys-minor-mode-map (kbd "M-n") 'windmove-down)
+    (define-key my-keys-minor-mode-map (kbd "M-s") 'windmove-left)
+    (define-key my-keys-minor-mode-map (kbd "M-t") 'windmove-right)
+    
+    (define-minor-mode my-keys-minor-mode
+          "A minor mode so that my key settings override annoying major modes."
+	      t " my-keys" 'my-keys-minor-mode-map)
+    
+    (my-keys-minor-mode 1)
+    
+    (defun my-minibuffer-setup-hook ()
+          (my-keys-minor-mode 0))
+    
+    (add-hook 'minibuffer-setup-hook 'my-minibuffer-setup-hook)
+;ende hardcore overwrite
+
+
 
 (global-set-key (kbd "C-ä j") 'evil-normal-state)
 
@@ -490,7 +505,6 @@
 (defalias 'kill-frame 'delete-frame)
 
 (global-set-key (kbd "C-ä b") 'flosub-readall)
-
 (global-set-key (kbd "C-ä .") 'org-capture)
 
 ;; Test er vim shortcuts

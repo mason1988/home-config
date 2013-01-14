@@ -153,3 +153,7 @@ Arbeitsfläche
 /Calibre Bibliothek/metadata.db
 /Zettelkasten/#%2Aediff-merge%2A#2381f6l#
 /Zettelkasten/#%2Aediff-merge%2A#3163gMh#
+/.emms-cache
+/.gnus.el.swp
+/.xdvirc
+/coding/slicing_tool.py tmp

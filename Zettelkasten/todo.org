@@ -146,6 +146,7 @@ google: emacs+evil+show+mark
 *** TODO [#C] ubuntu vs mint akku (genau das bei google)
 *** TODO [#B] regex (icicle und rx makro) testen
 *** TODO [#C] gnome keyring bug beheben
+*** TODO festplatten automatisch laden 
 *** TODO Netbook neu einrichten
 - brainstorming, xorg (wieder) automatisch booten (google startx)
 * interessanter Kram
@@ -179,7 +180,7 @@ google: emacs+evil+show+mark
 ** TODO [#A] autogenes Training routine finden
 ** TODO zusätzliche foldingsyntax / elemente einführen?
    vor allem kürzer als diese begin, end dinger
-
+** TODO die Regex ausdrücke für Preview Latex in Org überarbeiten (abstände zu $ sind scheiße
 * Todo Ausgang
 ** DONE gnus wieder für die mails einrichten
 ** DONE git: leere commits abschicken
