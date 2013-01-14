@@ -157,3 +157,22 @@ Arbeitsfläche
 /.gnus.el.swp
 /.xdvirc
 /coding/slicing_tool.py tmp
+/.config/htop/htoprc
+/.wine/.update-timestamp
+/.wine/dosdevices/c:
+/.wine/dosdevices/d::
+/.wine/dosdevices/z:
+/.wine/drive_c/Program Files (x86)/AESCrypt/AESCrypt.dll
+/.wine/drive_c/Program Files (x86)/AESCrypt/AESCrypt32.exe
+/.wine/drive_c/Program Files (x86)/AESCrypt/aescrypt.exe
+/.wine/drive_c/Program Files (x86)/Chilkat Software Inc/EncryptTextSetup/ChilkatDotNet.DLL
+/.wine/drive_c/Program Files (x86)/Chilkat Software Inc/EncryptTextSetup/EncryptText.exe
+/.wine/drive_c/Program Files (x86)/ClipCrypt/clipcrypt.exe
+.wine
+/AESCrypt_v308_win32/AESCrypt.msi
+/AESCrypt_v308_win32/Install Notes.txt
+/AESCrypt_v308_win32/setup.exe
+/installer.exe
+/readme.rtf
+/setup.exe
+/test.sh
