@@ -14,6 +14,31 @@
 ** Zettel10 *Logik*
 ** *Softwaretechnik*
 ** Zettel10 *Theoretische Informatik*
+* aktuelles
+** Bestellung Fox Chem Jan 14
+Fox Chem
+Kt.-Nr.: 794255
+BLZ: 34050000
+IBAN: DE54340500000000794255
+Swift/BIC: WELADEDR
+
+Bank: Stadtsparkasse Remscheid
+Street: Alleestraße 76-88
+City: 42853 Remscheid
+Germany
+
+Company Address:
+
+fChem
+Postfach 1135
+58240 Ennepetal
+Germany
+
+Please put your order number in subject field!
+You'll get order number on the next page after confirmation and by mail.
+
+€65.70
+Your order # is: 108848.
 * Webdesign
 ** hilfreiche Links
 http://www.mandapanda.net/lerntechnik/masterplan/
@@ -975,9 +1000,71 @@ anz(6) = 2080  496
 #+END_SRC
 
 ** Zettel-11
-[[~/Dropbox/th/th-zettel-11/th-zettel-11.pdf][th-zettel-11.pdf]]
-[[~/Dropbox/th/th-zettel-11/th-loesung-11.tex][th-loesung-11.tex]]
-[[~/Dropbox/th/th-zettel-11/th-loesung-11.pdf][th-loesung-11.pdf]]
+*** header
+#+BEGIN_SRC latex :tangle th-loesung-11.tex
+\documentclass[11pt]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath}
+\usepackage{verbatim}
+\usepackage{color}
+\usepackage{geometry}
+\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
+\usepackage{amsthm}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+
+%\includegraphics{?} setzt bild ein
+%\ref{labelname} erstellt link zu labelname
+%\label{labelname} kann einfach irgendwo drangesetz werden
+
+\newtheorem{defi}{Definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{nota}{Notation}
+\newtheorem{prop}{Proposition}
+\newtheorem{satz}{Satz}
+\newtheorem{umf}{Umformung}
+
+\newenvironment{beweis}{\par\begingroup%
+\settowidth{\leftskip}{\textsc{Beweis:~}}%
+\noindent\llap{\textsc{Beweis:~}}}{\hfill$\Box$\par\endgroup}
+
+\renewcommand{\baselinestretch}{1}
+\newcommand{\words}{\Sigma^* \backslash \{\epsilon\}}
+\newcommand{\etrans}[1]{\bar{\delta}(#1)}
+\renewcommand{\P}{\mathbb{P}}
+
+\title{Zettel 11}
+\author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
+%\date{} % Activate to display a given date or no date (if empty),
+% otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+#+END_SRC 
+
+*** Aufgabe 34
+#+BEGIN: aufgabe 34
+
+#+END: aufgabe 34
+
+#+BEGIN_SRC latex :tangle th-loesung-11.tex
+\subsection{Aufgabe 34}
+#+END_SRC
+*** Aufgabe 35
+#+BEGIN_SRC latex :tangle th-loesung-11.tex
+\subsection{Aufgabe 35}
+#+END_SRC
+
+*** Aufgabe 36
+#+BEGIN_SRC latex :tangle th-loesung-11.tex
+\subsection{Aufgabe 36}
+#+END_SRC
+
+*** footer
+#+BEGIN_SRC latex :tangle th-loesung-11.tex
+\end{document}
+#+END_SRC
+
 ** Zettel-12
 [[~/Dropbox/th/th-zettel-12/th-zettel-12.pdf][th-zettel-12.pdf]]
 [[~/Dropbox/th/th-zettel-12/th-loesung-12.tex][th-loesung-12.tex]]
