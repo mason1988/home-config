@@ -9,10 +9,35 @@ a
 #+DRAWERS: LINKS
 
 * Zettelverwaltung
-** Zettel8 *Elementare Stochastik*
+** Zettel9 *Elementare Stochastik*
 ** Zettel10 *Logik*
 ** *Softwaretechnik*
 ** Zettel10 *Theoretische Informatik*
+* aktuelles
+** Bestellung Fox Chem Jan 14
+Fox Chem
+Kt.-Nr.: 794255
+BLZ: 34050000
+IBAN: DE54340500000000794255
+Swift/BIC: WELADEDR
+
+Bank: Stadtsparkasse Remscheid
+Street: Alleestraße 76-88
+City: 42853 Remscheid
+Germany
+
+Company Address:
+
+fChem
+Postfach 1135
+58240 Ennepetal
+Germany
+
+Please put your order number in subject field!
+You'll get order number on the next page after confirmation and by mail.
+
+€65.70
+Your order # is: 108848.
 * Webdesign
 ** hilfreiche Links
 http://www.mandapanda.net/lerntechnik/masterplan/
@@ -301,7 +326,12 @@ Es ergibt sich somit: $\mathbb{P}(\omega) = \binom{10}{\omega}*(\frac{1}{8})^{\o
 Aus Sicht des jeweiligen Spielers befinden sich nun noch 4 - X Karten im Spiel. Für die Karten im Skat gilt
 daher das selbe Prinzip wie schon in a), d.h. Binomialverteilung.
 Für beide Karten liegt die Wahrscheinlichkeit dafür, dass es sich um einen Buben handelt, bei
-[[file:201212ad-1423041774NqN.png]] \frac{4-X}{32} und somit kann dann der Ereignisraum [[file:201212ad-1424261774a0T.png]] mit {0,1,2} definiert werden, und 
+[[file:201212ad-1423041774NqN.png]] \frac{4-X}{32} und somit kann dann der Ereignisraum [[file:201212ad-1424261774a0T.png]] mit {0,1,2} definiert echo $USER
+if [ "$USER" == "root" ]; then
+echo "test";
+else echo "ru";
+fi
+werden, und 
 [[file:201301ad-1844013389GFn.png]]
 P(\omega | X = k) = (\frac{4-X}{32})^{\omega} * (1 - \frac{4-X}{32})^{2 - \omega}
 
@@ -309,7 +339,7 @@ P(\omega | X = k) = (\frac{4-X}{32})^{\omega} * (1 - \frac{4-X}{32})^{2 - \omega
 Aus Sicht des jeweiligen Spielers befinden sich nun noch 4 - X Karten im Spiel. Für die Karten im Skat gilt
 daher das selbe Prinzip wie schon in a), d.h. Binomialverteilung. \\
 Sei $\Omega' = \{0,1,2\}$ und somit also die möglichen Anzahlen an Buben im Skat. \\
-Analog zu a) ergibt sich für $\mathbb{P}(Y|X = k)$ nun mit für 2 Kartenziehungen und einer Wahrscheinlichkeit
+Analog zu a) ergibt sich für $\mathbb{P}(Y|X = k)$ nun für 2 Kartenziehungen und einer Wahrscheinlichkeit
 von $\frac{4-X}{32}$ für einen Buben pro Karte:\\
 Für $\omega \in \Omega:$ $\mathbb{P}(Y = \omega |X = k) = \binom{32}{\omega}(\frac{4-X}{32})^{\omega} * (1 - \frac{4-X}{32})^{2 - \omega}$
 #+END_SRC
@@ -971,9 +1001,71 @@ anz(6) = 2080  496
 #+END_SRC
 
 ** Zettel-11
-[[~/Dropbox/th/th-zettel-11/th-zettel-11.pdf][th-zettel-11.pdf]]
-[[~/Dropbox/th/th-zettel-11/th-loesung-11.tex][th-loesung-11.tex]]
-[[~/Dropbox/th/th-zettel-11/th-loesung-11.pdf][th-loesung-11.pdf]]
+*** header
+#+BEGIN_SRC latex :tangle th-loesung-11.tex
+\documentclass[11pt]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath}
+\usepackage{verbatim}
+\usepackage{color}
+\usepackage{geometry}
+\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
+\usepackage{amsthm}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+
+%\includegraphics{?} setzt bild ein
+%\ref{labelname} erstellt link zu labelname
+%\label{labelname} kann einfach irgendwo drangesetz werden
+
+\newtheorem{defi}{Definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{nota}{Notation}
+\newtheorem{prop}{Proposition}
+\newtheorem{satz}{Satz}
+\newtheorem{umf}{Umformung}
+
+\newenvironment{beweis}{\par\begingroup%
+\settowidth{\leftskip}{\textsc{Beweis:~}}%
+\noindent\llap{\textsc{Beweis:~}}}{\hfill$\Box$\par\endgroup}
+
+\renewcommand{\baselinestretch}{1}
+\newcommand{\words}{\Sigma^* \backslash \{\epsilon\}}
+\newcommand{\etrans}[1]{\bar{\delta}(#1)}
+\renewcommand{\P}{\mathbb{P}}
+
+\title{Zettel 11}
+\author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
+%\date{} % Activate to display a given date or no date (if empty),
+% otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+#+END_SRC 
+
+*** Aufgabe 34
+#+BEGIN: aufgabe 34
+
+#+END: aufgabe 34
+
+#+BEGIN_SRC latex :tangle th-loesung-11.tex
+\subsection{Aufgabe 34}
+#+END_SRC
+*** Aufgabe 35
+#+BEGIN_SRC latex :tangle th-loesung-11.tex
+\subsection{Aufgabe 35}
+#+END_SRC
+
+*** Aufgabe 36
+#+BEGIN_SRC latex :tangle th-loesung-11.tex
+\subsection{Aufgabe 36}
+#+END_SRC
+
+*** footer
+#+BEGIN_SRC latex :tangle th-loesung-11.tex
+\end{document}
+#+END_SRC
+
 ** Zettel-12
 [[~/Dropbox/th/th-zettel-12/th-zettel-12.pdf][th-zettel-12.pdf]]
 [[~/Dropbox/th/th-zettel-12/th-loesung-12.tex][th-loesung-12.tex]]
@@ -1106,6 +1198,28 @@ http://en.wikipedia.org/wiki/First-order_logic
 + Interpretation :: Modell (Universum + Interpretationsfunktion) + Belegung s
 
 ** Mitschriften
+*** Jan 14
+[[file:201301ad-1031408403uXH.png]]  <= *kleines" Modell*, [[file:201301ad-10331784037hN.png]] bildet aus k Universen auf 1 Universum ab
+*Zahlen-Modell*, Universum ist [[file:201301ad-1033508403IsT.png]]
+*Mengenmodell*, Potenzmenge von ner Menge,   [[file:201301ad-1034198403V2Z.png]]
+    [[file:201301ad-1034408403iAg.png]]
+*Term-Modell* [[file:201301ad-1038508403vKm.png]] , bildet mehrere Terme auf einen Term ab
+*kleine Fortsetzung* Belegung [[file:201301ad-10393384038Us.png]]
+[[file:201301ad-10402284037oB.png]] Fortsetzung [[file:201301ad-1040158403Jfy.png]] [[file:201301ad-1041398403V9N.png]], es gilt: [[file:201301ad-1041318403IzH.png]]
+ # Platzhalter Quantor
+großes Modell enthält noch die m stelligen Prädikate (also als Teilmenge vom Universum)
+Beispel als Zahlenmodell:
+U = \mathbb{N}
+p_2^* = \begin{cases} = &\mbox{falls } m=n \\ < &\mbox{falls } p_2^* = \{(m,n) \in \mathbb{N}*\mathbb{N}\}|m<n \end{cases}
+großes Mengenmodell:
+U = P(M), p_2^* = \begin{cases} = &\mbox{falls } X=Y \\ \subset &\mbox{falls }p_2^*=\{(X,Y)\in P(M)\times P(M): X \subsetY \end{cases}
+\alpha^{\wedge}p_mt_1...t_m = \begin{cases} 0 &\mbox{falls } (\alpha^{\vee}t_1,...,\alpha^{\vee}t_m) \not \in p_m^* \\ 0 &\mbox{falls} (\alpha^{\vee}t_1,...,\alpha^{\vee}t_m) \in p^*_m \end{cases}
+\alpha^{\wedge}(A\wedge B) = (\alpha^{\wedge}A)*(\alpha^{\wedge}B)
+\alpha^{\wedge}(A\vee B) = max(\alpha^{\wedge}A,\alpha^{\wedge}B)
+\alpha^{\wedge}(A\rightarrow B) = max(1-\alpha^{\wedge}A,\alpha^{\wedge}B)
+\alpha^u_xy = \begin{cases} \alpha y &\mbox{falls } y \not = x \\ u &\mbox{sonst} \end{cases}
+
+
 ** Zettel-08
 *** Dateien
 [[/home/florian/Dropbox/lo/lo-zettel-08.pdf::NNN][lo-zettel-08.pdf]]
