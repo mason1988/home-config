@@ -201,6 +201,7 @@ google: emacs+evil+show+mark
 ** DONE zusätzliche foldingsyntax / elemente einführen?
    vor allem kürzer als diese begin, end dinger
 ** DONE die Regex ausdrücke für Preview Latex in Org überarbeiten abstände zu $ sind scheiße
+** TODO effizientere Wege überlegen, um Ordner zu erreichen
 * Todo Ausgang
 ** DONE gnus wieder für die mails einrichten
 ** DONE git: leere commits abschicken
