@@ -60,32 +60,7 @@
 (global-font-lock-mode t)
 
 (require 'custm-emac-keys)
-
-(defun toggle-window-split ()
-  (interactive)
-  (if (= (count-windows) 2)
-      (let* ((this-win-buffer (window-buffer))
-	     (next-win-buffer (window-buffer (next-window)))
-	     (this-win-edges (window-edges (selected-window)))
-	     (next-win-edges (window-edges (next-window)))
-	     (this-win-2nd (not (and (<= (car this-win-edges)
-					 (car next-win-edges))
-				     (<= (cadr this-win-edges)
-					 (cadr next-win-edges)))))
-	     (splitter
-	      (if (= (car this-win-edges)
-		     (car (window-edges (next-window))))
-		  'split-window-horizontally
-		'split-window-vertically)))
-	(delete-other-windows)
-	(let ((first-win (selected-window)))
-	  (funcall splitter)
-	  (if this-win-2nd (other-window 1))
-	  (set-window-buffer (selected-window) this-win-buffer)
-	  (set-window-buffer (next-window) next-win-buffer)
-	  (select-window first-win)
-	  (if this-win-2nd (other-window 1))))))
-
+(require 'toggle-window-splitter)
 
 (define-key ctl-x-4-map "t" 'toggle-window-split)
 
@@ -120,17 +95,7 @@
 ;(autoload 'pylookup-lookup "pylookup" "Lookup SEARCH-TERM in the Python HTML indexes." t)
 ;(autoload 'pylookup-update "pylookup" "Run pylookup-update and create the database at 'pylookup-db.file'." t)
 
-(define-key minibuffer-local-map [escape] 'keyboard-escape-quit)
-(define-key minibuffer-local-ns-map [escape] 'keyboard-escape-quit)
-(define-key minibuffer-local-completion-map [escape] 'keyboard-escape-quit)
-(define-key minibuffer-local-must-match-map [escape] 'keyboard-escape-quit)
-(define-key minibuffer-local-isearch-map [escape] 'keyboard-escape-quit)
-
-(define-key minibuffer-local-map (kbd "M-e") 'keyboard-escape-quit)
-(define-key minibuffer-local-ns-map (kbd "M-e") 'keyboard-escape-quit)
-(define-key minibuffer-local-completion-map (kbd "M-e") 'keyboard-escape-quit)
-(define-key minibuffer-local-must-match-map (kbd "M-e") 'keyboard-escape-quit)
-(define-key minibuffer-local-isearch-map (kbd "M-e") 'keyboard-escape-quit)
+(require 'escape-fix)
 
 ;(setq ropemacs-autoimport-modules '("os" "shutil"))
 (require 'cmd_abr)
@@ -175,18 +140,6 @@
 (setq confirm-nonexistent-file-or-buffer nil)
 (scroll-bar-mode 0)
 
-(global-set-key (kbd "C-c f") 'evil-emacs-state)
-(global-set-key (kbd "C-c q") 'evil-force-normal-state)
-(define-key evil-normal-state-map (kbd "C-c f") 'evil-emacs-state)
-(define-key evil-normal-state-map (kbd "C-c q") 'evil-force-normal-state)
-
-;(global-set-key (kbd "C-u") 'evil-scroll-up)
-;(define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
-(global-set-key (kbd "M-k") 'evil-window-prev)
-(define-key evil-normal-state-map (kbd "M-k") 'evil-window-prev)
-(global-set-key (kbd "C-c b") 'view-buffer-other-window)
-;(global-set-key (kbd "C-d") 'evil-scroll-down)
-
 (global-set-key (kbd "C-x f") 'ido-find-file)
 (global-set-key (kbd "C-x C-f") 'ido-find-file-other-window)
 (global-set-key (kbd "C-x C-b") 'ido-switch-buffer-other-window)
@@ -215,16 +168,6 @@
 (global-set-key (kbd "C-ö g") 'jump-vert-up)
 (global-set-key (kbd "C-ö G") 'jump-vert-down)
 (global-set-key (kbd "C-ö l") 'list-matching-lines)
-
-(add-hook 'evil-insert-state-entry-hook
- (lambda ()
- (define-key evil-insert-state-local-map "\M-j" 'evil-window-next)
- (define-key evil-insert-state-local-map "\M-k" 'evil-window-prev)
- (define-key evil-insert-state-local-map "\M-x" 'execute-extended-command)
- )
-)
-
-(global-set-key (kbd "C-!") 'evil-normal-state)
 
 (undo-tree-mode t)
 
@@ -266,21 +209,11 @@
 (global-set-key (kbd "C-ä E") 'eval-buffer)
 (global-set-key (kbd "C-ä s") 'my-org-screenshot2)
 
-(require 'smart-forward)
-(global-set-key (kbd "M-<up>") 'smart-up)
-(global-set-key (kbd "M-<down>") 'smart-down)
-(global-set-key (kbd "M-<left>") 'smart-backward)
-(global-set-key (kbd "M-<right>") 'smart-forward)
-
 (require 'dired+)
 (require 'tidy-org-jump)
 (require 'lua-mode)
 
 (setq evil-default-cursor t)
-;(set-foreground-color "green")
-;(set-background-color "black")
-;(set-cursor-color "blue")
-
 (load-theme 'tsdh-light)
 
 (require 'search-all-buffers)
@@ -310,12 +243,6 @@
 
 
 (require 'grep)
-(defun shortcut-grep()
-  (interactive)
-  (grep "test")
-  (lgrep "-key" "/home/florian/.emacs"))
-
-(global-set-key (kbd "C-ä x") 'shortcut-grep)
 
 (global-set-key (kbd "C-ö e n") 'emms-next)
 (global-set-key (kbd "C-ö e p") 'emms-previous)
@@ -327,16 +254,7 @@
 (global-set-key (kbd "C-ö e d") 'emms-add-directory-tree)
 (global-set-key (kbd "C-ö e l") 'emms-playlist-mode-go)
 
-(defun dedi_func ()
-  "makes currently selected window strongly dedicated to its buffer"
-  (interactive)
-  (set-window-dedicated-p (frame-selected-window) t)
-  (message "window dedicated!"))
-(defun undedi_func ()
-  "removes dedication from currently selected window"
-  (interactive)
-  (set-window-dedicated-p (frame-selected-window) nil)
-  (message "window undedicated!"))
+(require 'dedicated-buffers)
 (global-set-key (kbd "C-ä w d") 'dedi_func)
 (global-set-key (kbd "C-ä w D") 'undedi_func)
 
@@ -368,14 +286,6 @@
 (define-key evil-motion-state-map "l" 'evil-find-char-to)
 (define-key evil-motion-state-map "L" 'evil-find-char-to-backward)
 
-(define-key evil-motion-state-map "\M-r" 'windmove-up)
-(define-key evil-normal-state-map "\M-r" 'windmove-up)
-(define-key evil-insert-state-map "\M-r" 'windmove-up)
-(define-key evil-motion-state-map "\M-n" 'windmove-down)
-(define-key evil-normal-state-map "\M-n" 'windmove-down)
-(define-key evil-insert-state-map "\M-n" 'windmove-down)
-
-(define-key minibuffer-local-map "\C-e" 'keyboard-escape-quit)
 
 (define-key evil-motion-state-map "\C-n" 'evil-scroll-down)
 (define-key evil-normal-state-map "\C-n" 'evil-scroll-down)
@@ -387,10 +297,8 @@
 
 (global-set-key (kbd "M-ä") 'move-to-window-line-top-bottom)
 
-(global-set-key (kbd "M-/") 'hippie-expand)
 (global-set-key (kbd "M-ö") 'hippie-expand)
 (global-set-key (kbd "C-ä c") 'dabbrev-completion)
-
 
 (global-set-key (kbd "C-ü") (lookup-key global-map (kbd "C-x")))
 
@@ -416,10 +324,6 @@
 (define-key evil-insert-state-map (kbd "C-ü C-n") 'evil-complete-next-line)
 (define-key evil-insert-state-map (kbd "C-ü C-p") 'evil-complete-previous-line)
 
-(global-set-key "\M-s" 'windmove-left)
-(global-set-key "\M-t" 'windmove-right)
-(global-set-key "\M-r" 'windmove-up)
-(global-set-key "\M-n" 'windmove-down)
 (global-unset-key "\M-h")
 (global-set-key (kbd "M-h M-x") 'helm-M-x)
 (define-key global-map (kbd "M-h M-x") 'helm-M-x)
@@ -434,16 +338,7 @@
 (require 'hippie-flex)
 (require 'magpie)
 (require 'lorem-ipsum)
-
-(setq org-capture-templates
- '(("t" "Todo" entry (file+headline "~/Zettelkasten/todo.org" "Todo-Eingang")
-        "** TODO %?")
-   ("j" "Journal" entry (file+datetree "~/org/journal.org")
-        "* %?\nEntered on %U\n  %i\n  %a")
-   ("w" "link template" entry
-    (file+headline "~/Zettelkasten/notes.org" "Links")
-     "* [[%:link][%:description]]"
-     :empty-lines 1 :immediate-finish :unnarrowed :kill-buffer)))
+(require 'capture-templates)
 
 (defun messenger() (interactive) (erc :server "im.rootdir.de" :port 6668 :nick "floppycode"))
 (global-set-key (kbd "C-ö a") 'helm-org-headlines)
@@ -455,11 +350,6 @@
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (define-key global-map (kbd "C-ö ö") 'org-capture)
 
-(setq org-capture-templates
- '(("t" "Todo" entry (file+headline "~/Zettelkasten/todo.org" "Todo-Eingang")
-        "** TODO %?")
-   ("j" "Journal" entry (file+datetree "~/org/journal.org")
-        "* %?\nEntered on %U\n  %i\n  %a")))
 (define-key global-map (kbd "C-ö ä") 'magpie-expand)
 (require 'flosub)
 (define-key global-map (kbd "C-ä ö") 'flosub)
@@ -482,6 +372,7 @@
     (define-key my-keys-minor-mode-map (kbd "M-n") 'windmove-down)
     (define-key my-keys-minor-mode-map (kbd "M-s") 'windmove-left)
     (define-key my-keys-minor-mode-map (kbd "M-t") 'windmove-right)
+ (define-key my-keys-minor-mode-map "\M-x" 'execute-extended-command)
     
     (define-minor-mode my-keys-minor-mode
           "A minor mode so that my key settings override annoying major modes."
@@ -515,3 +406,6 @@
 (global-set-key (kbd "C-ä v") 'eval-expression)
 
 (require 'ediff-extension)
+(require 'rainbow-delimiters)
+(global-rainbow-delimiters-mode)
+(require 'delete-pic)

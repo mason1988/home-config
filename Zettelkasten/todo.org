@@ -65,87 +65,107 @@ Clock summary at [2013-01-04 Fr 19:33]
 
 * Projekte
 ** Emacs Config Aufräumen
+*** NEXT überflüssige keymapping dateien entfernen
 *** TODO nicht mehr benutzte dateien in .emacs.d löschen
 *** TODO alle shortcuts in .emacs zusammenfassen
-*** NEXT funktionen in .emacs auslagern
+*** DONE funktionen in .emacs auslagern
+    CLOCK: [2013-01-14 Mo 19:59]--[2013-01-14 Mo 20:11] =>  0:12
 *** TODO unnötige keybindings entfernen
 *** DONE in bytecompiling einlesen
 *** DONE alles bytecompilen
 ** Org-Mode Bilder
-*** NEXT Möglichkeiten nachträgliches resizen der Bilder im Org-Mode eruieren
-*** TODO Code von konvertiertem Latex in linktext behalten (latex auch bilder mit linktext als Bilder anzeigen lassen)
-*** DONE extra Fenster bei Latexumwandlung unterdrücken (google save-excursion)
+*** NEXT Möglichkeiten prüfen um informationen/texte einem konkreten Header zuzuordnen
+*** TODO Möglichkeiten sammeln, zum zeilenweisen auslesen und splitten bei trennzeichene
+*** TODO beim link erstellen eben jene information in extra ast unterbringen
+*** TODO 2. löschenroutine, welche nach dem löschen eben diesen wert wieder ausliest
+*** DONE Funktion bzw. Regex um links und die darin enthaltenen Bilder zu identifizieren
+    \\[\\[\\(.*\\)\\]\\]  catched die links
+    search-forward-regexp such entsprechend
+    matched-string holt die einzelnen werte der letzten suche 
+       (parameter 1 für die erste gruppe) oder 0 für ganzen string
+    (goto-char (match-end 0))  um anfang und ende von link zu erreichen
+    
+(defun my-org-extract-link ()
+  "Extract the link location at point and put it on the killring."
+  (interactive)
+  (when (org-in-regexp org-bracket-link-regexp 1)
+    (kill-new (org-link-unescape (org-match-string-no-properties 1)))))
+
+*** DONE Deletion Funktion für das Bild unter dem Cursor hinzufügen, falls slice, dann alle anderen slices finden
+*** DONE Möglichkeiten nachträgliches resizen der Bilder im Org-Mode eruieren
+    - macht innerhalb vom Orgmode bisher einfach keinen Sinn
+*** DONE prüfen ob Bilder mit Linktext immernoch dargestellt werden, falls nicht, konfigurieren
+*** DONE latex code in die linkbeschreibung pasten, klammern entsprechend entwerten
+*** DONE extra Fenster bei Latexumwandlung unterdrücken; google save-excursion
 *** DONE iimage bibliothek o.ä. code raussuchen und auf anpassparkeit prüfen
 *** DONE anforderungen an eigenen Modus sammeln
-*** DONE entsprechenden modus entwickeln (image slicing)
+*** DONE entsprechenden modus entwickeln ;image slicing
 ** Tags
-*** NEXT etags installieren
-*** TODO google: wie können tags zu den unterschiedlichen dokumentarten generiert werden
+*** DONE etags installieren
+*** NEXT google: wie können tags zu den unterschiedlichen dokumentarten generiert werden
 *** TODO google: welche navigations und sammelmöglichkeiten gibt es?
 *** TODO Shortcuts für die Tags entsprechend legen
 ** Capturing
-*** NEXT welche Captures (-Templates) würden noch Sinn machen? Broweser/Client
-*** TODO schnellere Shortcuts für Captures 
+*** NEXT welche Captures ;-Templates; würden noch Sinn machen? Broweser/Client
+*** DONE schnellere Shortcuts für Captures 
 *** TODO Captures entsprechend implementieren
 ** Shortcuts
-*** NEXT shortcuts für scrolling in pentadactyl ummappen
-*** TODO verschieben/retaggen von Fenstern in awesom wm
-*** TODO [#B] mehr Tasten auf den Modalen Vim Modus setzen
+*** DONE shortcuts für scrolling in pentadactyl ummappen
+*** DONE verschieben/retaggen von Fenstern in awesom wm
+*** DONE mehr Tasten auf den Modalen Vim Modus setzen
 *** DONE Firefox Zwang auf web lösen
 *** DONE completion shortcuts bequemer machen			  :shortcuts:
-*** DONE Orte mit (letzten) veränderungen oder sowas durchgehen(cyclen - plural)
+*** DONE Orte mit -letzten- veränderungen oder sowas durchgehen; cyclen - plural
 *** DONE shortcut für zuletzt benutztes bookmark		  :shortcuts:
 *** DONE Shortcut Header Sprung besser legen			   :shortcut:
-*** DONE Emacs wiederholung braucht ein besseres shortcut (z schwer zu finden) :shortcut:
+*** DONE Emacs wiederholung braucht ein besseres shortcut; z schwer zu finden :shortcut:
 *** DONE zyklisches Pasten von Emacs aus Killring		  :shortcuts:
-*** DONE shortcuts für erstellen von tmp autonamed bookmark und cyclen (in buffer) :shortcuts:
+*** DONE shortcuts für erstellen von tmp autonamed bookmark und cyclen; in buffer :shortcuts:
 ** Sprungmarken
-*** TODO [#C] Liste mit Features von Bookmark+ anfertigen
-*** NEXT [#C] markierung und/oder anzeige für evil marks im Dokument anzeige(goggle)
+*** TODO Liste mit Features von Bookmark+ anfertigen
+*** NEXT markierung und/oder anzeige für evil marks im Dokument anzeige ;goggle
 nicht mehr zeit verschwenden, als unbedingt nötig, da die evil marks in jedem fall auch
 durch autobookmarks ersetzt werden könnten
 google: emacs+evil+show+mark 
 ** TodoListe optimieren
 *** TODO Brainstorming, was Standardmäßig geöffnet und was geschlossen sein soll
-*** TODO [#C] autostarts neu zuteilen (source blöcke usw)    
+*** TODO autostarts neu zuteilen ;source blöcke usw.
 *** NEXT todo states und faces aus "your life in plaintext"
 ** Latex Mode
-*** NEXT Cdlatex Paket suchen und installieren
-*** TODO testen in wie fern schnelles suchen und finden von Symbolen möglich ist
-*** TODO testen wie weit auto completion von viel genutzen symbolen (Rightarrow...) glatt läuft
+*** DONE Cdlatex Paket suchen und installieren
+    ist total sinnlos, yasnippet kann das alles auch. Statt dessen eher mal nach math mode suchen
+*** DONE testen in wie fern schnelles suchen und finden von Symbolen möglich ist
+    - mit latex math mode lässt sich mit backtick
+      und dann nem normalen Zeichen das latex äquivalent bilden
+    z.B. * wird zu \times
+    - für andere Zeichen gibt es helm-c-insert-latex
+*** NEXT testen wie weit auto completion von viel genutzen symbolen -Rightarrow...- glatt läuft
+   - man könnte natürlich yasnippet benutzen 
+   - oder man schreibt eigene latex kürzel
+*** TODO math mode und insert latex in workflow einbinden
 *** TODO gegebenenfalls weitere Completion Methoden einsetzen
 ** Git
-*** NEXT die 3 Grundmerges finden (a / b / beide)
-*** TODO magit: commit und push?
+*** DONE die 3 Grundmerges finden ;a / b / beide
+*** NEXT magit: commit und push?
 ** effizienteres Suchen
-*** TODO Suchmaschine(n) für Quellcodes
+*** TODO Suchmaschine für Quellcodes
 **** alternative rc.lua suchen
 **** alternative .emacs suchen
 *** TODO alternativen zu google prüfen / bessere Befehle sammeln
-** zathura
-*** NEXT google: Zathura Completion / man page / doku / config wälzen. Ziel: Anzeige auch von Dateien ohne Endung in der Completion
-*** TODO mehrere instanzen von zathura / fenster / buffer etc?
-- per konsole auf jeden fall unmittelbar
-*** TODO completion in zathura umkonfigurieren
-    - navigation mit pfeiltasten in resultaten
-    - anzeigen aller dokumente (auch nicht pdf's)
-    - fuzzy-matching / plugins?
-    - geht eigentlich schon, aber merke: 
-      & ans Ende für separaten task
-      ctrl backsp um ganze wörter zu löschen
 ** awesome wm
-*** NEXT Titlebar Awesome Wm googlen. Ziel: Titlebars in bestimmten Tags (mit Floating standard), aktivieren.
+*** NEXT Titlebar Awesome Wm googlen. Ziel: Titlebars in bestimmten Tags mit Floating standard, aktivieren.
 *** TODO ansatz für tabs in awesome wm formulieren
 *** TODO testen was genau shifty macht, und das gegebenenfalls einrichten
 *** TODO nochmal die awesomewm konfiguration für tab's raussuchen und versuchen einen Plan zu entwickeln, um dieses sicher zu implementieren
 ** eshell
-*** NEXT Autocompletion Eshell googlen (Ziel: Möglichkeit umzuschalten. Vielleicht andere Shortcuts?)
-*** TODO Autocompletion eshell fixen (im moment wird bei tab direkt eingesetzt und es lässt sich nicht weiter schalten)
+*** DONE Autocompletion Eshell googlen Ziel: Möglichkeit umzuschalten. Vielleicht andere Shortcuts?
+*** DONE Autocompletion eshell fixen im moment wird bei tab direkt eingesetzt und es lässt sich nicht weiter schalten
 *** TODO mehrere eshell's, und diese sollten auch von überall aus in einem separaten Frame geöffnet werden können
 ** someday / maybe
-*** TODO [#C] ubuntu vs mint akku (genau das bei google)
-*** TODO [#B] regex (icicle und rx makro) testen
-*** TODO [#C] gnome keyring bug beheben
+*** TODO Acejump näher betrachten
+*** TODO ubuntu vs mint akku genau das bei google
+*** TODO regex icicle und rx makro testen
+*** TODO gnome keyring bug beheben
 *** TODO festplatten automatisch laden 
 *** TODO Netbook neu einrichten
 - brainstorming, xorg (wieder) automatisch booten (google startx)
@@ -158,10 +178,10 @@ google: emacs+evil+show+mark
 *** plwm
     toolkit um mit python nen windowmanager zu entwickeln
 
-*** clfswm (kein reiner tiling manager, dafür common lisp)
+*** clfswm -kein reiner tiling manager, dafür common lisp-
 *** xwem
-** tiling in non tiling window managern (software)
-   z.B. in fluxbox (+tabs)
+** tiling in non tiling window managern - software -
+   z.B. in fluxbox - +tabs -
 *** stiler
 *** pytyle
 *** wumwum 
@@ -177,10 +197,10 @@ google: emacs+evil+show+mark
 
 * Todo-Eingang
 ** NEXT Übersicht in Software zu den verschiedenen Vim Substitutionen erstellen
-** TODO [#A] autogenes Training routine finden
-** TODO zusätzliche foldingsyntax / elemente einführen?
+** TODO prüfen: https://github.com/dgutov/point-stack/blob/master/point-stack.el
+** DONE zusätzliche foldingsyntax / elemente einführen?
    vor allem kürzer als diese begin, end dinger
-** TODO die Regex ausdrücke für Preview Latex in Org überarbeiten (abstände zu $ sind scheiße
+** DONE die Regex ausdrücke für Preview Latex in Org überarbeiten abstände zu $ sind scheiße
 * Todo Ausgang
 ** DONE gnus wieder für die mails einrichten
 ** DONE git: leere commits abschicken

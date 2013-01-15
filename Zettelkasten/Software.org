@@ -1587,6 +1587,15 @@ pass
 # There is also r+ (read and write) mode.
 
 ** elisp
+*** replace in String
+(setq var1 (replace-regexp-in-string "old" "new" var1))
+*** regex matching
++ (when (org-in-regexp regex 1) (message treffer))
+    prüft ob man sich im regex befindet
++ (match-beginning 0) (match-end 0)
+    die positionen des letzten funds
++ (matched-string 0) 
+    matched den ganzen letzten string bzw. gruppe
 *** jump to empty line
 **** Next Line Code
 (defun jumpToNextEmpty ()
@@ -1710,7 +1719,7 @@ pass
 
 *** get selection/region
 (setq stuff (buffer-substring (region-beginning)(region-end)))
-*** Funktionsaufruf(shortcut) durch neuen ersetzen(key)
+*** Funktionsaufruf-shortcut durch neuen key ersetzen
 (define-key (current-global-map) [remap kill-line] 'my-homemade-kill-line)
 *** hartnäckige Bindings überschreiben
 die Minormodes habflorianen eine der höchster Prioritäten beim nachschlagen der Keys

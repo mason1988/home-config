@@ -2,10 +2,11 @@
 
 loadplugins '\.(js|penta)$'
 group user
+map -count -modes=n,v <C-n> <count><C-d>
 map -count -modes=n,v d <count>V
-set hintkeys=uiaeosnrtdyxvlchgfqüöäpbm,.j
+map -count -modes=n,v <C-r> <count><C-u>
 set guioptions=ns
 set hintkeys=uiaeosnrtdxvlchgfq
 set showtabline=never
-" vim: set ft=pentadactyl:
 
+" vim: set ft=pentadactyl:

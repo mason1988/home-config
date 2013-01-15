@@ -194,7 +194,6 @@ root.buttons(awful.util.table.join(
     awful.button({ }, 5, awful.tag.viewprev)
 ))
 -- }}}
-
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
@@ -274,7 +273,6 @@ clientkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end),
     awful.key({ modkey,           }, "o",      awful.client.movetoscreen                        ),
-    awful.key({ modkey, "Shift"   }, "r",      function (c) c:redraw()                       end),
     awful.key({ modkey,           }, ",",      function (c) c.minimized = true               end))
 
 -- Compute the maximum number of digit we need, limited to 9
@@ -287,9 +285,27 @@ end
 -- Be careful: we use keycodes to make it works on any keyboard layout.
 -- This should map on the top row of your keyboard, usually 1 to 9.
 
+added_keys = {}
+added_keys[1] = "s"
+added_keys[2] = "n"
+added_keys[3] = "r"
+added_keys[4] = "t"
+added_keys[5] = "d"
+added_keys[6] = "y"
+added_keys[7] = "z"
+added_keys[8] = "z"
+added_keys[9] = "z"
+
 for i = 1, keynumber do   --- von 1 bis 9 (keynumber zählt tags, 9 limit u. standard)
     globalkeys = awful.util.table.join(globalkeys,
         awful.key({ modkey }, "#" .. i + 9,
+                  function ()
+                        local screen = mouse.screen
+                        if tags[screen][i] then
+                            awful.tag.viewonly(tags[screen][i])
+                        end
+                  end),
+        awful.key({ modkey }, added_keys[i],
                   function ()
                         local screen = mouse.screen
                         if tags[screen][i] then
@@ -303,7 +319,20 @@ for i = 1, keynumber do   --- von 1 bis 9 (keynumber zählt tags, 9 limit u. sta
                           awful.tag.viewtoggle(tags[screen][i])
                       end
                   end),
+        awful.key({ modkey, "Control" }, added_keys[i],
+                  function ()
+                      local screen = mouse.screen
+                      if tags[screen][i] then
+                          awful.tag.viewtoggle(tags[screen][i])
+                      end
+                  end),
         awful.key({ modkey, "Shift" }, "#" .. i + 9,
+                  function ()
+                      if client.focus and tags[client.focus.screen][i] then
+                          awful.client.movetotag(tags[client.focus.screen][i])
+                      end
+                  end),
+        awful.key({ modkey, "Shift" },added_keys[i],
                   function ()
                       if client.focus and tags[client.focus.screen][i] then
                           awful.client.movetotag(tags[client.focus.screen][i])
@@ -314,111 +343,16 @@ for i = 1, keynumber do   --- von 1 bis 9 (keynumber zählt tags, 9 limit u. sta
                       if client.focus and tags[client.focus.screen][i] then
                           awful.client.toggletag(tags[client.focus.screen][i])
                       end
+                  end),
+        awful.key({ modkey, "Control", "Shift" }, added_keys[i],
+                  function ()
+                      if client.focus and tags[client.focus.screen][i] then
+                          awful.client.toggletag(tags[client.focus.screen][i])
+                      end
                   end))
 end
 
 --- Customization start (shortcuts for special tags, only multiple tag views)
----- emacs
-    globalkeys = awful.util.table.join(globalkeys,
-        awful.key({ modkey, "Control" }, "s",
-                  function ()
-                      local screen = mouse.screen
-                      if tags[screen][1] then
-                          awful.tag.viewtoggle(tags[screen][1])
-                      end
-                  end))    
-    globalkeys = awful.util.table.join(globalkeys,
-        awful.key({ modkey, "Control" }, "n",
-                  function ()
-                      local screen = mouse.screen
-                      if tags[screen][2] then
-                          awful.tag.viewtoggle(tags[screen][2])
-                      end
-                  end))
-    globalkeys = awful.util.table.join(globalkeys,
-        awful.key({ modkey, "Control" }, "r",
-                  function ()
-                      local screen = mouse.screen
-                      if tags[screen][3] then
-                          awful.tag.viewtoggle(tags[screen][3])
-                      end
-                  end))
-    globalkeys = awful.util.table.join(globalkeys,
-        awful.key({ modkey, "Control" }, "t",
-                  function ()
-                      local screen = mouse.screen
-                      if tags[screen][4] then
-                          awful.tag.viewtoggle(tags[screen][4])
-                      end
-                  end))
-    globalkeys = awful.util.table.join(globalkeys,
-        awful.key({ modkey, "Control" }, "d",
-                  function ()
-                      local screen = mouse.screen
-                      if tags[screen][5] then
-                          awful.tag.viewtoggle(tags[screen][5])
-                      end
-                  end))
-    globalkeys = awful.util.table.join(globalkeys,
-        awful.key({ modkey, "Control" }, "y",
-                  function ()
-                      local screen = mouse.screen
-                      if tags[screen][6] then
-                          awful.tag.viewtoggle(tags[screen][6])
-                      end
-                  end))
----
-    globalkeys = awful.util.table.join(globalkeys,
-        awful.key({ modkey  }, "s",
-                  function ()
-                      local screen = mouse.screen
-                      if tags[screen][1] then
-                          awful.tag.viewonly(tags[screen][1])
-                      end
-                  end))    
-    globalkeys = awful.util.table.join(globalkeys,
-        awful.key({ modkey  }, "n",
-                  function ()
-                      local screen = mouse.screen
-                      if tags[screen][2] then
-                          awful.tag.viewonly(tags[screen][2])
-                      end
-                  end))
-    globalkeys = awful.util.table.join(globalkeys,
-        awful.key({ modkey  }, "r",
-                  function ()
-                      local screen = mouse.screen
-                      if tags[screen][3] then
-                          awful.tag.viewonly(tags[screen][3])
-                      end
-                  end))
-    globalkeys = awful.util.table.join(globalkeys,
-        awful.key({ modkey  }, "t",
-                  function ()
-                      local screen = mouse.screen
-                      if tags[screen][4] then
-                          awful.tag.viewonly(tags[screen][4])
-                      end
-                  end))
-    globalkeys = awful.util.table.join(globalkeys,
-        awful.key({ modkey }, "d",
-                  function ()
-                      local screen = mouse.screen
-                      if tags[screen][5] then
-                          awful.tag.viewonly(tags[screen][5])
-                      end
-                  end))
-
-    globalkeys = awful.util.table.join(globalkeys,
-        awful.key({ modkey }, "y",
-                  function ()
-                      local screen = mouse.screen
-                      if tags[screen][6] then
-                          awful.tag.viewonly(tags[screen][6])
-                      end
-                  end))
-
---- customization end
 
 clientbuttons = awful.util.table.join(
     awful.button({ }, 1, function (c) client.focus = c; c:raise() end),
@@ -503,7 +437,7 @@ end
 
 --run_once("emacs24",nil,1)
 --run_once("firefox",nil,1)
-run_once("kupfer",nil,1)
+run_once("synapse",nil,1)
 run_once("xfce4-power-manager", nil, 1)
 
 awful.util.spawn_with_shell("xmodmap ~/tasta_stuff/neo_de.xmodmap")

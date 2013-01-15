@@ -1041,6 +1041,13 @@ nochmehr bla
 http://homepage.univie.ac.at/guenther.eder/firstolog1.htm
      und noch mehr auf dieses Seiten
 http://en.wikipedia.org/wiki/First-order_logic
+
+[[htnortp://en.wikipedia.org/wiki/First-order_logic]]
+[[http://en.wikipedia.org/wiki/First-order_logic]]
+[[file://enrn.wikipedia.org/wiki/First-order_logic]]
+[[http://en.wikorsipedia.org/wiki/First-order_logic]]
+[[http://en.wikipediaortsa.org/wiki/First-order_logic]]
+[[http://en.wikipedia.org/wort siki/First-order_logic]]
 ** Englisch
 | Deutsch                | Englisch                            |
 |------------------------+-------------------------------------|
@@ -1346,3 +1353,9 @@ Comedy-Urgesteine in weiteren Hauptrollen zu sehen. (BL)
   *Shell Command Output*
 (lgrep "-key" "/home/florian/.emacs")
 (setq debug-on-error t)
+
+[[file:201301ad-0029362331Avc.png]]
+
+
+
+
