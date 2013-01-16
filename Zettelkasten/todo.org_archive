@@ -193,6 +193,24 @@ google: emacs+evil+show+mark
 ** DONE Planung/Zielsetzung einer idealen lokalen Textsubstitution
 ** DONE Stichwort fuzzymatching completion prüfen
 ** DONE Quellcode von Magpie von dahingehende Anpassparkeit prüfen
+* zathura
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2013-01-14 Mo 17:53
+  :ARCHIVE_FILE: ~/Zettelkasten/todo.org
+  :ARCHIVE_OLPATH: Projekte
+  :ARCHIVE_CATEGORY: todo
+  :END:
+** DONE google: Zathura Completion / man page / doku / config wälzen. Ziel: Anzeige auch von Dateien ohne Endung in der Completion
+** DONE mehrere instanzen von zathura / fenster / buffer etc?
+- per konsole auf jeden fall unmittelbar
+** DONE completion in zathura umkonfigurieren
+   - navigation mit pfeiltasten in resultaten
+   - anzeigen aller dokumente (auch nicht pdf's)
+   - fuzzy-matching / plugins?
+   - geht eigentlich schon, aber merke: 
+     & ans Ende für separaten task
+     ctrl backsp um ganze wörter zu löschen
+
 
 
 

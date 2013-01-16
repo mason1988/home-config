@@ -1,0 +1,13 @@
+(define-key minibuffer-local-map [escape] 'keyboard-escape-quit)
+(define-key minibuffer-local-map "\C-e" 'keyboard-escape-quit)
+(define-key minibuffer-local-ns-map [escape] 'keyboard-escape-quit)
+(define-key minibuffer-local-completion-map [escape] 'keyboard-escape-quit)
+(define-key minibuffer-local-must-match-map [escape] 'keyboard-escape-quit)
+(define-key minibuffer-local-isearch-map [escape] 'keyboard-escape-quit)
+
+(define-key minibuffer-local-map (kbd "M-e") 'keyboard-escape-quit)
+(define-key minibuffer-local-ns-map (kbd "M-e") 'keyboard-escape-quit)
+(define-key minibuffer-local-completion-map (kbd "M-e") 'keyboard-escape-quit)
+(define-key minibuffer-local-must-match-map (kbd "M-e") 'keyboard-escape-quit)
+(define-key minibuffer-local-isearch-map (kbd "M-e") 'keyboard-escape-quit)
+(provide 'escape-fix)

@@ -2,11 +2,10 @@
 #+LINK: zk /home/florian/Dropbox/Zettelkasten/
 #+LINK: zkp /home/florian/Dropbox/Zettelkasten/res-pic_%s.png
 #+LINK: drop /home/florian/Dropbox/%s
-
+a
 #+TODO: TODO | DONE
 #+TODO: CANCELED | Restarted
 #+TODO: Zettel1 Zettel2 Zettel3 Zettel4 Zettel5 Zettel6 Zettel7 Zettel8 Zettel9 Zettel10 Zettel11 Zettel12 Zettel13 Zettel14
-
 #+DRAWERS: LINKS
 
 * Zettelverwaltung
@@ -93,6 +92,8 @@ http://en.wikipedia.org/wiki/Note-taking
 - Pomodori Technik (20m minuten intervalle) (http://en.wikipedia.org/wiki/Pomodoro_Technique)
 - gtd (grundprinzipien -> next steps festlegen etc.)(http://schoepfertum.blogspot.de/2011/08/getting-things-done.html)
 * Elementare Stochastik 
+** organisation
+- email: senge@mathematik.uni-marburg.de
 ** Englisch
 | Deutsch                       | Englisch                       |
 |-------------------------------+--------------------------------|
@@ -1150,6 +1151,13 @@ nochmehr bla
 http://homepage.univie.ac.at/guenther.eder/firstolog1.htm
      und noch mehr auf dieses Seiten
 http://en.wikipedia.org/wiki/First-order_logic
+
+[[htnortp://en.wikipedia.org/wiki/First-order_logic]]
+[[http://en.wikipedia.org/wiki/First-order_logic]]
+[[file://enrn.wikipedia.org/wiki/First-order_logic]]
+[[http://en.wikorsipedia.org/wiki/First-order_logic]]
+[[http://en.wikipediaortsa.org/wiki/First-order_logic]]
+[[http://en.wikipedia.org/wort siki/First-order_logic]]
 ** Englisch
 | Deutsch                | Englisch                            |
 |------------------------+-------------------------------------|
@@ -1558,3 +1566,9 @@ Comedy-Urgesteine in weiteren Hauptrollen zu sehen. (BL)
   *Shell Command Output*
 (lgrep "-key" "/home/florian/.emacs")
 (setq debug-on-error t)
+
+[[file:201301ad-0029362331Avc.png]]
+
+
+
+
