@@ -1043,23 +1043,40 @@ anz(6) = 2080  496
 #+END_SRC 
 
 *** Aufgabe 34
-#+BEGIN: aufgabe 34
+#+BEGIN: aufgabe34
+[[/home/florian/Zettelkasten/zettelkasten.org_20130115_141827_16745p8k.png]]
+#+END:
+(a)
+y mal die 5. Regel => ack(0, ack(0 , ... , ack(1,0)...)) ; y mal
+ack(1,0) = 1
+ack (0,1) = ack(0,ack(1,0)) = 2
+ack(0,2) = 2 + 2
+noch y-1 mal wiederholen => 2*(y-1) + y => 2y
 
-#+END: aufgabe 34
-
+(b)
+ack(2,y) => y mal 5. Regel => ack(1, ack(1, ..., ack(2, 0)...))
+=> ack(1, z) rekursion, mit z=2 als start und das  dann y mal wiederholt
+=> 2*2*2*2 (y-mal) .... = 2^y
 #+BEGIN_SRC latex :tangle th-loesung-11.tex
 \subsection{Aufgabe 34}
+\subsubsection{a)}
+\subsubsection{b)}
 #+END_SRC
 *** Aufgabe 35
+#+BEGIN: aufgabe35
+[[/home/florian/Zettelkasten/zettelkasten.org_20130115_142054_167452Gr.png]]
+#+END:
+X_1 - X_2
 #+BEGIN_SRC latex :tangle th-loesung-11.tex
 \subsection{Aufgabe 35}
 #+END_SRC
-
 *** Aufgabe 36
+#+BEGIN: aufgabe36
+[[file:zettelkasten.org_20130115_142122_16745DRx.png]]
+#+END:
 #+BEGIN_SRC latex :tangle th-loesung-11.tex
 \subsection{Aufgabe 36}
 #+END_SRC
-
 *** footer
 #+BEGIN_SRC latex :tangle th-loesung-11.tex
 \end{document}
@@ -1225,9 +1242,89 @@ Maximal: kein anderes echtes Ideal von dem I ne echte Teilmenge
 jedes ideal von dem I ne echte Teilmenge, ist
 
 ** Zettel-09
-[[~/Dropbox/lo/lo-zettel-09/lo-zettel-09.pdf][lo-zettel-09.pdf]]
-[[~/Dropbox/lo/lo-zettel-09/lo-loesung-09.tex][lo-loesung-09.tex]]
-[[~/Dropbox/lo/lo-zettel-09/lo-loesung-09.pdf][lo-loesung-09.pdf]]
+*** Musterlösung Zettel 09
+#+BEGIN_SRC latex :tangle muster09.tex
+  \documentclass[11pt]{amsart}
+  \usepackage[utf8]{inputenc}
+  \usepackage{amssymb,amsmath}
+  \usepackage{verbatim}
+  \usepackage{color}
+  \usepackage{geometry}
+  \geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
+  \usepackage{amsthm}
+  \usepackage{stmaryrd}
+  \usepackage{graphicx}
+  
+  %\includegraphics{?} setzt bild ein
+  %\ref{labelname} erstellt link zu labelname
+  %\label{labelname} kann einfach irgendwo drangesetz werden
+  
+  \newtheorem{defi}{Definition}
+  \newtheorem{axiom}{Axiom}
+  \newtheorem{nota}{Notation}
+  \newtheorem{prop}{Proposition}
+  \newtheorem{satz}{Satz}
+  \newtheorem{umf}{Umformung}
+  
+  \newenvironment{beweis}{\par\begingroup%
+  \settowidth{\leftskip}{\textsc{Beweis:~}}%
+  \noindent\llap{\textsc{Beweis:~}}}{\hfill$\Box$\par\endgroup}
+  
+  \renewcommand{\baselinestretch}{1}
+  \newcommand{\words}{\Sigma^* \backslash \{\epsilon\}}
+  \newcommand{\etrans}[1]{\bar{\delta}(#1)}
+  \renewcommand{\P}{\mathbb{P}}
+  
+  \title{Zettel 9}
+  \author{Florian Lerch(2404605)}
+  %\date{} % Activate to display a given date or no date (if empty),
+  % otherwise the current date is printed 
+  
+  \begin{document}
+  
+  \subsection{31}
+    $A = \mathcal{P}(M), X_i \subset M, i \in I$ \\
+    Berechne: $sup_{i\in I}X_i$ und $inf_{i\in I}X_i}$\\
+    $sup X_i = \cup_{i\in I}X_i $ \\
+    $X_i \leq \cup_{i\in I}X_i$ Sei $B \subset M \\
+    \mbox{ eine Menge mit } X_i \leq B \forall i \in I \\
+    d.h. X_i \subset B \mbox{ für alle } i \in I \\
+    \mbox{ dann gilt } \cup_{i \in I}X\i \subset B \\
+    \%box{ Also } \cup_{i\in I}X_I \mbox{ ist das Supremum } \\
+    \mbox{ für das Infinum: } \\
+    inf_{i \in I} X_i = \cap_{i \in I}X_i} \\
+    \mbox{ es ist klar } \cap_{i \in I}X_i \leq X_i \\
+    \mbox{ Sei } C \subset M \mbox{ eine Menge mit } \\
+    C \leq X_i \forall i \in I, \mbox{ das bedeutet } \\
+    C < X_i \forall i \in I \mbox{ und insbesondere } \\
+    C \subset \cap_{i\in I}X_i \mbox{ also } C \ leq \cap_{i \in I} X_i \\
+    \mbox{ und } \cap_{i \in I}X_i \mbox{ ist das Infinum } $
+    \subsection{32}
+    M ist eine endliche Menge \\
+    $X_0 \overset X_1 \overset ... \overset X_n \overset ... \\
+    \mbox{ aufsteigende Fogle und } X_i \not = \emptyset \mbox{ für alle } i \in I \\
+    \mbox{ da M endlich ist } \exists x \in M \mbox{ und } k \in I \mbox{ mit } x \in X_n, \forall n \geq k \\
+    \mbox{ Eigentlich gibt es } k \in I \mbox{ mit }X_n = X_{k'} \mbox{ für alle }n\geq k' \\
+    \mbox{ Und wir wissen dass }inf_{i\inI}X_i = \cap_{i \in I}X_i = X_{k'} \not = \emptyset \\
+    \mbox{ weil die Folge absteigend ist und } [X_i \not \emptyset \forall i \in I ]$
+    \subsection{33}
+    \begin{equation}
+    t = \tilde{s_2}x_1s_2s_0x_7 
+    t' = \tilde{s_2}x_7s_2s_0x_1 
+    t'' = \tilde{s_2}s_2x_1x_7s_0 
+    \mbox{ Wir haben die Fortsetzung einer Belegung }
+    \alpha
+    \alpha^{\wedge}(t) = \alpha^{\wedge}(t)(\tilde{s_2}x_1s_2s_0x_7)
+    \mbox{ Sei }\alpha_i := \alpha(x_i)
+    = \tilde{s_2}^{*}(\alpha(x_1)s_2^*(s_0^*\alpha(x_7)))
+    = \alpha_1^{s_2^*(s_o^*\alpha_7)}= \alpha_1^{0 + \alpha_7} 
+    \alpha(t') = \alpha_7^{0+\alpha1} 
+    \alpha{t'') = (\alpha_1 + \alpha_7)^0 
+    b) \alpha^{\wedge}(t) = \alpha_1^{\alpha_7} = 2^{17} = 13|072 
+    \end{equation}
+  
+  \end{document}  
+#+END_SRC latex
 ** Zettel-10
 *** header
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
@@ -1391,6 +1488,7 @@ Sei x3=0 => (2*x4 < 0) => existiert kein x4 das *echt* kleiner ist
 [[~/Dropbox/lo/lo-zettel-13/lo-zettel-13.pdf][lo-zettel-13.pdf]]
 [[~/Dropbox/lo/lo-zettel-13/lo-loesung-13.tex][lo-loesung-13.tex]]
 [[~/Dropbox/lo/lo-zettel-13/lo-loesung-13.pdf][lo-loesung-13.pdf]]
+
 * Revive Sessions
 - 1 :: Elementare Stochastik Zettel 8
 * Unterhaltung
