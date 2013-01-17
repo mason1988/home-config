@@ -1,4 +1,4 @@
-(defun delete_pic() (interactive)
+(defun delete-pic() (interactive)
   (let (filepath)
   (when (org-in-regexp org-bracket-link-regexp 1)
     (progn

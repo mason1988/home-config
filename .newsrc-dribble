@@ -1,0 +1,2 @@
+(gnus-group-change-level "mail.misc" 3 9 "nndraft:drafts" nil)
+(gnus-group-set-info '("mail.misc" 3 nil))
