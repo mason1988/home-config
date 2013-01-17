@@ -1,3 +1,4 @@
+
 \documentclass[11pt]{amsart}
 \usepackage[utf8]{inputenc}
 \usepackage{amssymb,amsmath}
@@ -29,54 +30,51 @@
 \newcommand{\etrans}[1]{\bar{\delta}(#1)}
 \renewcommand{\P}{\mathbb{P}}
 
-\title{Zettel 9 Lösung}
+\title{Zettel 9}
 \author{Florian Lerch(2404605)}
 %\date{} % Activate to display a given date or no date (if empty),
 % otherwise the current date is printed 
 
 \begin{document}
-\subsection{31}
-\begin{equation}
-  A = \mathcal{P}(M), X_i \subset M, i \in I
-  \mbox{ Berechne: } sup_{i\in I}X_i \mbox{ und } inf_{i\in I}X_i
-  sup X_i = \cup_{i\in I}X_i 
-  X_i \leq \cup_{i\in I}X_i \mbox{ Sei } B \subset M 
-  \mbox{ eine Menge mit } X_i \leq B \forall i \in I 
-  d.h. X_i \subset B \mbox{ für alle } i \in I 
-  \mbox{ dann gilt } \cup_{i \in I}X\i \subset B 
-  \mbox{ Also } \cup_{i\in I}X_I \mbox{ ist das Supremum } 
-  \mbox{ für das Infinum: } 
-  inf_{i \in I} X_i = \cap_{i \in I}X_i 
-  \mbox{ es ist klar } \cap_{i \in I}X_i \leq X_i 
-  \mbox{ Sei } C \subset M \mbox{ eine Menge mit } 
-  C \leq X_i \forall i \in I, \mbox{ das bedeutet } 
-  C < X_i \forall i \in I \mbox{ und insbesondere } 
-  C \subset \cap_{i\in I}X_i \mbox{ also } C \leq \cap_{i \in I} X_i 
-  \mbox{ und } \cap_{i \in I}X_i \mbox{ ist das Infinum }
-\end{equation}
-  \subsection{32}
-\begin{equation}
-  M ist eine endliche Menge 
-  X_0 overset X_1 overset ... overset X_n overset ... 
-  \mbox{ aufsteigende Fogle und } X_i \not = \emptyset \mbox{ für alle } i \in I 
-  \mbox{ da M endlich ist } \exists x \in M \mbox{ und } k \in I \mbox{ mit } x \in X_n, \forall n \geq k 
-  \mbox{ Eigentlich gibt es } k \in I \mbox{ mit }X_n = X_{k'} \mbox{ für alle }n\geq k' 
-  \mbox{ Und wir wissen dass }inf_{i\inI}X_i = \cap_{i \in I}X_i = X_{k'} \not = \emptyset 
-  \mbox{ weil die Folge absteigend ist und } [X_i \not \emptyset \forall i \in I ]
-\end{equation}
-  \subsection{33}
+
+\subsection*{31}
+  $A = \mathcal{P}(M), X_i \subset M, i \in I$ \\
+  Berechne: $sup_{i\in I}X_i$ und $inf_{i\in I}X_i}$\\
+  $sup X_i = \cup_{i\in I}X_i $ \\
+  $X_i \leq \cup_{i\in I}X_i$ Sei $B \subset M \\
+  \mbox{ eine Menge mit } X_i \leq B \forall i \in I \\
+  d.h. X_i \subset B \mbox{ für alle } i \in I \\
+  \mbox{ dann gilt } \cup_{i \in I}X\i \subset B \\
+  \%box{ Also } \cup_{i\in I}X_I \mbox{ ist das Supremum } \\
+  \mbox{ für das Infinum: } \\
+  inf_{i \in I} X_i = \cap_{i \in I}X_i} \\
+  \mbox{ es ist klar } \cap_{i \in I}X_i \leq X_i \\
+  \mbox{ Sei } C \subset M \mbox{ eine Menge mit } \\
+  C \leq X_i \forall i \in I, \mbox{ das bedeutet } \\
+  C < X_i \forall i \in I \mbox{ und insbesondere } \\
+  C \subset \cap_{i\in I}X_i \mbox{ also } C \ leq \cap_{i \in I} X_i \\
+  \mbox{ und } \cap_{i \in I}X_i \mbox{ ist das Infinum } $
+  \subsection*{32}
+  M ist eine endliche Menge \\
+  $X_0 \overset X_1 \overset ... \overset X_n \overset ... \\
+  \mbox{ aufsteigende Fogle und } X_i \not = \emptyset \mbox{ für alle } i \in I \\
+  \mbox{ da M endlich ist } \exists x \in M \mbox{ und } k \in I \mbox{ mit } x \in X_n, \forall n \geq k \\
+  \mbox{ Eigentlich gibt es } k \in I \mbox{ mit }X_n = X_{k'} \mbox{ für alle }n\geq k' \\
+  \mbox{ Und wir wissen dass }inf_{i\inI}X_i = \cap_{i \in I}X_i = X_{k'} \not = \emptyset \\
+  \mbox{ weil die Folge absteigend ist und } [X_i \not \emptyset \forall i \in I ]$
+  \subsection*{33}
   \begin{equation}
   t = \tilde{s_2}x_1s_2s_0x_7 
   t' = \tilde{s_2}x_7s_2s_0x_1 
   t'' = \tilde{s_2}s_2x_1x_7s_0 
-  \mbox{ Wir habenen die Fortsetzung einer Belegung }
+  \mbox{ Wir haben die Fortsetzung einer Belegung }
   \alpha
   \alpha^{\wedge}(t) = \alpha^{\wedge}(t)(\tilde{s_2}x_1s_2s_0x_7)
   \mbox{ Sei }\alpha_i := \alpha(x_i)
   = \tilde{s_2}^{*}(\alpha(x_1)s_2^*(s_0^*\alpha(x_7)))
   = \alpha_1^{s_2^*(s_o^*\alpha_7)}= \alpha_1^{0 + \alpha_7} 
   \alpha(t') = \alpha_7^{0+\alpha1} 
-  \alpha(t'') = (\alpha_1 + \alpha_7)^0 
+  \alpha{t'') = (\alpha_1 + \alpha_7)^0 
   b) \alpha^{\wedge}(t) = \alpha_1^{\alpha_7} = 2^{17} = 13|072 
   \end{equation}
 

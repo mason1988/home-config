@@ -17,7 +17,7 @@ class floslice:
 
         filename = filename.rsplit(".",1)[0]
         
-        slice_size = 200
+        slice_size = 50
         for i in range(0, h, slice_size):
             my = min(i + slice_size, h)
             buffer = Image.new("RGB", [w,my - i],(255, 255, 255))

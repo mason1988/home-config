@@ -2,11 +2,11 @@
 #+LINK: zk /home/florian/Dropbox/Zettelkasten/
 #+LINK: zkp /home/florian/Dropbox/Zettelkasten/res-pic_%s.png
 #+LINK: drop /home/florian/Dropbox/%s
-a
 #+TODO: TODO | DONE
 #+TODO: CANCELED | Restarted
 #+TODO: Zettel1 Zettel2 Zettel3 Zettel4 Zettel5 Zettel6 Zettel7 Zettel8 Zettel9 Zettel10 Zettel11 Zettel12 Zettel13 Zettel14
 #+DRAWERS: LINKS
+#+latex_header:\input{commands.tex}
 
 * Zettelverwaltung
 ** Zettel9 *Elementare Stochastik*
@@ -38,6 +38,10 @@ You'll get order number on the next page after confirmation and by mail.
 
 €65.70
 Your order # is: 108848.
+** Kommilitonen
+Ich -> 2404605
+Waldemar Hamm -> 2410010
+Rene Schwiegk -> 2355612
 * Webdesign
 ** hilfreiche Links
 http://www.mandapanda.net/lerntechnik/masterplan/
@@ -287,11 +291,11 @@ die müssen allen innerhalb des Pfades gezogen werden
 #+END_SRC 
 *** Aufgabe 1
 #+BEGIN_SRC latex :tangle st-loesung-08.tex
-\subsection{Aufgabe 1}
+\subsection*{Aufgabe 1}
 #+END_SRC
 **** a) 
 #+BEGIN_SRC latex :tangle st-loesung-08.tex
-\subsubsection{a)}
+\subsubsection*{a)}
 #+END_SRC
 Es gibt 32 Karten, 4 davon sind Buben
 Jeder der 3 Spieler erhält 10 Karten
@@ -320,7 +324,7 @@ Es ergibt sich somit: $\mathbb{P}(\omega) = \binom{10}{\omega}*(\frac{1}{8})^{\o
 
 **** b)
 #+BEGIN_SRC latex :tangle st-loesung-08.tex
-\subsubsection{b)}
+\subsubsection*{b)}
 #+END_SRC
 
 Aus Sicht des jeweiligen Spielers befinden sich nun noch 4 - X Karten im Spiel. Für die Karten im Skat gilt
@@ -351,7 +355,7 @@ Für $\omega \in \Omega:$ $\mathbb{P}(Y = \omega |X = k) = \binom{32}{\omega}(\f
 
 *** Aufgabe 2
 #+BEGIN_SRC latex :tangle st-loesung-08.tex
-\subsection{Aufgabe 2}
+\subsection*{Aufgabe 2}
 #+END_SRC
 
 Fairer Würfel 2 mal geworfen
@@ -369,7 +373,7 @@ dieser Ergebnisse wahrscheinlicher oder Unwahrscheinlicher.
 
 Der Bildraum ist daher: [k,12-k] \in N
 #+BEGIN_SRC latex :tangle st-loesung-08.tex
-\subsubsection{a)}
+\subsubsection*{a)}
 Ohne Betrachtung von X gilt zunächst: $Y$ bildet auf $[2,12] \subset N$ \\
 Ferner biledet X auf $[1,6] \subset N$ ab, mit gleichen Wahrscheinlichkeiten der Werte, es gilt also: $P(X=x) = \frac{1}{6}$ für $x \in [1,6]$ \\
 $\Rightarrow P(Y = y | X = k) = \frac{P(X=k , Y = y)}{P(X = k)} = \frac{P(X=k , Y = y)}{6}$ \\
@@ -383,7 +387,7 @@ Es ist anzunehmen, dass auch hier nur eine Verschiebung um k statt findet
 Test X=1 Ws für Y: 1/6(2+3+4+5+6+7) = 27/6 = 9/2 = 4,5  *passt*
 Test X=2 Ws für Y: 1/6(3+4+5+6+7+8) = 33/6 = 11/2 = 5,5 *passt*
 #+BEGIN_SRC latex :tangle st-loesung-08.tex
-\subsubsection{b)}
+\subsubsection*{b)}
 $g(k) := E[Y|X=k] = \sum_yy*P(Y=y | X = k) = \sum_{k < y \leq k+6}y*\frac{1}{6} = \frac{1}{6} * (k+1 + ... + k+6) = \frac{21}{6}*k = 3,5k$
 #+END_SRC
 
@@ -409,7 +413,7 @@ E[3,5 + X] = 3,5 + E[X]  <= wäre nicht unbedingt so machbar.
 *E[g(X)] = E[E(Y|X)]*   <=== wichtig, fest definiert
 
 #+BEGIN_SRC latex :tangle st-loesung-08.tex
-\subsubsection{c)}
+\subsubsection*{c)}
 Sei Z die Augenzahl des 2. Wurfes, so das gilt Y = X+Z \\
 $\Rightarrow E[Y] = E[X+Z] = E[X]+E[Z] = 3,5 + 3,5 = 7$ \\
 $E[g(X)] = E[E(Y|X)] = E[\sum_yy*P(Y=y | X )] = \sum_x[\sum_yy*P(Y=y|X=x)]*P(X=x)$ \\
@@ -418,11 +422,11 @@ $= \sum_x\sum_yy*P(Y=y|X=x)*P(X=x) = \sum_yy*\sum_xP(Y=y, X=x) = \sum_yy*P(Y=y) 
    
 *** Aufgabe 3
 #+BEGIN_SRC latex :tangle st-loesung-08.tex
-\subsection{Aufgabe 3}
+\subsection*{Aufgabe 3}
 #+END_SRC
 **** a)
 #+BEGIN_SRC latex :tangle st-loesung-08.tex
-\subsubsection{a)}
+\subsubsection*{a)}
 #+END_SRC
 
 - X, Y Zufallsvariablen -> aus ereignisraum in anderen raum
@@ -459,7 +463,7 @@ $ = Cov(X,X) - Cov(Y,Y) = Var(X) - Var(Y) = 0$
 
 **** b)
 #+BEGIN_SRC latex :tangle st-loesung-08.tex
-\subsubsection{b)}
+\subsubsection*{b)}
 #+END_SRC
 
 #+BEGIN_SRC latex :tangle st-loesung-08.tex
@@ -479,12 +483,12 @@ $\Rightarrow$ in diesem Beispiel sind die Zufallsvariablen X+Y und X-Y zwar unko
 *** Aufgabe 4
 #+PROPERTY: tangle yes  
 #+BEGIN_SRC latex :tangle st-loesung-08.tex
-  \subsection{Aufgabe 4}
+  \subsection*{Aufgabe 4}
 #+END_SRC
 
 **** a)
 #+BEGIN_SRC latex :tangle st-loesung-08.tex
-\subsubsection{a)}
+\subsubsection*{a)}
 #+END_SRC
 
 n = Anzahl Würfel
@@ -536,7 +540,7 @@ des Würfels (1 oder nicht 1)
 
 **** b)
 #+BEGIN_SRC latex :tangle st-loesung-08.tex
-\subsubsection{b)}
+\subsubsection*{b)}
 #+END_SRC
 
 e = 0,001
@@ -564,11 +568,11 @@ $\Leftrightarrow n > 3 200 000$
 
 *** Aufgabe 5
 #+BEGIN_SRC latex :tangle st-loesung-08.tex
-\subsection{Aufgabe 5}
+\subsection*{Aufgabe 5}
 #+END_SRC
 **** a)
 #+BEGIN_SRC latex :tangle st-loesung-08.tex
-\subsubsection{a)}
+\subsubsection*{a)}
 #+END_SRC
 
 Berechnen Sie: [[file:201301ad-12403211367WJq.png]]
@@ -658,7 +662,7 @@ nur bei 1/3 liegt.
 
 **** b)
 #+BEGIN_SRC latex :tangle st-loesung-08.tex
-\subsubsection{b)}
+\subsubsection*{b)}
 #+END_SRC
 
 #+BEGIN_SRC latex :tangle st-loesung-08.tex
@@ -673,7 +677,7 @@ nur bei 1/3 liegt.
 [[/home/florian/Zettelkasten/zettelkasten.org_20130103_203606_22923rEH.png]]
 **** c)
 #+BEGIN_SRC latex :tangle st-loesung-08.tex
-\subsubsection{c)}
+\subsubsection*{c)}
 #+END_SRC
 
 #+BEGIN_SRC latex :tangle st-loesung-08.tex
@@ -685,7 +689,7 @@ Analog dazu liegt die Erfolgswahrscheinlichkeit bei der "nie wechseln Strategie"
 #+END_SRC
 *** Aufgabe 6
 #+BEGIN_SRC latex :tangle st-loesung-08.tex
-\subsection{Aufgabe 6}
+\subsection*{Aufgabe 6}
 #+END_SRC
 
 2 Proben unterschiedlich => 0,001% Übereinstimmung => 100.000 Fälle einmal
@@ -1059,9 +1063,9 @@ ack(2,y) => y mal 5. Regel => ack(1, ack(1, ..., ack(2, 0)...))
 => ack(1, z) rekursion, mit z=2 als start und das  dann y mal wiederholt
 => 2*2*2*2 (y-mal) .... = 2^y
 #+BEGIN_SRC latex :tangle th-loesung-11.tex
-\subsection{Aufgabe 34}
-\subsubsection{a)}
-\subsubsection{b)}
+\subsection*{Aufgabe 34}
+\subsubsection*{a)}
+\subsubsection*{b)}
 #+END_SRC
 *** Aufgabe 35
 #+BEGIN: aufgabe35
@@ -1069,14 +1073,14 @@ ack(2,y) => y mal 5. Regel => ack(1, ack(1, ..., ack(2, 0)...))
 #+END:
 X_1 - X_2
 #+BEGIN_SRC latex :tangle th-loesung-11.tex
-\subsection{Aufgabe 35}
+\subsection*{Aufgabe 35}
 #+END_SRC
 *** Aufgabe 36
 #+BEGIN: aufgabe36
 [[file:zettelkasten.org_20130115_142122_16745DRx.png]]
 #+END:
 #+BEGIN_SRC latex :tangle th-loesung-11.tex
-\subsection{Aufgabe 36}
+\subsection*{Aufgabe 36}
 #+END_SRC
 *** footer
 #+BEGIN_SRC latex :tangle th-loesung-11.tex
@@ -1092,6 +1096,14 @@ X_1 - X_2
 [[~/Dropbox/th/th-zettel-13/th-loesung-13.tex][th-loesung-13.tex]]
 [[~/Dropbox/th/th-zettel-13/th-loesung-13.pdf][th-loesung-13.pdf]]
 * Softwaretechnik
+** organisation
+- email: selecture@mathematik.uni-marburg.de
+- Gruppe 1
+*** Mustertext
+_Übung 10 - Lerch, Hamm, Schwiegk - Gruppe 1_
+Hallo,
+im Anhang ist unsere Lösung zum aktuellen Zettel (10) in Softwaretechnik.
+Mit freundlichen Grüßen, Florian Lerch(2404605), Waldemar Hamm(2410010), René Schwiegk(2355612)
 ** Hausaufgabe03
 [[~/Dropbox/so/so-hausaufgabe-03/so-hausaufgabe-03.pdf::NNN][so-hausaufgabe-03.pdf]]
 [[file:~/Dropbox/so/so-hausaufgabe-03/code/servlet/tests/Tester.java][Tester.java]]
@@ -1144,6 +1156,196 @@ Grund handelt es sich dann beim CombiningServlet um einen Decorator.
 bla bla
 **** Subheading
 nochmehr bla
+** Übung 10
+#+TITLE:     Übung 10
+#+AUTHOR:    florian,waldemar,rene
+#+EMAIL:     lerch.florian@yahoo.de
+#+DATE:      2013-01-17 Do
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:   
+#+LINK_HOME: 
+#+XSLT:
+ 10
+*** Aufgabe a
+**** aufgabenstellung :noexport:
+#+BEGIN: aufgabe_a
+[[/home/florian/Zettelkasten/zettelkasten.org_20130117_151844_13098jVT-0.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130117_151844_13098jVT-1.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130117_151844_13098jVT-2.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130117_151844_13098jVT-3.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130117_151844_13098jVT-4.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130117_151844_13098jVT-5.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130117_151844_13098jVT-6.png]]
+#+END:
+**** Fehler 1
+***** Fehlermeldung
+Class defines equals() and uses Object.hashCode() 
+Datei: Card und Cardvector
+***** Beschreibung
+Die equals Methode wird durch die Klasse überschrieben, die hashCode
+Methode jedoch nicht. Da beim vergleichen von Klasseninstanzen aber
+die Hashcodes benutzt werden, welche nun aber bei gleichheit nicht 
+den selben Hashcode haben werden. 
+***** Erkennung
+Suche nach Klassen die die equalsmethode aber nicht die hashcode
+Methode enthalten.
+***** Korrektur
+Die jetzige equals Methode umbenennen zu Compare oder ähnlichem.
+**** Fehler 2
+***** Fehlermeldung
+Comparison of String objects using == or != in jskat.gui.main.ScoreTableModel.update(Observable, Object) 
+***** Beschreibung
+Beim vergleichen mit == oder != werden die Hashcodes verglichen. Diese sind bei inhaltlich identischen 
+Strings zwar meistens, aber nicht immer gleich.
+***** Erkennung
+Nach variablen vom Typ String suchen, welche mit '==' oder '!=' verglichen werden.
+***** Korrektur
+Statt dessen benutzt man die equals Methode der Stringklasse.
+**** Fehler 3
+***** Fehlermeldung
+Switch statement found in jskat.control.SkatGame.playing(GameAnnouncement) where one case falls through to the next case
+***** Beschreibung
+Sobald in einer Switch-Case Struktur eines der Cases zutrifft, wird automatisch alles weitere ausgeführt,
+also auch alle dahinter liegenden case Fälle. Aus diesem Grund beendet man die Ausführungsblöcke mit break
+***** Erkennung
+Nach case blöcken suchen, auf die ein weiteres case oder default folgt, ohne ein break dazwischen.
+***** Korrektur
+Man beendet den Ausführungsblock mit break.
+**** Fehler 4
+***** Fehlermeldung
+jskat.share.CardVector.equals(Object) does not check for null argument
+***** Beschreibung
+Die überschriebene neue Equalsmethode prüft nicht nach Nullobjekten, was aber Standardgemäß 
+jede solche Funktion in java tun sollte. Das muss nicht zwangsläufig zu Fehlern führen,
+erfüllt aber eben nicht den Standard.
+***** Erkennung
+Suche nach überschriebenen equal Methoden in Klassen und suche am Anfang nach einer
+If-Anweisung oder Ähnlichem, das auf Nullelemente prüft.
+***** Korrektur
+Man benennt die - dann nicht mehr - überschriebene Equals methode um in compare oder ähnliches.
+In jedem Fall sollte man die Elemente trotzdem am Anfang der Methode auf Inhalt prüfen.
+**** Fehler 5
+***** Fehlermeldung
+Impossible downcast from javax.swing.JPanel to jskat.gui.main.CardHoldingPanel in jskat.gui.main.JSkatPlayArea.getCardHoldingPanel(int)
+***** Beschreibung
+Die Instanzen der Klasse JPanel lassen sich nicht automatisch zur Klasse CardHoldingPanel konvertieren.
+***** Erkennung
+Suche nach Castings, in welchen die einzelnen Klassen nicht miteinander zusammenhängen, z.B. durch
+Ableitungsstrukturen.
+***** Korrektur
+Statt eine Instanz vom Typ JPanel zu erstellen und diese dann direkt explizit zu casten, könnte man
+gleich eine Instanz von CarHoldingPanel erstellen.
+**** Fehler 7
+***** Fehlermeldung
+Incorrect lazy initialization of static field jskat.control.BiddingThread.myself in jskat.control.BiddingThread.getInstance(JSkatDataModel, SkatGame, int[])
+***** Beschreibung
+Das Attribut myself wurde nirgendwo deklariert.
+***** Erkennung
+Suche nach verwendeten Variablen ohne deklaration dazu.
+***** Korrektur
+Statt myself könnte man this verwenden.
+**** Fehler 8
+***** Fehlermeldung
+Value of gameTypeText from previous case is overwritten here due to switch statement fall through
+***** Beschreibung
+Aufgrund der mangelnden Breaks in Fehler 3, wird die selbe Variable immer wieder überschrieben.
+***** Erkennung
+Suche nach Fehler 3 und dort dann mehrfachen Zuweisungen zu einer Variable in mehreren Case Blöcken.
+***** Korrektur
+Fehler 3 beheben.
+**** Fehler 9
+***** Fehlermeldung
+Unwritten field: jskat.gui.main.JSkatTableActions.newSkatRoundDialogAction
+***** Beschreibung
+Das Attribut das zurückgegeben wird, existiert gar nicht.
+***** Erkennung
+Suche nach return Anweisungen in denen Variablen zurückgegen werden, die nirgendwo sonst benutzt / deklariert werden.
+***** Korrektur
+Den Konstruktor der Klasse aufrufen und somit eine Instanz erstellen.
+**** Fehler 10
+***** Fehlermeldung
+jskat.share.Card doesn't define a hashCode() method but is used in a hashed data structure in jskat.test.share.TestHelper.convertCardsToHashSet(CardVector)
+***** Beschreibung
+Damit die Instanzen eine Klasse in einem HashSet verwendet werden können, muss die Klasse eine passende HashCode Methoe definieren.
+***** Erkennung
+Nach HashSets und deren .add Anweisungen etc. suchen. Die Typen der Variablen dort
+auf das vorhandensein einer hashCode Methode prüfen
+***** Korrektur
+Wenn die equals Methode wie in Fehler 4 umbenannt wird, muss auch keine eigene HashMethode mehr definiert werden.
+**** Fehler 11
+***** Fehlermeldung
+Wait not in loop in jskat.control.BiddingThread.waitMe()
+Wait not in loop in jskat.control.SchieberRamschThread.waitMe()
+***** Beschreibung
+Die wait Methode muss in einer synchronen Schleife stecken.
+***** Erkennung
+Suche nach weit aufrufen und prüfe dann, ob diese sich in einer Schleife befinden.
+***** Korrektur
+Statt wait einfach sleep benutzen, da sowieso nur auf Exceptions gewartet wird.
+**** Fehler 12
+***** Fehlermeldung
+Write to static field jskat.control.SkatTable.jskatStrings from instance method new jskat.control.SkatTable(JSkatDataModel)
+***** Beschreibung
+Es wird ein statisches Attribut durch eine Klasseninstanz überschrieben.
+***** Erkennung
+Suche nach Instanziierungen von Klassen und prüfe bei allen Attributszuweisungen,
+ob diese als statisch definiert wurden.
+***** Korrektur
+jskatStrings nicht mehr statisch machen, so dass jede Instanz einige eigene 
+Instanz dieses Attributs bekommt.
+*** Aufgabe b
+**** aufgabenstellung :noexport:
+#+BEGIN: aufgabe_b 
+[[/home/florian/Zettelkasten/zettelkasten.org_20130117_152034_13098wfZ-0.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130117_152034_13098wfZ-1.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130117_152034_13098wfZ-2.png]]
+#+END:
+**** Arten von Tests
+***** Blackbox Testing
+Man testes alle Möglichkeiten, das Programm zu bedienen (also Userinputs und alle möglichen Konfigarutionen und Szenarien...)
+ohne dabei den eigentlichen Quellcode zu betrachten. Der Vorteil liegt darin, dass man vom Quellcode nicht abgelenkt ist und
+das Programm wirklich aus der Perspektive des späteren Benutzers sieht. So kann man z.B. auch schell und Effizient Leute testen lassen
+die gar nicht selber am Code mitgewirkt haben bzw. ihn überhaupt verstehen.
+Der Nachteil dabei ist aber, dass man auch nicht gezielt nach möglichen Extremfällen und somit potenziellen Fehlern im Code suchen kann.
+***** Whitebox Testing
+Man betrachtet den Code und versucht anhand des Codes systematisch alles durchzutesten.
+Dabei kann man sich z.B. Funktionsweise vorarbeiten und genau prüfen, ob alle Funktionsblöcke beim bisherigen testen schon vorkamen.
+Der Vorteil dabei liegt natürlich darin, dass man so wesentlich eher Fehlerursachen unmittelbar erkennen kann, als beim Blackbox testing.
+Der Nachteil ist aber, dass man schnell "Betriebsblind" wird und die verwendeten Systeme im Grunde auch nie absolut jedes Szenario erfassen
+können, man sich aber fälschlicherweise genau darauf verlassen könnte.
+***** Unit Tests
+Der Code wird in einzelne Blöcke / Module / Funktionen /... geteilt. Diese "Units" werden dann in einer Testroutine aufgerufen, 
+welche zunächst eine Testumgebung initialisiert und dann die einzelnen Units mit vom Programmierer bestimmten Werten aufruft und
+und anschließend vergleicht, ob das Ergebnis richtig ist, wobei der Programmierer vorher den erwarteten Wert angibt.
+Der Vorteil liegt darin, dass dieser Prozess weitestgehend automatisch ablaufen kann. Dies Testroutinen müssen nur einmal geschrieben werden
+und sind in der Regel universell genug, dass sie auch bei änderungen des Methodeninhaltes, selbst nicht verändert werden müssen.
+Statt dessen können sie während des gesamten Entwicklungsprozesses beibehalten werden. Ein weiterer Vorteil liegt darin, dass jeden Programmierer
+seine eigenen Unit Tests für seine eigenen Module schreiben kann und nicht ein einzelner, alles testen muss. Außerdem lässt sich im Fehlerfall
+ziemlich genau bestimmen, wo der Fehler entstanden ist.
+Ein Nachteil ist, dass diese Unittests nur die UseCases abdecken, die dem Programmierer bei der Erstellung des jeweiligen Tests eingefallen sind.
+Häufig entstehen Fehler aber gerade durch das zusammenwirken vieler unterschiedlicher Methoden, was meistens nur schlecht durch Unittests abgedeckt wird,
+auch wenn es natürlich möglich ist.
+***** Integration Testing
+Eine bestimmte Anwendung des Blackboxmodells, bei dem man versucht, Gruppen einzelner Module zu bilden und diese einzeln zu testen.
+Nachteile sind die selben wie beim generellen Backboxing. Ein Vorteil dabei ist jedoch, das es wesentlich eher ein systematisches
+Vorgehen ermöglicht.
+***** System Test
+Ebenfalls Anwendung des Blackboxmodells mit den selben Nachteilen. Hierbei versucht man aber, das System als ganzes zu testen,
+wobei man die Tests in die unterschiedlichen UseCases aufsplittet. Auch dies ermöglicht eine halbwegs systematische Vorgehensweise.
+**** Ist ein Garantie für Fehlerfreiheit möglich?
+Nein, da auch jede systematische herangehensweise an die Testmodelle immer auch Lücken aufweisen. So hängt natürlich immer alles
+von der eigentlichen Testumgebung ab, für die man zwar versuchen kann, alle extremfälle abzudecken, aber es ist unmöglich wirklich
+jeden Fall zu finden. Vorallem können auch stets andere auf dem Computer installierte Programme Einfluss darauf nehmen oder Fehler verursachen.
+Bei Abhängigkeiten von externen Modulen besteht zum Beispiel auch stets das Risiko, dass diese geupdatet werden und das Programm somit
+nicht mehr benutzbar machen. In jedem Fall gibt es vollkommen unabhängig davon, wie vollständig und gut die Tests waren, immer einen Nutzer der 
+es schafft, einen Weg zu finden um doch alles zum Absturz zu bringen.
 * Logik
 ** Herausragende Quellen
 [[http://homepage.univie.ac.at/guenther.eder/Grundkurs_Logik.htm][Grundkurs Logik Uni Wien]]
@@ -1226,16 +1428,17 @@ http://en.wikipedia.org/wiki/First-order_logic
  # Platzhalter Quantor
 großes Modell enthält noch die m stelligen Prädikate (also als Teilmenge vom Universum)
 Beispel als Zahlenmodell:
-U = \mathbb{N}
-p_2^* = \begin{cases} = &\mbox{falls } m=n \\ < &\mbox{falls } p_2^* = \{(m,n) \in \mathbb{N}*\mathbb{N}\}|m<n \end{cases}
+[[file:201301ad-1903006434N_C.png]]
+[[file:201301ad-1902566434b1z.png]]
 großes Mengenmodell:
-U = P(M), p_2^* = \begin{cases} = &\mbox{falls } X=Y \\ \subset &\mbox{falls }p_2^*=\{(X,Y)\in P(M)\times P(M): X \subsetY \end{cases}
-\alpha^{\wedge}p_mt_1...t_m = \begin{cases} 0 &\mbox{falls } (\alpha^{\vee}t_1,...,\alpha^{\vee}t_m) \not \in p_m^* \\ 0 &\mbox{falls} (\alpha^{\vee}t_1,...,\alpha^{\vee}t_m) \in p^*_m \end{cases}
-\alpha^{\wedge}(A\wedge B) = (\alpha^{\wedge}A)*(\alpha^{\wedge}B)
-\alpha^{\wedge}(A\vee B) = max(\alpha^{\wedge}A,\alpha^{\wedge}B)
-\alpha^{\wedge}(A\rightarrow B) = max(1-\alpha^{\wedge}A,\alpha^{\wedge}B)
-\alpha^u_xy = \begin{cases} \alpha y &\mbox{falls } y \not = x \\ u &\mbox{sonst} \end{cases}
 
+[[file:201301ad-1902486434Ort.png]]
+
+[[file:201301ad-1902446434Bhn.png]]
+[[file:201301ad-19024064340Wh.png]]
+[[file:201301ad-1902366434nMb.png]]
+[[file:201301ad-1901536434aCV.png]]
+[[file:201301ad-1901496434N4O.png]]
 
 ** Zettel-08
 *** Dateien
@@ -1251,6 +1454,7 @@ jedes ideal von dem I ne echte Teilmenge, ist
 
 ** Zettel-09
 *** Musterlösung Zettel 09
+**** header
 #+BEGIN_SRC latex :tangle muster09.tex
   \documentclass[11pt]{amsart}
   \usepackage[utf8]{inputenc}
@@ -1281,7 +1485,6 @@ jedes ideal von dem I ne echte Teilmenge, ist
   \renewcommand{\baselinestretch}{1}
   \newcommand{\words}{\Sigma^* \backslash \{\epsilon\}}
   \newcommand{\etrans}[1]{\bar{\delta}(#1)}
-  \renewcommand{\P}{\mathbb{P}}
   
   \title{Zettel 9}
   \author{Florian Lerch(2404605)}
@@ -1289,50 +1492,57 @@ jedes ideal von dem I ne echte Teilmenge, ist
   % otherwise the current date is printed 
   
   \begin{document}
-  
-  \subsection{31}
-    $A = \mathcal{P}(M), X_i \subset M, i \in I$ \\
-    Berechne: $sup_{i\in I}X_i$ und $inf_{i\in I}X_i}$\\
-    $sup X_i = \cup_{i\in I}X_i $ \\
-    $X_i \leq \cup_{i\in I}X_i$ Sei $B \subset M \\
-    \mbox{ eine Menge mit } X_i \leq B \forall i \in I \\
-    d.h. X_i \subset B \mbox{ für alle } i \in I \\
-    \mbox{ dann gilt } \cup_{i \in I}X\i \subset B \\
-    \%box{ Also } \cup_{i\in I}X_I \mbox{ ist das Supremum } \\
-    \mbox{ für das Infinum: } \\
-    inf_{i \in I} X_i = \cap_{i \in I}X_i} \\
-    \mbox{ es ist klar } \cap_{i \in I}X_i \leq X_i \\
-    \mbox{ Sei } C \subset M \mbox{ eine Menge mit } \\
-    C \leq X_i \forall i \in I, \mbox{ das bedeutet } \\
-    C < X_i \forall i \in I \mbox{ und insbesondere } \\
-    C \subset \cap_{i\in I}X_i \mbox{ also } C \ leq \cap_{i \in I} X_i \\
-    \mbox{ und } \cap_{i \in I}X_i \mbox{ ist das Infinum } $
-    \subsection{32}
-    M ist eine endliche Menge \\
-    $X_0 \overset X_1 \overset ... \overset X_n \overset ... \\
-    \mbox{ aufsteigende Fogle und } X_i \not = \emptyset \mbox{ für alle } i \in I \\
-    \mbox{ da M endlich ist } \exists x \in M \mbox{ und } k \in I \mbox{ mit } x \in X_n, \forall n \geq k \\
-    \mbox{ Eigentlich gibt es } k \in I \mbox{ mit }X_n = X_{k'} \mbox{ für alle }n\geq k' \\
-    \mbox{ Und wir wissen dass }inf_{i\inI}X_i = \cap_{i \in I}X_i = X_{k'} \not = \emptyset \\
-    \mbox{ weil die Folge absteigend ist und } [X_i \not \emptyset \forall i \in I ]$
-    \subsection{33}
-    \begin{equation}
-    t = \tilde{s_2}x_1s_2s_0x_7 
-    t' = \tilde{s_2}x_7s_2s_0x_1 
-    t'' = \tilde{s_2}s_2x_1x_7s_0 
-    \mbox{ Wir haben die Fortsetzung einer Belegung }
-    \alpha
-    \alpha^{\wedge}(t) = \alpha^{\wedge}(t)(\tilde{s_2}x_1s_2s_0x_7)
-    \mbox{ Sei }\alpha_i := \alpha(x_i)
-    = \tilde{s_2}^{*}(\alpha(x_1)s_2^*(s_0^*\alpha(x_7)))
-    = \alpha_1^{s_2^*(s_o^*\alpha_7)}= \alpha_1^{0 + \alpha_7} 
-    \alpha(t') = \alpha_7^{0+\alpha1} 
-    \alpha{t'') = (\alpha_1 + \alpha_7)^0 
-    b) \alpha^{\wedge}(t) = \alpha_1^{\alpha_7} = 2^{17} = 13|072 
-    \end{equation}
-  
+#+END_SRC
+
+**** content   
+#+BEGIN_SRC latex :tangle muster09.tex
+\subsection*{test}
+\subsection*{31}
+    \(A = \mathcal{P}(M), X_i \subset M, i \in I\) \\
+    Berechne: \(sup_{i\in I}X_i\) und \(inf_{i\in I}X_i\) \\
+    \(sup X_i = \cup_{i\in I}X_i \) \\
+    \(X_i \leq \cup_{i\in I}X_i\) Sei \(B \subset M \)\\
+    \(\mbox{ eine Menge mit } X_i \leq B \forall i \in I\) \\
+    \(d.h. X_i \subset B \mbox{ für alle } i \in I \)\\
+    \(\mbox{ dann gilt } \cup_{i \in I}X\i \subset B \)\\
+    \(\mbox{ Also } \cup_{i\in I}X_I \mbox{ ist das Supremum } \)\\
+    \(\mbox{ für das Infinum: } \)\\
+    \(inf_{i \in I} X_i = \cap_{i \in I}X_i \)\\
+    \(\mbox{ es ist klar } \cap_{i \in I}X_i \leq X_i \)\\
+    \(\mbox{ Sei } C \subset M \mbox{ eine Menge mit }\) \\
+    \( C \leq X_i \forall i \in I, \mbox{ das bedeutet }\) \\
+    \( C < X_i \forall i \in I \mbox{ und insbesondere }\) \\
+\(    C \subset \cap_{i\in I}X_i \mbox{ also } C \ leq \cap_{i \in I} X_i \)\\
+\(    \mbox{ und } \cap_{i \in I}X_i \mbox{ ist das Infinum } \)
+    \subsection*{32}
+\(    \mbox{ M ist eine endliche Menge } \) \\
+\(    X_0 \supset X_1 \supset ... \supset X_n \supset ... \)\\
+\(    \mbox{ aufsteigende Folge und } X_i \not = \emptyset \mbox{ für alle } i \in I \)\\
+\(    \mbox{ da M endlich ist } \exists x \in M \mbox{ und } k \in I \mbox{ mit } x \in X_n, \forall n \geq k \)\\
+\(    \mbox{ Eigentlich gibt es } k \in I \mbox{ mit }X_n = X_{k'} \mbox{ für alle }n\geq k' \)\\
+\(    \mbox{ Und wir wissen dass }inf_{i \in I} X_i = \cap_{i \in I} X_i = X_{k'} \not = \emptyset \)\\
+\(    \mbox{ weil die Folge absteigend ist und } [X_i \not \emptyset \forall i \in I ]\)
+    \subsection*{33}
+    
+\(    t = \tilde{s_2}x_1s_2s_0x_7 \) \\
+ \(   t' = \tilde{s_2}x_7s_2s_0x_1 \) \\
+\(    t'' = \tilde{s_2}s_2x_1x_7s_0 \)\\
+\(    \mbox{ Wir haben die Fortsetzung einer Belegung } \) \\
+\(    \alpha \) \\
+\(    \alpha^{\wedge}(t) = \alpha^{\wedge}(t)(\tilde{s_2}x_1s_2s_0x_7) \) \\
+\(    \mbox{ Sei }\alpha_i := \alpha(x_i) \) \\
+\(    = \tilde{s_2}^{*}(\alpha(x_1)s_2^*(s_0^*\alpha(x_7))) \) \\
+\(    = \alpha_1^{s_2^*(s_o^*\alpha_7)}= \alpha_1^{0 + \alpha_7}  \) \\
+\(    \alpha(t') = \alpha_7^{0+\alpha1}  \) \\
+\(    \alpha(t'') = (\alpha_1 + \alpha_7)^0  \) \\
+\(    b) \alpha^{\wedge}(t) = \alpha_1^{\alpha_7} = 2^{17} = 13|072  \) \\
+#+END_SRC 
+
+**** footer
+#+BEGIN_SRC latex :tangle muster09.tex
   \end{document}  
 #+END_SRC latex
+
 ** Zettel-10
 *** header
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
@@ -1378,7 +1588,7 @@ jedes ideal von dem I ne echte Teilmenge, ist
 
 *** Aufgabe 35
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
-\subsection{Aufgabe 35}
+\subsection*{Aufgabe 35}
 #+END_SRC
 
 #+Begin: aufgabenstellung 35
@@ -1387,9 +1597,9 @@ jedes ideal von dem I ne echte Teilmenge, ist
 
 **** Aufgabe a)
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
-\subsubsection{a)}
+\subsubsection*{a)}
 \( \alpha^{\vee}(t) = \{1,2,3,4,5,6,7\} \backslash ( \{1\} \backslash \{1,2,3,4,5\} \) \\
-\( = \{0,1,2,3,4,5,6,7\} \backslash \emptyset = \{1,2,3,4,5,6,7\} \) \)
+\( = \{0,1,2,3,4,5,6,7\} \backslash \emptyset = \{1,2,3,4,5,6,7\} \)
 #+END_SRC
 
 Fortsetzung sollte hier einfach ausrechnen mit "erweiterter" Funktion heißen.
@@ -1400,7 +1610,7 @@ soll hier etwas anderes als der Schnitt sein
 
 **** Aufgabe b)
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
-\subsubsection{b)}
+\subsubsection*{b)}
 \( \alpha^{\wedge}(P) \mbox{ für } p_1t \mbox{ ist } 1\) bzw. wahr da \( | \{0,1,2,3,4,5,6,7\} | \leq 100 \) \\
 \( \alpha^{\wedge}(P) \mbox{ für } \tilde{p}_1t \mbox{ ist } 1\) bzw. wahr da \( | \{0,1,2,3,4,5,6,7\} | = 8\) und 8 ist gerade \\
 #+END_SRC
@@ -1409,7 +1619,7 @@ Wenn Element der Menge dann wahr, sonst Falsch.
 {0,1,...,7} => |av(t)| = 8 => a^(p-_1t) = wahr
 **** Aufgabe c)
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
-\subsubsection{c)}
+\subsubsection*{c)}
 \( \alpha^{\wedge}(A) \mbox{ für } A = \bigwedge_{x_5}p_1t \mbox{ ist wahr} \)
 #+END_SRC
 Auf jeden Fall ändern bedeutungslose quantoren nichts an der AUssage
@@ -1425,7 +1635,7 @@ Daher sollte hier alles aus dem Universum möglich sein.
 Aussage bleibt aber wahr, da ja beim Schnitt alles verschwindet.
 **** Aufgabe d)
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
-\subsubsection{d)}
+\subsubsection*{d)}
 \( \alpha^{\wedge}(B) \mbox{ für } B = (\bigwedge_{x_5}p_1t)\wedge(\bigvee_{x_4}\tilde{p}_1t) \) ist 1 bzw. wahr.
 #+END_SRC
 Die linke Seite ist wahr wie in C. Auf der rechten Seite ändert sich schon
@@ -1434,36 +1644,43 @@ werden können. Rechts bleibt also auch wahr. Beides zusammen also ebenfalls
 wahr.
 *** Aufgabe 36
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
-\subsection{Aufgabe 36}
+\subsection*{Aufgabe 36}
 #+END_SRC
 
 #+Begin: aufgabenstellung 36
 [[/home/florian/Zettelkasten/zettelkasten.org_20130111_190207_2159oOl.png]]
+
+Korrigierte Fassung:
+[[/home/florian/Zettelkasten/zettelkasten.org_20130116_191127_6434nTP-0.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130116_191127_6434nTP-1.png]]
+
 #+End:
 
 **** Aufgabe a)
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
-\subsubsection{a)}
+\subsubsection*{a)}
 \( \alpha^{\wedge}(t) =  5*4^2*3^2 = 720 \)
 #+END_SRC
 5 16 9 * *
 = 720
 **** Aufgabe b)
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
-\subsubsection{b)}
-\( a^{\wedge}(P) \) = falsch bzw. 0, da nur ein Term vorhanden ist, $p_2$ aber 2 stellig ist
+\subsubsection*{b)}
+\( a^{\wedge}(P) = 1 \mbox{ bzw. wahr da } (2 * 5) < (5 * 4^2 * 3^2) \Leftrightarrow 10 < 720 \)
 #+END_SRC
-Falsch da 2 stelliges Prädikat und nur ein term vorhanden
+Falsch da 2 stelliges Prädikat und nur ein Term vorhanden
 Außerdem gibt es keine (m,n) in N , dass wäre N^2
 Unter Umständen soll das Ergebnis auch ne Menge sein.
 Da m und n kein Input für den Term sind, eher nicht.
 
+Nun 2 Terme. 
 **** Aufgabe c)
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
-\subsubsection{c)}
-Sei \( x_4 = 1 \Rightarrow (2*x_3 < 5*x_3) \) gilt für alle \(x_3 \in \mathbb{N}\) 
-also \( \alpha^{\wedge} = 1\) bzw. wahr
+\subsubsection*{c)}
+Sei \( x_3 = 0 \Rightarrow \alpha^{\vee}(t) = 0 \Rightarrow\mbox{ es existiert kein } m \in \mathbb{N} 
+\mbox{ so dass gilt: } (2m < 0) \Rightarrow \alpha^{\vee}(A) = 0  \)
 #+END_SRC
+Für ein x_4 und alle x_3
 Müsste dann ja auch immer falsch sein.
 Aber d dann auch, und das wäre zu simpel.
 x3 vielleicht als Eingabe für p2t ? Falls es ne Eigabe für m ist:
@@ -1472,9 +1689,9 @@ gilt: (2 * x3 < 5*x4*x3)
 Sei x4 = 1 => (2*x3 < 5*x3) gilt für alles x3 also wahr
 **** Aufgabe d)
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
-\subsubsection{d)}
-Sei \( x_3 = 0 \Rightarrow (2*x_4 < 0) \Rightarrow \) Es existiert kein \( x_4 \in \mathbb{N} \) so das gilt: \( 2*x < 0 \) \\
-\( \Rightarrow \( \alpha^{\wedge} = 0\) bzw. falsh
+\subsubsection*{d)}
+Es gilt die selbe Begründung wie schon in c), also $\alpha^{\vee}(B) = 0$, da es in jedem Fall
+ein $x_3 \in \mathbb{N}$ gibt, so dass die Aussage falsch ist.
 #+END_SRC
 Für alle x3 gibt es ein x4 so dass gilt: (2*x4 < 5*x3*x4) 
 Sei x3=0 => (2*x4 < 0) => existiert kein x4 das *echt* kleiner ist
@@ -1562,6 +1779,8 @@ Comedy-Urgesteine in weiteren Hauptrollen zu sehen. (BL)
 
 [[file:~/.jdownloader/downloads/Ottos.Eleven.German.2010.DVDRip.XviD-GMA.avi][ansehen]]
 
+* Geschenke
+** Reiskocher
 * Notes
   *Shell Command Output*
 (lgrep "-key" "/home/florian/.emacs")

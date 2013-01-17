@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Übung 10</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="Übung 10"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2013-01-17 Do"/>
+<meta name="author" content="florian,waldemar,rene"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">Übung 10</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Aufgabe a</a>
+<ul>
+<li><a href="#sec-1-1">1.1 Fehler 1</a>
+<ul>
+<li><a href="#sec-1-1-1">1.1.1 Fehlermeldung</a></li>
+<li><a href="#sec-1-1-2">1.1.2 Beschreibung</a></li>
+<li><a href="#sec-1-1-3">1.1.3 Erkennung</a></li>
+<li><a href="#sec-1-1-4">1.1.4 Korrektur</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-2">1.2 Fehler 2</a>
+<ul>
+<li><a href="#sec-1-2-1">1.2.1 Fehlermeldung</a></li>
+<li><a href="#sec-1-2-2">1.2.2 Beschreibung</a></li>
+<li><a href="#sec-1-2-3">1.2.3 Erkennung</a></li>
+<li><a href="#sec-1-2-4">1.2.4 Korrektur</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-3">1.3 Fehler 3</a>
+<ul>
+<li><a href="#sec-1-3-1">1.3.1 Fehlermeldung</a></li>
+<li><a href="#sec-1-3-2">1.3.2 Beschreibung</a></li>
+<li><a href="#sec-1-3-3">1.3.3 Erkennung</a></li>
+<li><a href="#sec-1-3-4">1.3.4 Korrektur</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-4">1.4 Fehler 4</a>
+<ul>
+<li><a href="#sec-1-4-1">1.4.1 Fehlermeldung</a></li>
+<li><a href="#sec-1-4-2">1.4.2 Beschreibung</a></li>
+<li><a href="#sec-1-4-3">1.4.3 Erkennung</a></li>
+<li><a href="#sec-1-4-4">1.4.4 Korrektur</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-5">1.5 Fehler 5</a>
+<ul>
+<li><a href="#sec-1-5-1">1.5.1 Fehlermeldung</a></li>
+<li><a href="#sec-1-5-2">1.5.2 Beschreibung</a></li>
+<li><a href="#sec-1-5-3">1.5.3 Erkennung</a></li>
+<li><a href="#sec-1-5-4">1.5.4 Korrektur</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-6">1.6 Fehler 7</a>
+<ul>
+<li><a href="#sec-1-6-1">1.6.1 Fehlermeldung</a></li>
+<li><a href="#sec-1-6-2">1.6.2 Beschreibung</a></li>
+<li><a href="#sec-1-6-3">1.6.3 Erkennung</a></li>
+<li><a href="#sec-1-6-4">1.6.4 Korrektur</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-7">1.7 Fehler 8</a>
+<ul>
+<li><a href="#sec-1-7-1">1.7.1 Fehlermeldung</a></li>
+<li><a href="#sec-1-7-2">1.7.2 Beschreibung</a></li>
+<li><a href="#sec-1-7-3">1.7.3 Erkennung</a></li>
+<li><a href="#sec-1-7-4">1.7.4 Korrektur</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-8">1.8 Fehler 9</a>
+<ul>
+<li><a href="#sec-1-8-1">1.8.1 Fehlermeldung</a></li>
+<li><a href="#sec-1-8-2">1.8.2 Beschreibung</a></li>
+<li><a href="#sec-1-8-3">1.8.3 Erkennung</a></li>
+<li><a href="#sec-1-8-4">1.8.4 Korrektur</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-9">1.9 Fehler 10</a>
+<ul>
+<li><a href="#sec-1-9-1">1.9.1 Fehlermeldung</a></li>
+<li><a href="#sec-1-9-2">1.9.2 Beschreibung</a></li>
+<li><a href="#sec-1-9-3">1.9.3 Erkennung</a></li>
+<li><a href="#sec-1-9-4">1.9.4 Korrektur</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-10">1.10 Fehler 11</a>
+<ul>
+<li><a href="#sec-1-10-1">1.10.1 Fehlermeldung</a></li>
+<li><a href="#sec-1-10-2">1.10.2 Beschreibung</a></li>
+<li><a href="#sec-1-10-3">1.10.3 Erkennung</a></li>
+<li><a href="#sec-1-10-4">1.10.4 Korrektur</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-11">1.11 Fehler 12</a>
+<ul>
+<li><a href="#sec-1-11-1">1.11.1 Fehlermeldung</a></li>
+<li><a href="#sec-1-11-2">1.11.2 Beschreibung</a></li>
+<li><a href="#sec-1-11-3">1.11.3 Erkennung</a></li>
+<li><a href="#sec-1-11-4">1.11.4 Korrektur</a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="#sec-2">2 Aufgabe b</a>
+<ul>
+<li><a href="#sec-2-1">2.1 Arten von Tests</a>
+<ul>
+<li><a href="#sec-2-1-1">2.1.1 Blackbox Testing</a></li>
+<li><a href="#sec-2-1-2">2.1.2 Whitebox Testing</a></li>
+<li><a href="#sec-2-1-3">2.1.3 Unit Tests</a></li>
+<li><a href="#sec-2-1-4">2.1.4 Integration Testing</a></li>
+<li><a href="#sec-2-1-5">2.1.5 System Test</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-2">2.2 Ist ein Garantie für Fehlerfreiheit möglich?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Aufgabe a</h2>
+<div class="outline-text-2" id="text-1">
+
+
+</div>
+
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Fehler 1</h3>
+<div class="outline-text-3" id="text-1-1">
+
+
+</div>
+
+<div id="outline-container-1-1-1" class="outline-4">
+<h4 id="sec-1-1-1"><span class="section-number-4">1.1.1</span> Fehlermeldung</h4>
+<div class="outline-text-4" id="text-1-1-1">
+
+<p>Class defines equals() and uses Object.hashCode() 
+Datei: Card und Cardvector
+</p></div>
+
+</div>
+
+<div id="outline-container-1-1-2" class="outline-4">
+<h4 id="sec-1-1-2"><span class="section-number-4">1.1.2</span> Beschreibung</h4>
+<div class="outline-text-4" id="text-1-1-2">
+
+<p>Die equals Methode wird durch die Klasse überschrieben, die hashCode
+Methode jedoch nicht. Da beim vergleichen von Klasseninstanzen aber
+die Hashcodes benutzt werden, welche nun aber bei gleichheit nicht 
+den selben Hashcode haben werden. 
+</p></div>
+
+</div>
+
+<div id="outline-container-1-1-3" class="outline-4">
+<h4 id="sec-1-1-3"><span class="section-number-4">1.1.3</span> Erkennung</h4>
+<div class="outline-text-4" id="text-1-1-3">
+
+<p>Suche nach Klassen die die equalsmethode aber nicht die hashcode
+Methode enthalten.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-1-4" class="outline-4">
+<h4 id="sec-1-1-4"><span class="section-number-4">1.1.4</span> Korrektur</h4>
+<div class="outline-text-4" id="text-1-1-4">
+
+<p>Die jetzige equals Methode umbenennen zu Compare oder ähnlichem.
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Fehler 2</h3>
+<div class="outline-text-3" id="text-1-2">
+
+
+</div>
+
+<div id="outline-container-1-2-1" class="outline-4">
+<h4 id="sec-1-2-1"><span class="section-number-4">1.2.1</span> Fehlermeldung</h4>
+<div class="outline-text-4" id="text-1-2-1">
+
+<p>Comparison of String objects using == or != in jskat.gui.main.ScoreTableModel.update(Observable, Object) 
+</p></div>
+
+</div>
+
+<div id="outline-container-1-2-2" class="outline-4">
+<h4 id="sec-1-2-2"><span class="section-number-4">1.2.2</span> Beschreibung</h4>
+<div class="outline-text-4" id="text-1-2-2">
+
+<p>Beim vergleichen mit == oder != werden die Hashcodes verglichen. Diese sind bei inhaltlich identischen 
+Strings zwar meistens, aber nicht immer gleich.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-2-3" class="outline-4">
+<h4 id="sec-1-2-3"><span class="section-number-4">1.2.3</span> Erkennung</h4>
+<div class="outline-text-4" id="text-1-2-3">
+
+<p>Nach variablen vom Typ String suchen, welche mit '==' oder '!=' verglichen werden.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-2-4" class="outline-4">
+<h4 id="sec-1-2-4"><span class="section-number-4">1.2.4</span> Korrektur</h4>
+<div class="outline-text-4" id="text-1-2-4">
+
+<p>Statt dessen benutzt man die equals Methode der Stringklasse.
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> Fehler 3</h3>
+<div class="outline-text-3" id="text-1-3">
+
+
+</div>
+
+<div id="outline-container-1-3-1" class="outline-4">
+<h4 id="sec-1-3-1"><span class="section-number-4">1.3.1</span> Fehlermeldung</h4>
+<div class="outline-text-4" id="text-1-3-1">
+
+<p>Switch statement found in jskat.control.SkatGame.playing(GameAnnouncement) where one case falls through to the next case
+</p></div>
+
+</div>
+
+<div id="outline-container-1-3-2" class="outline-4">
+<h4 id="sec-1-3-2"><span class="section-number-4">1.3.2</span> Beschreibung</h4>
+<div class="outline-text-4" id="text-1-3-2">
+
+<p>Sobald in einer Switch-Case Struktur eines der Cases zutrifft, wird automatisch alles weitere ausgeführt,
+also auch alle dahinter liegenden case Fälle. Aus diesem Grund beendet man die Ausführungsblöcke mit break
+</p></div>
+
+</div>
+
+<div id="outline-container-1-3-3" class="outline-4">
+<h4 id="sec-1-3-3"><span class="section-number-4">1.3.3</span> Erkennung</h4>
+<div class="outline-text-4" id="text-1-3-3">
+
+<p>Nach case blöcken suchen, auf die ein weiteres case oder default folgt, ohne ein break dazwischen.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-3-4" class="outline-4">
+<h4 id="sec-1-3-4"><span class="section-number-4">1.3.4</span> Korrektur</h4>
+<div class="outline-text-4" id="text-1-3-4">
+
+<p>Man beendet den Ausführungsblock mit break.
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> Fehler 4</h3>
+<div class="outline-text-3" id="text-1-4">
+
+
+</div>
+
+<div id="outline-container-1-4-1" class="outline-4">
+<h4 id="sec-1-4-1"><span class="section-number-4">1.4.1</span> Fehlermeldung</h4>
+<div class="outline-text-4" id="text-1-4-1">
+
+<p>jskat.share.CardVector.equals(Object) does not check for null argument
+</p></div>
+
+</div>
+
+<div id="outline-container-1-4-2" class="outline-4">
+<h4 id="sec-1-4-2"><span class="section-number-4">1.4.2</span> Beschreibung</h4>
+<div class="outline-text-4" id="text-1-4-2">
+
+<p>Die überschriebene neue Equalsmethode prüft nicht nach Nullobjekten, was aber Standardgemäß 
+jede solche Funktion in java tun sollte. Das muss nicht zwangsläufig zu Fehlern führen,
+erfüllt aber eben nicht den Standard.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-4-3" class="outline-4">
+<h4 id="sec-1-4-3"><span class="section-number-4">1.4.3</span> Erkennung</h4>
+<div class="outline-text-4" id="text-1-4-3">
+
+<p>Suche nach überschriebenen equal Methoden in Klassen und suche am Anfang nach einer
+If-Anweisung oder Ähnlichem, das auf Nullelemente prüft.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-4-4" class="outline-4">
+<h4 id="sec-1-4-4"><span class="section-number-4">1.4.4</span> Korrektur</h4>
+<div class="outline-text-4" id="text-1-4-4">
+
+<p>Man benennt die - dann nicht mehr - überschriebene Equals methode um in compare oder ähnliches.
+In jedem Fall sollte man die Elemente trotzdem am Anfang der Methode auf Inhalt prüfen.
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-1-5" class="outline-3">
+<h3 id="sec-1-5"><span class="section-number-3">1.5</span> Fehler 5</h3>
+<div class="outline-text-3" id="text-1-5">
+
+
+</div>
+
+<div id="outline-container-1-5-1" class="outline-4">
+<h4 id="sec-1-5-1"><span class="section-number-4">1.5.1</span> Fehlermeldung</h4>
+<div class="outline-text-4" id="text-1-5-1">
+
+<p>Impossible downcast from javax.swing.JPanel to jskat.gui.main.CardHoldingPanel in jskat.gui.main.JSkatPlayArea.getCardHoldingPanel(int)
+</p></div>
+
+</div>
+
+<div id="outline-container-1-5-2" class="outline-4">
+<h4 id="sec-1-5-2"><span class="section-number-4">1.5.2</span> Beschreibung</h4>
+<div class="outline-text-4" id="text-1-5-2">
+
+<p>Die Instanzen der Klasse JPanel lassen sich nicht automatisch zur Klasse CardHoldingPanel konvertieren.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-5-3" class="outline-4">
+<h4 id="sec-1-5-3"><span class="section-number-4">1.5.3</span> Erkennung</h4>
+<div class="outline-text-4" id="text-1-5-3">
+
+<p>Suche nach Castings, in welchen die einzelnen Klassen nicht miteinander zusammenhängen, z.B. durch
+Ableitungsstrukturen.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-5-4" class="outline-4">
+<h4 id="sec-1-5-4"><span class="section-number-4">1.5.4</span> Korrektur</h4>
+<div class="outline-text-4" id="text-1-5-4">
+
+<p>Statt eine Instanz vom Typ JPanel zu erstellen und diese dann direkt explizit zu casten, könnte man
+gleich eine Instanz von CarHoldingPanel erstellen.
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-1-6" class="outline-3">
+<h3 id="sec-1-6"><span class="section-number-3">1.6</span> Fehler 7</h3>
+<div class="outline-text-3" id="text-1-6">
+
+
+</div>
+
+<div id="outline-container-1-6-1" class="outline-4">
+<h4 id="sec-1-6-1"><span class="section-number-4">1.6.1</span> Fehlermeldung</h4>
+<div class="outline-text-4" id="text-1-6-1">
+
+<p>Incorrect lazy initialization of static field jskat.control.BiddingThread.myself in jskat.control.BiddingThread.getInstance(JSkatDataModel, SkatGame, int[])
+</p></div>
+
+</div>
+
+<div id="outline-container-1-6-2" class="outline-4">
+<h4 id="sec-1-6-2"><span class="section-number-4">1.6.2</span> Beschreibung</h4>
+<div class="outline-text-4" id="text-1-6-2">
+
+<p>Das Attribut myself wurde nirgendwo deklariert.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-6-3" class="outline-4">
+<h4 id="sec-1-6-3"><span class="section-number-4">1.6.3</span> Erkennung</h4>
+<div class="outline-text-4" id="text-1-6-3">
+
+<p>Suche nach verwendeten Variablen ohne deklaration dazu.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-6-4" class="outline-4">
+<h4 id="sec-1-6-4"><span class="section-number-4">1.6.4</span> Korrektur</h4>
+<div class="outline-text-4" id="text-1-6-4">
+
+<p>Statt myself könnte man this verwenden.
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-1-7" class="outline-3">
+<h3 id="sec-1-7"><span class="section-number-3">1.7</span> Fehler 8</h3>
+<div class="outline-text-3" id="text-1-7">
+
+
+</div>
+
+<div id="outline-container-1-7-1" class="outline-4">
+<h4 id="sec-1-7-1"><span class="section-number-4">1.7.1</span> Fehlermeldung</h4>
+<div class="outline-text-4" id="text-1-7-1">
+
+<p>Value of gameTypeText from previous case is overwritten here due to switch statement fall through
+</p></div>
+
+</div>
+
+<div id="outline-container-1-7-2" class="outline-4">
+<h4 id="sec-1-7-2"><span class="section-number-4">1.7.2</span> Beschreibung</h4>
+<div class="outline-text-4" id="text-1-7-2">
+
+<p>Aufgrund der mangelnden Breaks in Fehler 3, wird die selbe Variable immer wieder überschrieben.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-7-3" class="outline-4">
+<h4 id="sec-1-7-3"><span class="section-number-4">1.7.3</span> Erkennung</h4>
+<div class="outline-text-4" id="text-1-7-3">
+
+<p>Suche nach Fehler 3 und dort dann mehrfachen Zuweisungen zu einer Variable in mehreren Case Blöcken.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-7-4" class="outline-4">
+<h4 id="sec-1-7-4"><span class="section-number-4">1.7.4</span> Korrektur</h4>
+<div class="outline-text-4" id="text-1-7-4">
+
+<p>Fehler 3 beheben.
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-1-8" class="outline-3">
+<h3 id="sec-1-8"><span class="section-number-3">1.8</span> Fehler 9</h3>
+<div class="outline-text-3" id="text-1-8">
+
+
+</div>
+
+<div id="outline-container-1-8-1" class="outline-4">
+<h4 id="sec-1-8-1"><span class="section-number-4">1.8.1</span> Fehlermeldung</h4>
+<div class="outline-text-4" id="text-1-8-1">
+
+<p>Unwritten field: jskat.gui.main.JSkatTableActions.newSkatRoundDialogAction
+</p></div>
+
+</div>
+
+<div id="outline-container-1-8-2" class="outline-4">
+<h4 id="sec-1-8-2"><span class="section-number-4">1.8.2</span> Beschreibung</h4>
+<div class="outline-text-4" id="text-1-8-2">
+
+<p>Das Attribut das zurückgegeben wird, existiert gar nicht.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-8-3" class="outline-4">
+<h4 id="sec-1-8-3"><span class="section-number-4">1.8.3</span> Erkennung</h4>
+<div class="outline-text-4" id="text-1-8-3">
+
+<p>Suche nach return Anweisungen in denen Variablen zurückgegen werden, die nirgendwo sonst benutzt / deklariert werden.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-8-4" class="outline-4">
+<h4 id="sec-1-8-4"><span class="section-number-4">1.8.4</span> Korrektur</h4>
+<div class="outline-text-4" id="text-1-8-4">
+
+<p>Den Konstruktor der Klasse aufrufen und somit eine Instanz erstellen.
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-1-9" class="outline-3">
+<h3 id="sec-1-9"><span class="section-number-3">1.9</span> Fehler 10</h3>
+<div class="outline-text-3" id="text-1-9">
+
+
+</div>
+
+<div id="outline-container-1-9-1" class="outline-4">
+<h4 id="sec-1-9-1"><span class="section-number-4">1.9.1</span> Fehlermeldung</h4>
+<div class="outline-text-4" id="text-1-9-1">
+
+<p>jskat.share.Card doesn't define a hashCode() method but is used in a hashed data structure in jskat.test.share.TestHelper.convertCardsToHashSet(CardVector)
+</p></div>
+
+</div>
+
+<div id="outline-container-1-9-2" class="outline-4">
+<h4 id="sec-1-9-2"><span class="section-number-4">1.9.2</span> Beschreibung</h4>
+<div class="outline-text-4" id="text-1-9-2">
+
+<p>Damit die Instanzen eine Klasse in einem HashSet verwendet werden können, muss die Klasse eine passende HashCode Methoe definieren.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-9-3" class="outline-4">
+<h4 id="sec-1-9-3"><span class="section-number-4">1.9.3</span> Erkennung</h4>
+<div class="outline-text-4" id="text-1-9-3">
+
+<p>Nach HashSets und deren .add Anweisungen etc. suchen. Die Typen der Variablen dort
+auf das vorhandensein einer hashCode Methode prüfen
+</p></div>
+
+</div>
+
+<div id="outline-container-1-9-4" class="outline-4">
+<h4 id="sec-1-9-4"><span class="section-number-4">1.9.4</span> Korrektur</h4>
+<div class="outline-text-4" id="text-1-9-4">
+
+<p>Wenn die equals Methode wie in Fehler 4 umbenannt wird, muss auch keine eigene HashMethode mehr definiert werden.
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-1-10" class="outline-3">
+<h3 id="sec-1-10"><span class="section-number-3">1.10</span> Fehler 11</h3>
+<div class="outline-text-3" id="text-1-10">
+
+
+</div>
+
+<div id="outline-container-1-10-1" class="outline-4">
+<h4 id="sec-1-10-1"><span class="section-number-4">1.10.1</span> Fehlermeldung</h4>
+<div class="outline-text-4" id="text-1-10-1">
+
+<p>Wait not in loop in jskat.control.BiddingThread.waitMe()
+Wait not in loop in jskat.control.SchieberRamschThread.waitMe()
+</p></div>
+
+</div>
+
+<div id="outline-container-1-10-2" class="outline-4">
+<h4 id="sec-1-10-2"><span class="section-number-4">1.10.2</span> Beschreibung</h4>
+<div class="outline-text-4" id="text-1-10-2">
+
+<p>Die wait Methode muss in einer synchronen Schleife stecken.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-10-3" class="outline-4">
+<h4 id="sec-1-10-3"><span class="section-number-4">1.10.3</span> Erkennung</h4>
+<div class="outline-text-4" id="text-1-10-3">
+
+<p>Suche nach weit aufrufen und prüfe dann, ob diese sich in einer Schleife befinden.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-10-4" class="outline-4">
+<h4 id="sec-1-10-4"><span class="section-number-4">1.10.4</span> Korrektur</h4>
+<div class="outline-text-4" id="text-1-10-4">
+
+<p>Statt wait einfach sleep benutzen, da sowieso nur auf Exceptions gewartet wird.
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-1-11" class="outline-3">
+<h3 id="sec-1-11"><span class="section-number-3">1.11</span> Fehler 12</h3>
+<div class="outline-text-3" id="text-1-11">
+
+
+</div>
+
+<div id="outline-container-1-11-1" class="outline-4">
+<h4 id="sec-1-11-1"><span class="section-number-4">1.11.1</span> Fehlermeldung</h4>
+<div class="outline-text-4" id="text-1-11-1">
+
+<p>Write to static field jskat.control.SkatTable.jskatStrings from instance method new jskat.control.SkatTable(JSkatDataModel)
+</p></div>
+
+</div>
+
+<div id="outline-container-1-11-2" class="outline-4">
+<h4 id="sec-1-11-2"><span class="section-number-4">1.11.2</span> Beschreibung</h4>
+<div class="outline-text-4" id="text-1-11-2">
+
+<p>Es wird ein statisches Attribut durch eine Klasseninstanz überschrieben.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-11-3" class="outline-4">
+<h4 id="sec-1-11-3"><span class="section-number-4">1.11.3</span> Erkennung</h4>
+<div class="outline-text-4" id="text-1-11-3">
+
+<p>Suche nach Instanziierungen von Klassen und prüfe bei allen Attributszuweisungen,
+ob diese als statisch definiert wurden.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-11-4" class="outline-4">
+<h4 id="sec-1-11-4"><span class="section-number-4">1.11.4</span> Korrektur</h4>
+<div class="outline-text-4" id="text-1-11-4">
+
+<p>jskatStrings nicht mehr statisch machen, so dass jede Instanz einige eigene 
+Instanz dieses Attributs bekommt.
+</p></div>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Aufgabe b</h2>
+<div class="outline-text-2" id="text-2">
+
+
+</div>
+
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Arten von Tests</h3>
+<div class="outline-text-3" id="text-2-1">
+
+
+</div>
+
+<div id="outline-container-2-1-1" class="outline-4">
+<h4 id="sec-2-1-1"><span class="section-number-4">2.1.1</span> Blackbox Testing</h4>
+<div class="outline-text-4" id="text-2-1-1">
+
+<p>Man testes alle Möglichkeiten, das Programm zu bedienen (also Userinputs und alle möglichen Konfigarutionen und Szenarien&hellip;)
+ohne dabei den eigentlichen Quellcode zu betrachten. Der Vorteil liegt darin, dass man vom Quellcode nicht abgelenkt ist und
+das Programm wirklich aus der Perspektive des späteren Benutzers sieht. So kann man z.B. auch schell und Effizient Leute testen lassen
+die gar nicht selber am Code mitgewirkt haben bzw. ihn überhaupt verstehen.
+Der Nachteil dabei ist aber, dass man auch nicht gezielt nach möglichen Extremfällen und somit potenziellen Fehlern im Code suchen kann.
+</p></div>
+
+</div>
+
+<div id="outline-container-2-1-2" class="outline-4">
+<h4 id="sec-2-1-2"><span class="section-number-4">2.1.2</span> Whitebox Testing</h4>
+<div class="outline-text-4" id="text-2-1-2">
+
+<p>Man betrachtet den Code und versucht anhand des Codes systematisch alles durchzutesten.
+Dabei kann man sich z.B. Funktionsweise vorarbeiten und genau prüfen, ob alle Funktionsblöcke beim bisherigen testen schon vorkamen.
+Der Vorteil dabei liegt natürlich darin, dass man so wesentlich eher Fehlerursachen unmittelbar erkennen kann, als beim Blackbox testing.
+Der Nachteil ist aber, dass man schnell "Betriebsblind" wird und die verwendeten Systeme im Grunde auch nie absolut jedes Szenario erfassen
+können, man sich aber fälschlicherweise genau darauf verlassen könnte.
+</p></div>
+
+</div>
+
+<div id="outline-container-2-1-3" class="outline-4">
+<h4 id="sec-2-1-3"><span class="section-number-4">2.1.3</span> Unit Tests</h4>
+<div class="outline-text-4" id="text-2-1-3">
+
+<p>Der Code wird in einzelne Blöcke / Module / Funktionen /&hellip; geteilt. Diese "Units" werden dann in einer Testroutine aufgerufen, 
+welche zunächst eine Testumgebung initialisiert und dann die einzelnen Units mit vom Programmierer bestimmten Werten aufruft und
+und anschließend vergleicht, ob das Ergebnis richtig ist, wobei der Programmierer vorher den erwarteten Wert angibt.
+Der Vorteil liegt darin, dass dieser Prozess weitestgehend automatisch ablaufen kann. Dies Testroutinen müssen nur einmal geschrieben werden
+und sind in der Regel universell genug, dass sie auch bei änderungen des Methodeninhaltes, selbst nicht verändert werden müssen.
+Statt dessen können sie während des gesamten Entwicklungsprozesses beibehalten werden. Ein weiterer Vorteil liegt darin, dass jeden Programmierer
+seine eigenen Unit Tests für seine eigenen Module schreiben kann und nicht ein einzelner, alles testen muss. Außerdem lässt sich im Fehlerfall
+ziemlich genau bestimmen, wo der Fehler entstanden ist.
+Ein Nachteil ist, dass diese Unittests nur die UseCases abdecken, die dem Programmierer bei der Erstellung des jeweiligen Tests eingefallen sind.
+Häufig entstehen Fehler aber gerade durch das zusammenwirken vieler unterschiedlicher Methoden, was meistens nur schlecht durch Unittests abgedeckt wird,
+auch wenn es natürlich möglich ist.
+</p></div>
+
+</div>
+
+<div id="outline-container-2-1-4" class="outline-4">
+<h4 id="sec-2-1-4"><span class="section-number-4">2.1.4</span> Integration Testing</h4>
+<div class="outline-text-4" id="text-2-1-4">
+
+<p>Eine bestimmte Anwendung des Blackboxmodells, bei dem man versucht, Gruppen einzelner Module zu bilden und diese einzeln zu testen.
+Nachteile sind die selben wie beim generellen Backboxing. Ein Vorteil dabei ist jedoch, das es wesentlich eher ein systematisches
+Vorgehen ermöglicht.
+</p></div>
+
+</div>
+
+<div id="outline-container-2-1-5" class="outline-4">
+<h4 id="sec-2-1-5"><span class="section-number-4">2.1.5</span> System Test</h4>
+<div class="outline-text-4" id="text-2-1-5">
+
+<p>Ebenfalls Anwendung des Blackboxmodells mit den selben Nachteilen. Hierbei versucht man aber, das System als ganzes zu testen,
+wobei man die Tests in die unterschiedlichen UseCases aufsplittet. Auch dies ermöglicht eine halbwegs systematische Vorgehensweise.
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> Ist ein Garantie für Fehlerfreiheit möglich?</h3>
+<div class="outline-text-3" id="text-2-2">
+
+<p>Nein, da auch jede systematische herangehensweise an die Testmodelle immer auch Lücken aufweisen. So hängt natürlich immer alles
+von der eigentlichen Testumgebung ab, für die man zwar versuchen kann, alle extremfälle abzudecken, aber es ist unmöglich wirklich
+jeden Fall zu finden. Vorallem können auch stets andere auf dem Computer installierte Programme Einfluss darauf nehmen oder Fehler verursachen.
+Bei Abhängigkeiten von externen Modulen besteht zum Beispiel auch stets das Risiko, dass diese geupdatet werden und das Programm somit
+nicht mehr benutzbar machen. In jedem Fall gibt es vollkommen unabhängig davon, wie vollständig und gut die Tests waren, immer einen Nutzer der 
+es schafft, einen Weg zu finden um doch alles zum Absturz zu bringen.
+</p></div>
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2013-01-17 Do</p>
+<p class="author">Author: florian,waldemar,rene</p>
+<p class="creator">Org version 7.8.11 with Emacs version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>

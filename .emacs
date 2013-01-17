@@ -5,6 +5,7 @@
 (add-to-list 'load-path "~/.emacs.d/magit/")
 (add-to-list 'load-path "~/.emacs.d/bookmark+/")
 (add-to-list 'load-path "~/.emacs.d/expand-region/")
+(add-to-list 'load-path "~/.emacs.d/slime/")
 
 (add-to-list 'load-path "~/.emacs.d/auctex/")
 (add-to-list 'load-path "~/.emacs.d/auctex/preview/")
@@ -409,3 +410,5 @@
 (require 'rainbow-delimiters)
 (global-rainbow-delimiters-mode)
 (require 'delete-pic)
+
+(require 'slime)

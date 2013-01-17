@@ -66,7 +66,7 @@ class floshot:
         
         img = ImageGrab.grab(bbox = (self.start_x,self.start_y,self.end_x,self.end_y))
         img.save(self.filename)
-        if self.end_y - self.start_y > 200:
+        if self.end_y - self.start_y > 50:
             slicing_tool.floslice(self.filename)
         
     def initialize_drawing(self):

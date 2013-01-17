@@ -38,36 +38,36 @@
 \begin{document}
 \maketitle
 
-\subsection{Aufgabe 35}
+\subsection*{Aufgabe 35}
 
-\subsubsection{a)}
+\subsubsection*{a)}
 \( \alpha^{\vee}(t) = \{1,2,3,4,5,6,7\} \backslash ( \{1\} \backslash \{1,2,3,4,5\} \) \\
-\( = \{0,1,2,3,4,5,6,7\} \backslash \emptyset = \{1,2,3,4,5,6,7\} \) \)
+\( = \{0,1,2,3,4,5,6,7\} \backslash \emptyset = \{1,2,3,4,5,6,7\} \)
 
-\subsubsection{b)}
+\subsubsection*{b)}
 \( \alpha^{\wedge}(P) \mbox{ für } p_1t \mbox{ ist } 1\) bzw. wahr da \( | \{0,1,2,3,4,5,6,7\} | \leq 100 \) \\
 \( \alpha^{\wedge}(P) \mbox{ für } \tilde{p}_1t \mbox{ ist } 1\) bzw. wahr da \( | \{0,1,2,3,4,5,6,7\} | = 8\) und 8 ist gerade \\
 
-\subsubsection{c)}
+\subsubsection*{c)}
 \( \alpha^{\wedge}(A) \mbox{ für } A = \bigwedge_{x_5}p_1t \mbox{ ist wahr} \)
 
-\subsubsection{d)}
+\subsubsection*{d)}
 \( \alpha^{\wedge}(B) \mbox{ für } B = (\bigwedge_{x_5}p_1t)\wedge(\bigvee_{x_4}\tilde{p}_1t) \) ist 1 bzw. wahr.
 
-\subsection{Aufgabe 36}
+\subsection*{Aufgabe 36}
 
-\subsubsection{a)}
-\( \alpha^{\wedge}(t) =  5*4^2*3^2 = 720 \)
+\subsubsection*{a)}
+\( \alpha^{\vee}(t) =  5*4^2*3^2 = 720 \)
 
-\subsubsection{b)}
-\( a^{\wedge}(P) \) = falsch bzw. 0, da nur ein Term vorhanden ist, $p_2$ aber 2 stellig ist
+\subsubsection*{b)}
+\( a^{\wedge}(P) = 1 \mbox{ bzw. wahr da } (2 * 5) < (5 * 4^2 * 3^2) \Leftrightarrow 10 < 720 \)
 
-\subsubsection{c)}
-Sei \( x_4 = 1 \Rightarrow (2*x_3 < 5*x_3) \) gilt für alle \(x_3 \in \mathbb{N}\) 
-also \( \alpha^{\wedge} = 1\) bzw. wahr
+\subsubsection*{c)}
+Sei \( x_3 = 0 \Rightarrow \alpha^{\wedge}(t) = 0 \Rightarrow\mbox{ es existiert kein } m \in \mathbb{N} 
+\mbox{ so dass gilt: } (2m < 0) \Rightarrow \alpha^{\wedge}(A) = 0  \)
 
-\subsubsection{d)}
-Sei \( x_3 = 0 \Rightarrow (2*x_4 < 0) \Rightarrow \) Es existiert kein \( x_4 \in \mathbb{N} \) so das gilt: \( 2*x < 0 \) \\
-\( \Rightarrow \( \alpha^{\wedge} = 0\) bzw. falsh
+\subsubsection*{d)}
+Es gilt die selbe Begründung wie schon in c), also $\alpha^{\wedge}(B) = 0$, da es in jedem Fall
+ein $x_3 \in \mathbb{N}$ gibt, so dass die Aussage falsch ist.
 
 \end{document}

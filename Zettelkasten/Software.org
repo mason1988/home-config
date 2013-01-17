@@ -212,7 +212,7 @@ http://orgmode.org/manual/Template-expansion.html#Template-expansion
 3. 1 um auf subtree export umzuschalten
 4. konkreten export aussuchen
 * Vim
-** Search/Replace                                                :shortcuts:
+** Search/Replace                                                :shortcuts
 	    =Änderungen werden komplett live gepreviewed=
 	    :bereichs/foo/bar/g  oder gc
 	    als Bereich kann man z.B. mit a',b' marker angeben
@@ -220,7 +220,7 @@ http://orgmode.org/manual/Template-expansion.html#Template-expansion
 	    Zeilennummern möglich, geht aber auch +2 = relativ zu cur-pos
 	    oder anders:
 	    :g/^test/s/foo/bar/g  nur zeilen die mit test anfangen
-	    
+	    im grunde gibt man start,end an.
 
 	    \( \) macht aus nem Bereich ne Backreferenz
 	    \1 matched die nummeriert, & matched das ganze Teil
