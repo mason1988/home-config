@@ -1,8 +1,6 @@
-
 #+LINK: zk /home/florian/Dropbox/Zettelkasten/
 #+LINK: zkp /home/florian/Dropbox/Zettelkasten/res-pic_%s.png
 #+LINK: drop /home/florian/Dropbox/%s
-a
 #+TODO: TODO | DONE
 #+TODO: CANCELED | Restarted
 #+TODO: Zettel1 Zettel2 Zettel3 Zettel4 Zettel5 Zettel6 Zettel7 Zettel8 Zettel9 Zettel10 Zettel11 Zettel12 Zettel13 Zettel14
@@ -791,6 +789,11 @@ also startzustand | "search" | replace | sprung | nächster zustand
      [[file:201301ad-1840363168BKw.png]]
      man folgert für die Lösung das ganze jeweils als Komposition, und lässt dann
      die Argumente am Ende weg
++ --> :: Partielle Abbildung, jedes Element des Urbilds wird auf max. einen Wert
+	 des Bildbereichs abgebildet, sonst nicht definiert auf Wert
++ [[file:201301ad-14251416745DYl.png]] Rekursiv :: nimmt Funktion f, und setzt Werte für den letzten Parameter ein.
+     Der "letzte" Wert nach der 0, für den das Ergebnis noch definiert ist,
+     ist das Ergebnis des Operators.
 *** Englisch
 | Deutsch                     | Englisch                     |
 |-----------------------------+------------------------------|
@@ -1001,6 +1004,9 @@ anz(6) = 2080  496
 #+END_SRC
 
 ** Zettel-11
+*** Tutorium
+- Beispel für Semantik mit Loop? (36)
+- Was spricht gegen direkte Lösung (35)
 *** header
 #+BEGIN_SRC latex :tangle th-loesung-11.tex
 \documentclass[11pt]{amsart}
@@ -1053,30 +1059,68 @@ ack(1,0) = 1
 ack (0,1) = ack(0,ack(1,0)) = 2
 ack(0,2) = 2 + 2
 noch y-1 mal wiederholen => 2*(y-1) + y => 2y
-
+[[test][file:~/Zettelkasten/zettelkasten.org::test]]
 (b)
 ack(2,y) => y mal 5. Regel => ack(1, ack(1, ..., ack(2, 0)...))
 => ack(1, z) rekursion, mit z=2 als start und das  dann y mal wiederholt
 => 2*2*2*2 (y-mal) .... = 2^y
+<<test>> 
+[[file:zettelkasten.org::subsubsection][Aufgabe 34]]
+Als induktiver Beweis: über y die einzelnen möglichkeiten zeigen
 #+BEGIN_SRC latex :tangle th-loesung-11.tex
 \subsection{Aufgabe 34}
-\subsubsection{a)}
-\subsubsection{b)}
+\subsubsection{a)}% Induktion sortieren <<FIXME th11.1>>
+Induktionsanfang(y=1): \\ %keine Ahnung
+ack(1,1) = ack(0+1,0+1) = ack(0,ack(0+1,0)) = ack(0,ack(1,0)) = ack(0,1) = 2 \\
+2*0 = 2 \\
+Induktionsvorraussetzung: \\ %glaube nicht dass das die IV ist (formal)
+ack(1,y) = 2 * y gilt für mindestens ein $y \geq 1$ \\
+Induktionsschritt: \\
+z.Z.: $ack(1,y+1) = 2*(y+1) = 2y + 2 $ \\
+$ack(1,y+1) = ack(0,ack(1,y)) =_{I.V} ack(0,2*y) = 2y+2$
+\subsubsection{b)}%FIXME wieder das gleiche
+Induktionsanfang(y=0): \\
+$ack(2,0) = ack(1+1,0) = 1$ \\
+$2^0 = 1$ \\
+Induktionsvorraussetzung(y=0): \\
+$ack(2,y) = 2^y$ gilt für mindestens ein $y \geq 0$ \\
+Induktionsschritt: \\
+z.Z.: $ack(2,y+1) \overset{!}{=} 2^{y+1} = 2^{y}*2$ \\
+$ack(2,y+1) = ack(1,ack(2,y)) =_{I.V.} ack(1,2^{y}) = 2^{y}*2$
 #+END_SRC
 *** Aufgabe 35
 #+BEGIN: aufgabe35
 [[/home/florian/Zettelkasten/zettelkasten.org_20130115_142054_167452Gr.png]]
 #+END:
-X_1 - X_2
+Gesucht ist eine 2stellige Funktion, die für gerade Werte als ersten
+Parameter nicht für 0 definiert ist und für gerade Werte bis zu dem
+Punkt definiert ist, an dem Par1 und Par2 identisch sind
+Unmittelbare Umsetzung?
+Aber was hätte das dann mit der totalen Subtraktion / Addition zu tun?
+
+Das letzte Ergebnis muss = 0 sein
+
+Bei der aktuellen Lösung wäre 0 definiert mit 0 <<FIXME th11.3>>
 #+BEGIN_SRC latex :tangle th-loesung-11.tex
-\subsection{Aufgabe 35}
+\subsection{Aufgabe 35} % <<FIXME th11.2>>
+\(h: \mathbb{N}^2 \rightarrow \mathbb{N}\) \\
+Sei \(h(a,b) := \begin{cases} 1 - \frac{a+1-b}{(a+1)-b} &\mbox{(falls } \mbox{a gerade)} \\ \mbox{nicht definiert} &\mbox{(sonst)} \end{cases}\)
 #+END_SRC
 *** Aufgabe 36
+X_1 - X_2
 #+BEGIN: aufgabe36
 [[file:zettelkasten.org_20130115_142122_16745DRx.png]]
 #+END:
+[[/home/florian/Zettelkasten/zettelkasten.org_20130116_152505_16745SAK.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130116_152639_16745sUW.png]]
+Sind beides eigentlich nur formalien ohne praktische
+Auswirkungen, im Vergleich zur normalen Semantik.
+
+[[file:201301ad-15581016745Gpi.png]]
+
 #+BEGIN_SRC latex :tangle th-loesung-11.tex
 \subsection{Aufgabe 36}
+
 #+END_SRC
 *** footer
 #+BEGIN_SRC latex :tangle th-loesung-11.tex
@@ -1236,7 +1280,13 @@ U = P(M), p_2^* = \begin{cases} = &\mbox{falls } X=Y \\ \subset &\mbox{falls }p_
 \alpha^{\wedge}(A\rightarrow B) = max(1-\alpha^{\wedge}A,\alpha^{\wedge}B)
 \alpha^u_xy = \begin{cases} \alpha y &\mbox{falls } y \not = x \\ u &\mbox{sonst} \end{cases}
 
-
+*** Jan 17
+[[file:201301ad-12241816745sbK.png]] :: auf |A| stimmen [[file:201301ad-122451167455lQ.png]] und [[file:201301ad-12250416745GwW.png]] überein, also [[file:201301ad-12255116745T6c.png]]
+_Aussagen/Prädikatenkalkül_ 0-stellige Regeln(17 Typen) + Modus Ponens + 1 stellige Regeln (substitution)
+_Substitution_ X = {x_0, x_1, ...} total geordnet, [[file:201301ad-1321045300KIS.png]] Term Belegung
+[[file:201301ad-1322135300XSY.png]] endl Teilmenge, [[file:201301ad-1322255300kce.png]] "nicht Fixpunkte"
+[[file:201301ad-1324215300L7w.png]] [[file:201301ad-13242653009EA.png]] [[file:201301ad-1324315300KPG.png]] [[file:201301ad-1324475300XZM.png]][[file:201301ad-1324545300kjS.png]] [[file:201301ad-1324585300xtY.png]]
+Variablen Substitution :: X -> X, [[file:201301ad-1333455300-3e.png]]  [[file:201301ad-1337305300YMr.png]]
 ** Zettel-08
 *** Dateien
 [[/home/florian/Dropbox/lo/lo-zettel-08.pdf::NNN][lo-zettel-08.pdf]]
