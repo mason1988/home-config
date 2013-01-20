@@ -114,9 +114,10 @@
  '(bmkp-last-as-first-bookmark-file "~/.emacs.bmk")
  '(dynamic-completion-mode t)
  '(emms-mode-line-mode-line-function (lambda nil))
+ '(emms-source-file-default-directory "/media/florian/Elements1/Musik/")
  '(helm-c-pdfgrep-default-read-command "emacsclient '%f'")
  '(helm-dired-mode t)
- '(org-agenda-files (quote ("~/Zettelkasten/zettelkasten.org")))
+ '(org-agenda-files (quote ("~/Zettelkasten/todo.org" "~/Zettelkasten/zettelkasten.org")))
  '(org-format-latex-options (quote (:foreground default :background default :scale 1.4 :html-foreground "Black" :html-background "Transparent" :html-scale 1.4 :matchers ("begin" "$1" "$" "$$" "\\(" "\\[" " $$" "$$ " " $$ " " $" "$ " " $ " "$\\" "$\\\\" "$"))))
  '(org-indirect-buffer-display (quote new-frame))
  '(org-modules (quote (org-bbdb org-bibtex org-docview org-gnus org-info org-jsinfo org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m org-annotate-file org-bookmark org-checklist org-collector org-eshell org-eval)))
@@ -373,7 +374,8 @@
     (define-key my-keys-minor-mode-map (kbd "M-n") 'windmove-down)
     (define-key my-keys-minor-mode-map (kbd "M-s") 'windmove-left)
     (define-key my-keys-minor-mode-map (kbd "M-t") 'windmove-right)
- (define-key my-keys-minor-mode-map "\M-x" 'execute-extended-command)
+    (define-key my-keys-minor-mode-map "\M-x" 'execute-extended-command)
+    (define-key my-keys-minor-mode-map (kbd "<f8>") 'bmkp-cycle-this-buffer)
     
     (define-minor-mode my-keys-minor-mode
           "A minor mode so that my key settings override annoying major modes."
@@ -412,3 +414,6 @@
 (require 'delete-pic)
 
 (require 'slime)
+
+(require 'org-mode-config)
+

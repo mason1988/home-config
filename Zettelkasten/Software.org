@@ -21,6 +21,9 @@
  + standby :: sudo /etc/acpi/sleep.sh
  + standby_alternativ :: sudo pm-hibernate / powersave / suspend ...
  + script von überall asuführbar machen :: sh entfernen, bang anfügen, und in /usr/bin verschieben
+** Standardprogramme
+ + Standardprogramme: ~/.locale/share/applications/mimeapps.list
+ application/pdf=zathura.desktop
 ** funktionierende Soundeinstellung:
 - als root starten
 - Sound:
@@ -225,6 +228,11 @@ http://orgmode.org/manual/Template-expansion.html#Template-expansion
 	    \( \) macht aus nem Bereich ne Backreferenz
 	    \1 matched die nummeriert, & matched das ganze Teil
 	    
+	    '< , '> selection anfang / ende
+	    $ Dateieende
+	    . aktuelle zeile
+	    /test/ zeile mit nächstem vorkommen von test
+	    ?test? zeile mit vorherigem vorkommen von test
 ** Mehrfachmanipulation
 v -> visual, V -> visual zeile, ctrl v -> block
 dann mit i,a,I,A usw. editieren (nach enter bei allen zeilen)

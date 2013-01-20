@@ -144,15 +144,15 @@ $P(Y|B) = \frac{E(1_{B} * Y)}{P(B)}$
 - bei stochastischer Unabhängigkeit gilt wie gewohnt: [[file:201301ad-0812459890MLz.png]] 
   => P(A|B) = P(A)
 
-- [[/home/florian/Zettelkasten/zettelkasten.org_20130112_075523_9890Yia.png]]
-[[/home/florian/Zettelkasten/zettelkasten.org_20130112_075648_9890lsg.png]]
+- [[/home/florian/Zettelkasten/zettelkasten.org_20130112_075523_9890Yia2.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130112_075648_9890lsg2.png]]
 [[file:201301ad-0847319890y9a.png]]
 
 - bei stochastischer Unabhängigkeit: P(Y=y|X=x)=P(Y=y)
 - [[file:201301ad-0816259890-UC.png]]
 - [[file:201301ad-0822389890LfI.png]] 
-[[/home/florian/Zettelkasten/zettelkasten.org_20130112_082438_9890YpO.png]]
-[[/home/florian/Zettelkasten/zettelkasten.org_20130112_082651_9890lzU.png]]
+[[/home/florian/Zettelkasten/res_zettelkasten.org_20130112_082438_9890YpO.png]]
+[[/home/florian/Zettelkasten/res_zettelkasten.org_20130112_082651_9890lzU.png]]
 ** likelihood Schätzung
 *** Prinzip
 [[/home/florian/Zettelkasten/zettelkasten.org_20130118_020812_13098Bpx-0.png]]
@@ -850,7 +850,13 @@ x_i = wahr oder falsch ( bernoulli )
 [[/home/florian/Zettelkasten/zettelkasten.org_20130118_012557_13098mTe.png]]
 
 #+BEGIN_SRC latex :tangle st-loesung-09.tex
-
+Es handelt sich hierbei um eine Hypergeometrische Verteilung. Gesucht ist der Schätzer, mit dem unsere Stichprobe die höchste Wahrscheinlichkeit aufweist.\\
+Sei Y nun die Zufallsvariable, für die Anzahl der markierten Fische im 2. Fang. Als Erwartungswert ergibt sich: $E(Y) = X \fr{W}{N}$. \\
+Wenn man die Hypergeometrische Verteilung betrachtet, so stellt man fest dass der auf eine ganze Zahl abgerundete Erwartungswert auch stets die höchste \\
+Wahrscheinlichkeit aufweist. Abgerundet werden muss, weil es sich um eine diskrete Verteilung handelt und wir (hoffentlich) keine gebrochenen Fische aus dem \\
+Wasser ziehen, so dass nur ganze Zahlen eine Wahrscheinlichkeit > 0 haben können. \\
+Setzt man nun: $n = E(Y) \Ri n = X \fr{W}{N} \Ri N = X \fr{W}{n}$ wobei N gemäß der Aufgabenstellung die gesuchte Gesamtanzahl der Fische im Wasser ist, und \\
+$\tau(\mathcal{X}) = X \fr{W}{n}$ unser maximum likelihood Schätzer ist. 
 #+END_SRC
 **** Beispiel Likelihoodfunktion für Bernoulliverteilung
 [[/home/florian/Zettelkasten/zettelkasten.org_20130118_020344_13098A2S-0.png]]
@@ -960,6 +966,11 @@ die deltas werden mit ner Tafel gesammelt:
 Bedeutet: (q',b,x) \in \delta(q,a)
 also startzustand | "search" | replace | sprung | nächster zustand
 
+** vollständige Induktion
+- Induktionsbehauptung :: Aussage gilt für A(n+1)
+- Induktionsvorraussetzung :: Aussage gilt für n (ein n >= m)
+- Induktionsanfang :: Zeige für Startwert m 
+- Induktionsschritt :: erhöhe Parameter auf beiden Seiten, beweis Induktionsbehauptung
 ** Wörterbuch
 - Turingmaschine :: 
 - primitik rekursive Grundfunktion ::
@@ -1217,40 +1228,12 @@ anz(6) = 2080  496
 *** header
 #+BEGIN_SRC latex :tangle th-loesung-11.tex
 \documentclass[11pt]{amsart}
-\usepackage[utf8]{inputenc}
-\usepackage{amssymb,amsmath}
-\usepackage{verbatim}
-\usepackage{color}
-\usepackage{geometry}
+\input{commands.tex}
+\renewcommand{\baselinestretch}{2}
 \geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
-\usepackage{amsthm}
-\usepackage{stmaryrd}
-\usepackage{graphicx}
-
-%\includegraphics{?} setzt bild ein
-%\ref{labelname} erstellt link zu labelname
-%\label{labelname} kann einfach irgendwo drangesetz werden
-
-\newtheorem{defi}{Definition}
-\newtheorem{axiom}{Axiom}
-\newtheorem{nota}{Notation}
-\newtheorem{prop}{Proposition}
-\newtheorem{satz}{Satz}
-\newtheorem{umf}{Umformung}
-
-\newenvironment{beweis}{\par\begingroup%
-\settowidth{\leftskip}{\textsc{Beweis:~}}%
-\noindent\llap{\textsc{Beweis:~}}}{\hfill$\Box$\par\endgroup}
-
-\renewcommand{\baselinestretch}{1}
-\newcommand{\words}{\Sigma^* \backslash \{\epsilon\}}
-\newcommand{\etrans}[1]{\bar{\delta}(#1)}
-\renewcommand{\P}{\mathbb{P}}
 
 \title{Zettel 11}
 \author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
-%\date{} % Activate to display a given date or no date (if empty),
-% otherwise the current date is printed 
 
 \begin{document}
 \maketitle
@@ -1276,22 +1259,22 @@ Als induktiver Beweis: über y die einzelnen möglichkeiten zeigen
 \subsection*{Aufgabe 34}
 \subsubsection*{a)}% Induktion sortieren <<FIXME th11.1>>
 Induktionsanfang(y=1): \\ %keine Ahnung
-ack(1,1) = ack(0+1,0+1) = ack(0,ack(0+1,0)) = ack(0,ack(1,0)) = ack(0,1) = 2 \\
-2*0 = 2 \\
+\(\dinc ack(1,1) = ack(0+1,0+1) = ack(0,ack(0+1,0)) = ack(0,ack(1,0)) = ack(0,1) = 2 \)\\
+\(\dinc 2*0 = 2 \)\\
 Induktionsvorraussetzung: \\ %glaube nicht dass das die IV ist (formal)
-ack(1,y) = 2 * y gilt für mindestens ein $y \geq 1$ \\
+\(\dinc ack(1,y) = 2 * y \m{gilt für ein y} \in \N \geq 1 \) \\
 Induktionsschritt: \\
 z.Z.: $ack(1,y+1) = 2*(y+1) = 2y + 2 $ \\
 $ack(1,y+1) = ack(0,ack(1,y)) =_{I.V} ack(0,2*y) = 2y+2$
 \subsubsection*{b)}%FIXME wieder das gleiche
 Induktionsanfang(y=0): \\
-$ack(2,0) = ack(1+1,0) = 1$ \\
-$2^0 = 1$ \\
+\(\dinc ack(2,0) = ack(1+1,0) = 1 \) \\
+\(\dinc 2^0 = 1 \) \\
 Induktionsvorraussetzung(y=0): \\
-$ack(2,y) = 2^y$ gilt für mindestens ein $y \geq 0$ \\
+\( ack(2,y) = 2^y \m{ gilt für ein } y \geq 0  \in \N \) \\
 Induktionsschritt: \\
-z.Z.: $ack(2,y+1) \overset{!}{=} 2^{y+1} = 2^{y}*2$ \\
-$ack(2,y+1) = ack(1,ack(2,y)) =_{I.V.} ack(1,2^{y}) = 2^{y}*2$
+z.Z.: \( ack(2,y+1) \zz 2^{y+1} = 2^{y}*2 \) \\
+\( ack(2,y+1) = ack(1,ack(2,y)) =_{I.V.} ack(1,2^{y}) = 2^{y}*2\)
 #+END_SRC
 *** Aufgabe 35
 #+BEGIN: aufgabe35
@@ -1330,27 +1313,38 @@ Auswirkungen, im Vergleich zur normalen Semantik.
 
 [[file:201301ad-15581016745Gpi.png]]
 
+[[/home/florian/Zettelkasten/zettelkasten.org_20130118_143908_13098OBg-0.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130118_143908_13098OBg-1.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130118_143908_13098OBg-2.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130118_143908_13098OBg-3.png]]
+
+
+Also wie bei [[file:201301ad-15144613098bLm.png]] Rekursion, die Projektion, k ist das höchste nach der 0 was definiert ist und projeziert auf Iterator = 0
+   sowie alles dazwischen größer 0 und definiert
+
 #+BEGIN_SRC latex :tangle th-loesung-11.tex
 \subsection*{Aufgabe 36}
-% was wird alles zu alpha
+% was wird alles zu alpha, bei loop wars das komplette teil
+% theoretisch könnte man noch in unterpunkte splitten
 \( \a_1 := X_2 := X_2 - 1 \) \\
-\( \a_2 := \underline{while} X_2 \not = 0 \underline{do} \) \\
-\( \a_3 := X_2 := X_2 - 1 \) \\
-\( \a_4 := X_1 := X_1 - 1 \) \\
+\( \a_2 := \underline{while} X_2 \not = 0 \underline{do} X_2 := X_2 - 1 ; X_1 := X_1 - 1 \underline{od} \) \\
 
-\( [[\a_1]]^{(3)}(\a_1,\a_2,\a_3,\a_4) = [[\a_1 := X_2 := X_2 - 1]]^{(3)}(\a_1,\a_2,\a_3,\a_4) \) \\
-\( \quad = (\a_1,\a_2-1,\a_3,\a_4) \) \\
+\( [[\a_1]]^{(2)}(\a_1,\a_2) = [[\a_1 := X_2 := X_2 - 1]]^{(2)}(\a_1,\a_2) \) \\
+\( \dinc = (\a_1,\a_2 - 1) \)
 
-% keine ahnung
-\( [[\a_2]]^{(3)}(\a_1,\a_2,\a_3,\a_4) = [[\a_2 := X_2 := X_2 - 1]]^{(3)}(\a_1,\a_2,\a_3,\a_4) \) \\
-\( \quad = (\a_1,\a_2-1,\a_3,\a_4) \) \\
+\( [[\a_2]]^{(2)}(\a_1,\a_2) = [[\underline{while} X_2 \not = 0 \underline{do} X_2 := X_2 - 1 ; X_1 := X_1 - 1 \underline{od}]]^{(2)}(\a_1,\a_2) \) \\
+\( \dinc = (\a_1 - 1, \a_2 - 1)^{\a_2} \) \\ 
 
 % out(projektion) * schleifen * schleifen-1 * ... * schleife1 * in
-% angepasst werden müssen die anzahlen der alphas
-% außerdem der index von der in Funktion
-\( [[P]](\a_1) = (\underline{out}^{(4)}_1 \circ [[\a_4]]^{(4)} \circ [[\a_3]]^{(4)} \circ [[\a_2]]^{(4)} \circ [[\a_1]]^{(4)}
-\circ \underline{in}^{(2)}_2 \) \\
+\( [[P]](\a_1) = (\underline{out}^{(2)}_1 \circ [[\a_2]]^{(2)} \circ [[\a_1]]^{(2)} \circ \underline{in}^{(2)}_2)(\a_1,\a_2) \) \\
+\( \dinc = (\underline{out}^{(2)}_1 \circ [[\a_2]]^{(2)} \circ [[\a_1]]^{(2)})(\a_1,\a_2) \) \\
+\( \dinc = (\underline{out}^{(2)}_1 \circ [[\a_2]]^{(2)})(\a_1,\a_2 - 1) \) \\
+\( \dinc = (\underline{out}^{(2)}_1) (\a_1 - (\a_2-1), 0) \) \\
+\( \dinc = \a_1 - (\a_2 - 1) \) \\
+\( \Rightarrow [[P_n]] : \N^2 \ri \N , (\a_1,\a_2) \tri (\a_1 - (\a_2 -1)) \) \\
+
 #+END_SRC
+   
 *** footer
 #+BEGIN_SRC latex :tangle th-loesung-11.tex
 \end{document}
@@ -1364,6 +1358,7 @@ Auswirkungen, im Vergleich zur normalen Semantik.
 [[~/Dropbox/th/th-zettel-13/th-zettel-13.pdf][th-zettel-13.pdf]]
 [[~/Dropbox/th/th-zettel-13/th-loesung-13.tex][th-loesung-13.tex]]
 [[~/Dropbox/th/th-zettel-13/th-loesung-13.pdf][th-loesung-13.pdf]]
+
 * Softwaretechnik
 ** organisation
 - email: selecture@mathematik.uni-marburg.de
@@ -1743,7 +1738,7 @@ jedes ideal von dem I ne echte Teilmenge, ist
   \usepackage{stmaryrd}
   \usepackage{graphicx}
   
-  %\includegraphics{?} setzt bild ein
+  %\dincludegraphics{?} setzt bild ein
   %\ref{labelname} erstellt link zu labelname
   %\label{labelname} kann einfach irgendwo drangesetz werden
   
@@ -1833,7 +1828,7 @@ jedes ideal von dem I ne echte Teilmenge, ist
 \usepackage{stmaryrd}
 \usepackage{graphicx}
 
-%\includegraphics{?} setzt bild ein
+%\dincludegraphics{?} setzt bild ein
 %\ref{labelname} erstellt link zu labelname
 %\label{labelname} kann einfach irgendwo drangesetz werden
 

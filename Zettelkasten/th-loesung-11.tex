@@ -1,49 +1,57 @@
 
 \documentclass[11pt]{amsart}
-\usepackage[utf8]{inputenc}
-\usepackage{amssymb,amsmath}
-\usepackage{verbatim}
-\usepackage{color}
-\usepackage{geometry}
+\input{commands.tex}
+\renewcommand{\baselinestretch}{2}
 \geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
-\usepackage{amsthm}
-\usepackage{stmaryrd}
-\usepackage{graphicx}
-
-%\includegraphics{?} setzt bild ein
-%\ref{labelname} erstellt link zu labelname
-%\label{labelname} kann einfach irgendwo drangesetz werden
-
-\newtheorem{defi}{Definition}
-\newtheorem{axiom}{Axiom}
-\newtheorem{nota}{Notation}
-\newtheorem{prop}{Proposition}
-\newtheorem{satz}{Satz}
-\newtheorem{umf}{Umformung}
-
-\newenvironment{beweis}{\par\begingroup%
-\settowidth{\leftskip}{\textsc{Beweis:~}}%
-\noindent\llap{\textsc{Beweis:~}}}{\hfill$\Box$\par\endgroup}
-
-\renewcommand{\baselinestretch}{1}
-\newcommand{\words}{\Sigma^* \backslash \{\epsilon\}}
-\newcommand{\etrans}[1]{\bar{\delta}(#1)}
-\renewcommand{\P}{\mathbb{P}}
 
 \title{Zettel 11}
 \author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
-%\date{} % Activate to display a given date or no date (if empty),
-% otherwise the current date is printed 
 
 \begin{document}
 \maketitle
 
 \subsection*{Aufgabe 34}
-\subsubsection*{a)}
-\subsubsection*{b)}
+\subsubsection*{a)}% Induktion sortieren <<FIXME th11.1>>
+Induktionsanfang(y=1): \\ %keine Ahnung
+\(\dinc ack(1,1) = ack(0+1,0+1) = ack(0,ack(0+1,0)) = ack(0,ack(1,0)) = ack(0,1) = 2 \)\\
+\(\dinc 2*0 = 2 \)\\
+Induktionsvorraussetzung: \\ %glaube nicht dass das die IV ist (formal)
+\(\dinc ack(1,y) = 2 * y \m{gilt für ein y} \in \N \geq 1 \) \\
+Induktionsschritt: \\
+z.Z.: $ack(1,y+1) = 2*(y+1) = 2y + 2 $ \\
+$ack(1,y+1) = ack(0,ack(1,y)) =_{I.V} ack(0,2*y) = 2y+2$
+\subsubsection*{b)}%FIXME wieder das gleiche
+Induktionsanfang(y=0): \\
+\(\dinc ack(2,0) = ack(1+1,0) = 1 \) \\
+\(\dinc 2^0 = 1 \) \\
+Induktionsvorraussetzung(y=0): \\
+\( ack(2,y) = 2^y \m{ gilt für ein } y \geq 0  \in \N \) \\
+Induktionsschritt: \\
+z.Z.: \( ack(2,y+1) \zz 2^{y+1} = 2^{y}*2 \) \\
+\( ack(2,y+1) = ack(1,ack(2,y)) =_{I.V.} ack(1,2^{y}) = 2^{y}*2\)
 
-\subsection*{Aufgabe 35}
+\subsection*{Aufgabe 35} % <<FIXME th11.2>>
+\(h: \mathbb{N}^2 \rightarrow \mathbb{N}\) \\
+Sei \(h(a,b) := \begin{cases} a-b = sub(a,b) &\mbox{(falls } \mbox{a gerade)} \\ \mbox{nicht definiert} &\mbox{(sonst)} \end{cases}\)
 
 \subsection*{Aufgabe 36}
+% was wird alles zu alpha, bei loop wars das komplette teil
+% theoretisch könnte man noch in unterpunkte splitten
+\( \a_1 := X_2 := X_2 - 1 \) \\
+\( \a_2 := \underline{while} X_2 \not = 0 \underline{do} X_2 := X_2 - 1 ; X_1 := X_1 - 1 \underline{od} \) \\
+
+\( [[\a_1]]^{(2)}(\a_1,\a_2) = [[\a_1 := X_2 := X_2 - 1]]^{(2)}(\a_1,\a_2) \) \\
+\( \dinc = (\a_1,\a_2 - 1) \)
+
+\( [[\a_2]]^{(2)}(\a_1,\a_2) = [[\underline{while} X_2 \not = 0 \underline{do} X_2 := X_2 - 1 ; X_1 := X_1 - 1 \underline{od}]]^{(2)}(\a_1,\a_2) \) \\
+\( \dinc = (\a_1 - 1, \a_2 - 1)^{\a_2} \) \\ 
+
+% out(projektion) * schleifen * schleifen-1 * ... * schleife1 * in
+\( [[P]](\a_1) = (\underline{out}^{(2)}_1 \circ [[\a_2]]^{(2)} \circ [[\a_1]]^{(2)} \circ \underline{in}^{(2)}_2)(\a_1,\a_2) \) \\
+\( \dinc = (\underline{out}^{(2)}_1 \circ [[\a_2]]^{(2)} \circ [[\a_1]]^{(2)})(\a_1,\a_2) \) \\
+\( \dinc = (\underline{out}^{(2)}_1 \circ [[\a_2]]^{(2)})(\a_1,\a_2 - 1) \) \\
+\( \dinc = (\underline{out}^{(2)}_1) (\a_1 - (\a_2-1), 0) \) \\
+\( \dinc = \a_1 - (\a_2 - 1) \) \\
+\( \Rightarrow [[P_n]] : \N^2 \ri \N , (\a_1,\a_2) \tri (\a_1 - (\a_2 -1)) \) \\
 
 \end{document}

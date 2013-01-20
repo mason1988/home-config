@@ -4,41 +4,9 @@
 # --
 #+BEGIN_SRC latex :tangle ${1:st}-loesung-${2:08}.tex
 \\documentclass[11pt]{amsart}
-\\usepackage[utf8]{inputenc}
-\\usepackage{amssymb,amsmath}
-\\usepackage{verbatim}
-\\usepackage{color}
-\\usepackage{geometry}
 \\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
-\\usepackage{amsthm}
-\\usepackage{stmaryrd}
-\\usepackage{graphicx}
-
-%\\includegraphics{?} setzt bild ein
-%\\ref{labelname} erstellt link zu labelname
-%\\label{labelname} kann einfach irgendwo drangesetz werden
-
-\\newtheorem{defi}{Definition}
-\\newtheorem{axiom}{Axiom}
-\\newtheorem{nota}{Notation}
-\\newtheorem{prop}{Proposition}
-\\newtheorem{satz}{Satz}
-\\newtheorem{umf}{Umformung}
-
-\\newenvironment{beweis}{\\par\\begingroup%
-\\settowidth{\\leftskip}{\\textsc{Beweis:~}}%
-\\noindent\\llap{\\textsc{Beweis:~}}}{\\hfill\$\\Box\$\\par\\endgroup}
-
-\\renewcommand{\\baselinestretch}{1}
-\\newcommand{\\words}{\\Sigma^* \\backslash \\{\\epsilon\\}}
-\\newcommand{\\etrans}[1]{\\bar{\\delta}(#1)}
-\\renewcommand{\\P}{\\mathbb{P}}
-
-\\title{Zettel ${3:8}}
+\\title{Zettel $2 }
 \\author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
-%\\date{} % Activate to display a given date or no date (if empty),
-% otherwise the current date is printed 
-
 \\begin{document}
 \\maketitle
 #+END_SRC 

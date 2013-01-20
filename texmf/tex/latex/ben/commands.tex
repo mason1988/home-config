@@ -6,6 +6,39 @@
   \usepackage{amsthm}
   \usepackage{stmaryrd}
   \usepackage{graphicx}
+%-----------
+\renewcommand{\baselinestretch}{2}
 
+\newtheorem{defi}{Definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{nota}{Notation}
+\newtheorem{prop}{Proposition}
+\newtheorem{satz}{Satz}
+\newtheorem{umf}{Umformung}
+
+\newcommand{\words}{\Sigma^* \backslash \{\epsilon\}}
+\newcommand{\etrans}[1]{\bar{\delta}(#1)}
+
+\newenvironment{beweis}{\par\begingroup%
+\settowidth{\leftskip}{\textsc{Beweis:~}}%
+\noindent\llap{\textsc{Beweis:~}}}{\hfill$\Box$\par\endgroup}
+%----------
 \renewcommand{\P}{\mathbb{P}}
 \renewcommand{\a}{\alpha}
+\renewcommand{\,}{\quad}
+\newcommand{\m}[1]{\mbox{#1}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\exists}
+\newcommand{\A}{\forall}
+\newcommand{\fr}[2]{\frac{#1}{#2}}
+\newcommand{\ri}{\rightarrow}
+\newcommand{\Ri}{\Rightarrow}
+\newcommand{\Lri}{\Leftrightarrow}
+\newcommand{\tri}{\mapsto} %tail right arrow
+\newcommand{\ov}[2]{\overset{#1}{#2}}
+\newcommand{\un}[2]{\underset{#1}{#2}}
+\newcommand{\busset}{\supset}
+\newcommand{\inc}{\hspace*{0.5cm}}
+\newcommand{\dinc}{\hspace*{1.2cm}}
+\newcommand{\zz}{\overset{!}{=}}

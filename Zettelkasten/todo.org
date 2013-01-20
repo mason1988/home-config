@@ -1,70 +1,5 @@
-#+TODO: TODO NEXT | DONE
-
-* Studium
-#+BEGIN: clocktable :maxlevel 3 :scope subtree
-Clock summary at [2013-01-04 Fr 19:33]
-
-| Headline                            | Time   |      |      |
-|-------------------------------------+--------+------+------|
-| *Total time*                        | *9:22* |      |      |
-|-------------------------------------+--------+------+------|
-| Studium                             | 9:22   |      |      |
-| TODO Elementare Stochastik Zettel 8 |        | 9:22 |      |
-| Tag 3                               |        |      | 3:44 |
-| Tag 2                               |        |      | 2:49 |
-| Tag 1                               |        |      | 2:49 |
-#+END:
-
-
-** TODO Elementare Stochastik Zettel 8
-*** Tag 4
-*** Tag 3
-    CLOCK: [2013-01-03 Do 22:00]--[2013-01-03 Do 23:00] =>  1:00
-    CLOCK: [2013-01-03 Do 19:34]--[2013-01-03 Do 20:49] =>  1:15
-    CLOCK: [2013-01-03 Do 17:54]--[2013-01-03 Do 18:02] =>  0:08
-    CLOCK: [2013-01-03 Do 14:00]--[2013-01-03 Do 15:00] =>  1:00
-    CLOCK: [2013-01-03 Do 12:38]--[2013-01-03 Do 12:59] =>  0:21
-    :PROPERTIES:
-    :Effort:   4:00
-    :END:
-*** Tag 2
-    CLOCK: [2013-01-02 Mi 17:58]--[2013-01-02 Mi 18:51] =>  0:53
-    CLOCK: [2013-01-02 Mi 15:42]--[2013-01-02 Mi 17:38] =>  1:56
-    :PROPERTIES:
-    :Effort:   4:00
-    :END:
-    
-*** Tag 1
-    CLOCK: [2013-01-02 Mi 00:33]--[2013-01-02 Mi 01:19] =>  0:46
-    CLOCK: [2013-01-01 Di 21:24]--[2013-01-01 Di 21:54] =>  0:30
-    CLOCK: [2013-01-01 Di 20:12]--[2013-01-01 Di 21:05] =>  0:53
-    CLOCK: [2013-01-01 Di 18:05]--[2013-01-01 Di 18:45] =>  0:40
-
-*** next Steps
-
-** TODO Theorethische Informatik Zettel 10
-*** DONE Grundfundament im Zettelkasten erstellen
-*** DONE Zettel einmal komplett sichten
-*** TODO sammeln von Hinweisen und Fragmenten zu Aufgaben:
-**** DONE 1
-**** TODO 2
-**** TODO 3
-*** TODO lösen von:
-**** DONE 1
-**** TODO 2
-**** TODO 3
-*** Tag 1
-    CLOCK: [2013-01-06 So 19:56]--[2013-01-06 So 21:01] =>  1:05
-    CLOCK: [2013-01-06 So 17:09]--[2013-01-06 So 17:47] =>  0:38
-
-*** Tag 4
-** TODO Logik Zettel 10
-** TODO Website
-*** TODO Struktur von Inhalt planen
-
-
 * Projekte
-** Emacs Config Aufräumen
+** TODO Emacs Config Aufräumen                                      :PROJECT:
 *** NEXT überflüssige keymapping dateien entfernen
 *** TODO nicht mehr benutzte dateien in .emacs.d löschen
 *** TODO alle shortcuts in .emacs zusammenfassen
@@ -73,7 +8,7 @@ Clock summary at [2013-01-04 Fr 19:33]
 *** TODO unnötige keybindings entfernen
 *** DONE in bytecompiling einlesen
 *** DONE alles bytecompilen
-** Org-Mode Bilder
+** TODO Org-Mode Bilder						    :PROJECT:
 *** NEXT Möglichkeiten prüfen um informationen/texte einem konkreten Header zuzuordnen
 *** TODO Möglichkeiten sammeln, zum zeilenweisen auslesen und splitten bei trennzeichene
 *** TODO beim link erstellen eben jene information in extra ast unterbringen
@@ -100,16 +35,17 @@ Clock summary at [2013-01-04 Fr 19:33]
 *** DONE iimage bibliothek o.ä. code raussuchen und auf anpassparkeit prüfen
 *** DONE anforderungen an eigenen Modus sammeln
 *** DONE entsprechenden modus entwickeln ;image slicing
-** Tags
+** TODO Tags							    :PROJECT:
 *** DONE etags installieren
 *** NEXT google: wie können tags zu den unterschiedlichen dokumentarten generiert werden
 *** TODO google: welche navigations und sammelmöglichkeiten gibt es?
 *** TODO Shortcuts für die Tags entsprechend legen
-** Capturing
+** TODO Capturing						    :PROJECT:
 *** NEXT welche Captures ;-Templates; würden noch Sinn machen? Broweser/Client
 *** DONE schnellere Shortcuts für Captures 
 *** TODO Captures entsprechend implementieren
-** Shortcuts
+** TODO Shortcuts						    :PROJECT:
+*** NEXT welche Snippets machen noch Sinn? -> einbauen
 *** DONE shortcuts für scrolling in pentadactyl ummappen
 *** DONE verschieben/retaggen von Fenstern in awesom wm
 *** DONE mehr Tasten auf den Modalen Vim Modus setzen
@@ -121,17 +57,17 @@ Clock summary at [2013-01-04 Fr 19:33]
 *** DONE Emacs wiederholung braucht ein besseres shortcut; z schwer zu finden :shortcut:
 *** DONE zyklisches Pasten von Emacs aus Killring		  :shortcuts:
 *** DONE shortcuts für erstellen von tmp autonamed bookmark und cyclen; in buffer :shortcuts:
-** Sprungmarken
+** TODO Sprungmarken						    :PROJECT:
 *** TODO Liste mit Features von Bookmark+ anfertigen
 *** NEXT markierung und/oder anzeige für evil marks im Dokument anzeige ;goggle
 nicht mehr zeit verschwenden, als unbedingt nötig, da die evil marks in jedem fall auch
 durch autobookmarks ersetzt werden könnten
 google: emacs+evil+show+mark 
-** TodoListe optimieren
+** TODO TodoListe optimieren					    :PROJECT:
 *** TODO Brainstorming, was Standardmäßig geöffnet und was geschlossen sein soll
 *** TODO autostarts neu zuteilen ;source blöcke usw.
 *** NEXT todo states und faces aus "your life in plaintext"
-** Latex Mode
+** TODO Latex Mode						    :PROJECT:
 *** DONE Cdlatex Paket suchen und installieren
     ist total sinnlos, yasnippet kann das alles auch. Statt dessen eher mal nach math mode suchen
 *** DONE testen in wie fern schnelles suchen und finden von Symbolen möglich ist
@@ -144,33 +80,33 @@ google: emacs+evil+show+mark
    - oder man schreibt eigene latex kürzel
 *** TODO math mode und insert latex in workflow einbinden
 *** TODO gegebenenfalls weitere Completion Methoden einsetzen
-** Git
+** TODO Git							    :PROJECT:
 *** DONE die 3 Grundmerges finden ;a / b / beide
 *** NEXT magit: commit und push?
-** effizienteres Suchen
-*** TODO Suchmaschine für Quellcodes
-**** alternative rc.lua suchen
-**** alternative .emacs suchen
+** TODO effizienteres Suchen					    :PROJECT:
+*** NEXT Suchmaschine für Quellcodes
+*** TODO alternative rc.lua suchen
+*** TODO alternative .emacs suchen
 *** TODO alternativen zu google prüfen / bessere Befehle sammeln
-** awesome wm
+** TODO awesome wm						    :PROJECT:
 *** NEXT Titlebar Awesome Wm googlen. Ziel: Titlebars in bestimmten Tags mit Floating standard, aktivieren.
 *** TODO ansatz für tabs in awesome wm formulieren
 *** TODO testen was genau shifty macht, und das gegebenenfalls einrichten
 *** TODO nochmal die awesomewm konfiguration für tab's raussuchen und versuchen einen Plan zu entwickeln, um dieses sicher zu implementieren
-** eshell
+** TODO eshell 							    :PROJECT:
 *** DONE Autocompletion Eshell googlen Ziel: Möglichkeit umzuschalten. Vielleicht andere Shortcuts?
 *** DONE Autocompletion eshell fixen im moment wird bei tab direkt eingesetzt und es lässt sich nicht weiter schalten
-*** TODO mehrere eshell's, und diese sollten auch von überall aus in einem separaten Frame geöffnet werden können
-** someday / maybe
-*** TODO Acejump näher betrachten
+*** NEXT mehrere eshell's, und diese sollten auch von überall aus in einem separaten Frame geöffnet werden können
+** TODO someday / maybe						    :PROJECT:
+*** NEXT Acejump näher betrachten
 *** TODO ubuntu vs mint akku genau das bei google
 *** TODO regex icicle und rx makro testen
 *** TODO gnome keyring bug beheben
 *** TODO festplatten automatisch laden 
 *** TODO Netbook neu einrichten
 - brainstorming, xorg (wieder) automatisch booten (google startx)
-* interessanter Kram
-** tiling windowmanager
+* TODO interessanter Kram					    :PROJECT:
+** NEXT tiling windowmanager
 *** notion wm / stump wm
 *** euclid wm
 *** lunchbox wm 
@@ -180,43 +116,45 @@ google: emacs+evil+show+mark
 
 *** clfswm -kein reiner tiling manager, dafür common lisp-
 *** xwem
-** tiling in non tiling window managern - software -
+** TODO tiling in non tiling window managern - software -
    z.B. in fluxbox - +tabs -
 *** stiler
 *** pytyle
 *** wumwum 
     - eher weniger verlocend im moment
 *** PyWO
-** im alten my-keymaps sehen, was noch an plugins benutzt wurde
-** ubiquity
+** TODO im alten my-keymaps sehen, was noch an plugins benutzt wurde
+** TODO ubiquity
    einfach mal testen
 
-** weitere pentadactyl shortcuts/befehle
-** vimperator addons sammeln
+** TODO weitere pentadactyl shortcuts/befehle
+** TODO vimperator addons sammeln
    - sieht bei denen eigentlich auch nicht anders aus (offizielle google code site)
    - die Zeichen sind da aber ganz gut hervorgehoben
-** slime installieren und einrichten
-
-* Todo-Eingang
-** DONE Übersicht in Software zu den verschiedenen Vim Substitutionen erstellen
+** TODO slime installieren und einrichten
+* TODO Todo-Eingang						    :PROJECT:
 ** TODO prüfen: https://github.com/dgutov/point-stack/blob/master/point-stack.el
-** DONE zusätzliche foldingsyntax / elemente einführen?
-   vor allem kürzer als diese begin, end dinger
-** DONE die Regex ausdrücke für Preview Latex in Org überarbeiten abstände zu $ sind scheiße
-** DONE effizientere Wege überlegen, um Ordner zu erreichen
-=======
-** TODO effizientere Wege überlegen, um Ordner zu erreichen
-** TODO Keynav synchronisieren
-* Todo-Eingang-Studium
+** NEXT http://sachachua.com/blog/2013/01/emacs-org-display-projects-with-a-few-subtasks-in-the-agenda-view/ lesen
+** TODO .emacs Datei splitten mit org-babel-load-file in kategorien
+* TODO Todo-Eingang-Studium					    :PROJECT:
 ** TODO Induktionsformalitäten neu sortieren
  [[file:~/Zettelkasten/zettelkasten.org::FIXME%20th11.1][file:~/Zettelkasten/zettelkasten.org::FIXME th11.1]]
  Entered on [2013-01-16 Mi 14:10]
 ** TODO Versuchen, die primitive Rekursivität in Bezug zu bringen
  [[file:~/Zettelkasten/zettelkasten.org::FIXME%20th11.2][file:~/Zettelkasten/zettelkasten.org::FIXME th11.2]]
  Entered on [2013-01-16 Mi 14:56]
-** TODO Fehler mit der vergessenen 0 beheben
+** DONE Fehler mit der vergessenen 0 beheben
+   - State "DONE"       from "NEXT"       [2013-01-18 Fr 18:12]
  [[file:~/Zettelkasten/zettelkasten.org::FIXME%20th11.3][file:~/Zettelkasten/zettelkasten.org::FIXME th11.3]]
  Entered on [2013-01-16 Mi 15:29]
+
+ passt jetzt, alle anderen müssen übriegens auch noch größer als 0 sein
+ ungerade Zahlen werden aber noch nicht erfasst
+** NEXT schnelles googlen ob es keinen besseren Weg fürs Filtern ungerader Zahlen gibt.
+ [[file:~/Zettelkasten/zettelkasten.org::FIXME%20th11.3][file:~/Zettelkasten/zettelkasten.org::FIXME th11.3]]
+** TODO Formalitäten zur vollständigen Induktion sammeln und Fehler beheben
+ [[file:zettelkasten.org::FIXME%20th11.1][file:~/Zettelkasten/zettelkasten.org::FIXME th11.1]]
+** TODO abkürzungsdatei auch in tex-file einbinden
 ** TODO maximum likelihood schätzer
  [[file:~/Zettelkasten/zettelkasten.org::*W%C3%B6rterbuch][Wörterbuch]]
  Entered on [2013-01-17 Do 12:30]
@@ -246,3 +184,10 @@ google: emacs+evil+show+mark
 ** DONE Screenshots per Tastatur
 ** DONE flosub mit leertaste arbeiten lassen
 ** DONE Weiterspringen und besseres Shortcut für Regex Sprung
+** DONE zusätzliche foldingsyntax / elemente einführen?
+   vor allem kürzer als diese begin, end dinger
+** DONE die Regex ausdrücke für Preview Latex in Org überarbeiten abstände zu $ sind scheiße
+** DONE effizientere Wege überlegen, um Ordner zu erreichen
+=======
+** DONE Keynav synchronisieren
+** DONE Übersicht in Software zu den verschiedenen Vim Substitutionen erstellen
