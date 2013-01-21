@@ -440,8 +440,10 @@ end
 run_once("synapse",nil,1)
 run_once("xfce4-power-manager", nil, 1)
 
-awful.util.spawn_with_shell("xmodmap ~/tasta_stuff/neo_de.xmodmap")
-awful.util.spawn_with_shell("sh ~/new_keyboard.sh")
+-- awful.util.spawn_with_shell("xmodmap ~/tasta_stuff/neo_de.xmodmap")
+awful.util.spawn_with_shell("sh ~/tasta_stuff/install_tasta.sh")
+awful.util.spawn_with_shell("sh keynav")
+awful.util.spawn_with_shell("sh caffeine")
 
 ----------------------------- ende modifikation
 
