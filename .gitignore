@@ -225,3 +225,7 @@ compat*
 Überführungen*
 *Überführungen*
 /Zettelkasten/.#todo.org
+.emacs.d/image-dired/
+.emacs.d/thumbs/
+/.config/caffeine/log
+/.config/caffeine/whitelist.txt

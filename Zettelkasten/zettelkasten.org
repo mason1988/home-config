@@ -130,6 +130,11 @@ n elemente ohne zurücklegen ziehen. Ws für Anzahl Elemente gewünschter Eigens
 [[/home/florian/Zettelkasten/zettelkasten.org_20130112_073036_9890xDI.png]]
 Mit N Elementen insgesamt, und M Elementen, die interessant sind und n zügen.
 [[file:hyper_res.png]]
+*** Pascalverteilung
+[[file:zettelkasten.org_20130118_220037_1617Jik-0.png]]
+[[file:zettelkasten.org_20130118_221649_1617Wsq-0.png]]
+[[file:zettelkasten.org_20130118_221743_1617VAA-0.png]]
+[[file:zettelkasten.org_20130118_221808_1617iKG-0.png]]
 ** Bedingter Erwartungswert
 A,B Ereignisse; Y Zufallvariable
 $P(A|B) = \frac{P(A \cap B)}{P(B)}$ Ws A wenn B bekannt
@@ -892,6 +897,26 @@ $\tau(\mathcal{X}) = X \fr{W}{n}$ unser maximum likelihood Schätzer ist.
 [[/home/florian/Zettelkasten/zettelkasten.org_20130118_020521_130980er-5.png]]
 [[/home/florian/Zettelkasten/zettelkasten.org_20130118_020521_130980er-6.png]]
 
+**** stuff
+[[file:zettelkasten.org_20130118_205054_1617iDS-0.png]]
+[[file:zettelkasten.org_20130118_205054_1617iDS-1.png]]
+[[file:zettelkasten.org_20130118_205054_1617iDS-2.png]]
+[[file:zettelkasten.org_20130118_205054_1617iDS-3.png]]
+[[file:zettelkasten.org_20130118_205054_1617iDS-4.png]]
+[[file:zettelkasten.org_20130118_205054_1617iDS-5.png]]
+
+[[file:zettelkasten.org_20130118_205128_1617vNY-0.png]]
+[[file:zettelkasten.org_20130118_205128_1617vNY-1.png]]
+[[file:zettelkasten.org_20130118_205128_1617vNY-2.png]]
+[[file:zettelkasten.org_20130118_205128_1617vNY-3.png]]
+[[file:zettelkasten.org_20130118_205128_1617vNY-4.png]]
+[[file:zettelkasten.org_20130118_205128_1617vNY-5.png]]
+[[file:zettelkasten.org_20130118_205128_1617vNY-6.png]]
+[[file:zettelkasten.org_20130118_205128_1617vNY-7.png]]
+[[file:zettelkasten.org_20130118_205128_1617vNY-8.png]]
+[[file:zettelkasten.org_20130118_205128_1617vNY-9.png]]
+[[file:zettelkasten.org_20130118_205128_1617vNY-10.png]]
+[[file:zettelkasten.org_20130118_205128_1617vNY-11.png]]
 *** Aufgabe 2
 #+BEGIN_SRC latex :tangle st-loesung-09.tex
 \subsection{Aufgabe 2}
@@ -903,7 +928,15 @@ $\tau(\mathcal{X}) = X \fr{W}{n}$ unser maximum likelihood Schätzer ist.
 [[/home/florian/Zettelkasten/zettelkasten.org_20130118_005920_13098yqF-2.png]]
 [[/home/florian/Zettelkasten/zettelkasten.org_20130118_005920_13098yqF-3.png]]
 #+END:
-
+**** stuff
+[[file:zettelkasten.org_20130118_214737_16178Xe-0.png]]
+[[file:zettelkasten.org_20130118_214737_16178Xe-1.png]]
+[[file:zettelkasten.org_20130118_214737_16178Xe-2.png]]
+[[file:zettelkasten.org_20130118_214737_16178Xe-3.png]]
+[[file:zettelkasten.org_20130118_214737_16178Xe-4.png]]
+[[file:zettelkasten.org_20130118_214737_16178Xe-5.png]]
+[[file:zettelkasten.org_20130118_214737_16178Xe-6.png]]
+[[file:zettelkasten.org_20130118_214737_16178Xe-7.png]]
 *** Aufgabe 3
 #+BEGIN_SRC latex :tangle st-loesung-09.tex
 \subsection{Aufgabe 3}
@@ -915,9 +948,8 @@ $\tau(\mathcal{X}) = X \fr{W}{n}$ unser maximum likelihood Schätzer ist.
 [[/home/florian/Zettelkasten/zettelkasten.org_20130118_010008_13098_0L-2.png]]
 [[/home/florian/Zettelkasten/zettelkasten.org_20130118_010032_13098M_R-0.png]]
 [[/home/florian/Zettelkasten/zettelkasten.org_20130118_010032_13098M_R-1.png]]
-[[/home/florian/Zettelkasten/zettelkasten.org_20130118_010032_13098M_R-2.png]]
-
 #+END:
+**** stuff
 *** Aufgabe 4
 #+BEGIN_SRC latex :tangle st-loesung-09.tex
 \subsection{Aufgabe 4}
@@ -929,6 +961,35 @@ $\tau(\mathcal{X}) = X \fr{W}{n}$ unser maximum likelihood Schätzer ist.
 [[/home/florian/Zettelkasten/zettelkasten.org_20130118_010103_13098ZJY-2.png]]
 [[/home/florian/Zettelkasten/zettelkasten.org_20130118_010103_13098ZJY-3.png]]
 #+END:
+**** stuff
+[[file:zettelkasten.org_20130118_222111_1617vUM.png]]
+[[file:zettelkasten.org_20130118_222141_16178eS.png]]
+[[file:zettelkasten.org_20130118_222721_1617JpY-0.png]]
+[[file:zettelkasten.org_20130118_222721_1617JpY-1.png]]
+[[file:zettelkasten.org_20130118_222721_1617JpY-2.png]]
+[[file:zettelkasten.org_20130118_222721_1617JpY-3.png]]
+[[file:zettelkasten.org_20130118_222721_1617JpY-4.png]]
+[[file:zettelkasten.org_20130118_222721_1617JpY-5.png]]
+[[file:zettelkasten.org_20130118_222721_1617JpY-6.png]]
+[[file:zettelkasten.org_20130118_222822_1617Wze-0.png]]
+[[file:zettelkasten.org_20130118_222822_1617Wze-1.png]]
+[[file:zettelkasten.org_20130118_222822_1617Wze-2.png]]
+[[file:zettelkasten.org_20130118_222822_1617Wze-3.png]]
+[[file:zettelkasten.org_20130118_222822_1617Wze-4.png]]
+[[file:zettelkasten.org_20130118_222822_1617Wze-5.png]]
+[[file:zettelkasten.org_20130118_222822_1617Wze-6.png]]
+[[file:zettelkasten.org_20130118_222822_1617Wze-7.png]]
+[[file:zettelkasten.org_20130118_222822_1617Wze-8.png]]
+[[file:zettelkasten.org_20130118_222822_1617Wze-9.png]]
+[[file:zettelkasten.org_20130118_222822_1617Wze-10.png]]
+[[file:zettelkasten.org_20130118_222822_1617Wze-11.png]]
+[[file:zettelkasten.org_20130118_222822_1617Wze-12.png]]
+[[file:zettelkasten.org_20130118_222822_1617Wze-13.png]]
+[[file:zettelkasten.org_20130118_222822_1617Wze-14.png]]
+[[file:zettelkasten.org_20130118_223122_1617j9k-0.png]]
+[[file:zettelkasten.org_20130118_223122_1617j9k-1.png]]
+[[file:zettelkasten.org_20130118_223122_1617j9k-2.png]]
+[[file:zettelkasten.org_20130118_223527_1617wHr.png]]
 *** footer
 #+BEGIN_SRC latex :tangle st-loesung-09.tex
 \end{document}
@@ -1973,18 +2034,29 @@ Sei x3=0 => (2*x4 < 0) => existiert kein x4 das *echt* kleiner ist
 #+END_SRC
 
 ** Zettel-11
-[[~/Dropbox/lo/lo-zettel-11/lo-zettel-11.pdf][lo-zettel-11.pdf]]
-[[~/Dropbox/lo/lo-zettel-11/lo-loesung-11.tex][lo-loesung-11.tex]]
-[[~/Dropbox/lo/lo-zettel-11/lo-loesung-11.pdf][lo-loesung-11.pdf]]
-** Zettel-12
-[[~/Dropbox/lo/lo-zettel-12/lo-zettel-12.pdf][lo-zettel-12.pdf]]
-[[~/Dropbox/lo/lo-zettel-12/lo-loesung-12.tex][lo-loesung-12.tex]]
-[[~/Dropbox/lo/lo-zettel-12/lo-loesung-12.pdf][lo-loesung-12.pdf]]
-** Zettel-13
-[[~/Dropbox/lo/lo-zettel-13/lo-zettel-13.pdf][lo-zettel-13.pdf]]
-[[~/Dropbox/lo/lo-zettel-13/lo-loesung-13.tex][lo-loesung-13.tex]]
-[[~/Dropbox/lo/lo-zettel-13/lo-loesung-13.pdf][lo-loesung-13.pdf]]
+[[file:zettelkasten.org_20130118_230424_1617vbA-0.png]]
+[[file:zettelkasten.org_20130118_230424_1617vbA-1.png]]
+[[file:zettelkasten.org_20130118_230424_1617vbA-2.png]]
+[[file:zettelkasten.org_20130118_230424_1617vbA-3.png]]
+[[file:zettelkasten.org_20130118_230424_1617vbA-4.png]]
+[[file:zettelkasten.org_20130118_230458_16178lG-0.png]]
+[[file:zettelkasten.org_20130118_230458_16178lG-1.png]]
+[[file:zettelkasten.org_20130118_230458_16178lG-2.png]]
+[[file:zettelkasten.org_20130118_230458_16178lG-3.png]]
 
+*** stuff
+[[file:zettelkasten.org_20130118_230348_16179Rx-0.png]]
+[[file:zettelkasten.org_20130118_230348_16179Rx-1.png]]
+[[file:zettelkasten.org_20130118_230348_16179Rx-2.png]]
+[[file:zettelkasten.org_20130118_230348_16179Rx-3.png]]
+[[file:zettelkasten.org_20130118_234235_1617JwM-0.png]]
+
+[[file:zettelkasten.org_20130118_234256_1617W6S-0.png]]
+[[file:zettelkasten.org_20130118_234256_1617W6S-1.png]]
+[[file:zettelkasten.org_20130118_234256_1617W6S-2.png]]
+[[file:zettelkasten.org_20130118_234256_1617W6S-3.png]]
+[[file:zettelkasten.org_20130118_234256_1617W6S-4.png]]
+[[file:zettelkasten.org_20130118_234256_1617W6S-5.png]]
 * Revive Sessions
 - 1 :: Elementare Stochastik Zettel 8
 * Unterhaltung
