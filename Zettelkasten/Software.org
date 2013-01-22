@@ -20,7 +20,8 @@
  + convert pic123.png -resize 10% res_pic.png  :: resizing
  + standby :: sudo /etc/acpi/sleep.sh
  + standby_alternativ :: sudo pm-hibernate / powersave / suspend ...
- + script von überall asuführbar machen :: sh entfernen, bang anfügen, und in /usr/bin verschieben
+ + script von überall asuführbar machen :: sh entfernen, bang(#/bin/bash) anfügen, und in /usr/bin verschieben
+
 ** Standardprogramme
  + Standardprogramme: ~/.locale/share/applications/mimeapps.list
  application/pdf=zathura.desktop

@@ -1,6 +1,6 @@
-#!/bin/sh
-setxkbmap lv
-xmodmap neo_de.xmodmap
+#!/bin/bash
+setxkbmap de
+xmodmap /home/florian/tasta_stuff/neo_de.xmodmap
 xset -r 51
 xmodmap -e 'clear lock'
 xmodmap -e 'clear mod1'
