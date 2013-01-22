@@ -35,6 +35,11 @@
 *** DONE iimage bibliothek o.ä. code raussuchen und auf anpassparkeit prüfen
 *** DONE anforderungen an eigenen Modus sammeln
 *** DONE entsprechenden modus entwickeln ;image slicing
+** TODO Musik Player Einrichten					    :PROJECT:
+*** NEXT google awesome-wm automount Ziel: Festplatte unter festem Namen mounten
+*** TODO Playlists zusammenstellen und in einem Ordner verlinken
+*** TODO Org Mode links für emms möglichkeit suchen
+*** TODO alternative: Helm (/Anything) emms suchen und benutzen
 ** TODO Tags							    :PROJECT:
 *** DONE etags installieren
 *** NEXT google: wie können tags zu den unterschiedlichen dokumentarten generiert werden
@@ -136,11 +141,22 @@ google: emacs+evil+show+mark
 ** TODO prüfen: https://github.com/dgutov/point-stack/blob/master/point-stack.el
 ** NEXT http://sachachua.com/blog/2013/01/emacs-org-display-projects-with-a-few-subtasks-in-the-agenda-view/ lesen
 ** TODO .emacs Datei splitten mit org-babel-load-file in kategorien
+** TODO den offset beim letzten Bildfragment fixen
+** TODO bookmarks für neue todo's beseitigen
+** TODO alternative Tex Konverter testen
 * TODO Todo-Eingang-Studium					    :PROJECT:
-** TODO Induktionsformalitäten neu sortieren
+** TODO Stochastik Aufgabe 2 zusammentragen
+[[file:~/Zettelkasten/zettelkasten.org::st-09-2][aufgabenlink]]
+** TODO Stochastik Aufgabe 3 planen
+[[file:~/Zettelkasten/zettelkasten.org::st-09-3][aufgabenlink]]
+** TODO Stochastik Aufgabe 4 planen
+[[file:zettelkasten.org::st-09-4][aufgabenlink]]
+** DONE Induktionsformalitäten neu sortieren
+   - State "DONE"       from "NEXT"       [2013-01-22 Di 02:16]
  [[file:~/Zettelkasten/zettelkasten.org::FIXME%20th11.1][file:~/Zettelkasten/zettelkasten.org::FIXME th11.1]]
  Entered on [2013-01-16 Mi 14:10]
-** TODO Versuchen, die primitive Rekursivität in Bezug zu bringen
+** DONE Versuchen, die primitive Rekursivität in Bezug zu bringen
+   - State "DONE"       from "TODO"       [2013-01-22 Di 02:16]
  [[file:~/Zettelkasten/zettelkasten.org::FIXME%20th11.2][file:~/Zettelkasten/zettelkasten.org::FIXME th11.2]]
  Entered on [2013-01-16 Mi 14:56]
 ** DONE Fehler mit der vergessenen 0 beheben
@@ -150,18 +166,24 @@ google: emacs+evil+show+mark
 
  passt jetzt, alle anderen müssen übriegens auch noch größer als 0 sein
  ungerade Zahlen werden aber noch nicht erfasst
-** NEXT schnelles googlen ob es keinen besseren Weg fürs Filtern ungerader Zahlen gibt.
+** DONE schnelles googlen ob es keinen besseren Weg fürs Filtern ungerader Zahlen gibt.
+   - State "DONE"       from "NEXT"       [2013-01-22 Di 02:16]
  [[file:~/Zettelkasten/zettelkasten.org::FIXME%20th11.3][file:~/Zettelkasten/zettelkasten.org::FIXME th11.3]]
-** TODO Formalitäten zur vollständigen Induktion sammeln und Fehler beheben
+** DONE Formalitäten zur vollständigen Induktion sammeln und Fehler beheben
+   - State "DONE"       from "NEXT"       [2013-01-22 Di 02:17]
  [[file:zettelkasten.org::FIXME%20th11.1][file:~/Zettelkasten/zettelkasten.org::FIXME th11.1]]
-** TODO abkürzungsdatei auch in tex-file einbinden
-** TODO maximum likelihood schätzer
+** DONE abkürzungsdatei auch in tex-file einbinden
+   - State "DONE"       from "TODO"       [2013-01-22 Di 02:17]
+** DONE maximum likelihood schätzer
+   - State "DONE"       from "TODO"       [2013-01-22 Di 02:17]
  [[file:~/Zettelkasten/zettelkasten.org::*W%C3%B6rterbuch][Wörterbuch]]
  Entered on [2013-01-17 Do 12:30]
-** TODO empirischer Erwartungswert / Varianz / erwartungstreue
+** DONE empirischer Erwartungswert / Varianz / erwartungstreue
+   - State "DONE"       from "TODO"       [2013-01-22 Di 02:17]
  [[file:~/Zettelkasten/zettelkasten.org::*W%C3%B6rterbuch][Wörterbuch]]
  Entered on [2013-01-17 Do 12:31]
-** TODO negative Binomialverteilung / Pascalverteilung
+** DONE negative Binomialverteilung / Pascalverteilung
+   - State "DONE"       from "TODO"       [2013-01-22 Di 02:17]
  [[file:~/Zettelkasten/zettelkasten.org::*W%C3%B6rterbuch][Wörterbuch]]
  Entered on [2013-01-17 Do 12:32]
 * Todo Ausgang

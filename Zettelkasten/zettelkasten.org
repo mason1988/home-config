@@ -136,7 +136,7 @@ Mit N Elementen insgesamt, und M Elementen, die interessant sind und n zügen.
 [[file:zettelkasten.org_20130118_221743_1617VAA-0.png]]
 [[file:zettelkasten.org_20130118_221808_1617iKG-0.png]]
 ** Bedingter Erwartungswert
-A,B Ereignisse; Y Zufallvariable
+   A,B Ereignisse; Y Zufallvariable
 $P(A|B) = \frac{P(A \cap B)}{P(B)}$ Ws A wenn B bekannt
 $P(Y|B) = \frac{E(1_{B} * Y)}{P(B)}$
 [[docview:~/Dropbox/st/s0.pdf::1][Skript]]
@@ -861,7 +861,7 @@ Wenn man die Hypergeometrische Verteilung betrachtet, so stellt man fest dass de
 Wahrscheinlichkeit aufweist. Abgerundet werden muss, weil es sich um eine diskrete Verteilung handelt und wir (hoffentlich) keine gebrochenen Fische aus dem \\
 Wasser ziehen, so dass nur ganze Zahlen eine Wahrscheinlichkeit > 0 haben können. \\
 Setzt man nun: $n = E(Y) \Ri n = X \fr{W}{N} \Ri N = X \fr{W}{n}$ wobei N gemäß der Aufgabenstellung die gesuchte Gesamtanzahl der Fische im Wasser ist, und \\
-$\tau(\mathcal{X}) = X \fr{W}{n}$ unser maximum likelihood Schätzer ist. 
+$\tau(\mathcal{X}) = [X \fr{W}{n}]$ unser maximum likelihood Schätzer ist. 
 #+END_SRC
 **** Beispiel Likelihoodfunktion für Bernoulliverteilung
 [[/home/florian/Zettelkasten/zettelkasten.org_20130118_020344_13098A2S-0.png]]
@@ -918,8 +918,20 @@ $\tau(\mathcal{X}) = X \fr{W}{n}$ unser maximum likelihood Schätzer ist.
 [[file:zettelkasten.org_20130118_205128_1617vNY-10.png]]
 [[file:zettelkasten.org_20130118_205128_1617vNY-11.png]]
 *** Aufgabe 2
+<<st-09-2>>
 #+BEGIN_SRC latex :tangle st-loesung-09.tex
 \subsection{Aufgabe 2}
+\( s^2_n = \fr{1}{n-1}\sum_{i=1}^n(X_i - \bar{X})^2 = \fr{1}{n-1}\sum_{i=1}^n(X_i^2 - 2X_i\bar{X}^2 +\bar{X}^2) \) \\
+\( = \fr{1}{n-1}\sum_{i=1}^n(X_i^2) - 2\bar{X}* \sum_{i=1}^n(X_i)  + \sum_{i=1}^n\bar{X}^2) \) \\
+\( = \fr{1}{n-1}\sum_{i=1}^n(X_i^2) - 2\bar{X} * \sum_{i=1}^n(X_i) + n\bar{X}^2 \) \\
+\( = \fr{1}{n-1}\sum_{i=1}^n(X_i^2) - 2\bar{X} *n\bar{X} + n\bar{X}^2 \) \\
+\( = \fr{1}{n-1}\sum_{i=1}^n(X_i^2) - 2n\bar{X}^2 + n\bar{X}^2 \) \\
+\( = \fr{1}{n-1}\sum_{i=1}^n(X_i^2) - n\bar{X}^2 \) \\
+\( \Ri E(s^2_n) = \fr{1}{n-1}\sum_{i=1}^n(E(X_i^2)) - nE(\bar{X}^2)) \) \\
+Sei nun allgemein $\sigma$ die Standardabweichung und $\mu$ der Erwartungswert, so dass gilt: \(E(X_i^2) = \sigma^2 + \mu^2 \mbox{ und } E(\bar{X}^2) = \fr{\sigma^2}{n} + \mu^2 \) \\
+%\( = \fr{1}{n-1}( E(\sum_{i=1}^n(X_i^2)) - n E((\sum_{i=1}^n(X_i))^2) \) \\
+\( = \fr{1}{n-1}(n(\sigma^2 + \mu^2) - n(\fr{\sigma^2}{n}+\mu^2)) = \fr{1}{n-1}(n\sigma^2-\sigma^2) = \sigma^2\)
+\( \fr{n\sigma^2 - \sigma^2}{n-1} ? \)
 #+END_SRC
 
 #+BEGIN: aufgabenstellung
@@ -928,7 +940,8 @@ $\tau(\mathcal{X}) = X \fr{W}{n}$ unser maximum likelihood Schätzer ist.
 [[/home/florian/Zettelkasten/zettelkasten.org_20130118_005920_13098yqF-2.png]]
 [[/home/florian/Zettelkasten/zettelkasten.org_20130118_005920_13098yqF-3.png]]
 #+END:
-**** stuff
+
+**** Referenzen
 [[file:zettelkasten.org_20130118_214737_16178Xe-0.png]]
 [[file:zettelkasten.org_20130118_214737_16178Xe-1.png]]
 [[file:zettelkasten.org_20130118_214737_16178Xe-2.png]]
@@ -937,7 +950,15 @@ $\tau(\mathcal{X}) = X \fr{W}{n}$ unser maximum likelihood Schätzer ist.
 [[file:zettelkasten.org_20130118_214737_16178Xe-5.png]]
 [[file:zettelkasten.org_20130118_214737_16178Xe-6.png]]
 [[file:zettelkasten.org_20130118_214737_16178Xe-7.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130121_233723_2365oGb-0.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130121_233723_2365oGb-1.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130121_233723_2365oGb-2.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130121_233723_2365oGb-3.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130121_233723_2365oGb-4.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130121_233723_2365oGb-5.png]]
+
 *** Aufgabe 3
+<<st-09-3>>
 #+BEGIN_SRC latex :tangle st-loesung-09.tex
 \subsection{Aufgabe 3}
 #+END_SRC
@@ -951,6 +972,7 @@ $\tau(\mathcal{X}) = X \fr{W}{n}$ unser maximum likelihood Schätzer ist.
 #+END:
 **** stuff
 *** Aufgabe 4
+<<st-09-4>>
 #+BEGIN_SRC latex :tangle st-loesung-09.tex
 \subsection{Aufgabe 4}
 #+END_SRC

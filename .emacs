@@ -368,15 +368,19 @@
 (define-key evil-normal-state-map (kbd "C-ä v") 'revert-buffer)
 
 ;hardcore overwrite
-    (defvar my-keys-minor-mode-map (make-keymap) "my-keys-minor-mode keymap.")
-    
-    (define-key my-keys-minor-mode-map (kbd "M-r") 'windmove-up)
-    (define-key my-keys-minor-mode-map (kbd "M-n") 'windmove-down)
-    (define-key my-keys-minor-mode-map (kbd "M-s") 'windmove-left)
-    (define-key my-keys-minor-mode-map (kbd "M-t") 'windmove-right)
-    (define-key my-keys-minor-mode-map "\M-x" 'execute-extended-command)
-    (define-key my-keys-minor-mode-map (kbd "<f8>") 'bmkp-cycle-this-buffer)
-    
+(defvar my-keys-minor-mode-map (make-keymap) "my-keys-minor-mode keymap.")   
+(define-key my-keys-minor-mode-map (kbd "M-r") 'windmove-up)
+(define-key my-keys-minor-mode-map "\C-r" 'evil-scroll-up)
+(define-key my-keys-minor-mode-map "\C-n" 'evil-scroll-down)
+(define-key my-keys-minor-mode-map (kbd "M-r") 'windmove-up)
+(define-key my-keys-minor-mode-map (kbd "M-n") 'windmove-down)
+(define-key my-keys-minor-mode-map (kbd "M-s") 'windmove-left)
+(define-key my-keys-minor-mode-map (kbd "M-t") 'windmove-right)
+(define-key my-keys-minor-mode-map "\M-x" 'execute-extended-command)
+(define-key my-keys-minor-mode-map (kbd "<f8>") 'bmkp-cycle-this-buffer)
+
+
+
     (define-minor-mode my-keys-minor-mode
           "A minor mode so that my key settings override annoying major modes."
 	      t " my-keys" 'my-keys-minor-mode-map)
