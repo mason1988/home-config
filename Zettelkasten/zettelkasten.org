@@ -211,6 +211,10 @@ $P(Y|B) = \frac{E(1_{B} * Y)}{P(B)}$
 - Cov(X,Y) = E(X*Y) - E(X)E(Y)
 
 ** Wörterbuch
+- fast sichere Konvergenz ::  [[file:201301ad-12522012712rsM.png]] entspricht [[file:201301ad-1253481271242S.png]]
+     alternativ: \( Pr(\lim{n\ri \infty}X_n = X) = 1\)
+- Konvergenz der Wahrscheinlichkeit :: [[file:201301ad-13014912712sfr.png]] entspricht [[file:201301ad-12553512712FBZ.png]] 
+     die Ws dafür, dass der Abstand X_n zu X >= epsilon ist, wird zunehmend kleiner (bis 0)
 - Erwartungswert :: [[file:201301ad-2329314949s0X.png]] = [[file:201301ad-23333749495-d.png]]
 		    für Abwandlung relativer Häufigkeit:  E(X[n])=z => E(X[n]/n)=z/n
 		    E(E[X|Y]) = E(X)
@@ -930,15 +934,15 @@ $\tau(\mathcal{X}) = [X \fr{W}{n}]$ unser maximum likelihood Schätzer ist.
 \( \Ri E(s^2_n) = \fr{1}{n-1}\sum_{i=1}^n(E(X_i^2)) - nE(\bar{X}^2)) \) \\
 Sei nun allgemein $\sigma$ die Standardabweichung und $\mu$ der Erwartungswert, so dass gilt: \(E(X_i^2) = \sigma^2 + \mu^2 \mbox{ und } E(\bar{X}^2) = \fr{\sigma^2}{n} + \mu^2 \) \\
 %\( = \fr{1}{n-1}( E(\sum_{i=1}^n(X_i^2)) - n E((\sum_{i=1}^n(X_i))^2) \) \\
-\( = \fr{1}{n-1}(n(\sigma^2 + \mu^2) - n(\fr{\sigma^2}{n}+\mu^2)) = \fr{1}{n-1}(n\sigma^2-\sigma^2) = \sigma^2\)
-\( \fr{n\sigma^2 - \sigma^2}{n-1} ? \)
+\( = \fr{1}{n-1}(n(\sigma^2 + \mu^2) - n(\fr{\sigma^2}{n}+\mu^2)) = \fr{1}{n-1}(n\sigma^2-\sigma^2) = \sigma^2 = \) Varianz \\
+%\( \fr{n\sigma^2 - \sigma^2}{n-1} ? \)
 #+END_SRC
 
 #+BEGIN: aufgabenstellung
-[[/home/florian/Zettelkasten/zettelkasten.org_20130118_005920_13098yqF-0.png]]
-[[/home/florian/Zettelkasten/zettelkasten.org_20130118_005920_13098yqF-1.png]]
-[[/home/florian/Zettelkasten/zettelkasten.org_20130118_005920_13098yqF-2.png]]
-[[/home/florian/Zettelkasten/zettelkasten.org_20130118_005920_13098yqF-3.png]]
+[[file:zettelkasten.org_20130118_005920_13098yqF-0.png]]
+[[file:zettelkasten.org_20130118_005920_13098yqF-1.png]]
+[[file:zettelkasten.org_20130118_005920_13098yqF-2.png]]
+[[file:zettelkasten.org_20130118_005920_13098yqF-3.png]]
 #+END:
 
 **** Referenzen
@@ -960,13 +964,30 @@ Sei nun allgemein $\sigma$ die Standardabweichung und $\mu$ der Erwartungswert, 
 *** Aufgabe 3
 <<st-09-3>>
 #+BEGIN_SRC latex :tangle st-loesung-09.tex
-\subsection{Aufgabe 3}
-#+END_SRC
+\subsection{Aufgabe 3}.\\
+\subsubsection{a)}.\\
+bla
+\subsubsection{b)}.\\
 
+#+END_SRC
+Ausgehend von Binomialverteilung ergibt sich: n insgesamt, m interessant
+*a)*
+p = Ws für Erfolg
+q = Ws für Misserfolg
+r = Anzahl Erfolge 
+k = Anzahl Misserfolge vor Erfolg r
+n Durchläufe
+=> der r+k'te Durchlauf muss Erfolg sein
+  und bis r+k-1 muss es genau k Misserfolge und r-1 Erfolge gegeben haben
+=> passt
+*b)*
+gesucht sind also die Parameter p (und q) für welche die Pascalverteilung
+die höchste Wahrscheinlichkeit für genau diese Anzahl Erfolge und Misserfolge
+bei r+k = n Durchläufen aufweist
+Für Formel mit p^{r-1} das selbe Prinzip wie bei der Binomialverteilung anwenden?
 #+BEGIN: aufgabenstellung
 [[/home/florian/Zettelkasten/zettelkasten.org_20130118_010008_13098_0L-0.png]]
 [[/home/florian/Zettelkasten/zettelkasten.org_20130118_010008_13098_0L-1.png]]
-[[/home/florian/Zettelkasten/zettelkasten.org_20130118_010008_13098_0L-2.png]]
 [[/home/florian/Zettelkasten/zettelkasten.org_20130118_010032_13098M_R-0.png]]
 [[/home/florian/Zettelkasten/zettelkasten.org_20130118_010032_13098M_R-1.png]]
 #+END:
@@ -975,15 +996,45 @@ Sei nun allgemein $\sigma$ die Standardabweichung und $\mu$ der Erwartungswert, 
 <<st-09-4>>
 #+BEGIN_SRC latex :tangle st-loesung-09.tex
 \subsection{Aufgabe 4}
+\subsubsection{a)}.\\
+Fast sichere Konvergenz: \P({\o in \O | X_n
+Sei $\e$ fest aber echt größer 0.
+\subsubsection{b)}.\\
 #+END_SRC
+*a)*
+as = almost sure => Im Grunde klassische Konvergenz (differenz sinkt beliebig, für genügend kleine epsilon)
+   fast sicher: Die Warscheinlichkeit für diese Konvergenz ist = 1
 
+- fast sichere Konvergenz ::  [[file:201301ad-12522012712rsM.png]] entspricht [[file:201301ad-1253481271242S.png]]
+     alternativ: \( Pr(\lim{n\ri \infty}X_n = X) = 1\)
+   =>==================
+\( \A \e > 0 : \E n_0: \A n \geq n_0: P(|X_n - X| \leq \e) = 1 \)
+bzw.: \( \A \e > 0 : \E n_0: \A n > n_0: P(|X_n - X| < \e) = 1 \)
+\( \Ri \A \e > 0 : \E n_0: \A n > n_0: P(|X_n - X| \geq \e) = 0 \)
+\( \Ri \lim{n\ri \infty}Pr(|X_n - X| \geq \e) = 0 \)
+ passt
+   =>=================
+- Konvergenz der Wahrscheinlichkeit :: [[file:201301ad-13014912712sfr.png]] entspricht [[file:201301ad-12553512712FBZ.png]] 
+     die Ws dafür, dass der Abstand X_n zu X >= epsilon ist, wird zunehmend kleiner (bis 0)
+
+*b)*
+$X_n \ov{Law}{\lori} X$  (Law = Gesetz, Gesetz der großen/kleinen Zahlen?)
+= $X_n \ov{d}{\lori}X ?$ (konvergenz distribution)
+
+[[/home/florian/Zettelkasten/zettelkasten.org_20130122_142226_1271275n-0.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130122_142226_1271275n-1.png]]
+
+[[/home/florian/Zettelkasten/zettelkasten.org_20130122_142226_1271275n-2.png]]
+[[http://en.wikipedia.org/wiki/Convergence_of_random_variables][wiki-link]]
+=> legt nahe, dass Law-Konvergenz der Distribution entspricht
+ 
 #+BEGIN: aufgabenstellung
 [[/home/florian/Zettelkasten/zettelkasten.org_20130118_010103_13098ZJY-0.png]]
 [[/home/florian/Zettelkasten/zettelkasten.org_20130118_010103_13098ZJY-1.png]]
 [[/home/florian/Zettelkasten/zettelkasten.org_20130118_010103_13098ZJY-2.png]]
 [[/home/florian/Zettelkasten/zettelkasten.org_20130118_010103_13098ZJY-3.png]]
 #+END:
-**** stuff
+**** Referenzen
 [[file:zettelkasten.org_20130118_222111_1617vUM.png]]
 [[file:zettelkasten.org_20130118_222141_16178eS.png]]
 [[file:zettelkasten.org_20130118_222721_1617JpY-0.png]]
@@ -1693,6 +1744,113 @@ jeden Fall zu finden. Vorallem können auch stets andere auf dem Computer instal
 Bei Abhängigkeiten von externen Modulen besteht zum Beispiel auch stets das Risiko, dass diese geupdatet werden und das Programm somit
 nicht mehr benutzbar machen. In jedem Fall gibt es vollkommen unabhängig davon, wie vollständig und gut die Tests waren, immer einen Nutzer der 
 es schafft, einen Weg zu finden um doch alles zum Absturz zu bringen.
+** Skript
+*** Softwareprozesse
+**** Wasserfallmodell
+     * viele Meilensteine (System Requirements) usw. klären und jeweils validieren
+     * Probleme
+       - sehr starr, Änderungen nur schwer möglich
+       - Änderungen nur schwer möglich
+       - Risiko, sich in falsche Richtung zu entwickeln
+     * Vorteile
+       - Doku für klare Phasen 
+       - Verantwortlichkeit schnell
+     * Anpassungen als V-Modell
+       - V förmig
+**** Iterativ
+     * Prototypen (schnell ausführbares entwickeln und testen)
+     * inkrementelle entwicklung (bausteine werden stück für Stück entwickelt
+     * unified Process - Prozesphasen:
+       - Anfang: grundlegender Umfang wird geklärt
+       - Vertiefung: grundlegende Architektur, Findung Risiken
+       - Konstruktion (iterativ, viele Releases)
+       - Inbetriebnahme (letztendliche Einführung bei Kunde)
+       - Vorteile:
+	 - man kann noch sehr spät Anpassungen vornehmen
+**** Agile 
+     * Extreme Programming
+       - iterativ entwickelt
+       - wenig analyse/entwurf
+       - prototypen
+       - tests statt spezifikatin
+       - ständige kommunikation manager <=> entwickler
+       - gemeinsame standards, gemeinsames eigentum am code
+     => Kunde wird eng eingebunden
+Pair Programming = grundsätzlich mit mehreren leuten
+  zusammen programmieren => Kompetenz verteilt sich
+*** Konfigurationsmanagement
+    * Problematiken:
+      - wo liegen Dateien
+      - wer hat welche Rechte
+      - generelles Synchronisationsproblem
+      -> die unterschiedlichen Merge Mechanismen
+    * Stichwort Git / SVN -> Merging
+    * Probleme entstehen bei Abhängigkeiten und
+        gleichzeitiger bearbeitung
+    * Branches sinnvoll für Variantenerstellung (os etc)
+    * Typischer Workflow: update, neue dateien adden, commiten
+        status für diff und resolve für konflikte
+    * svn besitzt nicht den remote kram(automatisch)
+    * Vorteile Git: 
+      - kein zentraler server
+      - komplette kopie lokal => sehr schnell
+      - Förderung vieler Branches
+    * Git workflow halt der übliche
+    * Tickets
+      - speichern und verwalten probleme
+      - wer ist verantwortlich -> nimmt entgegen
+      - wie schnell updates? (ticket gelöst etc.)
+      - Vorgehen:
+	1. meldung komt an
+	2. annehmen
+	3. prüfen ob fehler stimmt
+	4. projektmanager weißt entwickler zu
+	5. entwickler stellt rückfragen
+	6. entwickler behebt fehler
+	7. neuer release (opt: meldung an kunde)
+** Projectmanagement
+   * Aufgaben Projektmanagement
+     - Erstellung Angebot
+     - Zeitplanung
+     - Kostenkalkulation
+     - Überwachung
+     - Personal
+     - Präsentieren
+   * Projektplan: Ziele, Teams, Risiko, Aufteilung, Zeitplan, Überwachungsinstrumente
+   * Meilenstein(erkennbarer Endpunkt Teilaufgabe) / Lieferschritt (Resultat für Kunden)
+   * Organisationsarten
+     - Stabs
+       - hierarchische Abteilungen
+     - Matrix
+       - Abteilung und Projektleiter unabhängig
+	 => Flexibilität
+     - reine Projektorganisation
+       - nur Projekte als Struktureinheiten
+	 => eine zentrale Abteilung
+   * Zeitplanung
+     - schätzt Zeit/ Ressourcen, bringt Reihenfolge u. Parallelität
+     - Zeitbuffer
+     - Erfährung nötig
+     - blockaden durch abhängigkeit vermeiden, bzw. priorität erhöhen
+   * Ursachen Terminprobleme
+     - Personalmangel
+     - fehlende Qualifikation
+     - unvorhergesehenes, schlechte Einschätzung
+     - zusätzliche Anforderungen
+   * Maßnahmen, Terminprobleme
+     - mehr Personal
+     - nicht!: weniger testen, arbeiten länger arbeiten lassen
+     - outsourcing
+   * Risikomanagement
+     - erkrankungen, nicht funktionierende externe komponenten, wirtschaftliche probleme
+     - ablauf:
+       1. Risikoerkennung
+       2. Risikoanalyse (priorisierung)
+       3. Risikoplanung (notfallpläne)
+       4. Risikoüberwachung
+    * erkennung durch brainstorming durch team
+    * vermeidung risiken
+      - frühe prototypen, saubere Planung, starke Teams, wiederverwendung funktionierender system
 * Logik
 ** Herausragende Quellen
 [[http://homepage.univie.ac.at/guenther.eder/Grundkurs_Logik.htm][Grundkurs Logik Uni Wien]]
@@ -2056,21 +2214,24 @@ Sei x3=0 => (2*x4 < 0) => existiert kein x4 das *echt* kleiner ist
 #+END_SRC
 
 ** Zettel-11
+*** Aufgabe 37
+[[file:zettelkasten.org_20130118_230348_16179Rx-0.png]]
+[[file:zettelkasten.org_20130118_230348_16179Rx-1.png]]
+[[file:zettelkasten.org_20130118_230348_16179Rx-2.png]]
+[[file:zettelkasten.org_20130118_230348_16179Rx-3.png]]
+*** Aufgabe 38
 [[file:zettelkasten.org_20130118_230424_1617vbA-0.png]]
 [[file:zettelkasten.org_20130118_230424_1617vbA-1.png]]
 [[file:zettelkasten.org_20130118_230424_1617vbA-2.png]]
 [[file:zettelkasten.org_20130118_230424_1617vbA-3.png]]
 [[file:zettelkasten.org_20130118_230424_1617vbA-4.png]]
+*** Aufgabe 39
 [[file:zettelkasten.org_20130118_230458_16178lG-0.png]]
 [[file:zettelkasten.org_20130118_230458_16178lG-1.png]]
 [[file:zettelkasten.org_20130118_230458_16178lG-2.png]]
 [[file:zettelkasten.org_20130118_230458_16178lG-3.png]]
 
 *** stuff
-[[file:zettelkasten.org_20130118_230348_16179Rx-0.png]]
-[[file:zettelkasten.org_20130118_230348_16179Rx-1.png]]
-[[file:zettelkasten.org_20130118_230348_16179Rx-2.png]]
-[[file:zettelkasten.org_20130118_230348_16179Rx-3.png]]
 [[file:zettelkasten.org_20130118_234235_1617JwM-0.png]]
 
 [[file:zettelkasten.org_20130118_234256_1617W6S-0.png]]
