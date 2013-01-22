@@ -122,6 +122,9 @@ zur Mitte hin, steigt die Wahrscheinlichkeit (exponentiell)
 In eine Richtung entgegen unendlich steigt die Wahrscheinlichkeit
 *** Binomialverteilung
     Gibt nur 2 Ergebnisse, auf die die Wahrscheinlichkeit verteilt wird
+    dabei geht es um k Erfolge bei n durchläufen mit einer Erfolgswahrscheinlichkeit
+    p und Verlustws q
+    $P(X=k) = \binom{n}{k}p^kq^{n-k}$
 *** Poissonverteilung
       zur Mitte hin, steigt die Wahrscheinlichkeit. (nicht exponentiell => runder kopf
 *** Hypergeometrische Verteilung
@@ -966,7 +969,17 @@ Sei nun allgemein $\sigma$ die Standardabweichung und $\mu$ der Erwartungswert, 
 #+BEGIN_SRC latex :tangle st-loesung-09.tex
 \subsection{Aufgabe 3}.\\
 \subsubsection{a)}.\\
-bla
+Für die gewöhnliche Binomialverteilung gilt: \\
+\( P(X=k) = \binom{n}{k}p^kq^{n-k} \) für k Erfolge bei n Versuchen und Erfolgswahrscheinlichkeit p\\
+Für die gewünschten Ereignisse muss es zunächst bis zum (r+k-1)'ten Versuch genau k Misserfolge und \\
+r-1 Erfolge gegeben haben und anschließend muss der daurauf folgende (r+k)'te Durchlauf ein Erfolg sein \\
+so dass wir dann genau auf r Erfolge und k Misserfolge kommen und alle Misserfolge bis dahin vor dem \\
+(r+k)'ten Versuch liegen. \\
+Setzt man nun in die Binomialverteilung ein und interpretiert die Misserfolge als gewünschtes \\
+Ergebnis(also Erfolge in der Formel der Binomialverteilung) so erhält man:
+ \( \binom{k+r-1}{k}p^{k+r-1 - k}q^k = \binom{k+r-1}{k}p^{r-1}q^k \) als Wahrscheinlichkeit \\
+für den gewünschten Zustand bis zum (k+r-1)'ten Versuch und schließlich für den (k+r)'ten Versuch
+aufgrund der Unabhängigkeit der Versuche (Bernoulli Experiment): \( f(k;r,p) = \binom{k+r-1}{k}p^{r-1}q^k * p = \binom{k+r-1}{k}p^rq^k \)\\ 
 \subsubsection{b)}.\\
 
 #+END_SRC
@@ -985,6 +998,8 @@ gesucht sind also die Parameter p (und q) für welche die Pascalverteilung
 die höchste Wahrscheinlichkeit für genau diese Anzahl Erfolge und Misserfolge
 bei r+k = n Durchläufen aufweist
 Für Formel mit p^{r-1} das selbe Prinzip wie bei der Binomialverteilung anwenden?
+
+Die Wahrscheinlichkeit für einen 
 #+BEGIN: aufgabenstellung
 [[/home/florian/Zettelkasten/zettelkasten.org_20130118_010008_13098_0L-0.png]]
 [[/home/florian/Zettelkasten/zettelkasten.org_20130118_010008_13098_0L-1.png]]

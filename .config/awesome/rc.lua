@@ -441,8 +441,8 @@ run_once("synapse",nil,1)
 run_once("xfce4-power-manager", nil, 1)
 
 -- awful.util.spawn_with_shell("xmodmap ~/tasta_stuff/neo_de.xmodmap")
-run_once("keynav",nil,1)
 run_once("install_tasta",nil,1)
 run_once("caffeine","-a",1)
+awful.util.spawn_with_shell("keynav")
 ----------------------------- ende modifikation
 

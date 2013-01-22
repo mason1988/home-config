@@ -186,6 +186,9 @@ google: emacs+evil+show+mark
    - State "DONE"       from "TODO"       [2013-01-22 Di 02:17]
  [[file:~/Zettelkasten/zettelkasten.org::*W%C3%B6rterbuch][Wörterbuch]]
  Entered on [2013-01-17 Do 12:32]
+** TODO Verteilungen auf Whiteboards übertragen
+ [[file:~/Zettelkasten/zettelkasten.org::*Verteilungen][Verteilungen]]
+ Entered on [2013-01-22 Di 18:05]
 * Todo Ausgang
 ** DONE gnus wieder für die mails einrichten
 ** DONE git: leere commits abschicken

@@ -21,7 +21,10 @@
  + standby :: sudo /etc/acpi/sleep.sh
  + standby_alternativ :: sudo pm-hibernate / powersave / suspend ...
  + script von überall asuführbar machen :: sh entfernen, bang(#/bin/bash) anfügen, und in /usr/bin verschieben
-
+** mounten
+- sudo modprobe usb-storage 
+  dann werden die festplatten erkannt
+- /etc/modules
 ** Standardprogramme
  + Standardprogramme: ~/.locale/share/applications/mimeapps.list
  application/pdf=zathura.desktop
