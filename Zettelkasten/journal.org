@@ -1,0 +1,7 @@
+* <2013-01-22 Di>
+Im Moment wird emacs viel zu selten genutzt. Das Problem ist eindeutig auch die überfordernde Komplexität. Zur Zeit kann man sich nirgendwo darauf verlassen, dass es einfach funktioniert, so dass immer wieder eine Flucht in andere Software stattfindet. 
+Dieses Problem könnte man eindämmen, in dem man einerseits klare Bugs auflistet, andererseits aber auch einfach als mangelhaft empfundene Workflows aufdeckt und für diese eine feste Routine erarbeitet.
+Zur Zeit mangelhaft ist z.B. der Musikplayer. Es fehlt eine zentrale Übersicht an der man sich orientieren könnte. Darüber hinaus müssen auch jedes mal viel zu lange Befehle eingegeben werden und wenn davor auch noch das Laufwerk gemounted werden muss, macht das einfach keinen Spaß mehr.
+Auch das Todo System ist momentan noch nicht wirklich als Trusted System benutzbar, da sich für das erstellen und abarbeiten von Todo's noch keine echte Routine gefunden hat. Die Shortcuts sind auch noch nicht eintrainiert und so macht es wiederrum wenig Sinn neue Shortcuts einzurichten.
+Das generelle hin- und herschalten innerhalb einer Datei funktioniert noch nicht flüssig. Ebenso das konvertieren zu Latex, bzw. wann etwas wo hin kommt und auf welche Art und Weise konvertiert wird. 
+Was wirklich am meisten fehlen würde wäre eine Routine, um die akutesten Misstände in Emacs zu beheben. Das Todosystem ist dafür im Moment einfach zu chaotisch, bzw. wird auch zu wenig benutzt.
