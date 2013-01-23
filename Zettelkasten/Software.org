@@ -23,6 +23,13 @@
  + script von überall asuführbar machen :: sh entfernen, bang(#/bin/bash) anfügen, und in /usr/bin verschieben
 ** standby
 sudo chmod u+s /usr/sbin/pm-suspend
+sudo visudo
+   und da:
+florian ALL = NOPASSWD: /usr/sbin/pm-hibernate
+florian ALL = NOPASSWD: /usr/sbin/pm-suspend
+
+immernoch sudo eingeben, aber kein passwort mehr
+pm-suspend kann dann einfach in synapse eingegeben werden
 ** mounten
 - sudo modprobe usb-storage 
   dann werden die festplatten erkannt
