@@ -229,3 +229,4 @@ compat*
 .emacs.d/thumbs/
 /.config/caffeine/log
 /.config/caffeine/whitelist.txt
+/.keynavrc.swp

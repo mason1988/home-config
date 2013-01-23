@@ -4,6 +4,7 @@
 # --
 #+BEGIN_SRC latex :tangle ${1:st}-loesung-${2:08}.tex
 \\documentclass[11pt]{amsart}
+\\input{commands.tex}
 \\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
 \\title{Zettel $2 }
 \\author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}

@@ -36,8 +36,9 @@
 *** DONE anforderungen an eigenen Modus sammeln
 *** DONE entsprechenden modus entwickeln ;image slicing
 ** TODO Musik Player Einrichten					    :PROJECT:
-*** NEXT google awesome-wm automount Ziel: Festplatte unter festem Namen mounten
-*** TODO Playlists zusammenstellen und in einem Ordner verlinken
+*** DONE google awesome-wm automount Ziel: Festplatte unter festem Namen mounten
+    - State "DONE"       from "NEXT"       [2013-01-22 Di 19:50]
+*** NEXT Playlists zusammenstellen und in einem Ordner verlinken
 *** TODO Org Mode links für emms möglichkeit suchen
 *** TODO alternative: Helm (/Anything) emms suchen und benutzen
 ** TODO Tags							    :PROJECT:

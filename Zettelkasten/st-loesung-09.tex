@@ -1,51 +1,73 @@
 
 \documentclass[11pt]{amsart}
-\usepackage[utf8]{inputenc}
-\usepackage{amssymb,amsmath}
-\usepackage{verbatim}
-\usepackage{color}
-\usepackage{geometry}
+\input{commands.tex}
 \geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
-\usepackage{amsthm}
-\usepackage{stmaryrd}
-\usepackage{graphicx}
-
-%\includegraphics{?} setzt bild ein
-%\ref{labelname} erstellt link zu labelname
-%\label{labelname} kann einfach irgendwo drangesetz werden
-
-\newtheorem{defi}{Definition}
-\newtheorem{axiom}{Axiom}
-\newtheorem{nota}{Notation}
-\newtheorem{prop}{Proposition}
-\newtheorem{satz}{Satz}
-\newtheorem{umf}{Umformung}
-
-\newenvironment{beweis}{\par\begingroup%
-\settowidth{\leftskip}{\textsc{Beweis:~}}%
-\noindent\llap{\textsc{Beweis:~}}}{\hfill$\Box$\par\endgroup}
-
-\renewcommand{\baselinestretch}{1}
-\newcommand{\words}{\Sigma^* \backslash \{\epsilon\}}
-\newcommand{\etrans}[1]{\bar{\delta}(#1)}
-\renewcommand{\P}{\mathbb{P}}
-
-\title{Zettel 09}
+\title{Zettel 09 }
 \author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
-%\date{} % Activate to display a given date or no date (if empty),
-% otherwise the current date is printed 
-
 \begin{document}
 \maketitle
 
-\subsection{Aufgabe 1}
+\subsection*{Aufgabe 1}
 
+Es handelt sich hierbei um eine Hypergeometrische Verteilung. Gesucht ist der Schätzer, mit dem unsere Stichprobe die höchste Wahrscheinlichkeit aufweist.\\
+Sei Y nun die Zufallsvariable, für die Anzahl der markierten Fische im 2. Fang. Als Erwartungswert ergibt sich: $E(Y) = X \fr{W}{N}$. \\
+Wenn man die Hypergeometrische Verteilung betrachtet, so stellt man fest dass der auf eine ganze Zahl abgerundete Erwartungswert auch stets die höchste \\
+Wahrscheinlichkeit aufweist. Abgerundet werden muss, weil es sich um eine diskrete Verteilung handelt und wir (hoffentlich) keine gebrochenen Fische aus dem \\
+Wasser ziehen, so dass nur ganze Zahlen eine Wahrscheinlichkeit > 0 haben können. \\
+Setzt man nun: $n = E(Y) \Ri n = X \fr{W}{N} \Ri N = X \fr{W}{n}$ wobei N gemäß der Aufgabenstellung die gesuchte Gesamtanzahl der Fische im Wasser ist, und \\
+$\tau(\mathcal{X}) = [X \fr{W}{n}]$ unser maximum likelihood Schätzer ist.
 
+\subsection*{Aufgabe 2}
+\( s^2_n = \fr{1}{n-1}\sum_{i=1}^n(X_i - \bar{X})^2 = \fr{1}{n-1}\sum_{i=1}^n(X_i^2 - 2X_i\bar{X}^2 +\bar{X}^2) \) \\
+\( = \fr{1}{n-1}\sum_{i=1}^n(X_i^2) - 2\bar{X}* \sum_{i=1}^n(X_i)  + \sum_{i=1}^n\bar{X}^2) \) \\
+\( = \fr{1}{n-1}\sum_{i=1}^n(X_i^2) - 2\bar{X} * \sum_{i=1}^n(X_i) + n\bar{X}^2 \) \\
+\( = \fr{1}{n-1}\sum_{i=1}^n(X_i^2) - 2\bar{X} *n\bar{X} + n\bar{X}^2 \) \\
+\( = \fr{1}{n-1}\sum_{i=1}^n(X_i^2) - 2n\bar{X}^2 + n\bar{X}^2 \) \\
+\( = \fr{1}{n-1}\sum_{i=1}^n(X_i^2) - n\bar{X}^2 \) \\
+\( \Ri E(s^2_n) = \fr{1}{n-1}\sum_{i=1}^n(E(X_i^2)) - nE(\bar{X}^2)) \) \\
+Sei nun allgemein $\sigma$ die Standardabweichung und $\mu$ der Erwartungswert, so dass gilt: \(E(X_i^2) = \sigma^2 + \mu^2 \mbox{ und } E(\bar{X}^2) = \fr{\sigma^2}{n} + \mu^2 \) \\
+%\( = \fr{1}{n-1}( E(\sum_{i=1}^n(X_i^2)) - n E((\sum_{i=1}^n(X_i))^2) \) \\
+\( = \fr{1}{n-1}(n(\sigma^2 + \mu^2) - n(\fr{\sigma^2}{n}+\mu^2)) = \fr{1}{n-1}(n\sigma^2-\sigma^2) = \sigma^2 = \) Varianz \\
+%\( \fr{n\sigma^2 - \sigma^2}{n-1} ? \)
+\newpage
+\subsection*{Aufgabe 3}
+\subsubsection*{a)}.\\
+Für die gewöhnliche Binomialverteilung gilt: \\
+\( P(X=k) = \binom{n}{k}p^kq^{n-k} \) für k Erfolge bei n Versuchen und Erfolgswahrscheinlichkeit p\\
+Für die gewünschten Ereignisse muss es zunächst bis zum (r+k-1)'ten Versuch genau k Misserfolge und \\
+r-1 Erfolge gegeben haben und anschließend muss der daurauf folgende (r+k)'te Durchlauf ein Erfolg sein \\
+so dass wir dann genau auf r Erfolge und k Misserfolge kommen und alle Misserfolge bis dahin vor dem \\
+(r+k)'ten Versuch liegen. \\
+Setzt man nun in die Binomialverteilung ein und interpretiert die Misserfolge als gewünschtes \\
+Ergebnis(also Erfolge in der Formel der Binomialverteilung) so erhält man:
+ \( \binom{k+r-1}{k}p^{k+r-1 - k}q^k = \binom{k+r-1}{k}p^{r-1}q^k \) als Wahrscheinlichkeit \\
+für den gewünschten Zustand bis zum (k+r-1)'ten Versuch und schließlich für den (k+r)'ten Versuch
+aufgrund der Unabhängigkeit der Versuche (Bernoulli Experiment): \( f(k;r,p) = \binom{k+r-1}{k}p^{r-1}q^k * p = \binom{k+r-1}{k}p^rq^k \)\\ 
+\subsubsection*{b)}.\\
+Es handelt sich auch bei dieser Aufgabe um die negative Binomialverteilung: \( f(x;r,p) = \binom{x + r - 1}{x}p^{r}(1-p)^{x} \) \\
+Gesucht ist der Maximum-Likelihood Schätzer für die Erfolgswahrscheinlichkeit (p) also $\bar{p}$ \\
+Es gilt: \( ln(f(x;r,p)) = ln\binom{x+r-1}{x} + r*ln(p) + x(ln(1-p)) \) , wobei es sich also um die Logarithmusfunktion handelt, welche \\
+am selben Punkt maximal wird, wie f(x;r,p) \\
+Die erste Ableitung für p von dieser Funktion ist: \( ln(f(x;r,p))' = 0 + \fr{r}{p} - \fr{x}{1-p} = \fr{r}{p} - \f{x}{1-p} \) \\
+Sei nun: \( \fr{r}{p} - \fr{x}{1-p} = 0 \Lri \fr{rp(1-p)}{p} - \fr{xp(1-p)}{1-p} = 0 \Lri r - rp - xp = 0 \Lri rp + xp = r \Lri p = \fr{r}{r+x} \) \\
+$\Ri$ Der Maximum-Likelihood-Schätzer ist also $\bar{p} = \fr{r}{r+x}$ \\
+Sei nun n = r+x, also die Anzahl der Durchläufe. Es gilt nun: \( E(\fr{r}{r+x}) = E(\fr{r}{n}) = \fr{1}{n}E(r) = \fr{1}{n}n*p = \fr{np}{n} = p \) \\
+$\Ri$ Der Schätzer ist Erwartungstreu.
 
-\subsection{Aufgabe 2}
-
-\subsection{Aufgabe 3}
-
-\subsection{Aufgabe 4}
+\subsection*{Aufgabe 4}
+\subsubsection*{a)}.\\
+Aus der Definion für fast sichere Konvergenz folgt: \\
+\( \A \e > 0 : \E n_0: \A n \geq n_0: P(|X_n - X| \leq \e) = 1 \) \\
+bzw.: \( \A \e > 0 : \E n_0: \A n > n_0: P(|X_n - X| < \e) = 1 \) \\
+\( \Ri \A \e > 0 : \E n_0: \A n > n_0: P(|X_n - X| \geq \e) = 0 \) \\
+\( \Ri \lim{n\ri \infty}P(|X_n - X| \geq \e) = 0 \) \\
+\( \Ri X_n \ov{\P}{\lori} X \)
+\subsubsection*{b)}.\\
+\(X_n \ov{\P}{\lori} X \) \\
+\( \Ri \lim{n\ri \infty}P(|X_n - X| \geq \e) = 0 \) \\
+$\Ri$ Für genügend große n wird der Abstand zwischen $X_n$ und $X$ beliebig klein \\
+$\Ri$ Für genügend große n wird der Abstand zwischen $P(X_n \leq x)$ und $P(X \leq x)$ beliebig klein \\ 
+\( \Ri \A x:P(X \leq x) stetig \Ri \lim{n\ri \infty}P(X_n \leq x) = P(X \leq x) \) \\
+\( \Ri X_n \ov{Law}{\lori} X \)
 
 \end{document}
