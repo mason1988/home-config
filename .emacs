@@ -420,4 +420,4 @@
 (require 'slime)
 
 (require 'org-mode-config)
-
+(require 'multi-eshell)

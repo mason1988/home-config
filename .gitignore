@@ -230,3 +230,5 @@ compat*
 /.config/caffeine/log
 /.config/caffeine/whitelist.txt
 /.keynavrc.swp
+/.config/awesome/.rc.lua.swo
+/.config/awesome/.rc.lua.swp
