@@ -21,6 +21,8 @@
  + standby :: sudo /etc/acpi/sleep.sh
  + standby_alternativ :: sudo pm-hibernate / powersave / suspend ...
  + script von überall asuführbar machen :: sh entfernen, bang(#/bin/bash) anfügen, und in /usr/bin verschieben
+** standby
+sudo chmod u+s /usr/sbin/pm-suspend
 ** mounten
 - sudo modprobe usb-storage 
   dann werden die festplatten erkannt
