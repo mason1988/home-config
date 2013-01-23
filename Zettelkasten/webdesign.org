@@ -1,0 +1,52 @@
+* hilfreiche Links
+http://www.mandapanda.net/lerntechnik/masterplan/
+http://www.brainboard.eu/phpbb/index.php?sid=ec53546b32cb9134ec7b5c4b77a41e54
+* Layout
+* Content
+** Mnemotechniken
+*** Listen / Begriffe
+- Loci Methode (einfach wahllos mit Orten verknüpfen)
+     (http://www.mandapanda.net/lerntechnik/locitechnik/)
+     (http://homeworktips.about.com/od/homeworkhelp/a/loci.htm)
+- Gedächntispalast (Loci Methode mit fiktivem Palast)(http://www.wikihow.com/Build-a-Memory-Palace)
+- zusammenhängende geschichten, aufeinanderfolgende assoziative verknüpfungen (http://www.mandapanda.net/lerntechnik/story-technik/)
+*** Zahlen
+#+Begin: links
+http://litemind.com/major-system/
+#+End
+- Majorsystem  (Ziffern und Buchstaben verknüpfen)(siehe links)
+- erweitertes Majorsystem (feste Worte für feste Zahlen)(siehe links)
+** Digitale Unterstützungen
+#+Begin: links
+http://www.howtogeek.com/114794/the-best-apps-and-cloud-services-for-taking-storing-and-sharing-notes/
+#+End:
+- Dropbox(http://www.howtogeek.com/howto/16310/user-guide-to-dropbox-shared-folders/)
+- OneNote (siehe links)
+- Synchronisation der OfficeSuite generell 
+- LaTeX(http://floppycode.blogspot.de/2011/09/latex.html)
+- Git/Svn -> Versionskontrollsysteme(lieber nur svn, git ist zu komplex)
+  (http://svnbook.red-bean.com/nightly/en/svn.intro.quickstart.html)
+- desktopwiki, z.B. zimwiki, tinywiki usw (siehe links)
+- evernote (siehe links)
+** Notizen
+#+Begin: links
+http://arbeitsblaetter.stangl-taller.at/LERNTECHNIK/Mitschrift.shtml
+http://en.wikipedia.org/wiki/Note-taking
+#+End:
+- Cornell Methode (http://denkvieh.blogspot.de/2011/10/cornell-notes.html)
+- Mindmaps (http://www.novamind.com/mind-mapping/note-taking/)
+** Schnelles Lesen
+- Photoreading(http://web.archive.org/web/20100327144104/http://www.howtoflo.de/2009/09/photoreading/)
+- klassisches Speed Reading(http://web.archive.org/web/20091111231617/http://www.howtoflo.de/2009/08/speed-reading-%E2%80%93-die-fahigkeit-schneller-zu-lesen-als-andere/)
+** Kopfrechnen
+- kreuzmultiplikation (http://primzahlen.zeta24.com/de/kopfrechnen_multiplikation.php)
+- addieren (http://primzahlen.zeta24.com/de/kopfrechnen_addition.php)
+- fingerrechnen bis 100 (statt bis 10) (https://docs.google.com/viewer?a=v&q=cache:119DcXeJVNQJ:lesen-lernen.info/attachments/File/Microsoft_Word_-_Fingerrechnen.pdf+fingerrechnen+bis+100&hl=en&pid=bl&srcid=ADGEESh1ksUjUMti54zT0YNGwRy3QKDkEsw3G5n8hWVSnwn-on3xIDKyCw2bh9jr-ryDoWi7-uaqfCQEBqOcSpKX8ejD5eva6wakvyn_T5t7q3xR7U96uAwyQa4PggzxrLpsnv1SuE8C&sig=AHIEtbQ0_Is76unOTA-O22H8Uv49WJsoTA)
+** mentale Fitniss allgemein
+- Training (mit falscher Hand zähne putzen und son scheiß)(http://uk.askmen.com/sports/health_200/215_mens_health.html)
+  - zählen im kopf (http://denkvieh.blogspot.de/2011/08/zahlen-im-kopf.html)
+- Ernährung (bananen, studentenfutter -> nüsse, rousinen etc)(http://www.dailymail.co.uk/health/article-1276881/The-brain-diet-Eating-right-foods-improve-memory-lift-mood-help-concentrate-longer.html)
+- allgemeine tipps (sportliche betätigung, ausreichend schlaf und bla) (http://www.lifehack.org/articles/productivity/10-tips-for-razor-sharp-concentration.html)
+** Zeitmanagement
+- Pomodori Technik (20m minuten intervalle) (http://en.wikipedia.org/wiki/Pomodoro_Technique)
+- gtd (grundprinzipien -> next steps festlegen etc.)(http://schoepfertum.blogspot.de/2011/08/getting-things-done.html)

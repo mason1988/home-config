@@ -1,0 +1,5 @@
+
+(setq eshell-prompt-function
+      (lambda ()
+        (concat (eshell/pwd) "\n$"))
+      eshell-prompt-regexp (concat "^" (regexp-quote "$")))

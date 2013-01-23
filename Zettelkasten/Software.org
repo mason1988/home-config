@@ -1,3 +1,115 @@
+* Projekte
+** TODO Emacs Config Aufräumen                                      :PROJECT:
+*** DONE überflüssige keymapping dateien entfernen
+    - State "DONE"       from "NEXT"       [2013-01-23 Mi 13:21]
+*** DONE nicht mehr benutzte dateien in .emacs.d löschen
+    - State "DONE"       from "TODO"       [2013-01-23 Mi 13:21]
+*** NEXT org babel alles laden lassen
+*** TODO alle shortcuts in .emacs zusammenfassen
+*** DONE funktionen in .emacs auslagern
+    CLOCK: [2013-01-14 Mo 19:59]--[2013-01-14 Mo 20:11] =>  0:12
+*** TODO unnötige keybindings entfernen
+*** DONE in bytecompiling einlesen
+*** DONE alles bytecompilen
+** TODO Org-Mode Bilder						    :PROJECT:
+*** NEXT Möglichkeiten prüfen um informationen/texte einem konkreten Header zuzuordnen
+*** TODO Möglichkeiten sammeln, zum zeilenweisen auslesen und splitten bei trennzeichene
+*** TODO beim link erstellen eben jene information in extra ast unterbringen
+*** TODO 2. löschenroutine, welche nach dem löschen eben diesen wert wieder ausliest
+*** DONE Funktion bzw. Regex um links und die darin enthaltenen Bilder zu identifizieren
+    \\[\\[\\(.*\\)\\]\\]  catched die links
+    search-forward-regexp such entsprechend
+    matched-string holt die einzelnen werte der letzten suche 
+       (parameter 1 für die erste gruppe) oder 0 für ganzen string
+    (goto-char (match-end 0))  um anfang und ende von link zu erreichen
+    
+(defun my-org-extract-link ()
+  "Extract the link location at point and put it on the killring."
+  (interactive)
+  (when (org-in-regexp org-bracket-link-regexp 1)
+    (kill-new (org-link-unescape (org-match-string-no-properties 1)))))
+
+*** DONE Deletion Funktion für das Bild unter dem Cursor hinzufügen, falls slice, dann alle anderen slices finden
+*** DONE Möglichkeiten nachträgliches resizen der Bilder im Org-Mode eruieren
+    - macht innerhalb vom Orgmode bisher einfach keinen Sinn
+*** DONE prüfen ob Bilder mit Linktext immernoch dargestellt werden, falls nicht, konfigurieren
+*** DONE latex code in die linkbeschreibung pasten, klammern entsprechend entwerten
+*** DONE extra Fenster bei Latexumwandlung unterdrücken; google save-excursion
+*** DONE iimage bibliothek o.ä. code raussuchen und auf anpassparkeit prüfen
+*** DONE anforderungen an eigenen Modus sammeln
+*** DONE entsprechenden modus entwickeln ;image slicing
+** TODO Musik Player Einrichten					    :PROJECT:
+*** DONE google awesome-wm automount Ziel: Festplatte unter festem Namen mounten
+    - State "DONE"       from "NEXT"       [2013-01-22 Di 19:50]
+*** NEXT Playlists zusammenstellen und in einem Ordner verlinken
+*** TODO Org Mode links für emms möglichkeit suchen
+*** TODO alternative: Helm (/Anything) emms suchen und benutzen
+** TODO Tags							    :PROJECT:
+*** DONE etags installieren
+*** NEXT google: wie können tags zu den unterschiedlichen dokumentarten generiert werden
+*** TODO google: welche navigations und sammelmöglichkeiten gibt es?
+*** TODO Shortcuts für die Tags entsprechend legen
+** TODO Capturing						    :PROJECT:
+*** NEXT welche Captures ;-Templates; würden noch Sinn machen? Broweser/Client
+*** DONE schnellere Shortcuts für Captures 
+*** TODO Captures entsprechend implementieren
+** TODO Shortcuts						    :PROJECT:
+*** NEXT welche Snippets machen noch Sinn? -> einbauen
+*** DONE shortcuts für scrolling in pentadactyl ummappen
+*** DONE verschieben/retaggen von Fenstern in awesom wm
+*** DONE mehr Tasten auf den Modalen Vim Modus setzen
+*** DONE Firefox Zwang auf web lösen
+*** DONE completion shortcuts bequemer machen			  :shortcuts:
+*** DONE Orte mit -letzten- veränderungen oder sowas durchgehen; cyclen - plural
+*** DONE shortcut für zuletzt benutztes bookmark		  :shortcuts:
+*** DONE Shortcut Header Sprung besser legen			   :shortcut:
+*** DONE Emacs wiederholung braucht ein besseres shortcut; z schwer zu finden :shortcut:
+*** DONE zyklisches Pasten von Emacs aus Killring		  :shortcuts:
+*** DONE shortcuts für erstellen von tmp autonamed bookmark und cyclen; in buffer :shortcuts:
+** TODO Sprungmarken						    :PROJECT:
+*** TODO Liste mit Features von Bookmark+ anfertigen
+*** NEXT markierung und/oder anzeige für evil marks im Dokument anzeige ;goggle
+nicht mehr zeit verschwenden, als unbedingt nötig, da die evil marks in jedem fall auch
+durch autobookmarks ersetzt werden könnten
+google: emacs+evil+show+mark 
+** TODO TodoListe optimieren					    :PROJECT:
+*** NEXT Brainstorming, was Standardmäßig geöffnet und was geschlossen sein soll
+*** TODO autostarts neu zuteilen ;source blöcke usw.
+*** DONE todo states und faces aus "your life in plaintext"
+    - State "DONE"       from "NEXT"       [2013-01-23 Mi 14:35]
+** TODO Latex Mode						    :PROJECT:
+*** DONE Cdlatex Paket suchen und installieren
+    ist total sinnlos, yasnippet kann das alles auch. Statt dessen eher mal nach math mode suchen
+*** DONE testen in wie fern schnelles suchen und finden von Symbolen möglich ist
+    - mit latex math mode lässt sich mit backtick
+      und dann nem normalen Zeichen das latex äquivalent bilden
+    z.B. * wird zu \times
+    - für andere Zeichen gibt es helm-c-insert-latex
+*** NEXT testen wie weit auto completion von viel genutzen symbolen -Rightarrow...- glatt läuft
+   - man könnte natürlich yasnippet benutzen 
+   - oder man schreibt eigene latex kürzel
+*** TODO math mode und insert latex in workflow einbinden
+*** TODO gegebenenfalls weitere Completion Methoden einsetzen
+** TODO Git							    :PROJECT:
+*** DONE die 3 Grundmerges finden ;a / b / beide
+*** NEXT magit: commit und push?
+** TODO effizienteres Suchen					    :PROJECT:
+*** NEXT Suchmaschine für Quellcodes
+*** TODO alternative rc.lua suchen
+*** TODO alternative .emacs suchen
+*** TODO alternativen zu google prüfen / bessere Befehle sammeln
+** TODO awesome wm						    :PROJECT:
+*** NEXT Titlebar Awesome Wm googlen. Ziel: Titlebars in bestimmten Tags mit Floating standard, aktivieren.
+*** TODO ansatz für tabs in awesome wm formulieren
+*** TODO testen was genau shifty macht, und das gegebenenfalls einrichten
+*** TODO nochmal die awesomewm konfiguration für tab's raussuchen und versuchen einen Plan zu entwickeln, um dieses sicher zu implementieren
+** DONE eshell							    :PROJECT:
+   - State "DONE"       from "TODO"       [2013-01-23 Mi 12:41]
+*** DONE Autocompletion Eshell googlen Ziel: Möglichkeit umzuschalten. Vielleicht andere Shortcuts?
+*** DONE Autocompletion eshell fixen im moment wird bei tab direkt eingesetzt und es lässt sich nicht weiter schalten
+*** DONE mehrere eshell's, und diese sollten auch von überall aus in einem separaten Frame geöffnet werden können
+    - State "DONE"       from "NEXT"       [2013-01-23 Mi 12:41]
+      
 * copy and paste
 (yank in emacs = paste)
 

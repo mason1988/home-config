@@ -1,0 +1,436 @@
+* Herausragende Quellen
+[[http://homepage.univie.ac.at/guenther.eder/Grundkurs_Logik.htm][Grundkurs Logik Uni Wien]]
+[[http://homepage.univie.ac.at/guenther.eder/logikSS10.htm][Materialien Uni Wien]]
+http://homepage.univie.ac.at/guenther.eder/firstolog1.htm
+     und noch mehr auf dieses Seiten
+http://en.wikipedia.org/wiki/First-order_logic
+
+[[htnortp://en.wikipedia.org/wiki/First-order_logic]]
+[[http://en.wikipedia.org/wiki/First-order_logic]]
+[[file://enrn.wikipedia.org/wiki/First-order_logic]]
+[[http://en.wikorsipedia.org/wiki/First-order_logic]]
+[[http://en.wikipediaortsa.org/wiki/First-order_logic]]
+[[http://en.wikipedia.org/wort siki/First-order_logic]]
+* Englisch
+| Deutsch                | Englisch                            |
+|------------------------+-------------------------------------|
+| Prädikatenlogik        | Predicate Logik                     |
+| Quantor(existenz, all) | quantifier (existential, universal) |
+| Aussagenlogik          | Propositional Calculus/Logic        |
+| Universum              | Domain of Discourses                |
+| Aussagenlogik          | sentential calculus / logic         |
+| Formel                 | formular (well-formed) = wff        |
+| Junktor                | logical connective                  |
+|                        |                                     |
+|                        |                                     |
+
+* Wörterbuch
++ Modell :: = Menge, mit bestimmten Strukturen. Es treffen die Axiome des Systems auf das diese Menge zu. Es besteht aus dem 
+	    Universum, und einer Interpretationsfunktion. Mit beidem zusammen, kann man einen Prädikatenlogischen Satz 
+	    interpretieren, mit der Belegung für die nichtlogischen Zeichen und dem Universum für die Quantoren.
++ Universum :: Menge aus Modell 
++ Signatur :: = Symbolmenge = die Symbole die nicht der unmittelbaren logischen Interpretation dienen, und z.B. die Terme bilden
++ Prädikatenlogik :: = Quantorenlogik
++ Aussagenlogik :: Untersuchung, aus welchen Aussagen eine Aussage zusammengesetzt ist
++ Atomare Aussage :: nicht weiter Spaltbar => einfacher Term oder so
++ Prädikat :: Aussage mit Platzhalter, Funktion: U^n -> Wahrheitswert, nimmt also entsprechend der Stelligkeit
+	      des Prädikats, viele Objekte aus dem Universum und gibt ihnen einen Wahrheitswert. Dem Prädikatensymbol
+	      P wird häufig einfach eine Menge zugeordnet. Es gilt dann [[file:201301ad-0550109890lls.png]]
++ Quantoren :: [[file:201301ad-0100132159B3G.png]] und [[file:201301ad-0100192159OBN.png]] [[file:201301ad-00593521590sA.png]]
+#+Begin: prädikatenlogische äquivalenzen
+[[~/Zettelkasten/_20130112_010522_2159P0r.png]]
+[[~/Zettelkasten/_20130112_010435_2159Cql.png]]
+[[~/Zettelkasten/_20130112_010211_2159bLT.png]]
+#+End:
++ Algebra :: Menge + (familie von) Verknüpfungen auf diese Menge 
++ Kalkül :: Menge von Regeln, die aus Aussagen neue Aussagen ableiten
++ Variablenbelegung :: über einem Modell, ist Funktion, s: {v0,v1,..} -> D (D ist Universum). Ordnet
+     also allen Variablen einen Wert aus dem Universum zu. (Brücke Quantoren und Universum)
+     "in der Prädikatenlogik (bei vorgegebener Struktur S) eine Abbildung, die jeder freien Variablen aus S ein Element des Universums A zuordnet."
++ Junktor :: logische Verknüpfung 2er Aussagen 
++ Term :: ableitung von Wortalgebra, nur Symbole ohne logische interpretation
++ Formel :: = Aussage = Ausdruck = Verknüpfung von anderen Formeln, atomare Formeln stammen direkt von Term ab
++ [[file:201301ad-0130032159c-x.png]] (Symbolmenge) :: [[file:201301ad-0131102159OIB.png]] (Funktionssymbole) + [[file:201301ad-0131172159bSH.png]] (Konstanten) + [[file:201301ad-0131252159ocN.png]] (Relationssymbole)
+  also alles für Zeichen, die für Terme verwendbar sind
++ Struktur [[file:201301ad-0333539890kyN.png]] :: Universum A, mit Funktionen drauf (oder Potenzen daven => mehrstellige Funktionen)
+     und Relationen (also Teilmengen, von Potenzen)
+     Beides muss jeweils für alls funks, und rels, aus irgend einer Menge gelten (der jeweiligen Signatur)
++ Erweiterung Funktion Aussagenlogik :: als Basis diente eine Funktion, die Termen(atomare Formeln) Wahrheitswerte zuordnen 
+     konnte(hätte können). Die Funktion mit dem Strich drüber, also die Rekursion, machte es dann möglich mehrere Aussagen
+     die mit den junktorern verknüfpft waren, zu definieren, und auseinanderzunehmen, ohne die Funktion wirklich auszuführen
+     Diese Version der Funktion mit dem Strich, wird als Erweiterung bezeichnet.
++ Interpretationsfunktion :: Funktion, die zu Modell gehört, und da jedem nichtlogischen Zeichen (aus S) eine "Bedeutung"
+     zuordnet. Es werden also die Bedeutungen der Funktionssymbole, Konstanten und Relationssymbole *belegt*, sodass die 
+     Quantorenaussage *interpretiert* werden kann. Die Relationen bekommen dabei z.B. Teilmengen des Universums.
++ freie Variable :: Variable die einfach in Aussage vorkommt, ohne durch Quantor gebunden zu sein. 
++ Fortsetzung Belegung [[file:201301ad-0418219890x8T.png]] :: Bleibt für gebundene Variablen. (in Quantoren) also [[file:201301ad-0419599890LRg.png]]
+     aber für Individuenkonstanten: [[file:201301ad-0420099890Ybm.png]] also die Interpretationsfunktion kümmert sich drum
++ Interpretation :: Modell (Universum + Interpretationsfunktion) + Belegung s
+
+* Mitschriften
+** Jan 14
+[[file:201301ad-1031408403uXH.png]]  <= *kleines" Modell*, [[file:201301ad-10331784037hN.png]] bildet aus k Universen auf 1 Universum ab
+*Zahlen-Modell*, Universum ist [[file:201301ad-1033508403IsT.png]]
+*Mengenmodell*, Potenzmenge von ner Menge,   [[file:201301ad-1034198403V2Z.png]]
+    [[file:201301ad-1034408403iAg.png]]
+*Term-Modell* [[file:201301ad-1038508403vKm.png]] , bildet mehrere Terme auf einen Term ab
+*kleine Fortsetzung* Belegung [[file:201301ad-10393384038Us.png]]
+[[file:201301ad-10402284037oB.png]] Fortsetzung [[file:201301ad-1040158403Jfy.png]] [[file:201301ad-1041398403V9N.png]], es gilt: [[file:201301ad-1041318403IzH.png]]
+ # Platzhalter Quantor
+großes Modell enthält noch die m stelligen Prädikate (also als Teilmenge vom Universum)
+Beispel als Zahlenmodell:
+[[file:201301ad-1903006434N_C.png]]
+[[file:201301ad-1902566434b1z.png]]
+
+[[file:201301ad-1902446434Bhn.png]]
+[[file:201301ad-19024064340Wh.png]]
+[[file:201301ad-1902366434nMb.png]]
+[[file:201301ad-1901536434aCV.png]]
+[[file:201301ad-1901496434N4O.png]]
+=> falls nicht durch substitution erfasst => ignorieren
+           sonst ersetzen
+** Jan 17
+[[file:201301ad-12241816745sbK.png]] :: auf |A| stimmen [[file:201301ad-122451167455lQ.png]] und [[file:201301ad-12250416745GwW.png]] überein, also [[file:201301ad-12255116745T6c.png]]
+_Aussagen/Prädikatenkalkül_ 0-stellige Regeln(17 Typen) + Modus Ponens + 1 stellige Regeln (substitution)
+_Substitution_ X = {x_0, x_1, ...} total geordnet, [[file:201301ad-1321045300KIS.png]] Term Belegung
+[[file:201301ad-1322135300XSY.png]] endl Teilmenge, [[file:201301ad-1322255300kce.png]] "nicht Fixpunkte"  => alle Terme die sich ändern
+[[file:201301ad-1324215300L7w.png]] [[file:201301ad-13242653009EA.png]] [[file:201301ad-1324315300KPG.png]] [[file:201301ad-1324475300XZM.png]][[file:201301ad-1324545300kjS.png]] [[file:201301ad-1324585300xtY.png]]
+Variablen Substitution :: X -> X, [[file:201301ad-1333455300-3e.png]]  [[file:201301ad-1337305300YMr.png]]
+* Zettel-08
+** Dateien
+[[/home/florian/Dropbox/lo/lo-zettel-08.pdf::NNN][lo-zettel-08.pdf]]
+[[/home/florian/Dropbox/lo/lo-loesung-08.tex::NNN][lo-loesung-08.tex]]
+[[/home/florian/Dropbox/lo/lo-loesung-08.pdf::NNN][lo-loesung-08.pdf]]
+** Informationen
+*** Ideal
+- Teilmenge I von Bool-Algebra
+- wenn x,y in I dann auch x v y in I
+Maximal: kein anderes echtes Ideal von dem I ne echte Teilmenge
+jedes ideal von dem I ne echte Teilmenge, ist
+
+* Zettel-09
+** Musterlösung Zettel 09
+*** header
+#+BEGIN_SRC latex :tangle muster09.tex
+  \documentclass[11pt]{amsart}
+  \usepackage[utf8]{inputenc}
+  \usepackage{amssymb,amsmath}
+  \usepackage{verbatim}
+  \usepackage{color}
+  \usepackage{geometry}
+  \geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
+  \usepackage{amsthm}
+  \usepackage{stmaryrd}
+  \usepackage{graphicx}
+  
+  %\dincludegraphics{?} setzt bild ein
+  %\ref{labelname} erstellt link zu labelname
+  %\label{labelname} kann einfach irgendwo drangesetz werden
+  
+  \newtheorem{defi}{Definition}
+  \newtheorem{axiom}{Axiom}
+  \newtheorem{nota}{Notation}
+  \newtheorem{prop}{Proposition}
+  \newtheorem{satz}{Satz}
+  \newtheorem{umf}{Umformung}
+  
+  \newenvironment{beweis}{\par\begingroup%
+  \settowidth{\leftskip}{\textsc{Beweis:~}}%
+  \noindent\llap{\textsc{Beweis:~}}}{\hfill$\Box$\par\endgroup}
+  
+  \renewcommand{\baselinestretch}{1}
+  \newcommand{\words}{\Sigma^* \backslash \{\epsilon\}}
+  \newcommand{\etrans}[1]{\bar{\delta}(#1)}
+  
+  \title{Zettel 9}
+  \author{Florian Lerch(2404605)}
+  %\date{} % Activate to display a given date or no date (if empty),
+  % otherwise the current date is printed 
+  
+  \begin{document}
+#+END_SRC
+
+*** content   
+#+BEGIN_SRC latex :tangle muster09.tex
+\subsection*{test}
+\subsection*{31}
+    \(A = \mathcal{P}(M), X_i \subset M, i \in I\) \\
+    Berechne: \(sup_{i\in I}X_i\) und \(inf_{i\in I}X_i\) \\
+    \(sup X_i = \cup_{i\in I}X_i \) \\
+    \(X_i \leq \cup_{i\in I}X_i\) Sei \(B \subset M \)\\
+    \(\mbox{ eine Menge mit } X_i \leq B \forall i \in I\) \\
+    \(d.h. X_i \subset B \mbox{ für alle } i \in I \)\\
+    \(\mbox{ dann gilt } \cup_{i \in I}X\i \subset B \)\\
+    \(\mbox{ Also } \cup_{i\in I}X_I \mbox{ ist das Supremum } \)\\
+    \(\mbox{ für das Infinum: } \)\\
+    \(inf_{i \in I} X_i = \cap_{i \in I}X_i \)\\
+    \(\mbox{ es ist klar } \cap_{i \in I}X_i \leq X_i \)\\
+    \(\mbox{ Sei } C \subset M \mbox{ eine Menge mit }\) \\
+    \( C \leq X_i \forall i \in I, \mbox{ das bedeutet }\) \\
+    \( C < X_i \forall i \in I \mbox{ und insbesondere }\) \\
+\(    C \subset \cap_{i\in I}X_i \mbox{ also } C \ leq \cap_{i \in I} X_i \)\\
+\(    \mbox{ und } \cap_{i \in I}X_i \mbox{ ist das Infinum } \)
+    \subsection*{32}
+\(    \mbox{ M ist eine endliche Menge } \) \\
+\(    X_0 \supset X_1 \supset ... \supset X_n \supset ... \)\\
+\(    \mbox{ aufsteigende Folge und } X_i \not = \emptyset \mbox{ für alle } i \in I \)\\
+\(    \mbox{ da M endlich ist } \exists x \in M \mbox{ und } k \in I \mbox{ mit } x \in X_n, \forall n \geq k \)\\
+\(    \mbox{ Eigentlich gibt es } k \in I \mbox{ mit }X_n = X_{k'} \mbox{ für alle }n\geq k' \)\\
+\(    \mbox{ Und wir wissen dass }inf_{i \in I} X_i = \cap_{i \in I} X_i = X_{k'} \not = \emptyset \)\\
+\(    \mbox{ weil die Folge absteigend ist und } [X_i \not \emptyset \forall i \in I ]\)
+    \subsection*{33}
+    
+\(    t = \tilde{s_2}x_1s_2s_0x_7 \) \\
+ \(   t' = \tilde{s_2}x_7s_2s_0x_1 \) \\
+\(    t'' = \tilde{s_2}s_2x_1x_7s_0 \)\\
+\(    \mbox{ Wir haben die Fortsetzung einer Belegung } \) \\
+\(    \alpha \) \\
+\(    \alpha^{\wedge}(t) = \alpha^{\wedge}(t)(\tilde{s_2}x_1s_2s_0x_7) \) \\
+\(    \mbox{ Sei }\alpha_i := \alpha(x_i) \) \\
+\(    = \tilde{s_2}^{*}(\alpha(x_1)s_2^*(s_0^*\alpha(x_7))) \) \\
+\(    = \alpha_1^{s_2^*(s_o^*\alpha_7)}= \alpha_1^{0 + \alpha_7}  \) \\
+\(    \alpha(t') = \alpha_7^{0+\alpha1}  \) \\
+\(    \alpha(t'') = (\alpha_1 + \alpha_7)^0  \) \\
+\(    b) \alpha^{\wedge}(t) = \alpha_1^{\alpha_7} = 2^{17} = 13|072  \) \\
+#+END_SRC 
+
+*** footer
+#+BEGIN_SRC latex :tangle muster09.tex
+  \end{document}  
+#+END_SRC latex
+
+* Zettel-10
+** header
+#+BEGIN_SRC latex :tangle lo-loesung-10.tex
+\documentclass[11pt]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath}
+\usepackage{verbatim}
+\usepackage{color}
+\usepackage{geometry}
+\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
+\usepackage{amsthm}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+
+%\dincludegraphics{?} setzt bild ein
+%\ref{labelname} erstellt link zu labelname
+%\label{labelname} kann einfach irgendwo drangesetz werden
+
+\newtheorem{defi}{Definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{nota}{Notation}
+\newtheorem{prop}{Proposition}
+\newtheorem{satz}{Satz}
+\newtheorem{umf}{Umformung}
+
+\newenvironment{beweis}{\par\begingroup%
+\settowidth{\leftskip}{\textsc{Beweis:~}}%
+\noindent\llap{\textsc{Beweis:~}}}{\hfill$\Box$\par\endgroup}
+
+\renewcommand{\baselinestretch}{1}
+\newcommand{\words}{\Sigma^* \backslash \{\epsilon\}}
+\newcommand{\etrans}[1]{\bar{\delta}(#1)}
+\renewcommand{\P}{\mathbb{P}}
+
+\title{Zettel 10}
+\author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
+%\date{} % Activate to display a given date or no date (if empty),
+% otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+#+END_SRC 
+
+** Aufgabe 35
+#+BEGIN_SRC latex :tangle lo-loesung-10.tex
+\subsection*{Aufgabe 35}
+#+END_SRC
+
+#+Begin: aufgabenstellung 35
+[[/home/florian/Zettelkasten/zettelkasten.org_20130111_190103_2159bEf.png]]
+#+End:
+
+*** Aufgabe a)
+#+BEGIN_SRC latex :tangle lo-loesung-10.tex
+\subsubsection*{a)}
+\( \alpha^{\vee}(t) = \{1,2,3,4,5,6,7\} \backslash ( \{1\} \backslash \{1,2,3,4,5\} \) \\
+\( = \{0,1,2,3,4,5,6,7\} \backslash \emptyset = \{1,2,3,4,5,6,7\} \)
+#+END_SRC
+
+Fortsetzung sollte hier einfach ausrechnen mit "erweiterter" Funktion heißen.
+Und erweitert bedeutet im Grunde nur, das jede Funktion das macht was
+sie halt am besten kann ^^ . Also einfach einsetzen
+=> t = s2x7s2s0x5 mit a^v(t) = {0,1,2,3,4,5,6,7} es sei denn das Mengenkomplement
+soll hier etwas anderes als der Schnitt sein
+
+*** Aufgabe b)
+#+BEGIN_SRC latex :tangle lo-loesung-10.tex
+\subsubsection*{b)}
+\( \alpha^{\wedge}(P) \mbox{ für } p_1t \mbox{ ist } 1\) bzw. wahr da \( | \{0,1,2,3,4,5,6,7\} | \leq 100 \) \\
+\( \alpha^{\wedge}(P) \mbox{ für } \tilde{p}_1t \mbox{ ist } 1\) bzw. wahr da \( | \{0,1,2,3,4,5,6,7\} | = 8\) und 8 ist gerade \\
+#+END_SRC
+Wenn Element der Menge dann wahr, sonst Falsch.
+{0,1,...,7} \in p_1t => a^(p_1t) = wahr , aber notation fragwürdig
+{0,1,...,7} => |av(t)| = 8 => a^(p-_1t) = wahr
+*** Aufgabe c)
+#+BEGIN_SRC latex :tangle lo-loesung-10.tex
+\subsubsection*{c)}
+\( \alpha^{\wedge}(A) \mbox{ für } A = \bigwedge_{x_5}p_1t \mbox{ ist wahr} \)
+#+END_SRC
+Auf jeden Fall ändern bedeutungslose quantoren nichts an der AUssage
+Was könnte der Quantor hier heißen? Vielleicht jeder beliebige Wert
+aus dem Universum?
+Im Grunde sollte x_5 einfach fest sein, also so wie wenn man schreiben würde
+[[file:201301ad-0610259890yvy.png]] . Der Hut mit Spitze nach oben an dem alpha könnte auch signalisieren, 
+dass ein Wahrheitswert rauskommt. Sonst könnte man vielleicht auch nach
+Mengen suchen.
+Also: Ich tippe auf wahr, weil konstant.
+Aber die funktion übernimmt ja nur die freien Ungebundenen Variablen.
+Daher sollte hier alles aus dem Universum möglich sein.
+Aussage bleibt aber wahr, da ja beim Schnitt alles verschwindet.
+*** Aufgabe d)
+#+BEGIN_SRC latex :tangle lo-loesung-10.tex
+\subsubsection*{d)}
+\( \alpha^{\wedge}(B) \mbox{ für } B = (\bigwedge_{x_5}p_1t)\wedge(\bigvee_{x_4}\tilde{p}_1t) \) ist 1 bzw. wahr.
+#+END_SRC
+Die linke Seite ist wahr wie in C. Auf der rechten Seite ändert sich schon
+deshalb nichts, weil x_4 gar nicht vorkommt, und solche Quantoren ignoriert
+werden können. Rechts bleibt also auch wahr. Beides zusammen also ebenfalls
+wahr.
+** Aufgabe 36
+#+BEGIN_SRC latex :tangle lo-loesung-10.tex
+\subsection*{Aufgabe 36}
+#+END_SRC
+
+#+Begin: aufgabenstellung 36
+[[/home/florian/Zettelkasten/zettelkasten.org_20130111_190207_2159oOl.png]]
+
+Korrigierte Fassung:
+[[/home/florian/Zettelkasten/zettelkasten.org_20130116_191127_6434nTP-0.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130116_191127_6434nTP-1.png]]
+
+#+End:
+
+*** Aufgabe a)
+#+BEGIN_SRC latex :tangle lo-loesung-10.tex
+\subsubsection*{a)}
+\( \alpha^{\wedge}(t) =  5*4^2*3^2 = 720 \)
+#+END_SRC
+5 16 9  *
+= 720
+*** Aufgabe b)
+#+BEGIN_SRC latex :tangle lo-loesung-10.tex
+\subsubsection*{b)}
+\( a^{\wedge}(P) = 1 \mbox{ bzw. wahr da } (2 * 5) < (5 * 4^2 * 3^2) \Leftrightarrow 10 < 720 \)
+#+END_SRC
+Falsch da 2 stelliges Prädikat und nur ein Term vorhanden
+Außerdem gibt es keine (m,n) in N , dass wäre N^2
+Unter Umständen soll das Ergebnis auch ne Menge sein.
+Da m und n kein Input für den Term sind, eher nicht.
+
+Nun 2 Terme. 
+*** Aufgabe c)
+#+BEGIN_SRC latex :tangle lo-loesung-10.tex
+\subsubsection*{c)}
+Sei \( x_3 = 0 \Rightarrow \alpha^{\vee}(t) = 0 \Rightarrow\mbox{ es existiert kein } m \in \mathbb{N} 
+\mbox{ so dass gilt: } (2m < 0) \Rightarrow \alpha^{\vee}(A) = 0  \)
+#+END_SRC
+Für ein x_4 und alle x_3
+Müsste dann ja auch immer falsch sein.
+Aber d dann auch, und das wäre zu simpel.
+x3 vielleicht als Eingabe für p2t ? Falls es ne Eigabe für m ist:
+Also interpretiert: Es gibt ein x4 so dass für jedes x3
+gilt: (2 * x3 < 5*x4*x3) 
+Sei x4 = 1 => (2*x3 < 5*x3) gilt für alles x3 also wahr
+*** Aufgabe d)
+#+BEGIN_SRC latex :tangle lo-loesung-10.tex
+\subsubsection*{d)}
+Es gilt die selbe Begründung wie schon in c), also $\alpha^{\vee}(B) = 0$, da es in jedem Fall
+ein $x_3 \in \mathbb{N}$ gibt, so dass die Aussage falsch ist.
+#+END_SRC
+Für alle x3 gibt es ein x4 so dass gilt: (2*x4 < 5*x3*x4) 
+Sei x3=0 => (2*x4 < 0) => existiert kein x4 das *echt* kleiner ist
+=> falsch
+** footer
+#+BEGIN_SRC latex :tangle lo-loesung-10.tex
+\end{document}
+#+END_SRC
+
+* TODO Zettel-11
+  DEADLINE: <2013-01-23 Mi 23:59>
+** header
+#+BEGIN_SRC latex :tangle lo-loesung-11.tex
+\documentclass[11pt]{amsart}
+\input{commands.tex}
+\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
+\title{Zettel 11 }
+\author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
+\begin{document}
+\maketitle
+#+END_SRC 
+
+** TODO Aufgabe 37
+*** Aufgabenstellung
+[[file:zettelkasten.org_20130118_230348_16179Rx-0.png]]
+[[file:zettelkasten.org_20130118_230348_16179Rx-1.png]]
+[[file:zettelkasten.org_20130118_230348_16179Rx-2.png]]
+[[file:zettelkasten.org_20130118_230348_16179Rx-3.png]]
+*** Lösungsskizzen
+*** Referenzen
+[[file:zettelkasten.org_20130118_234235_1617JwM-0.png]]
+
+[[file:zettelkasten.org_20130118_234256_1617W6S-0.png]]
+[[file:zettelkasten.org_20130118_234256_1617W6S-1.png]]
+[[file:zettelkasten.org_20130118_234256_1617W6S-2.png]]
+[[file:zettelkasten.org_20130118_234256_1617W6S-3.png]]
+[[file:zettelkasten.org_20130118_234256_1617W6S-4.png]]
+[[file:zettelkasten.org_20130118_234256_1617W6S-5.png]]
+*** Lösung
+#+BEGIN_SRC latex :tangle lo-loesung-11.tex
+\subsection{Aufgabe 37}
+#+END_SRC
+** TODO Aufgabe 38
+*** Aufgabenstellung
+[[file:zettelkasten.org_20130118_230424_1617vbA-0.png]]
+[[file:zettelkasten.org_20130118_230424_1617vbA-1.png]]
+[[file:zettelkasten.org_20130118_230424_1617vbA-2.png]]
+[[file:zettelkasten.org_20130118_230424_1617vbA-3.png]]
+[[file:zettelkasten.org_20130118_230424_1617vbA-4.png]]
+*** Lösungsskizzen
+    $\gamma$ ist eine eine Belegung => das bedeuet,
+    alte x werte (Terme) werden ersetzt durch neue
+    $\tau$ ist keine richtige Belegung, sondern repräsentiert nur
+    die reine Substitution
+    Ausnahmemenge: der Bezug fällt direkt raus und ansonsten noch 
+     alles was sich verändert 
+
+A lässt sich in diese Primterme spalten(\(x_0,s_2x_1x_4,x_1,x_4,x_3\)) oder zählen
+    die Teilterme innerhalb $s_2$ nicht? 
+Rekursiv substituieren? (x_4)
+Letztendliche Ausnahmemenge muss noch zusammen geschrieben
+werden
+*** Referenzen
+*** Lösung
+#+BEGIN_SRC latex :tangle lo-loesung-11.tex
+\subsection{Aufgabe 38}
+\subsubsection{a)}.\\
+\( \tau x_0 = x_0 \) \\ 
+\( \tau s_2x_1x_4 = s_2x_1x_0 \) \\
+\( \tau x_1 = x_1 \) \\
+\( \tau x_4 = x_0 \) \\
+\( \tau x_3 = s_3x_0x_1x_4 \) \\
+\subsubsection{b)}.\\
+
+#+END_SRC
+** TODO Aufgabe 39
+[[file:zettelkasten.org_20130118_230458_16178lG-0.png]]
+[[file:zettelkasten.org_20130118_230458_16178lG-1.png]]
+[[file:zettelkasten.org_20130118_230458_16178lG-2.png]]
+[[file:zettelkasten.org_20130118_230458_16178lG-3.png]]
+
+** footer
+#+BEGIN_SRC latex :tangle lo-loesung-11.tex
+\end{document}
+#+END_SRC
+

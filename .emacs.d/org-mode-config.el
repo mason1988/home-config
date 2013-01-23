@@ -1,5 +1,12 @@
 
-(setq org-agenda-files (quote ("~/Zettelkasten/todo.org")))
+(setq org-agenda-files (quote ("~/Zettelkasten/todo.org"
+			       "~/Zettelkasten/logik.org"
+			       "~/Zettelkasten/elementare_stochastik.org"
+			       "~/Zettelkasten/webdesign.org"
+			       "~/Zettelkasten/theoretische_informatik.org"
+			       "~/Zettelkasten/softwaretechnik.org"
+			       "~/Zettelkasten/Software.org"
+			       "~/Zettelkasten/bugs.org")))
 
 
 ; Enable habit tracking (and a bunch of other modules)

@@ -1,0 +1,443 @@
+* Turing Maschine
+[[/home/florian/Zettelkasten/zettelkasten.org_20130106_200549_12364hJ0.png]]
+
+Beispieleingabe:
+(q',b,x) \in \delta(q,a) 
+=> in Zustand q wird a gelesen 
+   => b an pos geschrieben, nach q' gewechselt und 
+   schreib/lesekopf um x bewegen
+x \in {L,R,N} => l = 1 nach link, ..., N = nichts
+
+Muster Automat:
+A := (Q, \{a,b,c\},\{a,b,c,A,B,C,\b\},\delta,q_0,\b,F)
+mit Q = \{q_0,q_b,q_c,q_?,q_l,q_t,q_f\} und F = \{q_f\}
+
+die deltas werden mit ner Tafel gesammelt:
+| Vorgang    | Erklärung |
+|------------+-----------|
+| q a b x q' | irgendwas |
+|            |           |
+
+Bedeutet: (q',b,x) \in \delta(q,a)
+also startzustand | "search" | replace | sprung | nächster zustand
+
+* vollständige Induktion
+- Induktionsbehauptung :: Aussage gilt für A(n+1)
+- Induktionsvorraussetzung :: Aussage gilt für n (ein n >= m)
+- Induktionsanfang :: Zeige für Startwert m 
+- Induktionsschritt :: erhöhe Parameter auf beiden Seiten, beweis Induktionsbehauptung
+* Wörterbuch
+- Turingmaschine :: 
+- primitik rekursive Grundfunktion ::
+- primitive rekursion ::
+
++[[file:201301ad-01342216693Xde.png]]  :: m Regeln/Parameter auf die eine Ausgabe
++ [[file:201301ad-01365816693knk.png]] (insgesamt m elemente), die ersten
+      n Elemente sind Eingaben, die restlichen werden innerhalb der 
+      Funktion definiert
++ Anweisung :: die einzelnen [[file:201301ad-01401116693xxq.png]] 's
++ [[file:201301ad-02253616693-7w.png]] :: Menge aller Loop Programme mit 1..n Eingabevariablen
+          n+1...m weitere Variablen und output ist X_1
++ [[file:201301ad-02275316693wFA.png]] :: Die mathematische Funktion zum Programm [[file:201301ad-022830166939PG.png]]
++ [[file:201301ad-02291216693KaM.png]] :: alle arithmetischen Funktionen
++ [[file:201301ad-02305116693XkS.png]] :: übersetzt eine Anweisung, dient zur rekursiven überführung
+#+BEGIN_SRC Überführungen für die alphas
+[[/home/florian/Zettelkasten/zettelkasten.org_20130110_023805_16693kuY.png]]
+#+END_SRC
++ Semantikfunktion :: [[file:201301ad-06074316693-Cl.png]] = [[file:201301ad-06075916693LNr.png]] := [[file:201301ad-06091516693YXx.png]]
++ primitiv rekursive Funktion :: rekursive Grundfunktion, oder daraus bildbar (durch komposition)
++ Nachfolgerfunktion :: S nimmt Wert und addiert 1
++ Nullkonstante :: [[file:201301ad-1834543168n1j.png]] nimmt n argumente und ergibt immer 0 (C = Konstante)
++ Projektion :: [[file:201301ad-1834073168ard.png]] bildet [[file:201301ad-1833183168AXR.png]] auf [[file:201301ad-1833233168NhX.png]] ab, zieht also das i'te Element raus
++ Komposition :: Wie normale Komposition, aber möglichkeit, direkt ne ganze Funktionenfamilie
+		 reinzuschachteln
+		[[file:201301ad-1831393168mCF.png]]
++ Schema (primitiv Rekursiv) :: Man sucht 2 pr.Rek.Funk. zur akt. Funk. Es muss gelten:
+     [[file:201301ad-18403131680_p.png]]
+     [[file:201301ad-1840363168BKw.png]]
+     man folgert für die Lösung das ganze jeweils als Komposition, und lässt dann
+     die Argumente am Ende weg
++ --> :: Partielle Abbildung, jedes Element des Urbilds wird auf max. einen Wert
+	 des Bildbereichs abgebildet, sonst nicht definiert auf Wert
++ [[file:201301ad-14251416745DYl.png]] Rekursiv :: nimmt Funktion f, und setzt Werte für den letzten Parameter ein.
+     Der "letzte" Wert nach der 0, für den das Ergebnis noch definiert ist,
+     ist das Ergebnis des Operators.
+** Englisch
+| Deutsch                     | Englisch                     |
+|-----------------------------+------------------------------|
+| LOOP Programm               | Loop programm                |
+| Signumfunktion              | sign(um) function            |
+| primitiv rekursive funktion | primitive recursive function |
+|                             |                              |
+|                             |                              |
+|                             |                              |
+|                             |                              |
+
+* Zettel-09
+[[~/Dropbox/th/th-zettel-09/th-zettel-09.pdf][th-zettel-09.pdf]]
+[[~/Dropbox/th/th-zettel-09/th-loesung-09.tex][th-loesung-09.tex]]
+[[~/Dropbox/th/th-zettel-09/th-loesung-09.pdf][th-loesung-09.pdf]]
+* Zettel-10
+** header
+#+BEGIN_SRC latex :tangle th-loesung-10.tex
+\documentclass[11pt]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath}
+\usepackage{verbatim}
+\usepackage{color}
+\usepackage{geometry}
+\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
+\usepackage{amsthm}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+
+%\includegraphics{?} setzt bild ein
+%\ref{labelname} erstellt link zu labelname
+%\label{labelname} kann einfach irgendwo drangesetz werden
+
+\newtheorem{defi}{Definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{nota}{Notation}
+\newtheorem{prop}{Proposition}
+\newtheorem{satz}{Satz}
+\newtheorem{umf}{Umformung}
+
+\newenvironment{beweis}{\par\begingroup%
+\settowidth{\leftskip}{\textsc{Beweis:~}}%
+\noindent\llap{\textsc{Beweis:~}}}{\hfill$\Box$\par\endgroup}
+
+\renewcommand{\baselinestretch}{1}
+\newcommand{\words}{\Sigma^ \backslash \{\epsilon\}}
+\newcommand{\etrans}[1]{\bar{\delta}(#1)}
+\renewcommand{\P}{\mathbb{P}}
+
+\title{Zettel 10}
+\author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
+%\date{} % Activate to display a given date or no date (if empty),
+% otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+#+END_SRC 
+
+** Aufgabe 30
+#+BEGIN_SRC latex :tangle th-loesung-10.tex
+\subsection*{Aufgabe 30}
+#+END_SRC
+    
+#+BEGIN_SRC aufgabe30
+[[/home/florian/Zettelkasten/zettelkasten.org_20130108_162840_8888-SE.png]]
+#+END_SRC
+
+Ausführlich kommentierte Turingmaschine angeben
+Vorzeichenzahl => Zweierkomplement
+(Vorzeichen = 1 => jedes andere Bit umdrehen, dann 1 addieren)
+(sonst: gar nichts machen)
+
+|     norm |    kompl | zahl |
+|----------+----------+------|
+| 00000001 | 00000001 |    1 |
+| 00000010 | 00000010 |    2 |
+| 10000001 | 11111111 |   -1 |
+| 10000010 | 11111110 |   -2 |
+| 10000011 | 11111101 |   -3 |
+| 00000000 | 00000000 |    0 |
+
+=> wenn erstes Zeichen 0 -> tue nichts
+=> wenn erstes Zeichen 1 -> behalte 1, drehe jedes zeichen um, und addiere 1
+
+
+#+BEGIN_SRC latex :tangle th-loesung-10.tex
+  $A = (Q, \Sigma, \Gamma, \delta, q_0, \bar{b}, F)$ \\
+  $Q = \{q_0, q_1, q_f \}$ \\
+  $\Sigma = \{0, 1\}$ \\
+  $\Gamma = \{0, 1, \bar{b} \}$ \\
+  $F = \{q_f\}$ \\
+  $\delta:$ \\
+  $\begin{array}{cccccc}
+  q_0 & 0 & 0 & N & q_f & \mbox{ wenn erstes Zeichen 0: 2erkomplement und Binär identisch, also fertig } \\
+  q_0 & 1 & 1 & R & q_1 & \mbox{ Phase 1: jedes Bit (bis auf das erste) umdrehen } \\
+  q_1 & 1 & 0 & R & q_1 & \mbox{ Phase 1: jedes Bit (bis auf das erste) umdrehen } \\
+  q_1 & 0 & 1 & R & q_1 & \mbox{ Phase 1: jedes Bit (bis auf das erste) umdrehen } \\
+  q_1 & \bar{b} & \bar{b} & L & q_2 & \mbox{ Phase 2: 1 addieren, also von Rechts nach Links } \\
+  q_2 & 1 & 0 & L & q_2 & \mbox{ jedes Bit umdrehen, bis eine 0 gelesen wird } \\
+  q_2 & 0 & 1 & N & q_f & \\ 
+  \end{array}$
+#+END_SRC
+
+** Aufgabe 31
+#+BEGIN_SRC latex :tangle th-loesung-10.tex
+\subsection*{Aufgabe 31}
+#+END_SRC
+
+#+BEGIN_SRC aufgabe31
+[[/home/florian/Zettelkasten/zettelkasten.org_20130109_082705_6808JKK.png]]
+#+END_SRC
+
+Loop Programm zur Berechnung von Signumfunktion:
+sg: 0 bleibt 0, 1 wenn größer 0  (nur natürliche Zahlen)
+
+Zugelassene Anweisungen: X_i = 0 ; X_i = X_j + 1
+Beweis Korrektheit Programm mit denotationeller Semantik
+
+#+BEGIN_SRC latex :tangle th-loesung-10.tex
+\begin{tabbing}
+  $s_n = $\=$ $\underline{in}$ (X_1); $\underline{var}$(X_,X_);$ \\
+  \>$ X_2 = 0;$ \\
+  \>$ X_3 = 0;$ \\
+  \>$ $\underline{loop}$ X_1(X_2 = X_3 + 1);$ \\
+  \>$ $\underline{out}$ (X_2);$
+\end{tabbing}
+\vspace{0.5cm}
+$\alpha_1 := X_2 := 0$ \\
+$\alpha_2 := X_3 := 0$ \\
+$\alpha_3 := \underline{loop} X_1(X_2 = X_3 + 1)$ \\
+\begin{tabbing}
+
+$[[\alpha_1]]^{(3)}(\alpha_1,\alpha_2,\alpha_3)$\=$ = [[\alpha_1 := X_2 := 0]]^{(3)}(\alpha_1,\alpha_2,\alpha_3)$ \\
+$ $\>$   = (\alpha_1,0,\alpha_3)$ \\[0.3cm]
+$[[\alpha_2]]^{(3)}(\alpha_1,\alpha_2,\alpha_3) = [[\alpha_2 := X_3 := 0]]^{(3)}(\alpha_1,\alpha_2,\alpha_3)$ \\
+$  $\>$  = (\alpha_1,\alpha_2,0)$ \\[0.3cm]
+$[[\alpha_3]]^{(3)}(\alpha_1,\alpha_2,\alpha_3) = [[\underline{loop} X_1(X_2 := X_3 + 1)]]^{(3)}(\alpha_1,\alpha_2,\alpha_3)$ \\
+$   $\>$ = ([[X_2 := X_3 + 1]]^{(3)})^{\alpha_1}(\alpha_1,\alpha_2,\alpha_3)$ \\
+% \> $ = ( \alpha_1 , \alpha_3^{\alpha_1} + 1^{\alpha_1}, \alpha_3)(\alpha_1,\alpha_2,\alpha_3)$ \\[0.5cm]
+Für $\alpha_1 > 0$: \\
+\> $ = ( \alpha_1 , \alpha_3 + 1, \alpha_3)(\alpha_1,\alpha_2,\alpha_3)$ \\
+Für $\alpha_1 = 0$: \\
+\> $ = ( \alpha_1 , \alpha_3, \alpha_3)(\alpha_1,\alpha_2,\alpha_3)$ \\
+% wie soll man denn schleifen einsetzen, die eins auf einen _anderen_ Wert addieren?
+\end{tabbing}
+
+\begin{tabbing}
+$[[S_n]](\alpha_1)$ \= $= (\underline{out}^{(3)}_2 \circ [[\alpha_3]]^{(3)}  
+\circ [[\alpha_2]]^{(3)} \circ [[\alpha_1]]^{(3)} \circ \underline{in}^{(1)}_3)(\alpha_1)$ \\
+\> $= (\underline{out}^{(3)}_2 \circ [[\alpha_3]] \circ [[\alpha_2]]^{(3)} \circ [[\alpha_1]]^{(3)})(\alpha_1,0,0)$ \\
+\> $= (\underline{out}^{(3)}_2 \circ [[\alpha_3]] \circ [[\alpha_2]]^{(3)})(\alpha_1,0,0)$ \\
+\> $= (\underline{out}^{(3)}_2 \circ [[\alpha_3]])(\alpha_1,0,0)$ \\
+%\> $= (\underline{out}^{(3)}_1)(\alpha_1,0^{\alpha_1} + 1,0)$ \\
+%\> $= (\alpha_1,1,0) = $ \\
+Für $\alpha_1 > 0$: \\
+\> $= (\underline{out}^{(3)}_2)(\alpha_1,1,0) = 1$ \\
+Für $\alpha_1 = 0$: \\
+\> $= (\underline{out}^{(3)}_2)(\alpha_1,0,0) = 0$ \\
+% hier  ist dann immernoch das Problem mit der Schleife
+$\Rightarrow [[S_n]]: \mathbb{N} \rightarrow \mathbb{N}, (\alpha_1) \rightarrow \begin{cases} 1 &\mbox{falls } \alpha_1>0 \\ 0 &\mbox{sonst} \end{cases}$
+\end{tabbing}
+
+#+END_SRC
+
+** Aufgabe 32
+#+BEGIN_SRC latex :tangle th-loesung-10.tex
+\subsection*{Aufgabe 32}
+#+END_SRC
+
+#+BEGIN_SRC aufgabe32
+[[/home/florian/Zettelkasten/zettelkasten.org_20130109_082937_6808jeW.png]]
+#+END_SRC
+
+Zeige, das Funktionen durch primitiv rekursive Grundfunktionen durch Komposition und primitive Rekursion erzeugt werden können
+(a) potenz, (a,b) = a^b
+(b) anz,  n = |w \in \{a,b,c,d\}^n  \big| |w|_a ist gerade |
+anz(0) = 1, anz(1) = 3, anz(2) = 10;  
+Primitiv Rekursiv: Nullkonstanten, Add, Mul, Vorgänger, Sub
+
+[[/home/florian/Zettelkasten/zettelkasten.org_20130112_195729_2635bdb-0.png]]
+
+#+BEGIN_SRC latex :tangle th-loesung-10.tex
+\subsubsection*{a)} 
+Es gilt: $power(a,0) = 1 = C_0^{(1)}(a) + 1 = S(C_0^{(1)}(a)) = 
+S \circ [C_0^{(1)}](a)$ \\
+und $power(a,b+1) = power(a,b)*a = mult(power(a,b),a) =
+mult \circ [p_3^{(3)},p_1^{(3)}](a,b,power(a,b))$ \\
+Dies entspricht dem Schema mit $f = \circ [C_0^{(1)}]$ und $g = mult \circ [p_3^{(3)},p_1^{(3)}]$ \\
+
+\subsubsection*{b)}
+Es gilt: $anz(0) = 1 = C_0^{(0)}() + 1 = S(C_0^{(0)}()) = 
+S \circ [C_0^{(0)}]()$ \\
+Dies entspricht im Schema $f = S \circ [C_0]^{(0)}]$ \\
+Ferner gilt: $anz(n+1) = 4^n - anz(n) + anz(n)  3 = 4^n + anz(n)  2$ \\
+$= power(C_4^{(1)}(n),n) - mul(anz(n),C_3^{(0)}()) = sub(power(C_4^{(0)}(),n),mul(anz(n),C_3^{(0)}()))$ \\
+#+END_SRC
+
+anz(0) = 1
+anz(1) = 3
+anz(2) = 10    1
+anz(3) = 36    6
+anz(4) = 136   30
+anz(5) = 528   120
+anz(6) = 2080  496
+
+** footer
+#+BEGIN_SRC latex :tangle th-loesung-10.tex
+\end{document}
+#+END_SRC
+
+* Zettel-11
+** Tutorium
+- Beispel für Semantik mit Loop? (36)
+- 35: nur addition und subtraktion benutzen? Multiplikation und Division?
+  Selbst definieren? Wenn ungerade dann bla?
+
+- 35: sobald man in den negativen Bereich geht, automatisch nicht definiert?
+  *ja, siehe definition totale subtraktion*
+** header
+#+BEGIN_SRC latex :tangle th-loesung-11.tex
+\documentclass[11pt]{amsart}
+\input{commands.tex}
+\renewcommand{\baselinestretch}{2}
+\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
+
+\title{Zettel 11}
+\author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
+
+\begin{document}
+\maketitle
+#+END_SRC 
+
+** Aufgabe 34
+#+BEGIN: aufgabe34
+[[/home/florian/Zettelkasten/zettelkasten.org_20130115_141827_16745p8k.png]]
+#+END:
+(a)
+y mal die 5. Regel => ack(0, ack(0 , ... , ack(1,0)...)) ; y mal
+ack(1,0) = 1
+ack (0,1) = ack(0,ack(1,0)) = 2
+ack(0,2) = 2 + 2
+noch y-1 mal wiederholen => 2*(y-1) + y => 2y
+(b)
+ack(2,y) => y mal 5. Regel => ack(1, ack(1, ..., ack(2, 0)...))
+=> ack(1, z) rekursion, mit z=2 als start und das  dann y mal wiederholt
+=> 2*2*2*2 (y-mal) .... = 2^y
+[[file:zettelkasten.org::subsubsection][Aufgabe 34]]
+Als induktiver Beweis: über y die einzelnen möglichkeiten zeigen
+#+BEGIN_SRC latex :tangle th-loesung-11.tex
+\subsection*{Aufgabe 34}
+\subsubsection*{a)}% Induktion sortieren <<FIXME th11.1>>
+Induktionsanfang(y=1): \\ %keine Ahnung
+\(\dinc ack(1,1) = ack(0+1,0+1) = ack(0,ack(0+1,0)) = ack(0,ack(1,0)) = ack(0,1) = 2 \)\\
+\(\dinc 2*0 = 2 \)\\
+Induktionsvorraussetzung: \\ %glaube nicht dass das die IV ist (formal)
+\(\dinc ack(1,y) = 2 * y \m{gilt für ein y} \in \N \geq 1 \) \\
+Induktionsschritt: \\
+z.Z.: $ack(1,y+1) = 2*(y+1) = 2y + 2 $ \\
+$ack(1,y+1) = ack(0,ack(1,y)) =_{I.V} ack(0,2*y) = 2y+2$
+\subsubsection*{b)}%FIXME wieder das gleiche
+Induktionsanfang(y=0): \\
+\(\dinc ack(2,0) = ack(1+1,0) = 1 \) \\
+\(\dinc 2^0 = 1 \) \\
+Induktionsvorraussetzung(y=0): \\
+\( ack(2,y) = 2^y \m{ gilt für ein } y \geq 0  \in \N \) \\
+Induktionsschritt: \\
+z.Z.: \( ack(2,y+1) \zz 2^{y+1} = 2^{y}*2 \) \\
+\( ack(2,y+1) = ack(1,ack(2,y)) =_{I.V.} ack(1,2^{y}) = 2^{y}*2\)
+#+END_SRC
+** Aufgabe 35
+#+BEGIN: aufgabe35
+[[/home/florian/Zettelkasten/zettelkasten.org_20130115_142054_167452Gr.png]]
+#+END:
+Gesucht ist eine 2stellige Funktion, die für gerade Werte als ersten
+Parameter nicht für 0 definiert ist und für gerade Werte bis zu dem
+Punkt definiert ist, an dem Par1 und Par2 identisch sind
+Unmittelbare Umsetzung?
+Aber was hätte das dann mit der totalen Subtraktion / Addition zu tun?
+
+Das letzte Ergebnis muss = 0 sein
+
+Sei die funktion h(a,b): 
+  - h(a,b) = 0 für a = b, da nur so der Fall für gerade a rauskommen kann
+  - h(a,0) nicht definiert, für a ungerade, so dass die Funktion direkt abbricht
+  - h(a,c) > 0 für alle c < b bzw. c < a
+h(a,b) = a-b => alle c bis a sind größer 0 und b,c = a ist 0
+      Fehlt noch h(a,0) nicht definiert für ungerade a
+
+Bei der aktuellen Lösung wäre 0 definiert mit 0 <<FIXME th11.3>>
+#+BEGIN_SRC latex :tangle th-loesung-11.tex
+\subsection*{Aufgabe 35} % <<FIXME th11.2>>
+\(h: \mathbb{N}^2 \rightarrow \mathbb{N}\) \\
+Sei \(h(a,b) := \begin{cases} a-b = sub(a,b) &\mbox{(falls } \mbox{a gerade)} \\ \mbox{nicht definiert} &\mbox{(sonst)} \end{cases}\)
+#+END_SRC
+** Aufgabe 36
+X_1 - X_2
+#+BEGIN: aufgabe36
+[[file:zettelkasten.org_20130115_142122_16745DRx.png]]
+#+END:
+[[/home/florian/Zettelkasten/zettelkasten.org_20130116_152505_16745SAK.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130116_152639_16745sUW.png]]
+Sind beides eigentlich nur formalien ohne praktische
+Auswirkungen, im Vergleich zur normalen Semantik.
+
+[[file:201301ad-15581016745Gpi.png]]
+
+[[/home/florian/Zettelkasten/zettelkasten.org_20130118_143908_13098OBg-0.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130118_143908_13098OBg-1.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130118_143908_13098OBg-2.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130118_143908_13098OBg-3.png]]
+
+
+Also wie bei [[file:201301ad-15144613098bLm.png]] Rekursion, die Projektion, k ist das höchste nach der 0 was definiert ist und projeziert auf Iterator = 0
+   sowie alles dazwischen größer 0 und definiert
+
+#+BEGIN_SRC latex :tangle th-loesung-11.tex
+\subsection*{Aufgabe 36}
+% was wird alles zu alpha, bei loop wars das komplette teil
+% theoretisch könnte man noch in unterpunkte splitten
+\( \a_1 := X_2 := X_2 - 1 \) \\
+\( \a_2 := \underline{while} X_2 \not = 0 \underline{do} X_2 := X_2 - 1 ; X_1 := X_1 - 1 \underline{od} \) \\
+
+\( [[\a_1]]^{(2)}(\a_1,\a_2) = [[\a_1 := X_2 := X_2 - 1]]^{(2)}(\a_1,\a_2) \) \\
+\( \dinc = (\a_1,\a_2 - 1) \)
+
+\( [[\a_2]]^{(2)}(\a_1,\a_2) = [[\underline{while} X_2 \not = 0 \underline{do} X_2 := X_2 - 1 ; X_1 := X_1 - 1 \underline{od}]]^{(2)}(\a_1,\a_2) \) \\
+\( \dinc = (\a_1 - 1, \a_2 - 1)^{\a_2} \) \\ 
+
+% out(projektion) * schleifen * schleifen-1 * ... * schleife1 * in
+\( [[P]](\a_1) = (\underline{out}^{(2)}_1 \circ [[\a_2]]^{(2)} \circ [[\a_1]]^{(2)} \circ \underline{in}^{(2)}_2)(\a_1,\a_2) \) \\
+\( \dinc = (\underline{out}^{(2)}_1 \circ [[\a_2]]^{(2)} \circ [[\a_1]]^{(2)})(\a_1,\a_2) \) \\
+\( \dinc = (\underline{out}^{(2)}_1 \circ [[\a_2]]^{(2)})(\a_1,\a_2 - 1) \) \\
+\( \dinc = (\underline{out}^{(2)}_1) (\a_1 - (\a_2-1), 0) \) \\
+\( \dinc = \a_1 - (\a_2 - 1) \) \\
+\( \Rightarrow [[P_n]] : \N^2 \ri \N , (\a_1,\a_2) \tri (\a_1 - (\a_2 -1)) \) \\
+
+#+END_SRC
+   
+** footer
+#+BEGIN_SRC latex :tangle th-loesung-11.tex
+\end{document}
+#+END_SRC
+
+* Zettel-12
+** header
+#+BEGIN_SRC latex :tangle th-loesung-12.tex
+\documentclass[11pt]{amsart}
+\input{commands.tex}
+\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
+\title{Zettel 12 }
+\author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
+\begin{document}
+\maketitle
+#+END_SRC 
+
+** Aufgabe 38
+*** Aufgabenstellung
+*** Lösungsskizze
+*** Lösungen
+*** Referenzen
+** Aufgabe 39
+*** Aufgabenstellung
+*** Lösungsskizze
+*** Lösungen
+*** Referenzen
+** Aufgabe 40
+*** Aufgabenstellung
+*** Lösungsskizze
+*** Lösungen
+*** Referenzen
+** footer
+#+BEGIN_SRC latex :tangle th-loesung-12.tex
+\end{document}
+#+END_SRC
+
+* Zettel-13
+[[~/Dropbox/th/th-zettel-13/th-zettel-13.pdf][th-zettel-13.pdf]]
+[[~/Dropbox/th/th-zettel-13/th-loesung-13.tex][th-loesung-13.tex]]
+[[~/Dropbox/th/th-zettel-13/th-loesung-13.pdf][th-loesung-13.pdf]]

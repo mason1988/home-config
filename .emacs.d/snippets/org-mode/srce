@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: srce
+# key: srce
+# --
+#+BEGIN_SRC elisp
+
+#+END_SRC

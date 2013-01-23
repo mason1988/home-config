@@ -1,0 +1,2 @@
+* TODO Bugs 							    :PROJECT:
+** NEXT öffnen vom selben Orgbuffer in mehreren Frames reproduzieren

@@ -1,0 +1,360 @@
+* organisation
+- email: selecture@mathematik.uni-marburg.de
+- Gruppe 1
+** Mustertext
+_Übung 10 - Lerch, Hamm, Schwiegk - Gruppe 1_
+Hallo,
+im Anhang ist unsere Lösung zum aktuellen Zettel (10) in Softwaretechnik.
+Mit freundlichen Grüßen, Florian Lerch(2404605), Waldemar Hamm(2410010), René Schwiegk(2355612)
+* Hausaufgabe03
+[[~/Dropbox/so/so-hausaufgabe-03/so-hausaufgabe-03.pdf::NNN][so-hausaufgabe-03.pdf]]
+[[file:~/Dropbox/so/so-hausaufgabe-03/code/servlet/tests/Tester.java][Tester.java]]
+- Server erstellen
+- strings mit instanzen von Servlets beim Server "registrieren"
+- beispielaufrufe an Server weitergeben
+[[file:~/Dropbox/so/so-hausaufgabe-03/code/servlet/Server.java::}][Server.java]]
+- irgend ein interner quark
+- parameter aus url extrahieren
+- process von servlets aufrufen
+[[file:~/Dropbox/so/so-hausaufgabe-03/code/servlet/IServlet.java::package%20servlet%3B][IServlet.java]]
+- process befehl mit parametern ausführen
+
+** Aufgabe B
+*** 1.
+Hier finden vor allem das Template Method und das Strategy Pattern
+Anwendung.
+Das Template Pattern erkennt man in der Regel ja schon schnell
+an den Interfaces. Hier ist es das Interface IServlet. Die einzelnen
+Servlets orientieren sich dabei nur an den durch das Template Pattern
+vorgegebenen Schnittstellen, also sowohl Funktions Out- als auch Input.
+Die eigentliche Funktionsweise des Servers ist dem Entwickler
+der Servlets egal. Auf der anderen Seite beschäftigt sich auch der
+Server kaum mit den konkreten Servlets, da er lediglich ihr Template
+implementiert und benutzt und sich dabei darauf verlässt, dass
+die jeweiligen Servlets diesen Schnittstellen gerecht werden.
+
+Das Strategy Pattern ergibt sich aus dem Umstand, das die eigentlichen
+Servlets an und für sich austauschbar sind. Da sie alle auf das
+selbe Interface reagieren und der Server im Grunde auch nur dieses
+Interface implementiert hat, sind die einzelnen Servlets problemlos
+austauschbar, oder - wie im F.
+Der Lösung dieser Aufgabe entspricht das Decoratorpattern. Das
+kombinierende Servlet würde an die einzelnen Servlets nicht
+all vom CombiningServlets - sogar
+miteinander kombinierbar, ohne dass sie dafür extra angepasst
+werden müssten.
+*** 2.
+Der Lösung dieser Aufgabe entspricht das Decoratorpattern. Das
+kombinierende Servlet würde an die einzelnen Servlets nicht
+direkt den Output vom Server weitergeben, sondern jeweils einen
+selbst definierten Stream, welcher dann am Ende der beiden
+einzelnen Servlets in den "richtigen" Outputstream vom Server
+fließen würde.
+Der Server selbst bekommt von dieser Umstellung nichts mit.
+Der Server übergibt nach wie vor sein Streamobjekt welches
+dann mit dem Output der beiden Servlets gefüllt wird. Aus diesem
+Grund handelt es sich dann beim CombiningServlet um einen Decorator.
+** Aufgabe B
+bla bla
+*** Subheading
+nochmehr bla
+* Übung 10
+#+TITLE:     Übung 10
+#+AUTHOR:    florian,waldemar,rene
+#+EMAIL:     lerch.florian@yahoo.de
+#+DATE:      2013-01-17 Do
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:   
+#+LINK_HOME: 
+#+XSLT:
+ 10
+** Aufgabe a
+*** aufgabenstellung :noexport:
+#+BEGIN: aufgabe_a
+[[/home/florian/Zettelkasten/zettelkasten.org_20130117_151844_13098jVT-0.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130117_151844_13098jVT-1.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130117_151844_13098jVT-2.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130117_151844_13098jVT-3.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130117_151844_13098jVT-4.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130117_151844_13098jVT-5.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130117_151844_13098jVT-6.png]]
+#+END:
+*** Fehler 1
+**** Fehlermeldung
+Class defines equals() and uses Object.hashCode() 
+Datei: Card und Cardvector
+**** Beschreibung
+Die equals Methode wird durch die Klasse überschrieben, die hashCode
+Methode jedoch nicht. Da beim vergleichen von Klasseninstanzen aber
+die Hashcodes benutzt werden, welche nun aber bei gleichheit nicht 
+den selben Hashcode haben werden. 
+**** Erkennung
+Suche nach Klassen die die equalsmethode aber nicht die hashcode
+Methode enthalten.
+**** Korrektur
+Die jetzige equals Methode umbenennen zu Compare oder ähnlichem.
+*** Fehler 2
+**** Fehlermeldung
+Comparison of String objects using == or != in jskat.gui.main.ScoreTableModel.update(Observable, Object) 
+**** Beschreibung
+Beim vergleichen mit == oder != werden die Hashcodes verglichen. Diese sind bei inhaltlich identischen 
+Strings zwar meistens, aber nicht immer gleich.
+**** Erkennung
+Nach variablen vom Typ String suchen, welche mit '==' oder '!=' verglichen werden.
+**** Korrektur
+Statt dessen benutzt man die equals Methode der Stringklasse.
+*** Fehler 3
+**** Fehlermeldung
+Switch statement found in jskat.control.SkatGame.playing(GameAnnouncement) where one case falls through to the next case
+**** Beschreibung
+Sobald in einer Switch-Case Struktur eines der Cases zutrifft, wird automatisch alles weitere ausgeführt,
+also auch alle dahinter liegenden case Fälle. Aus diesem Grund beendet man die Ausführungsblöcke mit break
+**** Erkennung
+Nach case blöcken suchen, auf die ein weiteres case oder default folgt, ohne ein break dazwischen.
+**** Korrektur
+Man beendet den Ausführungsblock mit break.
+*** Fehler 4
+**** Fehlermeldung
+jskat.share.CardVector.equals(Object) does not check for null argument
+**** Beschreibung
+Die überschriebene neue Equalsmethode prüft nicht nach Nullobjekten, was aber Standardgemäß 
+jede solche Funktion in java tun sollte. Das muss nicht zwangsläufig zu Fehlern führen,
+erfüllt aber eben nicht den Standard.
+**** Erkennung
+Suche nach überschriebenen equal Methoden in Klassen und suche am Anfang nach einer
+If-Anweisung oder Ähnlichem, das auf Nullelemente prüft.
+**** Korrektur
+Man benennt die - dann nicht mehr - überschriebene Equals methode um in compare oder ähnliches.
+In jedem Fall sollte man die Elemente trotzdem am Anfang der Methode auf Inhalt prüfen.
+*** Fehler 5
+**** Fehlermeldung
+Impossible downcast from javax.swing.JPanel to jskat.gui.main.CardHoldingPanel in jskat.gui.main.JSkatPlayArea.getCardHoldingPanel(int)
+**** Beschreibung
+Die Instanzen der Klasse JPanel lassen sich nicht automatisch zur Klasse CardHoldingPanel konvertieren.
+**** Erkennung
+Suche nach Castings, in welchen die einzelnen Klassen nicht miteinander zusammenhängen, z.B. durch
+Ableitungsstrukturen.
+**** Korrektur
+Statt eine Instanz vom Typ JPanel zu erstellen und diese dann direkt explizit zu casten, könnte man
+gleich eine Instanz von CarHoldingPanel erstellen.
+*** Fehler 7
+**** Fehlermeldung
+Incorrect lazy initialization of static field jskat.control.BiddingThread.myself in jskat.control.BiddingThread.getInstance(JSkatDataModel, SkatGame, int[])
+**** Beschreibung
+Das Attribut myself wurde nirgendwo deklariert.
+**** Erkennung
+Suche nach verwendeten Variablen ohne deklaration dazu.
+**** Korrektur
+Statt myself könnte man this verwenden.
+*** Fehler 8
+**** Fehlermeldung
+Value of gameTypeText from previous case is overwritten here due to switch statement fall through
+**** Beschreibung
+Aufgrund der mangelnden Breaks in Fehler 3, wird die selbe Variable immer wieder überschrieben.
+**** Erkennung
+Suche nach Fehler 3 und dort dann mehrfachen Zuweisungen zu einer Variable in mehreren Case Blöcken.
+**** Korrektur
+Fehler 3 beheben.
+*** Fehler 9
+**** Fehlermeldung
+Unwritten field: jskat.gui.main.JSkatTableActions.newSkatRoundDialogAction
+**** Beschreibung
+Das Attribut das zurückgegeben wird, existiert gar nicht.
+**** Erkennung
+Suche nach return Anweisungen in denen Variablen zurückgegen werden, die nirgendwo sonst benutzt / deklariert werden.
+**** Korrektur
+Den Konstruktor der Klasse aufrufen und somit eine Instanz erstellen.
+*** Fehler 10
+**** Fehlermeldung
+jskat.share.Card doesn't define a hashCode() method but is used in a hashed data structure in jskat.test.share.TestHelper.convertCardsToHashSet(CardVector)
+**** Beschreibung
+Damit die Instanzen eine Klasse in einem HashSet verwendet werden können, muss die Klasse eine passende HashCode Methoe definieren.
+**** Erkennung
+Nach HashSets und deren .add Anweisungen etc. suchen. Die Typen der Variablen dort
+auf das vorhandensein einer hashCode Methode prüfen
+**** Korrektur
+Wenn die equals Methode wie in Fehler 4 umbenannt wird, muss auch keine eigene HashMethode mehr definiert werden.
+*** Fehler 11
+**** Fehlermeldung
+Wait not in loop in jskat.control.BiddingThread.waitMe()
+Wait not in loop in jskat.control.SchieberRamschThread.waitMe()
+**** Beschreibung
+Die wait Methode muss in einer synchronen Schleife stecken.
+**** Erkennung
+Suche nach weit aufrufen und prüfe dann, ob diese sich in einer Schleife befinden.
+**** Korrektur
+Statt wait einfach sleep benutzen, da sowieso nur auf Exceptions gewartet wird.
+*** Fehler 12
+**** Fehlermeldung
+Write to static field jskat.control.SkatTable.jskatStrings from instance method new jskat.control.SkatTable(JSkatDataModel)
+**** Beschreibung
+Es wird ein statisches Attribut durch eine Klasseninstanz überschrieben.
+**** Erkennung
+Suche nach Instanziierungen von Klassen und prüfe bei allen Attributszuweisungen,
+ob diese als statisch definiert wurden.
+**** Korrektur
+jskatStrings nicht mehr statisch machen, so dass jede Instanz einige eigene 
+Instanz dieses Attributs bekommt.
+** Aufgabe b
+*** aufgabenstellung :noexport:
+#+BEGIN: aufgabe_b 
+[[/home/florian/Zettelkasten/zettelkasten.org_20130117_152034_13098wfZ-0.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130117_152034_13098wfZ-1.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130117_152034_13098wfZ-2.png]]
+#+END:
+*** Arten von Tests
+**** Blackbox Testing
+Man testes alle Möglichkeiten, das Programm zu bedienen (also Userinputs und alle möglichen Konfigarutionen und Szenarien...)
+ohne dabei den eigentlichen Quellcode zu betrachten. Der Vorteil liegt darin, dass man vom Quellcode nicht abgelenkt ist und
+das Programm wirklich aus der Perspektive des späteren Benutzers sieht. So kann man z.B. auch schell und Effizient Leute testen lassen
+die gar nicht selber am Code mitgewirkt haben bzw. ihn überhaupt verstehen.
+Der Nachteil dabei ist aber, dass man auch nicht gezielt nach möglichen Extremfällen und somit potenziellen Fehlern im Code suchen kann.
+**** Whitebox Testing
+Man betrachtet den Code und versucht anhand des Codes systematisch alles durchzutesten.
+Dabei kann man sich z.B. Funktionsweise vorarbeiten und genau prüfen, ob alle Funktionsblöcke beim bisherigen testen schon vorkamen.
+Der Vorteil dabei liegt natürlich darin, dass man so wesentlich eher Fehlerursachen unmittelbar erkennen kann, als beim Blackbox testing.
+Der Nachteil ist aber, dass man schnell "Betriebsblind" wird und die verwendeten Systeme im Grunde auch nie absolut jedes Szenario erfassen
+können, man sich aber fälschlicherweise genau darauf verlassen könnte.
+**** Unit Tests
+Der Code wird in einzelne Blöcke / Module / Funktionen /... geteilt. Diese "Units" werden dann in einer Testroutine aufgerufen, 
+welche zunächst eine Testumgebung initialisiert und dann die einzelnen Units mit vom Programmierer bestimmten Werten aufruft und
+und anschließend vergleicht, ob das Ergebnis richtig ist, wobei der Programmierer vorher den erwarteten Wert angibt.
+Der Vorteil liegt darin, dass dieser Prozess weitestgehend automatisch ablaufen kann. Dies Testroutinen müssen nur einmal geschrieben werden
+und sind in der Regel universell genug, dass sie auch bei änderungen des Methodeninhaltes, selbst nicht verändert werden müssen.
+Statt dessen können sie während des gesamten Entwicklungsprozesses beibehalten werden. Ein weiterer Vorteil liegt darin, dass jeden Programmierer
+seine eigenen Unit Tests für seine eigenen Module schreiben kann und nicht ein einzelner, alles testen muss. Außerdem lässt sich im Fehlerfall
+ziemlich genau bestimmen, wo der Fehler entstanden ist.
+Ein Nachteil ist, dass diese Unittests nur die UseCases abdecken, die dem Programmierer bei der Erstellung des jeweiligen Tests eingefallen sind.
+Häufig entstehen Fehler aber gerade durch das zusammenwirken vieler unterschiedlicher Methoden, was meistens nur schlecht durch Unittests abgedeckt wird,
+auch wenn es natürlich möglich ist.
+**** Integration Testing
+Eine bestimmte Anwendung des Blackboxmodells, bei dem man versucht, Gruppen einzelner Module zu bilden und diese einzeln zu testen.
+Nachteile sind die selben wie beim generellen Backboxing. Ein Vorteil dabei ist jedoch, das es wesentlich eher ein systematisches
+Vorgehen ermöglicht.
+**** System Test
+Ebenfalls Anwendung des Blackboxmodells mit den selben Nachteilen. Hierbei versucht man aber, das System als ganzes zu testen,
+wobei man die Tests in die unterschiedlichen UseCases aufsplittet. Auch dies ermöglicht eine halbwegs systematische Vorgehensweise.
+*** Ist ein Garantie für Fehlerfreiheit möglich?
+Nein, da auch jede systematische herangehensweise an die Testmodelle immer auch Lücken aufweisen. So hängt natürlich immer alles
+von der eigentlichen Testumgebung ab, für die man zwar versuchen kann, alle extremfälle abzudecken, aber es ist unmöglich wirklich
+jeden Fall zu finden. Vorallem können auch stets andere auf dem Computer installierte Programme Einfluss darauf nehmen oder Fehler verursachen.
+Bei Abhängigkeiten von externen Modulen besteht zum Beispiel auch stets das Risiko, dass diese geupdatet werden und das Programm somit
+nicht mehr benutzbar machen. In jedem Fall gibt es vollkommen unabhängig davon, wie vollständig und gut die Tests waren, immer einen Nutzer der 
+es schafft, einen Weg zu finden um doch alles zum Absturz zu bringen.
+* TODO Übung 11
+  DEADLINE: <2013-01-27 So 23:59>
+
+* Skript
+** Softwareprozesse
+*** Wasserfallmodell
+      viele Meilensteine (System Requirements) usw. klären und jeweils validieren
+      Probleme
+       - sehr starr, Änderungen nur schwer möglich
+       - Änderungen nur schwer möglich
+       - Risiko, sich in falsche Richtung zu entwickeln
+     * Vorteile
+       - Doku für klare Phasen 
+       - Verantwortlichkeit schnell
+     * Anpassungen als V-Modell
+       - V förmig
+*** Iterativ
+     * Prototypen (schnell ausführbares entwickeln und testen)
+     * inkrementelle entwicklung (bausteine werden stück für Stück entwickelt
+     * unified Process - Prozesphasen:
+       - Anfang: grundlegender Umfang wird geklärt
+       - Vertiefung: grundlegende Architektur, Findung Risiken
+       - Konstruktion (iterativ, viele Releases)
+       - Inbetriebnahme (letztendliche Einführung bei Kunde)
+       - Vorteile:
+	 - man kann noch sehr spät Anpassungen vornehmen
+*** Agile 
+     * Extreme Programming
+       - iterativ entwickelt
+       - wenig analyse/entwurf
+       - prototypen
+       - tests statt spezifikatin
+       - ständige kommunikation manager <=> entwickler
+       - gemeinsame standards, gemeinsames eigentum am code
+     => Kunde wird eng eingebunden
+Pair Programming = grundsätzlich mit mehreren leuten
+  zusammen programmieren => Kompetenz verteilt sich
+** Konfigurationsmanagement
+    * Problematiken:
+      - wo liegen Dateien
+      - wer hat welche Rechte
+      - generelles Synchronisationsproblem
+      -> die unterschiedlichen Merge Mechanismen
+    * Stichwort Git / SVN -> Merging
+    * Probleme entstehen bei Abhängigkeiten und
+        gleichzeitiger bearbeitung
+    * Branches sinnvoll für Variantenerstellung (os etc)
+    * Typischer Workflow: update, neue dateien adden, commiten
+        status für diff und resolve für konflikte
+    * svn besitzt nicht den remote kram(automatisch)
+    * Vorteile Git: 
+      - kein zentraler server
+      - komplette kopie lokal => sehr schnell
+      - Förderung vieler Branches
+    * Git workflow halt der übliche
+    * Tickets
+      - speichern und verwalten probleme
+      - wer ist verantwortlich -> nimmt entgegen
+      - wie schnell updates? (ticket gelöst etc.)
+      - Vorgehen:
+	1. meldung komt an
+	2. annehmen
+	3. prüfen ob fehler stimmt
+	4. projektmanager weißt entwickler zu
+	5. entwickler stellt rückfragen
+	6. entwickler behebt fehler
+	7. neuer release (opt: meldung an kunde)
+** Projectmanagement
+   * Aufgaben Projektmanagement
+     - Erstellung Angebot
+     - Zeitplanung
+     - Kostenkalkulation
+     - Überwachung
+     - Personal
+     - Präsentieren
+   * Projektplan: Ziele, Teams, Risiko, Aufteilung, Zeitplan, Überwachungsinstrumente
+   * Meilenstein(erkennbarer Endpunkt Teilaufgabe) / Lieferschritt (Resultat für Kunden)
+   * Organisationsarten
+     - Stabs
+       - hierarchische Abteilungen
+     - Matrix
+       - Abteilung und Projektleiter unabhängig
+	 => Flexibilität
+     - reine Projektorganisation
+       - nur Projekte als Struktureinheiten
+	 => eine zentrale Abteilung
+   * Zeitplanung
+     - schätzt Zeit/ Ressourcen, bringt Reihenfolge u. Parallelität
+     - Zeitbuffer
+     - Erfährung nötig
+     - blockaden durch abhängigkeit vermeiden, bzw. priorität erhöhen
+   * Ursachen Terminprobleme
+     - Personalmangel
+     - fehlende Qualifikation
+     - unvorhergesehenes, schlechte Einschätzung
+     - zusätzliche Anforderungen
+   * Maßnahmen, Terminprobleme
+     - mehr Personal
+     - nicht!: weniger testen, arbeiten länger arbeiten lassen
+     - outsourcing
+   * Risikomanagement
+     - erkrankungen, nicht funktionierende externe komponenten, wirtschaftliche probleme
+     - ablauf:
+       1. Risikoerkennung
+       2. Risikoanalyse (priorisierung)
+       3. Risikoplanung (notfallpläne)
+       4. Risikoüberwachung
+    * erkennung durch brainstorming durch team
+    * vermeidung risiken
+      - frühe prototypen, saubere Planung, starke Teams, wiederverwendung funktionierender system
