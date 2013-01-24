@@ -1,12 +1,4 @@
 
-(setq org-agenda-files (quote ("~/Zettelkasten/todo.org"
-			       "~/Zettelkasten/logik.org"
-			       "~/Zettelkasten/elementare_stochastik.org"
-			       "~/Zettelkasten/webdesign.org"
-			       "~/Zettelkasten/theoretische_informatik.org"
-			       "~/Zettelkasten/softwaretechnik.org"
-			       "~/Zettelkasten/Software.org"
-			       "~/Zettelkasten/bugs.org")))
 
 
 ; Enable habit tracking (and a bunch of other modules)
@@ -793,5 +785,16 @@ so change the default 'F' binding in the agenda to allow both"
           '(lambda () (org-defkey org-agenda-mode-map "V" 'bh/view-next-project))
           'append)
 
+
+
+(setq org-agenda-files (quote ("~/Zettelkasten/todo.org"
+			       "~/Zettelkasten/logik.org"
+			       "~/Zettelkasten/elementare_stochastik.org"
+			       "~/Zettelkasten/webdesign.org"
+			       "~/Zettelkasten/theoretische_informatik.org"
+			       "~/Zettelkasten/softwaretechnik.org"
+			       "~/Zettelkasten/Software.org"
+			       "~/Zettelkasten/refile.org"
+			       "~/Zettelkasten/bugs.org")))
 
 (provide 'org-mode-config)

@@ -1,10 +1,12 @@
+#+STARTUP: content
 * Projekte
 ** TODO Emacs Config Aufräumen                                      :PROJECT:
 *** DONE überflüssige keymapping dateien entfernen
     - State "DONE"       from "NEXT"       [2013-01-23 Mi 13:21]
 *** DONE nicht mehr benutzte dateien in .emacs.d löschen
     - State "DONE"       from "TODO"       [2013-01-23 Mi 13:21]
-*** NEXT org babel alles laden lassen
+*** DONE org babel alles laden lassen
+    - State "DONE"       from "NEXT"       [2013-01-23 Mi 20:27]
 *** TODO alle shortcuts in .emacs zusammenfassen
 *** DONE funktionen in .emacs auslagern
     CLOCK: [2013-01-14 Mo 19:59]--[2013-01-14 Mo 20:11] =>  0:12
@@ -12,7 +14,8 @@
 *** DONE in bytecompiling einlesen
 *** DONE alles bytecompilen
 ** TODO Org-Mode Bilder						    :PROJECT:
-*** NEXT Möglichkeiten prüfen um informationen/texte einem konkreten Header zuzuordnen
+*** NEXT prüfen ob die latex plugins was taugen
+*** TODO Möglichkeiten prüfen um informationen/texte einem konkreten Header zuzuordnen
 *** TODO Möglichkeiten sammeln, zum zeilenweisen auslesen und splitten bei trennzeichene
 *** TODO beim link erstellen eben jene information in extra ast unterbringen
 *** TODO 2. löschenroutine, welche nach dem löschen eben diesen wert wieder ausliest
@@ -146,6 +149,7 @@ pm-suspend kann dann einfach in synapse eingegeben werden
 - sudo modprobe usb-storage 
   dann werden die festplatten erkannt
 - /etc/modules
+den Rest mit pysdm
 ** Standardprogramme
  + Standardprogramme: ~/.locale/share/applications/mimeapps.list
  application/pdf=zathura.desktop
@@ -837,6 +841,8 @@ und beim nächsten Rechner dann das gleiche
   Prozess abzuspalten
   - wahlweise noch mit nohup davor
   um output abzuleiten
+  for i in 1 2 3 4 5 6 { rm bla$i.jpg }
+  for i in (number-sequence 1 6) {rm bla$i.jpg }
 * zipper
 - tar.gz :: tar xvfz filepath
 - zip :: unzip filepath

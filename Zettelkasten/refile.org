@@ -1,0 +1,10 @@
+* NEXT Refiling
+* idea
+** TODO Projekte und Kategorien als Hauptkriterium für Sortierung. Next Step irrelevant
+ [[file:~/Zettelkasten/workflows.org::*Org%20Mode][Org Mode Todo]]
+ Entered on [2013-01-24 Do 03:43]
+* problem
+** TODO r um wieder hochzuspringen in agenda buffer
+ [[file:~/Zettelkasten/Software.org::*effizienteres%20Suchen][effizienteres Suchen]]
+ Entered on [2013-01-24 Do 03:46]
+* todo

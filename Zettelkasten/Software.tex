@@ -1,0 +1,212 @@
+% Created 2013-01-24 Do 01:28
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\providecommand{\alert}[1]{\textbf{#1}}
+
+\title{Shortcutliste}
+\author{florian}
+\date{\today}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs Org-mode version 7.8.11}}
+
+\begin{document}
+
+\maketitle
+
+\setcounter{tocdepth}{3}
+\tableofcontents
+\vspace*{1cm}
+\section{einfache Tasten}
+\label{sec-1}
+
+\begin{description}
+\item[AltGr - ü] Escape
+\item[AltGr - ö] Tab
+\item[AltGr - p] enter
+\end{description}
+\section{Org - Mode}
+\label{sec-2}
+
+\begin{description}
+\item[C-c C-x C-i] Clock in
+\item[C-c C-x C-o] Clock out
+\item[C-c C-x C-c] cancel Clock
+\item[C-c C-t] toggle todo state
+\item[C-c C-x C-r] Zusammenfassung der Clocks von Substree
+\item[C-u C-c C-x C-i] switch Task (nahtloser Wechsel)
+\item[C-u C-u C-c C-x C-i] Clock in, mark as default (überall reclock in usw.)
+\item[C-c C-x C-d] An jedem Tree jeweils die Zeit anzeigen
+\item[C-c C-c] Update für Ding unter Cursor
+\item[C-c C-x ;] Set (und start) Timer
+\item[C-c C-x e] set estimated effort time
+\item[C-c C-u] Sprung zum Header
+\item[C-j/C-k] auf einer Ebene bewegen
+\item[C-ö t] org tree to indirect buffer
+\item[C-c C-x C-l] preview latex fragment (C-c C-c für undo)
+\item[C-ö D] display inline images
+\item[C-ä s] Screenshot erstellen und einsetzen
+\item[C-ä l] konvertiere zu Latex
+\item[C-ä o] org-babel-tangle
+\item[C-ä .] org-capture
+\end{description}
+\section{Expansion/Completion}
+\label{sec-3}
+
+\begin{description}
+\item[C-n,p] Evil Extension, zurück
+\item[C-x C-n,p] Evil complete line, zurück
+\item[M-ö] Hippie expand
+\item[C-ä c] mögliche Completions anzeigen
+\item[C-p] evil-paste-pop
+        geht bei vorherigem paste alle
+        elemente des kill-rings durch 
+        (kill-ring speichert neue pos)
+\item[C-ö ä] magpie expand (beginnt mit , und dann akronyme)
+\item[C-ä ö] flosub, entweder aktuelles wort (ab leer oder \n) oder markierung
+\item[C-ä b] flosub mit start und end durch leerzeichen getrennt
+\end{description}
+\section{sprünge}
+\label{sec-4}
+
+\begin{description}
+\item[g ;] springe zu letzter veränderung
+\item[C-ö n/r] next/prev Empty Line
+\item[C-ä i/u] next/prev regex
+\item[C-ö g/G] Vertikalsprung hoch/runter
+\item[M-ä] Cursor in Fenster springen lassen
+\item[C-x p ret] setze/entferne autonamedbookmark
+\item[C-x j n] cycle bookmarks current file
+\item[C-M-n] jump up
+\end{description}
+\section{Snippets}
+\label{sec-5}
+
+\begin{description}
+\item[C-ä n] Neues Snippet
+\item[C-c C-c] Snippet Buffer laden
+\item[C-ä f] neues Snippet aus Content
+\item[C-ä g] Platzhalter erstellen (für Oneshot Snippet)
+\item[C-ä h] Oneshot Snippet (erstellen oder einsetzen)
+\end{description}
+\section{sonstiges}
+\label{sec-6}
+
+\begin{description}
+\item[C-x * c] öffnet calculator
+                 => eingabe in postfix/ergebnis paste mit y/close mit q
+\item[C-ö d] doc-view-mode
+\item[C-ä k/K] encrypt/decrypt region
+\item[S-, S-''] minimize(/restore) client
+\item[S-.] letzter Tag
+\item[S-Shift-i] restore client
+\item[C-x s] save-some-buffers
+\item[M-w] buffer back
+\item[C-ä j] evil normal state
+\item[C-ä v] revert buffer
+\item[C-ü C-q] toggle read only
+\item[S-m] startet Maus modus
+\item[q] start/end dragging
+  iae      :: taste 1,2,3
+  b        :: lasse maus springen
+  u        :: undo
+\end{description}
+\section{Fenstermanagement}
+\label{sec-7}
+
+\begin{description}
+\item[C-ä w s] Session speichern
+\item[C-ä w r] Session laden
+\item[C-ä w u] Winner undo
+\item[C-g / C-t 0] Popwin Fenster schließen
+\item[C-t] Popwin Keymap:
+\item[b] Popup Buffer
+\item[l] Popup Last Buffer
+\item[s] stick Popup Window
+\item[spc] select Popup Window
+\item[e] show messages
+\item[C-t C-u \ldots{}] zwingt das Fenster zum öffnen in popwin
+\item[C-ü ö b] view Buffer other window
+\item[C-ü ö f] find file other window
+\item[C-ö b] display buffer
+\item[C-ö f] display file
+\item[C-ä w d/D] dedicate/undedicate window
+\item[C-ä v] revert buffer
+\end{description}
+\section{helm}
+\label{sec-8}
+
+\begin{description}
+\item[M-m] Helm: M-a = alle markieren
+\item[C-ö o] Helm Occur (akt. Buffer)
+\item[M-h M-x] Helm - M-x -> History usw.
+\item[C-ö s] Helm - do - grep
+\item[C-ö k] helm show killring
+\item[C-ö h] helm apropos
+\item[C-ö i] Imenu (Header Übersicht und Sprung)
+\item[C-ö a] org-headlines (komplette übersicht)
+\end{description}
+\section{emms}
+\label{sec-9}
+
+\begin{description}
+\item[C-ö e n] emms-next
+\item[C-ö e p] emms-previous
+\item[C-ö e P] emms-pause
+\item[C-ö e s] emms-shuffle
+\item[C-ö e r] emms-repeat
+\item[C-ö e f] emms-add-find
+\item[C-ö e d] emms-add-directory-tree
+\item[C-ö e l] emms-playlist-mode-go
+\end{description}
+\section{repeat}
+\label{sec-10}
+
+\begin{description}
+\item[C-x z z\ldots{}] repeat last emacs action
+\item[C-!] evil-normale-state (force)
+\end{description}
+. @@          :: repeat last macro
+\begin{description}
+\item[C-x r] repeat
+\item[C-ä r] repeat
+\end{description}
+\section{magit}
+\label{sec-11}
+
+\begin{description}
+\item[C-ö m l] magit pull
+\item[C-ö m h] magit push
+\item[C-ö m s] magit status
+    s         :: stage
+    u         :: unstage
+    c C-c C-c :: commit, - absenden
+    ll        :: log
+\end{description}
+                 
+\section{Firefox}
+\label{sec-12}
+
+\begin{description}
+\item[;y] kopiere linkurl
+\item[``+;y] kopiere linkurl in clipboard
+\item[A] toggle cur bookmark
+\item[:bmarks!] bookmarks durchsuchen
+\end{description}
+
+\end{document}
