@@ -12,6 +12,8 @@
  '(dynamic-completion-mode t)
  '(emms-mode-line-mode-line-function (lambda nil))
  '(emms-source-file-default-directory "/media/florian/Elements1/Musik/")
+ '(evil-intercept-maps nil)
+ '(evil-overriding-maps nil)
  '(helm-c-pdfgrep-default-read-command "emacsclient '%f'")
  '(helm-dired-mode t)
  '(org-format-latex-options (quote (:foreground default :background default :scale 1.4 :html-foreground "Black" :html-background "Transparent" :html-scale 1.4 :matchers ("begin" "$1" "$" "$$" "\\(" "\\[" " $$" "$$ " " $$ " " $" "$ " " $ " "$\\" "$\\\\" "$"))))

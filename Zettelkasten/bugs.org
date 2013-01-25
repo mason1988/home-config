@@ -1,2 +1,5 @@
-* TODO Bugs 							    :PROJECT:
+* TODO [#A] Bugs						    :PROJECT:
 ** NEXT öffnen vom selben Orgbuffer in mehreren Frames reproduzieren
+** TODO Org Patch installieren, um zeitentrag funktionieren zu lassen
+** TODO google backward kill word für alternative, die nicht so viel löscht
+** TODO google rainbow delimiters und faces

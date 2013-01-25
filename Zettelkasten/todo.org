@@ -33,7 +33,7 @@
    - die Zeichen sind da aber ganz gut hervorgehoben
 ** DONE slime installieren und einrichten
    - State "DONE"       from "TODO"       [2013-01-24 Do 03:53]
-* TODO Todo-Eingang						
+* Todo-Eingang						
 ** TODO prüfen: https://github.com/dgutov/point-stack/blob/master/point-stack.el
 ** TODO http://sachachua.com/blog/2013/01/emacs-org-display-projects-with-a-few-subtasks-in-the-agenda-view/ lesen
 ** TODO .emacs Datei splitten mit org-babel-load-file in kategorien

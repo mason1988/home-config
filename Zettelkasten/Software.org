@@ -1,19 +1,20 @@
 #+STARTUP: content
 * Projekte
-** TODO Emacs Config Aufräumen                                      :PROJECT:
+** TODO Emacs Config Aufräumen
 *** DONE überflüssige keymapping dateien entfernen
     - State "DONE"       from "NEXT"       [2013-01-23 Mi 13:21]
 *** DONE nicht mehr benutzte dateien in .emacs.d löschen
     - State "DONE"       from "TODO"       [2013-01-23 Mi 13:21]
 *** DONE org babel alles laden lassen
     - State "DONE"       from "NEXT"       [2013-01-23 Mi 20:27]
-*** TODO alle shortcuts in .emacs zusammenfassen
+*** DONE alle shortcuts in .emacs zusammenfassen
+    - State "DONE"       from "TODO"       [2013-01-24 Do 15:47]
 *** DONE funktionen in .emacs auslagern
     CLOCK: [2013-01-14 Mo 19:59]--[2013-01-14 Mo 20:11] =>  0:12
-*** TODO unnötige keybindings entfernen
+*** NEXT unnötige keybindings entfernen
 *** DONE in bytecompiling einlesen
 *** DONE alles bytecompilen
-** TODO Org-Mode Bilder						    :PROJECT:
+** TODO Org-Mode Bilder
 *** NEXT prüfen ob die latex plugins was taugen
 *** TODO Möglichkeiten prüfen um informationen/texte einem konkreten Header zuzuordnen
 *** TODO Möglichkeiten sammeln, zum zeilenweisen auslesen und splitten bei trennzeichene
@@ -41,7 +42,7 @@
 *** DONE iimage bibliothek o.ä. code raussuchen und auf anpassparkeit prüfen
 *** DONE anforderungen an eigenen Modus sammeln
 *** DONE entsprechenden modus entwickeln ;image slicing
-** TODO Musik Player Einrichten					    :PROJECT:
+** TODO Musik Player Einrichten
 *** DONE google awesome-wm automount Ziel: Festplatte unter festem Namen mounten
     - State "DONE"       from "NEXT"       [2013-01-22 Di 19:50]
 *** NEXT Playlists zusammenstellen und in einem Ordner verlinken
@@ -53,11 +54,16 @@
 *** TODO google: welche navigations und sammelmöglichkeiten gibt es?
 *** TODO Shortcuts für die Tags entsprechend legen
 ** TODO Capturing						    :PROJECT:
-*** NEXT welche Captures ;-Templates; würden noch Sinn machen? Broweser/Client
+*** TODO welche Captures ;-Templates; würden noch Sinn machen? Broweser/Client
+*** NEXT raussuchen wie firefox links speichert, und capture schreiben um link für aktuelle Seite an to-read zu senden
 *** DONE schnellere Shortcuts für Captures 
 *** TODO Captures entsprechend implementieren
 ** TODO Shortcuts						    :PROJECT:
 *** NEXT welche Snippets machen noch Sinn? -> einbauen
+*** TODO my-keys-minor-mode und evil-normal mode zusammen legen
+  [[file:~/.emacs.d/emacs_config.org::*Minormode][Minormode]]
+  Entered on [2013-01-24 Do 23:49]
+*** TODO festes Shortcut das Timer für refile - task setzt
 *** DONE shortcuts für scrolling in pentadactyl ummappen
 *** DONE verschieben/retaggen von Fenstern in awesom wm
 *** DONE mehr Tasten auf den Modalen Vim Modus setzen
@@ -69,13 +75,15 @@
 *** DONE Emacs wiederholung braucht ein besseres shortcut; z schwer zu finden :shortcut:
 *** DONE zyklisches Pasten von Emacs aus Killring		  :shortcuts:
 *** DONE shortcuts für erstellen von tmp autonamed bookmark und cyclen; in buffer :shortcuts:
+*** NEXT Shortcut Timer in Capture installieren
 ** TODO Sprungmarken						    :PROJECT:
 *** TODO Liste mit Features von Bookmark+ anfertigen
 *** NEXT markierung und/oder anzeige für evil marks im Dokument anzeige ;goggle
 nicht mehr zeit verschwenden, als unbedingt nötig, da die evil marks in jedem fall auch
 durch autobookmarks ersetzt werden könnten
 google: emacs+evil+show+mark 
-** TODO TodoListe optimieren					    :PROJECT:
+*** TODO Shortcuts für next / prev buffer setzen
+** TODO [#A] TodoListe optimieren				    :PROJECT:
 *** NEXT Brainstorming, was Standardmäßig geöffnet und was geschlossen sein soll
 *** TODO autostarts neu zuteilen ;source blöcke usw.
 *** DONE todo states und faces aus "your life in plaintext"
