@@ -2,6 +2,9 @@
 ** TODO in irgend einer Form den aktuellen Stand bzw. nächsten Schritt bei den Zettelprojekten festhalten
  [[file:~/Zettelkasten/refile.org::*to-read][to-read]]
  Entered on [2013-01-24 Do 16:14]
+** TODO Die Slices müssen als minimale Größe wohl die normale Größe einer Zeile haben
+ [[file:~/Zettelkasten/softwaretechnik.org::*Aufgabenstellung][Aufgabenstellung]]
+ Entered on [2013-01-25 Fr 15:39]
 * problem
 * todo
 * to-read
@@ -13,6 +16,12 @@
  Entered on [2013-01-24 Do 15:55]
 ** TODO http://www.suenkler.info/emacs-orgmode.html
 * wishes
+** TODO recent files usw nach inhalt durchsuchen können, um buffer oder datei zu finden
+ 
+ Entered on [2013-01-25 Fr 15:29]
+** TODO mehr (untracked) Files auf einmal in magit stagen können
+ 
+ Entered on [2013-01-25 Fr 17:09]
 * notes
 ** TODO möglichkeiten für Tasten
 - Belegung von C-x auf cx usw: 
@@ -50,3 +59,13 @@ alternativ:
    (key-chord-define evil-visual-state-map ",," 'evil-change-to-previous-state)
    (key-chord-define evil-insert-state-map ",," 'evil-normal-state)
    (key-chord-define evil-replace-state-map ",," 'evil-normal-state)
+** TODO Zettel Workflow
+1. Projekt Eintrag für Zettel erstellen
+2. Deadline hinzufügen
+2. Unterpunkte für die einzelnen Aufgaben erstellen
+3. Aufgabe in Unterpunkt Aufgabenstellung kopieren
+4. zusätzlich Lösungsskizzen, referenzen und Lösung
+5. je nach Modul noch footer und header ansetzen
+
+ 
+ Entered on [2013-01-25 Fr 15:30]
