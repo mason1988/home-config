@@ -232,3 +232,4 @@ compat*
 /.keynavrc.swp
 /.config/awesome/.rc.lua.swo
 /.config/awesome/.rc.lua.swp
+.emacs.d/org-clock-save.el

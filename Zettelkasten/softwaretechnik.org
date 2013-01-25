@@ -250,8 +250,6 @@ nicht mehr benutzbar machen. In jedem Fall gibt es vollkommen unabhängig davon,
 es schafft, einen Weg zu finden um doch alles zum Absturz zu bringen.
 * NEXT [#A] Übung 11						    :PROJECT:
   DEADLINE: <2013-01-27 So 23:59>
-  :LOGBOOK:
-  :END:
 
 * TODO Hausaufgabe 4
 * Skript
