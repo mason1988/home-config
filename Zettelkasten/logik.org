@@ -357,8 +357,10 @@ Sei x3=0 => (2*x4 < 0) => existiert kein x4 das *echt* kleiner ist
 \end{document}
 #+END_SRC
 
-* TODO Zettel-11
+* CANCELLED Zettel-11						  :CANCELLED:
   DEADLINE: <2013-01-23 Mi 23:59>
+  - State "CANCELLED"  from "TODO"       [2013-01-24 Do 04:24] \\
+    Zeit abgelaufen
 ** header
 #+BEGIN_SRC latex :tangle lo-loesung-11.tex
 \documentclass[11pt]{amsart}

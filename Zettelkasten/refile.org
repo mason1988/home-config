@@ -1,0 +1,52 @@
+* idea
+** TODO in irgend einer Form den aktuellen Stand bzw. nächsten Schritt bei den Zettelprojekten festhalten
+ [[file:~/Zettelkasten/refile.org::*to-read][to-read]]
+ Entered on [2013-01-24 Do 16:14]
+* problem
+* todo
+* to-read
+** TODO Gedächtnistraining für Dummies
+ [[file:~/Zettelkasten/bugs.org::*%5B#A%5D%20Bugs][Bugs]]
+ Entered on [2013-01-24 Do 15:54]
+** TODO autogenes training
+ [[file:~/Zettelkasten/bugs.org::*%5B#A%5D%20Bugs][Bugs]]
+ Entered on [2013-01-24 Do 15:55]
+** TODO http://www.suenkler.info/emacs-orgmode.html
+* wishes
+* notes
+** TODO möglichkeiten für Tasten
+- Belegung von C-x auf cx usw: 
+   (define-key evil-normal-state-map "c" nil)
+   (define-key evil-motion-state-map "cu" 'universal-argument)
+   (define-key key-translation-map (kbd "ch") (kbd "C-h"))
+   (define-key key-translation-map (kbd "cx") (kbd "C-x"))
+- Belegung von Keychords:
+  schnell oder gleichzeitig hintereinander gedrückt
+  auch in kombi mit C-x auf cx möglich: xx = C-x
+- die F Tasten und verstärkte Nutzung motion mode
+** TODO escape taste setzen (kombi c-g und insert zu normal state)
+   ;;; C-c as general purpose escape key sequence.
+   ;;;
+   (defun my-esc (prompt)
+     "Functionality for escaping generally.  Includes exiting Evil insert state and C-g binding. "
+     (cond
+      ;; If we're in one of the Evil states that defines [escape] key, return [escape] so as
+      ;; Key Lookup will use it.
+      ((or (evil-insert-state-p) (evil-normal-state-p) (evil-replace-state-p) (evil-visual-state-p)) [escape])
+      ;; This is the best way I could infer for now to have C-c work during evil-read-key.
+      ;; Note: As long as I return [escape] in normal-state, I don't need this.
+      ;;((eq overriding-terminal-local-map evil-read-key-map) (keyboard-quit) (kbd ""))
+      (t (kbd "C-g"))))
+   (define-key key-translation-map (kbd "C-c") 'my-esc)
+   ;; Works around the fact that Evil uses read-event directly when in operator state, which
+   ;; doesn't use the key-translation-map.
+   (define-key evil-operator-state-map (kbd "C-c") 'keyboard-quit)
+   ;; Not sure what behavior this changes, but might as well set it, seeing the Elisp manual's
+   ;; documentation of it.
+   (set-quit-char "C-c")
+   
+alternativ:
+   (key-chord-define evil-normal-state-map ",," 'evil-force-normal-state)
+   (key-chord-define evil-visual-state-map ",," 'evil-change-to-previous-state)
+   (key-chord-define evil-insert-state-map ",," 'evil-normal-state)
+   (key-chord-define evil-replace-state-map ",," 'evil-normal-state)

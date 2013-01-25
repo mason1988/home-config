@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <13/01/23 13:41:08 /home/florian/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <13/01/24 02:17:17 /home/florian/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -18,17 +18,40 @@
   ("perl-file-spec" t)
   ("perl-cwd-realpath" t)
   ("perl" "\\perl"))
- (["sudo" "root" "localhost" nil]
+ (["sudo" "root" "waschmaschine" nil]
+  ("uname" "Linux 3.5.0-17-generic")
   ("test" "test")
-  ("file-exists" "test -e")
-  ("tmpdir" "/sudo:root@localhost:/tmp")
   ("remote-path"
    ("/bin" "/usr/bin" "/usr/sbin" "/usr/local/bin"))
+  ("remote-shell" "/bin/sh")
+  ("busybox" nil)
+  ("readlink" "\\readlink")
+  ("stat" "\\stat")
+  ("file-exists" "test -e")
+  ("ls" "/bin/ls --color=never")
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("ls-dired" t)
+  ("id" "/usr/bin/id")
+  ("gid-integer" 0)
+  ("trash" nil)
+  ("~root" "/root")
+  ("uid-integer" 0))
+ (["sudo" "root" "localhost" nil]
+  ("perl-file-spec" t)
+  ("uname" "Linux 3.5.0-17-generic")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/usr/sbin" "/usr/local/bin"))
+  ("remote-shell" "/bin/sh")
+  ("busybox" nil)
   ("id" "/usr/bin/id")
   ("uid-integer" 0)
   ("stat" "\\stat")
+  ("file-exists" "test -e")
   ("gid-integer" 0)
   ("readlink" "\\readlink")
-  ("uname" "Linux 3.5.0-17-generic")
-  ("remote-shell" "/bin/sh")
-  ("busybox" nil)))
+  ("tmpdir" "/sudo:root@localhost:/tmp")
+  ("perl" "\\perl")
+  ("perl-cwd-realpath" t)))

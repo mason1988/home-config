@@ -1,11 +1,23 @@
 (setq org-capture-templates
- '(("t" "Todo" entry (file+headline "~/Zettelkasten/todo.org" "Todo-Eingang")
-        "** TODO %?")
-   ("z" "Studium - Todo" entry (file+headline "~/Zettelkasten/todo.org" "Todo-Eingang-Studium")
+ '(("t" "Todo" entry (file+headline "~/Zettelkasten/refile.org" "todo")
+        "** TODO %?\n %a\n Entered on %U")
+   ("i" "Idea" entry (file+headline "~/Zettelkasten/refile.org" "idea")
+        "** TODO %?\n %a\n Entered on %U")
+   ("p" "Problem" entry (file+headline "~/Zettelkasten/refile.org" "problem")
+        "** TODO %?\n %a\n Entered on %U")
+   ("w" "Wishes" entry (file+headline "~/Zettelkasten/refile.org" "wishes")
+        "** TODO %?\n %a\n Entered on %U")
+   ("n" "Notes" entry (file+headline "~/Zettelkasten/refile.org" "notes")
+        "** TODO %?\n %a\n Entered on %U")
+   ("z" "Zeiteintrag" entry (file+headline "~/Zettelkasten/organisation.org" "additional clocks")
+        "** ZKTO %? \n  %i" :clock-in t :clock-resume t)
+   ("r" "To Read" entry (file+headline "~/Zettelkasten/refile.org" "to-read")
         "** TODO %?\n %a\n Entered on %U")
    ("j" "Journal" entry (file+datetree "~/org/journal.org")
         "* %?\nEntered on %U\n  %i\n  %a")
-   ("w" "link template" entry
+   ("y" "Studium - Todo" entry (file+headline "~/Zettelkasten/todo.org" "Todo-Eingang-Studium")
+        "** TODO %?\n %a\n Entered on %U")
+   ("l" "link template" entry
     (file+headline "~/Zettelkasten/notes.org" "Links")
      "* [[%:link][%:description]]"
      :empty-lines 1 :immediate-finish :unnarrowed :kill-buffer)))

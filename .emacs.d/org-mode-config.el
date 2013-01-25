@@ -1,14 +1,3 @@
-
-(setq org-agenda-files (quote ("~/Zettelkasten/todo.org"
-			       "~/Zettelkasten/logik.org"
-			       "~/Zettelkasten/elementare_stochastik.org"
-			       "~/Zettelkasten/webdesign.org"
-			       "~/Zettelkasten/theoretische_informatik.org"
-			       "~/Zettelkasten/softwaretechnik.org"
-			       "~/Zettelkasten/Software.org"
-			       "~/Zettelkasten/bugs.org")))
-
-
 ; Enable habit tracking (and a bunch of other modules)
 (setq org-modules (quote (org-bbdb
                           org-bibtex
@@ -462,6 +451,11 @@ A prefix arg forces clock in of the default task."
                 (tags "REFILE"
                       ((org-agenda-overriding-header "Tasks to Refile")
                        (org-tags-match-list-sublevels nil)))
+                (tags-todo "-HOLD-CANCELLED/!"
+                           ((org-agenda-overriding-header "Projects")
+                            (org-agenda-skip-function 'bh/skip-non-projects)
+                            (org-agenda-sorting-strategy
+                             '(category-keep))))
                 (tags-todo "-CANCELLED/!"
                            ((org-agenda-overriding-header "Stuck Projects")
                             (org-agenda-skip-function 'bh/skip-non-stuck-projects)))
@@ -482,21 +476,13 @@ A prefix arg forces clock in of the default task."
                             (org-agenda-todo-ignore-with-date t)
                             (org-agenda-sorting-strategy
                              '(category-keep))))
-                (tags-todo "-HOLD-CANCELLED/!"
-                           ((org-agenda-overriding-header "Projects")
-                            (org-agenda-skip-function 'bh/skip-non-projects)
-                            (org-agenda-sorting-strategy
-                             '(category-keep))))
                 (tags-todo "-CANCELLED+WAITING/!"
                            ((org-agenda-overriding-header "Waiting and Postponed Tasks")
                             (org-agenda-skip-function 'bh/skip-stuck-projects)
                             (org-tags-match-list-sublevels nil)
                             (org-agenda-todo-ignore-scheduled 'future)
                             (org-agenda-todo-ignore-deadlines 'future)))
-                (tags "-REFILE/"
-                      ((org-agenda-overriding-header "Tasks to Archive")
-                       (org-agenda-skip-function 'bh/skip-non-archivable-tasks)
-                       (org-tags-match-list-sublevels nil))))
+                )
                nil)
               ("r" "Tasks to Refile" tags "REFILE"
                ((org-agenda-overriding-header "Tasks to Refile")
@@ -794,4 +780,14 @@ so change the default 'F' binding in the agenda to allow both"
           'append)
 
 
+
+(setq org-agenda-files (quote ("~/Zettelkasten/todo.org"
+			       "~/Zettelkasten/logik.org"
+			       "~/Zettelkasten/elementare_stochastik.org"
+			       "~/Zettelkasten/webdesign.org"
+			       "~/Zettelkasten/theoretische_informatik.org"
+			       "~/Zettelkasten/softwaretechnik.org"
+			       "~/Zettelkasten/Software.org"
+			       "~/Zettelkasten/refile.org"
+			       "~/Zettelkasten/bugs.org")))
 (provide 'org-mode-config)

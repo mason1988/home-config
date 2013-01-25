@@ -1,3 +1,4 @@
+
 (add-to-list 'load-path "~/.emacs.d/w3m/")
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/slime/")
@@ -8,11 +9,12 @@
 (add-to-list 'load-path "~/.emacs.d/magit/")
 (add-to-list 'load-path "~/.emacs.d/image-dired/")
 (add-to-list 'load-path "~/.emacs.d/helm/")
+(require 'key-chord)
 (require 'undo-tree)
 (require 'naviplus)
 (require 'recentf-ido)
 (require 'empty_jump)
-(require 'helm)
+(require 'helm-config)
 (require 'cstm_regex)
 (require 'dired+)
 (require 'tidy-org-jump)
@@ -35,18 +37,24 @@
 (require 'capture-templates)
 (require 'yasnippet)
 (require 'yasnippet-config)
+(require 'my-org-screenshot)
 (require 'w3m-load)
 (require 'magit)
 (require 'org-nav)
 (require 'goto-last-change)
 (require 'org-protocol)
 (require 'winner)
-(require 'escape-fix)
 (require 'revive)
 (require 'evil)
+(require 'emms-setup)
 (require 'org-mode-config)
+(require 'emms-player-vlc)
 (server-start)
 
+(emms-all)
+(emms-default-players)
+
+(setq emms-player-list '(emms-player-vlc))
 (defun messenger() (interactive) (erc :server "im.rootdir.de" :port 6668 :nick "floppycode"))
 (undo-tree-mode t)
 
@@ -76,6 +84,16 @@
 (tool-bar-mode 0)
 (evil-mode 1)
 
+
+(define-key evil-motion-state-map (kbd "s") 'evil-backward-char)
+;Den Evil normal state als standard für alles setzen
+(setq evil-normal-state-modes (append evil-emacs-state-modes evil-motion-state-modes evil-normal-state-modes))
+;(setq evil-motion-state-modes (append evil-emacs-state-modes evil-motion-state-modes))
+(setq evil-emacs-state-modes nil)
+(setq evil-motion-state-modes nil)
+
+(key-chord-mode 1)
+
 (defvar my-keys-minor-mode-map (make-keymap) "my-keys-minor-mode keymap.")   
     (define-minor-mode my-keys-minor-mode
           "A minor mode so that my key settings override annoying major modes."
@@ -97,13 +115,67 @@
 (global-set-key (kbd "C-ö e d") 'emms-add-directory-tree)
 (global-set-key (kbd "C-ö e l") 'emms-playlist-mode-go)
 
+;dired mode
+(evil-declare-key 'normal dired-mode-map (kbd "s") 'evil-backward-char)
+(evil-declare-key 'normal dired-mode-map (kbd "n") 'evil-next-line)
+(evil-declare-key 'normal dired-mode-map (kbd "r") 'evil-previous-line)
+(evil-declare-key 'normal dired-mode-map (kbd "t") 'evil-forward-char)
+
+(evil-declare-key 'normal dired-mode-map (kbd "M-r") 'windmove-up)
+(evil-declare-key 'normal dired-mode-map (kbd "M-n") 'windmove-down)
+(evil-declare-key 'normal dired-mode-map (kbd "M-s") 'windmove-left)
+(evil-declare-key 'normal dired-mode-map (kbd "M-t") 'windmove-right)
+
+(key-chord-define evil-normal-state-map ",," 'evil-force-normal-state)
+(key-chord-define evil-visual-state-map ",," 'evil-change-to-previous-state)
+(key-chord-define evil-insert-state-map ",," 'evil-normal-state)
+(key-chord-define evil-replace-state-map ",," 'evil-normal-state)
+(key-chord-define evil-normal-state-map "ää" 'evil-execute-in-emacs-state)
+
+(define-key evil-normal-state-map "s" 'evil-backward-char)
+(define-key evil-normal-state-map "n" 'evil-next-line)
+(define-key evil-normal-state-map "r" 'evil-previous-line)
+(define-key evil-normal-state-map "t" 'evil-forward-char)
+
+(define-key evil-motion-state-map "s" 'evil-backward-char)
+(define-key evil-motion-state-map "n" 'evil-next-line)
+(define-key evil-motion-state-map "r" 'evil-previous-line)
+(define-key evil-motion-state-map "t" 'evil-forward-char)
+
+(define-key evil-normal-state-map "k" 'evil-substitute)
+(define-key evil-normal-state-map "j" 'evil-replace)
+(define-key evil-normal-state-map "h" 'evil-search-next)
+(define-key evil-normal-state-map "H" 'evil-search-previous)
+(define-key evil-normal-state-map "l" 'evil-find-char-to)
+(define-key evil-normal-state-map "L" 'evil-find-char-to-backward)
+
+(define-key evil-motion-state-map "k" 'evil-substitute)
+(define-key evil-motion-state-map "j" 'evil-replace)
+(define-key evil-motion-state-map "h" 'evil-search-next)
+(define-key evil-motion-state-map "H" 'evil-search-previous)
+(define-key evil-motion-state-map "l" 'evil-find-char-to)
+(define-key evil-motion-state-map "L" 'evil-find-char-to-backward)
+
+(define-key evil-normal-state-map "\C-n" 'evil-scroll-down)
+(define-key evil-normal-state-map "\C-r" 'evil-scroll-up)
+
+(define-key my-keys-minor-mode-map (kbd "M-r") 'windmove-up)
+(define-key my-keys-minor-mode-map "\C-r" 'evil-scroll-up)
+(define-key my-keys-minor-mode-map "\C-n" 'evil-scroll-down)
+(define-key evil-normal-state-map (kbd "M-r") 'windmove-up)
+(define-key evil-normal-state-map (kbd "M-n") 'windmove-down)
+(define-key evil-normal-state-map (kbd "M-s") 'windmove-left)
+
+(define-key evil-normal-state-local-map (kbd "s") 'evil-backward-char)
+;(define-key evil-normal-state (kbd "s") 'evil-backward-char)
+
+(define-key my-keys-minor-mode-map (kbd "M-t") 'windmove-right)
+(define-key my-keys-minor-mode-map "\M-x" 'execute-extended-command)
+(define-key my-keys-minor-mode-map (kbd "<f8>") 'bmkp-cycle-this-buffer)
+
 (global-set-key (kbd "C-ä g") 'yas/make-placeholder)
 (global-set-key (kbd "C-ä f") 'yas/new-snippet-with-content)
 (global-set-key (kbd "C-ä h") 'yas/oneshot-snippet)
-(global-set-key (kbd "C-e") 'keyboard-quit)
-(define-key evil-normal-state-map "\C-e" 'keyboard-quit)
-(define-key evil-motion-state-map "\C-e" 'keyboard-quit)
-(define-key evil-insert-state-map "\C-e" 'evil-normal-state)
 (global-set-key (kbd "C-ä k") 'epa-encrypt-region)
 (global-set-key (kbd "C-ä K") 'epa-decrypt-region)
 (global-set-key (kbd "C-ä e") 'eval-region)
@@ -126,35 +198,6 @@
 (global-set-key (kbd "C-ä w d") 'dedi_func)
 (global-set-key (kbd "C-ä w D") 'undedi_func)
 (global-set-key (kbd "C-ä w u") 'winner-undo)
-(define-key evil-normal-state-map "s" 'evil-backward-char)
-(define-key evil-normal-state-map "n" 'evil-next-line)
-(define-key evil-normal-state-map "r" 'evil-previous-line)
-(define-key evil-normal-state-map "t" 'evil-forward-char)
-
-(define-key evil-motion-state-map "s" 'evil-backward-char)
-(define-key evil-motion-state-map "n" 'evil-next-line)
-(define-key evil-motion-state-map "r" 'evil-previous-line)
-(define-key evil-motion-state-map "t" 'evil-forward-char)
-(define-key evil-normal-state-map "k" 'evil-substitute)
-(define-key evil-normal-state-map "j" 'evil-replace)
-(define-key evil-normal-state-map "h" 'evil-search-next)
-(define-key evil-normal-state-map "H" 'evil-search-previous)
-(define-key evil-normal-state-map "l" 'evil-find-char-to)
-(define-key evil-normal-state-map "L" 'evil-find-char-to-backward)
-(define-key evil-motion-state-map "k" 'evil-substitute)
-(define-key evil-motion-state-map "j" 'evil-replace)
-(define-key evil-motion-state-map "h" 'evil-search-next)
-(define-key evil-motion-state-map "H" 'evil-search-previous)
-(define-key evil-motion-state-map "l" 'evil-find-char-to)
-(define-key evil-motion-state-map "L" 'evil-find-char-to-backward)
-
-(define-key evil-motion-state-map "\C-n" 'evil-scroll-down)
-(define-key evil-normal-state-map "\C-n" 'evil-scroll-down)
-(global-set-key "\C-n" 'evil-scroll-down)
-(define-key evil-motion-state-map "\C-r" 'evil-scroll-up)
-(define-key evil-normal-state-map "\C-r" 'evil-scroll-up)
-(global-set-key "\C-r" 'evil-scroll-up)
-
 (global-set-key (kbd "C-x f") 'ido-find-file)
 (global-set-key (kbd "C-x C-f") 'ido-find-file-other-window)
 (global-set-key (kbd "C-x C-b") 'ido-switch-buffer-other-window)
@@ -205,15 +248,12 @@
 (global-set-key (kbd "M-m") 'helm-for-files)
 (global-set-key (kbd "C-ö h") 'helm-c-apropos)
 (global-set-key (kbd "C-ö i") 'helm-imenu)
-(define-key my-keys-minor-mode-map (kbd "M-r") 'windmove-up)
-(define-key my-keys-minor-mode-map "\C-r" 'evil-scroll-up)
-(define-key my-keys-minor-mode-map "\C-n" 'evil-scroll-down)
-(define-key my-keys-minor-mode-map (kbd "M-r") 'windmove-up)
-(define-key my-keys-minor-mode-map (kbd "M-n") 'windmove-down)
-(define-key my-keys-minor-mode-map (kbd "M-s") 'windmove-left)
-(define-key my-keys-minor-mode-map (kbd "M-t") 'windmove-right)
-(define-key my-keys-minor-mode-map "\M-x" 'execute-extended-command)
-(define-key my-keys-minor-mode-map (kbd "<f8>") 'bmkp-cycle-this-buffer)
+
+
+(evil-define-key 'emacs my-keys-minor-mode-map (kbd "r") 'evil-previous-line)
+(evil-define-key 'emacs my-keys-minor-mode-map (kbd "n") 'evil-next-line)
+(evil-define-key 'emacs my-keys-minor-mode-map (kbd "t") 'evil-forward-char)
+(evil-define-key 'emacs my-keys-minor-mode-map (kbd "s") 'evil-backward-char)
 
 (global-set-key (kbd "C-ä j") 'evil-normal-state)
 
