@@ -248,13 +248,166 @@ jeden Fall zu finden. Vorallem können auch stets andere auf dem Computer instal
 Bei Abhängigkeiten von externen Modulen besteht zum Beispiel auch stets das Risiko, dass diese geupdatet werden und das Programm somit
 nicht mehr benutzbar machen. In jedem Fall gibt es vollkommen unabhängig davon, wie vollständig und gut die Tests waren, immer einen Nutzer der 
 es schafft, einen Weg zu finden um doch alles zum Absturz zu bringen.
-* NEXT [#A] Übung 11						    :PROJECT:
+* TODO [#A] Übung 11						    :PROJECT:
   DEADLINE: <2013-01-27 So 23:59>
   :LOGBOOK:
+  CLOCK: [2013-01-25 Fr 16:41]--[2013-01-25 Fr 17:08] =>  0:27
+  CLOCK: [2013-01-25 Fr 15:27]--[2013-01-25 Fr 15:53] =>  0:26
   :END:
+** TODO Aufgabe A
+*** Aufgabenstellung
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_152849_29739auX-0.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_152849_29739auX-1.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_152849_29739auX-2.png]]
+*** Lösungsskizzen
+*** Referenzen
+*** Lösung
+Erst durch die Anforderungsanalyse kann der bzw. können die Programmierer erst wirklich
+in Erfahrung bringen, was der Kunde wirklich haben möchte. Sollte man
+vorher schon anfangen zu entwickeln, so besteht das Risiko, dass man
+an dem vorbei entwickelt was der Kunde haben möchte. Vielleicht
+investiert man viel Zeit in Features an denen der Kunde eigentlich gar
+kein richtiges Interesse hat, oder aber trifft bereits
+Designentscheidungen, die im Widerspruch zum eigentlichen Wunsch des
+Kunden stehen.
+Aber es können sich auch technischere Probleme ergeben. Durch die
+Anforderungsanalyse wird erst effektive Planung und Zusammenarbeit
+mehrerer Programmierer möglich. Wenn nicht klar definiert ist, was das
+Programm alles leisten können muss, ist effektives Planung der Arbeit
+nur schwer möglich so dass z.B. echte Überprüfbarkeit der Arbeit gar
+nicht machbar ist, was dann natürlich auch wieder zu Problemen mit dem
+Kunden führen kann, da zu diesem Zeitpunkt in der Regel ja auch noch
+kein richtiger Vertrag besteht.
+** TODO Aufgabe B
+*** Aufgabenstellung
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_153555_29739n4d-0.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_153555_29739n4d-1.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_153555_29739n4d-2.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_153555_29739n4d-3.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_153555_29739n4d-4.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_153555_29739n4d-5.png]]
+*** Lösungsskizzen
+*** Referenzen
+*** Lösung
+    - wo liegt die Datenbank, mit welcher die Route ermittelt wird?
+    - welche Anbindung an andere Systeme besteht, um die Kreditkarte
+      zu prüfen?
+** TODO Aufgabe C
+*** Aufgabenstellung
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_153745_29739BNq-0.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_153745_29739BNq-1.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_153745_29739BNq-2.png]]
+*** Lösungsskizzen
+*** Referenzen
+*** Lösung
+**** Fahrschein kaufen
+***** Titel
+      Fahrschein kaufen
+***** Kurzbeschreibung
+      Der Kunde betätigt den Startknopf, wählt dann seine Route und
+      und bezahlt dann mit einer Kreditkarte.
+***** Aktoren
+      Potenzielle Fahrgast
+***** Vorbedingungen
+      keine
+***** Beschreibung Ablauf
+      1. Der Kunde betätigt den Startknopf
+      2. Automat zeigt Menü für Zielbahnhofsuche an
+      3. Kunde gibt Zielbahnhof an
+      4. Automat liest Suchergebnisse aus der Datenbank
+      5. Kunde bestätigt eins der Ergebnisse
+      6. Automat berechnet Preis
+      7. Kunde gibt Kreditkarte ein
+      8. Kunde gibt Geheimnummer ein
+      9. Automat prüft Nummer und Kreditkarte
+      10. falls Erfolg: Automat hebt Geld ab, druckt Fahrschein und
+	  gibt Karte wieder aus
+***** Auswirkungen
+      Unter Umständen gibt es eine maximale Fahrgastanzahl für die
+      Züge welcher sich dann genähert wurde. Allgemein endet der
+      Automat aber im selben Zustand, in welchem er angefangen hat,
+      also ohne echte Auswirkungen.
+***** Anmerkungen
+**** Rechtschreibprüfung in einem Texteditor
+***** Titel
+      Rechtschreibprüfung in einem Texteditor
+***** Kurzbeschreibung
+      Benutzer startet die Rechtschreibprüfung und bekommt dann alle
+      Fehler angezeigt und entscheidet jeweils, was pasieren soll.
+***** Aktoren
+      Benutzer des Texteditors
+***** Vorbedingungen
+      Texteditor mit Text drin muss geöffnet sein.
+***** Beschreibung Ablauf
+***** Auswirkungen
+***** Anmerkungen
+** TODO Aufgabe D
+*** Aufgabenstellung
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_153803_29739OXw-0.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_153803_29739OXw-1.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_153803_29739OXw-2.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_153803_29739OXw-3.png]]
+*** Lösungsskizzen
+*** Referenzen
+*** Lösung
 
 * TODO Hausaufgabe 4
 * Skript
+** Anforderungsanalyse
+- soll konkretisieren was Kunde will
+  bzw. was software können muss
+=> Basis für Vertrag, Kalkulation, Überprüfung
+- Benutzeranforderungen / Systemanforderungen
+  (=> Pflichtenheft)
+*** Anwendungsfälle
+- gliederung in logisch-funktionale Einheiten
+- Aufbau
+  * Titel
+  * Kurzbeschreibung
+  * Aktoren (= wer macht was)
+  * Vorbedingunge
+  * Beschreibung Ablauf
+  * Auswirkungen (= Endergebnis)
+  * Anmerkungen
+- Anwendungsfalldiagramm
+  Aktor <=> System
+  Im System sind verschiedene logischen Einheiten
+  die dann wege zueinander bilden
+  => dabei sind diese nach ihrem Zweck, also aus sicht
+  des inkompetenten Kunden geschildert
+**** Beispiel:
+ [[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165027_29739bh2-0.png]]
+ [[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165027_29739bh2-1.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165027_29739bh2-2.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165027_29739bh2-3.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165027_29739bh2-4.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165027_29739bh2-5.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165027_29739bh2-6.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165027_29739bh2-7.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165027_29739bh2-8.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165027_29739bh2-9.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165027_29739bh2-10.png]]
+ 
+*** Pflichtenheft
+- enthält Benutzer und Systemanforderungen
+- häufig vertragsgrundlage
+- kann veralten oder viel arbeit machen
+**** aufbau
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165328_29739NrF-0.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165328_29739NrF-1.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165328_29739NrF-2.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165328_29739NrF-3.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165328_29739NrF-4.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165328_29739NrF-5.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165328_29739NrF-6.png]]
+**** struktur
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165359_29739a1L-0.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165359_29739a1L-1.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165359_29739a1L-2.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165359_29739a1L-3.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165359_29739a1L-4.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165359_29739a1L-5.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165359_29739a1L-6.png]]
 ** Softwareprozesse
 *** Wasserfallmodell
       viele Meilensteine (System Requirements) usw. klären und jeweils validieren
@@ -360,4 +513,4 @@ Pair Programming = grundsätzlich mit mehreren leuten
        4. Risikoüberwachung
     * erkennung durch brainstorming durch team
     * vermeidung risiken
-      - frühe prototypen, saubere Planung, starke Teams, wiederverwendung funktionierender system
+      - frühe prototypen, saubere Planung, starke Teams, wiederverwendung funktionierender syst

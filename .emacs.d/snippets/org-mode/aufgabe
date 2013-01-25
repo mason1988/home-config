@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: aufgabe
+# key: aufgabe
+# --
+** TODO Aufgabe {1:C}
+*** Aufgabenstellung
+*** Lösungsskizzen
+*** Referenzen
+*** Lösung
