@@ -1,2 +1,0 @@
-;; org-persist.el - waschmaschine at <2013-01-28 Mo 02:38>
-(setq stored-clock-history '(("/home/florian/Zettelkasten/refile.org" . 1) ("/home/florian/Zettelkasten/organisation.org" . 5415) ("/home/florian/Zettelkasten/organisation.org" . 5374) ("/home/florian/Zettelkasten/Software.org" . 3690) ("/home/florian/Zettelkasten/organisation.org" . 5090) ("/home/florian/Zettelkasten/theoretische_informatik.org" . 16580)))

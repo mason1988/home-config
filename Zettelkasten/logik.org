@@ -1,3 +1,4 @@
+#+latex_header:\input{commands.tex}
 * Herausragende Quellen
 [[http://homepage.univie.ac.at/guenther.eder/Grundkurs_Logik.htm][Grundkurs Logik Uni Wien]]
 [[http://homepage.univie.ac.at/guenther.eder/logikSS10.htm][Materialien Uni Wien]]
@@ -96,6 +97,15 @@ _Substitution_ X = {x_0, x_1, ...} total geordnet, [[file:201301ad-1321045300KIS
 [[file:201301ad-1322135300XSY.png]] endl Teilmenge, [[file:201301ad-1322255300kce.png]] "nicht Fixpunkte"  => alle Terme die sich ändern
 [[file:201301ad-1324215300L7w.png]] [[file:201301ad-13242653009EA.png]] [[file:201301ad-1324315300KPG.png]] [[file:201301ad-1324475300XZM.png]][[file:201301ad-1324545300kjS.png]] [[file:201301ad-1324585300xtY.png]]
 Variablen Substitution :: X -> X, [[file:201301ad-1333455300-3e.png]]  [[file:201301ad-1337305300YMr.png]]
+** Jan 27
+*** Hilbert Kalkül der Prädikatenlogik
+(Erweiterung des Kalküls der Aussagenlogik)
+$\bar{\P}^J$ = Formeln,  Relations-Algebra
+- Die ganzen Tautologien => kontante Nullstellige Regeln
+variable 0-stellige Regeln:
+    $\frac{\bigvee_xA}{\bar{\bigwedge_xA}} = \frac{\bigvee_xA}{\not \bigwedge_x \not A}, \fr{\bar{\bigwedge_xA}}{\bigvee_xA}$
+
+
 * Zettel-08
 ** Dateien
 [[/home/florian/Dropbox/lo/lo-zettel-08.pdf::NNN][lo-zettel-08.pdf]]
