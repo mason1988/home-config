@@ -123,3 +123,28 @@ Nächster Dienstag Theo: SR XI , Raum 03C51
 
 
 
+* workflows
+** Zettel Workflow
+1. Projekt Eintrag für Zettel erstellen
+2. Deadline hinzufügen
+2. Unterpunkte für die einzelnen Aufgaben erstellen
+3. Aufgabe in Unterpunkt Aufgabenstellung kopieren
+4. zusätzlich Lösungsskizzen, referenzen und Lösung
+5. je nach Modul noch footer und header ansetzen
+6a. tanglen
+6b. export tags verteilen => header einsetzen => export subtree
+* to-read
+** TODO Gedächtnistraining für Dummies
+ [[file:~/Zettelkasten/bugs.org::*%5B#A%5D%20Bugs][Bugs]]
+ Entered on [2013-01-24 Do 15:54]
+** TODO autogenes training
+ [[file:~/Zettelkasten/bugs.org::*%5B#A%5D%20Bugs][Bugs]]
+ Entered on [2013-01-24 Do 15:55]
+** TODO http://www.suenkler.info/emacs-orgmode.html
+** TODO http://newartisans.com/2007/08/using-org-mode-as-a-day-planner/
+ [[file:~/Zettelkasten/organisation.org]]
+ Entered on [2013-01-26 Sa 02:28]
+** TODO http://stackoverflow.com/questions/7071915/emacs-filesets-how-to-run-other-elisp-not-shell-commands
+ [[file:~/.emacs.d/emacs_config.org::*allgemeine%20konfigurationen][allgemeine konfigurationen]]
+ Entered on [2013-01-26 Sa 19:32]
+* someday / maybe

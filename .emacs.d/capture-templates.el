@@ -13,6 +13,8 @@
         "** ZKTO %? \n  %i" :clock-in t :clock-resume t)
    ("r" "To Read" entry (file+headline "~/Zettelkasten/refile.org" "to-read")
         "** TODO %?\n %a\n Entered on %U")
+   ("f" "Workflow" entry (file+headline "~/Zettelkasten/refile.org" "workflows")
+        "** TODO %?\n %a\n Entered on %U")
    ("j" "Journal" entry (file+datetree "~/org/journal.org")
         "* %?\nEntered on %U\n  %i\n  %a")
    ("y" "Studium - Todo" entry (file+headline "~/Zettelkasten/todo.org" "Todo-Eingang-Studium")

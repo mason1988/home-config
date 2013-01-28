@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name: zettel
+# key: zettel
+# --
+* zettel ${1:10}
+** header
+#+BEGIN_SRC latex :tangle ${2:st}-loesung-$1.tex
+\\documentclass[11pt]{amsart}
+\\input{commands.tex}
+\\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
+\\title{Zettel $1 }
+\\author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
+\\begin{document}
+\\maketitle
+#+END_SRC 
+
+** footer
+#+BEGIN_SRC latex :tangle st-loesung-$1.tex
+\\end{document}
+#+END_SRC

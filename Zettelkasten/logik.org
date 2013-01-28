@@ -446,3 +446,19 @@ werden
 \end{document}
 #+END_SRC
 
+* Zettel 12
+** Aufgabe 1
+*** Aufgabenstellung
+*** Lösungsskizze
+*** Lösung
+*** Referenzen
+** Aufgabe 2
+*** Aufgabenstellung
+*** Lösungsskizze
+*** Lösung
+*** Referenzen
+** Aufgabe 3
+*** Aufgabenstellung
+*** Lösungsskizze
+*** Lösung
+*** Referenzen

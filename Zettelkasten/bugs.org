@@ -1,5 +1,15 @@
-* TODO [#A] Bugs						    :PROJECT:
-** NEXT öffnen vom selben Orgbuffer in mehreren Frames reproduzieren
-** TODO Org Patch installieren, um zeitentrag funktionieren zu lassen
-** TODO google backward kill word für alternative, die nicht so viel löscht
-** TODO google rainbow delimiters und faces
+* DONE Orgbuffer öffnen nicht
+  - State "DONE"       from "TODO"       [2013-01-28 Mo 01:53]
+** DONE öffnen vom selben Orgbuffer in mehreren Frames reproduzieren
+   - State "DONE"       from "NEXT"       [2013-01-28 Mo 01:53]
+* TODO zeiteinträge funktionieren nicht
+** NEXT Org Patch installieren, um zeitentrag funktionieren zu lassen
+* TODO backward kill spinnt rum
+** NEXT google backward kill word für alternative, die nicht so viel löscht
+* TODO rainbow delimiters setzt behinderte faces
+** NEXT google rainbow delimiters und faces
+* TODO Ilisp Fehler im Package Manager
+** NEXT googlen wie fehlerhafte pakete bei apt-get entfernt werden können
+* TODO flimmern vom emacs beseitigen
+   http://ivan.kanis.fr/fix-emacs-flicker.html
+** NEXT flimmern emacs googlen

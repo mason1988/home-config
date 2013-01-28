@@ -996,10 +996,47 @@ $X_n \ov{Law}{\lori} X$  (Law = Gesetz, Gesetz der großen/kleinen Zahlen?)
 \end{document}
 #+END_SRC
 
-* Zettel-10
-[[~/Dropbox/st/st-zettel-10/st-zettel-10.pdf][st-zettel-10.pdf]]
-[[~/Dropbox/st/st-zettel-10/st-loesung-10.tex][st-loesung-10.tex]]
-[[~/Dropbox/st/st-zettel-10/st-loesung-10.pdf][st-loesung-10.pdf]]
+* TODO el-Zettel-10
+  DEADLINE: <2013-01-29 Di 23:59>
+  :PROPERTIES:
+  :CATEGORY: Studium
+  :END:
+** NEXT Aufgabe 1
+*** Aufgabenstellung
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220612_12492jDO-0.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220612_12492jDO-1.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220612_12492jDO-2.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220612_12492jDO-3.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220612_12492jDO-4.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220612_12492jDO-5.png]]
+*** Lösungsskizze
+*** Lösung
+*** Referenzen
+** TODO Aufgabe 2
+*** Aufgabenstellung
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220641_12492wNU-0.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220641_12492wNU-1.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220641_12492wNU-2.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220641_12492wNU-3.png]]
+*** Lösungsskizze
+*** Lösung
+*** Referenzen
+** TODO Aufgabe 3
+*** Aufgabenstellung
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220704_124929Xa-0.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220704_124929Xa-1.png]]
+*** Lösungsskizze
+*** Lösung
+*** Referenzen
+** TODO Aufgabe 4
+*** Aufgabenstellung
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220722_12492Kig-0.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220722_12492Kig-1.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220722_12492Kig-2.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220722_12492Kig-3.png]]
+*** Lösungsskizze
+*** Lösung
+*** Referenzen
 * Zettel-11
 [[~/Dropbox/st/st-zettel-11/st-zettel-11.pdf][st-zettel-11.pdf]]
 [[~/Dropbox/st/st-zettel-11/st-loesung-11.tex][st-loesung-11.tex]]
