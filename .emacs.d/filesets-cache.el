@@ -1,6 +1,6 @@
 (setq-default filesets-be-docile-flag 'nil)
 
-(setq filesets-submenus 'nil)
+(setq filesets-submenus '("org" nil))
 
 (setq filesets-menu-cache 'nil)
 

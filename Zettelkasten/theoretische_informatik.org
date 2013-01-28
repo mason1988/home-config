@@ -409,7 +409,7 @@ Also wie bei [[file:201301ad-15144613098bLm.png]] Rekursion, die Projektion, k i
 * TODO th-Zettel-12
   DEADLINE: <2013-01-28 Mo 23:59>
   :LOGBOOK:
-  CLOCK: [2013-01-28 Mo 02:12]
+  CLOCK: [2013-01-28 Mo 02:12]--[2013-01-28 Mo 02:38] =>  0:26
   CLOCK: [2013-01-27 So 23:17]--[2013-01-28 Mo 00:14] =>  0:57
   CLOCK: [2013-01-27 So 21:10]--[2013-01-27 So 21:52] =>  0:42
   CLOCK: [2013-01-26 Sa 23:17]--[2013-01-27 So 00:05] =>  0:48
@@ -476,7 +476,8 @@ Die Funktion f ist total berechenbar \\
 #+END_SRC
 
 *** Referenzen
-** NEXT Aufgabe 39
+** DONE Aufgabe 39
+   - State "DONE"       from "NEXT"       [2013-01-28 Mo 02:38]
 *** Aufgabenstellung
 [[/home/florian/Zettelkasten/theoretische_informatik.org_20130125_220125_12492JvB-0.png]]
 [[/home/florian/Zettelkasten/theoretische_informatik.org_20130125_220125_12492JvB-1.png]]
@@ -514,7 +515,7 @@ $\Ri A\leq C$
 #+END_SRC
 
 *** Referenzen
-** TODO Aufgabe 40
+** NEXT Aufgabe 40
 *** Aufgabenstellung
 [[/home/florian/Zettelkasten/theoretische_informatik.org_20130125_220209_12492W5H-0.png]]
 [[/home/florian/Zettelkasten/theoretische_informatik.org_20130125_220209_12492W5H-1.png]]
