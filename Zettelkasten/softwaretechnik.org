@@ -248,22 +248,37 @@ jeden Fall zu finden. Vorallem können auch stets andere auf dem Computer instal
 Bei Abhängigkeiten von externen Modulen besteht zum Beispiel auch stets das Risiko, dass diese geupdatet werden und das Programm somit
 nicht mehr benutzbar machen. In jedem Fall gibt es vollkommen unabhängig davon, wie vollständig und gut die Tests waren, immer einen Nutzer der 
 es schafft, einen Weg zu finden um doch alles zum Absturz zu bringen.
-* TODO [#A] Übung 11						    :PROJECT:
+* DONE Übung 11							    :PROJECT:
+  - State "DONE"       from "TODO"       [2013-01-25 Fr 18:37]
+#+TITLE:     Übung 11
+#+AUTHOR:    florian,waldemar,rene
+#+EMAIL:     lerch.florian@yahoo.de
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:nil
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:nil pri:nil tags:nil
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:   
+#+LINK_HOME: 
+#+XSLT:
   DEADLINE: <2013-01-27 So 23:59>
-<<<<<<< HEAD
-=======
   :LOGBOOK:
+  CLOCK: [2013-01-25 Fr 18:00]--[2013-01-25 Fr 18:37] =>  0:37
   CLOCK: [2013-01-25 Fr 16:41]--[2013-01-25 Fr 17:08] =>  0:27
   CLOCK: [2013-01-25 Fr 15:27]--[2013-01-25 Fr 15:53] =>  0:26
   :END:
-** TODO Aufgabe A
+** DONE Aufgabe A
+   - State "DONE"       from "TODO"       [2013-01-25 Fr 18:29]
 *** Aufgabenstellung
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130125_152849_29739auX-0.png]]
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130125_152849_29739auX-1.png]]
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130125_152849_29739auX-2.png]]
 *** Lösungsskizzen
 *** Referenzen
-*** Lösung
+*** Lösung							     :export:
 Erst durch die Anforderungsanalyse kann der bzw. können die Programmierer erst wirklich
 in Erfahrung bringen, was der Kunde wirklich haben möchte. Sollte man
 vorher schon anfangen zu entwickeln, so besteht das Risiko, dass man
@@ -280,7 +295,8 @@ nur schwer möglich so dass z.B. echte Überprüfbarkeit der Arbeit gar
 nicht machbar ist, was dann natürlich auch wieder zu Problemen mit dem
 Kunden führen kann, da zu diesem Zeitpunkt in der Regel ja auch noch
 kein richtiger Vertrag besteht.
-** TODO Aufgabe B
+** DONE Aufgabe B
+   - State "DONE"       from "TODO"       [2013-01-25 Fr 18:29]
 *** Aufgabenstellung
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130125_153555_29739n4d-0.png]]
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130125_153555_29739n4d-1.png]]
@@ -290,18 +306,19 @@ kein richtiger Vertrag besteht.
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130125_153555_29739n4d-5.png]]
 *** Lösungsskizzen
 *** Referenzen
-*** Lösung
+*** Lösung							     :export:
     - wo liegt die Datenbank, mit welcher die Route ermittelt wird?
     - welche Anbindung an andere Systeme besteht, um die Kreditkarte
       zu prüfen?
-** TODO Aufgabe C
+** DONE Aufgabe C
+   - State "DONE"       from "TODO"       [2013-01-25 Fr 18:29]
 *** Aufgabenstellung
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130125_153745_29739BNq-0.png]]
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130125_153745_29739BNq-1.png]]
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130125_153745_29739BNq-2.png]]
 *** Lösungsskizzen
 *** Referenzen
-*** Lösung
+*** Lösung							     :export:
 **** Fahrschein kaufen
 ***** Titel
       Fahrschein kaufen
@@ -341,9 +358,19 @@ kein richtiger Vertrag besteht.
 ***** Vorbedingungen
       Texteditor mit Text drin muss geöffnet sein.
 ***** Beschreibung Ablauf
+      1. Benutzer startet Rechtschreibprüfung
+      2. Programm vergleicht Wortweise die Inhalte des Textdokumentes mit Wortdatenbank
+	 und bildet eine Liste mit Wörtern die nicht gefunden werden können
+      3. Es wird ein Fenster eingeblendet in welchem jeweils der aktuelle Fehler angezeigt wird
+	 zusammen mit ähnlichen Worteinträgen aus der Datenbank, außerdem ein Button fürs ignorieren
+      4. der Benutzer wählt entwededer einen Worteintrag oder ignorieren
+      5. das Programm ersetzt das Wort und springt weiter zum nächsten Fehler, oder springt direkt
+	 weiter
 ***** Auswirkungen
+      Die Fehler im Text wurden korrigiert.
 ***** Anmerkungen
-** TODO Aufgabe D
+** DONE Aufgabe D
+   - State "DONE"       from "TODO"       [2013-01-25 Fr 18:30]
 *** Aufgabenstellung
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130125_153803_29739OXw-0.png]]
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130125_153803_29739OXw-1.png]]
@@ -351,10 +378,130 @@ kein richtiger Vertrag besteht.
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130125_153803_29739OXw-3.png]]
 *** Lösungsskizzen
 *** Referenzen
-*** Lösung
->>>>>>> d06e6350bdd5c92bc08d2c0b856ad977466ae363
-
-* TODO Hausaufgabe 4
+*** Lösung							     :export:
+1. Die Ladezeiten zwischen den einzelnen Menüeinträgen muss in jeder Situation unterhalb von 2 Sekunden liegen.
+2. Die Software darf mitsamt der Datenbank und allen zur Funktion benötigten Modulen nicht größer als 20mb werden.
+3. Die Menüs müssen mittels eines Touchpads bedienbar sein, wobei die Fehlerrate nicht oder falsch erkannter 
+    Eingaben im Durchschnitt unterhalb von 5% liegen muss.
+4. Die Software muss eine Fehlerfreie und abgesicherte Kommunikation mit den Bankservern garantieren
+5. Das System darf innerhalb eines Monats bei vielfacher Nutzung nur maximal ein mal abstürzen. Im Falle eines
+   absturzes muss garantiert sein, dass der Nutzer keine Möglichkeit der Interaktion mehr besitzt.
+* DONE Hausaufgabe 4
+  - State "DONE"       from "NEXT"       [2013-01-25 Fr 20:08]
+#+TITLE:     Hausaufgabe 4
+#+AUTHOR:    florian,waldemar,rene
+#+EMAIL:     lerch.florian@yahoo.de
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:nil
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:nil pri:nil tags:nil
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:   
+#+LINK_HOME: 
+#+XSLT:
+  :LOGBOOK:
+  CLOCK: [2013-01-25 Fr 18:38]--[2013-01-25 Fr 20:08] =>  1:30
+  :END:
+** Aufgabenstellung :noexport:
+*** Einleitung
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_184007_12492wGg-0.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_184007_12492wGg-1.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_184007_12492wGg-2.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_184007_12492wGg-3.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_184007_12492wGg-4.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_184007_12492wGg-5.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_184007_12492wGg-6.png]]
+*** Aufgaben
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_184039_124929Qm-0.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_184039_124929Qm-1.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130125_184039_124929Qm-2.png]]
+** a.
+*** funktionale Anforderungen
+   - es muss ein System vorhanden sein, um einen Login zu prüfen
+   - es müssen Überweisungen ausgeführt werden können
+   - Tan Listen müssen verglichen werden können
+   - ein spezielles Team benötigt exklusiven Zugriff auf die Hard - und Softwarekomponenten
+   - der Kunde muss Daueraufträge eingeben können
+*** nicht funktionale Anforderungen
+   - das System muss zu 99.99% im Jahr verfügbar sein
+   - es darf keine Fremde Person ohne Login Daten zugriff auf ein Konto erhalten
+   - die Überweisung muss sofort ausgeführt werden (keine Verzögerung)
+** b.
+*** Überweisung
+**** Titel
+     Überweisung
+**** Kurzbeschreibung
+     Der Kunde loggt sich ein und nimmt eine Überweisung vor
+**** Aktoren
+     Kunde, Bankserver
+**** Vorbedingungen
+     - Der Kunde muss ein Konto besitzen
+     - der Kunde muss die richtigen Login Daten haben
+     - der Kunde benötigt eine gültige Tan
+**** Beschreibung Ablauf
+     1. Der Kunde startet das Programm
+     2. der Kunde gibt seine Login Daten ein
+     3. Daten werden mit dem Bankserver abgeglichen und bei Erfolg geht es weiter
+     4. Kunde wählt Menüpunkt Überweisung
+     5. Kunde trägt Zielkonto usw. ein
+     6. Kunde gibt Tan ein
+     7. Tan wird mit Bankserver abgeglichen, bei Erfolg wird die Überweisung durchgeführt
+     8. Tan Liste des Kunden im Bankserver springt um einen Eintrag weiter
+**** Auswirkungen
+- Eintrag in der Tan liste wird ungültig und nächster Eintrag vorgemerkt
+- Überweisung wird durchgeführt
+**** Anmerkungen
+*** Zugriff durch spezielle Mitarbeiter
+**** Titel
+     Zugriff durch spezielle Mitarbeiter
+**** Kurzbeschreibung
+     Ein spezieller Mitarbeiter loggt sich in das System ein und ändert Konfigurationen.
+**** Aktoren
+     Bankserver, Mitarbeiten
+**** Vorbedingungen
+     Mitarbeiter verfügt über Zugangsdaten
+**** Beschreibung Ablauf
+     1. Mitarbeiter startet Konfigurationssoftware
+     2. Mitarbeiter loggt sich ein
+     3. Mitarbeiter ändert Einträge
+**** Auswirkungen
+     Die Konfiguration verändert sich
+**** Anmerkungen
+*** Dauerauftrag
+**** Titel
+     Dauerauftrag
+**** Kurzbeschreibung
+     Der Kunde loggt sich ein und richtet einen Dauerauftrag ein, der dann von einem Timer durchgeführt wird.
+**** Aktoren
+     Kunde, Bankserver, Timer
+**** Vorbedingungen
+     - Kunde verfügt über Login Daten
+     - Kunde verfügt über gültige Tan
+     - Kunde besitzt Konto
+**** Beschreibung Ablauf
+     1. Kunde startet Software
+     2. Kunde gibt LoginDaten ein
+     3. System gleicht Logindaten mit Bankserver ab und macht bei Erfolg weiter
+     4. Kunde wählt Menüpunkt Dauerauftrag
+     5. Kunde trägt Zielkonto, Überweisungszeitpunkt usw. ein
+     6. Kunde gibt Tan ein
+     7. Tan wird mit Bankserver abgeglichen, bei Erfolg wird Timer Eintrag angelegt
+     8. Tan Liste des Kunden im Bankserver springt um einen Eintrag weiter
+     9. Timer prüft bei täglichem Durchlauf ob Einträge für Kunden und Datum vorhanden sind. Falls ja, führe Überweisung durch
+**** Auswirkungen
+     - für den Kunden ist nun ein Timerantrag für Überweisungen vermerkt
+**** Anmerkungen
+** c.
+siehe pdf-datei: gruppe1 - hausaufgabe 4 - aufgabe c.pdf
+** d.
+1. Man kann konkret messen wie lange das System nicht verfügbar ist und dann den Prozentuale Wert ermitteln.
+2. Man kann Leute / Hacker / ... Versuchen lassen in fremde Konten einzudringen und so konkret herausfinden,
+   ob dies beim aktuellen Stand möglich ist.
+3. Man kann messen ob es eine Verzögerung gibt und wenn ja ob diese einen signifikanten Wert erreicht (z.B. 
+   länger als 5 Minuten)
 * Skript
 ** Anforderungsanalyse
 - soll konkretisieren was Kunde will
@@ -378,7 +525,7 @@ kein richtiger Vertrag besteht.
   die dann wege zueinander bilden
   => dabei sind diese nach ihrem Zweck, also aus sicht
   des inkompetenten Kunden geschildert
-**** Beispiel:
+**** Beispiel - Bild:
  [[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165027_29739bh2-0.png]]
  [[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165027_29739bh2-1.png]]
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165027_29739bh2-2.png]]
@@ -411,6 +558,10 @@ kein richtiger Vertrag besteht.
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165359_29739a1L-4.png]]
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165359_29739a1L-5.png]]
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165359_29739a1L-6.png]]
+*** funktionale vs nicht funktionale Anforderungen
+    - funktionale Anforderungen beschreiben Grundlegende Features
+    - nicht funktionale Anforderungen beschreiben Leistungen
+      oder Messwerte die das System erreichen muss
 ** Softwareprozesse
 *** Wasserfallmodell
       viele Meilensteine (System Requirements) usw. klären und jeweils validieren

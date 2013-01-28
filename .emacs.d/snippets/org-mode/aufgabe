@@ -2,8 +2,12 @@
 # name: aufgabe
 # key: aufgabe
 # --
-** TODO Aufgabe {1:C}
+** TODO Aufgabe ${1:1}
 *** Aufgabenstellung
-*** Lösungsskizzen
-*** Referenzen
+
+*** Lösungsskizze
 *** Lösung
+#+BEGIN_SRC latex :tangle ${2:st}-loesung-${3:08}.tex
+\subsection{Aufgabe $1}
+#+END_SRC
+*** Referenzen

@@ -1,5 +1,9 @@
 #+STARTUP: content
 * Projekte
+** TODO Kleinkram
+*** TODO das system wiederfinden, mit der man eine sicht auf 2 Buffer verteilen konnte
+  [[file:~/Zettelkasten/softwaretechnik.org::*a.][a.]]
+  Entered on [2013-01-25 Fr 18:42]
 ** TODO Emacs Config Aufräumen
 *** DONE überflüssige keymapping dateien entfernen
     - State "DONE"       from "NEXT"       [2013-01-23 Mi 13:21]
@@ -42,6 +46,7 @@
 *** DONE iimage bibliothek o.ä. code raussuchen und auf anpassparkeit prüfen
 *** DONE anforderungen an eigenen Modus sammeln
 *** DONE entsprechenden modus entwickeln ;image slicing
+*** TODO der transparente bereich auf den draufgemappt wird (python) auf mindestgröße setzen
 ** TODO Musik Player Einrichten
 *** DONE google awesome-wm automount Ziel: Festplatte unter festem Namen mounten
     - State "DONE"       from "NEXT"       [2013-01-22 Di 19:50]
@@ -59,11 +64,15 @@
 *** DONE schnellere Shortcuts für Captures 
 *** TODO Captures entsprechend implementieren
 ** TODO Shortcuts						    :PROJECT:
-*** NEXT welche Snippets machen noch Sinn? -> einbauen
+   :LOGBOOK:
+   CLOCK: [2013-01-25 Fr 21:23]--[2013-01-25 Fr 21:57] =>  0:34
+   :END:
+*** TODO welche Snippets machen noch Sinn? -> einbauen
 *** TODO my-keys-minor-mode und evil-normal mode zusammen legen
   [[file:~/.emacs.d/emacs_config.org::*Minormode][Minormode]]
   Entered on [2013-01-24 Do 23:49]
-*** TODO festes Shortcut das Timer für refile - task setzt
+*** DONE verschiedene StandardClocks einsetzen
+    - State "DONE"       from "NEXT"       [2013-01-25 Fr 21:58]
 *** DONE shortcuts für scrolling in pentadactyl ummappen
 *** DONE verschieben/retaggen von Fenstern in awesom wm
 *** DONE mehr Tasten auf den Modalen Vim Modus setzen
@@ -76,6 +85,11 @@
 *** DONE zyklisches Pasten von Emacs aus Killring		  :shortcuts:
 *** DONE shortcuts für erstellen von tmp autonamed bookmark und cyclen; in buffer :shortcuts:
 *** NEXT Shortcut Timer in Capture installieren
+*** DONE besseres shortcut für kill-window in awesome
+    - State "DONE"       from "TODO"       [2013-01-27 So 23:35]
+  [[eshell:*eshell*:cd%20Zettelkasten/][cd Zettelkasten/]]
+  Entered on [2013-01-25 Fr 18:32]
+*** TODO Shortcut um mehrere Einträge bei magit auf einmal zu stagen oder zu markieren
 ** TODO Sprungmarken						    :PROJECT:
 *** TODO Liste mit Features von Bookmark+ anfertigen
 *** NEXT markierung und/oder anzeige für evil marks im Dokument anzeige ;goggle
@@ -404,7 +418,17 @@ sudo chmod -v -R ouag+rw *     alles per chmod freigeben
    - save-current-configuration :: C-ä w
    - resume :: C-ä c
 	       
-   - show shortcuts :: C-ä x
+   - show shortcuts :: C-ä 
+** zusätzliche Tastenbelegungen
+- Belegung von C-x auf cx usw: 
+   (define-key evil-normal-state-map "c" nil)
+   (define-key evil-motion-state-map "cu" 'universal-argument)
+   (define-key key-translation-map (kbd "ch") (kbd "C-h"))
+   (define-key key-translation-map (kbd "cx") (kbd "C-x"))
+- Belegung von Keychords:
+  schnell oder gleichzeitig hintereinander gedrückt
+  auch in kombi mit C-x auf cx möglich: xx = C-x
+- die F Tasten und verstärkte Nutzung motion mode
 ** Hilfefunktionen
 -    M-x apropos :: findet alles was irgendwie mit dem Ausdruck danach zu tun hat
 -    F1 / M-x Helper-... :: findet Keybinds <=> Funktion usw

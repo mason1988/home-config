@@ -1,3 +1,4 @@
+#+latex_header:\input{commands.tex}
 * Turing Maschine
 [[/home/florian/Zettelkasten/zettelkasten.org_20130106_200549_12364hJ0.png]]
 
@@ -405,7 +406,18 @@ Also wie bei [[file:201301ad-15144613098bLm.png]] Rekursion, die Projektion, k i
 \end{document}
 #+END_SRC
 
-* Zettel-12
+* TODO th-Zettel-12
+  DEADLINE: <2013-01-28 Mo 23:59>
+  :LOGBOOK:
+  CLOCK: [2013-01-28 Mo 02:12]
+  CLOCK: [2013-01-27 So 23:17]--[2013-01-28 Mo 00:14] =>  0:57
+  CLOCK: [2013-01-27 So 21:10]--[2013-01-27 So 21:52] =>  0:42
+  CLOCK: [2013-01-26 Sa 23:17]--[2013-01-27 So 00:05] =>  0:48
+  CLOCK: [2013-01-26 Sa 20:08]--[2013-01-26 Sa 20:51] =>  0:43
+  :END:
+  :PROPERTIES:
+  :CATEGORY: Studium
+  :END:
 ** header
 #+BEGIN_SRC latex :tangle th-loesung-12.tex
 \documentclass[11pt]{amsart}
@@ -417,18 +429,97 @@ Also wie bei [[file:201301ad-15144613098bLm.png]] Rekursion, die Projektion, k i
 \maketitle
 #+END_SRC 
 
-** Aufgabe 38
+** DONE Aufgabe 38
+   - State "DONE"       from "NEXT"       [2013-01-27 So 23:31]
 *** Aufgabenstellung
+[[/home/florian/Zettelkasten/theoretische_informatik.org_20130125_220058_12492Xly-0.png]]
+[[/home/florian/Zettelkasten/theoretische_informatik.org_20130125_220058_12492Xly-1.png]]
+[[/home/florian/Zettelkasten/theoretische_informatik.org_20130125_220058_12492Xly-2.png]]
 *** Lösungsskizze
+    Der Graph ist offensichtlich eine Menge aus Koordinaten (in gewisser Weise Tupeln)
+    die hier aber durch das $ Zeichen statt ein Komma etc getrennt sind
+
+    - partielles f bedeuetet, das f nicht zwangsläufig auf jeden Wert im Zeichenraum abbildet
+    - f berechenbar => es existiert ein eindeutiges Ergebnis
+    - Graph rekursiv aufzählbar: = Mengeneigenenschaft, 
+       = semientscheidbar, oder berechenbar aufzählbar
+      => aufzählung findet durch algorithmus statt (springt von einem Wert zum nächsten
+        daher auch die rekursion)
+      
+      zu zeigen ist f berechenbar => graph(f) rekursiv aufzählbar
+          und graph(f) rekursiv aufzählbar => f berechenbar
+[[/home/florian/Zettelkasten/theoretische_informatik.org_20130126_234629_3916MUg-0.png]]
+[[/home/florian/Zettelkasten/theoretische_informatik.org_20130126_234629_3916MUg-1.png]]
+[[/home/florian/Zettelkasten/theoretische_informatik.org_20130126_234629_3916MUg-2.png]]
+[[/home/florian/Zettelkasten/theoretische_informatik.org_20130126_234629_3916MUg-3.png]]
+[[/home/florian/Zettelkasten/theoretische_informatik.org_20130126_234629_3916MUg-4.png]]
+[[/home/florian/Zettelkasten/theoretische_informatik.org_20130126_234629_3916MUg-5.png]]
+[[/home/florian/Zettelkasten/theoretische_informatik.org_20130126_234629_3916MUg-6.png]]
+[[/home/florian/Zettelkasten/theoretische_informatik.org_20130126_234629_3916MUg-7.png]]
+- Was muss für Berechenbarkeit gegeben sein?
+- wie ist rekursive aufzählbarkeit definiert?
+
+- L ist die Sprache, in diesem Fall dann wohl die Bildmenge des Graphen
 *** Lösungen
+#+BEGIN_SRC latex :tangle th-loesung-12.tex
+\subsection{Aufgabe 38}
+\subsubsection{(a)}.\\
+Graph(f) ist rekursiv aufzählbar \\
+\( \Lri \) es existiert eine berechenbare Funktion f' mit \( Bild(f') = \{ v\$w | v = f(w) \} \) \\
+$\Lri$ die Funktion f mit \( Bild(f) = \{ v | v = f(w) \} \) ist berechenbar \\
+Die Funktion f ist berechenbar
+\subsubsection{(b)}.\\
+Die Funktion f ist total berechenbar \\
+\( \Lri Bild(f) = \{ v | v = f(w) \A w \in \Sigma^*\}\) ist entscheidbar
+\( \Lri \{ v\$w | v = f(w) \A w \in Sigma^* \} \) ist entscheidbar
+\( \Lri \) Graph(f) ist entscheidbar
+#+END_SRC
+
 *** Referenzen
-** Aufgabe 39
+** NEXT Aufgabe 39
 *** Aufgabenstellung
+[[/home/florian/Zettelkasten/theoretische_informatik.org_20130125_220125_12492JvB-0.png]]
+[[/home/florian/Zettelkasten/theoretische_informatik.org_20130125_220125_12492JvB-1.png]]
 *** Lösungsskizze
+    Was bedeutet, eine Sprache ist regulär?
+        Sprache wird durch reguläre Grammatik erzeugt
+	Sprache wird durch endlichen Automaten erzeugt
+	Sprache kann durch regulären Ausdruck erzeugt werden (Regex)
+      => Sprache besitzt eine gleichmäßige Struktur
+      => endliche Sprachen sind automatisch regulär
+    Was bedeutet es, wenn eine Sprache kleiner als eine andere ist?
+        A <= B bedeutet, A ist reduzierbar auf B
+    Was ist eine Reduktion?
+        Es existiert eine Funktion f die von A nach B abbildet. Diese Funktion
+	muss eindeutig sein (bijektiv), also jedes Wort aus A wird nach B abgebildet,
+	und Elemente der Bildmenge (teilmenge von B) haben wiederrum ein Urbild in A.
+    Was bedeutet transitivität bei der Reduktion?
+        Wenn $A \leq B$ und $B \leq C$ gilt, so gilt auch $A \leq C$
 *** Lösungen
+#+BEGIN_SRC latex :tangle th-loesung-12.tex
+\subsection{Aufgabe 39}
+\subsubsection{(a)}.\\
+Nein, X ist nicht zwangsläufig eine reguläre Sprache. \\
+Sei $\Sigma \not = \emptyset$ ein beliebiges Alphabet und R = $\Sigma^*$ und somit regulär. \\
+Sei X nun eine beliebige nicht reguläre Sprache über $\Sigma$, so ist die Reduktion 
+X $\leq$ R gegeben durch die identische Abbildung, aber X ist nicht regulär, obwohl R regulär ist.\\
+\subsubsection{(b)}.\\
+Seien A, B und C Sprachen über $\Sigma$ und gelte: \( A \leq B \m{ und } B \leq C \) \\
+Zu zeigen ist: \( A \leq C \)\\
+\( A \leq B \Ri \) es exstiert eine bijektive Abbildung $f: A \mapsto B$ mit $Bild(f) \subseteq B$ \\
+\( B \leq C \Ri \) es exstiert eine bijektive Abbildung $f': B \mapsto C$ mit $Bild(f') \subseteq C$ \\
+$\Ri$ die Abbildung $f \circ f': A \mapsto B$ ist für alle Elemente aus A definiert und für jedes Element y aus 
+$Bild(f\circ f')$ existiert genau ein Element x aus A für das gilt $y = f \circ f'(x)$ \\
+$\Ri A\leq C$
+#+END_SRC
+
 *** Referenzen
-** Aufgabe 40
+** TODO Aufgabe 40
 *** Aufgabenstellung
+[[/home/florian/Zettelkasten/theoretische_informatik.org_20130125_220209_12492W5H-0.png]]
+[[/home/florian/Zettelkasten/theoretische_informatik.org_20130125_220209_12492W5H-1.png]]
+[[/home/florian/Zettelkasten/theoretische_informatik.org_20130125_220209_12492W5H-2.png]]
+
 *** Lösungsskizze
 *** Lösungen
 *** Referenzen

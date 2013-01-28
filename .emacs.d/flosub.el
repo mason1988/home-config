@@ -14,14 +14,16 @@
        (replace-regexp-in-string "\\\\" "\\\\\\\\"
         reg))))))
 
-(defun flosub() (interactive)
+
+
+(defun flosub() (interactive) ; ohne space
   (if (not (boundp 'flosub-exp-end))   ;falls noch nichts zum extenden da ist
       (call-interactively 'flosub-prev)
     (if (equal (point) flosub-exp-end) (call-interactively 'flosub-extend-end)
       (call-interactively 'flosub-prev))))
 
 
-(defun flosub-readall() (interactive)
+(defun flosub-readall() (interactive) ;mit space
   (if (not (boundp 'flosub-exp-end))   ;falls noch nichts zum extenden da ist
       (call-interactively 'flosub-prev-readall)
     (if (equal (point) flosub-exp-end) (call-interactively 'flosub-extend-end)

@@ -1,71 +1,44 @@
 * idea
-** TODO in irgend einer Form den aktuellen Stand bzw. nächsten Schritt bei den Zettelprojekten festhalten
- [[file:~/Zettelkasten/refile.org::*to-read][to-read]]
- Entered on [2013-01-24 Do 16:14]
-** TODO Die Slices müssen als minimale Größe wohl die normale Größe einer Zeile haben
- [[file:~/Zettelkasten/softwaretechnik.org::*Aufgabenstellung][Aufgabenstellung]]
- Entered on [2013-01-25 Fr 15:39]
+** TODO Todo für repeat key chord rausnehmen => geht nicht und ist scheiße
+ [[file:~/.emacs.d/emacs_config.org::*allgemein][allgemein]]
+ Entered on [2013-01-28 Mo 01:22]
+** TODO Film: Tim und Struppi
+ [[file:~/.emacs.d/emacs_config.org::*allgemein][allgemein]]
+ Entered on [2013-01-28 Mo 01:32]
 * problem
+** TODO frame wechsel bei youtube mittels evil
+ 
+ Entered on [2013-01-28 Mo 00:16]
+** TODO multi-eshell soll eshell und nicht shell starten
+ 
+ Entered on [2013-01-28 Mo 00:38]
 * todo
+** TODO workflow bei habits / scheduled tasks ausarbeiten
+ 
+ Entered on [2013-01-26 Sa 20:07]
+** TODO Shortcut (chord) einrichten für wiederholung
+ 
+ Entered on [2013-01-27 So 21:00]
+** TODO symlinks für -> beide <- shells
+ 
+ Entered on [2013-01-28 Mo 00:37]
+** TODO next / prev buffer shortcuts
+ 
+ Entered on [2013-01-28 Mo 00:39]
+
 * to-read
-** TODO Gedächtnistraining für Dummies
- [[file:~/Zettelkasten/bugs.org::*%5B#A%5D%20Bugs][Bugs]]
- Entered on [2013-01-24 Do 15:54]
-** TODO autogenes training
- [[file:~/Zettelkasten/bugs.org::*%5B#A%5D%20Bugs][Bugs]]
- Entered on [2013-01-24 Do 15:55]
-** TODO http://www.suenkler.info/emacs-orgmode.html
 * wishes
 ** TODO recent files usw nach inhalt durchsuchen können, um buffer oder datei zu finden
  
  Entered on [2013-01-25 Fr 15:29]
-** TODO mehr (untracked) Files auf einmal in magit stagen können
- 
- Entered on [2013-01-25 Fr 17:09]
+** TODO wiederholende Prozesse (Makros z.B.) 
+ [[file:~/.emacs.d/emacs_config.org::*allgemein][allgemein]]
+ Entered on [2013-01-28 Mo 01:22]
 * notes
-** TODO möglichkeiten für Tasten
-- Belegung von C-x auf cx usw: 
-   (define-key evil-normal-state-map "c" nil)
-   (define-key evil-motion-state-map "cu" 'universal-argument)
-   (define-key key-translation-map (kbd "ch") (kbd "C-h"))
-   (define-key key-translation-map (kbd "cx") (kbd "C-x"))
-- Belegung von Keychords:
-  schnell oder gleichzeitig hintereinander gedrückt
-  auch in kombi mit C-x auf cx möglich: xx = C-x
-- die F Tasten und verstärkte Nutzung motion mode
-** TODO escape taste setzen (kombi c-g und insert zu normal state)
-   ;;; C-c as general purpose escape key sequence.
-   ;;;
-   (defun my-esc (prompt)
-     "Functionality for escaping generally.  Includes exiting Evil insert state and C-g binding. "
-     (cond
-      ;; If we're in one of the Evil states that defines [escape] key, return [escape] so as
-      ;; Key Lookup will use it.
-      ((or (evil-insert-state-p) (evil-normal-state-p) (evil-replace-state-p) (evil-visual-state-p)) [escape])
-      ;; This is the best way I could infer for now to have C-c work during evil-read-key.
-      ;; Note: As long as I return [escape] in normal-state, I don't need this.
-      ;;((eq overriding-terminal-local-map evil-read-key-map) (keyboard-quit) (kbd ""))
-      (t (kbd "C-g"))))
-   (define-key key-translation-map (kbd "C-c") 'my-esc)
-   ;; Works around the fact that Evil uses read-event directly when in operator state, which
-   ;; doesn't use the key-translation-map.
-   (define-key evil-operator-state-map (kbd "C-c") 'keyboard-quit)
-   ;; Not sure what behavior this changes, but might as well set it, seeing the Elisp manual's
-   ;; documentation of it.
-   (set-quit-char "C-c")
-   
-alternativ:
-   (key-chord-define evil-normal-state-map ",," 'evil-force-normal-state)
-   (key-chord-define evil-visual-state-map ",," 'evil-change-to-previous-state)
-   (key-chord-define evil-insert-state-map ",," 'evil-normal-state)
-   (key-chord-define evil-replace-state-map ",," 'evil-normal-state)
-** TODO Zettel Workflow
-1. Projekt Eintrag für Zettel erstellen
-2. Deadline hinzufügen
-2. Unterpunkte für die einzelnen Aufgaben erstellen
-3. Aufgabe in Unterpunkt Aufgabenstellung kopieren
-4. zusätzlich Lösungsskizzen, referenzen und Lösung
-5. je nach Modul noch footer und header ansetzen
-
- 
- Entered on [2013-01-25 Fr 15:30]
+* workflows
+** TODO magit commit merge pull push
+ [[file:~/Zettelkasten/refile.org::*Shortcut%20um%20mehrere%20Eintr%C3%A4ge%20bei%20magit%20auf%20einmal%20zu%20stagen%20oder%20zu%20markieren][Shortcut um mehrere Einträge bei magit auf einmal zu stagen oder zu markieren]]
+ Entered on [2013-01-26 Sa 19:59]
+** TODO emms musik abspielen
+ [[file:~/Zettelkasten/refile.org::*Shortcut%20um%20mehrere%20Eintr%C3%A4ge%20bei%20magit%20auf%20einmal%20zu%20stagen%20oder%20zu%20markieren][Shortcut um mehrere Einträge bei magit auf einmal zu stagen oder zu markieren]]
+ Entered on [2013-01-26 Sa 19:59]

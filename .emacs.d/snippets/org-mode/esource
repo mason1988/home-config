@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: esource
+# key: esource
+# --
+#+BEGIN_SRC elisp :tangle emacs_config.el
+
+#+END_SRC
