@@ -1,5 +1,8 @@
 * idea
 * problem
+** TODO habits sind total unübersichtlich
+ [[file:~/Zettelkasten/organisation.org::*Rechner%20aus%20-%20Brainstorming][Rechner aus - Brainstorming]]
+ Entered on [2013-01-29 Di 23:06]
 * todo
 * to-read
 ** TODO https://groups.google.com/forum/?hl=en&fromgroups#!forum/emacs-helm

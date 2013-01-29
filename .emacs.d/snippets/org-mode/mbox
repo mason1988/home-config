@@ -1,6 +1,5 @@
 # -*- mode: snippet -*-
 # name: mbox
-# key: \m
-# type: command
+# key: mb
 # --
-\\mbox{\ ${1: }\ } ${2: }
+\\mbox{ ${1: } } ${2: }

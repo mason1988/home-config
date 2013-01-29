@@ -246,3 +246,7 @@ compat*
 /org/journal.org.gpg
 dwhelper/
 .emacs.d/tramp
+.emacs.d/tramp
+/.config/Terminal/terminalrc
+/Zettelkasten/#theoretische_informatik.org#
+/Zettelkasten/elementare_stochastik.org_archive

@@ -471,7 +471,77 @@ werden
 \end{document}
 #+END_SRC
 
+** Musterlösung
+#+BEGIN_SRC latex 
+\section{Aufgabe 37}
+\subsection{a)}
+$$ \m{Sei} \iota: X \mt \tau \m{die identische Termbelegung}  $$ \\
+$$ \m{zz} \iota^{\v}(t)=t \A t \in \tau $$ \\
+$$ \m{Sei} s_0 \in \gamma_0 \m{und} \iota^{\v}(s_0):= s_0 \A s_0 \in \gamma_0 $$ \\
+$$ \A i \in I \; \iota(X_i)=X_i \m{für alle Variablen} $$ \\
+$$ \iota^{\v} \m{ist die Identität auf den Primtermen} $$ \\
+$$ \m{Sei nun} M = \{ t \in \tau | \iota^{\vee}(t) = t \} $$ \\
+$$ \m{Sei} n \leq 1 \m{und} f \in F_n $$ \\
+$$ \m{Seien} t_1,...,t_n \in M \m{zz:} ft_1...t_n \in M $$ \\
+$$ \iota^{\vee}(ft_1...t_n) \ov{def}{=}f(\iota^{\v}t_1...\iota^{\v}tn) \ov{ti\in M}{=} ft_1...t_n $$ \\
+$$ \m{d.h.} \iota^{\v}(ft_1...t_n)=ft_1...t_n \m{und M ist abgeschlossen} $$
+\subsection{b)}
+$$ \gamma: X \mt X \in \tau \m{Term-Belegung Es gelte} \gamma^{\v}(t)=t \A t \in \tau $$ \\
+$$ \m{Dann ist} \gamma \m{die identische Term-Belegung} $$ \\
+$$ \m{Für} s_0 \in \Gamma_0 \subset \tau \; \gamma{s_0}=s_0 $$ \\
+$$ \m{Sei nun} x_i \in X \; \gamma^{\v}(x_i) = x_i = \iota(x_i) \; \A x_i \in X $$ \\
+$$ \m{für jeder Variable} x_i \m{Also} \gamma = 1 \m{als Belegung} $$
+\section{Aufgabe 38}
+$$ A = p_3x_0s_2x_1x_4x_3, \g = \i^{s_3x_0x_1x_5|x_3}_{x_3|x_4} $$ \\
+\subsection{a)}
+$$ \m{Ausnahmemenge:} (A,\gamma) \m{bzg} x_4 $$ \\
+$$ |A| = \{x_0,x_1,x_3,x_4\} $$ \\
+$$ |\g(|A|\bs\{x_4\})^{\g}| = | \gamma(x_3)| = |s_3x_0x_1x_4| = \{x_0,x_1,x_4\} $$ \\
+$$ \m{Bemerkung} x_4 \in \{x_0,x_1,x_4\} = \m{Ausnahmemenge} $$ 
+\subsection{b)}
+$$ \m{die neue Variable} z = (x_4)_{\g}^{|A|} = min ( X \bs (|A| \cup |\g(|A| \bs \{x_4\})^{\g}|) = $$ \\
+$$ min(X \bs (\{ x_0,x_1,x_3,x_4) \cup \{x_0,x_1,x_4\}) = x_2 $$
+\subsection{c)}
+die neue Term-Belegung
+$$ \g^{z}_{x_4} = \gamma^{x_2}_{x_4} = \i^{s_3x_0x_1x_4 | x_2}_{x_3| x_4} $$ \\
+\subsection{d)}
+$$ \gamma_0 \circ \w_{x_4}A = \g \circ \w_{x_4}p_3x_0s_2x_1x_4x_3 = \i^{s_3x_0x_1x_4 | x_2}_{x_3|x_4} \w_{x_4}p_3x_0s_2x_1x_4x_3 $$ \\
+$$ \W_{x_2} \i^{s_3x_0x_1x_4 | x_2}_{x_3 | x_4}p_3x_0s_2x_1x_4x_3 = \W_x{_2} p_3x_0s_2x_1x_2s_3x_0x_1x_4 $$
+\section{Aufgabe 39}
+$$ \g = \i^{x_2 | x_2|x_4}{x_0|x_1|x_2} \; A = p_2s_2x_1x_0x_2, B = p_3x_0x_1x_2 $$ \\
+\subsection{a)}
+$$ \m{Ausnahmenengen von} (A,\g) \m{bzg} x_3 \m{und} (B, \g) \m{bzg} x_1 $$ \\
+$$ |A| = $$ x_0,x_1,x_2$$ \; |B| = \{x_0,x_1,x_2\} $$ \\
+$$ |\g(XA) \bs \{x_2\})^{\g}| = \g(x_0), \g(x_1) \} = \{x_2,x_2\} = \{x_2\} $$ \\
+$$ x_2 \in \{x_2\} \m{Ausnahmemenge}$$ \\
+\subesction{b)}
+$$ \Ri z = (x_2)^{|A|}_{\g} = min(X \bs ( |A| \cup |\g(|A| \bs \{x_2\})^{\g}|) $$ \\
+$$ = min ( X \bs \{x_1,x_0,x_2\} \cup \{x_2\}) = x_3 $$ \\
+$$ \m{Zusatz:} |\g(|B| \bs \{x_1\})^{\g}| = \{\g(x_0,\g(x_2)\} = \{x_2,x_4\} $$ \\
+$$ w = (x_1)_{\g}^{|B|} = x_1 da x_1 \not \in \{x_2,x_4\} $$
+\subsection{c)}
+$$ \g_{x_2}^{z} = \g_{x_2}^{x_3} = \i^{x_2|x_2|x_3}_{x_0|x_1|x_2} $$ \\
+$$ \i^w_{x_1} = \i^{x_1}_{x_1} = \i^{x_2 | x_1 | x_4}_{x_0 | x_1 | x_2} $$ \\
+\subsection{d)}
+$$ \i \circ (\v_{x_2} \A \wedge \w_{x_1} B ) = \i \circ ( \v_{x_2} P_2s_2x_1x_0x_2 \wedge \w_{x_1}p_3x_0x_1x_2) $$ \\
+$$ = \v_{x_3} \i^{x_2|x_2x_3}_{x_0|x_1x_2}p_2s_2x_1x_0x_2 \wedge \w_{x_1} \i^{x_2 | x_4}_{x_0 | x_2}p_3x_0x_1x_2 $$ \\
+$$ = \v_{x_3} p_2s_2x_2x_2x_3 \wedge \w_{x_1}p_3x_2x_1x_4 $$
+#+END_SRC
 * TODO Zettel 12
+** Tutorium
+- Aufgabe 40
+   $\gamma = \i^{t_0|s^{\tilde}_2x_4x_4}_{x_0 | x_1}$
+   2 Fälle: 
+   $x_0 \in |t_0|$
+   $x_0 \not \in |t_0|$  
+   beide Fälle müssen betrachtet werden
+- Aufgabe 41
+  $(\a^{\v}\circ \g)^{\w}$ Hier benutzen: 
+   $\A u \in U ( \a^{\v} \circ \gamma)^u_x \us{|A|}{=} \a^{\v \; u}_{x^{|A|}_{\g}} \circ \g_x^{x_{\g}^{|A|}}$
+  Für jedes Element in der Belegung
+  
+  Bei a) belegung alpha ist schon komplett, Gamma ist nur eine bestimmte substitution.
+     erst substitution und dann alpha (?) auf ganz a anwenden
 ** header
 #+BEGIN_SRC latex :tangle lo-loesung-12.tex
 \documentclass[11pt]{amsart}
