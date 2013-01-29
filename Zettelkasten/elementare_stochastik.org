@@ -1,3 +1,4 @@
+#+latex_header:\input{commands.tex}
 * organisation
 - email: senge@mathematik.uni-marburg.de
 - Dateiformat: zettel9-lerch-hamm.pdf
@@ -35,15 +36,15 @@ In eine Richtung entgegen unendlich steigt die Wahrscheinlichkeit
    dabei geht es um k Erfolge bei n durchläufen mit einer Erfolgswahrscheinlichkeit
    p und Verlustws q
    $P(X=k) = \binom{n}{k}p^kq^{n-k}$
-*** Poissonverteilung
-      zur Mitte hin, steigt die Wahrscheinlichkeit. (nicht exponentiell => runder kopf
-*** Hypergeometrische Verteilung
+** Poissonverteilung
+     zur Mitte hin, steigt die Wahrscheinlichkeit. (nicht exponentiell => runder kopf
+** Hypergeometrische Verteilung
 n elemente ohne zurücklegen ziehen. Ws für Anzahl Elemente gewünschter Eigenschaft.
      (entspricht Urnenmodell)
-[[/home/florian/Zettelkasten/zettelkasten.org_20130112_073036_9890xDI.png]]
+$P(X=k) = \fr{\binom{M}{k}\binom{N-M}{n-k}}{\binom{N}{n}}$
 Mit N Elementen insgesamt, und M Elementen, die interessant sind und n zügen.
 [[file:hyper_res.png]]
-*** Pascalverteilung
+** Pascalverteilung
 [[file:zettelkasten.org_20130118_220037_1617Jik-0.png]]
 [[file:zettelkasten.org_20130118_221649_1617Wsq-0.png]]
 [[file:zettelkasten.org_20130118_221743_1617VAA-0.png]]
@@ -1010,7 +1011,25 @@ $X_n \ov{Law}{\lori} X$  (Law = Gesetz, Gesetz der großen/kleinen Zahlen?)
 [[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220612_12492jDO-4.png]]
 [[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220612_12492jDO-5.png]]
 *** Lösungsskizze
+ - Schätzer geben einen Wert für den Erwartungswert oder die Varianz an
+   - $T_1$ entspricht dem Durchschnitt
+   - $T_2$ entspricht dem Durchschnitt der extremwerte (min und max)
+   - Für Erwartungstreue muss für $T_1$ und $T_2$ der Erwartungswert berechnet werden
+   - 
 *** Lösung
+#+BEGIN_SRC latex :tangle st-loesung-10.tex
+\subsection{Aufgabe 1}
+\subsubsection{(a)}.\\
+\( E(T_1 ) = E(\fr{1}{n}\sum^n_{i=1}X_i) \) \\
+\( = \fr{1}{n}E(\sum^n_{i=1}X_i) \) \\
+\( = \fr{1}{n}\sum^n_{i=1}E(X_i) \) \\
+
+\subsubsection{(b)}.\\
+\( r(T_1,c) = E[(\fr{1}{n}[\sum^n_{i=1}X_i] - \fr{a+b}{2})^2] \) \\
+\( =  \) \( \fr{1}{n^2} ( \sum^n_{i=1}X_i )^2 - \fr{2}{n}\sum^n_{i=1}\fr{X_i*a + X_i*b}{2} + \fr{a^2 + 2ab + b^2}{4} \) \\
+% irgendwo müssten mal Werte ausgerechnet, bzw. Erwartungswerte eingesetzt werden.
+% Vor allem T_2 
+#+END_SRC
 *** Referenzen
 ** TODO Aufgabe 2
 *** Aufgabenstellung
@@ -1019,7 +1038,45 @@ $X_n \ov{Law}{\lori} X$  (Law = Gesetz, Gesetz der großen/kleinen Zahlen?)
 [[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220641_12492wNU-2.png]]
 [[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220641_12492wNU-3.png]]
 *** Lösungsskizze
+    - 10 Kugeln vorhanden, 6 ziehen ohne zurücklegen
+    - S Kugeln Schwarz, X davon gezogen
+      => Verteilung: Hypergeometrische Verteilung
+
+      N = insgesamt = 10
+      M = interessant = S
+      n = Züge = 6
+      k = erhoffte Anzahl
+
+      => $P(X=k) = \fr{\binom{M}{k}\binom{N-M}{n-k}}{\binom{N}{n}}$
+
+      => $P(X=k) = \fr{\binom{S}{k}\binom{10-S}{6-k}}{\binom{10}{6}}$
+
+      Sei a = \binom{10}{6}
+      also $P(X=k) = \fr{\binom{S}{k}\binom{10-S}{6-k}}{a}$
+      \( \Ri \fr{\fr{S!}{(S-k)!k!}\fr{(10-S)!}{(4 - S + k)!(6-k)!}}{a} \)
+ 
+      \( \Ri \fr{S!(10-S)!}{(S-k)!k!(4 - S + k)!(6-k)!a} \)
+    
+    - für jede mögliche Anzahl schwarze Kugeln in Urne Niveauemenge bestimmen
+    - Die Wahrscheinlichkeit das die Anzahl der schwarzen gezogenen Kugeln
+      aus der Niveaumenge stammt, soll 0.9 sein
+
+      - Summe der Ws der Elemente in Nvmenge muss 0.9 sein
+
+      - Für S = 0, Sei A_0 = {0} => P_0(X \in A_0) = 1
+	                     {0,1} => P_0(X \in A_0) = 
+    
+    - für jede Mögliche Anzahl (x) tatsächlich gezogener Schwarzer Kogeln, soll
+      die Konfidenzmenge bestimmt werden
+      
+
+    - Konfidenzmenge ::
+    - Niveaumenge :: gleiche Wahrscheinlichkeiten
 *** Lösung
+#+BEGIN_SRC latex :tangle st-loesung-10.tex
+\subsection{Aufgabe 2}
+#+END_SRC
+
 *** Referenzen
 ** TODO Aufgabe 3
 *** Aufgabenstellung
@@ -1027,6 +1084,10 @@ $X_n \ov{Law}{\lori} X$  (Law = Gesetz, Gesetz der großen/kleinen Zahlen?)
 [[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220704_124929Xa-1.png]]
 *** Lösungsskizze
 *** Lösung
+#+BEGIN_SRC latex :tangle st-loesung-10.tex
+\subsection{Aufgabe 3}
+#+END_SRC
+
 *** Referenzen
 ** TODO Aufgabe 4
 *** Aufgabenstellung
@@ -1036,6 +1097,9 @@ $X_n \ov{Law}{\lori} X$  (Law = Gesetz, Gesetz der großen/kleinen Zahlen?)
 [[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220722_12492Kig-3.png]]
 *** Lösungsskizze
 *** Lösung
+#+BEGIN_SRC latex :tangle st-loesung-10.tex
+\subsection{Aufgabe 4}
+#+END_SRC
 *** Referenzen
 * Zettel-11
 [[~/Dropbox/st/st-zettel-11/st-zettel-11.pdf][st-zettel-11.pdf]]
