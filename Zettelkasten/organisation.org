@@ -130,24 +130,28 @@ Clock summary at [2013-01-27 So 00:15]
   :PROPERTIES:
   :CATEGORY: habit
   :END:
-** TODO autogenes training 1
-   SCHEDULED: <2013-01-28 Mo 02:00 +1d/2d>
+** TODO autogen 1
+   SCHEDULED: <2013-01-29 Di 02:00 +1d/2d>
+   - State "DONE"       from "TODO"       [2013-01-29 Di 12:18]
    - State "DONE"       from "TODO"       [2013-01-27 So 21:51]
    :PROPERTIES:
    :STYLE:    habit
-   :LAST_REPEAT: [2013-01-27 So 21:51]
+   :LAST_REPEAT: [2013-01-29 Di 12:18]
    :END:
-** TODO autogenes training 2
-   SCHEDULED: <2013-01-28 Mo 10:00 +1d/2d>
+** TODO autogen 2
+   SCHEDULED: <2013-01-29 Di 10:00 +1d/2d>
+   - State "DONE"       from "TODO"       [2013-01-29 Di 12:18]
    - State "DONE"       from "TODO"       [2013-01-28 Mo 01:43]
    :PROPERTIES:
    :STYLE:    habit
-   :LAST_REPEAT: [2013-01-28 Mo 01:43]
+   :LAST_REPEAT: [2013-01-29 Di 12:18]
    :END:
-** TODO autogenes training 3
-   SCHEDULED: <2013-01-27 So 18:00 +1d/2d>
+** TODO autogen 3
+   SCHEDULED: <2013-01-28 Mo 18:00 +1d/2d>
+   - State "DONE"       from "TODO"       [2013-01-29 Di 12:18]
    :PROPERTIES:
    :STYLE:    habit
+   :LAST_REPEAT: [2013-01-29 Di 12:18]
    :END:
 ** TODO Rechner aus - Brainstorming
    SCHEDULED: <2013-01-29 Di 23:00 +1d/2d>

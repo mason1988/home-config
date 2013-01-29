@@ -245,3 +245,4 @@ compat*
 /.wacom_utility
 /org/journal.org.gpg
 dwhelper/
+.emacs.d/tramp

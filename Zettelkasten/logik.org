@@ -103,9 +103,34 @@ Variablen Substitution :: X -> X, [[file:201301ad-1333455300-3e.png]]  [[file:20
 $\bar{\P}^J$ = Formeln,  Relations-Algebra
 - Die ganzen Tautologien => kontante Nullstellige Regeln
 variable 0-stellige Regeln:
-    $\frac{\bigvee_xA}{\bar{\bigwedge_xA}} = \frac{\bigvee_xA}{\not \bigwedge_x \not A}, \fr{\bar{\bigwedge_xA}}{\bigvee_xA}$
+    $\frac{\bigv_xA}{\bar{\bigw_xA}} = \frac{\bigv_xA}{\not \bigw_x \not A}, \fr{\bar{\bigw_xA}}{\bigv_xA}$
+$\iota: X \mapsto \tau =  (\mathcal{Y}_0 \cup X)^y$ Terme 
+$\fr{\bv_x A}{\bar{\bw_x}{\bar{A}}}$,$\fr{\bar{\bw_x\bar{A}}}{\bv_xA}, \fr{\bw_x A}{\iota_x^{\tau}\circ A}$
+- 1 stellige Regeln (Paare von Formeln
+$(A , \gamma \circ A) \gamma: X \mapsto \tau$ beliebig
+$x \not = y, y \not \in |A| \cup |B|$ ( y keine freie Variable von A oder B)
+$(\fr{A}{\tau^y_x \circ B} , \fr{A}{\bw_xB})$
+2 stellig: Modus Ponens (A, \fr{A}{B}, B)
+Ableitbare Formeln(beweisbar)
+$\mc{P\tau}^{J \cup Q}_0 = 0$ stellige Regeln
+$\bar{(\mc{P}\tau)^{J \cup Q}_0}^K$ = beweisbar
 
+$A \in (\mc{P}\tau)^{J \cup Q} Tautologie \Lri A^{\w} = 1$
+$\forall \a : X \mt \mc{U}$ große Modell, \a^{\w}A = A^{\w}(\alpha} = 1$
 
+$\a^{\w}p_mt_1...t_m = \begin{cases} 0 &\mbox{falls } ((\a^{\v}t_1),...,(\a^{\v}tm)) \not \in p_m^{*} \\ 0 &\mbox{sonst} \end{cases}$
+$\a^{\w}\bar{A} = \bar{\a^{\w}A}, \a^{\w} (A \not = B) = (\a^{\w}A) \# (\a^{\w}B)$ => Produkt, Max in {0,1} ...
+$\a^{\w}\#_xA= \#_{u \in U} \ov{\w}{\a_x^u}A$
+
+$(\mc{P}\tau)^{J \cup Q}$ Regel Algebra bzgl K
+$V := \{T \in (\mc{P}\tau)^{J \cup Q} | T^{\w}=1, \a^{\w}T=1 \A \a\in U^x \}$
+
+Vergleichslemma $\a^{\w}\fr{A}{B} = 1 \Lri \a^{\w}A \leq \a^{\w}B$
+$\a^{ \w }\fr{A}{B} = max(\a^{\w}B, 1 - \a^{\w}A)$
+
++1 kann bei Supremum reingezogen werden
+
+$\a^\v\circ\iota^t_x = \a^{\a^{\v}t}_x : X \mt U$
 * Zettel-08
 ** Dateien
 [[/home/florian/Dropbox/lo/lo-zettel-08.pdf::NNN][lo-zettel-08.pdf]]
@@ -195,13 +220,13 @@ jedes ideal von dem I ne echte Teilmenge, ist
 \(    t'' = \tilde{s_2}s_2x_1x_7s_0 \)\\
 \(    \mbox{ Wir haben die Fortsetzung einer Belegung } \) \\
 \(    \alpha \) \\
-\(    \alpha^{\wedge}(t) = \alpha^{\wedge}(t)(\tilde{s_2}x_1s_2s_0x_7) \) \\
+\(    \alpha^{\w}(t) = \alpha^{\w}(t)(\tilde{s_2}x_1s_2s_0x_7) \) \\
 \(    \mbox{ Sei }\alpha_i := \alpha(x_i) \) \\
 \(    = \tilde{s_2}^{*}(\alpha(x_1)s_2^*(s_0^*\alpha(x_7))) \) \\
 \(    = \alpha_1^{s_2^*(s_o^*\alpha_7)}= \alpha_1^{0 + \alpha_7}  \) \\
 \(    \alpha(t') = \alpha_7^{0+\alpha1}  \) \\
 \(    \alpha(t'') = (\alpha_1 + \alpha_7)^0  \) \\
-\(    b) \alpha^{\wedge}(t) = \alpha_1^{\alpha_7} = 2^{17} = 13|072  \) \\
+\(    b) \alpha^{\w}(t) = \alpha_1^{\alpha_7} = 2^{17} = 13|072  \) \\
 #+END_SRC 
 
 *** footer
@@ -264,7 +289,7 @@ jedes ideal von dem I ne echte Teilmenge, ist
 *** Aufgabe a)
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
 \subsubsection*{a)}
-\( \alpha^{\vee}(t) = \{1,2,3,4,5,6,7\} \backslash ( \{1\} \backslash \{1,2,3,4,5\} \) \\
+\( \alpha^{\v}(t) = \{1,2,3,4,5,6,7\} \backslash ( \{1\} \backslash \{1,2,3,4,5\} \) \\
 \( = \{0,1,2,3,4,5,6,7\} \backslash \emptyset = \{1,2,3,4,5,6,7\} \)
 #+END_SRC
 
@@ -277,8 +302,8 @@ soll hier etwas anderes als der Schnitt sein
 *** Aufgabe b)
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
 \subsubsection*{b)}
-\( \alpha^{\wedge}(P) \mbox{ für } p_1t \mbox{ ist } 1\) bzw. wahr da \( | \{0,1,2,3,4,5,6,7\} | \leq 100 \) \\
-\( \alpha^{\wedge}(P) \mbox{ für } \tilde{p}_1t \mbox{ ist } 1\) bzw. wahr da \( | \{0,1,2,3,4,5,6,7\} | = 8\) und 8 ist gerade \\
+\( \alpha^{\w}(P) \mbox{ für } p_1t \mbox{ ist } 1\) bzw. wahr da \( | \{0,1,2,3,4,5,6,7\} | \leq 100 \) \\
+\( \alpha^{\w}(P) \mbox{ für } \tilde{p}_1t \mbox{ ist } 1\) bzw. wahr da \( | \{0,1,2,3,4,5,6,7\} | = 8\) und 8 ist gerade \\
 #+END_SRC
 Wenn Element der Menge dann wahr, sonst Falsch.
 {0,1,...,7} \in p_1t => a^(p_1t) = wahr , aber notation fragwürdig
@@ -286,7 +311,7 @@ Wenn Element der Menge dann wahr, sonst Falsch.
 *** Aufgabe c)
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
 \subsubsection*{c)}
-\( \alpha^{\wedge}(A) \mbox{ für } A = \bigwedge_{x_5}p_1t \mbox{ ist wahr} \)
+\( \alpha^{\w}(A) \mbox{ für } A = \bigw_{x_5}p_1t \mbox{ ist wahr} \)
 #+END_SRC
 Auf jeden Fall ändern bedeutungslose quantoren nichts an der AUssage
 Was könnte der Quantor hier heißen? Vielleicht jeder beliebige Wert
@@ -302,7 +327,7 @@ Aussage bleibt aber wahr, da ja beim Schnitt alles verschwindet.
 *** Aufgabe d)
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
 \subsubsection*{d)}
-\( \alpha^{\wedge}(B) \mbox{ für } B = (\bigwedge_{x_5}p_1t)\wedge(\bigvee_{x_4}\tilde{p}_1t) \) ist 1 bzw. wahr.
+\( \alpha^{\w}(B) \mbox{ für } B = (\bigw_{x_5}p_1t)\w(\bigv_{x_4}\tilde{p}_1t) \) ist 1 bzw. wahr.
 #+END_SRC
 Die linke Seite ist wahr wie in C. Auf der rechten Seite ändert sich schon
 deshalb nichts, weil x_4 gar nicht vorkommt, und solche Quantoren ignoriert
@@ -325,14 +350,14 @@ Korrigierte Fassung:
 *** Aufgabe a)
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
 \subsubsection*{a)}
-\( \alpha^{\wedge}(t) =  5*4^2*3^2 = 720 \)
+\( \alpha^{\w}(t) =  5*4^2*3^2 = 720 \)
 #+END_SRC
 5 16 9  *
 = 720
 *** Aufgabe b)
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
 \subsubsection*{b)}
-\( a^{\wedge}(P) = 1 \mbox{ bzw. wahr da } (2 * 5) < (5 * 4^2 * 3^2) \Leftrightarrow 10 < 720 \)
+\( a^{\w}(P) = 1 \mbox{ bzw. wahr da } (2 * 5) < (5 * 4^2 * 3^2) \Leftrightarrow 10 < 720 \)
 #+END_SRC
 Falsch da 2 stelliges Prädikat und nur ein Term vorhanden
 Außerdem gibt es keine (m,n) in N , dass wäre N^2
@@ -343,8 +368,8 @@ Nun 2 Terme.
 *** Aufgabe c)
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
 \subsubsection*{c)}
-Sei \( x_3 = 0 \Rightarrow \alpha^{\vee}(t) = 0 \Rightarrow\mbox{ es existiert kein } m \in \mathbb{N} 
-\mbox{ so dass gilt: } (2m < 0) \Rightarrow \alpha^{\vee}(A) = 0  \)
+Sei \( x_3 = 0 \Rightarrow \alpha^{\v}(t) = 0 \Rightarrow\mbox{ es existiert kein } m \in \mathbb{N} 
+\mbox{ so dass gilt: } (2m < 0) \Rightarrow \alpha^{\v}(A) = 0  \)
 #+END_SRC
 Für ein x_4 und alle x_3
 Müsste dann ja auch immer falsch sein.
@@ -356,7 +381,7 @@ Sei x4 = 1 => (2*x3 < 5*x3) gilt für alles x3 also wahr
 *** Aufgabe d)
 #+BEGIN_SRC latex :tangle lo-loesung-10.tex
 \subsubsection*{d)}
-Es gilt die selbe Begründung wie schon in c), also $\alpha^{\vee}(B) = 0$, da es in jedem Fall
+Es gilt die selbe Begründung wie schon in c), also $\alpha^{\v}(B) = 0$, da es in jedem Fall
 ein $x_3 \in \mathbb{N}$ gibt, so dass die Aussage falsch ist.
 #+END_SRC
 Für alle x3 gibt es ein x4 so dass gilt: (2*x4 < 5*x3*x4) 
@@ -446,19 +471,48 @@ werden
 \end{document}
 #+END_SRC
 
-* Zettel 12
-** Aufgabe 1
+* TODO Zettel 12
+** header
+#+BEGIN_SRC latex :tangle lo-loesung-12.tex
+\documentclass[11pt]{amsart}
+\input{commands.tex}
+\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
+\title{Zettel 12 }
+\author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
+\begin{document}
+\maketitle
+#+END_SRC 
+** aufgabenkopf
+[[/home/florian/Zettelkasten/logik.org_20130128_114029_6254wsc-0.png]]
+[[/home/florian/Zettelkasten/logik.org_20130128_114029_6254wsc-1.png]]
+[[/home/florian/Zettelkasten/logik.org_20130128_114029_6254wsc-2.png]]
+** Aufgabe 40
 *** Aufgabenstellung
+[[/home/florian/Zettelkasten/logik.org_20130128_114120_625492i-0.png]]
+[[/home/florian/Zettelkasten/logik.org_20130128_114120_625492i-1.png]]
+[[/home/florian/Zettelkasten/logik.org_20130128_114120_625492i-2.png]]
+[[/home/florian/Zettelkasten/logik.org_20130128_114120_625492i-3.png]]
+[[/home/florian/Zettelkasten/logik.org_20130128_114120_625492i-4.png]]
+[[/home/florian/Zettelkasten/logik.org_20130128_114120_625492i-5.png]]
+[[/home/florian/Zettelkasten/logik.org_20130128_114120_625492i-6.png]]
 *** Lösungsskizze
 *** Lösung
+#+BEGIN_SRC latex :tangle lo-loesung-12.tex
+\subsection{40)}
+#+END_SRC
 *** Referenzen
-** Aufgabe 2
+** Aufgabe 41
 *** Aufgabenstellung
+[[/home/florian/Zettelkasten/logik.org_20130128_114154_6254KBp-0.png]]
+[[/home/florian/Zettelkasten/logik.org_20130128_114154_6254KBp-1.png]]
+[[/home/florian/Zettelkasten/logik.org_20130128_114154_6254KBp-2.png]]
+[[/home/florian/Zettelkasten/logik.org_20130128_114154_6254KBp-3.png]]
+[[/home/florian/Zettelkasten/logik.org_20130128_114154_6254KBp-4.png]]
 *** Lösungsskizze
 *** Lösung
+#+BEGIN_SRC latex :tangle lo-loesung-12.tex
+\subsection{41)}
+#+END_SRC
+
 *** Referenzen
-** Aufgabe 3
-*** Aufgabenstellung
-*** Lösungsskizze
-*** Lösung
-*** Referenzen
+** footer
