@@ -103,6 +103,12 @@
 (setq evil-motion-state-modes nil)
 
 (key-chord-mode 1)
+
+(add-hook 'eshell-mode-hook
+          #'(lambda ()
+              (define-key eshell-mode-map 
+                [remap pcomplete]
+                'helm-esh-pcomplete)))
 #+END_SRC
 * Shortcuts
 ** Minormode

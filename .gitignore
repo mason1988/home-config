@@ -244,3 +244,4 @@ compat*
 .emacs.d/org-clock-save.el
 /.wacom_utility
 /org/journal.org.gpg
+dwhelper/

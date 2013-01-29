@@ -2,6 +2,9 @@
 * problem
 * todo
 * to-read
+** TODO https://groups.google.com/forum/?hl=en&fromgroups#!forum/emacs-helm
+ 
+ Entered on [2013-01-29 Di 20:05]
 * wishes
 * notes
 * workflows
