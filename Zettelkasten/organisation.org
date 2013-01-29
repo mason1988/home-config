@@ -77,9 +77,46 @@ Clock summary at [2013-01-27 So 00:15]
 |-----------------------------+-------------------+--------|
 | organisation.org_archive    | *File time*       | *0:00* |
 #+END:
+#+BEGIN: clocktable :tstart "<2013-01-27 Do 06:00>" :tend "<2013-01-28 Mo 06:00>" :maxlevel 5 :scope agenda-with-archives
+Clock summary at [2013-01-27 So 00:15]
 
+| File                        | Headline          | Time   |
+|-----------------------------+-------------------+--------|
+|                             | ALL *Total time*  | *2:10* |
+|-----------------------------+-------------------+--------|
+| todo.org                    | *File time*       | *0:00* |
+|-----------------------------+-------------------+--------|
+| todo.org_archive            | *File time*       | *0:00* |
+|-----------------------------+-------------------+--------|
+| logik.org                   | *File time*       | *0:00* |
+|-----------------------------+-------------------+--------|
+| elementare_stochastik.org   | *File time*       | *0:00* |
+|-----------------------------+-------------------+--------|
+| webdesign.org               | *File time*       | *0:00* |
+|-----------------------------+-------------------+--------|
+| theoretische_informatik.org | *File time*       | *1:31* |
+|                             | TODO th-Zettel-12 | 1:31   |
+|-----------------------------+-------------------+--------|
+| softwaretechnik.org         | *File time*       | *0:00* |
+|-----------------------------+-------------------+--------|
+| Software.org                | *File time*       | *0:00* |
+|-----------------------------+-------------------+--------|
+| zettelkasten.org            | *File time*       | *0:00* |
+|-----------------------------+-------------------+--------|
+| zettelkasten.org_archive    | *File time*       | *0:00* |
+|-----------------------------+-------------------+--------|
+| refile.org                  | *File time*       | *0:00* |
+|-----------------------------+-------------------+--------|
+| bugs.org                    | *File time*       | *0:00* |
+|-----------------------------+-------------------+--------|
+| organisation.org            | *File time*       | *0:39* |
+|                             | todo - review     | 0:39   |
+|-----------------------------+-------------------+--------|
+| organisation.org_archive    | *File time*       | *0:00* |
+#+END:
 * todo - review							    :default:
   :LOGBOOK:
+  CLOCK: [2013-01-28 Mo 12:54]--[2013-01-28 Mo 13:09] =>  0:15
   CLOCK: [2013-01-26 Sa 19:29]--[2013-01-26 Sa 20:08] =>  0:39
   CLOCK: [2013-01-25 Fr 21:57]--[2013-01-25 Fr 22:13] =>  0:16
   CLOCK: [2013-01-24 Do 16:02]--[2013-01-24 Do 16:14] =>  0:12
@@ -109,6 +146,16 @@ Clock summary at [2013-01-27 So 00:15]
    :END:
 ** TODO autogenes training 3
    SCHEDULED: <2013-01-27 So 18:00 +1d/2d>
+   :PROPERTIES:
+   :STYLE:    habit
+   :END:
+** TODO Rechner aus - Brainstorming
+   SCHEDULED: <2013-01-29 Di 23:00 +1d/2d>
+   :PROPERTIES:
+   :STYLE:    habit
+   :END:
+** TODO journal eintrag
+   SCHEDULED: <2013-01-29 Di 02:00 +7d/9d>
    :PROPERTIES:
    :STYLE:    habit
    :END:

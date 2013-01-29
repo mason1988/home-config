@@ -1,39 +1,8 @@
 * idea
-** TODO Todo für repeat key chord rausnehmen => geht nicht und ist scheiße
- [[file:~/.emacs.d/emacs_config.org::*allgemein][allgemein]]
- Entered on [2013-01-28 Mo 01:22]
-** TODO Film: Tim und Struppi
- [[file:~/.emacs.d/emacs_config.org::*allgemein][allgemein]]
- Entered on [2013-01-28 Mo 01:32]
 * problem
-** TODO frame wechsel bei youtube mittels evil
- 
- Entered on [2013-01-28 Mo 00:16]
-** TODO multi-eshell soll eshell und nicht shell starten
- 
- Entered on [2013-01-28 Mo 00:38]
 * todo
-** TODO workflow bei habits / scheduled tasks ausarbeiten
- 
- Entered on [2013-01-26 Sa 20:07]
-** TODO Shortcut (chord) einrichten für wiederholung
- 
- Entered on [2013-01-27 So 21:00]
-** TODO symlinks für -> beide <- shells
- 
- Entered on [2013-01-28 Mo 00:37]
-** TODO next / prev buffer shortcuts
- 
- Entered on [2013-01-28 Mo 00:39]
-
 * to-read
 * wishes
-** TODO recent files usw nach inhalt durchsuchen können, um buffer oder datei zu finden
- 
- Entered on [2013-01-25 Fr 15:29]
-** TODO wiederholende Prozesse (Makros z.B.) 
- [[file:~/.emacs.d/emacs_config.org::*allgemein][allgemein]]
- Entered on [2013-01-28 Mo 01:22]
 * notes
 * workflows
 ** TODO magit commit merge pull push
@@ -42,3 +11,7 @@
 ** TODO emms musik abspielen
  [[file:~/Zettelkasten/refile.org::*Shortcut%20um%20mehrere%20Eintr%C3%A4ge%20bei%20magit%20auf%20einmal%20zu%20stagen%20oder%20zu%20markieren][Shortcut um mehrere Einträge bei magit auf einmal zu stagen oder zu markieren]]
  Entered on [2013-01-26 Sa 19:59]
+** TODO wiederholende Prozesse (Makros z.B.) 
+ [[file:~/.emacs.d/emacs_config.org::*allgemein][allgemein]]
+ Entered on [2013-01-28 Mo 01:22]
+** TODO gezielt eine Datei anhand eines Inhaltsfragmentes suchen

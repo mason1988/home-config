@@ -13,3 +13,6 @@
 * TODO flimmern vom emacs beseitigen
    http://ivan.kanis.fr/fix-emacs-flicker.html
 ** NEXT flimmern emacs googlen
+* TODO Framewechsel auf Seiten wie dem google reader / youtube
+** NEXT in hilfetexten nach Taste suchen, um interpretation von tasten zu unterdrücken
+** TODO google reader und vimperator / pentadactyl

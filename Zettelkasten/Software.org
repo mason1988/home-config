@@ -90,6 +90,7 @@
   [[eshell:*eshell*:cd%20Zettelkasten/][cd Zettelkasten/]]
   Entered on [2013-01-25 Fr 18:32]
 *** TODO Shortcut um mehrere Einträge bei magit auf einmal zu stagen oder zu markieren
+*** TODO next / prev buffer shortcuts googlen / einrichten (siehe burry buffer)
 ** TODO Sprungmarken						    :PROJECT:
 *** TODO Liste mit Features von Bookmark+ anfertigen
 *** NEXT markierung und/oder anzeige für evil marks im Dokument anzeige ;goggle
@@ -102,6 +103,7 @@ google: emacs+evil+show+mark
 *** TODO autostarts neu zuteilen ;source blöcke usw.
 *** DONE todo states und faces aus "your life in plaintext"
     - State "DONE"       from "NEXT"       [2013-01-23 Mi 14:35]
+*** TODO workflow für habits / scheduled tasks ausarbeiten
 ** TODO Latex Mode						    :PROJECT:
 *** DONE Cdlatex Paket suchen und installieren
     ist total sinnlos, yasnippet kann das alles auch. Statt dessen eher mal nach math mode suchen
@@ -134,6 +136,7 @@ google: emacs+evil+show+mark
 *** DONE Autocompletion eshell fixen im moment wird bei tab direkt eingesetzt und es lässt sich nicht weiter schalten
 *** DONE mehrere eshell's, und diese sollten auch von überall aus in einem separaten Frame geöffnet werden können
     - State "DONE"       from "NEXT"       [2013-01-23 Mi 12:41]
+*** TODO google Symlink / alias eshell
       
 * copy and paste
 (yank in emacs = paste)

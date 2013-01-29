@@ -45,72 +45,22 @@ Rene Schwiegk -> 2355612
 * Revive Sessions
 - 1 :: Elementare Stochastik Zettel 8
 * Unterhaltung
-** The Watch - Nachbarn der 3. Art
-[[/home/florian/Zettelkasten/zettelkasten.org_20130103_141417_1136787R.png]]
+** Tim und Struppi
+[[/home/florian/Zettelkasten/zettelkasten.org_20130128_125735_24159syd-0.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130128_125735_24159syd-1.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130128_125735_24159syd-2.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130128_125735_24159syd-3.png]]
+[[/home/florian/Zettelkasten/zettelkasten.org_20130128_125735_24159syd-4.png]]
+Tim (Jamie Bell) ist ein junger Reporter, dem keine Gefahr zu groß, keine Reise zu weit und kein Unterfangen zu verrückt ist, um an eine gute Story zu kommen. Begleitend wird der umtriebige Journalist von seinem kecken Foxterrier Struppi. Zusammen reisen sie quer über den Globus, immer auf der Suche nach Material für eine neue Reportage.
 
-Als einer seiner Mitarbeiter grausam ermordet wird, beschließt der
-gewissenhafte Warenhaus-Manager Evan eine Bürgerwehr zu
-organisieren. Lediglich drei Männer melden sich. Die sind jedoch
-hauptsächlich daran interessiert, Bier zu trinken und sich zu
-amüsieren. Doch seine Mitstreiter haben ein jähes Erwachen, als sie
-einem leibhaftigen Alien begegnen. Nun liegt es an der allseits
-verlachten Selbstschutz-Gruppe die Welt vor einer Invasion
-blutrünstiger Körperfresser zu bewahren.
+Auf einem dieser Touren finden sie ein Modell der "Einhorn", ein verschollenes Schiff, das einen Schatz beherbergen soll. Mit dem Modell kommen sie an einen Hinweis, der sie auf die Fährte des Schatzes bringt. Leider wollen nicht nur Tim und Struppi die "Einhorn" bergen. Dunkle Gestalten sind fortan hinter ihnen her.
 
-[[file:~/etm-thewatch-xvid.mp4][ansehen]]
-
-** Der Hobbit - Eine unerwartete Reise
-[[/home/florian/Zettelkasten/zettelkasten.org_20130103_142246_11367JGY.png]]
-Bilbo Beutlin ist ein ganz einfacher Hobbit, der in Hobbingen im
-Auenland seinem Tagesgeschäft nachgeht. Bis er von dem Zauberer
-Gandalf auf den Plan gerufen wird. Zusammen mit einer Gruppe von 13
-Zwergen unter Führung des legendären Kriegers Thorin zieht der
-Halbling los, um dem Drachen Smaug das verlorene Zwergenreich Erebor
-zu entreißen. Unterwegs treffen sie auf Goblins und Orks, Wargs,
-riesige Spinnen und Zauberer. Und eine bemitleidenswerte Kreatur, die
-auf den klingenden Namen Gollum hört.
-
-[[file:~/.jdownloader/downloads/Der.Hobbit.Eine.unerwartete.Reise.2012.DVDSCR.German.AC3MD.XViD-PWNDcd1.avi][Part 1 ansehen]]
-[[file:~/.jdownloader/downloads/Der.Hobbit.Eine.unerwartete.Reise.2012.DVDSCR.German.AC3MD.XViD-PWND-2.avi][Part 2 ansehen]]
-
-** Otto's eleven
-[[/home/florian/Zettelkasten/zettelkasten.org_20130103_143437_11367WQe.png]]
-
-Nicht nur im Titel angelehnt an Steven Soderberghs Ocean’s Eleven,
-versucht sich Otto Waalkes in seinem neuesten Film Otto’s Eleven am
-Heist-Genre. Die Geschichte spielt auf der Insel Spiegeleiland, einem
-kleinen Stückchen Erde welches von nur fünf Insulanern bewohnt
-wird. Die ausschließlich aus Männern bestehende Gruppe setzt sich aus
-Maler Otto, Kabeljaukoch Pit, Fitnessfreak Mike, Modeliebhaber Oskar
-und IT-Experten Artur zusammen. Die Gruppe entschließt sich zu dem
-folgenschweren Schritt, mit Hilfe eines Online-Werbe-Videos, die
-Tourismusbranche auf Spiegeleiland ins Rollen zu bringen. Anstelle
-eines Urlauberansturms wird die winzige Insel jedoch vom fiesen
-Casinobesitzer und Kunstsammler Jean du Merzac heimgesucht. Dieser
-schafft es mit Hilfe eines arglistigen Tricks ein äußerst wertvolles
-Gemälde aus Ottos Familienbesitz zu ergaunern. Die fünf Freunde
-entschließen sich zu einer Vergeltungsaktion mit der sie das Kunstwerk
-wieder zurück erobern wollen. Zusammen mit der Verstärkung von sechs
-neuen Verbündeten sind Otto’s Eleven somit geboren. Otto Waalkes, der
-mit seiner 7 Zwerge – Männer allein im Wald – Reihe wieder an alte
-Kassenerfolge anknüpfen konnte, setzt in seinem neuesten Abenteuer auf
-bewährte Kräfte. Mit Regisseur Sven Unterwaldt Jr. und Produzent Mark
-Popp arbeitete Waalkes schon bei seinen letzten beiden Filmen
-zusammen. Wie in fast jedem Otto-Film, gibt es auch in Otto’s Eleven
-einige prominente Gastrollen: So gibt Germany’s Next Topmodel-Siegerin
-Sara Nuru ihr Filmdebüt neben Filmgrößen wie Olli Dittrich, Sky Dumont
-und Jasmin Schwiers. In seinem ersten großen Kinofilm ist Switch
-Reloaded – Star Max Giermann zu sehen, der sich in den letzten Jahren
-in der deutschen Comedy-Szene eine Namen machen konnte. Neben Giermann
-und Waalkes sind mit Mirco Nontschew und Rick Kavanian zwei
-Comedy-Urgesteine in weiteren Hauptrollen zu sehen. (BL)
-
-[[file:~/.jdownloader/downloads/Ottos.Eleven.German.2010.DVDRip.XviD-GMA.avi][ansehen]]
-
+Zum Glück treffen sie auf den rauhbeinigen aber liebenswerten Kapitän Hadoque, dessen Vorvater einst die "Einhorn" gehört haben soll. Gemeinsam machen sie sich auf die Suche nach dem größten Schatz ihres Lebens.
 * Geschenke
 ** phillips light
 ** mini touch gerät
 ** Reiskocher
+** wii u
 * Notes
   *Shell Command Output*
 (lgrep "-key" "/home/florian/.emacs")
@@ -119,7 +69,6 @@ Comedy-Urgesteine in weiteren Hauptrollen zu sehen. (BL)
 Nächster Dienstag Theo: SR XI , Raum 03C51
 
 [[file:201301ad-0029362331Avc.png]]
-
 
 
 
