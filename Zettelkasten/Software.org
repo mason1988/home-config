@@ -1,4 +1,4 @@
-#+STARTUP: content
+;#+STARTUP: content
 * Projekte
 ** TODO Kleinkram
 *** TODO das system wiederfinden, mit der man eine sicht auf 2 Buffer verteilen konnte
@@ -2138,3 +2138,5 @@ window-text-change-functions
 - "+;y        :: kopiere linkurl in clipboard
 - A           :: toggle cur bookmark
 - :bmarks!    :: bookmarks durchsuchen
+
+ 

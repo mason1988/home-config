@@ -1,0 +1,52 @@
+
+\documentclass[11pt]{amsart}
+\input{commands.tex}
+\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
+\title{Zettel 12 }
+\author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
+\begin{document}
+\maketitle
+
+\section*{40)}
+\subsection*{a)}
+$z = (x_0)_{\g}^{|\W_{x_3}A|} = (x_0)_{\g}^{\{x_0,x_1,x_2,x_3,x_4\}}$ \\ % hier wurde x_3 wegen der Belegung aus |A| rausgenommen
+% bei einem A kommt ein Term raus, bei \W entstehen dann mehrere terme
+% aber das |A| schmeißt dann wieder alles zusammen
+% als Trägermenge werden daher nur die Variablen x_0 bis x_2 betrachtet, da x_3 durch seine Belegung ja
+% im Grunde nichtmehr existiert, andererseits kommt x_3 schon in der Formel vor, und in der Substitution
+% geht es sogar bis hoch zu x_4 / jetzt doch wieder drin
+% unter umständen entspricht das x_3 am quantor tatsächlich allen möglichen substitutionen
+$\Ri \m{Ausnahmemenge} = |\g((\{x_0,x_1,x_2,x_3,x_4\} \bs \{x_0\})^{\g})| = |\g(\{x_1,x_2,x_3,x_4\}^{\g})|$ \\
+$= |\g\{x_1\}|$ % nur das was sich verändert
+$= |\{\tilde s_2x_4x_4\}|$ % Anwendung 
+$= \{x_4\}$ \\
+$x_0 \not \in \{x_4\} \Ri z = x_0$ \\
+$\Ri (x_0)_{\g}^{|\W_{x_3}A|} = x_0$
+\subsection*{b)}
+$\eta = \g^z_{x_0} = \iota_{x_0|x_1}^{z|\tilde s_2 x_4x_4}$ %einfach nur substitution von x_0 eingesetzt
+\subsection*{c)}
+$\o = (x_3)^{|A|}_{\eta} = (x_3)^{\{x_0,x_1,x_2,x_3,x_4\}}$
+$\Ri \m{Ausnahmemenge} = |\g((\{x_0,x_1,x_2,x_3,x_4\} \bs \{x_3\})^{\g})| = |\g((\{x_0,x_1,x_2,x_4\})^{\g})|$ \\
+$= |\g(\{x_0,x_1\})| = |\{z, \tilde s_2 x_4 x_4\}| = \{z,x_4\}$ \\
+$x_3 \not \in \{z,x_4\} \Ri \o = x_3$ \\
+$\Ri (x_3)^{|A|}_{\eta} = x_3$
+\subsection*{d)}
+$\eta_{x_3}^{\o} = \iota_{x_0|x_1|x_3}^{z|\tilde s_2x_4 x_4|\o}$ \\
+\subsection*{e)}
+$\eta \circ \W_{x_3}A = \W_{x_3} \eta^{x_3}_{x_3} \circ A$ \\
+$\eta^{x_3}_{x_3} \Ri \i^{z|\tilde s_2x_4x_4}_{x_0|x_1}$ \\
+$\Ri (\i_{x_0|x_1|x_3}^{z|\tilde s_2x_4 x_4|\o}) \circ (\W_{x_3}A)$ \\
+$= \W_{x_3}\i^{z|\tilde s_2x_4x_4}_{x_0|x_1} \circ A$ \\
+$= \W_{x_3}p_2(\i^{z|\tilde s_2x_4x_4}_{x_0|x_1}s_2x_0x_1)(\i^{z|\tilde s_2x_4x_4}_{x_0|x_1}\tilde s_2 x_2 s_1 x_3)$ \\
+$= x_0^{\v}p_2s_2z\tilde s_2x_4x_4 \tilde s_2x_2s_1x_3$ \\
+\subsection*{f)}
+$\g \circ \V_{x_0}\W_{x_3}A = \V_{x_0}\W_{x_3} \g^{x_0}_{x_0}$ \\
+$\g^{x_0}_{x_0} \Ri \i^{\tilde s_2 x_4 x_4}_{x_1}$ \\
+$\Ri (\i^{z|\tilde s_2 x_4 x_4}_{x_0 | x_1} \circ (\V_{x_0}(\W_{x_3}A))$ \\
+$= \V_{x_0} \i^{\tilde s_2 x_4 x_4}_{x_1} \circ (x_0^{\v}p_2s_2z\tilde s_2 x_4 x_4 \tilde s_2 x_2 s_1 x_3)$ \\
+
+\section*{41)}
+\subsection*{a)}
+$(\a^{\v} \circ \g) (x_j) = \begin{cases} 4*4 = 16 &\mbox{falls } j=1 \\ 3j &\mbox{sonst} \end{cases}$
+
+\end{document}

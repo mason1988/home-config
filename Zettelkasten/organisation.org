@@ -1,5 +1,6 @@
-#+BEGIN: clocktable :tstart "<2013-01-25 Fr 06:00>"  :tend "<2013-01-26 So 06:00>" :maxlevel 5 :scope agenda-with-archives
-Clock summary at [2013-01-27 So 00:15]
+* clocking
+#+BEGIN: clocktable :tstart "<2013-01-25 Fr 06:00>" :tend "<2013-01-26 So 06:00>" :maxlevel 5 :scope agenda-with-archives
+Clock summary at [2013-01-31 Do 01:48]
 
 | File                        | Headline              | Time   |      |
 |-----------------------------+-----------------------+--------+------|
@@ -40,8 +41,8 @@ Clock summary at [2013-01-27 So 00:15]
 | organisation.org_archive    | *File time*           | *2:40* |      |
 |                             | DONE bmkp für Dateien | 2:40   |      |
 #+END:
-#+BEGIN: clocktable :tstart "<2013-01-26 Do 06:00>" :tend "<2013-01-27 So 06:00>" :maxlevel 5 :scope agenda-with-archives
-Clock summary at [2013-01-27 So 00:15]
+#+BEGIN: clocktable :tstart "<2013-01-26 Sa 06:00>" :tend "<2013-01-27 So 06:00>" :maxlevel 5 :scope agenda-with-archives
+Clock summary at [2013-01-31 Do 01:47]
 
 | File                        | Headline          | Time   |
 |-----------------------------+-------------------+--------|
@@ -58,7 +59,7 @@ Clock summary at [2013-01-27 So 00:15]
 | webdesign.org               | *File time*       | *0:00* |
 |-----------------------------+-------------------+--------|
 | theoretische_informatik.org | *File time*       | *1:31* |
-|                             | TODO th-Zettel-12 | 1:31   |
+|                             | DONE th-Zettel-12 | 1:31   |
 |-----------------------------+-------------------+--------|
 | softwaretechnik.org         | *File time*       | *0:00* |
 |-----------------------------+-------------------+--------|
@@ -77,12 +78,12 @@ Clock summary at [2013-01-27 So 00:15]
 |-----------------------------+-------------------+--------|
 | organisation.org_archive    | *File time*       | *0:00* |
 #+END:
-#+BEGIN: clocktable :tstart "<2013-01-27 Do 06:00>" :tend "<2013-01-28 Mo 06:00>" :maxlevel 5 :scope agenda-with-archives
-Clock summary at [2013-01-27 So 00:15]
+#+BEGIN: clocktable :tstart "<2013-01-27 So 06:00>" :tend "<2013-01-28 Mo 06:00>" :maxlevel 5 :scope agenda-with-archives
+Clock summary at [2013-01-31 Do 01:47]
 
 | File                        | Headline          | Time   |
 |-----------------------------+-------------------+--------|
-|                             | ALL *Total time*  | *2:10* |
+|                             | ALL *Total time*  | *2:05* |
 |-----------------------------+-------------------+--------|
 | todo.org                    | *File time*       | *0:00* |
 |-----------------------------+-------------------+--------|
@@ -94,8 +95,8 @@ Clock summary at [2013-01-27 So 00:15]
 |-----------------------------+-------------------+--------|
 | webdesign.org               | *File time*       | *0:00* |
 |-----------------------------+-------------------+--------|
-| theoretische_informatik.org | *File time*       | *1:31* |
-|                             | TODO th-Zettel-12 | 1:31   |
+| theoretische_informatik.org | *File time*       | *2:05* |
+|                             | DONE th-Zettel-12 | 2:05   |
 |-----------------------------+-------------------+--------|
 | softwaretechnik.org         | *File time*       | *0:00* |
 |-----------------------------+-------------------+--------|
@@ -109,10 +110,170 @@ Clock summary at [2013-01-27 So 00:15]
 |-----------------------------+-------------------+--------|
 | bugs.org                    | *File time*       | *0:00* |
 |-----------------------------+-------------------+--------|
-| organisation.org            | *File time*       | *0:39* |
-|                             | todo - review     | 0:39   |
+| organisation.org            | *File time*       | *0:00* |
 |-----------------------------+-------------------+--------|
 | organisation.org_archive    | *File time*       | *0:00* |
+#+END:
+#+BEGIN: clocktable :tstart "<2013-01-28 Mo 06:00>" :tend "<2013-01-29 Di 06:00>" :maxlevel 5 :scope agenda-with-archives
+Clock summary at [2013-01-31 Do 01:47]
+
+| File                        | Headline          | Time   |
+|-----------------------------+-------------------+--------|
+|                             | ALL *Total time*  | *1:53* |
+|-----------------------------+-------------------+--------|
+| todo.org                    | *File time*       | *0:00* |
+|-----------------------------+-------------------+--------|
+| todo.org_archive            | *File time*       | *0:00* |
+|-----------------------------+-------------------+--------|
+| logik.org                   | *File time*       | *0:00* |
+|-----------------------------+-------------------+--------|
+| elementare_stochastik.org   | *File time*       | *0:00* |
+|-----------------------------+-------------------+--------|
+| webdesign.org               | *File time*       | *0:00* |
+|-----------------------------+-------------------+--------|
+| theoretische_informatik.org | *File time*       | *1:38* |
+|                             | DONE th-Zettel-12 | 1:38   |
+|-----------------------------+-------------------+--------|
+| softwaretechnik.org         | *File time*       | *0:00* |
+|-----------------------------+-------------------+--------|
+| Software.org                | *File time*       | *0:00* |
+|-----------------------------+-------------------+--------|
+| zettelkasten.org            | *File time*       | *0:00* |
+|-----------------------------+-------------------+--------|
+| zettelkasten.org_archive    | *File time*       | *0:00* |
+|-----------------------------+-------------------+--------|
+| refile.org                  | *File time*       | *0:00* |
+|-----------------------------+-------------------+--------|
+| bugs.org                    | *File time*       | *0:00* |
+|-----------------------------+-------------------+--------|
+| organisation.org            | *File time*       | *0:15* |
+|                             | todo - review     | 0:15   |
+|-----------------------------+-------------------+--------|
+| organisation.org_archive    | *File time*       | *0:00* |
+#+END:
+#+BEGIN: clocktable :tstart "<2013-01-29 Di 06:00>" :tend "<2013-01-30 Mi 06:00>" :maxlevel 5 :scope agenda-with-archives
+Clock summary at [2013-01-31 Do 01:47]
+
+| File                        | Headline               | Time   |
+|-----------------------------+------------------------+--------|
+|                             | ALL *Total time*       | *3:37* |
+|-----------------------------+------------------------+--------|
+| todo.org                    | *File time*            | *0:00* |
+|-----------------------------+------------------------+--------|
+| todo.org_archive            | *File time*            | *0:00* |
+|-----------------------------+------------------------+--------|
+| logik.org                   | *File time*            | *0:00* |
+|-----------------------------+------------------------+--------|
+| elementare_stochastik.org   | *File time*            | *3:37* |
+|                             | CANCELLED el-Zettel-10 | 3:37   |
+|-----------------------------+------------------------+--------|
+| webdesign.org               | *File time*            | *0:00* |
+|-----------------------------+------------------------+--------|
+| theoretische_informatik.org | *File time*            | *0:00* |
+|-----------------------------+------------------------+--------|
+| softwaretechnik.org         | *File time*            | *0:00* |
+|-----------------------------+------------------------+--------|
+| Software.org                | *File time*            | *0:00* |
+|-----------------------------+------------------------+--------|
+| zettelkasten.org            | *File time*            | *0:00* |
+|-----------------------------+------------------------+--------|
+| zettelkasten.org_archive    | *File time*            | *0:00* |
+|-----------------------------+------------------------+--------|
+| refile.org                  | *File time*            | *0:00* |
+|-----------------------------+------------------------+--------|
+| bugs.org                    | *File time*            | *0:00* |
+|-----------------------------+------------------------+--------|
+| organisation.org            | *File time*            | *0:00* |
+|-----------------------------+------------------------+--------|
+| organisation.org_archive    | *File time*            | *0:00* |
+#+END:
+#+BEGIN: clocktable :tstart "<2013-01-30 Mi 06:00>" :tend "<2013-01-31 Do 06:00>" :maxlevel 5 :scope agenda-with-archives
+Clock summary at [2013-01-31 Do 08:13]
+
+| File                        | Headline                                             | Time   |
+|-----------------------------+------------------------------------------------------+--------|
+|                             | ALL *Total time*                                     | *9:03* |
+|-----------------------------+------------------------------------------------------+--------|
+| todo.org                    | *File time*                                          | *0:00* |
+|-----------------------------+------------------------------------------------------+--------|
+| todo.org_archive            | *File time*                                          | *0:00* |
+|-----------------------------+------------------------------------------------------+--------|
+| logik.org                   | *File time*                                          | *1:25* |
+|                             | TODO Zettel 12                                       | 1:25   |
+|-----------------------------+------------------------------------------------------+--------|
+| elementare_stochastik.org   | *File time*                                          | *0:00* |
+|-----------------------------+------------------------------------------------------+--------|
+| webdesign.org               | *File time*                                          | *0:00* |
+|-----------------------------+------------------------------------------------------+--------|
+| theoretische_informatik.org | *File time*                                          | *0:00* |
+|-----------------------------+------------------------------------------------------+--------|
+| softwaretechnik.org         | *File time*                                          | *0:00* |
+|-----------------------------+------------------------------------------------------+--------|
+| Software.org                | *File time*                                          | *0:00* |
+|-----------------------------+------------------------------------------------------+--------|
+| zettelkasten.org            | *File time*                                          | *0:00* |
+|-----------------------------+------------------------------------------------------+--------|
+| zettelkasten.org_archive    | *File time*                                          | *0:00* |
+|-----------------------------+------------------------------------------------------+--------|
+| refile.org                  | *File time*                                          | *0:00* |
+|-----------------------------+------------------------------------------------------+--------|
+| bugs.org                    | *File time*                                          | *0:00* |
+|-----------------------------+------------------------------------------------------+--------|
+| organisation.org            | *File time*                                          | *0:00* |
+|-----------------------------+------------------------------------------------------+--------|
+| organisation.org_archive    | *File time*                                          | *7:38* |
+|                             | DONE Workflows ausarbeiten                           | 1:01   |
+|                             | DONE Kernkonzept eigener Latex Mode                  | 4:42   |
+|                             | DONE brainstorming emacs, refiling gott und die welt | 1:55   |
+#+END:
+#+BEGIN: clocktable :tstart "<2013-01-31 Do 06:00>" :tend "<2013-02-01 Fr 06:00>" :maxlevel 5 :scope agenda-with-archives
+Clock summary at [2013-01-31 Do 01:47]
+
+| File | Headline         | Time   |
+|------+------------------+--------|
+|      | ALL *Total time* | *0:00* |
+#+END:
+#+BEGIN: clocktable :tstart "<2013-02-01 Fr 06:00>" :tend "<2013-02-02 Sa 06:00>" :maxlevel 5 :scope agenda-with-archives
+Clock summary at [2013-01-31 Do 01:47]
+
+| File | Headline         | Time   |
+|------+------------------+--------|
+|      | ALL *Total time* | *0:00* |
+#+END:
+#+BEGIN: clocktable :tstart "<2013-02-02 Sa 06:00>" :tend "<2013-02-03 So 06:00>" :maxlevel 5 :scope agenda-with-archives
+Clock summary at [2013-01-31 Do 01:47]
+
+| File | Headline         | Time   |
+|------+------------------+--------|
+|      | ALL *Total time* | *0:00* |
+#+END:
+#+BEGIN: clocktable :tstart "<2013-02-03 So 06:00>" :tend "<2013-02-04 Mo 06:00>" :maxlevel 5 :scope agenda-with-archives
+Clock summary at [2013-01-31 Do 01:47]
+
+| File | Headline         | Time   |
+|------+------------------+--------|
+|      | ALL *Total time* | *0:00* |
+#+END:
+#+BEGIN: clocktable :tstart "<2013-02-04 Mo 06:00>" :tend "<2013-02-05 Di 06:00>" :maxlevel 5 :scope agenda-with-archives
+Clock summary at [2013-01-31 Do 01:47]
+
+| File | Headline         | Time   |
+|------+------------------+--------|
+|      | ALL *Total time* | *0:00* |
+#+END:
+#+BEGIN: clocktable :tstart "<2013-02-05 Di 06:00>" :tend "<2013-02-06 Mi 06:00>" :maxlevel 5 :scope agenda-with-archives
+Clock summary at [2013-01-31 Do 01:47]
+
+| File | Headline         | Time   |
+|------+------------------+--------|
+|      | ALL *Total time* | *0:00* |
+#+END:
+#+BEGIN: clocktable :tstart "<2013-02-06 Mi 06:00>" :tend "<2013-02-07 Do 06:00>" :maxlevel 5 :scope agenda-with-archives
+Clock summary at [2013-01-31 Do 01:47]
+
+| File | Headline         | Time   |
+|------+------------------+--------|
+|      | ALL *Total time* | *0:00* |
 #+END:
 * todo - review							    :default:
   :LOGBOOK:
@@ -127,31 +288,15 @@ Clock summary at [2013-01-27 So 00:15]
   CLOCK: [2013-01-25 Fr 20:10]--[2013-01-25 Fr 20:19] =>  0:09
   :END:
 * habits
-  :PROPERTIES:
-  :CATEGORY: habit
-  :END:
-** TODO autogen 1
-   SCHEDULED: <2013-01-29 Di 02:00 +1d/2d>
+** TODO autogen
+   :PROPERTIES:
+   :SCHEDULED: <2013-01-29 Di 02:00 +1d/2d>
+   :STYLE:    habit
+   :LAST_REPEAT: [2013-01-29 Di 12:18]
+   :END:
+   :LOGBOOK:
    - State "DONE"       from "TODO"       [2013-01-29 Di 12:18]
    - State "DONE"       from "TODO"       [2013-01-27 So 21:51]
-   :PROPERTIES:
-   :STYLE:    habit
-   :LAST_REPEAT: [2013-01-29 Di 12:18]
-   :END:
-** TODO autogen 2
-   SCHEDULED: <2013-01-29 Di 10:00 +1d/2d>
-   - State "DONE"       from "TODO"       [2013-01-29 Di 12:18]
-   - State "DONE"       from "TODO"       [2013-01-28 Mo 01:43]
-   :PROPERTIES:
-   :STYLE:    habit
-   :LAST_REPEAT: [2013-01-29 Di 12:18]
-   :END:
-** TODO autogen 3
-   SCHEDULED: <2013-01-28 Mo 18:00 +1d/2d>
-   - State "DONE"       from "TODO"       [2013-01-29 Di 12:18]
-   :PROPERTIES:
-   :STYLE:    habit
-   :LAST_REPEAT: [2013-01-29 Di 12:18]
    :END:
 ** TODO Rechner aus - Brainstorming
    SCHEDULED: <2013-01-29 Di 23:00 +1d/2d>

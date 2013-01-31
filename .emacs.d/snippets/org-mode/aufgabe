@@ -7,7 +7,9 @@
 
 *** Lösungsskizze
 *** Lösung
+
 #+BEGIN_SRC latex :tangle ${2:st}-loesung-${3:08}.tex
-\subsection{Aufgabe $1}
+	    \\subsection{Aufgabe $1}
 #+END_SRC
+
 *** Referenzen

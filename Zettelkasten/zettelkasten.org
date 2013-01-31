@@ -7,12 +7,6 @@
 #+DRAWERS: LINKS
 #+latex_header:\input{commands.tex}
 
-* Zettelverwaltung
-** Zettel9 *Elementare Stochastik*
-** Zettel10 *Logik*
-** *Softwaretechnik*
-** Zettel10 *Theoretische Informatik*
-
 * aktuelles
 ** Bestellung Fox Chem Jan 14
 Fox Chem
@@ -76,25 +70,70 @@ Nächster Dienstag Theo: SR XI , Raum 03C51
 
 [[file:201301ad-0029362331Avc.png]]
 
-
-
 * workflows
-** Zettel Workflow
-1. Projekt Eintrag für Zettel erstellen
-2. Deadline hinzufügen
-2. Unterpunkte für die einzelnen Aufgaben erstellen
-3. Aufgabe in Unterpunkt Aufgabenstellung kopieren
-4. zusätzlich Lösungsskizzen, referenzen und Lösung
-5. je nach Modul noch footer und header ansetzen
-6a. tanglen
-6b. export tags verteilen => header einsetzen => export subtree
+** Workflow Zettelbearbeitung
+1. Zettel auswählen und öffnen
+2. aktuelle Aufgabe ausklappen
+3. sind alle Daten eingetragen?
+   - Daten Nachtragen (Aufgabenstellung,Lösungsskizze,Lösung,Referenzen)
+4. Aufgabe durchlesen, bis sie auswendig beherrscht wird
+5. Aufgabe mit ihren Daten, frei formuliert in die Lösungsskizze schreiben
+6. offene Fragen in Lösungsskizze eintragen
+7. sind gravierende Definitionslücken vorhanden?
+   - Definition googlen und nachtragen
+   - Skript mittels synapse aufrufen, dann nach begriff suchen
+8. pm-suspend
+9. autogenes Training
+   1. arme warm
+   2. arme schwer
+   3. solar plexus warm
+   4. atmung frei
+   5. Herz ruhig
+   6. stirn kühl
+10. intuitive / naive Lösung in Gedanken zusammenstellen
+11. Kernpunkte an die Whiteboards schreiben
+12. Rechner wieder starten
+13. so viel wie möglich in die Lösung schreiben (mind. Anfang und Ende) => Grundgerüst
+14. immernoch fehlende Fragmente und offene Fragen googlen
+15. Lösung nachtragen und beenden
+** Workflow Agenda
+1. heute schon gerefiled?
+   1. <F12> d /todo [altgr+p] C-c C-x C-i
+   2. C-ü b ref [altgr+p]
+   3. C-ü C-b Soft [altgr+p]
+   4. alle Punkte durchgehen
+      - Projekt schon vorhanden? => einklappen,d,alt+n,p
+      - Projekt nicht vorhanden? => umformulieren, einklappen,d,alt+n,p
+      - notes an Tasks oder generelle Aufzeichnungen ( zettelkasten oder software)
+      - to-read an Zettelkasten
+      - wishes zu someday - maybe (Zettelkasten)
+      - idea zu someday - maybe oder Software	
+   5. sind neue Zettel vorhanden?
+      - C-ü 2 , M-x shell , cd ~/Dr[tab]/Sh[tab] [altgr-p]python ili[tab][altgr+p]
+	(theo und stochastik)
+	=> cd 50[tab](stochastik) oder 51[tab] oder 49[tab](theo)
+	ls zathura Bl[tab]
+      - links aufrufen (logik, stochastik) (C-c C-o)
+         http://www.mathematik.uni-marburg.de/~paniagua/logik/logik.html 
+         http://www.uni-marburg.de/fb12/ps/teaching/ws12/eise?language_sync=1
+	=> download, ctrl+[spc] , anzeige unten von firefox
+      - C-ü b fachname altgr+p 
+	  * TODO Zettel Nr
+	  ** header
+	  zhead[tab]
+	  aufgabe[tab]
+	  
+          C-ä s und Aufgabe aus Zathura in Aufgabenstellung kopieren
+	  footer[tab] einsetzen
+	  
+	  - <F12> Space /modulname C-c C-d und Datum einstellen (nächster morgen 8 Uhr), umschalten mit Shift und Pfeiltasten, [altgr-p]
+** Text Substitution
+,, ?start altgr+p h v /ende altgr+p h y mm . p a  ( ? durch / ersetzen, falls der teil erst später kommt)
 * to-read
 ** TODO Gedächtnistraining für Dummies
  [[file:~/Zettelkasten/bugs.org::*%5B#A%5D%20Bugs][Bugs]]
  Entered on [2013-01-24 Do 15:54]
 ** TODO autogenes training
- [[file:~/Zettelkasten/bugs.org::*%5B#A%5D%20Bugs][Bugs]]
- Entered on [2013-01-24 Do 15:55]
 ** TODO http://www.suenkler.info/emacs-orgmode.html
 ** TODO http://newartisans.com/2007/08/using-org-mode-as-a-day-planner/
  [[file:~/Zettelkasten/organisation.org]]

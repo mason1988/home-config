@@ -101,6 +101,12 @@
 
 (key-chord-mode 1)
 
+(add-hook 'eshell-mode-hook
+          #'(lambda ()
+              (define-key eshell-mode-map 
+                [remap pcomplete]
+                'helm-esh-pcomplete)))
+
 (defvar my-keys-minor-mode-map (make-keymap) "my-keys-minor-mode keymap.")   
     (define-minor-mode my-keys-minor-mode
           "A minor mode so that my key settings override annoying major modes."
@@ -232,6 +238,7 @@
 (define-key evil-normal-state-map "U" 'undo-tree-redo)
 (global-set-key (kbd "C-ä l") 'my-make-latex)
 (global-set-key (kbd "C-ä L") 'my-make-latex-replace)
+(global-set-key (kbd "C-ä x") 'org-preview-latex-fragment)
 (global-set-key (kbd "C-ä w s") 'save-current-configuration)
 (global-set-key (kbd "C-ä w r") 'resume)
 (global-unset-key (kbd "C-t"))

@@ -170,6 +170,9 @@ $P(Y|B) = \frac{E(1_{B} * Y)}{P(B)}$
 
 
 
+* nützliches für die Prüfung 
+Rechnen mit Verteilungsfunktionen: http://de.wikipedia.org/wiki/Verteilungsfunktion
+
    
 * Zettel-06
 ** Dateien
@@ -997,8 +1000,13 @@ $X_n \ov{Law}{\lori} X$  (Law = Gesetz, Gesetz der großen/kleinen Zahlen?)
 \end{document}
 #+END_SRC
 
-* TODO el-Zettel-10
+* CANCELLED el-Zettel-10					  :CANCELLED:
   DEADLINE: <2013-01-29 Di 23:59>
+  - State "CANCELLED"  from "TODO"       [2013-01-30 Mi 13:39] \\
+    Hat zeitlich halt einfach nichtmehr gereicht, aber wir brauchen die Punkte auch nicht mehr.
+  :LOGBOOK:
+  CLOCK: [2013-01-29 Di 23:20]--[2013-01-30 Mi 02:57] =>  3:37
+  :END:
   :PROPERTIES:
   :CATEGORY: Studium
   :END:
@@ -1012,17 +1020,42 @@ $X_n \ov{Law}{\lori} X$  (Law = Gesetz, Gesetz der großen/kleinen Zahlen?)
 [[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220612_12492jDO-5.png]]
 *** Lösungsskizze
  - Schätzer geben einen Wert für den Erwartungswert oder die Varianz an
-   - $T_1$ entspricht dem Durchschnitt
+   - $T_1$ entspricht dem Durchschnitt aller Werte
    - $T_2$ entspricht dem Durchschnitt der extremwerte (min und max)
    - Für Erwartungstreue muss für $T_1$ und $T_2$ der Erwartungswert berechnet werden
-   - 
+   
+   - gleichverteilt => P(X=x_i) = P(X=x_j) für beliebige i und j mit x_i und x_j \in [a,b]
+     
 *** Lösung
 #+BEGIN_SRC latex :tangle st-loesung-10.tex
 \subsection{Aufgabe 1}
+Es gilt zunächst: \\
+$E(X) = \int^{\infty}_{-\infty}(x*f(x))dx$ \\ 
+$= \int^{b}_{a}(x*\fr{1}{b-a})dx = \fr{1}{b-a}\int^b_axdx$ \\
+$= \fr{1}{b-a} [\fr{1}{2}x^2]^b_a$ \\
+$= \fr{1}{b-a} (\fr{b^2}{2} - \fr{a^2}{2}) = \fr{b^2 - a^2}{2(b-a)} = \fr{a+b}{2} = c = \mu$ \\
+$\Ri c$ ist der Erwartungswert für X \\
 \subsubsection{(a)}.\\
 \( E(T_1 ) = E(\fr{1}{n}\sum^n_{i=1}X_i) \) \\
+
 \( = \fr{1}{n}E(\sum^n_{i=1}X_i) \) \\
+
 \( = \fr{1}{n}\sum^n_{i=1}E(X_i) \) \\
+
+$= \fr{1}{n}\sum^{n}_{i=1} \mu \qquad |$ (da Zufallsvariable gleichverteilt) \\ % Erwartungsert \mu ist auch nur ein 
+% Parameter der Verteilung und die existenz dieses kann als Argument benutzt werden
+% MUSS aber auch das Ergebnis sein, für Erwartungstreue
+
+$= \fr{1}{n}n\mu = \mu$ \\
+$\Ri$ Der Schätzer $T_1$ ist Erwartungstreu\\
+$E(T_2) = E(\fr{max_i(X_i) min_i(X_i)}{2})$ \\
+$= \fr{1}{2} E(max_i(X_i)) E(min_i(X_i)) = \fr{1}{2} (E(X_i) + V(X_i)) (E(X_i) - V(X_i)) = \fr{1}{2} (E(X_i)^2 - V(X_i)^2)$ \\
+$= \fr{1}{2} (\fr{a+b}{2}^2 - \fr{(b-a)^2}{12}^2)$ \\
+$= \fr{1}{2} ( \fr{a^2+2ab+b^2}{4} - \fr{(b-a)^4}{144})$ \\
+$= \fr{1}{2} ( 
+$= \fr{1}{2} ( \fr{a^2+ab+b^2}{4} - (\fr{1}{12}(b-a)^2 ) = \fr{1}{2} \fr{3a^2 + 3ab + 3b^2 - b^2 + 2ab - a^2}{12}$ \\
+$= \fr{2a^2 + 5ab + 2b^2}{24} = \fr{(a^2 + 2ab + b^2) + (a^2 + 2ab + b^2) + ab}{24} = \fr{2(a+b)^2 + ab}{24}$ \\
+$= \fr{(a+b)^2}{12} + \fr{ab}{24}$
 
 \subsubsection{(b)}.\\
 \( r(T_1,c) = E[(\fr{1}{n}[\sum^n_{i=1}X_i] - \fr{a+b}{2})^2] \) \\
@@ -1031,6 +1064,10 @@ $X_n \ov{Law}{\lori} X$  (Law = Gesetz, Gesetz der großen/kleinen Zahlen?)
 % Vor allem T_2 
 #+END_SRC
 *** Referenzen
+- Über die Dichtefunktion:
+    [[/home/florian/Zettelkasten/elementare_stochastik.org_20130130_004912_11722NMw.png]]
+  [[/home/florian/Zettelkasten/elementare_stochastik.org_20130130_005435_11722aW2-0.png]]
+
 ** TODO Aufgabe 2
 *** Aufgabenstellung
 [[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220641_12492wNU-0.png]]

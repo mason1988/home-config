@@ -103,23 +103,36 @@ Variablen Substitution :: X -> X, [[file:201301ad-1333455300-3e.png]]  [[file:20
 $\bar{\P}^J$ = Formeln,  Relations-Algebra
 - Die ganzen Tautologien => kontante Nullstellige Regeln
 variable 0-stellige Regeln:
-    $\frac{\bigv_xA}{\bar{\bigw_xA}} = \frac{\bigv_xA}{\not \bigw_x \not A}, \fr{\bar{\bigw_xA}}{\bigv_xA}$
+    $\frac{\V_xA}{\lnot \W_xA} = \frac{\V_xA}{\lnot \W_x \lnot A}, \fr{\lnot \W_xA}{\V_xA}$
+
 $\iota: X \mapsto \tau =  (\mathcal{Y}_0 \cup X)^y$ Terme 
-$\fr{\bv_x A}{\bar{\bw_x}{\bar{A}}}$,$\fr{\bar{\bw_x\bar{A}}}{\bv_xA}, \fr{\bw_x A}{\iota_x^{\tau}\circ A}$
+
+$\fr{\bv_x A}{\lnot \bw_x \lnot A}$,$\fr{\lnot \bw_x\lnot A}{\bv_xA}, \fr{\bw_x A}{\iota_x^{\tau}\circ A}$
+
 - 1 stellige Regeln (Paare von Formeln
+
 $(A , \gamma \circ A) \gamma: X \mapsto \tau$ beliebig
+
 $x \not = y, y \not \in |A| \cup |B|$ ( y keine freie Variable von A oder B)
+
 $(\fr{A}{\tau^y_x \circ B} , \fr{A}{\bw_xB})$
+
 2 stellig: Modus Ponens (A, \fr{A}{B}, B)
+
 Ableitbare Formeln(beweisbar)
+
 $\mc{P\tau}^{J \cup Q}_0 = 0$ stellige Regeln
-$\bar{(\mc{P}\tau)^{J \cup Q}_0}^K$ = beweisbar
+
+$\lnot (\mc{P}\tau)^{J \cup Q}_{0^K}$ = beweisbar
 
 $A \in (\mc{P}\tau)^{J \cup Q} Tautologie \Lri A^{\w} = 1$
-$\forall \a : X \mt \mc{U}$ große Modell, \a^{\w}A = A^{\w}(\alpha} = 1$
 
-$\a^{\w}p_mt_1...t_m = \begin{cases} 0 &\mbox{falls } ((\a^{\v}t_1),...,(\a^{\v}tm)) \not \in p_m^{*} \\ 0 &\mbox{sonst} \end{cases}$
-$\a^{\w}\bar{A} = \bar{\a^{\w}A}, \a^{\w} (A \not = B) = (\a^{\w}A) \# (\a^{\w}B)$ => Produkt, Max in {0,1} ...
+$\forall \a : X \mt \mc{U}$ große Modell, $\a^{\w}A = A^{\w}(\alpha) = 1$
+
+$\a^{\w}p_mt_1...t_m = \begin{cases} 0 &\mbox{falls } ((\a^{\v}t_1),...,(\a^{\v}tm)) \not \in p_m^{*} \\ 1 &\mbox{sonst} \end{cases}$
+
+$\a^{\w}\lnot A = \lnot (\a^{\w}A), \a^{\w} (A \not = B) = (\a^{\w}A) \# (\a^{\w}B)$ => Produkt, Max in {0,1} ...
+
 $\a^{\w}\#_xA= \#_{u \in U} \ov{\w}{\a_x^u}A$
 
 $(\mc{P}\tau)^{J \cup Q}$ Regel Algebra bzgl K
@@ -130,7 +143,7 @@ $\a^{ \w }\fr{A}{B} = max(\a^{\w}B, 1 - \a^{\w}A)$
 
 +1 kann bei Supremum reingezogen werden
 
-$\a^\v\circ\iota^t_x = \a^{\a^{\v}t}_x : X \mt U$
+$\a^{\v}\circ\iota^t_x = \a^{\a^{\v}t}_x : X \mt U$
 * Zettel-08
 ** Dateien
 [[/home/florian/Dropbox/lo/lo-zettel-08.pdf::NNN][lo-zettel-08.pdf]]
@@ -393,9 +406,11 @@ Sei x3=0 => (2*x4 < 0) => existiert kein x4 das *echt* kleiner ist
 #+END_SRC
 
 * CANCELLED Zettel-11						  :CANCELLED:
-  DEADLINE: <2013-01-23 Mi 23:59>
+:PROPERTIES:
+:DEADLINE: <2013-01-23 Mi 23:59>
   - State "CANCELLED"  from "TODO"       [2013-01-24 Do 04:24] \\
     Zeit abgelaufen
+:END:
 ** header
 #+BEGIN_SRC latex :tangle lo-loesung-11.tex
 \documentclass[11pt]{amsart}
@@ -425,7 +440,7 @@ Sei x3=0 => (2*x4 < 0) => existiert kein x4 das *echt* kleiner ist
 [[file:zettelkasten.org_20130118_234256_1617W6S-5.png]]
 *** Lösung
 #+BEGIN_SRC latex :tangle lo-loesung-11.tex
-\subsection{Aufgabe 37}
+\subsection*{Aufgabe 37}
 #+END_SRC
 ** TODO Aufgabe 38
 *** Aufgabenstellung
@@ -450,14 +465,14 @@ werden
 *** Referenzen
 *** Lösung
 #+BEGIN_SRC latex :tangle lo-loesung-11.tex
-\subsection{Aufgabe 38}
-\subsubsection{a)}.\\
+\subsection*{Aufgabe 38}
+\subsubsection*{a)}.\\
 \( \tau x_0 = x_0 \) \\ 
 \( \tau s_2x_1x_4 = s_2x_1x_0 \) \\
 \( \tau x_1 = x_1 \) \\
 \( \tau x_4 = x_0 \) \\
 \( \tau x_3 = s_3x_0x_1x_4 \) \\
-\subsubsection{b)}.\\
+\subsubsection*{b)}.\\
 
 #+END_SRC
 ** TODO Aufgabe 39
@@ -473,8 +488,8 @@ werden
 
 ** Musterlösung
 #+BEGIN_SRC latex 
-\section{Aufgabe 37}
-\subsection{a)}
+\section*{Aufgabe 37}
+\subsection*{a)}
 $$ \m{Sei} \iota: X \mt \tau \m{die identische Termbelegung}  $$ \\
 $$ \m{zz} \iota^{\v}(t)=t \A t \in \tau $$ \\
 $$ \m{Sei} s_0 \in \gamma_0 \m{und} \iota^{\v}(s_0):= s_0 \A s_0 \in \gamma_0 $$ \\
@@ -485,31 +500,31 @@ $$ \m{Sei} n \leq 1 \m{und} f \in F_n $$ \\
 $$ \m{Seien} t_1,...,t_n \in M \m{zz:} ft_1...t_n \in M $$ \\
 $$ \iota^{\vee}(ft_1...t_n) \ov{def}{=}f(\iota^{\v}t_1...\iota^{\v}tn) \ov{ti\in M}{=} ft_1...t_n $$ \\
 $$ \m{d.h.} \iota^{\v}(ft_1...t_n)=ft_1...t_n \m{und M ist abgeschlossen} $$
-\subsection{b)}
+\subsection*{b)}
 $$ \gamma: X \mt X \in \tau \m{Term-Belegung Es gelte} \gamma^{\v}(t)=t \A t \in \tau $$ \\
 $$ \m{Dann ist} \gamma \m{die identische Term-Belegung} $$ \\
 $$ \m{Für} s_0 \in \Gamma_0 \subset \tau \; \gamma{s_0}=s_0 $$ \\
 $$ \m{Sei nun} x_i \in X \; \gamma^{\v}(x_i) = x_i = \iota(x_i) \; \A x_i \in X $$ \\
 $$ \m{für jeder Variable} x_i \m{Also} \gamma = 1 \m{als Belegung} $$
-\section{Aufgabe 38}
-$$ A = p_3x_0s_2x_1x_4x_3, \g = \i^{s_3x_0x_1x_5|x_3}_{x_3|x_4} $$ \\
-\subsection{a)}
+\section*{Aufgabe 38}
+$$ A = p_3x_0s_2x_1x_4x_3, \g = \i^{s_3x_0x_1x_4|x_3}_{x_3|x_4} $$ \\
+\subsection*{a)}
 $$ \m{Ausnahmemenge:} (A,\gamma) \m{bzg} x_4 $$ \\
 $$ |A| = \{x_0,x_1,x_3,x_4\} $$ \\
 $$ |\g(|A|\bs\{x_4\})^{\g}| = | \gamma(x_3)| = |s_3x_0x_1x_4| = \{x_0,x_1,x_4\} $$ \\
 $$ \m{Bemerkung} x_4 \in \{x_0,x_1,x_4\} = \m{Ausnahmemenge} $$ 
-\subsection{b)}
+\subsection*{b)}
 $$ \m{die neue Variable} z = (x_4)_{\g}^{|A|} = min ( X \bs (|A| \cup |\g(|A| \bs \{x_4\})^{\g}|) = $$ \\
 $$ min(X \bs (\{ x_0,x_1,x_3,x_4) \cup \{x_0,x_1,x_4\}) = x_2 $$
-\subsection{c)}
+\subsection*{c)}
 die neue Term-Belegung
 $$ \g^{z}_{x_4} = \gamma^{x_2}_{x_4} = \i^{s_3x_0x_1x_4 | x_2}_{x_3| x_4} $$ \\
-\subsection{d)}
-$$ \gamma_0 \circ \w_{x_4}A = \g \circ \w_{x_4}p_3x_0s_2x_1x_4x_3 = \i^{s_3x_0x_1x_4 | x_2}_{x_3|x_4} \w_{x_4}p_3x_0s_2x_1x_4x_3 $$ \\
-$$ \W_{x_2} \i^{s_3x_0x_1x_4 | x_2}_{x_3 | x_4}p_3x_0s_2x_1x_4x_3 = \W_x{_2} p_3x_0s_2x_1x_2s_3x_0x_1x_4 $$
-\section{Aufgabe 39}
-$$ \g = \i^{x_2 | x_2|x_4}{x_0|x_1|x_2} \; A = p_2s_2x_1x_0x_2, B = p_3x_0x_1x_2 $$ \\
-\subsection{a)}
+\subsection*{d)}
+$$ \gamma \circ \w_{x_4}A = \g \circ \w_{x_4}p_3x_0s_2x_1x_4x_3 = \i^{s_3x_0x_1x_4 | x_2}_{x_3|x_4} \w_{x_4}p_3x_0s_2x_1x_4x_3 $$ \\
+$$ \W_{x_2} \i^{s_3x_0x_1x_4 | x_2}_{x_3 | x_4}p_3x_0s_2x_1x_4x_3 = \W_{x_2} p_3x_0s_2x_1x_2s_3x_0x_1x_4 $$
+\section*{Aufgabe 39}
+$$ \g = \i^{x_2 | x_2|x_4}_{x_0|x_1|x_2} \; A = p_2s_2x_1x_0x_2, B = p_3x_0x_1x_2 $$ \\
+\subsection*{a)}
 $$ \m{Ausnahmenengen von} (A,\g) \m{bzg} x_3 \m{und} (B, \g) \m{bzg} x_1 $$ \\
 $$ |A| = $$ x_0,x_1,x_2$$ \; |B| = \{x_0,x_1,x_2\} $$ \\
 $$ |\g(XA) \bs \{x_2\})^{\g}| = \g(x_0), \g(x_1) \} = \{x_2,x_2\} = \{x_2\} $$ \\
@@ -519,25 +534,33 @@ $$ \Ri z = (x_2)^{|A|}_{\g} = min(X \bs ( |A| \cup |\g(|A| \bs \{x_2\})^{\g}|) $
 $$ = min ( X \bs \{x_1,x_0,x_2\} \cup \{x_2\}) = x_3 $$ \\
 $$ \m{Zusatz:} |\g(|B| \bs \{x_1\})^{\g}| = \{\g(x_0,\g(x_2)\} = \{x_2,x_4\} $$ \\
 $$ w = (x_1)_{\g}^{|B|} = x_1 da x_1 \not \in \{x_2,x_4\} $$
-\subsection{c)}
+\subsection*{c)}
 $$ \g_{x_2}^{z} = \g_{x_2}^{x_3} = \i^{x_2|x_2|x_3}_{x_0|x_1|x_2} $$ \\
 $$ \i^w_{x_1} = \i^{x_1}_{x_1} = \i^{x_2 | x_1 | x_4}_{x_0 | x_1 | x_2} $$ \\
-\subsection{d)}
+\subsection*{d)}
 $$ \i \circ (\v_{x_2} \A \wedge \w_{x_1} B ) = \i \circ ( \v_{x_2} P_2s_2x_1x_0x_2 \wedge \w_{x_1}p_3x_0x_1x_2) $$ \\
 $$ = \v_{x_3} \i^{x_2|x_2x_3}_{x_0|x_1x_2}p_2s_2x_1x_0x_2 \wedge \w_{x_1} \i^{x_2 | x_4}_{x_0 | x_2}p_3x_0x_1x_2 $$ \\
 $$ = \v_{x_3} p_2s_2x_2x_2x_3 \wedge \w_{x_1}p_3x_2x_1x_4 $$
 #+END_SRC
-* TODO Zettel 12
+* DONE Zettel 12
+  - State "DONE"       from "TODO"       [2013-01-31 Do 08:15]
+  :LOGBOOK:
+  CLOCK: [2013-01-31 Do 05:27]--[2013-01-31 Do 08:13] =>  2:46
+  CLOCK: [2013-01-31 Do 04:00]--[2013-01-31 Do 04:52] =>  0:52
+  :END:
+:PROPERTIES:
+:DEADLINE: <2013-01-31 Do 10:00>
+:END:
 ** Tutorium
 - Aufgabe 40
-   $\gamma = \i^{t_0|s^{\tilde}_2x_4x_4}_{x_0 | x_1}$
+   $\gamma = \i^{t_0|\tilde s_2x_4x_4}_{x_0 | x_1}$
    2 Fälle: 
    $x_0 \in |t_0|$
    $x_0 \not \in |t_0|$  
    beide Fälle müssen betrachtet werden
 - Aufgabe 41
   $(\a^{\v}\circ \g)^{\w}$ Hier benutzen: 
-   $\A u \in U ( \a^{\v} \circ \gamma)^u_x \us{|A|}{=} \a^{\v \; u}_{x^{|A|}_{\g}} \circ \g_x^{x_{\g}^{|A|}}$
+   $\A u \in U ( \a^{\v} \circ \g)^u_x us{|A|}{=} \a^{\v \; u}_{x^{|A|}_{\g}} \circ \g_x^{x_{\g}^{|A|}}$
   Für jedes Element in der Belegung
   
   Bei a) belegung alpha ist schon komplett, Gamma ist nur eine bestimmte substitution.
@@ -552,11 +575,13 @@ $$ = \v_{x_3} p_2s_2x_2x_2x_3 \wedge \w_{x_1}p_3x_2x_1x_4 $$
 \begin{document}
 \maketitle
 #+END_SRC 
+
 ** aufgabenkopf
 [[/home/florian/Zettelkasten/logik.org_20130128_114029_6254wsc-0.png]]
 [[/home/florian/Zettelkasten/logik.org_20130128_114029_6254wsc-1.png]]
 [[/home/florian/Zettelkasten/logik.org_20130128_114029_6254wsc-2.png]]
-** Aufgabe 40
+** DONE Aufgabe 40
+   - State "DONE"       from "NEXT"       [2013-01-31 Do 08:15]
 *** Aufgabenstellung
 [[/home/florian/Zettelkasten/logik.org_20130128_114120_625492i-0.png]]
 [[/home/florian/Zettelkasten/logik.org_20130128_114120_625492i-1.png]]
@@ -566,12 +591,52 @@ $$ = \v_{x_3} p_2s_2x_2x_2x_3 \wedge \w_{x_1}p_3x_2x_1x_4 $$
 [[/home/florian/Zettelkasten/logik.org_20130128_114120_625492i-5.png]]
 [[/home/florian/Zettelkasten/logik.org_20130128_114120_625492i-6.png]]
 *** Lösungsskizze
+$M = |A| , \W_x A, \V_x A$
+Die Quantoren lassen sich durch eine Menge von Belegungen ersetzen
 *** Lösung
 #+BEGIN_SRC latex :tangle lo-loesung-12.tex
-\subsection{40)}
+\section*{40)}
+\subsection*{a)}
+$z = (x_0)_{\g}^{|\W_{x_3}A|} = (x_0)_{\g}^{\{x_0,x_1,x_2,x_3\}}$ \\ % hier wurde x_3 wegen der Belegung aus |A| rausgenommen
+% bei einem A kommt ein Term raus, bei \W entstehen dann mehrere terme
+% aber das |A| schmeißt dann wieder alles zusammen
+% als Trägermenge werden daher nur die Variablen x_0 bis x_2 betrachtet, da x_3 durch seine Belegung ja
+% im Grunde nichtmehr existiert, andererseits kommt x_3 schon in der Formel vor, und in der Substitution
+% geht es sogar bis hoch zu x_4 / jetzt doch wieder drin
+% unter umständen entspricht das x_3 am quantor tatsächlich allen möglichen substitutionen
+$\Ri \m{Ausnahmemenge} = |\g((\{x_0,x_1,x_2,x_3\} \bs \{x_0\})^{\g})| = |\g(\{x_1,x_2,x_3\}^{\g})|$ \\
+$= |\g\{x_1\}|$ % nur das was sich verändert
+$= |\{\tilde s_2x_4x_4\}|$ % Anwendung 
+$= \{x_4\}$ \\
+$x_0 \not \in \{x_4\} \Ri z = x_0$ \\
+$\Ri (x_0)_{\g}^{|\W_{x_3}A|} = x_0$
+\subsection*{b)}
+$\eta = \g^z_{x_0} = \iota_{x_0|x_1}^{z|\tilde s_2 x_4x_4}$ %einfach nur substitution von x_0 eingesetzt
+\subsection*{c)}
+$\o = (x_3)^{|A|}_{\eta} = (x_3)^{\{x_0,x_1,x_2,x_3,x_4\}}$
+$\Ri \m{Ausnahmemenge} = |\g((\{x_0,x_1,x_2,x_3\} \bs \{x_3\})^{\g})| = |\g((\{x_0,x_1,x_2\})^{\g})|$ \\
+$= |\g(\{x_0,x_1\})| = |\{z, \tilde s_2 x_4 x_4\}| = \{z,x_4\}$ \\
+$x_3 \not \in \{z,x_4\} \Ri \o = x_3$ \\
+$\Ri (x_3)^{|A|}_{\eta} = x_3$
+\subsection*{d)}
+$\eta_{x_3}^{\o} = \iota_{x_0|x_1|x_3}^{z|\tilde s_2x_4 x_4|\o}$ \\
+\subsection*{e)}
+$\eta \circ \W_{x_3}A = \W_{x_3} \eta^{x_3}_{x_3} \circ A$ \\
+$\eta^{x_3}_{x_3} \Ri \i^{z|\tilde s_2x_4x_4}_{x_0|x_1}$ \\
+$\Ri (\i_{x_0|x_1|x_3}^{z|\tilde s_2x_4 x_4|\o}) \circ (\W_{x_3}A)$ \\
+$= \W_{x_3}\i^{z|\tilde s_2x_4x_4}_{x_0|x_1} \circ A$ \\
+$= \W_{x_3}p_2(\i^{z|\tilde s_2x_4x_4}_{x_0|x_1}s_2x_0x_1)(\i^{z|\tilde s_2x_4x_4}_{x_0|x_1}\tilde s_2 x_2 s_1 x_3)$ \\
+$= x_0^{\v}p_2s_2z\tilde s_2x_4x_4 \tilde s_2x_2s_1x_3$ \\
+\subsection*{f)}
+$\g \circ \V_{x_0}\W_{x_3}A = \V_{x_0}\W_{x_3} \g^{x_0}_{x_0}$ \\
+$\g^{x_0}_{x_0} \Ri \i^{\tilde s_2 x_4 x_4}_{x_1}$ \\
+$\Ri (\i^{z|\tilde s_2 x_4 x_4}_{x_0 | x_1} \circ (\V_{x_0}(\W_{x_3}A))$ \\
+$= \V_{x_0} \i^{\tilde s_2 x_4 x_4}_{x_1} \circ (x_0^{\v}p_2s_2z\tilde s_2 x_4 x_4 \tilde s_2 x_2 s_1 x_3)$ \\
 #+END_SRC
 *** Referenzen
-** Aufgabe 41
+
+** DONE Aufgabe 41
+   - State "DONE"       from "TODO"       [2013-01-31 Do 08:15]
 *** Aufgabenstellung
 [[/home/florian/Zettelkasten/logik.org_20130128_114154_6254KBp-0.png]]
 [[/home/florian/Zettelkasten/logik.org_20130128_114154_6254KBp-1.png]]
@@ -579,10 +644,19 @@ $$ = \v_{x_3} p_2s_2x_2x_2x_3 \wedge \w_{x_1}p_3x_2x_1x_4 $$
 [[/home/florian/Zettelkasten/logik.org_20130128_114154_6254KBp-3.png]]
 [[/home/florian/Zettelkasten/logik.org_20130128_114154_6254KBp-4.png]]
 *** Lösungsskizze
+    Da U = N ist der freie Term Element N
 *** Lösung
 #+BEGIN_SRC latex :tangle lo-loesung-12.tex
-\subsection{41)}
+\section*{41)}
+\subsection*{a)}
+$(\a^{\v} \circ \g) (x_j) = \begin{cases} 4*4 = 16 &\mbox{falls } j=1 \\ 3j &\mbox{sonst} \end{cases}$
+$\a^{\v} \circ \g = \a^{\a^{\v}t_0|\a^{\v}\tilde s_2x_4x_4}_{x_0|x_1}$ \\
+
 #+END_SRC
 
 *** Referenzen
+
 ** footer
+#+BEGIN_SRC latex :tangle lo-loesung-12.tex
+\end{document}
+#+END_SRC
