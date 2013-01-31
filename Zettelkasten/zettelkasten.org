@@ -1,9 +1,6 @@
 #+LINK: zk /home/florian/Dropbox/Zettelkasten/
 #+LINK: zkp /home/florian/Dropbox/Zettelkasten/res-pic_%s.png
 #+LINK: drop /home/florian/Dropbox/%s
-#+TODO: TODO | DONE
-#+TODO: CANCELED | Restarted
-#+TODO: Zettel1 Zettel2 Zettel3 Zettel4 Zettel5 Zettel6 Zettel7 Zettel8 Zettel9 Zettel10 Zettel11 Zettel12 Zettel13 Zettel14
 #+DRAWERS: LINKS
 #+latex_header:\input{commands.tex}
 
@@ -141,4 +138,31 @@ Nächster Dienstag Theo: SR XI , Raum 03C51
 ** TODO http://stackoverflow.com/questions/7071915/emacs-filesets-how-to-run-other-elisp-not-shell-commands
  [[file:~/.emacs.d/emacs_config.org::*allgemeine%20konfigurationen][allgemeine konfigurationen]]
  Entered on [2013-01-26 Sa 19:32]
+** TODO https://groups.google.com/forum/?hl=en&fromgroups#!forum/emacs-helm
+** TODO http://www.emacs.uniyar.ac.ru/doc/em24h/
+** TODO http://www.psychologytoday.com/blog/awake-the-wheel/201005/7-ways-enhance-focus-creativity-productivity-and-performance
+** TODO http://selfevolution.net/how_to_focus.html
+** TODO http://www.mindtools.com/memory.html
+** TODO http://www.lifehack.org/articles/productivity/how-to-improve-your-concentration.html
+** TODO http://lifehacker.com/5924792/meditation-can-improve-your-memory-focus-and-productivity-at-work
+** TODO http://www.golatex.de/wiki/%5Cdef
+** TODO http://tsdh.wordpress.com/2009/03/04/integrating-emacs-org-mode-with-the-awesome-window-manager/
 * someday / maybe
+** TODO anything app launcher mal ausprobieren
+** TODO awesome funktion, die Fenster zu allen tags hinzufügt
+** TODO synapse translator einrichten
+ [[file:~/Zettelkasten/logik.org::*Zettel%2012][Zettel 12]]
+ Entered on [2013-01-31 Do 03:42]
+** TODO ipod musik neu synchronisieren
+** TODO mehr aus [win]+[ent] rausholen. z.B. ein schnell zu benutzendes occuring
+** TODO shortcut completion erweiterung installieren
+** TODO icy taste neue belegen (google remap icy key)
+** TODO fenster separat öffnen, in dem tempoäres geöffnet wird
+   - anwendungen wie popwin könnten als inspiration dienen
+
+* studium
+** NEXT theo präsenzübung suchen und für das tutorium vorbereiten
+   :LOGBOOK:
+   CLOCK: [2013-01-31 Do 16:37]--[2013-01-31 Do 20:26] =>  3:49
+   :END:
+** TODO Plan aufstellen welche Daten genau morgens präsentiert werden sollen
