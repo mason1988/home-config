@@ -11,6 +11,8 @@
 (add-to-list 'load-path "~/.emacs.d/image-dired/")
 (add-to-list 'load-path "~/.emacs.d/helm/")
 (require 'key-chord)
+(require 'volume)
+(require 'latex)
 (require 'undo-tree)
 (require 'org-id)
 (require 'org-habit)

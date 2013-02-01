@@ -1,5 +1,9 @@
 * idea
 * problem
+** TODO das win switching nicht nur im normal mode erlauben
+ Entered on [2013-02-01 Fr 13:04]
+** TODO auto gemountete festplatte braucht auch schreibzugriff
+ Entered on [2013-02-01 Fr 13:05]
 * todo
 * wishes
 ** TODO system und routine zum auswendiglernen von emacs kram finden
