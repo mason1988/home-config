@@ -660,3 +660,5 @@ $\a^{\v} \circ \g = \a^{\a^{\v}t_0|\a^{\v}\tilde s_2x_4x_4}_{x_0|x_1}$ \\
 #+BEGIN_SRC latex :tangle lo-loesung-12.tex
 \end{document}
 #+END_SRC
+* TODO logik-prüfung
+  SCHEDULED: <2013-02-18 Mo>
