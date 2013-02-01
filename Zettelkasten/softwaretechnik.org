@@ -668,3 +668,5 @@ Pair Programming = grundsätzlich mit mehreren leuten
     * erkennung durch brainstorming durch team
     * vermeidung risiken
       - frühe prototypen, saubere Planung, starke Teams, wiederverwendung funktionierender syst
+* TODO prüfung
+  SCHEDULED: <2013-02-20 Mi>

@@ -1142,3 +1142,6 @@ $= \fr{(a+b)^2}{12} + \fr{ab}{24}$
 [[~/Dropbox/st/st-zettel-11/st-zettel-11.pdf][st-zettel-11.pdf]]
 [[~/Dropbox/st/st-zettel-11/st-loesung-11.tex][st-loesung-11.tex]]
 [[~/Dropbox/st/st-zettel-11/st-loesung-11.pdf][st-loesung-11.pdf]]
+
+* Prüfung Stochastik 0
+  SCHEDULED: <2013-02-13 Mi>

@@ -1,7 +1,3 @@
-* DONE Orgbuffer öffnen nicht
-  - State "DONE"       from "TODO"       [2013-01-28 Mo 01:53]
-** DONE öffnen vom selben Orgbuffer in mehreren Frames reproduzieren
-   - State "DONE"       from "NEXT"       [2013-01-28 Mo 01:53]
 * TODO zeiteinträge funktionieren nicht
 ** NEXT Org Patch installieren, um zeitentrag funktionieren zu lassen
 * TODO backward kill spinnt rum
@@ -18,12 +14,19 @@
 ** TODO google reader und vimperator / pentadactyl
 * TODO die habits sind zu chaotisch um einen echten überblick zu haben
 ** NEXT die syntax der habits in der agenda view nachvollziehen
-* TODO tasten kombi für's buffer öffnen umlegen
-** NEXT C-ü C-ö C-ä mit den Buffer Befehlen belegen, Shortcuts die da jetzt drauf sind, einfach ignorieren
- [[file:~/Zettelkasten/logik.org::*Zettel-11][Zettel-11]]
- Entered on [2013-01-31 Do 02:25]
-* TODO math mode wieder starten
 * TODO eshell spinnt rum
 ** NEXT Befehl definieren um eshell mode zu switchen und dann zu beenden
 ** TODO prüfen ob es eine hook gibt mit der man den modeswitch direkt verbinden könnte
 * TODO emacs und awesome nach der tastenkombi C-e durchsuchen
+* DONE tasten kombi für's buffer öffnen umlegen
+  - State "DONE"       from "TODO"       [2013-02-01 Fr 11:28]
+** DONE C-ü C-ö C-ä mit den Buffer Befehlen belegen, Shortcuts die da jetzt drauf sind, einfach ignorieren
+   - State "DONE"       from "NEXT"       [2013-02-01 Fr 11:28]
+ [[file:~/Zettelkasten/logik.org::*Zettel-11][Zettel-11]]
+ Entered on [2013-01-31 Do 02:25]
+* DONE Orgbuffer öffnen nicht
+  - State "DONE"       from "TODO"       [2013-01-28 Mo 01:53]
+** DONE öffnen vom selben Orgbuffer in mehreren Frames reproduzieren
+   - State "DONE"       from "NEXT"       [2013-01-28 Mo 01:53]
+* DONE math mode wieder starten
+  - State "DONE"       from "TODO"       [2013-02-01 Fr 11:07]

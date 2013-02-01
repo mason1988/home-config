@@ -421,6 +421,43 @@ $ \Rightarrow [[P_n]] : \N^2 \ri \N , (\a_1,\a_2) \tri (\a_1 - (\a_2 -1)) $ \\
   :PROPERTIES:
   :CATEGORY: Studium
   :END:
+** Musterlösung
+38.
+#+begin_src latex
+$$f \m{berechenbar} \Lri \E A \in DTM(\S) \m{mit} f_{A} = f$$
+$$ \Lri \E A_2 \in DTM(\S) \m{rechtsszeitig} -"- $$
+$$\Lri \E A_3 \in DTM(\S) \m{mit} f_{A_3} = f',$$ 
+$$ f'(x) = \begin{cases} w\$f(v), &\mbox{falls x der Form x\$w mit }v\in Def(f) \\ \mbox{n.d.} &\mbox{sonst} \end{cases} $$
+$$ \Lri \E A_4 \in DTM(\S) mit f_{A_4} = \chi^{'}_{Graph(f)} $$
+$$ \Lri \m{Graph(f) semi - entscheidbar} \Lri \m{Graph(f) rek. aufzählbar} $$
+#+end_src
+bei b einfach überall total dran und entsprechend definiert statt nicht definiert
+
+39. 
+Reduktion verlangt Äquivalenz von w \in X und f(w) \in R   (für X \leq R)
+=> identische Abbildung funktioniert zwar für alle werte in X, aber nicht für alle
+in R.
+
+XV
+#+begin_src latex
+(a)
+$$ Def A_1, A_2 \in DTM(\S) $$
+$A_1$ wie $A_2$ aber hinterlässt nach halten $\e$ auf band. $A_2$ stoppt bei Eingabe z nach s Schritten und schreibt A_0 auf Band.
+Def A_u 
+Eingabe: (code(A_1), code(A_2), w, s)
+Funktionsweise: simuliert 2 Spuren, führt Reißverschlussprinzip A_1, A_2 aus, bis eine der beiden TM hält.
+Erg. nach spätestens 2s Schritten auf Band.
+b) Nicht entscheidb. nach Satz v. Rice, da " f monoton" nicht-triv. Eigenschaft der berechenbaren Funtion
+#+end_src
+
+VXI 
+#+begin_src latex
+$$ h(x,y,z) := (x - (y ( z + 1) - 1))+(1-y)
+= add(sub(x,(sub(mul(y, add(z,1)),1))),
+      sub(1,y)) $$
+$$ \Ri \mu(h) = div \qed $$
+#+end_src
+
 ** header
 #+BEGIN_SRC latex :tangle th-loesung-12.tex
 \documentclass[11pt]{amsart}
@@ -576,7 +613,24 @@ welche die Monotonie "bricht". Es kann also nicht pauschal bestimmt werden, ob d
 \end{document}
 #+END_SRC
 
-* Zettel-13
-[[~/Dropbox/th/th-zettel-13/th-zettel-13.pdf][th-zettel-13.pdf]]
-[[~/Dropbox/th/th-zettel-13/th-loesung-13.tex][th-loesung-13.tex]]
-[[~/Dropbox/th/th-zettel-13/th-loesung-13.pdf][th-loesung-13.pdf]]
+* TODO Zettel-13
+  DEADLINE: <2013-02-06 Mi>
+** Tutorium 01.02.13
+links, rechtsseitige turingmaschine
+=> maschine bewegt sich nicht weiter zurück als startposition
+42)
+   PCP = suche nach folge indizes, man sucht paare, die bei konkatenation
+      das selbe ergeben
+   => basis für reduktionen
+   a) eigentlich nur durchpropieren
+      im Skript irgend ne Beweisidee
+43)
+   PCP auf dieses Problem reduzieren
+   für größere elemente nicht mehr entscheidbar(?)
+   nur irgend eine zuordnung pcp <=> grammatik reicht nicht
+   => Reduktion muss gezeigt werden
+44) 
+    
+
+* TODO Theo Prüfung
+  SCHEDULED: <2013-02-11 Mo>
