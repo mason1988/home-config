@@ -277,6 +277,7 @@ Clock summary at [2013-01-31 Do 01:47]
 #+END:
 * todo - review							    :default:
   :LOGBOOK:
+  CLOCK: [2013-01-31 Do 14:17]--[2013-01-31 Do 14:59] =>  0:42
   CLOCK: [2013-01-28 Mo 12:54]--[2013-01-28 Mo 13:09] =>  0:15
   CLOCK: [2013-01-26 Sa 19:29]--[2013-01-26 Sa 20:08] =>  0:39
   CLOCK: [2013-01-25 Fr 21:57]--[2013-01-25 Fr 22:13] =>  0:16
@@ -298,13 +299,9 @@ Clock summary at [2013-01-31 Do 01:47]
    - State "DONE"       from "TODO"       [2013-01-29 Di 12:18]
    - State "DONE"       from "TODO"       [2013-01-27 So 21:51]
    :END:
-** TODO Rechner aus - Brainstorming
-   SCHEDULED: <2013-01-29 Di 23:00 +1d/2d>
-   :PROPERTIES:
-   :STYLE:    habit
-   :END:
 ** TODO journal eintrag
    SCHEDULED: <2013-01-29 Di 02:00 +7d/9d>
    :PROPERTIES:
    :STYLE:    habit
    :END:
+

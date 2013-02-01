@@ -1,14 +1,31 @@
 ;#+STARTUP: content
 * Projekte
 ** TODO Kleinkram
-*** TODO das system wiederfinden, mit der man eine sicht auf 2 Buffer verteilen konnte
+*** NEXT das system wiederfinden, mit der man eine sicht auf 2 Buffer verteilen konnte
   [[file:~/Zettelkasten/softwaretechnik.org::*a.][a.]]
   Entered on [2013-01-25 Fr 18:42]
+*** TODO emacs-server ohne fenster starten und danach laufen lassen
+*** TODO frame nach schließen des letzten fensters schließen
+*** TODO hide boring buffers installieren
+*** TODO zeilenumbruch nach header ohne punkt in latex
+*** TODO config für tag-anfang / ende in emacs suchen und umstellen
+*** TODO clocks automatisch für diese zeitspanne generieren lassen
+*** TODO autosave emacs plugin installieren und testen
+** TODO elisp
+*** NEXT elementare Problemstellungen in elisp mit snippets sammeln
+*** TODO popwin nach hilfreichen fenstermodifikationen durchsuchen
+*** TODO snippet für regex skipping zusammenstellen
+** TODO firefox
+*** TODO fehlermeldung beim start prüfen und in den dateien fixen, ggb. .gitignore usw
+*** NEXT pdf in firefox automatisch starten lassen (siehe da wo auch protocol eingestellt wurde)
+*** TODO google pentadactyl yank to clipboard
+*** TODO firefox schließen, wenn der letzte tab geschlossen wurde
 ** TODO Emacs Config Aufräumen
 *** DONE überflüssige keymapping dateien entfernen
     - State "DONE"       from "NEXT"       [2013-01-23 Mi 13:21]
 *** DONE nicht mehr benutzte dateien in .emacs.d löschen
     - State "DONE"       from "TODO"       [2013-01-23 Mi 13:21]
+*** TODO eigene und custom funktionen in die emacs_config integrieren
 *** DONE org babel alles laden lassen
     - State "DONE"       from "NEXT"       [2013-01-23 Mi 20:27]
 *** DONE alle shortcuts in .emacs zusammenfassen
@@ -19,11 +36,19 @@
 *** DONE in bytecompiling einlesen
 *** DONE alles bytecompilen
 ** TODO Org-Mode Bilder
-*** NEXT prüfen ob die latex plugins was taugen
-*** TODO Möglichkeiten prüfen um informationen/texte einem konkreten Header zuzuordnen
+*** DONE prüfen ob die latex plugins was taugen
+    - State "DONE"       from "NEXT"       [2013-01-31 Do 14:24]
+*** NEXT Möglichkeiten prüfen um informationen/texte einem konkreten Header zuzuordnen
+*** TODO my-make-latex-2 zusammenstellen
+**** bisheriger beispielcode
+(defun blatest () (interactive)
+  (let (ov)
+    (setq ov (make-overlay 20 30))
+    (overlay-put ov 'display (create-image "~/test.png"))))
 *** TODO Möglichkeiten sammeln, zum zeilenweisen auslesen und splitten bei trennzeichene
 *** TODO beim link erstellen eben jene information in extra ast unterbringen
 *** TODO 2. löschenroutine, welche nach dem löschen eben diesen wert wieder ausliest
+*** TODO bilder im org - mode in separaten Ordner verschieben
 *** DONE Funktion bzw. Regex um links und die darin enthaltenen Bilder zu identifizieren
     \\[\\[\\(.*\\)\\]\\]  catched die links
     search-forward-regexp such entsprechend
@@ -60,6 +85,7 @@
 *** TODO Shortcuts für die Tags entsprechend legen
 ** TODO Capturing						    :PROJECT:
 *** TODO welche Captures ;-Templates; würden noch Sinn machen? Broweser/Client
+*** TODO prüfen ob zur commands.tex datei gecaptured werden kann
 *** NEXT raussuchen wie firefox links speichert, und capture schreiben um link für aktuelle Seite an to-read zu senden
 *** DONE schnellere Shortcuts für Captures 
 *** TODO Captures entsprechend implementieren
@@ -68,9 +94,12 @@
    CLOCK: [2013-01-25 Fr 21:23]--[2013-01-25 Fr 21:57] =>  0:34
    :END:
 *** TODO welche Snippets machen noch Sinn? -> einbauen
+*** TODO einzelnes zeichen einsetzen und direkt wieder normal-mode
 *** TODO my-keys-minor-mode und evil-normal mode zusammen legen
   [[file:~/.emacs.d/emacs_config.org::*Minormode][Minormode]]
   Entered on [2013-01-24 Do 23:49]
+*** TODO org-mode Shortcuts neu einstellen
+*** TODO displaybuffer testen, und customize prüfen, ob fenster gesplittet werden
 *** DONE verschiedene StandardClocks einsetzen
     - State "DONE"       from "NEXT"       [2013-01-25 Fr 21:58]
 *** DONE shortcuts für scrolling in pentadactyl ummappen
@@ -101,6 +130,10 @@ google: emacs+evil+show+mark
 ** TODO [#A] TodoListe optimieren				    :PROJECT:
 *** NEXT Brainstorming, was Standardmäßig geöffnet und was geschlossen sein soll
 *** TODO autostarts neu zuteilen ;source blöcke usw.
+*** TODO übersicht zum aufbau von agenda modi zusammenstellen
+*** TODO face von high-priority items besondrs hervorheben
+*** TODO autogen nochmal restarten
+*** TODO richtiger alarm für estimated time
 *** DONE todo states und faces aus "your life in plaintext"
     - State "DONE"       from "NEXT"       [2013-01-23 Mi 14:35]
 *** TODO workflow für habits / scheduled tasks ausarbeiten
@@ -116,7 +149,17 @@ google: emacs+evil+show+mark
    - man könnte natürlich yasnippet benutzen 
    - oder man schreibt eigene latex kürzel
 *** TODO math mode und insert latex in workflow einbinden
+*** TODO Commands mit Sonderzeichen einbauen
+    test, \ vor die einzelnen sonderzeichen zu schreiben
+*** TODO Syntaxhighlighting latex babel googlen
+*** TODO babel direkt eine pdf datei generieren lassen
+*** TODO prüfen in wie fern nun das laden einer Masterdatei möglich ist
+*** TODO prüfen ob und wie babel nur den aktuellen block tangled
+*** TODO einrückung der zettelblöcke korrigieren
 *** TODO gegebenenfalls weitere Completion Methoden einsetzen
+** TODO file accessability
+*** NEXT übersicht zu den helm sources anfertigen
+*** TODO recentf files verlängern (auf 20 oder so)
 ** TODO Git							    :PROJECT:
 *** DONE die 3 Grundmerges finden ;a / b / beide
 *** NEXT magit: commit und push?
@@ -128,7 +171,10 @@ google: emacs+evil+show+mark
 ** TODO awesome wm						    :PROJECT:
 *** NEXT Titlebar Awesome Wm googlen. Ziel: Titlebars in bestimmten Tags mit Floating standard, aktivieren.
 *** TODO ansatz für tabs in awesome wm formulieren
+*** TODO google awesome wm borders
 *** TODO testen was genau shifty macht, und das gegebenenfalls einrichten
+*** TODO übersicht zu den spaltenbefehlen anfertigen
+*** TODO übersicht zum Code und dessen config möglichkeiten anfertigen
 *** TODO nochmal die awesomewm konfiguration für tab's raussuchen und versuchen einen Plan zu entwickeln, um dieses sicher zu implementieren
 ** DONE eshell							    :PROJECT:
    - State "DONE"       from "TODO"       [2013-01-23 Mi 12:41]
@@ -888,6 +934,32 @@ und beim nächsten Rechner dann das gleiche
   eine Seite mit minimaler größe (für formelextraktion)
 - iimage-mode <- zeichnet einfache links zu bildern
   iimage-recenter läd die bilder dann nach
+** beispiel für nutzung von latex_headern in babel
+ #+LATEX_CLASS: article
+ #+LaTeX_HEADER: \usepackage{minted}
+ #+LaTeX_HEADER: \usemintedstyle{emacs}
+ #+LaTeX_HEADER: \newminted{common-lisp}{fontsize=\footnotesize}
+
+ #+name: setup-minted
+ #+begin_src emacs-lisp :exports both :results silent
+     (setq org-export-latex-listings 'minted)
+     (setq org-export-latex-custom-lang-environments
+           '(
+            (emacs-lisp "common-
+** beispiel latex mit result block
+#+begin_example
+#+name: tabularx-export
+#+begin_src latex :exports results :results latex :noweb yes
+  \begin{table}[htb!]
+  \centering
+  \footnotesize
+  \caption{A table to test booktabs}
+  \label{tab:test-table}
+  <<booktabs(table=test-table,align="lrX",env="tabularx",width="\\textwidth")>>  
+  \end{table}
+ #+end_src
+#+end_example
+When you export the file to LaTeX, this code block is expanded in a #+results: block and wrapped in #+BEGIN_LaTeX … #+END_LaTeX. If the table has column heads, then the rule beneath them should be finer than the rules at the top and bottom of the table.
 ** arrays
 $\begin{array}{ccc}
 q_0 & q_1 & q_2 \\

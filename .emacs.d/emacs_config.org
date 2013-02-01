@@ -250,7 +250,7 @@
 (global-set-key (kbd "C-ä K") 'epa-decrypt-region)
 (global-set-key (kbd "C-ä e") 'eval-region)
 (global-set-key (kbd "C-ä E") 'eval-buffer)
-(global-set-key (kbd "C-ö o") 'search-all-buffers)
+(global-set-key (kbd "C-ö O") 'search-all-buffers)
 (global-set-key (kbd "C-ö o") 'helm-occur)
 (global-set-key (kbd "C-ö C-o") 'helm-multi-occur)
 (global-set-key (kbd "C-ö d") 'doc-view-mode)
