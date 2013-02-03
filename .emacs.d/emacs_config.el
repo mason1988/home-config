@@ -1,3 +1,4 @@
+
 (add-to-list 'load-path "~/.emacs.d/w3m/")
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/slime/")
@@ -9,6 +10,7 @@
 (add-to-list 'load-path "~/.emacs.d/image-dired/")
 (add-to-list 'load-path "~/.emacs.d/helm/")
 (require 'key-chord)
+(require 'volume)
 (require 'latex)
 (require 'undo-tree)
 (require 'org-id)
@@ -230,7 +232,7 @@
 (global-set-key (kbd "C-ä K") 'epa-decrypt-region)
 (global-set-key (kbd "C-ä e") 'eval-region)
 (global-set-key (kbd "C-ä E") 'eval-buffer)
-(global-set-key (kbd "C-ö o") 'search-all-buffers)
+(global-set-key (kbd "C-ö O") 'search-all-buffers)
 (global-set-key (kbd "C-ö o") 'helm-occur)
 (global-set-key (kbd "C-ö C-o") 'helm-multi-occur)
 (global-set-key (kbd "C-ö d") 'doc-view-mode)
@@ -249,12 +251,12 @@
 (global-set-key (kbd "C-ä w D") 'undedi_func)
 (global-set-key (kbd "C-ä w u") 'winner-undo)
 
+
 (global-set-key (kbd "C-x f") 'ido-find-file)
 (global-set-key (kbd "C-ä f") 'ido-find-file-other-window)
 (global-set-key (kbd "C-ä b") 'ido-switch-buffer-other-window)
 (global-set-key (kbd "C-ö b") 'ido-display-buffer)
 (global-set-key (kbd "C-ö f") 'ido-display-file)
-
 (global-set-key (kbd "C-x C-b") 'ido-switch-buffer)
 (global-set-key (kbd "C-x C-f") 'ido-find-file)
 (global-set-key (kbd "C-ä C-b") 'ido-switch-buffer-other-window)
@@ -262,13 +264,6 @@
 (global-set-key (kbd "C-ö C-b") 'ido-display-buffer)
 (global-set-key (kbd "C-ö C-f") 'ido-display-file)
 
-
-;(global-unset-key (kbd "C-x C-b"))
-;(global-unset-key (kbd "C-x C-f"))
-(global-unset-key (kbd "C-ö C-b"))
-(global-unset-key (kbd "C-ö C-f"))
-(global-unset-key (kbd "C-ä C-b"))
-(global-unset-key (kbd "C-ä C-f"))
 
 (global-set-key (kbd "C-x g") 'recentf-interactive-complete)
 (global-set-key (kbd "C-ö n") 'jumpToNextEmpty)

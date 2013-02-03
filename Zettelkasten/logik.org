@@ -660,5 +660,83 @@ $\a^{\v} \circ \g = \a^{\a^{\v}t_0|\a^{\v}\tilde s_2x_4x_4}_{x_0|x_1}$ \\
 #+BEGIN_SRC latex :tangle lo-loesung-12.tex
 \end{document}
 #+END_SRC
-* TODO logik-prüfung
+* TODO zettel 13						    :Studium:
+  DEADLINE: <2013-02-06 Mi>
+** header
+   #+BEGIN_SRC latex :tangle lo-loesung-13.tex
+\documentclass[11pt]{amsart}
+\input{commands.tex}
+\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
+\title{Zettel 13 }
+\author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
+\begin{document}
+\maketitle
+   #+END_SRC 
+   
+** TODO Aufgabe 42
+*** Aufgabenstellung
+[[/home/florian/Zettelkasten/logik.org_20130201_190946_31741wVu-0.png]]
+[[/home/florian/Zettelkasten/logik.org_20130201_190946_31741wVu-1.png]]
+[[/home/florian/Zettelkasten/logik.org_20130201_190946_31741wVu-2.png]]
+[[/home/florian/Zettelkasten/logik.org_20130201_190946_31741wVu-3.png]]
+*** Lösungsskizze
+*** Lösung
+    
+    #+BEGIN_SRC latex :tangle st-loesung-08.tex
+	    \subsection{Aufgabe 42}
+    #+END_SRC
+    
+*** Referenzen
+** TODO Aufgabe 43
+*** Aufgabenstellung
+[[/home/florian/Zettelkasten/logik.org_20130201_191009_317419f0-0.png]]
+[[/home/florian/Zettelkasten/logik.org_20130201_191009_317419f0-1.png]]
+[[/home/florian/Zettelkasten/logik.org_20130201_191009_317419f0-2.png]]
+[[/home/florian/Zettelkasten/logik.org_20130201_191009_317419f0-3.png]]
+[[/home/florian/Zettelkasten/logik.org_20130201_191009_317419f0-4.png]]
+*** Lösungsskizze
+*** Lösung
+    
+    #+BEGIN_SRC latex :tangle lo-loesung-13.tex
+	    \subsection{Aufgabe 43}
+    #+END_SRC
+    
+*** Referenzen
+** TODO Aufgabe 44
+*** Aufgabenstellung
+[[/home/florian/Zettelkasten/logik.org_20130201_191034_31741vpD-0.png]]
+[[/home/florian/Zettelkasten/logik.org_20130201_191034_31741vpD-1.png]]
+[[/home/florian/Zettelkasten/logik.org_20130201_191034_31741vpD-2.png]]
+[[/home/florian/Zettelkasten/logik.org_20130201_191034_31741vpD-3.png]]
+[[/home/florian/Zettelkasten/logik.org_20130201_191034_31741vpD-4.png]]
+[[/home/florian/Zettelkasten/logik.org_20130201_191034_31741vpD-5.png]]
+*** Lösungsskizze
+*** Lösung
+    
+    #+BEGIN_SRC latex :tangle lo-loesung-13.tex
+	    \subsection{Aufgabe 44}
+    #+END_SRC
+    
+*** Referenzen
+** footer
+   #+BEGIN_SRC latex :tangle lo-loesung-13.tex
+\end{document}
+   #+END_SRC
+
+* TODO logik-prüfung						    :Studium:
   SCHEDULED: <2013-02-18 Mo>
+** NEXT Karte der Themengebiete aus dem Semester anfertigen
+   - als mindmap
+   - das skript überfliegen und die wichtigsten Stichpunkte herausschreiben
+** TODO die Blätter überfliegen und Lösungsansätze formulieren
+** TODO Problemstellen auflisten
+   - anhand der Karte
+   - anhand der Blätter
+** TODO Zusammenfassung des Lernstoffs anfertigen
+   - anhand der Karte und den Problemen orientieren
+     oder sogar direkt weiterverwenden
+   - Automaten, Hierarchien, Definitionen, Äquivalenzen, eindeutige verfahren
+** TODO Problematische Zettelaufgaben nochmal lösen
+** TODO problemgebiete ergänzen, map erweitern
+** TODO zu noch problematischen Feldern weitere Aufgaben suchen
+** TODO Klausuren Zettel schreiben

@@ -1,7 +1,8 @@
-"hg6880
+"hg6882
 
 loadplugins '\.(js|penta)$'
 group user
+highlight Hint font: bold 10px "Droid Sans Mono", monospace !important; margin: -.2ex; padding: 0 0 0 1px; outline: 1px solid rgba(0, 0, 0, .5); background: rgba(255, 248, 231, .8); color: black; text-transform: uppercase;
 map -count -modes=n,v <C-n> <count><C-d>
 map -count -modes=n,v d <count>V
 map -count -modes=n,v <C-r> <count><C-u>

@@ -1,10 +1,48 @@
 * idea
+** TODO Film 12 Monkeys
+ Entered on [2013-02-01 Fr 15:28]
+** TODO Musik kennenlernrunde
+ Entered on [2013-02-01 Fr 15:28]
+** TODO interessanten kram zusammenstellen
+ Entered on [2013-02-02 Sa 00:35]
+** TODO wenn man einer aufgabe nicht weiterkommt, etwas versuchen von dem man weiß dass es falsch ist 
+ Entered on [2013-02-02 Sa 00:43]
+** TODO irgendwelche leicht zugänglichen logging daten um das nachtragen von clock daten leichter zu machen
+   (z.B. die Firefox history)
+ Entered on [2013-02-03 So 17:13]
+** TODO rechtsbutton taste mit string taste tauschen
+ Entered on [2013-02-03 So 19:56]
+** TODO die beiden nicht zahlen tasten neben return sind auch noch frei 
+ Entered on [2013-02-03 So 19:58]
 * problem
 ** TODO das win switching nicht nur im normal mode erlauben
  Entered on [2013-02-01 Fr 13:04]
 ** TODO auto gemountete festplatte braucht auch schreibzugriff
  Entered on [2013-02-01 Fr 13:05]
+** TODO volume lauter machen (übersteuern) 
+ Entered on [2013-02-01 Fr 15:30]
+** TODO zettel snippet setzt footer dateikürzel nicht automatisch
+ Entered on [2013-02-01 Fr 19:08]
+** TODO tabs im orgmode spinnen rum
+=> mal nach passenden plugins googlen
+ Entered on [2013-02-02 Sa 14:47]
+** TODO unter cinammon sieht alles in emacs irgendwie viel besser aus
+ Entered on [2013-02-02 Sa 20:37]
+** TODO follow mode funktioniert nicht richtig ( zumindest im org-mode)
+ Entered on [2013-02-03 So 02:33]
+** TODO irgendwie müssen clocks auch nachgetragen werden können
+ Entered on [2013-02-03 So 17:13]
+** TODO emacs per win und enter spinnt schon wieder
+ Entered on [2013-02-03 So 20:50]
+** TODO funktion für clipboard pasting
+ Entered on [2013-02-03 So 20:53]
 * todo
+** TODO epic soundfiles auf ipod kopieren
+ Entered on [2013-02-03 So 02:34]
+** TODO workflow für das benutzen der history unter pentadactyl in firefox
+ Entered on [2013-02-03 So 17:14]
+** TODO 
+ Entered on [2013-02-03 So 19:58]
 * wishes
 ** TODO system und routine zum auswendiglernen von emacs kram finden
 ** TODO weg finden um sich die elementaren vim navigation einzuprägen und sie auch wirklich im Alltag einzusetzen
@@ -18,7 +56,28 @@
  Entered on [2013-01-31 Do 02:29]
 ** TODO effektiveres system um lautstärke zu konfigurieren
  Entered on [2013-01-31 Do 15:02]
+** TODO planen wie die tasta einhändiger gemacht werden kann
+ Entered on [2013-02-03 So 20:00]
 * notes
+** TODO follow mode => buffer hintereinander
+ Entered on [2013-02-01 Fr 13:53]
+** TODO in org-agenda-custom-commands stecken die Befehle
+   => lassen sich direkt per Customize verändern (<F12> C)
+ Entered on [2013-02-01 Fr 17:01]
+** TODO dired mode + emms playlist um sich die playlists aufzubauen
+ Entered on [2013-02-01 Fr 19:49]
+** TODO interessanter Kram
+Ambient Sounds als Hintergrund
+http://soundrown.com/Coffee/#.UQxQq9HQR-Y
+ Entered on [2013-02-02 Sa 00:35]
+** TODO interessanter Kram
+lifehacker seiten und ähnliches suchen
+ Entered on [2013-02-02 Sa 00:36]
+** TODO über hintergrundrauschen zum thema produktivität
+http://lifehacker.com/5962701/mild-ambient-noise-can-spur-creativity-and-keep-you-motivated
+ Entered on [2013-02-02 Sa 00:36]
+** TODO vitamin b ist entscheidend
+ Entered on [2013-02-02 Sa 00:40]
 * workflows
 ** TODO magit commit merge pull push
  [[file:~/Zettelkasten/refile.org::*Shortcut%20um%20mehrere%20Eintr%C3%A4ge%20bei%20magit%20auf%20einmal%20zu%20stagen%20oder%20zu%20markieren][Shortcut um mehrere Einträge bei magit auf einmal zu stagen oder zu markieren]]

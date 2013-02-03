@@ -58,6 +58,53 @@ Zum Glück treffen sie auf den rauhbeinigen aber liebenswerten Kapitän Hadoque,
 ** mini touch gerät
 ** Reiskocher
 ** wii u
+* GTD
+** Klassifizierung eines Tasks
+- ein Task sollte niemals kürzer sein, als 10 Minuten (minimal)
+- Tasks repräsentieren die Sequenziellen Abläufe in einem Projekt
+- diese Abläufe müssen nicht terminlich schon vorher festgelegt sein,
+  sollten aber selbständig geplant werden 
+- ein Task sollte so präzise wie möglich sein, aber stets so allgemein
+  genug das der eigentliche Task auch bei veränderten Abläufen als solches erhalten bleibt
+- die Tasks sollten so formuliert und aufgebaut sein, dass ihre sequenz in den meisten
+  Fällen erhalten bleibt und nur in Sonderfällen umgestaltet werden muss
+- präzisere schritt angaben können als zusätzliche Information in die Tasks geschrieben werden, dann z.B. als nummerierte oder unnumerierte Liste oder auch
+  checkliste.
+- vermeiden, Dinge vorzuplanen oder zu formulieren die so nicht sicher sind
+- es ist erlaubt, einen Task durch einzelne innerhalb des Tasks erarbeitete Schritte zu ersetzen
+
+v2
+- eigentlich ist die sequenzielle struktur nicht immer erforderlich und manchmal hinderlich
+- manchmal ist es sinnvoller, tasks wie unterprojekte zu behandeln
+- tasks sollten eher wie checkpoints sein, nicht wie exakte schritte
+** Beispiel Studium
+- Theorethische Informatik
+   - Zettel 13 lösen
+   - Karte der Themengebiete des Semesters anfertigen
+     - am besten so eine Art mindmap
+     - das skript überfliegen und die wichtigsten Stichpunkte herrausschreiben
+   - die Blätter überfliegen, zu jeder Aufgabe einen kurzen Lösungsansatz formulieren
+   - die Problemstellen auflisten
+     - anhand der Karte
+     - anhand der Blätter
+   - Zusammenfassung des Lernstoffs anfertigen
+     - auflisten von definitionen, konkreten Lösungswegen, namen und automatenstrukturen
+     - anhand der map, könnte hilfreich sein
+     - aufarbeiten des Lernstoffs zu einer ordentlichen Liste
+     - Lücken gegebenenfalls nachtragen
+   - Problematische Zettelaufgaben nochmal lösen
+- Logik
+   - Karte der Themengebiete des Semesters anfertigen
+     - das skript überfliegen und die wichtigsten Stichpunkte herrausschreiben
+   - die Blätter überfliegen, zu jeder Aufgabe einen kurzen Lösungsansatz formulieren
+   - die Problemstellen auflisten
+     - anhand der Karte
+     - anhand der Blätter
+   - Zusammenfassung des Lernstoffs anfertigen
+     - auflisten von definitionen, konkreten Lösungswegen, namen und automatenstrukturen
+     - aufarbeiten des Lernstoffs zu einer ordentlichen Liste
+     - Lücken gegebenenfalls nachtragen
+   - Problematische Zettelaufgaben nochmal lösen
 * Notes
   *Shell Command Output*
 (lgrep "-key" "/home/florian/.emacs")
@@ -110,7 +157,7 @@ Nächster Dienstag Theo: SR XI , Raum 03C51
 	(theo und stochastik)
 	=> cd 50[tab](stochastik) oder 51[tab] oder 49[tab](theo)
 	ls zathura Bl[tab]
-      - links aufrufen (logik, stochastik) (C-c C-o)
+      - links aufrufen (logik, softwaretechnik) (C-c C-o)
          http://www.mathematik.uni-marburg.de/~paniagua/logik/logik.html 
          http://www.uni-marburg.de/fb12/ps/teaching/ws12/eise?language_sync=1
 	=> download, ctrl+[spc] , anzeige unten von firefox
@@ -123,7 +170,7 @@ Nächster Dienstag Theo: SR XI , Raum 03C51
           C-ä s und Aufgabe aus Zathura in Aufgabenstellung kopieren
 	  footer[tab] einsetzen
 	  
-	  - <F12> Space /modulname C-c C-d und Datum einstellen (nächster morgen 8 Uhr), umschalten mit Shift und Pfeiltasten, [altgr-p]
+	  - C-c C-d und Datum einstellen (nächster morgen 8 Uhr), umschalten mit Shift und Pfeiltasten, [altgr-p]
 ** Text Substitution
 ,, ?start altgr+p h v /ende altgr+p h y mm . p a  ( ? durch / ersetzen, falls der teil erst später kommt)
 * to-read
@@ -159,10 +206,3 @@ Nächster Dienstag Theo: SR XI , Raum 03C51
 ** TODO icy taste neue belegen (google remap icy key)
 ** TODO fenster separat öffnen, in dem tempoäres geöffnet wird
    - anwendungen wie popwin könnten als inspiration dienen
-
-* studium
-** NEXT theo präsenzübung suchen und für das tutorium vorbereiten
-   :LOGBOOK:
-   CLOCK: [2013-01-31 Do 16:37]--[2013-01-31 Do 20:26] =>  3:49
-   :END:
-** TODO Plan aufstellen welche Daten genau morgens präsentiert werden sollen

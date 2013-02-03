@@ -74,11 +74,13 @@ also startzustand | "search" | replace | sprung | nächster zustand
 |                             |                              |
 |                             |                              |
 
-* Zettel-09
+* DONE Zettel-09
+  - State "DONE"       from ""           [2013-02-01 Fr 18:08]
 [[~/Dropbox/th/th-zettel-09/th-zettel-09.pdf][th-zettel-09.pdf]]
 [[~/Dropbox/th/th-zettel-09/th-loesung-09.tex][th-loesung-09.tex]]
 [[~/Dropbox/th/th-zettel-09/th-loesung-09.pdf][th-loesung-09.pdf]]
-* Zettel-10
+* DONE Zettel-10
+  - State "DONE"       from ""           [2013-02-01 Fr 18:08]
 ** header
 #+BEGIN_SRC latex :tangle th-loesung-10.tex
 \documentclass[11pt]{amsart}
@@ -273,7 +275,8 @@ anz(6) = 2080  496
 \end{document}
 #+END_SRC
 
-* Zettel-11
+* DONE Zettel-11
+  - State "DONE"       from ""           [2013-02-01 Fr 18:08]
 ** Tutorium
 - Beispel für Semantik mit Loop? (36)
 - 35: nur addition und subtraktion benutzen? Multiplikation und Division?
@@ -613,9 +616,11 @@ welche die Monotonie "bricht". Es kann also nicht pauschal bestimmt werden, ob d
 \end{document}
 #+END_SRC
 
-* TODO Zettel-13
-  DEADLINE: <2013-02-06 Mi>
-** Tutorium 01.02.13
+* TODO Theo Prüfung						    :Studium:
+  SCHEDULED: <2013-02-11 Mo>
+** NEXT Zettel-13
+   DEADLINE: <2013-02-06 Mi>
+*** Tutorium 01.02.13
 links, rechtsseitige turingmaschine
 => maschine bewegt sich nicht weiter zurück als startposition
 42)
@@ -631,6 +636,17 @@ links, rechtsseitige turingmaschine
    => Reduktion muss gezeigt werden
 44) 
     
-
-* TODO Theo Prüfung
-  SCHEDULED: <2013-02-11 Mo>
+** TODO Karte der Themengebiete aus dem Semester anfertigen
+   - als mindmap
+   - das skript überfliegen und die wichtigsten Stichpunkte herausschreiben
+** TODO die Blätter überfliegen und Lösungsansätze formulieren
+** TODO Problemstellen auflisten
+   - anhand der Karte
+   - anhand der Blätter
+** TODO Zusammenfassung des Lernstoffs anfertigen
+   - anhand der Karte und den Problemen orientieren
+     oder sogar direkt weiterverwenden
+   - Automaten, Hierarchien, Definitionen, Äquivalenzen, eindeutige verfahren
+** TODO Problematische Zettelaufgaben nochmal lösen
+** TODO Aufgaben aus dem Skript lösen
+   - gezielt nach noch vorhandenen Problemfeldern suchen

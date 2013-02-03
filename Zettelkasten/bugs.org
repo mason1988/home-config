@@ -15,7 +15,8 @@
 * TODO die habits sind zu chaotisch um einen echten überblick zu haben
 ** NEXT die syntax der habits in der agenda view nachvollziehen
 * TODO eshell spinnt rum
-** NEXT Befehl definieren um eshell mode zu switchen und dann zu beenden
+** DONE Befehl definieren um eshell mode zu switchen und dann zu beenden
+   - State "DONE"       from "NEXT"       [2013-02-03 So 23:50]
 ** TODO prüfen ob es eine hook gibt mit der man den modeswitch direkt verbinden könnte
 * TODO emacs und awesome nach der tastenkombi C-e durchsuchen
 * DONE tasten kombi für's buffer öffnen umlegen

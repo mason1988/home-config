@@ -39,31 +39,11 @@
 ** TODO .emacs Datei splitten mit org-babel-load-file in kategorien
 ** TODO den offset beim letzten Bildfragment fixen
 ** TODO bookmarks für neue todo's beseitigen
-** TODO alternative Tex Konverter testen
-* Todo Ausgang
-** DONE gnus wieder für die mails einrichten
-** DONE git: leere commits abschicken
-** DONE AwesomeWm Shortcuts
-*** DONE Ein/Ausblenden von Fenstern logischer legen
-*** DONE jeweils recent Sprung für Fenster und tag (awesomewm)
-    - im Moment win+escape und win+tab aber das geht auch besser
-** DONE Keynav überprüfen (als Lösung für Screenshots)
-   - rodentbane ist keynav, allerdings wurde das teil 
-     komplett portiert, abhängigkeit ist nur zu allgemeineren
-     tools gegeben
-   => erweiterbarkeit sollte kein probem werden.
-   siehe dazu: http://www.semicomplete.com/projects/xdotool/xdotool.xhtml
-   mouse->keyup/keydown
-   und [[~/.config/awesome/rodentbane.lua::function click(button)]]
-** DONE tabbed untersuchen
-   - eher unschön das ganze
-** DONE Screenshots per Tastatur
-** DONE flosub mit leertaste arbeiten lassen
-** DONE Weiterspringen und besseres Shortcut für Regex Sprung
-** DONE zusätzliche foldingsyntax / elemente einführen?
-   vor allem kürzer als diese begin, end dinger
-** DONE die Regex ausdrücke für Preview Latex in Org überarbeiten abstände zu $ sind scheiße
-** DONE effizientere Wege überlegen, um Ordner zu erreichen
-=======
-** DONE Keynav synchronisieren
-** DONE Übersicht in Software zu den verschiedenen Vim Substitutionen erstellen
+** DONE alternative Tex Konverter testen
+   - State "DONE"       from "TODO"       [2013-02-03 So 23:37]
+* studium
+** NEXT theo präsenzübung suchen und für das tutorium vorbereiten
+   :LOGBOOK:
+   CLOCK: [2013-01-31 Do 16:37]--[2013-01-31 Do 20:26] =>  3:49
+   :END:
+** TODO Plan aufstellen welche Daten genau morgens präsentiert werden sollen
