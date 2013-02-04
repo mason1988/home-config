@@ -144,6 +144,18 @@ $\a^{ \w }\fr{A}{B} = max(\a^{\w}B, 1 - \a^{\w}A)$
 +1 kann bei Supremum reingezogen werden
 
 $\a^{\v}\circ\iota^t_x = \a^{\a^{\v}t}_x : X \mt U$
+** Feb 04
+$[\W_xA] = \un{t\not = x}{inf}[\iota^t_x \circ A]$ = größte untere Schranke
+$[\V_xA] = \un{t\not = x}{sup}[\iota^t_x \circ A]$ = kleinste obere Schranke
+$\bar{\iota^t_x \circ \bar{A}} = \iota^t_x \bar{\bar{A}}$
+$\E Rang: (PJ)^{J\cup Q} \ri \N$
+$A \mapsto vg(A) =$ Rang von A
+so dass (i) $rg \; p_mt_1 ... t_m = 0$
+(ii) $rg\bar{A} = 1+rgA$
+(iii) $rg A \# B = 1 + rgA + rgB$
+(iv) $rg\#_xA = 1+ rg(A)$
+
+Satz: $rg \gamma \circ A = rg A$
 * Zettel-08
 ** Dateien
 [[/home/florian/Dropbox/lo/lo-zettel-08.pdf::NNN][lo-zettel-08.pdf]]

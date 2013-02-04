@@ -37,6 +37,9 @@
 ** TODO funktion für clipboard pasting
  Entered on [2013-02-03 So 20:53]
 * todo
+** DONE wlan manager für die shell
+   - State "DONE"       from "TODO"       [2013-02-04 Mo 10:48]
+ Entered on [2013-02-04 Mo 10:32]
 ** TODO epic soundfiles auf ipod kopieren
  Entered on [2013-02-03 So 02:34]
 ** TODO workflow für das benutzen der history unter pentadactyl in firefox
@@ -54,11 +57,17 @@
 ** TODO irgend eine visualisierung der letzten sprünge (vlt speedbar oder so)
  [[file:~/Zettelkasten/organisation.org::*additional%20clocks][additional clocks]]
  Entered on [2013-01-31 Do 02:29]
-** TODO effektiveres system um lautstärke zu konfigurieren
+** DONE effektiveres system um lautstärke zu konfigurieren
+   - State "DONE"       from "TODO"       [2013-02-04 Mo 10:48]
  Entered on [2013-01-31 Do 15:02]
 ** TODO planen wie die tasta einhändiger gemacht werden kann
  Entered on [2013-02-03 So 20:00]
 * notes
+<<<<<<< HEAD
+** TODO firefox standart umkonfigurieren
+:dialog preferences => application da im dropdown menü auswählen
+ Entered on [2013-02-04 Mo 10:51]
+=======
 ** TODO follow mode => buffer hintereinander
  Entered on [2013-02-01 Fr 13:53]
 ** TODO in org-agenda-custom-commands stecken die Befehle
@@ -78,6 +87,7 @@ http://lifehacker.com/5962701/mild-ambient-noise-can-spur-creativity-and-keep-yo
  Entered on [2013-02-02 Sa 00:36]
 ** TODO vitamin b ist entscheidend
  Entered on [2013-02-02 Sa 00:40]
+>>>>>>> c4b04928f851b05f416f231b26747181b093fc41
 * workflows
 ** TODO magit commit merge pull push
  [[file:~/Zettelkasten/refile.org::*Shortcut%20um%20mehrere%20Eintr%C3%A4ge%20bei%20magit%20auf%20einmal%20zu%20stagen%20oder%20zu%20markieren][Shortcut um mehrere Einträge bei magit auf einmal zu stagen oder zu markieren]]
