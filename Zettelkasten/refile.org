@@ -1,6 +1,9 @@
 * idea
 * problem
 * todo
+** DONE wlan manager für die shell
+   - State "DONE"       from "TODO"       [2013-02-04 Mo 10:48]
+ Entered on [2013-02-04 Mo 10:32]
 * wishes
 ** TODO system und routine zum auswendiglernen von emacs kram finden
 ** TODO weg finden um sich die elementaren vim navigation einzuprägen und sie auch wirklich im Alltag einzusetzen
@@ -12,9 +15,13 @@
 ** TODO irgend eine visualisierung der letzten sprünge (vlt speedbar oder so)
  [[file:~/Zettelkasten/organisation.org::*additional%20clocks][additional clocks]]
  Entered on [2013-01-31 Do 02:29]
-** TODO effektiveres system um lautstärke zu konfigurieren
+** DONE effektiveres system um lautstärke zu konfigurieren
+   - State "DONE"       from "TODO"       [2013-02-04 Mo 10:48]
  Entered on [2013-01-31 Do 15:02]
 * notes
+** TODO firefox standart umkonfigurieren
+:dialog preferences => application da im dropdown menü auswählen
+ Entered on [2013-02-04 Mo 10:51]
 * workflows
 ** TODO magit commit merge pull push
  [[file:~/Zettelkasten/refile.org::*Shortcut%20um%20mehrere%20Eintr%C3%A4ge%20bei%20magit%20auf%20einmal%20zu%20stagen%20oder%20zu%20markieren][Shortcut um mehrere Einträge bei magit auf einmal zu stagen oder zu markieren]]
