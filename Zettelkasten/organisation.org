@@ -305,3 +305,8 @@ Clock summary at [2013-01-31 Do 01:47]
    :STYLE:    habit
    :END:
 
+* Todo Workflow für die Prüfungswochen:
+  erst "[F12] a i v m" und hier den Kalender prüfen
+  "[F12] m Studium [Ent]" hier task raussuchen und ää [Ent] zum draufspringen und
+  ausklappen
+  "C-c C-x C-i" um sich letztendlichen einzuclocken

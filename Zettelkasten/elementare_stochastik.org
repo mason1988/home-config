@@ -173,8 +173,8 @@ $P(Y|B) = \frac{E(1_{B} * Y)}{P(B)}$
 * nützliches für die Prüfung 
 Rechnen mit Verteilungsfunktionen: http://de.wikipedia.org/wiki/Verteilungsfunktion
 
-   
-* Zettel-06
+* DONE Zettel-06
+  - State "DONE"       from ""           [2013-02-01 Fr 18:10]
 ** Dateien
    [[/home/florian/Dropbox/st/st-zettel-06/st-zettel-06.pdf::NNN][st-zettel-06.pdf]]
    [[/home/florian/Dropbox/st/st-zettel-06/st-loesung-06.tex::NNN][st-loesung-06.tex]]
@@ -208,7 +208,8 @@ die müssen allen innerhalb des Pfades gezogen werden
 
 [[/home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121212_095257_67179ci.png]]
 
-* Zettel-07
+* DONE Zettel-07
+  - State "DONE"       from ""           [2013-02-01 Fr 18:10]
 [[~/Dropbox/st/st-zettel-07/st-zettel-07.pdf][st-zettel-07.pdf]]
 [[~/Dropbox/st/st-zettel-07/st-loesung-07.tex][st-loesung-07.tex]]
 [[~/Dropbox/st/st-zettel-07/st-loesung-07.pdf][st-loesung-07.pdf
@@ -218,7 +219,8 @@ die müssen allen innerhalb des Pfades gezogen werden
 
 
 ]]
-* Zettel-08
+* DONE Zettel-08
+  - State "DONE"       from ""           [2013-02-01 Fr 18:10]
 [[docview:~/Dropbox/st/st-zettel-08/st-zettel-08.pdf::1][st-zettel-08.pdf]]
 [[~/Dropbox/st/st-zettel-08/st-loesung-08.tex][st-loesung-08.tex]]
 ** header
@@ -703,7 +705,8 @@ tatsächlich mit dem DNA Profil der Probe vom Tatort übereinstimmt, liegt also 
 #+BEGIN_SRC latex :tangle st-loesung-08.tex
 \end{document}
 #+END_SRC
-* Zettel-09
+* DONE Zettel-09
+  - State "DONE"       from ""           [2013-02-01 Fr 18:10]
 ** header
 #+BEGIN_SRC latex :tangle st-loesung-09.tex
 \documentclass[11pt]{amsart}
@@ -915,7 +918,7 @@ Die Wahrscheinlichkeit für einen
 #+END:
 *** stuff
 ** Aufgabe 4
-<<st-09-4>>
+   <<st-09-4>>
 #+BEGIN_SRC latex :tangle st-loesung-09.tex
 \subsection*{Aufgabe 4}
 \subsubsection*{a)}.\\
@@ -1138,10 +1141,249 @@ $= \fr{(a+b)^2}{12} + \fr{ab}{24}$
 \subsection{Aufgabe 4}
 #+END_SRC
 *** Referenzen
-* Zettel-11
-[[~/Dropbox/st/st-zettel-11/st-zettel-11.pdf][st-zettel-11.pdf]]
-[[~/Dropbox/st/st-zettel-11/st-loesung-11.tex][st-loesung-11.tex]]
-[[~/Dropbox/st/st-zettel-11/st-loesung-11.pdf][st-loesung-11.pdf]]
+* TODO Zettel-11						    :Studium:
+  DEADLINE: <2013-02-06 Mi>
+  :LOGBOOK:
+  CLOCK: [2013-02-03 So 02:31]--[2013-02-03 So 04:25] =>  1:54
+  CLOCK: [2013-02-02 Sa 14:45]--[2013-02-02 Sa 16:02] =>  1:17
+  :END:
+** header
+#+BEGIN_SRC latex :tangle st-loesung-11.tex
+\documentclass[11pt]{amsart}
+\input{commands.tex}
+\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
+\title{Zettel 11 }
+\author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
+\begin{document}
+\maketitle
+#+END_SRC 
+** TODO Aufgabe 1
+*** Aufgabenstellung
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130201_185709_31741iYJ-0.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130201_185709_31741iYJ-1.png]]
+*** Lösungsskizze
+    00 11 01 00 01 , 1=Kopf
+    10 Würfe, ws für Gewinn = p, 
+    - Statistisches Modell angeben
+    - Likelihood Funktion bestimmen
+    - Maximum Likelihood Schätzer für p
+      
+    *statistisches model*
+    - Grundmenge nicht notwendig
+      => direkt Stichprobenraum
+    - Stichprobenraum X = Menge Stichprobenergebnisse
+      + enthält sigma Algebra F (die benutzbaren teilmengen bla)
+      + enthält Familie von Ws, mit P_v : v \in O
+	=> O ist die menge aller möglichen Parameterbelegungen für die Verteilung
+	=> schmaleres O ist dann eine Konkrete Verteilung
+      + P_v heißt also, alle Verteilungen einer Verteilungsfamilie die sich mit 
+         Parametern aus O belegen lassen
+    Ein statistisches Modell ist das Tripel (X, F, P_v: v \in O)
 
-* Prüfung Stochastik 0
+    als Stichprobenraum {0,1}^10
+    und als ws binomial (immer gleichverteilt, keine beeinflussung)
+    *likelihood funktion*
+    - wird konkret als teil der maximum likelihood methode verwendet
+    - schätzt dichte/ws - funktion
+      - Sei eine Ws Funktion zum Beispiel f(x;0) also die Wahrscheinlichkeit
+	für die ZV X, wird durch f bestimmt, wobei f intern die Parameter von 0 einsetzt
+      - Seien x_1...x_n mögliche Ergebnisse von x (z.B. ergebnisse einer n fachen stichprobe
+      - L(0|x_1,...,x_n) = Likelihood Funktion, <= Parameter, wenn x_1...x_n eingetreten sind
+	  => siehe notation bedingte ws, manchmal schreibt man auch nur L(0)
+	- = f(x_1,...,x_n;0) , also die ws für alle parameter zusammen, bei den parametern aus  0
+    - wenn die stichprobenergebnisse unabhängig voneinander sind, gilt:
+         L(0|x_1,...,x_n) = f(x_1;0) * f(x_2;0) ...
+      Für die maximum likelihood funktion, kann man auch den logarithmus von dem ding benutzen
+      da es an der selben stelle maximiert, außerdem
+     => log(L(0)) = log(f(x_1;0)) + log(f(x_2;0)) ...
+      
+
+    eingesetzt ergibt sich nun: L(0|0,0, 1,1, 0,1, 0,0, 0,1) = f(0,0, 1,1, 0,1, 0,0, 0,1|0)
+    ( = f(x_1;0) * f(x_2;0)... ) = f(0;0) * f(0;0) ... 
+
+noch offen wäre die Frage, wie die Kodierung der Stichprobe übernommen werden soll
+  => n = x_1 + x_2 ...   => brilliant :D
+
+*** offene Fragen
+- muss die Stichprobe direkt als Input für die Verteilung dienen?
+- wo würde man angeben, dass die einzelnen Werte aufmultipliziert werden?
+*** TODO eine der alternativen muss rausgestrichen werden
+*** Lösung
+#+BEGIN_SRC latex :tangle st-loesung-11.tex
+\subsection{Aufgabe 1}
+Statistisches Modell: \\
+Das statistische Modell sei $(\mc{X}, \mc{F}, P_{\theta} : \theta \in \Theta)$ mit: \\ 
+$\mc{X} = \{0,1\}^{10}$ \\ %alternativ: Sei Y der Ausgang des Experiments(=001101...), \mc{X} = [0,10] \subset \N = \sum_{y\in Y}y
+$\mc{F} = \mathfrak{P}(\mc{X})$ also die Potenzmenge von $\mc{X}$ \\
+$\Theta = [0,1]$ \\
+$P_{\theta} =$ Binomialverteilung mit den Parametern $n=10$ und $p = \theta$ \\ % muss die Verteilung die Stichprobe so wie sie ist als Input nehmen?
+Likelihood Funktion: \\
+$L(\theta | 0,0, 1,1, 0,1, 0,0, 0,1) = P_{\theta}( 0,0, 1,1, 0,1, 0,0, 0,1)$ \\ 
+$= \Pi_{x \in \mc{X}}P_{\theta}(x)$ \\
+alternativ, falls x = Anzahl: $= \binom{10}{x} \theta^{x} * (1-\theta)^{10-x}$ %
+Maximum likelihood Schätzer: \\
+Da die logarithmus Funktion von $L(\theta)$ an der selben Stelle ihr maximum erreicht, reicht es, diese zu maximieren. \\
+$\Ri log(L(\theta)) = \sum_{x \in \mc{X}}log(P_{\theta}(x))$ \\ % <= keine Ahnung, der Logarithmus ist nur geraten
+%ab hier alles alternative
+alternativ, falls x = Anzahl: $= log(L(\theta))  = log(\binom{10}{x}) + x*log(\theta) + (10-x)*log(1 - \theta)$ \\
+$\Ri \fr{d}{d\theta}log(L(\theta)) = \fr{x}{\theta} - \fr{10-x}{1 - \theta}$  %immernoch alternative
+Sei nun $\fr{x}{\theta} - \fr{10-x}{1-\theta} = 0$ \\
+$\Ri \fr{x-x\theta}{\theta - \theta^2} - \fr{10\theta - x\theta}{\theta - \theta^2} = 0$ \\
+$\Ri \fr{4-4\theta}{\theta - \theta^2} - \fr{10\theta - 4\theta}{\theta - \theta^2} = 0$ \\
+$\Ri \fr{4-10\theta}{\theta - \theta^2} = 0$ \\
+$\Ri 4-10\theta = 0$ \\
+$\Ri 4 = 10\theta$ \\
+$\Ri \theta = 0,4$ = Maximum likelihood Schätzer\\
+#+END_SRC
+*** Referenzen
+**** Lösung zum statistischen Modell nach wikipedia
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_010700_317418zJ-0.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_010700_317418zJ-1.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_010700_317418zJ-2.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_010700_317418zJ-3.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_010700_317418zJ-4.png]]
+**** Lösung für den rest nach wikipedia
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_012609_31741J-P-0.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_012609_31741J-P-1.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_012609_31741J-P-2.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_012609_31741J-P-3.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_012609_31741J-P-4.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_012609_31741J-P-5.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_012609_31741J-P-6.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_012609_31741J-P-7.png]]
+
+** TODO Aufgabe 2
+*** Aufgabenstellung
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130201_185834_31741viP-0.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130201_185834_31741viP-1.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130201_185834_31741viP-2.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130201_185834_31741viP-3.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130201_185834_31741viP-4.png]]
+*** Lösungsskizze
+    _Poisson Verteilung_
+    erwartetes ergebniss von bernoulli experimenten
+      => wirklich mit Binomialverteilung verwand, bzw. sogar ausprägung
+     => P_{\lambda}(k) ist die Ws-Funktion dazu, gibt also an wie wahrscheinlich
+       k erfolge innerhalb eines intervalls sind
+       \lambda ist der entscheidende Parameter = Erwartungswert (= Varianz in diesem fall)
+              => entspringt direkt dem erwartungswert bisheriger fälle *aus einem gleich großen intervall*
+	      daher muss das intervall nicht übergeben werden, bzw. halt einfach mittel dieses intervalls
+     - man schreibt auch \lambda = g * w    mit w = anzahl messeinheiten im intervall und g = pos. ereignisse pro
+       messeinheit
+    - es gilt: $P_{\lambda}(k) = \fr{\lambda^k}{k!}e^{-\lambda}$
+
+    (a) sollte sich analog zur 1 ergeben
+**** Schätzfunktion und so weiter nach wikipedia
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_015323_31741WIW-0.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_015323_31741WIW-1.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_015323_31741WIW-2.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_015323_31741WIW-3.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_015323_31741WIW-4.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_015323_31741WIW-5.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_015323_31741WIW-6.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_015323_31741WIW-7.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_015323_31741WIW-8.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_015323_31741WIW-9.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_015323_31741WIW-10.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_015323_31741WIW-11.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_015323_31741WIW-12.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_015323_31741WIW-13.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130202_015323_31741WIW-14.png]]
+*** Lösung
+#+BEGIN_SRC latex :tangle st-loesung-11.tex
+\subsection{Aufgabe 2}
+\subsubsection{a)} Statistisches Modell: \\
+Seien $x_1,x_2,...,x_n$ die Poisson-verteilten Werte \\
+Das statistische Modell ist dann $(\mc{X},\mc{F},P_{\nu}:\nu \in \Theta)$ mit \\
+% \nu entspricht wohl lambda, und ist daher die ereignisanzahl in einem entsprechenden intervall
+$\mc{X} = \R_+^n$ \\
+$\mc{F} = \mathfrak{P}(\R_+^n) = \mathfrak{P}(\mc{X})$ \\
+$\Theta = \N_+$ \\
+$P_{\nu}$ = Poissonverteilung zum Parameter $\nu$ \\
+\subsubsection{b)} 
+Maximum-Likelihood-Schätzer: \\
+Nach Def. der Poissonverteilung gilt: $P_{\nu}(X=x) = \fr{\nu^x}{x!}exp(-\nu)$ \\
+% also Ws dafür, dass im gewünschten intervall x positive ergebnisse gemessen werden
+$\Ri L(\nu) = \fr{\nu^{x_1 + x_2 + ... + x_n}}{x_1! * x_2! * ... * x_n!}exp(-n\nu)$ \\
+$\Ri log(L(\nu)) = (x_1 + x_2 + ... + x_n)log(\nu) - log(x_1! * x_2! * ... * x_n!) - n\nu$ \\
+$\Ri \fr{d}{d\nu}log(L(\nu)) = \fr{x_1 + x_2 + ... + x_n}{\nu} - 0 - n$ \\
+Sei nun $log(L(\nu)) = 0 \Lri \fr{x_1 + x_2 + ... + x_n}{\nu} - n = 0$ \\
+$\Ri (\sum_{i=1}^n x_i) - \nu n = 0$ \\
+$\Ri (\sum_{i=1}^n \fr{x_i}{n}) = \nu$ \\
+$\Ri T_{ML} = (\sum_{i=1}^n \fr{X_i}{n})$ \\
+\subsubsection{c)}
+Erwartungstreue: \\
+$E(T_{ML}) = E(\sum_{i=1}^n \fr{X_i}{n}) = \fr{1}{n} E(\sum_{i=1}^n X_i) = \fr{1}{n} \sum_{i=1}^n E(X_i) = \fr{n}{n} \mu = \mu$ \\
+$\Ri$ Da der Erwartungswert bei der Poissonverteilung gleich dem Parameter (in diesem Fall $\nu$) ist, ist $T_{ML}$ erwartungstreu \\
+\subsubsection{d)}
+Varianz: \\
+$V_{\nu}[T_{ML}] = V_{\nu}(\sum_{i=1}^n \fr{X_i}{n})$ 
+#+END_SRC
+*** Referenzen
+** TODO Aufgabe 3
+*** Aufgabenstellung
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130201_185858_317418sV-0.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130201_185858_317418sV-1.png]]
+*** Lösungsskizze
+    X_1...X_n bilden auf {1,...,b} ab
+    X = max(X_1,...,X_n)
+    Konfidenzintervall für b mit Niveau 1-\alpha auf Basis X
+
+    Gesucht ist also das intervall in dem sich b mit wahrscheinlichkeit 1 - \alpha befindet,
+    wenn das größte X aus der Stichprobe bekannt ist
+*** Lösung
+    
+    #+BEGIN_SRC latex :tangle st-loesung-11.tex
+	    \subsection{Aufgabe 3}
+    #+END_SRC
+    
+*** Referenzen
+** TODO Aufgabe 4
+*** Aufgabenstellung
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130201_185959_31741WBi-0.png]]
+[[/home/florian/Zettelkasten/elementare_stochastik.org_20130201_185959_31741WBi-1.png]]
+*** Lösungsskizze
+    n unabhängige binomialverteilte Zufallsvariablen
+    Parameter m ist unbekannt, p \in (0,1)
+    Folge von Schätzern (Indize N) für m, also T_N(X_1,...,X_N)
+      Folge soll konsistent sein
+
+    konsistente Folge von Schätzern?!
+     => je größer der Indeze, also jeweiter in der Folge, um so besser wird auch der Schätzer (also näher am realen Wert dran)
+    - Konsistenz :: größerer Stichprobenumfang => Schätzer nähert sich an
+
+    Sei der Schätzer für m T_N = max(X_1,...,X_N) 
+    Konsistenz gegeben?
+      ja, konvergiert ja gegen den richtigen Wert. Entweder ist das maximum dabei, und kein späterer Wert kann besser Schätzen
+      oder noch nicht, und dann kanns ja auch nur besser wedren.
+   Irgendwie nichtmehr besonders viel zu konstruieren o.O
+		 
+*** Lösung
+    
+    #+BEGIN_SRC latex :tangle st-loesung-11.tex
+	    \subsection{Aufgabe 4}
+    #+END_SRC
+    
+*** Referenzen
+** footer
+#+begin_src latex :tangle st-zettel-11.tex
+\end{document}
+#+end_src
+* TODO Prüfung Stochastik 0					    :Studium:
   SCHEDULED: <2013-02-13 Mi>
+** NEXT Karte der Themengebiete aus dem Semester anfertigen
+   - als mindmap
+   - das skript überfliegen und die wichtigsten Stichpunkte herausschreiben
+** TODO die Blätter überfliegen und Lösungsansätze formulieren
+   - dabei offene Fragen formulieren
+** TODO Problemstellen auflisten
+   - anhand der Karte
+   - anhand der Blätter
+** TODO Zusammenfassung des Lernstoffs anfertigen
+   - anhand der Karte und den Problemen orientieren
+     oder sogar direkt weiterverwenden
+   - Automaten, Hierarchien, Definitionen, Äquivalenzen, eindeutige verfahren
+** TODO Problematische Zettelaufgaben nochmal lösen
+** TODO problemgebiete ergänzen, map erweitern
+** TODO zu noch problematischen Feldern weitere Aufgaben suchen
+** TODO Klausuren Zettel schreiben

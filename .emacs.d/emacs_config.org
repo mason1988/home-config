@@ -11,6 +11,7 @@
 (add-to-list 'load-path "~/.emacs.d/image-dired/")
 (add-to-list 'load-path "~/.emacs.d/helm/")
 (require 'key-chord)
+(require 'volume)
 (require 'latex)
 (require 'undo-tree)
 (require 'org-id)
@@ -1215,3 +1216,8 @@ A prefix arg forces clock in of the default task."
 (declare-function org-is-habit-p "org-habit" (&optional pom))
 #+END_SRC
    
+* eigene Funktionen
+#+begin_src elisp :tangle emacs_config.el
+; eshell in jedem fall beenden
+(defun kills() (interactive) (org-mode)(kill-buffer))
+#+end_src

@@ -668,5 +668,19 @@ Pair Programming = grundsätzlich mit mehreren leuten
     * erkennung durch brainstorming durch team
     * vermeidung risiken
       - frühe prototypen, saubere Planung, starke Teams, wiederverwendung funktionierender syst
-* TODO prüfung
+* TODO Softwaretechnik - Prüfung				    :Studium:
   SCHEDULED: <2013-02-20 Mi>
+** NEXT Karte der Themengebiete aus dem Semester anfertigen
+   - als mindmap
+   - das skript überfliegen und die wichtigsten Stichpunkte herausschreiben
+** TODO die Blätter überfliegen und Lösungsansätze formulieren
+** TODO Problemstellen auflisten
+   - anhand der Karte
+   - anhand der Blätter
+** TODO Zusammenfassung des Lernstoffs anfertigen
+   - anhand der Karte und den Problemen orientieren
+     oder sogar direkt weiterverwenden
+   - Automaten, Hierarchien, Definitionen, Äquivalenzen, eindeutige verfahren
+** TODO Problematische Zettelaufgaben nochmal lösen
+** TODO problemgebiete ergänzen, map erweitern
+** TODO zu noch problematischen Feldern weitere Aufgaben suchen

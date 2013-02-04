@@ -1,10 +1,11 @@
 ;#+STARTUP: content
 * Projekte
 ** TODO Kleinkram
-*** NEXT das system wiederfinden, mit der man eine sicht auf 2 Buffer verteilen konnte
+*** DONE das system wiederfinden, mit der man eine sicht auf 2 Buffer verteilen konnte
+    - State "DONE"       from "NEXT"       [2013-02-03 So 23:45]
   [[file:~/Zettelkasten/softwaretechnik.org::*a.][a.]]
   Entered on [2013-01-25 Fr 18:42]
-*** TODO emacs-server ohne fenster starten und danach laufen lassen
+*** NEXT emacs-server ohne fenster starten und danach laufen lassen
 *** TODO frame nach schließen des letzten fensters schließen
 *** TODO hide boring buffers installieren
 *** TODO zeilenumbruch nach header ohne punkt in latex
@@ -38,7 +39,9 @@
 ** TODO Org-Mode Bilder
 *** DONE prüfen ob die latex plugins was taugen
     - State "DONE"       from "NEXT"       [2013-01-31 Do 14:24]
-*** NEXT Möglichkeiten prüfen um informationen/texte einem konkreten Header zuzuordnen
+*** CANCELLED Möglichkeiten prüfen um informationen/texte einem konkreten Header zuzuordnen :CANCELLED:
+    - State "CANCELLED"  from "NEXT"       [2013-02-03 So 23:46] \\
+      jetzt gibts nen besseren latex modus
 *** TODO my-make-latex-2 zusammenstellen
 **** bisheriger beispielcode
 (defun blatest () (interactive)
@@ -71,18 +74,22 @@
 *** DONE iimage bibliothek o.ä. code raussuchen und auf anpassparkeit prüfen
 *** DONE anforderungen an eigenen Modus sammeln
 *** DONE entsprechenden modus entwickeln ;image slicing
-*** TODO der transparente bereich auf den draufgemappt wird (python) auf mindestgröße setzen
+*** NEXT der transparente bereich auf den draufgemappt wird (python) auf mindestgröße setzen
 ** TODO Musik Player Einrichten
 *** DONE google awesome-wm automount Ziel: Festplatte unter festem Namen mounten
     - State "DONE"       from "NEXT"       [2013-01-22 Di 19:50]
-*** NEXT Playlists zusammenstellen und in einem Ordner verlinken
+*** NEXT playlists ganz allgemein planen
+*** TODO Playlists zusammenstellen und in einem Ordner verlinken
 *** TODO Org Mode links für emms möglichkeit suchen
 *** TODO alternative: Helm (/Anything) emms suchen und benutzen
 ** TODO Tags							    :PROJECT:
 *** DONE etags installieren
-*** NEXT google: wie können tags zu den unterschiedlichen dokumentarten generiert werden
-*** TODO google: welche navigations und sammelmöglichkeiten gibt es?
-*** TODO Shortcuts für die Tags entsprechend legen
+*** DONE google: wie können tags zu den unterschiedlichen dokumentarten generiert werden
+    - State "DONE"       from "NEXT"       [2013-02-03 So 23:45]
+*** DONE google: welche navigations und sammelmöglichkeiten gibt es?
+    - State "DONE"       from "TODO"       [2013-02-03 So 23:54]
+*** DONE Shortcuts für die Tags entsprechend legen
+    - State "DONE"       from "TODO"       [2013-02-03 So 23:54]
 ** TODO Capturing						    :PROJECT:
 *** TODO welche Captures ;-Templates; würden noch Sinn machen? Broweser/Client
 *** TODO prüfen ob zur commands.tex datei gecaptured werden kann
@@ -122,11 +129,12 @@
 *** TODO next / prev buffer shortcuts googlen / einrichten (siehe burry buffer)
 ** TODO Sprungmarken						    :PROJECT:
 *** TODO Liste mit Features von Bookmark+ anfertigen
-*** NEXT markierung und/oder anzeige für evil marks im Dokument anzeige ;goggle
+*** DONE markierung und/oder anzeige für evil marks im Dokument anzeige ;goggle
+    - State "DONE"       from "NEXT"       [2013-02-03 So 23:52]
 nicht mehr zeit verschwenden, als unbedingt nötig, da die evil marks in jedem fall auch
 durch autobookmarks ersetzt werden könnten
 google: emacs+evil+show+mark 
-*** TODO Shortcuts für next / prev buffer setzen
+*** NEXT Shortcuts für next / prev buffer setzen
 ** TODO [#A] TodoListe optimieren				    :PROJECT:
 *** NEXT Brainstorming, was Standardmäßig geöffnet und was geschlossen sein soll
 *** TODO autostarts neu zuteilen ;source blöcke usw.
@@ -164,7 +172,8 @@ google: emacs+evil+show+mark
 *** DONE die 3 Grundmerges finden ;a / b / beide
 *** NEXT magit: commit und push?
 ** TODO effizienteres Suchen					    :PROJECT:
-*** NEXT Suchmaschine für Quellcodes
+*** DONE Suchmaschine für Quellcodes
+    - State "DONE"       from "NEXT"       [2013-02-03 So 23:52]
 *** TODO alternative rc.lua suchen
 *** TODO alternative .emacs suchen
 *** TODO alternativen zu google prüfen / bessere Befehle sammeln
@@ -209,6 +218,13 @@ google: emacs+evil+show+mark
  + script von überall asuführbar machen :: sh entfernen, bang(#/bin/bash) anfügen, und in /usr/bin verschieben
 ** wlan
 wicd-ncurses um netzwerk zu konfigurieren
+** tastatur
+- modifier belegen:
+  xmodmap -e 'clear mod1'
+  xmodmap -e 'keycode 94 = Control R' <= unterstrich fehlt
+  xmodmap -e 'add control = Control R' <= unterstrich fehlt
+- keycode anzeigen lassen:
+  xev
 ** standby
 sudo chmod u+s /usr/sbin/pm-suspend
 sudo visudo
@@ -242,6 +258,11 @@ den Rest mit pysdm
   - Audiogeräte
     - Mikrofon: HDA ATI SB, ALC887-VD Analog Direct hardware device without any conversions (hw:CARD=SB,DEV=0)
     - Lautsprecher/Klingeln: Default
+** sound steuerung
+sudo modprobe snd-mixer-oss
+  notwendig, bevor aumixer gestartet werden kann
+  - volume um lautstärke zu steuern 
+    => aumixer muss installiert sein und funktionieren
 * synergy
 ** keyboardlayout
 - nacktes setxkbmap beim client hilft
@@ -602,6 +623,27 @@ echo "12.34.56.78 neue.mail.domain" >> /etc/hosts
 *** .authinfo
 machine imap.mail.yahoo1.com login floppycode@yahoo.de password secret port 993
 machine imap.mail.yahoo2.com login lerch.florian@yahoo.de password secret port 993
+** tags
+*** tag - file erstellen
+To generate tags for certain source files (like *.el files), invoke this:
+
+  cd /path/to/my/project
+  etags *.el
+
+To recurse through directories, run something like this:
+
+  cd /path/to/my/project
+  find . -type f -iname "*.[ch]" | etags -
+
+*** tag - file benutzen
+M-x visit-tags-table um tag datei zu öffnen
+    `M-.’ (‘find-tag’) – find a tag, that is, use the Tags file to look up a definition. If there are multiple tags in the project with the same name, use `C-u M-.’ to go to the next match.
+    `M-*’ (‘pop-tag-mark’) – jump back
+    ‘M-x tags-search’ – regexp-search through the source files indexed by a tags file (a bit like ‘grep’)
+    ‘M-x tags-query-replace’ – query-replace through the source files indexed by a tags file
+    `M-,’ (‘tags-loop-continue’) – resume ‘tags-search’ or ‘tags-query-replace’ starting at point in a source file
+    ‘M-x tags-apropos’ – list all tags in a tags file that match a regexp
+    ‘M-x list-tags’ – list all tags defined in a source file
 * install/make kram
 1. ./configure
 2. make
@@ -2081,6 +2123,10 @@ window-setup-hook
 window-text-change-functions
 **** Org Mode Hooks
 [[http://orgmode.org/worg/org-configs/org-hooks.html]]
+** Suchmaschinen
+- https://github.com/
+- http://code.google.com/intl/de/ (sucht vorrangig nach projekten)
+- http://code.ohloh.net/ (ehemals koders)
 * Shortcutliste
 ** einfache Tasten
 - AltGr - ü :: Escape
