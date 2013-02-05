@@ -180,7 +180,8 @@ google: emacs+evil+show+mark
 ** TODO awesome wm						    :PROJECT:
 *** NEXT Titlebar Awesome Wm googlen. Ziel: Titlebars in bestimmten Tags mit Floating standard, aktivieren.
 *** TODO ansatz für tabs in awesome wm formulieren
-*** TODO google awesome wm borders
+*** DONE google awesome wm borders
+    - State "DONE"       from "TODO"       [2013-02-04 Mo 11:07]
 *** TODO testen was genau shifty macht, und das gegebenenfalls einrichten
 *** TODO übersicht zu den spaltenbefehlen anfertigen
 *** TODO übersicht zum Code und dessen config möglichkeiten anfertigen

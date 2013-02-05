@@ -2,4 +2,17 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-()
+(#1=(#("org-capture-last-stored" 0 23
+      (bmkp-full-record #1#))
+    (filename . "~/Zettelkasten/refile.org")
+    (buffer-name . "refile.org")
+    (front-context-string . "** TODO in emacs")
+    (rear-context-string . "02-03 So 19:58]\n")
+    (front-context-region-string)
+    (rear-context-region-string)
+    (visits . 0)
+    (time . #2=(20751 35360 541629))
+    (created . #2#)
+    (position . 710)
+    (end-position . 710))
+)

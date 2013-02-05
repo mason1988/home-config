@@ -310,3 +310,5 @@ Clock summary at [2013-01-31 Do 01:47]
   "[F12] m Studium [Ent]" hier task raussuchen und ää [Ent] zum draufspringen und
   ausklappen
   "C-c C-x C-i" um sich letztendlichen einzuclocken
+* theo klausur
+11:45    11.2.   HG 00/0030 Raum

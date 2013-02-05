@@ -156,6 +156,16 @@ so dass (i) $rg \; p_mt_1 ... t_m = 0$
 (iv) $rg\#_xA = 1+ rg(A)$
 
 Satz: $rg \gamma \circ A = rg A$
+Großer Vollständigkeitssatz:
+$A \in (PT)^{J\cupQ} A^{\w}=1$ (A "wahr") Tautologie in jedem großem Modell
+$\Ri A \in bar{(PT)_0^{J\cupQ}}$ ableitbar "klar"
+
+Satz von Tarski: Sei $\mathcal{A}$ Boolesche Algebra, e \in $\mc{A}$
+Sei $M_n \subset \mathcal{A}$ Folge von Teilmengen $(M_0,M_1,M_2,...)$
+so dass jedes $M_n$ hat sup/inf: $sup M_n \in  \mc{A} \ni inf M_n$
+Dann gil: \A a \in mc{A}, a\not = e \E$ Charakter $\chi: \mc{A} \ri 2$
+$\chi a = 0, xe=1$
+$\chi (sup M_n) = sup \chi M_n$ , $\chi (inf M_n) = inf \chi M_n$
 * Zettel-08
 ** Dateien
 [[/home/florian/Dropbox/lo/lo-zettel-08.pdf::NNN][lo-zettel-08.pdf]]
