@@ -8,6 +8,8 @@
 
   im Anhang ist unsere Abgabe zum gemeinsamen Ferienzettel in Elementarer Stochastik.
   Mit freundlichen Grüßen, Florian Lerch und Waldemar Hamm
+- skript
+  http://www.mathematik.uni-marburg.de/~olbrich/s0.pdf
 * Englisch
 | Deutsch                       | Englisch                       |
 |-------------------------------+--------------------------------|
@@ -1317,7 +1319,20 @@ $E(T_{ML}) = E(\sum_{i=1}^n \fr{X_i}{n}) = \fr{1}{n} E(\sum_{i=1}^n X_i) = \fr{1
 $\Ri$ Da der Erwartungswert bei der Poissonverteilung gleich dem Parameter (in diesem Fall $\nu$) ist, ist $T_{ML}$ erwartungstreu \\
 \subsubsection{d)}
 Varianz: \\
-$V_{\nu}[T_{ML}] = V_{\nu}(\sum_{i=1}^n \fr{X_i}{n})$ 
+$V_{\nu}[T_{ML}] = V_{\nu}(\sum_{i=1}^n \fr{X_i}{n}) = \sum_{i=1}^nVar(\fr{1}{n}X_i) = \sum_{i=1}^n(\fr{1}{n^2}Var(X_i))$ \\
+$= \fr{1}{n^2}\sum_{i=1}^n\sigma^2 = \fr{n\sigma^2}{n^2} = \fr{\sigma^2}{n} = \fr{\mu}{n} = \fr{\nu}{n}$ \\
+\subsubsection{e)}
+Fisher-Information: \\
+$I(\nu) = -E[(\fr{d^2}{d\nu^2}log(f_{\nu}(X)))]$ \\
+$= -E[(\fr{d^2}{d\nu^2} xlog(\nu)-log(x!)-\nu)]$ \\
+$= -E[(\fr{d}{d\nu} \fr{x}{\nu} - 0 - 1)]$ \\
+$= -E[\fr{-x}{\nu^2})]$ \\
+$= -(\fr{-\nu}{\nu^2}) = -(-\fr{1}{\nu}) = \fr{1}{\nu} = \fr{1}{\mu} = \fr{1}{\sigma^2}$ \\
+\subsubsection{f)}
+Cramer Rao Schranke:
+$Var(T_ML) = \fr{\nu}{n}$ \\
+Schranke = $\fr{1}{I(\nu)} = \nu$ \\
+$\Ri$ Der Schätzer liegt auf der Schranke.
 #+END_SRC
 *** Referenzen
 ** TODO Aufgabe 3
@@ -1387,3 +1402,23 @@ $V_{\nu}[T_{ML}] = V_{\nu}(\sum_{i=1}^n \fr{X_i}{n})$
 ** TODO problemgebiete ergänzen, map erweitern
 ** TODO zu noch problematischen Feldern weitere Aufgaben suchen
 ** TODO Klausuren Zettel schreiben
+* Zusammenfassung
+** logarithmus einsetzen
+- bei den ganzen Verteilungen: z.B.: 
+   $L(p) = \binom{a}{b}*p^r*(1-p)^{n-r}$
+   $\Ri log(L(p)) = log(\binom{a}{b}+rlog(p) +(n-r)log(1-p)$
+   also eigentlicher wert in log, * zu + und potenz runter und multipliziert
+     binom bleibt gleich
+   => hat oft den selben max Punkt wie L(p)
+   exp(xyz) => xyz
+   \fr{1}{x^y} => -ylog(x)
+** ableiten
+  alle Summanden als x Potenzen auffassen
+  => Potenz runter und multi, Potenz oben -1
+    => ohne x = 0
+    => $x^1$ = konstant
+   $'log(x) = \fr{1}{x}$
+   $'log(1-x) = -\fr{1}{x}$
+   f(g(x))' = f'(g(x))*g'(x)
+
+  

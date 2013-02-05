@@ -16,6 +16,20 @@
  Entered on [2013-02-03 So 19:58]
 ** TODO in emacs die pfeiltasten deaktivieren
  Entered on [2013-02-04 Mo 11:14]
+** TODO aktuelle recherche ideen mitsamt zielbereich immer parat haben (klar ausformuliert und einsatzbereit, opt. mit links)
+ Entered on [2013-02-04 Mo 14:17]
+** TODO C-x und dann ne zahl außerhalb der normalen, scheint auf nen Prozentwert zu belegen oder so
+ Entered on [2013-02-05 Di 11:15]
+** TODO tempoär auf cinnamon 2d gehen, macht die windows taste frei um icy zu testen
+ on [2013-02-05 Di 11:16]
+** TODO http://awesome.naquadah.org/wiki/Better_Font_Rendering könnte das problem mit dem flimmern beheben
+ Entered on [2013-02-05 Di 11:17]
+** TODO http://awesome.naquadah.org/wiki/Beautiful_themes andere themes installieren um zu testen, ob dass das Problem mit der hässlichen Schrift usw. behebt
+ Entered on [2013-02-05 Di 11:19]
+** TODO manuell fonts hinzufügen: http://awesome.naquadah.org/wiki/Customizing_Fonts
+ Entered on [2013-02-05 Di 11:20]
+** TODO http://awesome.naquadah.org/wiki/User_Configuration_Files an ctef für titlebar orientieren usw.
+ Entered on [2013-02-05 Di 11:22]
 * problem
 ** TODO das win switching nicht nur im normal mode erlauben
  Entered on [2013-02-01 Fr 13:04]
@@ -48,6 +62,8 @@
  Entered on [2013-02-03 So 17:14]
 ** TODO 
  Entered on [2013-02-03 So 19:58]
+** TODO text wie man vim befehle einrichtet. Google evil vim map
+ Entered on [2013-02-04 Mo 13:29]
 * wishes
 ** TODO system und routine zum auswendiglernen von emacs kram finden
 ** TODO weg finden um sich die elementaren vim navigation einzuprägen und sie auch wirklich im Alltag einzusetzen
