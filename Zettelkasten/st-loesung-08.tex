@@ -40,9 +40,9 @@
 
 \end{documenr}
 
-\subsection*{Aufgabe 1}
+\subsection**{Aufgabe 1}
 
-\subsubsection*{a)}
+\subsubsection**{a)}
 
 Der Raum $\Omega$ soll die Anzahl der Buben enthalten die ein Spieler jeweils in der Hand hält. Da es nur 4
 Buben gibt, gilt also: $\Omega = \{0,1,2,3,4\}$. $\mathbb{P}: \Omega \rightarrow [0,1]$ soll nun also  die Wahrscheinlichkeit
@@ -54,7 +54,7 @@ beeinflussen sich die einzelnen Karten in ihrer Wahrscheinlichkeit nicht wir kö
 für $\mathbb{P}$ verwenden.\\
 Es ergibt sich somit: $\mathbb{P}(\omega) = \binom{10}{\omega}*(\frac{1}{8})^{\omega}*(\frac{7}{8})^{10-\omega}$ für $\omega \in \Omega$
 
-\subsubsection*{b)}
+\subsubsection**{b)}
 
 Aus Sicht des jeweiligen Spielers befinden sich nun noch 4 - X Karten im Spiel. Für die Karten im Skat gilt
 daher das selbe Prinzip wie schon in a), d.h. Binomialverteilung. \\
@@ -63,33 +63,33 @@ Analog zu a) ergibt sich für $\mathbb{P}(Y|X = k)$ nun für 2 Kartenziehungen u
 von $\frac{4-X}{32}$ für einen Buben pro Karte:\\
 Für $\omega \in \Omega:$ $\mathbb{P}(Y = \omega |X = k) = \binom{32}{\omega}(\frac{4-X}{32})^{\omega} * (1 - \frac{4-X}{32})^{2 - \omega}$
 
-\subsection*{Aufgabe 2}
+\subsection**{Aufgabe 2}
 
-\subsubsection*{a)}
+\subsubsection**{a)}
 Ohne Betrachtung von X gilt zunächst: $Y$ bildet auf $[2,12] \subset N$ \\
 Ferner biledet X auf $[1,6] \subset N$ ab, mit gleichen Wahrscheinlichkeiten der Werte, es gilt also: $P(X=x) = \frac{1}{6}$ für $x \in [1,6]$ \\
 $\Rightarrow P(Y = y | X = k) = \frac{P(X=k , Y = y)}{P(X = k)} = \frac{P(X=k , Y = y)}{6}$ \\
 $ = \begin{cases} \frac{1}{6} &\mbox{falls } k < y \leq 6+k \\ 0 &\mbox{sonst} \end{cases}$ \\
 
-\subsubsection*{b)}
+\subsubsection**{b)}
 $g(k) := E[Y|X=k] = \sum_yy*P(Y=y | X = k) = \sum_{k < y \leq k+6}y*\frac{1}{6} = \frac{1}{6} * (k+1 + ... + k+6) = \frac{21}{6}*k = 3,5k$
 
-\subsubsection*{c)}
+\subsubsection**{c)}
 Sei Z die Augenzahl des 2. Wurfes, so das gilt Y = X+Z \\
 $\Rightarrow E[Y] = E[X+Z] = E[X]+E[Z] = 3,5 + 3,5 = 7$ \\
 $E[g(X)] = E[E(Y|X)] = E[\sum_yy*P(Y=y | X )] = \sum_x[\sum_yy*P(Y=y|X=x)]*P(X=x)$ \\
 $= \sum_x\sum_yy*P(Y=y|X=x)*P(X=x) = \sum_yy*\sum_xP(Y=y, X=x) = \sum_yy*P(Y=y) = E(Y) = 7$ \\
 
-\subsection*{Aufgabe 3}
+\subsection**{Aufgabe 3}
 
-\subsubsection*{a)}
+\subsubsection**{a)}
 
 Da X und Y gleichverteilt sind, gilt: $Var(X) = Var(Y) \rightarrow Var(X) - Var(Y) = 0$\\
 Durch die symmetrie der Kovarianz lässt sich umformen:\\
 $Cov(X+Y, X-Y) = Cov(X,X-Y) + Cov(Y,X-Y) = Cov(X-Y,X) + Cov(X-Y, Y) = Cov(X,X) - Cov(Y,X) + Cov(X,Y) - Cov(Y,Y)$\\
 $ = Cov(X,X) - Cov(Y,Y) = Var(X) - Var(Y) = 0$
 
-\subsubsection*{b)}
+\subsubsection**{b)}
 
 Für Unabhängigkeit müsste gelten: $\mathbb{P}([X+Y]*[X-Y]) = \mathbb{P}(X+Y)*\mathbb{P}(X-Y) \Leftrightarrow \mathbb{P}(X^2 - Y^2) = \mathbb{P}(X+Y)*\mathbb{P}(X-Y)$ \\
 Es gelte $\mathbb{P}(z) = \begin{cases} 1 &\mbox{falls } z=-1 \\ 0 &\mbox{sonst} \end{cases}$
@@ -100,9 +100,9 @@ Sei X = 0 und Y = 1 \=$\Rightarrow \mathbb{P}(X^2-Y^2) = \mathbb{P}(-1) = 1$ \\
 \end{tabbing}
 $\Rightarrow$ in diesem Beispiel sind die Zufallsvariablen X+Y und X-Y zwar unkorelliert (Kovarianz ist 0) aber nicht unabhängig.
 
-\subsection*{Aufgabe 4}
+\subsection**{Aufgabe 4}
 
-\subsubsection*{a)}
+\subsubsection**{a)}
 
 Die Wahrscheinlichkeit für einen erfolgreichen Wurf (eine 1) liegt bei $\frac{1}{5}$ und für einen 
 nicht erfolgreichen Wurf (ungleich 1) somit bei $1 - \frac{1}{5} = \frac{4}{5}$ \\
@@ -114,16 +114,16 @@ Für den Erwartungswert gilt aufgrund der Binomialverteilung: $E(S_n) = \frac{n}
 $\Rightarrow E(\frac{S_n}{n}) = \frac{1}{5}$ \\
 Eingesetzt in die Ungleichung ergibt sich somit: $P[|\frac{S_n}{n} - \frac{1}{5}| < \epsilon] \geq 1 - \frac{4}{25n * \epsilon^2}$
 
-\subsubsection*{b)}
+\subsubsection**{b)}
 
 Es soll gelten: $1 - \frac{4}{25n * 0.000001} > 0.95$ \\
 $\Leftrightarrow 1-0.95 > \frac{4}{25n * 0.000001}$ \\
 $\Leftrightarrow 0.05 > \frac{160000}{n}$ \\
 $\Leftrightarrow n > 3 200 000$
 
-\subsection*{Aufgabe 5}
+\subsection**{Aufgabe 5}
 
-\subsubsection*{a)}
+\subsubsection**{a)}
 
 $G_j = \{ (j,\omega_2,\omega_3) | \omega_2 \in \{ 1,2,3 \}, \omega_3 \in \{ 1,2,3 \} \backslash  \{ j , \omega_2 \} \}$ \\
         $= \{ \omega \in \Omega | \omega_1 = j \wedge \omega_3 \not = j \wedge \omega_3 \not = \omega_2\ \wedge \omega_3 \not = j \}$ \\
@@ -142,11 +142,11 @@ Der Spieler sollte die Tür also auf jeden Fall wechseln, da die Wahrscheinlichk
 hinter der anderen Tür liegt, bei 2/3 liegt, wohingegen, die Wahrscheinlichkeit der jetztigen Tür
 nur bei 1/3 liegt.
 
-\subsubsection*{b)}
+\subsubsection**{b)}
 
 
 
-\subsubsection*{c)}
+\subsubsection**{c)}
 
 $\Omega = \{(1,2),(1,3),(2,3),(3,2)\}$ \\
 Für den Spieler gibt es beim ersten Schritt also 3 Möglichkeiten: Tor 1, 2 oder 3. \\ 
@@ -154,7 +154,7 @@ Falls der Spieler Tor 2 oder 3 wählt, so würde er beim wechsel auf der richtig
 Nur bei der Wahl von Tor 1 würde er verlieren, so dass sich als Erfolgswahrscheinlichkeit $\frac{2}{3}$ ergibt. \\
 Analog dazu liegt die Erfolgswahrscheinlichkeit bei der "nie wechseln Strategie" nur bei $\frac{1}{3}$.
 
-\subsection*{Aufgabe 6}
+\subsection**{Aufgabe 6}
 
 Sei A das Ereigniss einer gleichen Dna und B eines positives Tests, sowie A' und B' jeweils das Gegenteil.\\
 Es gilt: $P(A) = \frac{1}{10^6} \Rightarrow \frac{A'} = \frac{999999}{10^6}$ \\

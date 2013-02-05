@@ -1,0 +1,82 @@
+
+\documentclass[11pt]{amsart}
+\input{commands.tex}
+\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
+\title{Zettel 11 }
+\author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
+\begin{document}
+\maketitle
+
+\subsection*{Aufgabe 1}
+Statistisches Modell: \\
+Das statistische Modell sei $(\mc{X}, \mc{F}, P_{\theta} : \theta \in \Theta)$ mit: \\ 
+Sei Y = Ausgang des Experiments(=001101...), $\mc{X} = [0,10]\subset \N \m{mit} \mc{X} \ni x = \Pi_{y \in Y}y$ \\
+$\mc{F} = \mathfrak{P}(\mc{X})$ also die Potenzmenge von $\mc{X}$ \\
+$\Theta = [0,1]$ \\
+$P_{\theta} =$ Binomialverteilung mit den Parametern $n=10$ und $p = \theta$ \\ % muss die Verteilung die Stichprobe so wie sie ist als Input nehmen?
+Likelihood Funktion: \\
+$L(\theta | x) = P_{\theta}(x)$ \\ 
+$= \binom{10}{x} \theta^{x} * (1-\theta)^{10-x}$ \\
+Maximum likelihood Schätzer: \\
+Da die logarithmus Funktion von $L(\theta)$ an der selben Stelle ihr maximum erreicht, reicht es, diese zu maximieren. \\
+alternativ, falls x = Anzahl: $= log(L(\theta))  = log(\binom{10}{x}) + x*log(\theta) + (10-x)*log(1 - \theta)$ \\
+$\Ri \fr{d}{d\theta}log(L(\theta)) = \fr{x}{\theta} - \fr{10-x}{1 - \theta}$ \\ 
+Sei nun $\fr{x}{\theta} - \fr{10-x}{1-\theta} = 0$ \\
+$\Ri \fr{x-x\theta}{\theta - \theta^2} - \fr{10\theta - x\theta}{\theta - \theta^2} = 0$ \\
+$\Ri \fr{4-4\theta}{\theta - \theta^2} - \fr{10\theta - 4\theta}{\theta - \theta^2} = 0$ \\
+$\Ri \fr{4-10\theta}{\theta - \theta^2} = 0$ \\
+$\Ri 4-10\theta = 0$ \\
+$\Ri 4 = 10\theta$ \\
+$\Ri \theta = 0,4$ = Maximum likelihood Schätzer\\
+
+\subsection*{Aufgabe 2}
+\subsubsection*{a)} Statistisches Modell: \\
+Seien $x_1,x_2,...,x_n$ die Poisson-verteilten Werte \\
+Das statistische Modell ist dann $(\mc{X},\mc{F},P_{\nu}:\nu \in \Theta)$ mit \\
+% \nu entspricht wohl lambda, und ist daher die ereignisanzahl in einem entsprechenden intervall
+$\mc{X} = \R_+^n$ \\
+$\mc{F} = \mathfrak{P}(\R_+^n) = \mathfrak{P}(\mc{X})$ \\
+$\Theta = \N_+$ \\
+$P_{\nu}$ = Poissonverteilung zum Parameter $\nu$ \\
+\subsubsection*{b)} 
+Maximum-Likelihood-Schätzer: \\
+Nach Def. der Poissonverteilung gilt: $P_{\nu}(X=x) = \fr{\nu^x}{x!}exp(-\nu)$ \\
+% also Ws dafür, dass im gewünschten intervall x positive ergebnisse gemessen werden
+$\Ri L(\nu) = \fr{\nu^{x_1 + x_2 + ... + x_n}}{x_1! * x_2! * ... * x_n!}exp(-n\nu)$ \\
+$\Ri log(L(\nu)) = (x_1 + x_2 + ... + x_n)log(\nu) - log(x_1! * x_2! * ... * x_n!) - n\nu$ \\
+$\Ri \fr{d}{d\nu}log(L(\nu)) = \fr{x_1 + x_2 + ... + x_n}{\nu} - 0 - n$ \\
+Sei nun $log(L(\nu)) = 0 \Lri \fr{x_1 + x_2 + ... + x_n}{\nu} - n = 0$ \\
+$\Ri (\sum_{i=1}^n x_i) - \nu n = 0$ \\
+$\Ri (\sum_{i=1}^n \fr{x_i}{n}) = \nu$ \\
+$\Ri T_{ML} = (\sum_{i=1}^n \fr{X_i}{n})$ \\
+\subsubsection*{c)}
+Erwartungstreue: \\
+$E(T_{ML}) = E(\sum_{i=1}^n \fr{X_i}{n}) = \fr{1}{n} E(\sum_{i=1}^n X_i) = \fr{1}{n} \sum_{i=1}^n E(X_i) = \fr{n}{n} \mu = \mu$ \\
+$\Ri$ Da der Erwartungswert bei der Poissonverteilung gleich dem Parameter (in diesem Fall $\nu$) ist, ist $T_{ML}$ erwartungstreu \\
+\subsubsection*{d)}
+Varianz: \\
+$V_{\nu}[T_{ML}] = V_{\nu}(\sum_{i=1}^n \fr{X_i}{n}) = \sum_{i=1}^nVar(\fr{1}{n}X_i) = \sum_{i=1}^n(\fr{1}{n^2}Var(X_i))$ \\
+$= \fr{1}{n^2}\sum_{i=1}^n\sigma^2 = \fr{n\sigma^2}{n^2} = \fr{\sigma^2}{n} = \fr{\mu}{n} = \fr{\nu}{n}$ \\
+\subsubsection*{e)}
+Fisher-Information: \\
+$I(\nu) = -E[(\fr{d^2}{d\nu^2}log(f_{\nu}(X)))]$ \\
+$= -E[(\fr{d^2}{d\nu^2} xlog(\nu)-log(x!)-\nu)]$ \\
+$= -E[(\fr{d}{d\nu} \fr{x}{\nu} - 0 - 1)]$ \\
+$= -E[\fr{-x}{\nu^2})]$ \\
+$= -(\fr{-\nu}{\nu^2}) = -(-\fr{1}{\nu}) = \fr{1}{\nu} = \fr{1}{\mu} = \fr{1}{\sigma^2}$ \\
+\subsubsection*{f)}
+Cramer Rao Schranke:
+$Var(T_ML) = \fr{\nu}{n}$ \\
+Schranke = $\fr{1}{I(\nu)} = \nu$ \\
+$\Ri$ Der Schätzer liegt auf der Schranke.
+
+\subsection*{Aufgabe 3}
+Seien $x_u$ und $x_o$ die untere und obere Grenze des Konfidenzintervalls: \\
+$\Ri P(x_u \leq b \leq x_o) = 1 - \alpha$ \\
+$\Ri F(x_o) - F(x_u) = 1 - \alpha$ \\
+Sei $x_m = max(X_1,...,X_n)$ \\
+$\Ri x_u = x_m$ da b nicht kleiner als $x_m$ sein kann. \\
+Weiter weiß ich auch nicht, stimmt denn der Anfang so?
+
+\subsection*{Aufgabe 4}
+-

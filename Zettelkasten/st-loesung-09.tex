@@ -7,7 +7,7 @@
 \begin{document}
 \maketitle
 
-\subsection*{Aufgabe 1}
+\subsection**{Aufgabe 1}
 
 Es handelt sich hierbei um eine Hypergeometrische Verteilung. Gesucht ist der Schätzer, mit dem unsere Stichprobe die höchste Wahrscheinlichkeit aufweist.\\
 Sei Y nun die Zufallsvariable, für die Anzahl der markierten Fische im 2. Fang. Als Erwartungswert ergibt sich: $E(Y) = X \fr{W}{N}$. \\
@@ -17,7 +17,7 @@ Wasser ziehen, so dass nur ganze Zahlen eine Wahrscheinlichkeit > 0 haben könne
 Setzt man nun: $n = E(Y) \Ri n = X \fr{W}{N} \Ri N = X \fr{W}{n}$ wobei N gemäß der Aufgabenstellung die gesuchte Gesamtanzahl der Fische im Wasser ist, und \\
 $\tau(\mathcal{X}) = [X \fr{W}{n}]$ unser maximum likelihood Schätzer ist.
 
-\subsection*{Aufgabe 2}
+\subsection**{Aufgabe 2}
 \( s^2_n = \fr{1}{n-1}\sum_{i=1}^n(X_i - \bar{X})^2 = \fr{1}{n-1}\sum_{i=1}^n(X_i^2 - 2X_i\bar{X}^2 +\bar{X}^2) \) \\
 \( = \fr{1}{n-1}\sum_{i=1}^n(X_i^2) - 2\bar{X}* \sum_{i=1}^n(X_i)  + \sum_{i=1}^n\bar{X}^2) \) \\
 \( = \fr{1}{n-1}\sum_{i=1}^n(X_i^2) - 2\bar{X} * \sum_{i=1}^n(X_i) + n\bar{X}^2 \) \\
@@ -29,9 +29,9 @@ Sei nun allgemein $\sigma$ die Standardabweichung und $\mu$ der Erwartungswert, 
 %\( = \fr{1}{n-1}( E(\sum_{i=1}^n(X_i^2)) - n E((\sum_{i=1}^n(X_i))^2) \) \\
 \( = \fr{1}{n-1}(n(\sigma^2 + \mu^2) - n(\fr{\sigma^2}{n}+\mu^2)) = \fr{1}{n-1}(n\sigma^2-\sigma^2) = \sigma^2 = \) Varianz \\
 %\( \fr{n\sigma^2 - \sigma^2}{n-1} ? \)
-\newpage
-\subsection*{Aufgabe 3}
-\subsubsection*{a)}.\\
+
+\subsection**{Aufgabe 3}.\\
+\subsubsection**{a)}.\\
 Für die gewöhnliche Binomialverteilung gilt: \\
 \( P(X=k) = \binom{n}{k}p^kq^{n-k} \) für k Erfolge bei n Versuchen und Erfolgswahrscheinlichkeit p\\
 Für die gewünschten Ereignisse muss es zunächst bis zum (r+k-1)'ten Versuch genau k Misserfolge und \\
@@ -43,7 +43,7 @@ Ergebnis(also Erfolge in der Formel der Binomialverteilung) so erhält man:
  \( \binom{k+r-1}{k}p^{k+r-1 - k}q^k = \binom{k+r-1}{k}p^{r-1}q^k \) als Wahrscheinlichkeit \\
 für den gewünschten Zustand bis zum (k+r-1)'ten Versuch und schließlich für den (k+r)'ten Versuch
 aufgrund der Unabhängigkeit der Versuche (Bernoulli Experiment): \( f(k;r,p) = \binom{k+r-1}{k}p^{r-1}q^k * p = \binom{k+r-1}{k}p^rq^k \)\\ 
-\subsubsection*{b)}.\\
+\subsubsection**{b)}.\\
 Es handelt sich auch bei dieser Aufgabe um die negative Binomialverteilung: \( f(x;r,p) = \binom{x + r - 1}{x}p^{r}(1-p)^{x} \) \\
 Gesucht ist der Maximum-Likelihood Schätzer für die Erfolgswahrscheinlichkeit (p) also $\bar{p}$ \\
 Es gilt: \( ln(f(x;r,p)) = ln\binom{x+r-1}{x} + r*ln(p) + x(ln(1-p)) \) , wobei es sich also um die Logarithmusfunktion handelt, welche \\
@@ -54,15 +54,15 @@ $\Ri$ Der Maximum-Likelihood-Schätzer ist also $\bar{p} = \fr{r}{r+x}$ \\
 Sei nun n = r+x, also die Anzahl der Durchläufe. Es gilt nun: \( E(\fr{r}{r+x}) = E(\fr{r}{n}) = \fr{1}{n}E(r) = \fr{1}{n}n*p = \fr{np}{n} = p \) \\
 $\Ri$ Der Schätzer ist Erwartungstreu.
 
-\subsection*{Aufgabe 4}
-\subsubsection*{a)}.\\
+\subsection**{Aufgabe 4}
+\subsubsection**{a)}.\\
 Aus der Definion für fast sichere Konvergenz folgt: \\
 \( \A \e > 0 : \E n_0: \A n \geq n_0: P(|X_n - X| \leq \e) = 1 \) \\
 bzw.: \( \A \e > 0 : \E n_0: \A n > n_0: P(|X_n - X| < \e) = 1 \) \\
 \( \Ri \A \e > 0 : \E n_0: \A n > n_0: P(|X_n - X| \geq \e) = 0 \) \\
 \( \Ri \lim{n\ri \infty}P(|X_n - X| \geq \e) = 0 \) \\
 \( \Ri X_n \ov{\P}{\lori} X \)
-\subsubsection*{b)}.\\
+\subsubsection**{b)}.\\
 \(X_n \ov{\P}{\lori} X \) \\
 \( \Ri \lim{n\ri \infty}P(|X_n - X| \geq \e) = 0 \) \\
 $\Ri$ Für genügend große n wird der Abstand zwischen $X_n$ und $X$ beliebig klein \\

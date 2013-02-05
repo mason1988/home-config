@@ -52,6 +52,10 @@
  Entered on [2013-02-03 So 20:50]
 ** TODO funktion für clipboard pasting
  Entered on [2013-02-03 So 20:53]
+** TODO in den latex snippets den stern hinzufügen
+ Entered on [2013-02-05 Di 15:29]
+** TODO footer snippet geht auf zettel statt loesung -> korrigieren
+ Entered on [2013-02-05 Di 15:44]
 * todo
 ** DONE wlan manager für die shell
    - State "DONE"       from "TODO"       [2013-02-04 Mo 10:48]
