@@ -33,6 +33,9 @@ Your order # is: 108848.
 Ich -> 2404605
 Waldemar Hamm -> 2410010
 Rene Schwiegk -> 2355612
+** adresse rainer
+Weidenbruchweg 127
+47809 Krefeld
 * Revive Sessions
 - 1 :: Elementare Stochastik Zettel 8
 * Unterhaltung
@@ -115,6 +118,8 @@ Nächster Dienstag Theo: SR XI , Raum 03C51
 [[file:201301ad-0029362331Avc.png]]
 
 * workflows
+** konzentration generell
+- Musik auf leisester Lautstärke
 ** Workflow Zettelbearbeitung
 1. Zettel auswählen und öffnen
 2. aktuelle Aufgabe ausklappen

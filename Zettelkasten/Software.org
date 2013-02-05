@@ -18,7 +18,8 @@
 *** TODO snippet für regex skipping zusammenstellen
 ** TODO firefox
 *** TODO fehlermeldung beim start prüfen und in den dateien fixen, ggb. .gitignore usw
-*** NEXT pdf in firefox automatisch starten lassen (siehe da wo auch protocol eingestellt wurde)
+*** DONE pdf in firefox automatisch starten lassen (siehe da wo auch protocol eingestellt wurde)
+    - State "DONE"       from "NEXT"       [2013-02-05 Di 10:43]
 *** TODO google pentadactyl yank to clipboard
 *** TODO firefox schließen, wenn der letzte tab geschlossen wurde
 ** TODO Emacs Config Aufräumen
@@ -216,6 +217,17 @@ google: emacs+evil+show+mark
  + standby :: sudo /etc/acpi/sleep.sh
  + standby_alternativ :: sudo pm-hibernate / powersave / suspend ...
  + script von überall asuführbar machen :: sh entfernen, bang(#/bin/bash) anfügen, und in /usr/bin verschieben
+** packages installieren
+- falls noch nicht vorhanden:
+  - launchpad Seite oder sowas suchen
+  - sudo vim /etc/apt/sources.list
+  - irgend eine Version oben bei Launchpad auswählen und kopieren (deb ...)
+  - bei vim pasten (mittlere maustaste)
+  - speichern
+  - sudo apt-get update
+sudo apt-get --fixbroken install   (installiert abhängigkeit, deinstalliert fehlerhaftes)
+sudo apt-get remove paketname   (entfernt paket)
+sudo apt-get purge paketname   (entfernt paket inkl config)
 ** wlan
 wicd-ncurses um netzwerk zu konfigurieren
 ** tastatur
@@ -471,7 +483,9 @@ sudo chmod -v -R ouag+rw *     alles per chmod freigeben
      im Text auch in genau diesen Richtungen !! )
    - Ctrl+x Ctrl+n und Ctrl+x Ctrl+p um ganze 
      Zeile so zu vervollständigen
-* Emacs  
+* Emacs 
+** nützliche Befehle
+global-auto-revert-mode    macht genau das
 ** shortcuts-emacs 						  :shortcuts:
     sudo chmod -v -R ouagrw . matched auch verstecktes
    - igrep und dann regex um dateien zu (durch-)suchen
@@ -644,11 +658,37 @@ M-x visit-tags-table um tag datei zu öffnen
     `M-,’ (‘tags-loop-continue’) – resume ‘tags-search’ or ‘tags-query-replace’ starting at point in a source file
     ‘M-x tags-apropos’ – list all tags in a tags file that match a regexp
     ‘M-x list-tags’ – list all tags defined in a source file
+* wine
+** einrichten
+   sudo add-apt-repository ppa:ubuntu-wine/ppa
+   sudo apt-get update
+   sudo apt-get install wine
+** 32 bit force
+   mv ~/.wine ~/.wine_backup
+   export WINEARCH=win32
+   winetricks
+** sachen installieren
+deinstalliere wine applikation =>  installieren
 * install/make kram
 1. ./configure
 2. make
 3. sudo make install
 * Firefox
+** hints
+:set hintkeys='abcdefg'    um hintkeys zu setzen
+:highlight -a Hint text-transform:uppercase;      zeigt hints in großbuchstaben, reagiert aber auf kleinbuchstaben
+** allgemeines
+:help bla     für hilfe
+:dialog preferences      ruft dialoge auf
+b  um buffer anhand namen oder nummer zu wählen
+:tabde  dettach tab
+:taba   attach tab
+** umgang mit "komplexen" seiten
+Ctrl+z => pass through => native shortcuts können benutzt werden
+   z.b. google-reader und da dann picture up/down
+   siehe auch passkeys option, für dauerhafte einstellung bestimmter Seiten
+ZI  hardcore zoom (sogar videos usw.)
+zz   zoom normal zustand
 ** pentadactyl plugins
 *** installieren
 js Datei in ~/.pentadactyl/plugins/ kopieren
@@ -722,6 +762,7 @@ es wird auch sonst nichts vom capture menü angezeigt
 ** Standardsuche
 about:config und da nach keyword.URL suchen und
 https://www.google.com/search?hl=en&q=  einsetzen
+Alternativ Suchmaschiene installieren(firefox addon) und dann :dialog searchengines
 
 ** Extensions
 + Bugmenot
@@ -805,6 +846,7 @@ c -> caret mode;
 v -> visual mode;
 dann y -> yank
 
+oder mit Y kopieren und in emacs dann mit "*p pasten
 * Shell
 - mit history durchnummerierte Befehlshistory
 - schleife in bash :: for i in {1..10}; do echo $i;done
@@ -1878,6 +1920,41 @@ pass
 # There is also r+ (read and write) mode.
 
 ** elisp
+*** my-make-latex2
+**** overlay erstellen
+     #+begin_src elisp
+     (let (ov) (setq ov (make-overlay 20 30)) (overlay-put ov 'display (create-image "~/test.png")))
+     #+end_src
+**** overlay löschen
+     #+begin_src elisp
+     (remove-overlays start end prop value) ;alles optional, prop und value sind filter
+     #+end_src
+**** find overlay
+     #+begin_src elisp
+     (overlays-at (point)) ; alles was (point) berührt
+     (overlays-in start end) ; alles was start-end berührt
+     (next-overlay-change pos) ; nächstes overlay ab pos
+     #+end_src
+**** overlays traversieren
+     #+begin_src elisp
+     ;nur vorhandensein von overlays prüfen
+     (let (ovs) (setq ovs overlays-at (point)) (if (not (car ovs)) (message "noch kein overlay hier")))
+     ;oder: richtig traversieren
+     (while ovs (let ((ov (car ovs)))
+                (overlay-get ov attr) ;was auch immer man auslesen möchte
+                (setq ovs (cdr ovs))))
+     #+end_src
+**** globale variablen
+gesondert mit (defvar var-name) anmelden
+(defcustom ...) wäre der befehl für abgespeicherte variablen, die über das customize menü erreichbar sind
+**** allgemeines
+    /tmp dient als ordner für tempoäre daten, da gibts auch direkt Schreibzugriff, gelöscht wird bei reboot
+*** listen in elisp
+Listen sind wie bei Schema, also '(a b c) ist die liste a,b,c
+(car '(a b c)) ist gleich a und (car '()) = nil
+(cdr '(a b c)) ist '(b c)
+Traversion läuft also ober eine variable die die liste entgegennimmt, ersten werd auslesen und dann auf '(b c) setzen
+   while prüft dann einfach nur die variable
 *** replace in String
 (setq var1 (replace-regexp-in-string "old" "new" var1))
 *** regex matching

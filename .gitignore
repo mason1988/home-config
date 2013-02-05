@@ -304,3 +304,6 @@ dwhelper/
 /.config/libimobiledevice/
 /.kde/share/
 *session.1*
+/.kde/cache-waschmaschine
+/.kde/socket-waschmaschine
+/.kde/tmp-waschmaschine
