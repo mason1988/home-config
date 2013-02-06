@@ -13,15 +13,14 @@
 *** TODO clocks automatisch für diese zeitspanne generieren lassen
 *** TODO autosave emacs plugin installieren und testen
 ** TODO elisp
-*** NEXT elementare Problemstellungen in elisp mit snippets sammeln
+*** NEXT snippets lösen
 *** TODO popwin nach hilfreichen fenstermodifikationen durchsuchen
-*** TODO snippet für regex skipping zusammenstellen
 ** TODO firefox
 *** TODO fehlermeldung beim start prüfen und in den dateien fixen, ggb. .gitignore usw
 *** DONE pdf in firefox automatisch starten lassen (siehe da wo auch protocol eingestellt wurde)
     - State "DONE"       from "NEXT"       [2013-02-05 Di 10:43]
 *** TODO google pentadactyl yank to clipboard
-*** TODO firefox schließen, wenn der letzte tab geschlossen wurde
+*** NEXT firefox schließen, wenn der letzte tab geschlossen wurde
 ** TODO Emacs Config Aufräumen
 *** DONE überflüssige keymapping dateien entfernen
     - State "DONE"       from "NEXT"       [2013-01-23 Mi 13:21]
@@ -43,16 +42,20 @@
 *** CANCELLED Möglichkeiten prüfen um informationen/texte einem konkreten Header zuzuordnen :CANCELLED:
     - State "CANCELLED"  from "NEXT"       [2013-02-03 So 23:46] \\
       jetzt gibts nen besseren latex modus
-*** TODO my-make-latex-2 zusammenstellen
+*** DONE my-make-latex-2 zusammenstellen
+    - State "DONE"       from "TODO"       [2013-02-06 Mi 10:59]
 **** bisheriger beispielcode
 (defun blatest () (interactive)
   (let (ov)
     (setq ov (make-overlay 20 30))
     (overlay-put ov 'display (create-image "~/test.png"))))
-*** TODO Möglichkeiten sammeln, zum zeilenweisen auslesen und splitten bei trennzeichene
-*** TODO beim link erstellen eben jene information in extra ast unterbringen
-*** TODO 2. löschenroutine, welche nach dem löschen eben diesen wert wieder ausliest
-*** TODO bilder im org - mode in separaten Ordner verschieben
+*** CANCELLED Möglichkeiten sammeln, zum zeilenweisen auslesen und splitten bei trennzeichene :CANCELLED:
+    - State "CANCELLED"  from "TODO"       [2013-02-06 Mi 10:59]
+*** CANCELLED beim link erstellen eben jene information in extra ast unterbringen :CANCELLED:
+    - State "CANCELLED"  from "TODO"       [2013-02-06 Mi 10:59]
+*** CANCELLED 2. löschenroutine, welche nach dem löschen eben diesen wert wieder ausliest :CANCELLED:
+    - State "CANCELLED"  from "TODO"       [2013-02-06 Mi 10:59]
+*** NEXT bilder im org - mode in separaten Ordner verschieben
 *** DONE Funktion bzw. Regex um links und die darin enthaltenen Bilder zu identifizieren
     \\[\\[\\(.*\\)\\]\\]  catched die links
     search-forward-regexp such entsprechend
@@ -75,7 +78,8 @@
 *** DONE iimage bibliothek o.ä. code raussuchen und auf anpassparkeit prüfen
 *** DONE anforderungen an eigenen Modus sammeln
 *** DONE entsprechenden modus entwickeln ;image slicing
-*** NEXT der transparente bereich auf den draufgemappt wird (python) auf mindestgröße setzen
+*** DONE der transparente bereich auf den draufgemappt wird (python) auf mindestgröße setzen
+    - State "DONE"       from "NEXT"       [2013-02-06 Mi 10:59]
 ** TODO Musik Player Einrichten
 *** DONE google awesome-wm automount Ziel: Festplatte unter festem Namen mounten
     - State "DONE"       from "NEXT"       [2013-01-22 Di 19:50]
@@ -83,25 +87,17 @@
 *** TODO Playlists zusammenstellen und in einem Ordner verlinken
 *** TODO Org Mode links für emms möglichkeit suchen
 *** TODO alternative: Helm (/Anything) emms suchen und benutzen
-** TODO Tags							    :PROJECT:
-*** DONE etags installieren
-*** DONE google: wie können tags zu den unterschiedlichen dokumentarten generiert werden
-    - State "DONE"       from "NEXT"       [2013-02-03 So 23:45]
-*** DONE google: welche navigations und sammelmöglichkeiten gibt es?
-    - State "DONE"       from "TODO"       [2013-02-03 So 23:54]
-*** DONE Shortcuts für die Tags entsprechend legen
-    - State "DONE"       from "TODO"       [2013-02-03 So 23:54]
 ** TODO Capturing						    :PROJECT:
 *** TODO welche Captures ;-Templates; würden noch Sinn machen? Broweser/Client
 *** TODO prüfen ob zur commands.tex datei gecaptured werden kann
-*** NEXT raussuchen wie firefox links speichert, und capture schreiben um link für aktuelle Seite an to-read zu senden
+*** NEXT capture um aktuelle firefox seite an to read zu senden
 *** DONE schnellere Shortcuts für Captures 
 *** TODO Captures entsprechend implementieren
 ** TODO Shortcuts						    :PROJECT:
    :LOGBOOK:
    CLOCK: [2013-01-25 Fr 21:23]--[2013-01-25 Fr 21:57] =>  0:34
    :END:
-*** TODO welche Snippets machen noch Sinn? -> einbauen
+*** NEXT welche (ya)snippets machen noch Sinn? -> einbauen
 *** TODO einzelnes zeichen einsetzen und direkt wieder normal-mode
 *** TODO my-keys-minor-mode und evil-normal mode zusammen legen
   [[file:~/.emacs.d/emacs_config.org::*Minormode][Minormode]]
@@ -121,7 +117,6 @@
 *** DONE Emacs wiederholung braucht ein besseres shortcut; z schwer zu finden :shortcut:
 *** DONE zyklisches Pasten von Emacs aus Killring		  :shortcuts:
 *** DONE shortcuts für erstellen von tmp autonamed bookmark und cyclen; in buffer :shortcuts:
-*** NEXT Shortcut Timer in Capture installieren
 *** DONE besseres shortcut für kill-window in awesome
     - State "DONE"       from "TODO"       [2013-01-27 So 23:35]
   [[eshell:*eshell*:cd%20Zettelkasten/][cd Zettelkasten/]]
@@ -175,7 +170,7 @@ google: emacs+evil+show+mark
 ** TODO effizienteres Suchen					    :PROJECT:
 *** DONE Suchmaschine für Quellcodes
     - State "DONE"       from "NEXT"       [2013-02-03 So 23:52]
-*** TODO alternative rc.lua suchen
+*** NEXT alternative rc.lua suchen
 *** TODO alternative .emacs suchen
 *** TODO alternativen zu google prüfen / bessere Befehle sammeln
 ** TODO awesome wm						    :PROJECT:
@@ -187,14 +182,23 @@ google: emacs+evil+show+mark
 *** TODO übersicht zu den spaltenbefehlen anfertigen
 *** TODO übersicht zum Code und dessen config möglichkeiten anfertigen
 *** TODO nochmal die awesomewm konfiguration für tab's raussuchen und versuchen einen Plan zu entwickeln, um dieses sicher zu implementieren
-** DONE eshell							    :PROJECT:
+** TODO eshell							    :PROJECT:
+   - State "TODO"       from "DONE"       [2013-02-06 Mi 11:00]
    - State "DONE"       from "TODO"       [2013-01-23 Mi 12:41]
 *** DONE Autocompletion Eshell googlen Ziel: Möglichkeit umzuschalten. Vielleicht andere Shortcuts?
 *** DONE Autocompletion eshell fixen im moment wird bei tab direkt eingesetzt und es lässt sich nicht weiter schalten
 *** DONE mehrere eshell's, und diese sollten auch von überall aus in einem separaten Frame geöffnet werden können
     - State "DONE"       from "NEXT"       [2013-01-23 Mi 12:41]
-*** TODO google Symlink / alias eshell
-      
+*** NEXT google Symlink / alias eshell
+** DONE Tags							    :PROJECT:
+   - State "DONE"       from "TODO"       [2013-02-06 Mi 11:00]
+*** DONE etags installieren
+*** DONE google: wie können tags zu den unterschiedlichen dokumentarten generiert werden
+    - State "DONE"       from "NEXT"       [2013-02-03 So 23:45]
+*** DONE google: welche navigations und sammelmöglichkeiten gibt es?
+    - State "DONE"       from "TODO"       [2013-02-03 So 23:54]
+*** DONE Shortcuts für die Tags entsprechend legen
+    - State "DONE"       from "TODO"       [2013-02-03 So 23:54]
 * copy and paste
 (yank in emacs = paste)
 

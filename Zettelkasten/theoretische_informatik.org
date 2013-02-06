@@ -618,8 +618,9 @@ welche die Monotonie "bricht". Es kann also nicht pauschal bestimmt werden, ob d
 
 * TODO Theo Prüfung						    :Studium:
   SCHEDULED: <2013-02-11 Mo>
-** NEXT Zettel-13
+** DONE Zettel-13
    DEADLINE: <2013-02-06 Mi>
+   - State "DONE"       from "NEXT"       [2013-02-06 Mi 10:57]
 *** Tutorium 01.02.13
 links, rechtsseitige turingmaschine
 => maschine bewegt sich nicht weiter zurück als startposition

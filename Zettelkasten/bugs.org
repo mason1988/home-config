@@ -4,23 +4,26 @@
 ** NEXT google backward kill word für alternative, die nicht so viel löscht
 * TODO rainbow delimiters setzt behinderte faces
 ** NEXT google rainbow delimiters und faces
-* TODO Ilisp Fehler im Package Manager
-** DONE googlen wie fehlerhafte pakete bei apt-get entfernt werden können
-   - State "DONE"       from "NEXT"       [2013-02-05 Di 10:39]
-* TODO flimmern vom emacs beseitigen
-   http://ivan.kanis.fr/fix-emacs-flicker.html
-** NEXT flimmern emacs googlen
 * TODO Framewechsel auf Seiten wie dem google reader / youtube
 ** DONE in hilfetexten nach Taste suchen, um interpretation von tasten zu unterdrücken
    - State "DONE"       from "NEXT"       [2013-02-05 Di 10:39]
-** TODO google reader und vimperator / pentadactyl
+** NEXT google reader und vimperator / pentadactyl
 * TODO die habits sind zu chaotisch um einen echten überblick zu haben
 ** NEXT die syntax der habits in der agenda view nachvollziehen
 * TODO eshell spinnt rum
 ** DONE Befehl definieren um eshell mode zu switchen und dann zu beenden
    - State "DONE"       from "NEXT"       [2013-02-03 So 23:50]
-** TODO prüfen ob es eine hook gibt mit der man den modeswitch direkt verbinden könnte
+** NEXT prüfen ob es eine hook gibt mit der man den modeswitch direkt verbinden könnte
 * TODO emacs und awesome nach der tastenkombi C-e durchsuchen
+* DONE flimmern vom emacs beseitigen
+  - State "DONE"       from "TODO"       [2013-02-06 Mi 11:03]
+   http://ivan.kanis.fr/fix-emacs-flicker.html
+** DONE flimmern emacs googlen
+   - State "DONE"       from "NEXT"       [2013-02-06 Mi 11:03]
+* DONE Ilisp Fehler im Package Manager
+  - State "DONE"       from "TODO"       [2013-02-06 Mi 11:03]
+** DONE googlen wie fehlerhafte pakete bei apt-get entfernt werden können
+   - State "DONE"       from "NEXT"       [2013-02-05 Di 10:39]
 * DONE tasten kombi für's buffer öffnen umlegen
   - State "DONE"       from "TODO"       [2013-02-01 Fr 11:28]
 ** DONE C-ü C-ö C-ä mit den Buffer Befehlen belegen, Shortcuts die da jetzt drauf sind, einfach ignorieren

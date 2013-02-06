@@ -3,5 +3,5 @@
 # key: zaufgabe
 # --
 #+BEGIN_SRC latex :tangle ${1:st}-loesung-${2:08}.tex
-\\subsection{Aufgabe ${3:6}}
+\\subsection*{Aufgabe ${3:6}}
 #+END_SRC

@@ -52,9 +52,11 @@
  Entered on [2013-02-03 So 20:50]
 ** TODO funktion für clipboard pasting
  Entered on [2013-02-03 So 20:53]
-** TODO in den latex snippets den stern hinzufügen
+** DONE in den latex snippets den stern hinzufügen
+   - State "DONE"       from "TODO"       [2013-02-06 Mi 11:11]
  Entered on [2013-02-05 Di 15:29]
-** TODO footer snippet geht auf zettel statt loesung -> korrigieren
+** DONE footer snippet geht auf zettel statt loesung -> korrigieren
+   - State "DONE"       from "TODO"       [2013-02-06 Mi 11:07]
  Entered on [2013-02-05 Di 15:44]
 ** TODO eigene theme datei lässt sich nicht laden ohne massig bugs in awesome anzuziehen
  Entered on [2013-02-06 Mi 10:22]
@@ -66,8 +68,6 @@
  Entered on [2013-02-03 So 02:34]
 ** TODO workflow für das benutzen der history unter pentadactyl in firefox
  Entered on [2013-02-03 So 17:14]
-** TODO 
- Entered on [2013-02-03 So 19:58]
 ** TODO text wie man vim befehle einrichtet. Google evil vim map
  Entered on [2013-02-04 Mo 13:29]
 ** TODO kurze zusammenfassung zur font konfiguration linux/awsome/emacs
