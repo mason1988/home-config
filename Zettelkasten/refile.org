@@ -3,8 +3,6 @@
  Entered on [2013-02-01 Fr 15:28]
 ** TODO Musik kennenlernrunde
  Entered on [2013-02-01 Fr 15:28]
-** TODO interessanten kram zusammenstellen
- Entered on [2013-02-02 Sa 00:35]
 ** TODO wenn man einer aufgabe nicht weiterkommt, etwas versuchen von dem man weiß dass es falsch ist 
  Entered on [2013-02-02 Sa 00:43]
 ** TODO irgendwelche leicht zugänglichen logging daten um das nachtragen von clock daten leichter zu machen
@@ -30,6 +28,8 @@
  Entered on [2013-02-05 Di 11:20]
 ** TODO http://awesome.naquadah.org/wiki/User_Configuration_Files an ctef für titlebar orientieren usw.
  Entered on [2013-02-05 Di 11:22]
+** TODO Completion UI http://www.emacswiki.org/emacs/CompletionUI für completion skripte (liefert interface)
+ Entered on [2013-02-05 Di 19:07]
 * problem
 ** TODO das win switching nicht nur im normal mode erlauben
  Entered on [2013-02-01 Fr 13:04]
@@ -56,6 +56,8 @@
  Entered on [2013-02-05 Di 15:29]
 ** TODO footer snippet geht auf zettel statt loesung -> korrigieren
  Entered on [2013-02-05 Di 15:44]
+** TODO eigene theme datei lässt sich nicht laden ohne massig bugs in awesome anzuziehen
+ Entered on [2013-02-06 Mi 10:22]
 * todo
 ** DONE wlan manager für die shell
    - State "DONE"       from "TODO"       [2013-02-04 Mo 10:48]
@@ -68,6 +70,8 @@
  Entered on [2013-02-03 So 19:58]
 ** TODO text wie man vim befehle einrichtet. Google evil vim map
  Entered on [2013-02-04 Mo 13:29]
+** TODO kurze zusammenfassung zur font konfiguration linux/awsome/emacs
+ Entered on [2013-02-06 Mi 10:23]
 * wishes
 ** TODO system und routine zum auswendiglernen von emacs kram finden
 ** TODO weg finden um sich die elementaren vim navigation einzuprägen und sie auch wirklich im Alltag einzusetzen
@@ -110,6 +114,21 @@ http://lifehacker.com/5962701/mild-ambient-noise-can-spur-creativity-and-keep-yo
 ** TODO vitamin b ist entscheidend
  Entered on [2013-02-02 Sa 00:40]
 >>>>>>> c4b04928f851b05f416f231b26747181b093fc41
+** TODO Searching within a File
+
+If you don’t have grep, then you may need to write some Lisp which can find a match in a file.
+
+  ;; Visit file unless its already open.
+  (with-current-buffer (find-file-noselect "~/.emacs")
+    (save-excursion ;; Don't change location of point.
+      (goto-char (point-min)) ;; From the beginning...
+      (if (re-search-forward ".*load-path.*" nil t 1)
+          (match-string-no-properties 0)
+        (error "Search failed"))))
+  ==> "(add-to-list 'load-path \"/usr/share/emacs/site-lisp/\")"
+ Entered on [2013-02-05 Di 18:54]
+** TODO other-frame kann von emacs ausgehend den frame switchen
+ Entered on [2013-02-05 Di 19:20]
 * workflows
 ** TODO magit commit merge pull push
  [[file:~/Zettelkasten/refile.org::*Shortcut%20um%20mehrere%20Eintr%C3%A4ge%20bei%20magit%20auf%20einmal%20zu%20stagen%20oder%20zu%20markieren][Shortcut um mehrere Einträge bei magit auf einmal zu stagen oder zu markieren]]

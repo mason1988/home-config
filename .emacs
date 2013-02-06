@@ -8,7 +8,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(bmkp-auto-light-when-set (quote all-in-buffer))
- '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
+ '(bmkp-last-as-first-bookmark-file "~/.emacs.bmk")
  '(dynamic-completion-mode t)
  '(emms-mode-line-mode-line-function (lambda nil))
  '(emms-source-file-default-directory "/media/florian/Elements1/Musik/")

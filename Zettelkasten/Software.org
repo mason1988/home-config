@@ -1921,6 +1921,10 @@ pass
 # There is also r+ (read and write) mode.
 
 ** elisp
+*** TODO durch regex resultate iterieren
+*** TODO bestimmte Linie im code farblich hervorheben
+*** TODO usereingabe abfragen
+*** TODO erzwinge ansicht, also split-windows, find-files und resize-windows
 *** my-make-latex2
 **** overlay erstellen
      #+begin_src elisp

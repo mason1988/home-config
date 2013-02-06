@@ -37,6 +37,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
+beautiful.init("~/.config/awesome/zenburn/theme.lua")
 beautiful.init("/usr/share/awesome/themes/zenburn/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
@@ -435,6 +436,7 @@ function run_once(prg,arg_string,screen)
     end
 end
 
+
 --run_once("emacs24",nil,1)
 --run_once("firefox",nil,1)
 run_once("synapse",nil,1)
@@ -444,5 +446,6 @@ run_once("xfce4-power-manager", nil, 1)
 run_once("install_tasta",nil,1)
 run_once("caffeine","-a",1)
 awful.util.spawn_with_shell("keynav")
+
 ----------------------------- ende modifikation
 
