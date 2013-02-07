@@ -781,6 +781,36 @@ $\a^{\v} \circ \g = \a^{\a^{\v}t_0|\a^{\v}\tilde s_2x_4x_4}_{x_0|x_1}$ \\
 [[/home/florian/Zettelkasten/logik.org_20130201_191034_31741vpD-4.png]]
 [[/home/florian/Zettelkasten/logik.org_20130201_191034_31741vpD-5.png]]
 *** Lösungsskizze
+    Aussagen = Formeln
+    Quantoren => setzen zwar Werte ein, bilden selber aber auch eine Aussage
+    man bedenke aber, dass jede aussage erst durch eine belegung einen Wahrheitswert bekommt.
+
+    wie passt dass dann mit infinum und supremum? Das sind ja keine Aussagen. Doch klar,
+    nur ihren Wahrheitswert müssen sie noch bekommen. Aber das gilt ja für alle Aussagen (Formeln)
+
+    Was bedeutet B denn überhaupt.
+        oberer Term: In der Aussage A wird x durch ein nicht näher definiertes t ersetzt
+	=> wenn Formel als solche wahr, muss sie dies auch für jeden beliebegen term an stelle von
+	   x sein
+	unterer Term: Aussage A ist für alle x wahr (sollte das nicht auch von einer Belegung abhängig sein?)
+
+    eigentliche Frage: woher zieht t seine werte? Woher zieht der Allquantor seine Werte?
+      t muss ungleich x sein, am ende kann dort also nichtmehr x stehen
+
+gibt es einen eigenen Raum für Terme wie t oder variablen wie x oder für alle zusammen?
+
+- Prädikate(relationen) in Aussagen zulässig? *klar das ist ja die idee*
+- wie bestimmt sich der Wahrheitswert für die Substitution? Muss es für alle ersetzungen gelten?
+==== 
+grob formuliert:
+sollte x auch ein Term sein so wäre der obere teil wahr, der untere aber nicht, je nachdem obs davon abhängig ist
+=> der quantor sorgt dafür, dass das x selbst *nicht* mehr von der *belegung erwischt* werden kann
+=> die substitution kann x einfach durch x ersetzen und eine interpretation nach belegung kann stattfinden
+Sei A z.B. = s_2xy
+mit der Belegung s_2(x,y) = 1 wenn x<y 0 sonst
+und x = 3 sowie y = 4
+und t = x
+keine ahnung
 *** Lösung
     
     #+BEGIN_SRC latex :tangle lo-loesung-13.tex
