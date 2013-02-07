@@ -64,6 +64,8 @@
  Entered on [2013-02-06 Mi 19:36]
 ** TODO virtuelle maus spinnt schon wieder rum
  Entered on [2013-02-07 Do 09:01]
+** TODO keynav blockiert auch noch falsche tasten (D)
+ Entered on [2013-02-07 Do 09:12]
 * todo
 ** DONE wlan manager für die shell
    - State "DONE"       from "TODO"       [2013-02-04 Mo 10:48]

@@ -742,7 +742,7 @@ $\a^{\v} \circ \g = \a^{\a^{\v}t_0|\a^{\v}\tilde s_2x_4x_4}_{x_0|x_1}$ \\
 [[/home/florian/Zettelkasten/logik.org_20130201_190946_31741wVu-1.png]]
 [[/home/florian/Zettelkasten/logik.org_20130201_190946_31741wVu-2.png]]
 *** Lösungsskizze
-
+    
 *** Lösung
 #+BEGIN_SRC latex :tangle st-loesung-13.tex
 \section*{Aufgabe 42}
@@ -751,7 +751,7 @@ Sei $X_s$ das Supremum $\Lri \A n \in \N: \fr{X_n}{X_s} \Ri \A n \in N: [X_n] \l
 Sei $X_i$ das Infinum $\Lri \A n \in \N: \fr{X_i}{X_n} \Ri \A n \in N: [X_i] \leq [X_n]$ \\
 \subsection*{b)}.\\
 Sei erneut $X_s$ das Supremum und $X_i$ das Infinum. \\
-$\N \bs \V_nX_n = \N \bs [X_s] = $ %keine Ahnung wie's hier weitergeht
+$\N \bs \V_nX_n = \N \bs [X_s] =$ %keine Ahnung wie's hier weitergeht
 #+END_SRC
 *** Referenzen
 ** TODO Aufgabe 43
@@ -811,11 +811,12 @@ mit der Belegung s_2(x,y) = 1 wenn x<y 0 sonst
 und x = 3 sowie y = 4
 und t = x
 keine ahnung
+
+Wie sind Belegungen überhaupt definiert?
 *** Lösung
 #+BEGIN_SRC latex :tangle lo-loesung-13.tex
 \section*{Aufgabe 44}
 \subsection*{a)}.\\
-
 #+END_SRC
     
 *** Referenzen
