@@ -62,6 +62,8 @@
  Entered on [2013-02-06 Mi 10:22]
 ** TODO bar zieht sich nicht über alle zeichen in latex
  Entered on [2013-02-06 Mi 19:36]
+** TODO virtuelle maus spinnt schon wieder rum
+ Entered on [2013-02-07 Do 09:01]
 * todo
 ** DONE wlan manager für die shell
    - State "DONE"       from "TODO"       [2013-02-04 Mo 10:48]
