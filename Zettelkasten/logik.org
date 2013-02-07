@@ -159,6 +159,46 @@ so dass jedes $M_n$ hat sup/inf: $sup M_n \in  \mc{A} \ni inf M_n$
 Dann gil: $\A a \in \mc{A}, a\not = e \E$ Charakter $\chi: \mc{A} \ri 2$
 $\chi a = 0, xe=1$
 $\chi (sup M_n) = sup \chi M_n$ , $\chi (inf M_n) = inf \chi M_n$
+** Feb 07
+Sei $T \in (PT)^{J\cup Q}$ Formel mit $\a^{\w}P = 1 \A \a \in U^x \A$ grosse Modelle $U \ri T$ ableitbar
+
+Beweis:
+$A \tilde B \Lri \fr{A}{B} \m{abl}, \fr{B}{A} \m{abl} \Ri A = (PT)^{J \cup Q} \bs \tilde$ Boole'sche Algebra, $e = \bar{(PT)^{J\cup Q}_0}$ = ableitbare Formeln
+
+zusätzlich $[\W_x A] = \inf_{t \not = x} [ \iota^t_x \circ A]$ "subst."
+$[\V_x A] = sup_{t \not = x}[\iota^t_x \circ A]$ gilt $\A x \in X, \A A \m{Formel} <= \m{abzählbar viele}$
+
+(Gegenbeweis) Sei $T$ nicht ableitbar Behauptung: $(i) \E \m{Modell} U^{*} (ii) \E \a \in (U^{*}^x \m{mit} \a^{\w}T = 0$
+ad(i) Finde das Modell $U^{*}$ 
+Da T nicht ableitbar $\Ri [T] \not = e \Ri_{Tarski} \E \m{Charakter} \chi : A \ri 2 = \{0,1\}$ (auf Äquiklassen)
+$\m{mit} \chi[T]=0 \m{und} \chi[\w_xA] = inf_{t\not = x}\chi[\iota^t_x \circ A], \chi[\V_x A] = sup_{t\not =x} \chi[\iota^t_x \circ A]$
+$U^{*} = \mathcal{T} \m{Term-Modell} = (\gamma_0 \cup X)^{\gamma}, p_m^{*} = \{(t_1,..,t_m) \in \mathcal{T}^m$
+$\chi[p_mt_1...t_m] = 1 \subset \mathcal{T}^m$
+ad(ii) finde Belegung $\a \in (U^{*})^x = \mc{T}^x$ Termbelegung
+Lemma: $\iota^{\w}A = \chi[A]$ (beide entweder 0 oder 1)
+Bew: Induktion über $rg(A) \geq 0$
+$rg(A) = 0 \Ri A = p_mt_1...t_m$
+$\iota^{\w}p_mt_1..t_m$
+$=\begin{cases} 0 &\mbox{falls} (\iota^{\v}t_1,...,\iota^{\v}t_m) \not \in p_m^{*} \\ 1 &\mbox{sonst} \end{cases}$ 
+$=\begin{cases} 0 &\mbox{falls } (t_1,...,t_m) \not \in p_m^{*} \\ 1 & \mbox{sonst} \end{cases}$ 
+$= \begin{cases} 0 &\mbox{falls } \chi[p_mt_1t_m] = 0 \\ 1 &\mbox{sonst} \end{cases}=\chi[p_mt_1...t_m]$
+$\iota^{\v}t_1 = t_1$ (identität)
+Sei $rgA = n>0 \Ri_{Peano} A = \begin{cases} \bar{B} &\m{Negation} rgA = rgB+1 \Ri rg B < n \\ B \sharp C &\m{Junktion} rgA = rgB+rgC+1 \Ri rgB < n, rg C < n \\ \sharp_xB &\m{Quantion} rgA = rgB+1 \Ri rgB < n \end{cases}$
+
+$A = \bar{B} \Ri \iota^{\w}A = \iota^{\w}\bar{B} = 1 - \iota^{\w}B =_{ind} 1 - \chi[B] = \chi(e-[B]) = \chi \bar{[B]} = \chi [\bar{B}] = \chi[A]$
+$A = B\sharp C \Ri \iota^{\w}A = \iota^{\w} (B\sharp C) = (\iota^{\w}B) \sharp_{(2)} (\iota^{\w}C) =_{ind} (\chi[B]) \sharp_{(2)} (\chi[C]) = \chi([B]\sharp_{\mc{A}}[C])$
+$= \chi([B \sharp C]) = \chi[A]$
+$A = \chi_{x} B, rg\iota^t_x \circ B =_{Satz}(\m{beliebige substi ändert rang nicht} rgB < n \Ri$ Ind anwendbar auf $\iota^t_x \circ B$
+$\iota^{\w}A = \iota^{\w} \sharp_x B = \sharp^{(2)}_{t \not = x}\iota^{\w t_x}_x B$ 
+$= \sharp^{(2)}_{t \not = x} \iota^{\v} \circ \iota^t_x)^{\w}B =_{Assi} \sharp^{(2)}_{t \not = x} \iota^{\w}(\iota^t_x \circ B)$ 
+$\sharp^{(2)}_{t \not = x} \chi[\iota^t_x \circ B] =_{tarski} \chi \sharp^{\mc{A}}_{t \not = x}[\iota^t_x \circ B] = \chi[\sharp_x B] = \chi[A]$
+
+$[\W_xT] \leq [T] \Ri \chi[\W_xP] \leq \chi[T]$
+
+Abgeschlossenheit: Regeln der Form $R_k \ni (a_1,...,a_k|a)$ <= (input|output)
+  Es muss gelten: wenn $(a_1,...,a_k) \in V$ und $(a_1,...,a_k|a) \in R_k$ $\Ri a \in V$
+  dann ist $V \subset_{abgeschlossen} U$
+  
 * Zettel-08
 ** Dateien
 [[/home/florian/Dropbox/lo/lo-zettel-08.pdf::NNN][lo-zettel-08.pdf]]
@@ -582,50 +622,73 @@ $$ = \v_{x_3} p_2s_2x_2x_2x_3 \wedge \w_{x_1}p_3x_2x_1x_4 $$
      erst substitution und dann alpha (?) auf ganz a anwenden
 ** Tutorium 05.02.13
 #+BEGIN_SRC latex
-\section{40}
-$A = p_2s_2x_0x_1\tilde{s_2}x_2s_1x_3$ \\
-$\gamma = \iota^{t_0|\tilde{s_2}x_4x_4}_{x_0 | x_1}  t_0 \in \Tau$ \\
-\subsection{a)}
-Variable $z = (x_0)^{|\W_{x_3}A|}_{\gamma}$ \\
-$|\W_{x_3}A| = |A|\backslash \{x_3\} = \{x_0,x_1,x_2\}$ \\
-Die Ausnahmenenge $|\gamma(|\W_{x_3}A| \backslash \{x_0\})^{\gamma})$ \\
-$= |\tilde{s_2}x_4x_4| = \{x_4\}$ \\
-und $x_0 \not \in \{x_4\}$ \\
-Also $z = x_0$ \\
-\subsection{b)}
-$\eta = \gamma_{x_0}^z = \gamma_{x_0}^{x_0} = \iota_{x_1}^{\tilde{s_2}x_4x_4}$ \\
-\subsection{c)}
-$w = (x_3)^{|A|}_{\eta}$ \\
-$|A| = \{x_0,x_1,x_2,x_3 \}$ \\
-$|\eta(|A| \bs \{x_3})^{\eta}| = |\eta(x_1)| = |\tilde{s_2}x_4x_4| = \{x_4\}$ \\
-$x_3 \not \in \{x_4\}$ Ausnahemenge \\
-$\Ri w = x_3$ \\
-\subsection{d)}
-$\eta^w_{x_3} = \eta^{x_3}_{x_3} = \eta = \iota^{\tilde{s_2}x_4x_4}_{x_1}$ \\
-\subsection{e)}
-$\eta \circ \W_{x_3}A = \gamma_{x_0}^z \circ \W_{x_3}p_2s_2x_0x_1\tilde{s_2}x_2s_1x_3$ \\
-$= \W_{x_3}\gamma_{x_0}^{\x_0} p_2s_2x_0x_1\tilde{s_2}x_2s_1x_3$ \\
-$= \W_{x_3}\iota_{x_1}^{\tilde{s_2}x_4x_4}p_2s_2x_0x_1\tilde{s_2}x_2s_1x_3 = \W_{x_3}p_2x_0\tilde{s_2}x_4x_4\tilde{s_2}x_2s_1x_3$ \\
-\subsection{f)}
-$\gamma \circ \V_{x_0}\W_{x_3}A = \iota^{t_0|\tilde{s_2}x_4x_4}_{x_0|x_1} \V_{x_0}\W_{x_3}p_2s_2x_0x_1\tilde{s_2x_2s_1x_3$ \\
-$= \V_{x_0}\iota^{x_0|\tilde{s_2}x_4x_4}_{x_0|x_1}\W_{x_3}p_2s_2x_0x_1\tilde{s_2}x_2s_1x_3$ \\
-$= \V_{x_0}\W_{x_3}\iota^{x_3|\tilde{s_2}x_4x_4}_{x_3|x_1}p_2s_2x_0x_1\tilde{s_2}x_2s_1x_3$ \\
-$= \V_{x_0}\W_{x_3}p_2s_2x_0\tilde{s_2}x_4x_4\tilde{s_2}x_2s_1x_3$ \\
-\section{41}
-$U = \N \; s^{*}_2(m,n) = m+n \; \tilde{s_2^{*}(m,n) = m*n \; s^{*}_{1}n = n+1 \; p^{*}_2\{(m,n) \in \N x \N | m < n\}$ \\
-$\gamma = \iota^{t_0|\tilde{s_2}x_4x_4}_{x_0|x_1}$ \\
-$\a(x_{\iota}) = 3\iota \in \N$ \\
-\subsection{a)}
-Belegung $\a^{v} \circ \gamma: X \mapsto \N$ \\
-$\a^{\w}\circ \gamma(x_0) = \a^{\w}(t_0)$ \\
-$\a^{\w} \circ \gamma(x_1) = \a^{\w}(\tilde(s_2)x_4x_4) = \tilde{s}_2^{*}(\alpha(x_4), \a(x_4)$ \\
-$= \tilde{s}^{*}(12,12) = 12 * 12 = 144$
-$\a^{\w}\circ \gamma(x_j) = \a \circ \iota(x_j) = \a(x_j) = 3j$ \\
-für $j \geq 2$ \\
-\subsection{b)}
-Sei $\beta:= \a^{\v}\circ \gamma \; B:= \V_{x_0}\W_{x_3}A$ \\
-$\beta^{\w}(B) = sup_{U_1 \in U}\beta^{U_1}_{x_0}\W_{x_3}A= sup_{U_1 \in U}inf_{U_2 \in U}\beta^{U_1|U_2}_{x_0|x_3}p_2s_2x_0x_1\tilde{s_2}x_2s_1x_3$ \\
-\section{42}
+  \section{40}
+  $A = p_2s_2x_0x_1\tilde{s_2}x_2s_1x_3$ \\
+
+  $\gamma = \iota^{t_0|\tilde{s_2}x_4x_4}_{x_0 | x_1}  t_0 \in \tau$ \\
+  \subsection{a)}
+  Variable $z = (x_0)^{|\W_{x_3}A|}_{\gamma}$ \\
+
+  $|\W_{x_3}A| = |A|\backslash \{x_3\} = \{x_0,x_1,x_2\}$ \\
+
+  Die Ausnahmenenge $|\gamma(|\W_{x_3}A| \backslash \{x_0\})^{\gamma})$ \\
+
+  $= |\tilde{s_2}x_4x_4| = \{x_4\}$ \\
+
+  und $x_0 \not \in \{x_4\}$ \\
+
+  Also $z = x_0$ \\
+  \subsection{b)}
+  $\eta = \gamma_{x_0}^z = \gamma_{x_0}^{x_0} = \iota_{x_1}^{\tilde{s_2}x_4x_4}$ \\
+  \subsection{c)}
+  $w = (x_3)^{|A|}_{\eta}$ \\
+
+  $|A| = \{x_0,x_1,x_2,x_3 \}$ \\
+
+  $|\eta(|A| \bs \{x_3\})^{\eta}| = |\eta(x_1)| = |\tilde{s_2}x_4x_4| = \{x_4\}$ \\
+
+  $x_3 \not \in \{x_4\}$ Ausnahemenge \\
+
+  $\Ri w = x_3$ \\
+  \subsection{d)}
+  $\eta^w_{x_3} = \eta^{x_3}_{x_3} = \eta = \iota^{\tilde{s_2}x_4x_4}_{x_1}$ \\
+  \subsection{e)}
+  $\eta \circ \W_{x_3}A = \gamma_{x_0}^z \circ \W_{x_3}p_2s_2x_0x_1\tilde{s_2}x_2s_1x_3$ \\
+
+  $= \W_{x_3}\gamma_{x_0}^{x_0} p_2s_2x_0x_1\tilde{s_2}x_2s_1x_3$ \\
+
+  $= \W_{x_3}\iota_{x_1}^{\tilde{s_2}x_4x_4}p_2s_2x_0x_1\tilde{s_2}x_2s_1x_3 = \W_{x_3}p_2x_0\tilde{s_2}x_4x_4\tilde{s_2}x_2s_1x_3$ \\
+  \subsection{f)}
+  $\gamma \circ \V_{x_0}\W_{x_3}A = \iota^{t_0|\tilde{s_2}x_4x_4}_{x_0|x_1}$ $\V_{x_0}\W_{x_3}p_2s_2x_0x_1\tilde{s_2x_2s_1x_3}$ \\
+
+  $= \V_{x_0}\iota^{x_0|\tilde{s_2}x_4x_4}_{x_0|x_1}\W_{x_3}p_2s_2x_0x_1\tilde{s_2}x_2s_1x_3$ \\
+
+  $= \V_{x_0}\W_{x_3}\iota^{x_3|\tilde{s_2}x_4x_4}_{x_3|x_1}p_2s_2x_0x_1\tilde{s_2}x_2s_1x_3$ \\
+
+  $= \V_{x_0}\W_{x_3}p_2s_2x_0\tilde{s_2}x_4x_4\tilde{s_2}x_2s_1x_3$ \\
+  \section{41}
+  $U = \N \; s^{*}_2(m,n) = m+n \; \tilde{s_2^{*}}(m,n) = m*n \; s^{*}_{1}n = n+1 \; p^{*}_2\{(m,n) \in \N x \N | m < n\}$ \\
+
+  $\gamma = \iota^{t_0|\tilde{s_2}x_4x_4}_{x_0|x_1}$ \\
+
+  $\a(x_{\iota}) = 3\iota \in \N$ \\
+  \subsection{a)}
+  Belegung $\a^{v} \circ \gamma: X \mapsto \N$ \\
+
+  $\a^{\w}\circ \gamma(x_0) = \a^{\w}(t_0)$ \\
+
+  $\a^{\w} \circ \gamma(x_1) = \a^{\w}(\tilde(s_2)x_4x_4) = \tilde{s}_2^{*}(\alpha(x_4), \a(x_4)$ \\
+
+  $= \tilde{s}^{*}(12,12) = 12 * 12 = 144$
+
+  $\a^{\w}\circ \gamma(x_j) = \a \circ \iota(x_j) = \a(x_j) = 3j$ \\
+
+  für $j \geq 2$ \\
+  \subsection{b)}
+  Sei $\beta:= \a^{\v}\circ \gamma \; B:= \V_{x_0}\W_{x_3}A$ \\
+
+  $\beta^{\w}(B) = sup_{U_1 \in U}\beta^{U_1}_{x_0}\W_{x_3}A= sup_{U_1 \in U}inf_{U_2 \in U}\beta^{U_1|U_2}_{x_0|x_3}p_2s_2x_0x_1\tilde{s_2}x_2s_1x_3$ \\
+  \section{42}
 #+END_SRC
 
 ** header
@@ -723,8 +786,11 @@ $\a^{\v} \circ \g = \a^{\a^{\v}t_0|\a^{\v}\tilde s_2x_4x_4}_{x_0|x_1}$ \\
 #+BEGIN_SRC latex :tangle lo-loesung-12.tex
 \end{document}
 #+END_SRC
-* TODO zettel 13						    :Studium:
+* CANCELLED zettel 13					  :Studium:CANCELLED:
   DEADLINE: <2013-02-06 Mi>
+  - State "CANCELLED"  from "TODO"       [2013-02-07 Do 09:33] \\
+    unsinnig sich die ganze arbeit bei der suche oder dem erraten nach und von formalitäten 
+    zu machen, wenns das ganze im tutorium auch einfach so präsentiert gibt.
 ** header
    #+BEGIN_SRC latex :tangle lo-loesung-13.tex
 \documentclass[11pt]{amsart}

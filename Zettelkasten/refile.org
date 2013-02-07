@@ -66,6 +66,10 @@
  Entered on [2013-02-07 Do 09:01]
 ** TODO keynav blockiert auch noch falsche tasten (D)
  Entered on [2013-02-07 Do 09:12]
+** TODO auf dem netbook flimmern die schriften immer noch extrem
+ Entered on [2013-02-07 Do 09:27]
+** TODO extrem störend das zathura nicht auf die selben tasten zum scrollen reagiert wie alles andere
+ Entered on [2013-02-07 Do 09:30]
 * todo
 ** DONE wlan manager für die shell
    - State "DONE"       from "TODO"       [2013-02-04 Mo 10:48]
