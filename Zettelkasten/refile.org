@@ -2,7 +2,7 @@
 ** TODO Film 12 Monkeys
  Entered on [2013-02-01 Fr 15:28]
 ** TODO Musik kennenlernrunde
- Entered on [2013-02-01 Fr 15:28]
+   Entered on [2013-02-01 Fr 15:28]
 ** TODO wenn man einer aufgabe nicht weiterkommt, etwas versuchen von dem man weiß dass es falsch ist 
  Entered on [2013-02-02 Sa 00:43]
 ** TODO irgendwelche leicht zugänglichen logging daten um das nachtragen von clock daten leichter zu machen
@@ -60,6 +60,8 @@
  Entered on [2013-02-05 Di 15:44]
 ** TODO eigene theme datei lässt sich nicht laden ohne massig bugs in awesome anzuziehen
  Entered on [2013-02-06 Mi 10:22]
+** TODO bar zieht sich nicht über alle zeichen in latex
+ Entered on [2013-02-06 Mi 19:36]
 * todo
 ** DONE wlan manager für die shell
    - State "DONE"       from "TODO"       [2013-02-04 Mo 10:48]

@@ -5,13 +5,6 @@
 http://homepage.univie.ac.at/guenther.eder/firstolog1.htm
      und noch mehr auf dieses Seiten
 http://en.wikipedia.org/wiki/First-order_logic
-
-[[htnortp://en.wikipedia.org/wiki/First-order_logic]]
-[[http://en.wikipedia.org/wiki/First-order_logic]]
-[[file://enrn.wikipedia.org/wiki/First-order_logic]]
-[[http://en.wikorsipedia.org/wiki/First-order_logic]]
-[[http://en.wikipediaortsa.org/wiki/First-order_logic]]
-[[http://en.wikipedia.org/wort siki/First-order_logic]]
 * Englisch
 | Deutsch                | Englisch                            |
 |------------------------+-------------------------------------|
@@ -158,12 +151,12 @@ so dass (i) $rg \; p_mt_1 ... t_m = 0$
 Satz: $rg \gamma \circ A = rg A$
 Großer Vollständigkeitssatz:
 $A \in (PT)^{J\cup Q} A^{\w}=1$ (A "wahr") Tautologie in jedem großem Modell
-$\Ri A \in bar{(PT)_0^{J\cup Q}}$ ableitbar "klar"
+$\Ri A \in \bar{(PT)_0^{J\cup Q}}$ ableitbar "klar"
 
-Satz von Tarski: Sei $\mathcal{A}$ Boolesche Algebra, e \in $\mc{A}$
+Satz von Tarski: Sei $\mathcal{A}$ Boolesche Algebra, $e \in$ $\mc{A}$
 Sei $M_n \subset \mathcal{A}$ Folge von Teilmengen $(M_0,M_1,M_2,...)$
 so dass jedes $M_n$ hat sup/inf: $sup M_n \in  \mc{A} \ni inf M_n$
-Dann gil: \A a \in mc{A}, a\not = e \E$ Charakter $\chi: \mc{A} \ri 2$
+Dann gil: $\A a \in \mc{A}, a\not = e \E$ Charakter $\chi: \mc{A} \ri 2$
 $\chi a = 0, xe=1$
 $\chi (sup M_n) = sup \chi M_n$ , $\chi (inf M_n) = inf \chi M_n$
 * Zettel-08
@@ -748,14 +741,18 @@ $\a^{\v} \circ \g = \a^{\a^{\v}t_0|\a^{\v}\tilde s_2x_4x_4}_{x_0|x_1}$ \\
 [[/home/florian/Zettelkasten/logik.org_20130201_190946_31741wVu-0.png]]
 [[/home/florian/Zettelkasten/logik.org_20130201_190946_31741wVu-1.png]]
 [[/home/florian/Zettelkasten/logik.org_20130201_190946_31741wVu-2.png]]
-[[/home/florian/Zettelkasten/logik.org_20130201_190946_31741wVu-3.png]]
 *** Lösungsskizze
+
 *** Lösung
-    
-    #+BEGIN_SRC latex :tangle st-loesung-08.tex
-	    \subsection{Aufgabe 42}
-    #+END_SRC
-    
+#+BEGIN_SRC latex :tangle st-loesung-13.tex
+\section*{Aufgabe 42}
+\subsection*{a)}.\\
+Sei $X_s$ das Supremum $\Lri \A n \in \N: \fr{X_n}{X_s} \Ri \A n \in N: [X_n] \leq [X_s]$ \\
+Sei $X_i$ das Infinum $\Lri \A n \in \N: \fr{X_i}{X_n} \Ri \A n \in N: [X_i] \leq [X_n]$ \\
+\subsection*{b)}.\\
+Sei erneut $X_s$ das Supremum und $X_i$ das Infinum. \\
+$\N \bs \V_nX_n = \N \bs [X_s] = $ %keine Ahnung wie's hier weitergeht
+#+END_SRC
 *** Referenzen
 ** TODO Aufgabe 43
 *** Aufgabenstellung
@@ -766,11 +763,14 @@ $\a^{\v} \circ \g = \a^{\a^{\v}t_0|\a^{\v}\tilde s_2x_4x_4}_{x_0|x_1}$ \\
 [[/home/florian/Zettelkasten/logik.org_20130201_191009_317419f0-4.png]]
 *** Lösungsskizze
 *** Lösung
-    
-    #+BEGIN_SRC latex :tangle lo-loesung-13.tex
-	    \subsection{Aufgabe 43}
-    #+END_SRC
-    
+#+BEGIN_SRC latex :tangle lo-loesung-13.tex
+\section*{Aufgabe 43}
+\subsection*{a)}.\\ % FIXME charakter nachweis fehlt
+Sei $\chi \V_{n=0}^{N}X_n = 1  \Lri \chi(sup_{n\in N}X_n) = 1$ $\Lri n_0 \in (sup_{n\in N}X_n)$ $\Lri \E i \in \N: \chi{X_i} = 1 \Lri \V^{N}_{n=0}\chi(X_n)$ $=1$ \\
+Sei $\chi \W_{n=0}^{N}X_n = 1  \Lri \chi(inf_{n\in N}X_n) = 1$ $\Lri n_0 \in (inf_{n\in N}X_n)$ $\Lri \A i \in \N: \chi{X_i} = 1 \Lri \W^{N}_{n=0}\chi(X_n)$ $=1$ \\
+\subsection*{b)}.\\ % naja...
+Im Beweis für a) wurde nichts vorrausgesetzt, was nicht allgemein für abzählbare Familien gelten würde, also ja.
+#+END_SRC
 *** Referenzen
 ** TODO Aufgabe 44
 *** Aufgabenstellung
@@ -782,17 +782,17 @@ $\a^{\v} \circ \g = \a^{\a^{\v}t_0|\a^{\v}\tilde s_2x_4x_4}_{x_0|x_1}$ \\
 [[/home/florian/Zettelkasten/logik.org_20130201_191034_31741vpD-5.png]]
 *** Lösungsskizze
 *** Lösung
-    
-    #+BEGIN_SRC latex :tangle lo-loesung-13.tex
-	    \subsection{Aufgabe 44}
-    #+END_SRC
+#+BEGIN_SRC latex :tangle lo-loesung-13.tex
+\section*{Aufgabe 44}
+\subsection*{a)}.\\
+
+#+END_SRC
     
 *** Referenzen
 ** footer
-   #+BEGIN_SRC latex :tangle lo-loesung-13.tex
+#+BEGIN_SRC latex :tangle lo-loesung-13.tex
 \end{document}
-   #+END_SRC
-
+#+END_SRC
 * TODO logik-prüfung						    :Studium:
   SCHEDULED: <2013-02-18 Mo>
 ** NEXT Karte der Themengebiete aus dem Semester anfertigen
