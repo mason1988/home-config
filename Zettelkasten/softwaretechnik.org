@@ -505,7 +505,84 @@ siehe pdf-datei: gruppe1 - hausaufgabe 4 - aufgabe c.pdf
 * TODO Übung 12
 ** Aufgabe A
 *** a.
-
+#+TITLE:     Übung 12
+#+AUTHOR:    florian,waldemar,rene
+#+EMAIL:     lerch.florian@yahoo.de
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:nil
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:nil pri:nil tags:nil
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:   
+#+LINK_HOME: 
+#+XSLT:
+  DEADLINE: <2013-02-10 So 23:59>
+** Aufgabe A
+*** Aufgabenstellung :noexport:
+Entwicklungsprozess vorschlagen
+Wasserfallmodell, V-Modell, iterative Entwicklung ...
+*** a)
+**** aufgabe :noexport:
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132500_96084Nq-0.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132500_96084Nq-1.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132500_96084Nq-2.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132500_96084Nq-3.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132500_96084Nq-4.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132500_96084Nq-5.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132500_96084Nq-6.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132500_96084Nq-7.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132500_96084Nq-8.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132500_96084Nq-9.png]]
+**** lösung
+*** b)
+**** aufgabe :noexport:
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132557_9608FYw-0.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132557_9608FYw-1.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132557_9608FYw-2.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132557_9608FYw-3.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132557_9608FYw-4.png]]
+**** lösung
+*** c)
+**** aufgabe :noexport:
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132647_9608Si2-0.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132647_9608Si2-1.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132647_9608Si2-2.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132647_9608Si2-3.png]]
+**** lösung
+*** d)
+**** aufgabe :noexport:
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132721_9608EsF-0.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132721_9608EsF-1.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132721_9608EsF-2.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132721_9608EsF-3.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132721_9608EsF-4.png]]
+**** lösung
+** Aufgabe B
+*** Aufgabenstellung :noexport:
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132853_9608R2L-0.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132853_9608R2L-1.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132853_9608R2L-2.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132853_9608R2L-3.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132853_9608R2L-4.png]]
+*** Lösung
+** Aufgabe C
+*** Aufgabenstellung :noexport:
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_133053_9608eAS-0.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_133053_9608eAS-1.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_133053_9608eAS-2.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_133053_9608eAS-3.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_133053_9608eAS-4.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_133053_9608eAS-5.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_133053_9608eAS-6.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_133053_9608eAS-7.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_133053_9608eAS-8.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_133053_9608eAS-9.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_133053_9608eAS-10.png]]
+[[/home/florian/Zettelkasten/softwaretechnik.org_20130208_133053_9608eAS-11.png]]
+*** Lösung
 * Skript
 ** Anforderungsanalyse
 - soll konkretisieren was Kunde will

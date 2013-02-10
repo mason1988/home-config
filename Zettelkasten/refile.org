@@ -64,6 +64,12 @@
  Entered on [2013-02-06 Mi 19:36]
 ** TODO virtuelle maus spinnt schon wieder rum
  Entered on [2013-02-07 Do 09:01]
+** TODO keynav blockiert auch noch falsche tasten (D)
+ Entered on [2013-02-07 Do 09:12]
+** TODO auf dem netbook flimmern die schriften immer noch extrem
+ Entered on [2013-02-07 Do 09:27]
+** TODO extrem störend das zathura nicht auf die selben tasten zum scrollen reagiert wie alles andere
+ Entered on [2013-02-07 Do 09:30]
 * todo
 ** DONE wlan manager für die shell
    - State "DONE"       from "TODO"       [2013-02-04 Mo 10:48]
@@ -95,11 +101,9 @@
 ** TODO org-scratch installieren
  Entered on [2013-02-09 Sa 21:13]
 * notes
-<<<<<<< HEAD
 ** TODO firefox standart umkonfigurieren
 :dialog preferences => application da im dropdown menü auswählen
  Entered on [2013-02-04 Mo 10:51]
-=======
 ** TODO follow mode => buffer hintereinander
  Entered on [2013-02-01 Fr 13:53]
 ** TODO in org-agenda-custom-commands stecken die Befehle
@@ -119,7 +123,6 @@ http://lifehacker.com/5962701/mild-ambient-noise-can-spur-creativity-and-keep-yo
  Entered on [2013-02-02 Sa 00:36]
 ** TODO vitamin b ist entscheidend
  Entered on [2013-02-02 Sa 00:40]
->>>>>>> c4b04928f851b05f416f231b26747181b093fc41
 ** TODO Searching within a File
 
 If you don’t have grep, then you may need to write some Lisp which can find a match in a file.
@@ -135,8 +138,83 @@ If you don’t have grep, then you may need to write some Lisp which can find a 
  Entered on [2013-02-05 Di 18:54]
 ** TODO other-frame kann von emacs ausgehend den frame switchen
  Entered on [2013-02-05 Di 19:20]
+<<<<<<< HEAD
 ** TODO gibt auf c-kill jetzt delete trailing whitespaces, m-kill löscht immernoch wort
  Entered on [2013-02-08 Fr 20:07]
+=======
+** TODO patch: mittels ediff, befehl ist epatch, vorher einfach in irgend nen buffer oder ne datein packen
+   konkretes wird dann ausgewählt
+   oder ediff-patch-file
+ Entered on [2013-02-08 Fr 11:21]
+** TODO emacs backward kill
+=> M-del löscht bis zu Wortanfang, (backward-kill-word)
+   => M-d löscht bis zum Wortende (kill-word)
+
+ Entered on [2013-02-08 Fr 11:27]
+** TODO buffer switching
+- other-buffer :: zuletzt benutzter buffer(oben auf liste) auch frame wechsel
+- last-buffer :: zuletzt benutzter buffer (nur frame)
+- bury-buffer :: buffer ans ende der buffer liste (wird erst ganz zuletzt von other buffer getroffen)
+- unbury-buffer :: holt den hintersten buffer aus der liste
+
+filtern läuft auf ein filtern der bufferliste hinaus
+
+(defun my-bs-toggle ()
+  "Toggle buffers, ignoring certain ones."
+  (interactive)
+  (catch 'done
+    (dolist (buf (buffer-list))
+      (unless (or (equal (current-buffer) buf)
+                  (my-bs-ignore-buffer (buffer-name buf)))
+        (switch-to-buffer buf)
+        (throw 'done t)))))
+<= buffer toggle last used
+
+_Buffer ignorieren für ido_
+(defvar my-bs-always-show-regexps '("\\*\\(scratch\\|info\\|grep\\|compilation\\)\\*")
+  "*Buffer regexps to always show when buffer switching.")
+(defvar my-bs-never-show-regexps '("^\\s-" "^\\*" "TAGS$")
+  "*Buffer regexps to never show when buffer switching.")
+(defvar my-ido-ignore-dired-buffers t
+  "*If non-nil, buffer switching should ignore dired buffers.")
+
+(defun my-bs-str-in-regexp-list (str regexp-list)
+  "Return non-nil if str matches anything in regexp-list."
+  (let ((case-fold-search nil))
+    (catch 'done
+      (dolist (regexp regexp-list)
+        (when (string-match regexp str)
+          (throw 'done t))))))
+
+(defun my-bs-ignore-buffer (name)
+  "Return non-nil if the named buffer should be ignored."
+  (or (and (not (my-bs-str-in-regexp-list name my-bs-always-show-regexps))
+           (my-bs-str-in-regexp-list name my-bs-never-show-regexps))
+      (and my-ido-ignore-dired-buffers
+           (save-excursion
+             (set-buffer name)
+             (equal major-mode 'dired-mode)))))
+(defvar my-bs-always-show-regexps '("\\*\\(scratch\\|info\\|grep\\|compilation\\)\\*")
+  "*Buffer regexps to always show when buffer switching.")
+  
+
+_und zum schluss:_
+(setq ido-ignore-buffers '(my-bs-ignore-buffer))
+(setq bs-configurations
+      '(("all" nil nil nil nil nil)
+        ("files" nil nil nil (lambda (buf) (my-bs-ignore-buffer (buffer-name buf))) nil)))
+(setq bs-cycle-configuration-name "files")
+** TODO habit syntax
+ repräsentiert vor allem auch history
+- blau :: musste an dem tag nicht gemacht werden
+- grün :: hätte gemacht werden können
+- gelb :: ab dem nächsten tag überfällig
+- rot :: an dem tag bereits überfällig
+
+- asterisk :: wurde an dem tag erledigt
+- ausrufezeichen :: markierung aktueller tag
+ Entered on [2013-02-08 Fr 11:45]
+>>>>>>> eb23e25e6a0b73b987576c43f495463171499e26
 * workflows
 ** TODO magit commit merge pull push
  [[file:~/Zettelkasten/refile.org::*Shortcut%20um%20mehrere%20Eintr%C3%A4ge%20bei%20magit%20auf%20einmal%20zu%20stagen%20oder%20zu%20markieren][Shortcut um mehrere Einträge bei magit auf einmal zu stagen oder zu markieren]]
