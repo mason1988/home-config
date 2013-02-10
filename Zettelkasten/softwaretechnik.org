@@ -502,6 +502,10 @@ siehe pdf-datei: gruppe1 - hausaufgabe 4 - aufgabe c.pdf
    ob dies beim aktuellen Stand möglich ist.
 3. Man kann messen ob es eine Verzögerung gibt und wenn ja ob diese einen signifikanten Wert erreicht (z.B. 
    länger als 5 Minuten)
+* TODO Übung 12
+** Aufgabe A
+*** a.
+
 * Skript
 ** Anforderungsanalyse
 - soll konkretisieren was Kunde will
@@ -577,6 +581,7 @@ siehe pdf-datei: gruppe1 - hausaufgabe 4 - aufgabe c.pdf
 *** Iterativ
      * Prototypen (schnell ausführbares entwickeln und testen)
      * inkrementelle entwicklung (bausteine werden stück für Stück entwickelt
+     * spiralmodell
      * unified Process - Prozesphasen:
        - Anfang: grundlegender Umfang wird geklärt
        - Vertiefung: grundlegende Architektur, Findung Risiken
@@ -595,6 +600,14 @@ siehe pdf-datei: gruppe1 - hausaufgabe 4 - aufgabe c.pdf
      => Kunde wird eng eingebunden
 Pair Programming = grundsätzlich mit mehreren leuten
   zusammen programmieren => Kompetenz verteilt sich
+*** Konkrete Prozesse:
+    - Wasserfallmodell (erzwungene reihenfolge der prozesse)
+    - Spiralmodell (ähnlich wie wasserfall, aber man dreht sich im kreis => gleiche phasen werden immer wieder durchlauf => iteratives arbeiten)
+        => Wasserfallmodell in einer Schleife
+    - V - Modell (verwand mit Wasserfall, nach der entwicklung noch testphasen)
+    - Extreme Programming(schnell und dreckig, agile entwicklung)
+    - inkrementelle Entwicklung (=> schnelles erschaffen ausführbarer Ergebnisse, Bausteine werden Stück für Stück entwickelt)
+    - pair programming, immer zusammen entwickeln
 ** Konfigurationsmanagement
     * Problematiken:
       - wo liegen Dateien
@@ -684,3 +697,4 @@ Pair Programming = grundsätzlich mit mehreren leuten
 ** TODO Problematische Zettelaufgaben nochmal lösen
 ** TODO problemgebiete ergänzen, map erweitern
 ** TODO zu noch problematischen Feldern weitere Aufgaben suchen
+   

@@ -210,6 +210,51 @@ google: emacs+evil+show+mark
    - geht eigentlich schon, aber merke: 
      & ans Ende für separaten task
      ctrl backsp um ganze wörter zu löschen
+* NEXT ubiquity
+ :LOGBOOK:
+   CLOCK: [2013-02-09 Sa 21:13]--[2013-02-09 Sa 21:21] =>  0:08
+   :END:
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2013-02-09 Sa 21:21
+  :ARCHIVE_FILE: ~/Zettelkasten/todo.org
+  :ARCHIVE_OLPATH: Someday / maybe
+  :ARCHIVE_CATEGORY: todo
+  :ARCHIVE_TODO: NEXT
+  :END:
+   einfach mal testen
+* DONE weitere pentadactyl shortcuts/befehle
+  - State "DONE"       from "TODO"       [2013-01-24 Do 03:52]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2013-02-09 Sa 21:23
+  :ARCHIVE_FILE: ~/Zettelkasten/todo.org
+  :ARCHIVE_OLPATH: Someday / maybe
+  :ARCHIVE_CATEGORY: todo
+  :ARCHIVE_TODO: DONE
+  :END:
+* DONE vimperator addons sammeln
+  - State "DONE"       from "TODO"       [2013-01-24 Do 03:53]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2013-02-09 Sa 21:23
+  :ARCHIVE_FILE: ~/Zettelkasten/todo.org
+  :ARCHIVE_OLPATH: Someday / maybe
+  :ARCHIVE_CATEGORY: todo
+  :ARCHIVE_TODO: DONE
+  :END:
+  - sieht bei denen eigentlich auch nicht anders aus (offizielle google code site)
+  - die Zeichen sind da aber ganz gut hervorgehoben
+* DONE slime installieren und einrichten
+  - State "DONE"       from "TODO"       [2013-01-24 Do 03:53]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2013-02-09 Sa 21:23
+  :ARCHIVE_FILE: ~/Zettelkasten/todo.org
+  :ARCHIVE_OLPATH: Someday / maybe
+  :ARCHIVE_CATEGORY: todo
+  :ARCHIVE_TODO: DONE
+  :END:
+
+
+
+
 
 
 

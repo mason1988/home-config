@@ -723,8 +723,9 @@ $\a^{\v} \circ \g = \a^{\a^{\v}t_0|\a^{\v}\tilde s_2x_4x_4}_{x_0|x_1}$ \\
 #+BEGIN_SRC latex :tangle lo-loesung-12.tex
 \end{document}
 #+END_SRC
-* TODO zettel 13						    :Studium:
+* DONE zettel 13						    :Studium:
   DEADLINE: <2013-02-06 Mi>
+  - State "DONE"       from "TODO"       [2013-02-09 Sa 14:32]
 ** header
    #+BEGIN_SRC latex :tangle lo-loesung-13.tex
 \documentclass[11pt]{amsart}
@@ -744,7 +745,7 @@ $\a^{\v} \circ \g = \a^{\a^{\v}t_0|\a^{\v}\tilde s_2x_4x_4}_{x_0|x_1}$ \\
 *** Lösungsskizze
 
 *** Lösung
-#+BEGIN_SRC latex :tangle st-loesung-13.tex
+#+BEGIN_SRC latex :tangle lo-loesung-13.tex
 \section*{Aufgabe 42}
 \subsection*{a)}.\\
 Sei $X_s$ das Supremum $\Lri \A n \in \N: \fr{X_n}{X_s} \Ri \A n \in N: [X_n] \leq [X_s]$ \\

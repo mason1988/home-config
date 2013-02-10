@@ -92,6 +92,8 @@
  Entered on [2013-01-31 Do 15:02]
 ** TODO planen wie die tasta einhändiger gemacht werden kann
  Entered on [2013-02-03 So 20:00]
+** TODO org-scratch installieren
+ Entered on [2013-02-09 Sa 21:13]
 * notes
 <<<<<<< HEAD
 ** TODO firefox standart umkonfigurieren
@@ -133,6 +135,8 @@ If you don’t have grep, then you may need to write some Lisp which can find a 
  Entered on [2013-02-05 Di 18:54]
 ** TODO other-frame kann von emacs ausgehend den frame switchen
  Entered on [2013-02-05 Di 19:20]
+** TODO gibt auf c-kill jetzt delete trailing whitespaces, m-kill löscht immernoch wort
+ Entered on [2013-02-08 Fr 20:07]
 * workflows
 ** TODO magit commit merge pull push
  [[file:~/Zettelkasten/refile.org::*Shortcut%20um%20mehrere%20Eintr%C3%A4ge%20bei%20magit%20auf%20einmal%20zu%20stagen%20oder%20zu%20markieren][Shortcut um mehrere Einträge bei magit auf einmal zu stagen oder zu markieren]]

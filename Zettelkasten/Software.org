@@ -1075,7 +1075,6 @@ zeichen hinter $ muss frei sein
 alternativ: \( und \) für kleine schrift oder
 \[ \] oder $$ $$ für größere Schrift
 * Windowmanager
-
    :PROPERTIES:
    :ID:       0001
    :END:

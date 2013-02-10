@@ -3,37 +3,28 @@
 ** TODO ubuntu vs mint akku genau das bei google
 ** TODO regex icicle und rx makro testen
 ** TODO gnome keyring bug beheben
-** TODO festplatten automatisch laden 
+** TODO festplatten automatisch laden
 ** TODO Netbook neu einrichten
 - brainstorming, xorg (wieder) automatisch booten (google startx)
 ** NEXT tiling windowmanager
 *** notion wm / stump wm
 *** euclid wm
-*** lunchbox wm 
+*** lunchbox wm
     hat z.B. alternativen ansatz für tabs
 *** plwm
     toolkit um mit python nen windowmanager zu entwickeln
-
 *** clfswm -kein reiner tiling manager, dafür common lisp-
 *** xwem
+    basiert auch auf emacs gedanken ( => x windows emacs manager )
+    => fenster können wie buffer benutzt werden
 ** TODO tiling in non tiling window managern - software -
    z.B. in fluxbox - +tabs -
 *** stiler
 *** pytyle
-*** wumwum 
+*** wumwum
     - eher weniger verlocend im moment
 *** PyWO
-** TODO ubiquity
-   einfach mal testen
-** DONE weitere pentadactyl shortcuts/befehle
-   - State "DONE"       from "TODO"       [2013-01-24 Do 03:52]
-** DONE vimperator addons sammeln
-   - State "DONE"       from "TODO"       [2013-01-24 Do 03:53]
-   - sieht bei denen eigentlich auch nicht anders aus (offizielle google code site)
-   - die Zeichen sind da aber ganz gut hervorgehoben
-** DONE slime installieren und einrichten
-   - State "DONE"       from "TODO"       [2013-01-24 Do 03:53]
-* Todo-Eingang						
+* Todo-Eingang
 ** TODO prüfen: https://github.com/dgutov/point-stack/blob/master/point-stack.el
 ** TODO http://sachachua.com/blog/2013/01/emacs-org-display-projects-with-a-few-subtasks-in-the-agenda-view/ lesen
 ** TODO .emacs Datei splitten mit org-babel-load-file in kategorien

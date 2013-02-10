@@ -284,6 +284,10 @@ Clock summary at [2013-01-31 Do 01:47]
   CLOCK: [2013-01-24 Do 16:02]--[2013-01-24 Do 16:14] =>  0:12
   :END:
 * additional clocks						    :default:
+** icq
+   :LOGBOOK:
+   CLOCK: [2013-02-10 So 11:37]--[2013-02-10 So 12:27] =>  0:50
+   :END:
 * studienorganisation						    :default:
   :LOGBOOK:
   CLOCK: [2013-01-25 Fr 20:10]--[2013-01-25 Fr 20:19] =>  0:09

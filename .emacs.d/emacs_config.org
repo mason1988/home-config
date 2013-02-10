@@ -248,6 +248,8 @@
 (define-key my-keys-minor-mode-map (kbd "<f6>") 'eshell)
 (key-chord-define my-keys-minor-mode-map (kbd "uu") (kbd "C-u"))
 
+(global-set-key (kbd "<C-backspace>") 'delete-trailing-whitespace)
+
 (define-key my-keys-minor-mode-map (kbd "<f5>") 'kill-frame)
 (global-set-key (kbd "C-ä g") 'yas/make-placeholder)
 (global-set-key (kbd "C-ä f") 'yas/new-snippet-with-content)
