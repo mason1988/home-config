@@ -139,6 +139,78 @@ If you don’t have grep, then you may need to write some Lisp which can find a 
  Entered on [2013-02-05 Di 18:54]
 ** TODO other-frame kann von emacs ausgehend den frame switchen
  Entered on [2013-02-05 Di 19:20]
+** TODO patch: mittels ediff, befehl ist epatch, vorher einfach in irgend nen buffer oder ne datein packen
+   konkretes wird dann ausgewählt
+   oder ediff-patch-file
+ Entered on [2013-02-08 Fr 11:21]
+** TODO emacs backward kill
+=> M-del löscht bis zu Wortanfang, (backward-kill-word)
+   => M-d löscht bis zum Wortende (kill-word)
+
+ Entered on [2013-02-08 Fr 11:27]
+** TODO buffer switching
+- other-buffer :: zuletzt benutzter buffer(oben auf liste) auch frame wechsel
+- last-buffer :: zuletzt benutzter buffer (nur frame)
+- bury-buffer :: buffer ans ende der buffer liste (wird erst ganz zuletzt von other buffer getroffen)
+- unbury-buffer :: holt den hintersten buffer aus der liste
+
+filtern läuft auf ein filtern der bufferliste hinaus
+
+(defun my-bs-toggle ()
+  "Toggle buffers, ignoring certain ones."
+  (interactive)
+  (catch 'done
+    (dolist (buf (buffer-list))
+      (unless (or (equal (current-buffer) buf)
+                  (my-bs-ignore-buffer (buffer-name buf)))
+        (switch-to-buffer buf)
+        (throw 'done t)))))
+<= buffer toggle last used
+
+_Buffer ignorieren für ido_
+(defvar my-bs-always-show-regexps '("\\*\\(scratch\\|info\\|grep\\|compilation\\)\\*")
+  "*Buffer regexps to always show when buffer switching.")
+(defvar my-bs-never-show-regexps '("^\\s-" "^\\*" "TAGS$")
+  "*Buffer regexps to never show when buffer switching.")
+(defvar my-ido-ignore-dired-buffers t
+  "*If non-nil, buffer switching should ignore dired buffers.")
+
+(defun my-bs-str-in-regexp-list (str regexp-list)
+  "Return non-nil if str matches anything in regexp-list."
+  (let ((case-fold-search nil))
+    (catch 'done
+      (dolist (regexp regexp-list)
+        (when (string-match regexp str)
+          (throw 'done t))))))
+
+(defun my-bs-ignore-buffer (name)
+  "Return non-nil if the named buffer should be ignored."
+  (or (and (not (my-bs-str-in-regexp-list name my-bs-always-show-regexps))
+           (my-bs-str-in-regexp-list name my-bs-never-show-regexps))
+      (and my-ido-ignore-dired-buffers
+           (save-excursion
+             (set-buffer name)
+             (equal major-mode 'dired-mode)))))
+(defvar my-bs-always-show-regexps '("\\*\\(scratch\\|info\\|grep\\|compilation\\)\\*")
+  "*Buffer regexps to always show when buffer switching.")
+  
+
+_und zum schluss:_
+(setq ido-ignore-buffers '(my-bs-ignore-buffer))
+(setq bs-configurations
+      '(("all" nil nil nil nil nil)
+        ("files" nil nil nil (lambda (buf) (my-bs-ignore-buffer (buffer-name buf))) nil)))
+(setq bs-cycle-configuration-name "files")
+** TODO habit syntax
+ repräsentiert vor allem auch history
+- blau :: musste an dem tag nicht gemacht werden
+- grün :: hätte gemacht werden können
+- gelb :: ab dem nächsten tag überfällig
+- rot :: an dem tag bereits überfällig
+
+- asterisk :: wurde an dem tag erledigt
+- ausrufezeichen :: markierung aktueller tag
+ Entered on [2013-02-08 Fr 11:45]
 * workflows
 ** TODO magit commit merge pull push
  [[file:~/Zettelkasten/refile.org::*Shortcut%20um%20mehrere%20Eintr%C3%A4ge%20bei%20magit%20auf%20einmal%20zu%20stagen%20oder%20zu%20markieren][Shortcut um mehrere Einträge bei magit auf einmal zu stagen oder zu markieren]]
