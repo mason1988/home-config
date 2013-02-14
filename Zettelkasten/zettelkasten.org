@@ -57,6 +57,8 @@ Zum Glück treffen sie auf den rauhbeinigen aber liebenswerten Kapitän Hadoque,
 [[/home/florian/Zettelkasten/zettelkasten.org_20130129_162457_14535u91-3.png]]
 
 * Geschenke
+** prank pack
+http://www.amazon.com/Prank-Pack-Pet-Sweep/dp/B00A26IUJK
 ** phillips light
 ** mini touch gerät
 ** Reiskocher
@@ -211,3 +213,10 @@ Nächster Dienstag Theo: SR XI , Raum 03C51
 ** TODO icy taste neue belegen (google remap icy key)
 ** TODO fenster separat öffnen, in dem tempoäres geöffnet wird
    - anwendungen wie popwin könnten als inspiration dienen
+* Bücher
+** Tony Buzan - The Buzan Study Skills Handbook
+schreckliches Buch, das hier präsentierte Konzept einer Mindmap ist unglaublich 
+oberflächlich und kann nur sehr wenige und vorallem sehr simple Informationen halten.
+Absolut nutzlos.
+* aktuelle Verbesserungen / zu erinnern
+- latex: \lin = \overline statt \bar

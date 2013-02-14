@@ -128,7 +128,7 @@ $P(Y|B) = \frac{E(1_{B} * Y)}{P(B)}$
 
 * Wörterbuch
 - fast sichere Konvergenz ::  [[file:201301ad-12522012712rsM.png]] entspricht [[file:201301ad-1253481271242S.png]]
-     alternativ: \( Pr(\lim{n\ri \infty}X_n = X) = 1\)
+     alternativ: $Pr(\lim{n\ri \infty}X_n = X) = 1$
 - Konvergenz der Wahrscheinlichkeit :: [[file:201301ad-13014912712sfr.png]] entspricht [[file:201301ad-12553512712FBZ.png]] 
      die Ws dafür, dass der Abstand X_n zu X >= epsilon ist, wird zunehmend kleiner (bis 0)
 - Erwartungswert :: [[file:201301ad-2329314949s0X.png]] = [[file:201301ad-23333749495-d.png]]
@@ -192,10 +192,6 @@ b) Erwartungswert ist jedenfalls 0
 darauf beschränken das es gerade sein muss, zB mit 2m als index oder so
 
 c) Wahrscheinlichkeit für Rückker bei bei unendlich ist 1
-[[/home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121212_065955_6717Vos.png]] allgemein
-[[/home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121212_070048_6717iyy.png]] bei Symmetrie
-[[/home/florian/Dropbox/Zettelkasten/zettelkasten.org_20121212_070111_6717U8B.png]]
-
 $\frac{n}{2}$ einser um Zustand zu halten (rest passt dann ja),
 und $\frac{k}{2}$ um da ja aufgestiegen werden soll
 die müssen allen innerhalb des Pfades gezogen werden
@@ -1134,7 +1130,7 @@ $= \fr{(a+b)^2}{12} + \fr{ab}{24}$
 *** Referenzen
 ** TODO Aufgabe 4
 *** Aufgabenstellung
-[[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220722_12492Kig-0.png]]
+    [[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220722_12492Kig-0.png]]
 [[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220722_12492Kig-1.png]]
 [[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220722_12492Kig-2.png]]
 [[/home/florian/Zettelkasten/elementare_stochastik.org_20130125_220722_12492Kig-3.png]]

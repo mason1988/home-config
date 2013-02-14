@@ -1,0 +1,186 @@
+% Created 2013-02-10 So 18:28
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\providecommand{\alert}[1]{\textbf{#1}}
+
+\title{Übung 12}
+\author{florian,waldemar,rene}
+\date{2013-01-17 Do}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs Org-mode version 7.8.11}}
+
+\begin{document}
+
+\maketitle
+
+\setcounter{tocdepth}{3}
+\tableofcontents
+\vspace*{1cm}
+\section{organisation}
+\label{sec-1}
+
+\begin{itemize}
+\item email: selecture@mathematik.uni-marburg.de
+\item Gruppe 1
+\end{itemize}
+\section{Übung 11}
+\label{sec-2}
+\subsection{Aufgabe A}
+\label{sec-2-1}
+\subsubsection{Lösung}
+\label{sec-2-1-1}
+
+Erst durch die Anforderungsanalyse kann der bzw. können die Programmierer erst wirklich
+in Erfahrung bringen, was der Kunde wirklich haben möchte. Sollte man
+vorher schon anfangen zu entwickeln, so besteht das Risiko, dass man
+an dem vorbei entwickelt was der Kunde haben möchte. Vielleicht
+investiert man viel Zeit in Features an denen der Kunde eigentlich gar
+kein richtiges Interesse hat, oder aber trifft bereits
+Designentscheidungen, die im Widerspruch zum eigentlichen Wunsch des
+Kunden stehen.
+Aber es können sich auch technischere Probleme ergeben. Durch die
+Anforderungsanalyse wird erst effektive Planung und Zusammenarbeit
+mehrerer Programmierer möglich. Wenn nicht klar definiert ist, was das
+Programm alles leisten können muss, ist effektives Planung der Arbeit
+nur schwer möglich so dass z.B. echte Überprüfbarkeit der Arbeit gar
+nicht machbar ist, was dann natürlich auch wieder zu Problemen mit dem
+Kunden führen kann, da zu diesem Zeitpunkt in der Regel ja auch noch
+kein richtiger Vertrag besteht.
+\subsection{Aufgabe B}
+\label{sec-2-2}
+\subsubsection{Lösung}
+\label{sec-2-2-1}
+
+\begin{itemize}
+\item wo liegt die Datenbank, mit welcher die Route ermittelt wird?
+\item welche Anbindung an andere Systeme besteht, um die Kreditkarte
+      zu prüfen?
+\end{itemize}
+\subsection{Aufgabe C}
+\label{sec-2-3}
+\subsubsection{Lösung}
+\label{sec-2-3-1}
+\begin{itemize}
+
+\item Fahrschein kaufen
+\label{sec-2-3-1-1}%
+\begin{itemize}
+
+\item Titel\\
+\label{sec-2-3-1-1-1}%
+Fahrschein kaufen
+
+\item Kurzbeschreibung\\
+\label{sec-2-3-1-1-2}%
+Der Kunde betätigt den Startknopf, wählt dann seine Route und
+      und bezahlt dann mit einer Kreditkarte.
+
+\item Aktoren\\
+\label{sec-2-3-1-1-3}%
+Potenzielle Fahrgast
+
+\item Vorbedingungen\\
+\label{sec-2-3-1-1-4}%
+keine
+
+\item Beschreibung Ablauf
+\label{sec-2-3-1-1-5}%
+\begin{enumerate}
+\item Der Kunde betätigt den Startknopf
+\item Automat zeigt Menü für Zielbahnhofsuche an
+\item Kunde gibt Zielbahnhof an
+\item Automat liest Suchergebnisse aus der Datenbank
+\item Kunde bestätigt eins der Ergebnisse
+\item Automat berechnet Preis
+\item Kunde gibt Kreditkarte ein
+\item Kunde gibt Geheimnummer ein
+\item Automat prüft Nummer und Kreditkarte
+\item falls Erfolg: Automat hebt Geld ab, druckt Fahrschein und
+          gibt Karte wieder aus
+\end{enumerate}
+
+\item Auswirkungen\\
+\label{sec-2-3-1-1-6}%
+Unter Umständen gibt es eine maximale Fahrgastanzahl für die
+      Züge welcher sich dann genähert wurde. Allgemein endet der
+      Automat aber im selben Zustand, in welchem er angefangen hat,
+      also ohne echte Auswirkungen.
+
+\item Anmerkungen
+\label{sec-2-3-1-1-7}%
+\end{itemize} % ends low level
+
+\item Rechtschreibprüfung in einem Texteditor
+\label{sec-2-3-1-2}%
+\begin{itemize}
+
+\item Titel\\
+\label{sec-2-3-1-2-1}%
+Rechtschreibprüfung in einem Texteditor
+
+\item Kurzbeschreibung\\
+\label{sec-2-3-1-2-2}%
+Benutzer startet die Rechtschreibprüfung und bekommt dann alle
+      Fehler angezeigt und entscheidet jeweils, was pasieren soll.
+
+\item Aktoren\\
+\label{sec-2-3-1-2-3}%
+Benutzer des Texteditors
+
+\item Vorbedingungen\\
+\label{sec-2-3-1-2-4}%
+Texteditor mit Text drin muss geöffnet sein.
+
+\item Beschreibung Ablauf
+\label{sec-2-3-1-2-5}%
+\begin{enumerate}
+\item Benutzer startet Rechtschreibprüfung
+\item Programm vergleicht Wortweise die Inhalte des Textdokumentes mit Wortdatenbank
+         und bildet eine Liste mit Wörtern die nicht gefunden werden können
+\item Es wird ein Fenster eingeblendet in welchem jeweils der aktuelle Fehler angezeigt wird
+         zusammen mit ähnlichen Worteinträgen aus der Datenbank, außerdem ein Button fürs ignorieren
+\item der Benutzer wählt entwededer einen Worteintrag oder ignorieren
+\item das Programm ersetzt das Wort und springt weiter zum nächsten Fehler, oder springt direkt
+         weiter
+\end{enumerate}
+
+\item Auswirkungen\\
+\label{sec-2-3-1-2-6}%
+Die Fehler im Text wurden korrigiert.
+
+\item Anmerkungen
+\label{sec-2-3-1-2-7}%
+\end{itemize} % ends low level
+\end{itemize} % ends low level
+\subsection{Aufgabe D}
+\label{sec-2-4}
+\subsubsection{Lösung}
+\label{sec-2-4-1}
+
+\begin{enumerate}
+\item Die Ladezeiten zwischen den einzelnen Menüeinträgen muss in jeder Situation unterhalb von 2 Sekunden liegen.
+\item Die Software darf mitsamt der Datenbank und allen zur Funktion benötigten Modulen nicht größer als 20mb werden.
+\item Die Menüs müssen mittels eines Touchpads bedienbar sein, wobei die Fehlerrate nicht oder falsch erkannter
+    Eingaben im Durchschnitt unterhalb von 5\% liegen muss.
+\item Die Software muss eine Fehlerfreie und abgesicherte Kommunikation mit den Bankservern garantieren
+\item Das System darf innerhalb eines Monats bei vielfacher Nutzung nur maximal ein mal abstürzen. Im Falle eines
+   absturzes muss garantiert sein, dass der Nutzer keine Möglichkeit der Interaktion mehr besitzt.
+\end{enumerate}
+
+\end{document}

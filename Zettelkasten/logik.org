@@ -93,7 +93,7 @@ Variablen Substitution :: X -> X, [[file:201301ad-1333455300-3e.png]]  [[file:20
 ** Jan 27
 *** Hilbert Kalkül der Prädikatenlogik
 (Erweiterung des Kalküls der Aussagenlogik)
-$\bar{\P}^J$ = Formeln,  Relations-Algebra
+$\lin{\P}^J$ = Formeln,  Relations-Algebra
 - Die ganzen Tautologien => kontante Nullstellige Regeln
 variable 0-stellige Regeln:
     $\frac{\V_xA}{\lnot \W_xA} = \frac{\V_xA}{\lnot \W_x \lnot A}, \fr{\lnot \W_xA}{\V_xA}$
@@ -140,18 +140,18 @@ $\a^{\v}\circ\iota^t_x = \a^{\a^{\v}t}_x : X \mt U$
 ** Feb 04
 $[\W_xA] = \un{t\not = x}{inf}[\iota^t_x \circ A]$ = größte untere Schranke
 $[\V_xA] = \un{t\not = x}{sup}[\iota^t_x \circ A]$ = kleinste obere Schranke
-$\bar{\iota^t_x \circ \bar{A}} = \iota^t_x \bar{\bar{A}}$
+$\lin{\iota^t_x \circ \lin{A}} = \iota^t_x \lin{\lin{A}}$
 $\E Rang: (PJ)^{J\cup Q} \ri \N$
 $A \mapsto vg(A) =$ Rang von A
 so dass (i) $rg \; p_mt_1 ... t_m = 0$
-(ii) $rg\bar{A} = 1+rgA$
+(ii) $rg\lin{A} = 1+rgA$
 (iii) $rg A \# B = 1 + rgA + rgB$
 (iv) $rg\#_xA = 1+ rg(A)$
 
 Satz: $rg \gamma \circ A = rg A$
 Großer Vollständigkeitssatz:
 $A \in (PT)^{J\cup Q} A^{\w}=1$ (A "wahr") Tautologie in jedem großem Modell
-$\Ri A \in \bar{(PT)_0^{J\cup Q}}$ ableitbar "klar"
+$\Ri A \in \lin{(PT)_0^{J\cup Q}}$ ableitbar "klar"
 
 Satz von Tarski: Sei $\mathcal{A}$ Boolesche Algebra, $e \in$ $\mc{A}$
 Sei $M_n \subset \mathcal{A}$ Folge von Teilmengen $(M_0,M_1,M_2,...)$
@@ -163,7 +163,7 @@ $\chi (sup M_n) = sup \chi M_n$ , $\chi (inf M_n) = inf \chi M_n$
 Sei $T \in (PT)^{J\cup Q}$ Formel mit $\a^{\w}P = 1 \A \a \in U^x \A$ grosse Modelle $U \ri T$ ableitbar
 
 Beweis:
-$A \tilde B \Lri \fr{A}{B} \m{abl}, \fr{B}{A} \m{abl} \Ri A = (PT)^{J \cup Q} \bs \tilde$ Boole'sche Algebra, $e = \bar{(PT)^{J\cup Q}_0}$ = ableitbare Formeln
+$A \tilde B \Lri \fr{A}{B} \m{abl}, \fr{B}{A} \m{abl} \Ri A = (PT)^{J \cup Q} \bs \tilde$ Boole'sche Algebra, $e = \lin{(PT)^{J\cup Q}_0}$ = ableitbare Formeln
 
 zusätzlich $[\W_x A] = \inf_{t \not = x} [ \iota^t_x \circ A]$ "subst."
 $[\V_x A] = sup_{t \not = x}[\iota^t_x \circ A]$ gilt $\A x \in X, \A A \m{Formel} <= \m{abzählbar viele}$
@@ -183,9 +183,9 @@ $=\begin{cases} 0 &\mbox{falls} (\iota^{\v}t_1,...,\iota^{\v}t_m) \not \in p_m^{
 $=\begin{cases} 0 &\mbox{falls } (t_1,...,t_m) \not \in p_m^{*} \\ 1 & \mbox{sonst} \end{cases}$ 
 $= \begin{cases} 0 &\mbox{falls } \chi[p_mt_1t_m] = 0 \\ 1 &\mbox{sonst} \end{cases}=\chi[p_mt_1...t_m]$
 $\iota^{\v}t_1 = t_1$ (identität)
-Sei $rgA = n>0 \Ri_{Peano} A = \begin{cases} \bar{B} &\m{Negation} rgA = rgB+1 \Ri rg B < n \\ B \sharp C &\m{Junktion} rgA = rgB+rgC+1 \Ri rgB < n, rg C < n \\ \sharp_xB &\m{Quantion} rgA = rgB+1 \Ri rgB < n \end{cases}$
+Sei $rgA = n>0 \Ri_{Peano} A = \begin{cases} \lin{B} &\m{Negation} rgA = rgB+1 \Ri rg B < n \\ B \sharp C &\m{Junktion} rgA = rgB+rgC+1 \Ri rgB < n, rg C < n \\ \sharp_xB &\m{Quantion} rgA = rgB+1 \Ri rgB < n \end{cases}$
 
-$A = \bar{B} \Ri \iota^{\w}A = \iota^{\w}\bar{B} = 1 - \iota^{\w}B =_{ind} 1 - \chi[B] = \chi(e-[B]) = \chi \bar{[B]} = \chi [\bar{B}] = \chi[A]$
+$A = \lin{B} \Ri \iota^{\w}A = \iota^{\w}\lin{B} = 1 - \iota^{\w}B =_{ind} 1 - \chi[B] = \chi(e-[B]) = \chi \lin{[B]} = \chi [\lin{B}] = \chi[A]$
 $A = B\sharp C \Ri \iota^{\w}A = \iota^{\w} (B\sharp C) = (\iota^{\w}B) \sharp_{(2)} (\iota^{\w}C) =_{ind} (\chi[B]) \sharp_{(2)} (\chi[C]) = \chi([B]\sharp_{\mc{A}}[C])$
 $= \chi([B \sharp C]) = \chi[A]$
 $A = \chi_{x} B, rg\iota^t_x \circ B =_{Satz}(\m{beliebige substi ändert rang nicht} rgB < n \Ri$ Ind anwendbar auf $\iota^t_x \circ B$
@@ -243,7 +243,7 @@ jedes ideal von dem I ne echte Teilmenge, ist
   
   \renewcommand{\baselinestretch}{1}
   \newcommand{\words}{\Sigma^* \backslash \{\epsilon\}}
-  \newcommand{\etrans}[1]{\bar{\delta}(#1)}
+  \newcommand{\etrans}[1]{\lin{\delta}(#1)}
   
   \title{Zettel 9}
   \author{Florian Lerch(2404605)}
@@ -333,7 +333,7 @@ jedes ideal von dem I ne echte Teilmenge, ist
 
 \renewcommand{\baselinestretch}{1}
 \newcommand{\words}{\Sigma^* \backslash \{\epsilon\}}
-\newcommand{\etrans}[1]{\bar{\delta}(#1)}
+\newcommand{\etrans}[1]{\lin{\delta}(#1)}
 \renewcommand{\P}{\mathbb{P}}
 
 \title{Zettel 10}
@@ -810,6 +810,8 @@ $\a^{\v} \circ \g = \a^{\a^{\v}t_0|\a^{\v}\tilde s_2x_4x_4}_{x_0|x_1}$ \\
 *** Lösungsskizze
     
 *** Lösung
+$\lin{A + B}$
+
 #+BEGIN_SRC latex :tangle lo-loesung-13.tex
 \section*{Aufgabe 42}
 \subsection*{a)}.\\
