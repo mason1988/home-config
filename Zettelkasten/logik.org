@@ -907,3 +907,22 @@ Wie sind Belegungen überhaupt definiert?
 ** TODO problemgebiete ergänzen, map erweitern
 ** TODO zu noch problematischen Feldern weitere Aufgaben suchen
 ** TODO Klausuren Zettel schreiben
+* Logik Zusammenfassung
+** Blatt 2
+- Rekursionssatz um rekursive Definitionen zu definieren *fehlt noch*
+- Terme aus Symbolmenge ableiten
+  mehrstellige Symbole nehmen Parameter auf (auch mehrmals die selben möglich)
+  Wortlänge = Anzahl Symbole, restliche 
+- Termsequenz A|B|C usw.
+- Ableitungsbaum => man beginnt mit dem Endterm(bzw. das letzte ausgeführte Symbol) und spaltet diesen in die Terme auf usw.
+** Blatt 3
+- Primformeln bestimmen / ableiten:
+  Primformeln => Terme, können so benutzt werden, werden durch junktoren usw. interpretiert
+  -> Ableitung funktioniert analog zu Termen, mit primtermen als 0 stellige symbole und den junktoren als mehrstellige
+- erfüllbar, tautologie, absurd => gibts eine wahrheitsbelegung $\overset{\wedge}{\tau}(a)$ oder immer wahr oder manchmal wahr
+  $\overset{\wedge}{\tau}(A \ri B) = max(1-\overset{\wedge}{\tau}(A),\overset{\wedge}{\tau}(B))$
+  $\overset{\wedge}{\tau}(A \vee B) = max(\overset{\wedge}{\tau}(A),\overset{\wedge}{\tau}(B))$
+  $\overset{\wedge}{\tau}(A \wedge B) = \overset{\wedge}{\tau}(A) * \overset{\wedge}{\tau}(B)$
+  kann tau 0 sein? oder immer? oder nie?
+- tautologisch äquivalent: tabelle
+** Blatt 4

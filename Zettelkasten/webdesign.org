@@ -52,3 +52,17 @@ http://en.wikipedia.org/wiki/Note-taking
 ** Zeitmanagement
 - Pomodori Technik (20m minuten intervalle) (http://en.wikipedia.org/wiki/Pomodoro_Technique)
 - gtd (grundprinzipien -> next steps festlegen etc.)(http://schoepfertum.blogspot.de/2011/08/getting-things-done.html)
+
+* Hausarbeit: SEO
+** Themen
+- Backlink
+  - kommentare und bla
+  - linktausch
+  - links kaufen, mieten ( => adsense z.B. )
+- Keywords in den Meta tags (einschließlich der google preview)
+- keyword / -researching => density (nischen / mikronischen)
+- Pagerank
+- genereller Kram
+  - Bilder mit Untertitel/Tags versehen ( keywords beachten )
+- herabwerten der konkurenz
+  - schlechte backlinks verteilen
