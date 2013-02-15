@@ -3,9 +3,9 @@
 [[/home/florian/Zettelkasten/zettelkasten.org_20130106_200549_12364hJ0.png]]
 
 Beispieleingabe:
-(q',b,x) \in \delta(q,a) 
-=> in Zustand q wird a gelesen 
-   => b an pos geschrieben, nach q' gewechselt und 
+(q',b,x) \in \delta(q,a)
+=> in Zustand q wird a gelesen
+   => b an pos geschrieben, nach q' gewechselt und
    schreib/lesekopf um x bewegen
 x \in {L,R,N} => l = 1 nach link, ..., N = nichts
 
@@ -25,16 +25,16 @@ also startzustand | "search" | replace | sprung | nächster zustand
 * vollständige Induktion
 - Induktionsbehauptung :: Aussage gilt für A(n+1)
 - Induktionsvorraussetzung :: Aussage gilt für n (ein n >= m)
-- Induktionsanfang :: Zeige für Startwert m 
+- Induktionsanfang :: Zeige für Startwert m
 - Induktionsschritt :: erhöhe Parameter auf beiden Seiten, beweis Induktionsbehauptung
 * Wörterbuch
-- Turingmaschine :: 
+- Turingmaschine ::
 - primitik rekursive Grundfunktion ::
 - primitive rekursion ::
 
 +[[file:201301ad-01342216693Xde.png]]  :: m Regeln/Parameter auf die eine Ausgabe
 + [[file:201301ad-01365816693knk.png]] (insgesamt m elemente), die ersten
-      n Elemente sind Eingaben, die restlichen werden innerhalb der 
+      n Elemente sind Eingaben, die restlichen werden innerhalb der
       Funktion definiert
 + Anweisung :: die einzelnen [[file:201301ad-01401116693xxq.png]] 's
 + [[file:201301ad-02253616693-7w.png]] :: Menge aller Loop Programme mit 1..n Eingabevariablen
@@ -89,7 +89,7 @@ also startzustand | "search" | replace | sprung | nächster zustand
 \usepackage{verbatim}
 \usepackage{color}
 \usepackage{geometry}
-\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
+\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm}
 \usepackage{amsthm}
 \usepackage{stmaryrd}
 \usepackage{graphicx}
@@ -117,17 +117,17 @@ also startzustand | "search" | replace | sprung | nächster zustand
 \title{Zettel 10}
 \author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
 %\date{} % Activate to display a given date or no date (if empty),
-% otherwise the current date is printed 
+% otherwise the current date is printed
 
 \begin{document}
 \maketitle
-#+END_SRC 
+#+END_SRC
 
 ** Aufgabe 30
 #+BEGIN_SRC latex :tangle th-loesung-10.tex
 \subsection*{Aufgabe 30}
 #+END_SRC
-    
+
 #+BEGIN_SRC aufgabe30
 [[/home/florian/Zettelkasten/zettelkasten.org_20130108_162840_8888-SE.png]]
 #+END_SRC
@@ -164,7 +164,7 @@ Vorzeichenzahl => Zweierkomplement
   q_1 & 0 & 1 & R & q_1 & \mbox{ Phase 1: jedes Bit (bis auf das erste) umdrehen } \\
   q_1 & \bar{b} & \bar{b} & L & q_2 & \mbox{ Phase 2: 1 addieren, also von Rechts nach Links } \\
   q_2 & 1 & 0 & L & q_2 & \mbox{ jedes Bit umdrehen, bis eine 0 gelesen wird } \\
-  q_2 & 0 & 1 & N & q_f & \\ 
+  q_2 & 0 & 1 & N & q_f & \\
   \end{array}$
 #+END_SRC
 
@@ -212,7 +212,7 @@ Für $\alpha_1 = 0$: \\
 \end{tabbing}
 
 \begin{tabbing}
-$[[S_n]](\alpha_1)$ \= $= (\underline{out}^{(3)}_2 \circ [[\alpha_3]]^{(3)}  
+$[[S_n]](\alpha_1)$ \= $= (\underline{out}^{(3)}_2 \circ [[\alpha_3]]^{(3)}
 \circ [[\alpha_2]]^{(3)} \circ [[\alpha_1]]^{(3)} \circ \underline{in}^{(1)}_3)(\alpha_1)$ \\
 \> $= (\underline{out}^{(3)}_2 \circ [[\alpha_3]] \circ [[\alpha_2]]^{(3)} \circ [[\alpha_1]]^{(3)})(\alpha_1,0,0)$ \\
 \> $= (\underline{out}^{(3)}_2 \circ [[\alpha_3]] \circ [[\alpha_2]]^{(3)})(\alpha_1,0,0)$ \\
@@ -241,21 +241,21 @@ $\Rightarrow [[S_n]]: \mathbb{N} \rightarrow \mathbb{N}, (\alpha_1) \rightarrow 
 Zeige, das Funktionen durch primitiv rekursive Grundfunktionen durch Komposition und primitive Rekursion erzeugt werden können
 (a) potenz, (a,b) = a^b
 (b) anz,  n = |w \in \{a,b,c,d\}^n  \big| |w|_a ist gerade |
-anz(0) = 1, anz(1) = 3, anz(2) = 10;  
+anz(0) = 1, anz(1) = 3, anz(2) = 10;
 Primitiv Rekursiv: Nullkonstanten, Add, Mul, Vorgänger, Sub
 
 [[/home/florian/Zettelkasten/zettelkasten.org_20130112_195729_2635bdb-0.png]]
 
 #+BEGIN_SRC latex :tangle th-loesung-10.tex
-\subsubsection*{a)} 
-Es gilt: $power(a,0) = 1 = C_0^{(1)}(a) + 1 = S(C_0^{(1)}(a)) = 
+\subsubsection*{a)}
+Es gilt: $power(a,0) = 1 = C_0^{(1)}(a) + 1 = S(C_0^{(1)}(a)) =
 S \circ [C_0^{(1)}](a)$ \\
 und $power(a,b+1) = power(a,b)*a = mult(power(a,b),a) =
 mult \circ [p_3^{(3)},p_1^{(3)}](a,b,power(a,b))$ \\
 Dies entspricht dem Schema mit $f = \circ [C_0^{(1)}]$ und $g = mult \circ [p_3^{(3)},p_1^{(3)}]$ \\
 
 \subsubsection*{b)}
-Es gilt: $anz(0) = 1 = C_0^{(0)}() + 1 = S(C_0^{(0)}()) = 
+Es gilt: $anz(0) = 1 = C_0^{(0)}() + 1 = S(C_0^{(0)}()) =
 S \circ [C_0^{(0)}]()$ \\
 Dies entspricht im Schema $f = S \circ [C_0]^{(0)}]$ \\
 Ferner gilt: $anz(n+1) = 4^n - anz(n) + anz(n)  3 = 4^n + anz(n)  2$ \\
@@ -289,14 +289,14 @@ anz(6) = 2080  496
 \documentclass[11pt]{amsart}
 \input{commands.tex}
 \renewcommand{\baselinestretch}{2}
-\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
+\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm}
 
 \title{Zettel 11}
 \author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
 
 \begin{document}
 \maketitle
-#+END_SRC 
+#+END_SRC
 
 ** Aufgabe 34
 #+BEGIN: aufgabe34
@@ -347,7 +347,7 @@ Aber was hätte das dann mit der totalen Subtraktion / Addition zu tun?
 
 Das letzte Ergebnis muss = 0 sein
 
-Sei die funktion h(a,b): 
+Sei die funktion h(a,b):
   - h(a,b) = 0 für a = b, da nur so der Fall für gerade a rauskommen kann
   - h(a,0) nicht definiert, für a ungerade, so dass die Funktion direkt abbricht
   - h(a,c) > 0 für alle c < b bzw. c < a
@@ -392,7 +392,7 @@ $ [[\a_1]]^{(2)}(\a_1,\a_2) = [[\a_1 := X_2 := X_2 - 1]]^{(2)}(\a_1,\a_2) $ \\
 $ \dinc = (\a_1,\a_2 - 1) $
 
 $ [[\a_2]]^{(2)}(\a_1,\a_2) = [[\underline{while} X_2 \not = 0 \underline{do} X_2 := X_2 - 1 ; X_1 := X_1 - 1 \underline{od}]]^{(2)}(\a_1,\a_2) $ \\
-$ \dinc = (\a_1 - 1, \a_2 - 1)^{\a_2} $ \\ 
+$ \dinc = (\a_1 - 1, \a_2 - 1)^{\a_2} $ \\
 
 % out(projektion) * schleifen * schleifen-1 * ... * schleife1 * in
 $ [[P]](\a_1) = (\underline{out}^{(2)}_1 \circ [[\a_2]]^{(2)} \circ [[\a_1]]^{(2)} \circ \underline{in}^{(2)}_2)(\a_1,\a_2) $ \\
@@ -403,7 +403,7 @@ $ \dinc = \a_1 - (\a_2 - 1) $ \\
 $ \Rightarrow [[P_n]] : \N^2 \ri \N , (\a_1,\a_2) \tri (\a_1 - (\a_2 -1)) $ \\
 
 #+END_SRC
-   
+
 ** footer
 #+BEGIN_SRC latex :tangle th-loesung-11.tex
 \end{document}
@@ -429,14 +429,14 @@ $ \Rightarrow [[P_n]] : \N^2 \ri \N , (\a_1,\a_2) \tri (\a_1 - (\a_2 -1)) $ \\
 #+begin_src latex
 $$f \m{berechenbar} \Lri \E A \in DTM(\S) \m{mit} f_{A} = f$$
 $$ \Lri \E A_2 \in DTM(\S) \m{rechtsszeitig} -"- $$
-$$\Lri \E A_3 \in DTM(\S) \m{mit} f_{A_3} = f',$$ 
+$$\Lri \E A_3 \in DTM(\S) \m{mit} f_{A_3} = f',$$
 $$ f'(x) = \begin{cases} w\$f(v), &\mbox{falls x der Form x\$w mit }v\in Def(f) \\ \mbox{n.d.} &\mbox{sonst} \end{cases} $$
 $$ \Lri \E A_4 \in DTM(\S) mit f_{A_4} = \chi^{'}_{Graph(f)} $$
 $$ \Lri \m{Graph(f) semi - entscheidbar} \Lri \m{Graph(f) rek. aufzählbar} $$
 #+end_src
 bei b einfach überall total dran und entsprechend definiert statt nicht definiert
 
-39. 
+39.
 Reduktion verlangt Äquivalenz von w \in X und f(w) \in R   (für X \leq R)
 => identische Abbildung funktioniert zwar für alle werte in X, aber nicht für alle
 in R.
@@ -446,14 +446,14 @@ XV
 (a)
 $$ Def A_1, A_2 \in DTM(\S) $$
 $A_1$ wie $A_2$ aber hinterlässt nach halten $\e$ auf band. $A_2$ stoppt bei Eingabe z nach s Schritten und schreibt A_0 auf Band.
-Def A_u 
+Def A_u
 Eingabe: (code(A_1), code(A_2), w, s)
 Funktionsweise: simuliert 2 Spuren, führt Reißverschlussprinzip A_1, A_2 aus, bis eine der beiden TM hält.
 Erg. nach spätestens 2s Schritten auf Band.
 b) Nicht entscheidb. nach Satz v. Rice, da " f monoton" nicht-triv. Eigenschaft der berechenbaren Funtion
 #+end_src
 
-VXI 
+VXI
 #+begin_src latex
 $$ h(x,y,z) := (x - (y ( z + 1) - 1))+(1-y)
 = add(sub(x,(sub(mul(y, add(z,1)),1))),
@@ -465,12 +465,12 @@ $$ \Ri \mu(h) = div \qed $$
 #+BEGIN_SRC latex :tangle th-loesung-12.tex
 \documentclass[11pt]{amsart}
 \input{commands.tex}
-\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm} 
+\geometry{a4paper,left=2cm,right=2cm, top=1.5cm, bottom=1.5cm}
 \title{Zettel 12 }
 \author{Florian Lerch(2404605)/Waldemar Hamm(2410010)}
 \begin{document}
 \maketitle
-#+END_SRC 
+#+END_SRC
 
 ** DONE Aufgabe 38
    - State "DONE"       from "NEXT"       [2013-01-27 So 23:31]
@@ -484,11 +484,11 @@ $$ \Ri \mu(h) = div \qed $$
 
     - partielles f bedeuetet, das f nicht zwangsläufig auf jeden Wert im Zeichenraum abbildet
     - f berechenbar => es existiert ein eindeutiges Ergebnis
-    - Graph rekursiv aufzählbar: = Mengeneigenenschaft, 
+    - Graph rekursiv aufzählbar: = Mengeneigenenschaft,
        = semientscheidbar, oder berechenbar aufzählbar
       => aufzählung findet durch algorithmus statt (springt von einem Wert zum nächsten
         daher auch die rekursion)
-      
+
       zu zeigen ist f berechenbar => graph(f) rekursiv aufzählbar
           und graph(f) rekursiv aufzählbar => f berechenbar
 [[/home/florian/Zettelkasten/theoretische_informatik.org_20130126_234629_3916MUg-0.png]]
@@ -545,14 +545,14 @@ $ \Lri $ Graph(f) ist entscheidbar
 \subsubsection{(a)}.\\
 Nein, X ist nicht zwangsläufig eine reguläre Sprache. \\
 Sei $\Sigma \not = \emptyset$ ein beliebiges Alphabet und R = $\Sigma^*$ und somit regulär. \\
-Sei X nun eine beliebige nicht reguläre Sprache über $\Sigma$, so ist die Reduktion 
+Sei X nun eine beliebige nicht reguläre Sprache über $\Sigma$, so ist die Reduktion
 X $\leq$ R gegeben durch die identische Abbildung, aber X ist nicht regulär, obwohl R regulär ist.\\
 \subsubsection{(b)}.\\
 Seien A, B und C Sprachen über $\Sigma$ und gelte: $A \leq B \m{ und } B \leq C$ \\
 Zu zeigen ist: $A \leq C$\\
 $A \leq B \Ri$ es exstiert eine bijektive Abbildung $f: A \mapsto B$ mit $Bild(f) \subseteq B$ \\
 $B \leq C \Ri$ es exstiert eine bijektive Abbildung $f': B \mapsto C$ mit $Bild(f') \subseteq C$ \\
-$\Ri$ die Abbildung $f \circ f': A \mapsto B$ ist für alle Elemente aus A definiert und für jedes Element y aus 
+$\Ri$ die Abbildung $f \circ f': A \mapsto B$ ist für alle Elemente aus A definiert und für jedes Element y aus
 $Bild(f\circ f')$ existiert genau ein Element x aus A für das gilt $y = f \circ f'(x)$ \\
 $\Ri A\leq C$
 #+END_SRC
@@ -562,14 +562,14 @@ $\Ri A\leq C$
 \subsubsection{(a)}.\\
 Nein, X ist nicht zwangsläufig eine reguläre Sprache. \\
 Sei $\Sigma \not = \emptyset$ ein beliebiges Alphabet und R = $\Sigma^*$ und somit regulär. \\
-Sei X nun eine beliebige nicht reguläre Sprache über $\Sigma$, so ist die Reduktion 
+Sei X nun eine beliebige nicht reguläre Sprache über $\Sigma$, so ist die Reduktion
 X $\leq$ R gegeben durch die identische Abbildung, aber X ist nicht regulär, obwohl R regulär ist.\\
 \subsubsection{(b)}.\\
 Seien A, B und C Sprachen über $\Sigma$ und gelte: $A \leq B \m{ und } B \leq C$ \\
 Zu zeigen ist: $A \leq C$\\
 $A \leq B \Ri$ es exstiert eine bijektive Abbildung $f: A \mapsto B$ mit $Bild(f) \subseteq B$ \\
 $B \leq C \Ri$ es exstiert eine bijektive Abbildung $f': B \mapsto C$ mit $Bild(f') \subseteq C$ \\
-$\Ri$ die Abbildung $f \circ f': A \mapsto B$ ist für alle Elemente aus A definiert und für jedes Element y aus 
+$\Ri$ die Abbildung $f \circ f': A \mapsto B$ ist für alle Elemente aus A definiert und für jedes Element y aus
 $Bild(f\circ f')$ existiert genau ein Element x aus A für das gilt $y = f \circ f'(x)$ \\
 $\Ri A\leq C$
 #+end_latex
@@ -591,13 +591,13 @@ Was bedeutet entscheidbarkeit von Mengen?
    - Wortentscheidbarkeit? Also Wort drin oder nicht?
      -> Entscheidbarkeit eingentlich allgemein
    => entscheidbarkeit, ob wirklich nach maximal s Schritten anhält
-     bzw. ob 
+     bzw. ob
 Entscheidbarkeit ist letztendlich darauf zurückzuführen, ob Elemente mit bestimmten Eigenschaften
   drin sind, oder eben auch nicht. Überabzählbare Mengen sind grundsätzlich nicht entscheidbar, bzw.
   die entscheidbarkeit auf ihnen ist nicht definiert.
-Was ist code(alpha)? 
+Was ist code(alpha)?
 
-Entscheidbar ist eine Eigenschaft dann, wenn es ein Entscheidungsverfahren gibt, für jedes 
+Entscheidbar ist eine Eigenschaft dann, wenn es ein Entscheidungsverfahren gibt, für jedes
 Objekt festzustellen, ob es diese Eigenschaft hat oder nicht.
 *** Lösungen
 #+BEGIN_SRC latex :tangle th-loesung-12.tex
@@ -618,6 +618,12 @@ welche die Monotonie "bricht". Es kann also nicht pauschal bestimmt werden, ob d
 
 * TODO Theo Prüfung						    :Studium:
   SCHEDULED: <2013-02-11 Mo>
+  :LOGBOOK:
+  CLOCK: [2013-02-10 So 13:22]--[2013-02-10 So 15:59] =>  2:37
+  CLOCK: [2013-02-10 So 12:38]--[2013-02-10 So 13:00] =>  0:22
+  CLOCK: [2013-02-09 Sa 21:29]--[2013-02-09 Sa 23:30] =>  2:01
+  CLOCK: [2013-02-09 Sa 14:32]--[2013-02-09 Sa 19:32] =>  5:00
+  :END:
 ** DONE Zettel-13
    DEADLINE: <2013-02-06 Mi>
    - State "DONE"       from "NEXT"       [2013-02-06 Mi 10:57]
@@ -635,9 +641,10 @@ links, rechtsseitige turingmaschine
    für größere elemente nicht mehr entscheidbar(?)
    nur irgend eine zuordnung pcp <=> grammatik reicht nicht
    => Reduktion muss gezeigt werden
-44) 
-    
-** TODO Karte der Themengebiete aus dem Semester anfertigen
+44)
+
+** DONE Karte der Themengebiete aus dem Semester anfertigen
+   - State "DONE"       from "TODO"       [2013-02-08 Fr 20:09]
    - als mindmap
    - das skript überfliegen und die wichtigsten Stichpunkte herausschreiben
 ** TODO die Blätter überfliegen und Lösungsansätze formulieren

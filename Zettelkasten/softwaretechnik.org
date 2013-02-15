@@ -71,8 +71,8 @@ nochmehr bla
 #+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
-#+LINK_UP:   
-#+LINK_HOME: 
+#+LINK_UP:
+#+LINK_HOME:
 #+XSLT:
  10
 ** Aufgabe a
@@ -88,13 +88,13 @@ nochmehr bla
 #+END:
 *** Fehler 1
 **** Fehlermeldung
-Class defines equals() and uses Object.hashCode() 
+Class defines equals() and uses Object.hashCode()
 Datei: Card und Cardvector
 **** Beschreibung
 Die equals Methode wird durch die Klasse überschrieben, die hashCode
 Methode jedoch nicht. Da beim vergleichen von Klasseninstanzen aber
-die Hashcodes benutzt werden, welche nun aber bei gleichheit nicht 
-den selben Hashcode haben werden. 
+die Hashcodes benutzt werden, welche nun aber bei gleichheit nicht
+den selben Hashcode haben werden.
 **** Erkennung
 Suche nach Klassen die die equalsmethode aber nicht die hashcode
 Methode enthalten.
@@ -102,9 +102,9 @@ Methode enthalten.
 Die jetzige equals Methode umbenennen zu Compare oder ähnlichem.
 *** Fehler 2
 **** Fehlermeldung
-Comparison of String objects using == or != in jskat.gui.main.ScoreTableModel.update(Observable, Object) 
+Comparison of String objects using == or != in jskat.gui.main.ScoreTableModel.update(Observable, Object)
 **** Beschreibung
-Beim vergleichen mit == oder != werden die Hashcodes verglichen. Diese sind bei inhaltlich identischen 
+Beim vergleichen mit == oder != werden die Hashcodes verglichen. Diese sind bei inhaltlich identischen
 Strings zwar meistens, aber nicht immer gleich.
 **** Erkennung
 Nach variablen vom Typ String suchen, welche mit '==' oder '!=' verglichen werden.
@@ -124,7 +124,7 @@ Man beendet den Ausführungsblock mit break.
 **** Fehlermeldung
 jskat.share.CardVector.equals(Object) does not check for null argument
 **** Beschreibung
-Die überschriebene neue Equalsmethode prüft nicht nach Nullobjekten, was aber Standardgemäß 
+Die überschriebene neue Equalsmethode prüft nicht nach Nullobjekten, was aber Standardgemäß
 jede solche Funktion in java tun sollte. Das muss nicht zwangsläufig zu Fehlern führen,
 erfüllt aber eben nicht den Standard.
 **** Erkennung
@@ -200,11 +200,11 @@ Es wird ein statisches Attribut durch eine Klasseninstanz überschrieben.
 Suche nach Instanziierungen von Klassen und prüfe bei allen Attributszuweisungen,
 ob diese als statisch definiert wurden.
 **** Korrektur
-jskatStrings nicht mehr statisch machen, so dass jede Instanz einige eigene 
+jskatStrings nicht mehr statisch machen, so dass jede Instanz einige eigene
 Instanz dieses Attributs bekommt.
 ** Aufgabe b
 *** aufgabenstellung :noexport:
-#+BEGIN: aufgabe_b 
+#+BEGIN: aufgabe_b
 [[/home/florian/Zettelkasten/zettelkasten.org_20130117_152034_13098wfZ-0.png]]
 [[/home/florian/Zettelkasten/zettelkasten.org_20130117_152034_13098wfZ-1.png]]
 [[/home/florian/Zettelkasten/zettelkasten.org_20130117_152034_13098wfZ-2.png]]
@@ -223,7 +223,7 @@ Der Vorteil dabei liegt natürlich darin, dass man so wesentlich eher Fehlerursa
 Der Nachteil ist aber, dass man schnell "Betriebsblind" wird und die verwendeten Systeme im Grunde auch nie absolut jedes Szenario erfassen
 können, man sich aber fälschlicherweise genau darauf verlassen könnte.
 **** Unit Tests
-Der Code wird in einzelne Blöcke / Module / Funktionen /... geteilt. Diese "Units" werden dann in einer Testroutine aufgerufen, 
+Der Code wird in einzelne Blöcke / Module / Funktionen /... geteilt. Diese "Units" werden dann in einer Testroutine aufgerufen,
 welche zunächst eine Testumgebung initialisiert und dann die einzelnen Units mit vom Programmierer bestimmten Werten aufruft und
 und anschließend vergleicht, ob das Ergebnis richtig ist, wobei der Programmierer vorher den erwarteten Wert angibt.
 Der Vorteil liegt darin, dass dieser Prozess weitestgehend automatisch ablaufen kann. Dies Testroutinen müssen nur einmal geschrieben werden
@@ -246,7 +246,7 @@ Nein, da auch jede systematische herangehensweise an die Testmodelle immer auch 
 von der eigentlichen Testumgebung ab, für die man zwar versuchen kann, alle extremfälle abzudecken, aber es ist unmöglich wirklich
 jeden Fall zu finden. Vorallem können auch stets andere auf dem Computer installierte Programme Einfluss darauf nehmen oder Fehler verursachen.
 Bei Abhängigkeiten von externen Modulen besteht zum Beispiel auch stets das Risiko, dass diese geupdatet werden und das Programm somit
-nicht mehr benutzbar machen. In jedem Fall gibt es vollkommen unabhängig davon, wie vollständig und gut die Tests waren, immer einen Nutzer der 
+nicht mehr benutzbar machen. In jedem Fall gibt es vollkommen unabhängig davon, wie vollständig und gut die Tests waren, immer einen Nutzer der
 es schafft, einen Weg zu finden um doch alles zum Absturz zu bringen.
 * DONE Übung 11							    :PROJECT:
   - State "DONE"       from "TODO"       [2013-01-25 Fr 18:37]
@@ -261,8 +261,8 @@ es schafft, einen Weg zu finden um doch alles zum Absturz zu bringen.
 #+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
-#+LINK_UP:   
-#+LINK_HOME: 
+#+LINK_UP:
+#+LINK_HOME:
 #+XSLT:
   DEADLINE: <2013-01-27 So 23:59>
   :LOGBOOK:
@@ -381,7 +381,7 @@ kein richtiger Vertrag besteht.
 *** Lösung							     :export:
 1. Die Ladezeiten zwischen den einzelnen Menüeinträgen muss in jeder Situation unterhalb von 2 Sekunden liegen.
 2. Die Software darf mitsamt der Datenbank und allen zur Funktion benötigten Modulen nicht größer als 20mb werden.
-3. Die Menüs müssen mittels eines Touchpads bedienbar sein, wobei die Fehlerrate nicht oder falsch erkannter 
+3. Die Menüs müssen mittels eines Touchpads bedienbar sein, wobei die Fehlerrate nicht oder falsch erkannter
     Eingaben im Durchschnitt unterhalb von 5% liegen muss.
 4. Die Software muss eine Fehlerfreie und abgesicherte Kommunikation mit den Bankservern garantieren
 5. Das System darf innerhalb eines Monats bei vielfacher Nutzung nur maximal ein mal abstürzen. Im Falle eines
@@ -399,8 +399,8 @@ kein richtiger Vertrag besteht.
 #+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
-#+LINK_UP:   
-#+LINK_HOME: 
+#+LINK_UP:
+#+LINK_HOME:
 #+XSLT:
   :LOGBOOK:
   CLOCK: [2013-01-25 Fr 18:38]--[2013-01-25 Fr 20:08] =>  1:30
@@ -500,9 +500,13 @@ siehe pdf-datei: gruppe1 - hausaufgabe 4 - aufgabe c.pdf
 1. Man kann konkret messen wie lange das System nicht verfügbar ist und dann den Prozentuale Wert ermitteln.
 2. Man kann Leute / Hacker / ... Versuchen lassen in fremde Konten einzudringen und so konkret herausfinden,
    ob dies beim aktuellen Stand möglich ist.
-3. Man kann messen ob es eine Verzögerung gibt und wenn ja ob diese einen signifikanten Wert erreicht (z.B. 
+3. Man kann messen ob es eine Verzögerung gibt und wenn ja ob diese einen signifikanten Wert erreicht (z.B.
    länger als 5 Minuten)
-* TODO Übung 12
+* DONE Übung 12
+  - State "DONE"       from "NEXT"       [2013-02-10 So 18:37]
+  :LOGBOOK:
+  CLOCK: [2013-02-10 So 17:44]--[2013-02-10 So 18:37] =>  0:53
+  :END:
 #+TITLE:     Übung 12
 #+AUTHOR:    florian,waldemar,rene
 #+EMAIL:     lerch.florian@yahoo.de
@@ -514,8 +518,8 @@ siehe pdf-datei: gruppe1 - hausaufgabe 4 - aufgabe c.pdf
 #+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
-#+LINK_UP:   
-#+LINK_HOME: 
+#+LINK_UP:
+#+LINK_HOME:
 #+XSLT:
   DEADLINE: <2013-02-10 So 23:59>
 ** Aufgabe A
@@ -535,6 +539,8 @@ Wasserfallmodell, V-Modell, iterative Entwicklung ...
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132500_96084Nq-8.png]]
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132500_96084Nq-9.png]]
 **** lösung
+Hier wäre das Wasserfall- oder V-Modell empfehlenswert, da eine saubere und vollständige Planung notwendig ist. Da die Softwarefirma auch die Planung nicht komplett selbst übernimmt, wird sowieso eine Menge Flexibilität eingebüßt, so dass
+das starre Wasserfallmodell hier sehr Sinnvoll wäre.
 *** b)
 **** aufgabe :noexport:
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132557_9608FYw-0.png]]
@@ -543,6 +549,9 @@ Wasserfallmodell, V-Modell, iterative Entwicklung ...
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132557_9608FYw-3.png]]
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132557_9608FYw-4.png]]
 **** lösung
+Eine iterative, Prototypenorientierte Entwicklung würde sich anbieten, da in erster Linie eine einfache Bedienung die Schwierigkeit darstellt. Eine Kfz-Werkstatt besitzt vermutlich keine all zu großen
+Unternehmensrichtlinien an die man sich halten müsste, so dass sich die Planung bei einem eher kleineres Projekt durchaus in Grenzen halten kann.
+Durch die Schrittweise Entwicklung von vielen Prototypen kann man hier gemeinsam mit dem Kunden das Interface finden, mit dem er am besten zureckt kommt.
 *** c)
 **** aufgabe :noexport:
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132647_9608Si2-0.png]]
@@ -550,6 +559,9 @@ Wasserfallmodell, V-Modell, iterative Entwicklung ...
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132647_9608Si2-2.png]]
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132647_9608Si2-3.png]]
 **** lösung
+Extreme Programming wäre hier mein Vorschlag, da es durch seine flexibilität eher die Kreativität fördert, welche hier ja offensichtlich gefordert ist und zudem eine der schnellsten
+Entwicklungsarten ist. Da die Käufer von Videospielen Fehlerhafte Software und im Zweifelsfall das nachinstallieren von Patches sowieso schon gewohnt sind, kann man hier die Testphase
+ruhig kurz halten und muss keine großen Maßnahmen ergreifen um die Stabilität der Software sicherzustellen.
 *** d)
 **** aufgabe :noexport:
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132721_9608EsF-0.png]]
@@ -558,7 +570,10 @@ Wasserfallmodell, V-Modell, iterative Entwicklung ...
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132721_9608EsF-3.png]]
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132721_9608EsF-4.png]]
 **** lösung
-** Aufgabe B
+Pair Programming ist hier das Mittel der Wahl, da unmittelbare Effizienz der Arbeitsweise nicht gefordert ist, da dass "Produkt" ja nichtmal verkauft werden soll. Pair Programming bietet stattdessen aber 
+die Möglichkeit, dass die einzelnen Programmierer von ihrem gegenseitigen Wissen profitieren können und auf diese Art und Weise auch eine so schwierige Sache wie das erlernen von Kernelprogrammierung
+effizienter meistern können. Darüber hinaus verhindert Pair Programming auch viele Flüchtigkeitsfehler und somit einige potenzielle Abstürze, gerade wenn man an sowas empfindlichem wie dem Betriebssystem arbeitet.
+** Aufgabe B :noexport:
 *** Aufgabenstellung :noexport:
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132853_9608R2L-0.png]]
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130208_132853_9608R2L-1.png]]
@@ -581,6 +596,7 @@ Wasserfallmodell, V-Modell, iterative Entwicklung ...
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130208_133053_9608eAS-10.png]]
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130208_133053_9608eAS-11.png]]
 *** Lösung
+https://github.com/lerchflorian/lok-quelltext
 * Skript
 ** Anforderungsanalyse
 - soll konkretisieren was Kunde will
@@ -616,7 +632,7 @@ Wasserfallmodell, V-Modell, iterative Entwicklung ...
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165027_29739bh2-8.png]]
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165027_29739bh2-9.png]]
 [[/home/florian/Zettelkasten/softwaretechnik.org_20130125_165027_29739bh2-10.png]]
- 
+
 *** Pflichtenheft
 - enthält Benutzer und Systemanforderungen
 - häufig vertragsgrundlage
@@ -649,13 +665,14 @@ Wasserfallmodell, V-Modell, iterative Entwicklung ...
        - Änderungen nur schwer möglich
        - Risiko, sich in falsche Richtung zu entwickeln
      * Vorteile
-       - Doku für klare Phasen 
+       - Doku für klare Phasen
        - Verantwortlichkeit schnell
      * Anpassungen als V-Modell
        - V förmig
 *** Iterativ
      * Prototypen (schnell ausführbares entwickeln und testen)
      * inkrementelle entwicklung (bausteine werden stück für Stück entwickelt
+     * spiralmodell
      * unified Process - Prozesphasen:
        - Anfang: grundlegender Umfang wird geklärt
        - Vertiefung: grundlegende Architektur, Findung Risiken
@@ -663,7 +680,7 @@ Wasserfallmodell, V-Modell, iterative Entwicklung ...
        - Inbetriebnahme (letztendliche Einführung bei Kunde)
        - Vorteile:
 	 - man kann noch sehr spät Anpassungen vornehmen
-*** Agile 
+*** Agile
      * Extreme Programming
        - iterativ entwickelt
        - wenig analyse/entwurf
@@ -674,6 +691,14 @@ Wasserfallmodell, V-Modell, iterative Entwicklung ...
      => Kunde wird eng eingebunden
 Pair Programming = grundsätzlich mit mehreren leuten
   zusammen programmieren => Kompetenz verteilt sich
+*** Konkrete Prozesse:
+    - Wasserfallmodell (erzwungene reihenfolge der prozesse)
+    - Spiralmodell (ähnlich wie wasserfall, aber man dreht sich im kreis => gleiche phasen werden immer wieder durchlauf => iteratives arbeiten)
+        => Wasserfallmodell in einer Schleife
+    - V - Modell (verwand mit Wasserfall, nach der entwicklung noch testphasen)
+    - Extreme Programming(schnell und dreckig, agile entwicklung)
+    - inkrementelle Entwicklung (=> schnelles erschaffen ausführbarer Ergebnisse, Bausteine werden Stück für Stück entwickelt)
+    - pair programming, immer zusammen entwickeln
 ** Konfigurationsmanagement
     * Problematiken:
       - wo liegen Dateien
@@ -687,7 +712,7 @@ Pair Programming = grundsätzlich mit mehreren leuten
     * Typischer Workflow: update, neue dateien adden, commiten
         status für diff und resolve für konflikte
     * svn besitzt nicht den remote kram(automatisch)
-    * Vorteile Git: 
+    * Vorteile Git:
       - kein zentraler server
       - komplette kopie lokal => sehr schnell
       - Förderung vieler Branches

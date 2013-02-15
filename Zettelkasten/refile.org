@@ -30,6 +30,9 @@
  Entered on [2013-02-05 Di 11:22]
 ** TODO Completion UI http://www.emacswiki.org/emacs/CompletionUI für completion skripte (liefert interface)
  Entered on [2013-02-05 Di 19:07]
+** TODO wir brauchen befehle die einen neuen buffer anzeigen und dabei das aktuelle fenster splitten
+ Entered on [2013-02-11 Mo 15:32]
+
 * problem
 ** TODO das win switching nicht nur im normal mode erlauben
  Entered on [2013-02-01 Fr 13:04]
@@ -60,10 +63,9 @@
  Entered on [2013-02-05 Di 15:44]
 ** TODO eigene theme datei lässt sich nicht laden ohne massig bugs in awesome anzuziehen
  Entered on [2013-02-06 Mi 10:22]
-** TODO bar zieht sich nicht über alle zeichen in latex
+** DONE bar zieht sich nicht über alle zeichen in latex
+   - State "DONE"       from "TODO"       [2013-02-11 Mo 15:34]
  Entered on [2013-02-06 Mi 19:36]
-** TODO virtuelle maus spinnt schon wieder rum
- Entered on [2013-02-07 Do 09:01]
 ** TODO keynav blockiert auch noch falsche tasten (D)
  Entered on [2013-02-07 Do 09:12]
 ** TODO auf dem netbook flimmern die schriften immer noch extrem
@@ -82,6 +84,17 @@
  Entered on [2013-02-04 Mo 13:29]
 ** TODO kurze zusammenfassung zur font konfiguration linux/awsome/emacs
  Entered on [2013-02-06 Mi 10:23]
+** DONE das mapping für die wortlöschungen vertauschen
+   - State "DONE"       from "TODO"       [2013-02-11 Mo 15:30]
+ Entered on [2013-02-11 Mo 15:28]
+** TODO ähnlich aussehende tasten bei pentadactyl entfernen
+ Entered on [2013-02-11 Mo 15:38]
+** TODO weitersuchen in firefox auf h mappen ( so wie in emacs )
+ Entered on [2013-02-11 Mo 15:54]
+** TODO such befehl in zathura fixen
+ Entered on [2013-02-11 Mo 16:43]
+** TODO workflow für verschlüsselung: http://www.gnu.org/software/emacs/manual/html_node/org/org_002dcrypt_002eel.html#org_002dcrypt_002eel
+ Entered on [2013-02-11 Mo 16:55]
 * wishes
 ** TODO system und routine zum auswendiglernen von emacs kram finden
 ** TODO weg finden um sich die elementaren vim navigation einzuprägen und sie auch wirklich im Alltag einzusetzen
@@ -98,12 +111,16 @@
  Entered on [2013-01-31 Do 15:02]
 ** TODO planen wie die tasta einhändiger gemacht werden kann
  Entered on [2013-02-03 So 20:00]
+** TODO org-scratch installieren
+ Entered on [2013-02-09 Sa 21:13]
+** TODO alternative anzeige von hints bei penta?
+ Entered on [2013-02-11 Mo 15:38]
+** TODO youtube mod's die playlist leichter möglich machen / automatisch weiterspielen
+ Entered on [2013-02-11 Mo 15:39]
 * notes
-<<<<<<< HEAD
 ** TODO firefox standart umkonfigurieren
 :dialog preferences => application da im dropdown menü auswählen
  Entered on [2013-02-04 Mo 10:51]
-=======
 ** TODO follow mode => buffer hintereinander
  Entered on [2013-02-01 Fr 13:53]
 ** TODO in org-agenda-custom-commands stecken die Befehle
@@ -123,7 +140,6 @@ http://lifehacker.com/5962701/mild-ambient-noise-can-spur-creativity-and-keep-yo
  Entered on [2013-02-02 Sa 00:36]
 ** TODO vitamin b ist entscheidend
  Entered on [2013-02-02 Sa 00:40]
->>>>>>> c4b04928f851b05f416f231b26747181b093fc41
 ** TODO Searching within a File
 
 If you don’t have grep, then you may need to write some Lisp which can find a match in a file.
@@ -139,6 +155,10 @@ If you don’t have grep, then you may need to write some Lisp which can find a 
  Entered on [2013-02-05 Di 18:54]
 ** TODO other-frame kann von emacs ausgehend den frame switchen
  Entered on [2013-02-05 Di 19:20]
+<<<<<<< HEAD
+** TODO gibt auf c-kill jetzt delete trailing whitespaces, m-kill löscht immernoch wort
+ Entered on [2013-02-08 Fr 20:07]
+=======
 ** TODO patch: mittels ediff, befehl ist epatch, vorher einfach in irgend nen buffer oder ne datein packen
    konkretes wird dann ausgewählt
    oder ediff-patch-file
@@ -211,6 +231,20 @@ _und zum schluss:_
 - asterisk :: wurde an dem tag erledigt
 - ausrufezeichen :: markierung aktueller tag
  Entered on [2013-02-08 Fr 11:45]
+>>>>>>> eb23e25e6a0b73b987576c43f495463171499e26
+** TODO T-I zu nah O-Q zu nah
+ Entered on [2013-02-11 Mo 15:52]
+** TODO narrow = beschränkt ganzes fenster auf subtree / widen zeigt wieder alles an
+ Entered on [2013-02-11 Mo 15:58]
+** TODO boxquote => zeichnet ne box mit ascii zeichen um text, so wie bei bei quellcodes üblich
+   plugins wie rebox.el erlauben das switchen verschiedener stile
+ Entered on [2013-02-11 Mo 16:00]
+** TODO 2 leere zeilen beenden einen subtree, die variable org-cycle-seperator-lines beeinflusst das
+ Entered on [2013-02-11 Mo 16:46]
+** TODO folding state von einzelnem header
+zwischen :PROPERTIES: und :END: 
+  mit :VISIBILITY: all , alternativ auch folded, children, content
+ Entered on [2013-02-11 Mo 17:06]
 * workflows
 ** TODO magit commit merge pull push
  [[file:~/Zettelkasten/refile.org::*Shortcut%20um%20mehrere%20Eintr%C3%A4ge%20bei%20magit%20auf%20einmal%20zu%20stagen%20oder%20zu%20markieren][Shortcut um mehrere Einträge bei magit auf einmal zu stagen oder zu markieren]]
@@ -239,3 +273,6 @@ _und zum schluss:_
  Entered on [2013-01-31 Do 03:44]
 
 ** TODO to-read, note - capture benutzen etc.
+* to-read
+** TODO http://www.diyplanner.com/taxonomy/term/19
+ Entered on [2013-02-11 Mo 18:59]

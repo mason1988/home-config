@@ -9,6 +9,10 @@
 (add-to-list 'load-path "~/.emacs.d/magit/")
 (add-to-list 'load-path "~/.emacs.d/image-dired/")
 (add-to-list 'load-path "~/.emacs.d/helm/")
+
+(add-to-list 'load-path "~/.emacs.d/icicles/")
+(require 'icicles)
+
 (require 'key-chord)
 (require 'volume)
 (require 'latex)
@@ -223,6 +227,8 @@
 (define-key my-keys-minor-mode-map (kbd "<f7>") 'diredp-fileset)
 (define-key my-keys-minor-mode-map (kbd "<f6>") 'eshell)
 (key-chord-define my-keys-minor-mode-map (kbd "uu") (kbd "C-u"))
+
+(global-set-key (kbd "<C-backspace>") 'delete-trailing-whitespace)
 
 (define-key my-keys-minor-mode-map (kbd "<f5>") 'kill-frame)
 (global-set-key (kbd "C-ä g") 'yas/make-placeholder)
@@ -1150,3 +1156,6 @@ A prefix arg forces clock in of the default task."
 (setq org-habit-graph-column 50)
 (setq org-stuck-projects (quote ("" nil nil "")))
 (declare-function org-is-habit-p "org-habit" (&optional pom))
+
+; eshell in jedem fall beenden
+(defun kills() (interactive) (org-mode)(kill-buffer))

@@ -59,10 +59,10 @@
 *** DONE Funktion bzw. Regex um links und die darin enthaltenen Bilder zu identifizieren
     \\[\\[\\(.*\\)\\]\\]  catched die links
     search-forward-regexp such entsprechend
-    matched-string holt die einzelnen werte der letzten suche 
+    matched-string holt die einzelnen werte der letzten suche
        (parameter 1 für die erste gruppe) oder 0 für ganzen string
     (goto-char (match-end 0))  um anfang und ende von link zu erreichen
-    
+
 (defun my-org-extract-link ()
   "Extract the link location at point and put it on the killring."
   (interactive)
@@ -91,7 +91,7 @@
 *** TODO welche Captures ;-Templates; würden noch Sinn machen? Broweser/Client
 *** TODO prüfen ob zur commands.tex datei gecaptured werden kann
 *** NEXT capture um aktuelle firefox seite an to read zu senden
-*** DONE schnellere Shortcuts für Captures 
+*** DONE schnellere Shortcuts für Captures
 *** TODO Captures entsprechend implementieren
 ** TODO Shortcuts						    :PROJECT:
    :LOGBOOK:
@@ -129,7 +129,7 @@
     - State "DONE"       from "NEXT"       [2013-02-03 So 23:52]
 nicht mehr zeit verschwenden, als unbedingt nötig, da die evil marks in jedem fall auch
 durch autobookmarks ersetzt werden könnten
-google: emacs+evil+show+mark 
+google: emacs+evil+show+mark
 *** NEXT Shortcuts für next / prev buffer setzen
 ** TODO [#A] TodoListe optimieren				    :PROJECT:
 *** NEXT Brainstorming, was Standardmäßig geöffnet und was geschlossen sein soll
@@ -150,7 +150,7 @@ google: emacs+evil+show+mark
     z.B. * wird zu \times
     - für andere Zeichen gibt es helm-c-insert-latex
 *** NEXT testen wie weit auto completion von viel genutzen symbolen -Rightarrow...- glatt läuft
-   - man könnte natürlich yasnippet benutzen 
+   - man könnte natürlich yasnippet benutzen
    - oder man schreibt eigene latex kürzel
 *** TODO math mode und insert latex in workflow einbinden
 *** TODO Commands mit Sonderzeichen einbauen
@@ -252,7 +252,7 @@ florian ALL = NOPASSWD: /usr/sbin/pm-suspend
 immernoch sudo eingeben, aber kein passwort mehr
 pm-suspend kann dann einfach in synapse eingegeben werden
 ** mounten
-- sudo modprobe usb-storage 
+- sudo modprobe usb-storage
   dann werden die festplatten erkannt
 - /etc/modules
 den Rest mit pysdm
@@ -278,7 +278,7 @@ den Rest mit pysdm
 ** sound steuerung
 sudo modprobe snd-mixer-oss
   notwendig, bevor aumixer gestartet werden kann
-  - volume um lautstärke zu steuern 
+  - volume um lautstärke zu steuern
     => aumixer muss installiert sein und funktionieren
 * synergy
 ** keyboardlayout
@@ -296,7 +296,7 @@ sudo modprobe snd-mixer-oss
                 halfDuplexNumLock = true
                 halfDuplexScrollLock = true
                 xtestIsXineramaUnaware = true
-                switchCorners = none 
+                switchCorners = none
                 switchCornerSize = 0
 
 ** ServerConf
@@ -314,7 +314,7 @@ end
 section: options
 	 keystroke(control+1) = switchInDirection(left)
 	 keystroke(control+2) = switchInDirection(right)
-end 
+end
 ** ClientConf
 conf wird gar nicht geladen o.O
 Aufruf:
@@ -330,6 +330,18 @@ xvkbd -xsendevent -no-sync -delay 20 -text "-"
 xbindkeys --defaults > /home/florian/.xbindkeysrc
 xbindkeys-config    <= und da den xvbkd kram einstellen
 * Orgmode
+** folding attribute
+*** für startup
+#+begin_src elisp
+    #+STARTUP: hideblocks
+    #+STARTUP: nohideblocks
+    #+STARTUP: overview
+    #+STARTUP: content
+    #+STARTUP: showall
+    #+STARTUP: showeverything
+#+end_src
+*** für einzelnen buffer
+
 ** org-protocol
 über emacsclient können auch direkt per konsole
 solche Aufrufe gemacht werden
@@ -340,7 +352,7 @@ javascript:location.href='org-protocol://capture://x/'+
       encodeURIComponent(document.title)+'/'+
       encodeURIComponent(window.getSelection())
 
-Sendet diese Daten an Emacs Template, (hier konkret x aber kann 
+Sendet diese Daten an Emacs Template, (hier konkret x aber kann
 man auch weglassen)
 *** Emacs
 vorallem musste erstmal der server gestartet werden
@@ -395,7 +407,7 @@ an den Anfang und Enter (einrücken schadet auch nicht
 *** Allgemeines
 - wird auf jeden Fall anders formatiert(alles grau)
 - durch Variable org-src-fontify-natively wird auch
-  im Org-Fenster das richtige Syntaxhighlighting 
+  im Org-Fenster das richtige Syntaxhighlighting
   im Codeblock benutzt
 - C-c ' :: öffnet den Inhalt der Region tempoär in nativem Buffer. Dieser
 	   muss mit der selben Tastenkombination beendet werden
@@ -403,7 +415,7 @@ an den Anfang und Enter (einrücken schadet auch nicht
 
 #+BEGIN_SRC latex :tangling st-temp.tex
   \documentclass[11pt]{amsart}
-  
+
   \begin{document}
   $\frac{A+B}{C+D} = X*Y = \binom{123}{456}$
   \end{document}
@@ -413,21 +425,21 @@ an den Anfang und Enter (einrücken schadet auch nicht
 - leider noch keine Möglichkeit gefunden das ganze mit externen Dateien zu verknüpfen,
 was ist mit Annotationen?
 - das würde normalerweise auch erst beim exportieren gemacht werden (Stichwort: tangling)
-- für Code Tangling bieten sich dann die 
+- für Code Tangling bieten sich dann die
 
 ** Capturing
-Man setzt irgendeine Datei als default note file und 
+Man setzt irgendeine Datei als default note file und
 da wird dann immer reinkopiert
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 
 Die Funktion org-cature wird dann mit einer Taste verbunden
 (define-key global-map "\C-cc" 'org-capture)
-Es wird dann jedes mal ein Tempoärer Buffer geöffnet und angezeigt, 
+Es wird dann jedes mal ein Tempoärer Buffer geöffnet und angezeigt,
 in welchem man ein Template auswählen kann, welches dann dieses Fenster
-schonmal vorbefüllt. Da kann dann z.B. automatisch der zuletzt gestörete 
+schonmal vorbefüllt. Da kann dann z.B. automatisch der zuletzt gestörete
 Link oder der Zwischenspeicher oder eine Link zum aktuellen Punkt landen
 
-Unterschieden wird dann noch in Finish, also fertig kopieren und 
+Unterschieden wird dann noch in Finish, also fertig kopieren und
 Refiling, wobei die Daten an einen anderen header geschickt werden
 ** Templates
 Templates sind im Grund nur etwas Text der Standardmäßig reingespastet wird,
@@ -467,7 +479,7 @@ http://orgmode.org/manual/Template-expansion.html#Template-expansion
 
 	    \( \) macht aus nem Bereich ne Backreferenz
 	    \1 matched die nummeriert, & matched das ganze Teil
-	    
+
 	    '< , '> selection anfang / ende
 	    $ Dateieende
 	    . aktuelle zeile
@@ -483,12 +495,12 @@ s(jetzt k) löscht geht aber direkt auf insert
 sudo chmod -v -R ouag+rw *     alles per chmod freigeben
 
 ** Vervollständigung
-   - Ctrl+n für dynamische 
+   - Ctrl+n für dynamische
      Vervollständigung / Ctrl+p für letzte Vervollständigung (sucht
      im Text auch in genau diesen Richtungen !! )
-   - Ctrl+x Ctrl+n und Ctrl+x Ctrl+p um ganze 
+   - Ctrl+x Ctrl+n und Ctrl+x Ctrl+p um ganze
      Zeile so zu vervollständigen
-* Emacs 
+* Emacs
 ** nützliche Befehle
 global-auto-revert-mode    macht genau das
 ** shortcuts-emacs 						  :shortcuts:
@@ -508,10 +520,10 @@ global-auto-revert-mode    macht genau das
 
    - save-current-configuration :: C-ä w
    - resume :: C-ä c
-	       
-   - show shortcuts :: C-ä 
+
+   - show shortcuts :: C-ä
 ** zusätzliche Tastenbelegungen
-- Belegung von C-x auf cx usw: 
+- Belegung von C-x auf cx usw:
    (define-key evil-normal-state-map "c" nil)
    (define-key evil-motion-state-map "cu" 'universal-argument)
    (define-key key-translation-map (kbd "ch") (kbd "C-h"))
@@ -524,7 +536,7 @@ global-auto-revert-mode    macht genau das
 -    M-x apropos :: findet alles was irgendwie mit dem Ausdruck danach zu tun hat
 -    F1 / M-x Helper-... :: findet Keybinds <=> Funktion usw
 -    apropos-documentation :: durchsucht alles nach einem String
-     
+
 ** Funktionsnamen abkürzen
 (defalias 'langer_name 'abkuerzung)
 ** Tmp Keymaps
@@ -678,6 +690,65 @@ deinstalliere wine applikation =>  installieren
 1. ./configure
 2. make
 3. sudo make install
+* zathura
+  config findet in $XDG_CONFIG_HOME/zathura/zathurarc statt
+  $XDG_CONFIG_HOME = ~/.config   nach standard
+** generell option setzen
+set optionname value
+** tastenkombi setzen
+map [mode] tasten funktion [parameter]
+A = Alt; C = Control; S = Shift
+<A-a> z.B.
+modes: normal, visual, insert, index
+
+=> navigationskommandos bekommen z.B. noch eine extra variable 
+   in welche richtung
+*** shortcut funktionen
+[[/home/florian/Zettelkasten/Software.org_20130211_162604_24545WA-0.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162604_24545WA-1.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162604_24545WA-2.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162604_24545WA-3.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162604_24545WA-4.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162604_24545WA-5.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162604_24545WA-6.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162604_24545WA-7.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162604_24545WA-8.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162604_24545WA-9.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162604_24545WA-10.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162604_24545WA-11.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162604_24545WA-12.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162604_24545WA-13.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162604_24545WA-14.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162604_24545WA-15.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162604_24545WA-16.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162604_24545WA-17.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162604_24545WA-18.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162604_24545WA-19.png]]
+
+*** parameter
+[[/home/florian/Zettelkasten/Software.org_20130211_162643_2454GhG-0.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162643_2454GhG-1.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162643_2454GhG-2.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162643_2454GhG-3.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162643_2454GhG-4.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162643_2454GhG-5.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162643_2454GhG-6.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162643_2454GhG-7.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162643_2454GhG-8.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162643_2454GhG-9.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162643_2454GhG-10.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162643_2454GhG-11.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162643_2454GhG-12.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162643_2454GhG-13.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162643_2454GhG-14.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162643_2454GhG-15.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162643_2454GhG-16.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162643_2454GhG-17.png]]
+[[/home/florian/Zettelkasten/Software.org_20130211_162643_2454GhG-18.png]]
+*** Beispiel für angepasste scroll tasten
+map <C-n> scroll half-down
+map <C-r> scroll half-up
+
 * Firefox
 ** hints
 :set hintkeys='abcdefg'    um hintkeys zu setzen
@@ -749,7 +820,7 @@ es wird auch sonst nichts vom capture menü angezeigt
 #+END:
 
 + Paremeter werden getrennt mit / und encdode...
-+ zuerst link , dann titel, dann content 
++ zuerst link , dann titel, dann content
 + %c setzt link mit passendem Titel ein
 + %i setzt das capturing ein
 + %u setzt das aktuelle datum oredntlich formatiert ein
@@ -758,8 +829,20 @@ es wird auch sonst nichts vom capture menü angezeigt
   + %:description => der Titel
   + %:initial     => der content
 + template wird mit "x" gewählt
- 
 
+** flash reparieren
+*** verlust von fullscreen bei monitorwechsel
+- eine variable in der flashinstallation muss zerstört werden
+#+BEGIN_SRC shell
+sudo apt-get install ghex
+sudo uptadedb
+locate libflashplayer.so #nach /usr/lib und mozilla ausschau halten
+gksu ghex /pfad/libflashplayer.so
+#+END_SRC
+- dann auf suche und im rechten kasten "_NET_ACTIVE_WINDOW" suchen
+- dort dann im rechten fenster irgendwo in die variable reinklicken und was
+  verändern, zB das N am anfang zu A
+- alles restarten
 ** pentadactyl einrichten
 - :map d V   <= damit der nicht mit d seite löscht
 - :set hintkeys=uiaenrdxvlchgqüöäpb,.j
@@ -961,7 +1044,7 @@ git
 ** config
 remotebranch mit namen origin ist default für push/pull
 => ist in .git/config
-die exclude ignorelist kann direkt dateinamen aus 
+die exclude ignorelist kann direkt dateinamen aus
 dem wurzelverzeichnis entgegennehmen
 git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=50000' <= cached login
@@ -1046,7 +1129,7 @@ und beim nächsten Rechner dann das gleiche
   \footnotesize
   \caption{A table to test booktabs}
   \label{tab:test-table}
-  <<booktabs(table=test-table,align="lrX",env="tabularx",width="\\textwidth")>>  
+  <<booktabs(table=test-table,align="lrX",env="tabularx",width="\\textwidth")>>
   \end{table}
  #+end_src
 #+end_example
@@ -1058,7 +1141,7 @@ q_0 & q_1 & q_2 \\
 q_0 & q_1 & q_2 \\
 $\end{array}
 ** beispiel image link
-[ [ file:~/test1.png ] ] 
+[ [ file:~/test1.png ] ]
 ; das file: am anfang ist wichtig!
 ** minimales latex Skript
 \documentclass[11pt]{standalone}
@@ -1069,13 +1152,12 @@ $\end{array}
 $\frac{A}{B} = c$
 
 \end{document}
- 
+
 ** preview im org mode
 zeichen hinter $ muss frei sein
 alternativ: \( und \) für kleine schrift oder
 \[ \] oder $$ $$ für größere Schrift
 * Windowmanager
-
    :PROPERTIES:
    :ID:       0001
    :END:
@@ -1149,6 +1231,44 @@ S-C-h/l  :: mehr/weniger Spalten Slaves
 - mit dem xrandr Befehl aus dem Softwarebreich starten
 - mit mod4+o werden die Fenster verschoben
 - mit mod4+ctrl wird der fokusmonitor gewechselt
+*** modale shortcuts
+=> es existieren modi die aktiviert werden und die unterschiedlichen modi interpretieren die tasten dann jeweils anders
+    => die modi entsprechen keygrabbern (ziehen sich alle gedrückten tasten)
+**** keygrabber mode
+     muss hinter das snippet für den eigentlichen modi
+#+BEGIN_SRC lua
+-- trigger client mode on Mod4 + space
+ awful.key({ modkey }, "space", function(c)
+     keygrabber.run(function(mod, key, event)
+         if event == "release" then return true end
+         keygrabber.stop()
+         if client_mode[key] then client_mode[key](c) end
+         return true
+     end)
+ end)
+#+END_SRC
+**** keys für nen mode
+    Tasten können direkt als variablen benutzt werden, die mit den funktionen überlagert werden 
+#+BEGIN_SRC lua
+-- mapping for modal client keys
+   client_mode = {
+     -- Set client on top
+     o = function (c) c.ontop = not c.ontop end,
+     -- Redraw the client
+     d = function (c) c:redraw() end,
+     -- Toggle floating status of the client
+     u = awful.client.floating.toggle,
+     -- toggle mark
+     t = awful.client.togglemarked,
+     -- make the client fullscreen
+     f = function (c) c.fullscreen = not c.fullscreen  end,
+     -- maximize the client
+     x = function (c)
+           c.maximized_horizontal = not c.maximized_horizontal
+           c.maximized_vertical   = not c.maximized_vertical
+     end
+   }
+#+END_SRC
 ** wmii :kandidat:tested:
 - Ressourcensparend
 - sehr nah an z.B. DWM aber mit mehr Features etc.
@@ -1929,6 +2049,8 @@ pass
 *** TODO bestimmte Linie im code farblich hervorheben
 *** TODO usereingabe abfragen
 *** TODO erzwinge ansicht, also split-windows, find-files und resize-windows
+*** interaktive funktion starten
+
 *** my-make-latex2
 **** overlay erstellen
      #+begin_src elisp
@@ -1971,7 +2093,7 @@ Traversion läuft also ober eine variable die die liste entgegennimmt, ersten we
     prüft ob man sich im regex befindet
 + (match-beginning 0) (match-end 0)
     die positionen des letzten funds
-+ (matched-string 0) 
++ (matched-string 0)
     matched den ganzen letzten string bzw. gruppe
 *** jump to empty line
 **** Next Line Code
@@ -2043,7 +2165,7 @@ Traversion läuft also ober eine variable die die liste entgegennimmt, ersten we
 (setq filename
 	(concat
 	 (make-temp-name
-	  (concat 
+	  (concat
 		  ""
 		  (format-time-string "%Y%mad-%H%M%S"))
 *** write file
@@ -2062,14 +2184,14 @@ Traversion läuft also ober eine variable die die liste entgegennimmt, ersten we
   (setq filename
 	(concat
 	 (make-temp-name
-	  (concat 
+	  (concat
 		  ""
 		  (format-time-string "%Y%mad-%H%M%S")))""))
 
   (setq stuff (buffer-substring (region-beginning)(region-end)))
-  
+
   (with-temp-buffer
-    
+
     (insert (string-as-multibyte "\\documentclass[11pt]{standalone}"))
     (insert (string-as-multibyte "\\usepackage[utf8]{inputenc}"))
     (insert (string-as-multibyte "\\usepackage{amssymb, amsmath}"))
@@ -2082,7 +2204,7 @@ Traversion läuft also ober eine variable die die liste entgegennimmt, ersten we
     (insert (string-as-multibyte "\\end{document}"))
 
     (write-region (point-min)(point-max) (concat filename ".tex")))
-    
+
   (shell-command
    (concat "latex " filename ".tex"))
 
@@ -2117,7 +2239,7 @@ mehr noch bieten sich natürlich die maps des jeweiligen modus
   zu dem es in der regel eine passende map und hook gibt
 *** bedingung
 (when (string-match "^ *$" test-str)
-   (message "cool")) 
+   (message "cool"))
 (if (= x y) (message "true") (message "false"))
 *** eine Zeile vorwärts
 (forward-line 1)   ; oder auch -1
@@ -2246,7 +2368,7 @@ window-text-change-functions
 - C-ä c       :: mögliche Completions anzeigen
 - C-p         :: evil-paste-pop
         geht bei vorherigem paste alle
-        elemente des kill-rings durch 
+        elemente des kill-rings durch
 	(kill-ring speichert neue pos)
 - C-ö ä       :: magpie expand (beginnt mit , und dann akronyme)
 - C-ä ö       :: flosub, entweder aktuelles wort (ab leer oder \n) oder markierung
@@ -2274,12 +2396,12 @@ window-text-change-functions
 - S-, S-"     :: minimize(/restore) client
 - S-.         :: letzter Tag
 - S-Shift-i   :: restore client
-- C-x s       :: save-some-buffers 
+- C-x s       :: save-some-buffers
 - M-w         :: buffer back
 - C-ä j       :: evil normal state
 - C-ä v       :: revert buffer
 - C-ü C-q     :: toggle read only
-		 
+
 - S-m         :: startet Maus modus
 - q        :: start/end dragging
   iae      :: taste 1,2,3
@@ -2304,7 +2426,7 @@ window-text-change-functions
 - C-ö f       :: display file
 
 - C-ä w d/D   :: dedicate/undedicate window
-		 
+
 - C-ä v       :: revert buffer
 ** helm
 - M-m         :: Helm: M-a = alle markieren
@@ -2338,11 +2460,9 @@ window-text-change-functions
     u         :: unstage
     c C-c C-c :: commit, - absenden
     ll        :: log
-		 
+
 ** Firefox
 - ;y          :: kopiere linkurl
 - "+;y        :: kopiere linkurl in clipboard
 - A           :: toggle cur bookmark
 - :bmarks!    :: bookmarks durchsuchen
-
- 

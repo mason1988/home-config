@@ -1,0 +1,2 @@
+map <C-n> scroll half-down
+map <C-r> scroll half-up

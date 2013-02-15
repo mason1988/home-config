@@ -244,9 +244,19 @@
 #+END_SRC
 *** allgemein
 #+BEGIN_SRC elisp :tangle emacs_config.el
+(defun split-open () (interactive) 
+    (call-interactively 'split-window-below)
+    (call-interactively 'other-window)
+    (call-interactively 'ido-switch-buffer)
+)
+
+
 (define-key my-keys-minor-mode-map (kbd "<f7>") 'diredp-fileset)
 (define-key my-keys-minor-mode-map (kbd "<f6>") 'eshell)
 (key-chord-define my-keys-minor-mode-map (kbd "uu") (kbd "C-u"))
+
+(global-set-key (kbd "<C-backspace>") 'backward-kill-word)
+(global-set-key (kbd "<M-backspace>") 'delete-trailing-whitespace)
 
 (define-key my-keys-minor-mode-map (kbd "<f5>") 'kill-frame)
 (global-set-key (kbd "C-ä g") 'yas/make-placeholder)

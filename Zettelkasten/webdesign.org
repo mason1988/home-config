@@ -24,7 +24,7 @@ http://www.howtogeek.com/114794/the-best-apps-and-cloud-services-for-taking-stor
 #+End:
 - Dropbox(http://www.howtogeek.com/howto/16310/user-guide-to-dropbox-shared-folders/)
 - OneNote (siehe links)
-- Synchronisation der OfficeSuite generell 
+- Synchronisation der OfficeSuite generell
 - LaTeX(http://floppycode.blogspot.de/2011/09/latex.html)
 - Git/Svn -> Versionskontrollsysteme(lieber nur svn, git ist zu komplex)
   (http://svnbook.red-bean.com/nightly/en/svn.intro.quickstart.html)
@@ -66,3 +66,123 @@ http://en.wikipedia.org/wiki/Note-taking
   - Bilder mit Untertitel/Tags versehen ( keywords beachten )
 - herabwerten der konkurenz
   - schlechte backlinks verteilen
+* Einträge
+** Einführung in Dropbox
+Dropbox ist eine unglaublich nützliches Programm, um seine Dateien auf allen Rechnern und der Cloud synchron zu halten. Hier werden wir uns ansehen, wie man zusammen mit einer Gruppe gemeinsam auf Dateien zugreifen kann.
+
+*** Freigegebene Ordner erzeugen
+Einen Ordner mit Dropbox freizugeben ist einfach. Man fügt die Dateien die man teilen möchte in einen Dropbox Ordner auf seinem Computer ein und wählt dann Dropbox und "Diesen Ordner teilen"
+
+<< screenshot >>
+
+Alternativ kann man sich auch in seinen Dropbox Account einloggen, und dort im Dropbdown Menü des relevanten Ornders "Diesen Ordner teilen" wählen.
+
+<< screenshot >>
+
+Nun fügt man die Emailadressen der Leute ein, mit denen man den Ordner teilen möchte und gibt optional noch eine Benachrichtigung an.
+
+<< screenshot >>
+
+Die eingeladenen Personen erhalten dann eine Email zusammen mit der Benachrichtigung und einem Link zum Dropbox Ordner, wo sie dann direkt damit beginnen können, ebenfalls Dateien hinzuzufügen.
+
+<< screenshot >>
+
+Geteilte Ordner haben ein leicht verändertes Icon im Vergleich zum herkömmlichen Dropbox Ordner. Auf geteilten Ordnern sind zusätzlich 2 Menschen zu sehen, wohingegen ein nicht geteilter Ordner eine Vorschau auf den Inhalt gibt.
+
+<< screenshot >>
+
+*** Den Ordner Verlauf geteilter Ordner betrachten
+Sobald jemand etwas am geteilten Ordner verändert, gibt Dropbox eine tooltip Benachrichtigung über diese veränderungen aus.
+
+<< screenshot >>
+
+Den Aktivitäten des Ordners kann man sich Online auch etwas ausführlicher anzeigen lassen. Wählt man sich in seinen Dropbox Account ein und geht auf "Ereignisse", so sieht man eine Auflistung der letzten Änderungen, die an diesem Ornder vorgenommen wurden.
+
+<< screenshot >>
+
+Unten auf der Seite gibt es zusätzlich ein Menü um Kommentare zu machen, die dann alle Nutzer sehen können. 
+
+<< screenshot >>
+
+Falls eine Datei versehentlich gelöscht wurde, die man noch benötigt, so kann diese mit Dropbox wiederhergestellt werden, in dem man entweder in den entsprechenden Link in der Onlineübersicht wählt, oder auf seinem Rechner im Dropbox Ordner den Punkt "Zeige gelöschte Dateien" anwählt.
+
+*** Benachrichtigungen über Veränderungen
+Um auf dem aktuellen Stand zu bleiben und frühzeitig über Veränderungen informiert zu werden, bietet es sich an die Rss feeds von Dropbox zu verwenden. Auf der Aktivitätenseite gibt es dazu einen Link.
+
+<< screenshot >>
+
+Auf der dort erscheinenden Seite kann man nun den Link kopieren und in einen Feedreader seiner Wahl einsetzen.
+
+<< screenshot >>
+
+** Einstieg in Evernote
+Evernote ist ein freier Cloud-basierter Dienst für das sammeln und speichern von Informationen. Sobald ein Account erstellt ist, kann man Texte, Bilder, Web-Ausschnitte und sogar Sprachaufnahmen speichern. Evernote indexiert diese Notizen automatisch und macht die Informationen dadurch durchsuchbar und durch jeden Webbrowser und jedes Smartphone erreichbar. Hier wollen wir einen schnellen Einstieg in das System durchspielen
+*** 1. Account erstellen
+Auf der Evernote Seite << link >> lässt sich ein kostenfreier Account erstellen, mit welchem die Notizen von überall aus abgerufen werden können. Bei der Passwortwahl sollte man sich gut überlegen, ob man vor hat auch "empfindliche" Informationen zu speichern und somit direkt ein möglichst starkes Passwort wählen sollte.
+
+<< screenshot >>
+*** 2. Notizen per e-mail speichern
+Nachdem der Account erstellt ist, erhält man eine Willkommensnachricht per Email. In dieser Email findet man eine Mail-Adresse, über welche man nun Notizen, Bilder und Ton speichern kann.
+Dazu schickt man nun mit einem beliebigen Mail-Programm die jeweiligen Daten an diese Adresse und sobald man sich einloggt findet man die Notiz.
+<< screenshot >>
+*** 3. Notizen taggen
+Eine der Stärken von Evernote liegt darin, alle Notizen mit beliebig vielen Tags zu versehen, welche man später in der Suche als Filter benutzen kann.
+Nachdem einloggen wählt man zunächst den Menüpunkt "Tags" und dort dann "New Tag" um einen neuen Tag zu erstellen. Nun wählt man einen Namen, z.B. "Webdesign WS 12/13".
+<< screenshot >>
+Per Drag-and-Drop lässt sich dieser Tag dann einfach einer Notiz hinzufügen.
+*** 4. Bilder speichern
+Um ein Bild zu speichern, muss man es zunächst lokal auf dem Rechner speichern. Um dieses Bild nun zu Evernote zu übertragen, loggt man sich wieder ein, erstellt mit "New" eine neue Notiz mit beliebigem Titel und wählt den Link "Attach File" um dort dann das Bild zu wählen. Mit "Save and Close" wird das Bild dann gespeichert und ist nun überall verfügbar.
+
+<< screenshot >>
+*** 5. Text in Bildern durchsuchen
+Evernote konvertiert Bilder die Text enthalten automatisch auch zu durchsuchbarem Text. Um also seine eingescannten Mitschriften zu durchsuchen, reicht die einfache Verwendung der Suchfunktion und der Rest geht vollkommen automatisch.
+
+<< screenshot >>
+*** 6. Ein neues Notizbuch erstellen
+Die einzelnen Notizen werden nicht nur durch die Tags sortiert, sondern auch Notizbüchern zugeordnet. Um ein neues Notizbuch zu erstellen, verwendet man den Link "Notebooks" unter seinem Account und klickt dort dann auf "Edit" und "New Notebook". Dort kann man einen Namen eingeben und schon ist ein neues Notizbuch fertig für weitere Einträge.
+
+
+** Die Loci Technik
+*** Einleitung
+Die Loci Technik ist vermutlich eine der bekanntesten Gedächtnissysteme und es gibt kaum einen Gedächntissportler der sie nicht auch verwendet. 
+Dabei geht die Methode vermutlich bis auf die antiken Griechen zurück, welche sie damals noch als Teil der Rhetorik gelehrt haben, da Handschriften noch aufwändig und teuer waren.
+Verweise finden sich auch in der Popkultur, so wie z.B. im bekannten Buch "Hannibal" in welchem die Titelgebende Figur diese Technik verwendet, um sich große Informationsmengen auch im Gefängnis noch präsent halten zu können.
+*** Die Technik
+Zunächst ist es wichtig, dass die einzelnen Stichpunkte die man sich merken möchte, durch Bilder ersetzt werden. Das Hirn kann mit diesen einfach wesentlich besser arbeiten. Ein Bild muss dabei nicht nur auf Farben beschränkt sein, sondern auch Töne und andere Sinneseindrücke sind erlaubt und sogar hilfreich. 
+
+Nun benötigt man einen Ort mit dem man sehr vertraut ist. Die eigene Wohnung bietet sich da naturgemäß an. Dann sucht man sich einen Pfad durch diesen Ort hindurch. Beispielsweise stellt man sich vor, an der Wand entlangzugehen. Dabei sucht man jetzt nach Fixpunkten, also den Dingen die einem dabei begegnen oder einfach nur auffallen. Das können z.B. Gegenstände wie eine Uhr, ein Bild oder ein Schrank sein.
+
+Nun verknüpft man die einzelnen Stichpunkte mit diesen Fixpunkten in dem man ein neues Bild erschafft. Man überlegt sich dazu eine kurze Szene in der sowohl das Bild was den Stichpunkt repräsentiert, als auch den Fixpunkt enthält und auf möglichst kreative Weise in Zusammenhang bringt. Je absurder das Bild, um so wahrscheinlicher wird es auch gespeichert.
+
+Möchte man sich nun an eine Liste mit Stichpunkten erinnern, so geht man in Gedanken nur diese Wand entlang, von Fixpunkt zu Fixpunkt und erinnert sich an die kleinen Szenen die man sich überlegt hat.
+*** Hinweise
+Zunächst braucht die Loci-Technik, so wie jede andere Gedächntismethode, jede Menge Übung. Daher sollte man schon ein paar Tage am Ball bleiben bevor man aufgibt und am besten nicht erst in der Nacht vor der Prüfung damit anfangen. Vorallem ist am Anfang die Anzahl der Orte die einem zur Verfügung stehen sehr begrenzt, so dass man stets versuchen sollte, die Augen nach neuen Pfaden offen zu halten.
+Generell muss man sich auch nicht auf reale Orte beschränken. Manche Menschen bevorzugen beispielsweise Orte die sie nur aus Geschichten kennen oder verwenden die Welten von Videospielen.
+Die bekannte "Gedächntispalast" Methode ist zum Beispiel auch nur die Loci-Methode mit einem rein fiktiven Palast.
+
+Alles in allem gilt auch für die Loci-Technik: langfristiges lernen Erfolgt nur durch Wiederholung. Um also etwas auf Dauer zu behalten, sollte man seine Routen im Geiste immer mal wieder durchgehen.
+
+** Tipps zur Gehirnfitness
+Das Gehirn wird oft mit einem Muskel verglichen, der trainiert werden muss um besser zu funktioneren und abbaut wenn er nicht mehr gefordert wird. Hier haben wir einige tipps zusammengestellt, wie man sich sein Gehirn generell fit halten kann.
+*** Tipp 1: Schwarze Schokolade
+Schwarze Schokolade fördert die Dopamin Produktion, was ein wichiges Hormon für die Gehirnfunktionalität ist und vor allem für das Gedächtnis eine wichtige Rolle spielt. Daher ist ein _wenig_ schwarze Schokolade täglich durchaus gesund.
+*** Tipp 2: Museen besuchen
+Als Student neigt man schnell dazu, sein Gehirn nur noch mit textuellen Informationen zu belasten. All die anderen Sinne und Fähigkeiten des Gehirns werden da schnell vernachlässigt. Ein Besuch im Museum gibt dem Hirn wieder die Chance, auch mal wirklich mit dem Stoff konfrontiert zu werden, der sonst immer nur theorethisch behandelt wird.
+*** Tipp 3: Ein Lied auswendig lernen
+Durch das auswendig lernen eines ganzen Liedes lernt man wieder richtig zuzuhören und das gehörte auch richtig zu verarbeiten und zu speichern. Dazu ist eine konzentrierte Aufmerksamkeit und ein aktives Gedächtnis notwendig, welche beide auch im Studienalltag sehr hifreich sind.
+*** Tipp 4: Periphäres sehen
+Als periphäres sehen bezeichnet man es, wenn man nicht nur das wahrnimmt, was die Augen unmittelbar fokussieren, sondern auch das drumherum. Im Alltag lässt sich das ganz einfach üben in dem man gezielt einen bestimmten Punkt ansieht, aber versucht die Dinge links und rechts davon zu erkennen. 
+Neben einem effektiven Training der Aufmerksamkeit, ist diese Fähigkeit beispielsweise auch für schnelles lesen sehr hilfreich.
+*** Tipp 5: Lautstärke von Musik und Fernseher runterdrehen
+Häufig wird unterschätzt, welchen negativen Einfluss Musik im Hintergrund auf unsere Konzentration hat. Doch dieser Effekt lässt sich umdrehen, in dem man die Lautstärke so weit runterdreht, dass man sich konzentrieren muss, um genau zu verstehen was gesagt wird.
+Die positive Wirkung von leisen Umgebungsgeräuschen ist z.B. auch einer der Gründe, warum viele Menschen gerne in Kaffeehäusern oder generell im freien mit ihren Laptop's arbeiten.
+*** Tipp 6: Ein Instrument lernen
+Der Schlüssel für ein fittes Gehirn ist es, sich immer wieder neuen Herrausforderungen zu stellen. Das erlernen eines neuen Musikinstrumentes ist dabei eine sehr dankbare Aufgabe, da es kognitive Fähigkeiten benötigt, aber auch das genaue zuhören und verstehen und später auch die kreativität trainiert.
+*** Tipp 7: Die "andere" Hand benutzen
+Eine weitere schöne Herrausforderung für das Gehirn ist, wenn Rechtshänder für Alltagsaufgaben die linke Hand benutzen und umgekehrt. Als Beispiel sei z.B. das Zähneputzen am Morgen erwähnt. Das Hirn ist dabei gezwungen, einen eigentlich schon längst antrainerte Aufgabe ganz neu zu interpretieren und zu lösen.
+*** Tipp 8: Sportliche Betätigung
+Ein fittes Gehirn geht mit einem fitten Körper einher. Ein Gesundes Maß an Fitness sorgt generell für eine bessere Nährstoffumsetzung und einen stabileren Hormonhaushalt. Darüber hinaus baut der Mensch beim Sport eine Menge Stresshormone ab, welche das Hirn enorm belasten.
+Körperliche Betätigung ist dadurch auch für die Geistige Leistung sehr hilfreich.
+
+*** Tipp 9: Ausreichend Schlaf
+Nach aktuellem Stand der Forschung findet ein Großteil des Lernprozesses im Schlaf statt. Vorallem werden hierbei die wichtigen Informationen in das Langzeitgedächtnis geschrieben. Für ein gutes Gedächtnis und besonders in Lernphasen ist es daher unverzichtbar, genug zu Schlafen. Ohne ausreichend Schlaf helfen sonst auch die längsten Nächte nicht.
